@@ -66,7 +66,9 @@ export const useUserProfile = (options?: { requireAuth?: boolean }) => {
             router.push("/login");
           }
 
-          resetState();
+          setGoogleUser(null);
+          setUserProfile(null);
+          setIsLoading(false);
           return;
         }
 

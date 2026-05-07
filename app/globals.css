@@ -6,9 +6,229 @@
   --color-zpath-secondary: #7B2CBF;
   --color-zpath-accent: #22D3EE;
   --color-zpath-dark: #0B1F3A;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-glow: hsl(var(--primary-glow));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-tier-low: hsl(var(--tier-low));
+  --color-tier-low-foreground: hsl(var(--tier-low-foreground));
+  --color-tier-low-soft: hsl(var(--tier-low-soft));
+  --color-tier-mid: hsl(var(--tier-mid));
+  --color-tier-mid-foreground: hsl(var(--tier-mid-foreground));
+  --color-tier-mid-soft: hsl(var(--tier-mid-soft));
+  --color-tier-high: hsl(var(--tier-high));
+  --color-tier-high-foreground: hsl(var(--tier-high-foreground));
+  --color-tier-high-soft: hsl(var(--tier-high-soft));
+
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+  --radius-2xl: calc(var(--radius) + 16px);
+
+  --font-display: "Space Grotesk", system-ui, sans-serif;
 }
 
 /* Biến màu nền gradient để dùng lại nhiều lần */
 @utility bg-zpath-gradient {
   background-image: linear-gradient(to right, #1DA1F2, #7B2CBF);
+}
+
+@layer base {
+  :root {
+    --background: 48 100% 98%;
+    --foreground: 240 25% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 25% 12%;
+    --primary: 268 92% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 100% 75%;
+    --secondary: 80 95% 65%;
+    --secondary-foreground: 240 30% 12%;
+    --muted: 270 20% 96%;
+    --muted-foreground: 240 10% 45%;
+    --accent: 16 100% 66%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 358 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --tier-low: 358 85% 60%;
+    --tier-low-foreground: 0 0% 100%;
+    --tier-low-soft: 358 100% 95%;
+    --tier-mid: 42 100% 55%;
+    --tier-mid-foreground: 30 50% 15%;
+    --tier-mid-soft: 48 100% 92%;
+    --tier-high: 145 70% 45%;
+    --tier-high-foreground: 0 0% 100%;
+    --tier-high-soft: 145 65% 92%;
+    --border: 270 20% 90%;
+    --input: 270 20% 92%;
+    --ring: 268 92% 60%;
+    --radius: 1rem;
+    --gradient-hero: linear-gradient(135deg, hsl(268 92% 60%) 0%, hsl(320 90% 65%) 50%, hsl(16 100% 66%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(268 92% 60%), hsl(280 100% 75%));
+    --gradient-lime: linear-gradient(135deg, hsl(80 95% 65%), hsl(160 80% 55%));
+    --gradient-coral: linear-gradient(135deg, hsl(16 100% 66%), hsl(340 95% 65%));
+    --gradient-mesh: radial-gradient(at 20% 10%, hsl(268 92% 60% / 0.25) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(80 95% 65% / 0.3) 0px, transparent 50%),
+      radial-gradient(at 70% 90%, hsl(16 100% 66% / 0.25) 0px, transparent 50%);
+    --shadow-sm: 0 2px 8px -2px hsl(268 50% 30% / 0.08);
+    --shadow-md: 0 8px 24px -8px hsl(268 50% 30% / 0.18);
+    --shadow-glow: 0 20px 60px -15px hsl(268 92% 60% / 0.5);
+    --shadow-coral: 0 20px 60px -15px hsl(16 100% 66% / 0.5);
+    --shadow-brutal: 6px 6px 0px 0px hsl(240 25% 12%);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@utility bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+@utility bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+@utility bg-gradient-lime {
+  background: var(--gradient-lime);
+}
+
+@utility bg-gradient-coral {
+  background: var(--gradient-coral);
+}
+
+@utility bg-mesh {
+  background-image: var(--gradient-mesh);
+}
+
+@utility text-gradient-hero {
+  background: var(--gradient-hero);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility shadow-coral {
+  box-shadow: var(--shadow-coral);
+}
+
+@utility shadow-brutal {
+  box-shadow: var(--shadow-brutal);
+}
+
+@utility grid-dots {
+  background-image: radial-gradient(hsl(var(--foreground) / 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-inline: 3rem;
+  }
+}
+
+@keyframes blob {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(2deg);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-24px) rotate(-3deg);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 16px hsl(var(--primary) / 0);
+  }
+}
+
+@utility animate-blob {
+  animation: blob 12s ease-in-out infinite;
+}
+
+@utility animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@utility animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.6s var(--ease-bounce) both;
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
 }
