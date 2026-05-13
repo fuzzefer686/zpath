@@ -20,7 +20,12 @@ export default function DashboardPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center text-center p-4">
         <h2 className="text-2xl font-bold mb-4">Chào bạn, bạn chưa có hồ sơ ZPATH</h2>
-        <Link href="/discover" className="bg-zpath-gradient text-white px-6 py-3 rounded-full">Khám phá ngay</Link>
+        <p className="mb-6 max-w-md text-gray-600">
+          Hãy tạo hồ sơ cá nhân để ZPATH có đủ dữ liệu tư vấn ngành học phù hợp.
+        </p>
+        <Link href="/profile" className="bg-zpath-gradient text-white px-6 py-3 rounded-full">
+          Tạo hồ sơ
+        </Link>
       </div>
     );
   }

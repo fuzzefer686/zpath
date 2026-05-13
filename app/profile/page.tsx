@@ -9,7 +9,7 @@ import { SbtiPicker } from "@/components/zpath/SbtiPicker";
 import { REGIONS, SUBJECTS } from "@/types/zpath";
 import type { TrialFormData } from "@/types/zpath";
 import { EMPTY_PROFILE, type UserProfile, saveProfile as cacheLocal } from "@/types/profile";
-import { fetchProfile, upsertProfile } from "@/lib/profile-db";
+import { fetchProfile, MissingProfilesTableError, upsertProfile } from "@/lib/profile-db";
 import { UNIVERSITIES } from "@/data/universities";
 import { useUserProfile } from "@/hooks/useUserProfile";
 
@@ -19,13 +19,27 @@ export default function ProfilePage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [profileError, setProfileError] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (!user) return;
     fetchProfile(user.id)
-      .then((p) => setData(p))
-      .catch((e) => console.error(e.message))
+      .then((p) => {
+        setData(p);
+        setProfileError(null);
+      })
+      .catch((error: unknown) => {
+        if (error instanceof MissingProfilesTableError) {
+          setProfileError(error.message);
+          setData(EMPTY_PROFILE);
+          return;
+        }
+
+        const message =
+          error instanceof Error ? error.message : "Không thể tải hồ sơ.";
+        setProfileError(message);
+      })
       .finally(() => setLoading(false));
   }, [user]);
 
@@ -49,12 +63,15 @@ export default function ProfilePage() {
     setSaving(true);
     try {
       await upsertProfile(user.id, data);
+      setProfileError(null);
       cacheLocal(data); // also cache locally for fast import
       setSaved(true);
       setTimeout(() => setSaved(false), 2200);
       alert("Đã lưu hồ sơ!");
     } catch (err: unknown) {
-      alert(err instanceof Error ? err.message : "Lưu thất bại");
+      const message = err instanceof Error ? err.message : "Lưu thất bại";
+      setProfileError(message);
+      alert(message);
     } finally {
       setSaving(false);
     }
@@ -99,6 +116,12 @@ export default function ProfilePage() {
         </div>
 
         <form onSubmit={handleSave} className="mt-10 space-y-7 rounded-3xl border-2 border-border bg-card p-6 shadow-md sm:p-8">
+          {profileError ? (
+            <div className="rounded-2xl border-2 border-tier-low/20 bg-tier-low-soft px-4 py-3 text-sm font-semibold text-tier-low">
+              {profileError}
+            </div>
+          ) : null}
+
           <section className="flex flex-col items-start gap-6 sm:flex-row">
             <div className="flex flex-col items-center gap-2">
               <button
@@ -231,7 +254,7 @@ export default function ProfilePage() {
               <Button asChild variant="outline">
                 <Link href="/landing">Đi tính tỉ lệ <ArrowRight className="h-4 w-4 ml-1" /></Link>
               </Button>
-              <Button type="submit" variant="hero" disabled={saving}>
+              <Button type="submit" variant="hero" disabled={saving || !!profileError}>
                 {saving ? <><Loader2 className="h-4 w-4 animate-spin mr-1" /> Đang lưu...</> : <><Save className="h-4 w-4 mr-1" /> Lưu hồ sơ</>}
               </Button>
             </div>

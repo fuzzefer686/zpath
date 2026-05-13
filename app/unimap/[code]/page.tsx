@@ -10,7 +10,9 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { getUniversity, UNIVERSITIES } from "@/data/universities";
+import { supabase } from "@/app/lib/supabase";
+import { InlineEditable } from "@/components/zpath/InlineEditable";
+import type { University, UniProgram } from "@/data/universities";
 
 interface UniversityDetailPageProps {
   params: Promise<{
@@ -18,24 +20,28 @@ interface UniversityDetailPageProps {
   }>;
 }
 
-export function generateStaticParams() {
-  return UNIVERSITIES.map((university) => ({
+export async function generateStaticParams() {
+  const { data } = await supabase.from("universities").select("code");
+  if (!data) return [];
+  return data.map((university) => ({
     code: university.code.toLowerCase(),
   }));
 }
 
 export async function generateMetadata({ params }: UniversityDetailPageProps) {
   const { code } = await params;
-  const university = getUniversity(code);
+  const { data: university } = await supabase.from("universities").select("name").eq("code", code.toUpperCase()).maybeSingle();
 
   return {
-    title: university ? `${university.code} - ${university.name}` : "Không tìm thấy trường",
+    title: university ? `${code.toUpperCase()} - ${university.name}` : "Không tìm thấy trường",
   };
 }
 
 export default async function UniversityDetailPage({ params }: UniversityDetailPageProps) {
   const { code } = await params;
-  const university = getUniversity(code);
+  
+  const { data: universityData } = await supabase.from("universities").select("*").eq("code", code.toUpperCase()).maybeSingle();
+  const university = universityData as University | null;
 
   if (!university) {
     return (
@@ -52,7 +58,8 @@ export default async function UniversityDetailPage({ params }: UniversityDetailP
     );
   }
 
-  const programs = university.programs ?? [];
+  const { data: programsData } = await supabase.from("programs").select("*").eq("university_code", university.code).order("program_code");
+  const programs = (programsData ?? []) as any[];
   const channels = university.channels ?? [];
 
   return (
@@ -81,7 +88,7 @@ export default async function UniversityDetailPage({ params }: UniversityDetailP
                 <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 backdrop-blur-sm">
                   <MapPin className="h-3.5 w-3.5" /> {university.city}
                 </span>
-                {university.tags.map((tag) => (
+                {university.tags?.map((tag) => (
                   <span key={tag} className="rounded-full bg-white/20 px-3 py-1 font-semibold backdrop-blur-sm">
                     #{tag}
                   </span>
@@ -111,7 +118,9 @@ export default async function UniversityDetailPage({ params }: UniversityDetailP
             <h2 className="flex items-center gap-2 font-display text-2xl font-bold">
               <Sparkles className="h-5 w-5 text-primary" /> Giới thiệu
             </h2>
-            <p className="mt-3 leading-relaxed text-foreground/80">{university.about}</p>
+            <p className="mt-3 leading-relaxed text-foreground/80">
+              <InlineEditable table="universities" id={university.code} field="about" value={university.about} />
+            </p>
           </section>
 
           <section>
@@ -119,7 +128,7 @@ export default async function UniversityDetailPage({ params }: UniversityDetailP
               <Star className="h-5 w-5 text-primary" /> Điểm nổi bật
             </h2>
             <ul className="mt-4 space-y-3">
-              {university.highlights.map((highlight) => (
+              {university.highlights?.map((highlight) => (
                 <li key={highlight} className="flex gap-3 rounded-xl border border-border bg-card p-4">
                   <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-primary" />
                   <span className="text-foreground/80">{highlight}</span>
@@ -155,34 +164,25 @@ export default async function UniversityDetailPage({ params }: UniversityDetailP
                     </thead>
                     <tbody>
                       {programs.map((program, index) => (
-                        <tr key={`${program.programCode}-${index}`} className="border-b border-border last:border-0">
+                        <tr key={`${program.program_code}-${index}`} className="border-b border-border last:border-0">
                           <td className="px-4 py-3 text-center font-semibold text-muted-foreground">
                             {index + 1}
                           </td>
                           <td className="px-4 py-3 font-semibold">
-                            {program.majorCode ? (
-                              <Link
-                                href={`/majorly/${program.majorCode.toLowerCase()}`}
-                                className="text-primary underline-offset-2 hover:underline"
-                              >
-                                {program.name}
-                              </Link>
-                            ) : (
-                              program.name
-                            )}
+                            {program.name}
                           </td>
                           <td className="px-4 py-3 font-mono text-xs text-muted-foreground">
-                            {program.programCode}
+                            {program.program_code}
                           </td>
                           <td className="px-4 py-3 text-right font-bold text-tier-high">
-                            {program.admissionScore2025.toFixed(2)}
+                            {program.admission_score_2025?.toFixed(2) || "N/A"}
                           </td>
                           <td className="px-4 py-3 text-right font-semibold">
-                            {program.tuitionPerSemester === 0 ? (
+                            {program.tuition_per_semester === 0 ? (
                               <span className="text-emerald-600">Miễn phí</span>
                             ) : (
                               <>
-                                {program.tuitionPerSemester}{" "}
+                                {program.tuition_per_semester}{" "}
                                 <span className="text-xs font-normal text-muted-foreground">tr/kỳ</span>
                               </>
                             )}

@@ -1,31 +1,42 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { GraduationCap, Search, Sparkles } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { UniversityCard } from "@/components/zpath/UniversityCard";
-import { UNIVERSITIES } from "@/data/universities";
+import { supabase } from "@/app/lib/supabase";
+import type { University } from "@/data/universities";
 
 const SUGGESTED = ["HUST", "FTU", "NEU", "HNUE", "VNU", "UEH"];
 
 export default function UniMapPage() {
   const [query, setQuery] = useState("");
+  const [universities, setUniversities] = useState<University[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchUniversities() {
+      const { data } = await supabase.from("universities").select("*").order("name");
+      setUniversities((data ?? []) as University[]);
+      setIsLoading(false);
+    }
+    fetchUniversities();
+  }, []);
 
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
-    if (!normalizedQuery) return UNIVERSITIES;
+    if (!normalizedQuery) return universities;
 
-    return UNIVERSITIES.filter(
+    return universities.filter(
       (university) =>
         university.code.toLowerCase().includes(normalizedQuery) ||
         university.name.toLowerCase().includes(normalizedQuery) ||
-        university.tags.some((tag) => tag.toLowerCase().includes(normalizedQuery)) ||
-        university.city.toLowerCase().includes(normalizedQuery) ||
-        university.majors.some((major) => major.toLowerCase().includes(normalizedQuery)),
+        (university.tags && university.tags.some((tag) => tag.toLowerCase().includes(normalizedQuery))) ||
+        university.city?.toLowerCase().includes(normalizedQuery),
     );
-  }, [query]);
+  }, [query, universities]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -83,7 +94,12 @@ export default function UniMapPage() {
           </div>
         </div>
 
-        {filtered.length === 0 ? (
+        {isLoading ? (
+          <div className="flex flex-col items-center justify-center py-20">
+            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+            <p className="mt-3 text-sm text-muted-foreground">Đang tải danh sách trường...</p>
+          </div>
+        ) : filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-muted/30 py-16 text-center">
             <GraduationCap className="h-12 w-12 text-muted-foreground" />
             <h3 className="mt-4 font-display text-xl font-bold">Không tìm thấy trường nào</h3>

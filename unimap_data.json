@@ -1,0 +1,2340 @@
+{
+    "universities": [
+        {
+            "name": "Trường Đại học Công nghệ",
+            "short_desc": "Công nghệ, kỹ thuật & máy tính",
+            "city": "Hà Nội",
+            "website": "https://uet.vnu.edu.vn",
+            "about": "Đơn vị thành viên ĐHQGHN đào tạo các lĩnh vực công nghệ, kỹ thuật, máy tính và công nghệ cao.",
+            "tags": [
+                "Công nghệ",
+                "Kỹ thuật",
+                "CNTT"
+            ],
+            "highlights": [
+                "Nhiều ngành công nghệ mũi nhọn",
+                "Điểm chuẩn nhóm CNTT cao"
+            ],
+            "code": "QHI",
+            "programs": [
+                {
+                    "program_code": "CN1",
+                    "name": "Công nghệ thông tin",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 28.19,
+                    "tuition_per_semester": 20.0,
+                    "tuition_note": "Quy đổi từ mức 40 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN2",
+                    "name": "Kỹ thuật máy tính",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 27.0,
+                    "tuition_per_semester": 20.0,
+                    "tuition_note": "Quy đổi từ mức 40 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN3",
+                    "name": "Vật lý kỹ thuật",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 25.2,
+                    "tuition_per_semester": 17.0,
+                    "tuition_note": "Quy đổi từ mức 34 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN4",
+                    "name": "Cơ kỹ thuật",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 26.15,
+                    "tuition_per_semester": 17.0,
+                    "tuition_note": "Quy đổi từ mức 34 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN5",
+                    "name": "Công nghệ kỹ thuật xây dựng",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 22.25,
+                    "tuition_per_semester": 17.0,
+                    "tuition_note": "Quy đổi từ mức 34 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN6",
+                    "name": "Công nghệ kỹ thuật cơ - điện tử",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 26.73,
+                    "tuition_per_semester": 17.0,
+                    "tuition_note": "Quy đổi từ mức 34 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN7",
+                    "name": "Công nghệ hàng không vũ trụ",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 23.96,
+                    "tuition_per_semester": 17.0,
+                    "tuition_note": "Quy đổi từ mức 34 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN8",
+                    "name": "Khoa học máy tính",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 27.86,
+                    "tuition_per_semester": 20.0,
+                    "tuition_note": "Quy đổi từ mức 40 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN9",
+                    "name": "Công nghệ kỹ thuật điện tử – viễn thông",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 26.63,
+                    "tuition_per_semester": 20.0,
+                    "tuition_note": "Quy đổi từ mức 40 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN10",
+                    "name": "Công nghệ nông nghiệp",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 22.0,
+                    "tuition_per_semester": 17.0,
+                    "tuition_note": "Quy đổi từ mức 34 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN11",
+                    "name": "Kỹ thuật điều khiển và tự động hoá",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 27.9,
+                    "tuition_per_semester": 20.0,
+                    "tuition_note": "Quy đổi từ mức 40 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN12",
+                    "name": "Trí tuệ nhân tạo",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 27.75,
+                    "tuition_per_semester": 20.0,
+                    "tuition_note": "Quy đổi từ mức 40 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN13",
+                    "name": "Kỹ thuật năng lượng",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 24.87,
+                    "tuition_per_semester": 17.0,
+                    "tuition_note": "Quy đổi từ mức 34 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN14",
+                    "name": "Hệ thống thông tin",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 26.38,
+                    "tuition_per_semester": 20.0,
+                    "tuition_note": "Quy đổi từ mức 40 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN15",
+                    "name": "Mạng máy tính và truyền thông dữ liệu",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 26.73,
+                    "tuition_per_semester": 20.0,
+                    "tuition_note": "Quy đổi từ mức 40 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN17",
+                    "name": "Kỹ thuật Robot",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 26.0,
+                    "tuition_per_semester": 20.0,
+                    "tuition_note": "Quy đổi từ mức 40 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN18",
+                    "name": "Thiết kế công nghiệp và Đồ họa",
+                    "major_code": "NGHE-THUAT",
+                    "admission_score_2025": 24.2,
+                    "tuition_per_semester": 17.0,
+                    "tuition_note": "Quy đổi từ mức 34 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN19",
+                    "name": "Công nghệ vật liệu",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 25.6,
+                    "tuition_per_semester": 17.0,
+                    "tuition_note": "Quy đổi từ mức 34 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN20",
+                    "name": "Khoa học dữ liệu",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 27.38,
+                    "tuition_per_semester": 20.0,
+                    "tuition_note": "Quy đổi từ mức 40 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "CN21",
+                    "name": "Công nghệ sinh học",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 22.13,
+                    "tuition_per_semester": 17.0,
+                    "tuition_note": "Quy đổi từ mức 34 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "UET/VNU thông tin tuyển sinh 2025; mức học phí 34-40 triệu VNĐ/năm."
+                }
+            ]
+        },
+        {
+            "name": "Trường Đại học Khoa học Tự nhiên",
+            "short_desc": "Khoa học cơ bản & công nghệ",
+            "city": "Hà Nội",
+            "website": "https://hus.vnu.edu.vn",
+            "about": "Đơn vị đào tạo các ngành khoa học cơ bản, khoa học tự nhiên, công nghệ và môi trường thuộc ĐHQGHN.",
+            "tags": [
+                "Khoa học",
+                "CNTT",
+                "Môi trường"
+            ],
+            "highlights": [
+                "Đa dạng ngành khoa học tự nhiên",
+                "Có các chương trình dữ liệu, bán dẫn, máy tính"
+            ],
+            "code": "QHT",
+            "programs": [
+                {
+                    "program_code": "QHT01",
+                    "name": "Toán học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 25.9,
+                    "tuition_per_semester": 10.45,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT02",
+                    "name": "Toán tin",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 25.5,
+                    "tuition_per_semester": 15.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT03",
+                    "name": "Vật lý học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 24.65,
+                    "tuition_per_semester": 15.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT04",
+                    "name": "Khoa học vật liệu",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 24.2,
+                    "tuition_per_semester": 15.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT05",
+                    "name": "Công nghệ kỹ thuật hạt nhân",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 23.5,
+                    "tuition_per_semester": 15.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT06",
+                    "name": "Hoá học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 23.9,
+                    "tuition_per_semester": 20.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT07",
+                    "name": "Công nghệ kỹ thuật hoá học",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 23.45,
+                    "tuition_per_semester": 20.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT08",
+                    "name": "Sinh học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 20.05,
+                    "tuition_per_semester": 20.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT09",
+                    "name": "Công nghệ sinh học",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 22.05,
+                    "tuition_per_semester": 20.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT10",
+                    "name": "Địa lý tự nhiên",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 23.95,
+                    "tuition_per_semester": 9.65,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT12",
+                    "name": "Quản lý đất đai",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 22.27,
+                    "tuition_per_semester": 15.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT13",
+                    "name": "Khoa học môi trường",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 21.25,
+                    "tuition_per_semester": 15.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT15",
+                    "name": "Công nghệ kỹ thuật môi trường",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 21.55,
+                    "tuition_per_semester": 17.5,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT16",
+                    "name": "Khí tượng và khí hậu học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 22.8,
+                    "tuition_per_semester": 9.65,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT17",
+                    "name": "Hải dương học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 21.5,
+                    "tuition_per_semester": 9.65,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT18",
+                    "name": "Địa chất học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 22.05,
+                    "tuition_per_semester": 9.65,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT20",
+                    "name": "Quản lý tài nguyên và môi trường",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 22.2,
+                    "tuition_per_semester": 15.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT43",
+                    "name": "Hoá dược",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 23.7,
+                    "tuition_per_semester": 20.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT81",
+                    "name": "Sinh dược học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 20.1,
+                    "tuition_per_semester": 9.65,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT82",
+                    "name": "Môi trường, sức khỏe và an toàn",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 21.2,
+                    "tuition_per_semester": 9.55,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT91",
+                    "name": "Khoa học thông tin địa không gian",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 23.5,
+                    "tuition_per_semester": 9.65,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT92",
+                    "name": "Tài nguyên và môi trường nước",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 21.1,
+                    "tuition_per_semester": 9.65,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT93",
+                    "name": "Khoa học dữ liệu",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 26.0,
+                    "tuition_per_semester": 20.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT94",
+                    "name": "Kỹ thuật điện tử và tin học",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 24.57,
+                    "tuition_per_semester": 20.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT95",
+                    "name": "Quản lý phát triển đô thị và bất động sản",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 22.9,
+                    "tuition_per_semester": 15.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT96",
+                    "name": "Khoa học và công nghệ thực phẩm",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 22.8,
+                    "tuition_per_semester": 20.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT98",
+                    "name": "Khoa học máy tính và thông tin",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 25.35,
+                    "tuition_per_semester": 20.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                },
+                {
+                    "program_code": "QHT99",
+                    "name": "Công nghệ Bán dẫn",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 25.55,
+                    "tuition_per_semester": 20.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "415",
+                        "409",
+                        "500"
+                    ],
+                    "tuition_note": "Quy đổi từ học phí dự kiến năm học 2026-2027 (nghìn đồng/tháng), tính 5 tháng/học kỳ.",
+                    "tuition_source": "ĐHKHTN/VNU dự thảo thông tin tuyển sinh 2026."
+                }
+            ]
+        },
+        {
+            "name": "Trường Đại học Khoa học Xã hội và Nhân văn",
+            "short_desc": "Xã hội, nhân văn, báo chí & du lịch",
+            "city": "Hà Nội",
+            "website": "https://ussh.vnu.edu.vn",
+            "about": "Đơn vị đào tạo các ngành khoa học xã hội, nhân văn, truyền thông, du lịch, ngôn ngữ và nghiên cứu khu vực.",
+            "tags": [
+                "Xã hội nhân văn",
+                "Báo chí",
+                "Du lịch"
+            ],
+            "highlights": [
+                "Nhiều ngành có điểm chuẩn cao",
+                "Mạnh về khoa học xã hội và truyền thông"
+            ],
+            "code": "QHX",
+            "programs": [
+                {
+                    "program_code": "QHX01",
+                    "name": "Báo chí",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 28.2,
+                    "tuition_per_semester": 16.5,
+                    "admission_scores_by_combination": {
+                        "C00": 28.2,
+                        "D14": 25.2,
+                        "D15": 25.2,
+                        "D66": 25.2,
+                        "D01": 24.7,
+                        "C03": 25.7,
+                        "C04": 25.7,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 28.2
+                    },
+                    "tuition_note": "Quy đổi từ nhóm học phí cao trong khoảng 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX02",
+                    "name": "Chính trị học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 26.86,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 26.86,
+                        "D14": 25.86,
+                        "D15": 25.86,
+                        "D66": 25.86,
+                        "D01": 25.36,
+                        "C03": 25.86,
+                        "C04": 25.86,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 26.86
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX03",
+                    "name": "Công tác xã hội",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 26.99,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 26.99,
+                        "D14": 24.99,
+                        "D15": 24.99,
+                        "D66": 24.99,
+                        "D01": 24.49,
+                        "C03": 24.99,
+                        "C04": 24.99,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 26.99
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX04",
+                    "name": "Điện ảnh và nghệ thuật đại chúng",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 27.3,
+                    "tuition_per_semester": 16.5,
+                    "admission_scores_by_combination": {
+                        "C00": 27.3,
+                        "D14": 25.3,
+                        "D15": 25.3,
+                        "D66": 25.3,
+                        "D01": 24.8,
+                        "C03": 25.3,
+                        "C04": 25.3,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 27.3
+                    },
+                    "tuition_note": "Quy đổi từ nhóm học phí cao trong khoảng 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX05",
+                    "name": "Đông Nam Á học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 23.25,
+                    "tuition_per_semester": 11.0,
+                    "admission_scores_by_combination": {
+                        "D14": 23.25,
+                        "D15": 23.25,
+                        "D66": 23.25,
+                        "D01": 21.75,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 21.75
+                    },
+                    "tuition_note": "Ước tính từ nhóm giữa của khoảng học phí 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX06",
+                    "name": "Đông phương học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 28.0,
+                    "tuition_per_semester": 11.0,
+                    "admission_scores_by_combination": {
+                        "C00": 28.0,
+                        "D14": 25.0,
+                        "D15": 25.0,
+                        "D66": 25.0,
+                        "D01": 24.5,
+                        "C03": 25.5,
+                        "C04": 25.5,
+                        "D04": 24.5,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 28.0
+                    },
+                    "tuition_note": "Ước tính từ nhóm giữa của khoảng học phí 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX07",
+                    "name": "Hán Nôm",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 25.76,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 25.76,
+                        "D14": 24.76,
+                        "D15": 24.76,
+                        "D66": 24.76,
+                        "D01": 24.26,
+                        "C03": 24.76,
+                        "C04": 24.76,
+                        "D04": 25.76,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 25.76
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX08",
+                    "name": "Hàn Quốc học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 27.83,
+                    "tuition_per_semester": 16.5,
+                    "admission_scores_by_combination": {
+                        "C00": 27.83,
+                        "D14": 24.83,
+                        "D15": 24.83,
+                        "D66": 24.83,
+                        "D01": 24.33,
+                        "C03": 25.33,
+                        "C04": 25.33,
+                        "DD2": 24.33,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 27.83
+                    },
+                    "tuition_note": "Quy đổi từ nhóm học phí cao trong khoảng 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX09",
+                    "name": "Khoa học quản lý",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 26.68,
+                    "tuition_per_semester": 11.0,
+                    "admission_scores_by_combination": {
+                        "C00": 26.68,
+                        "D14": 24.68,
+                        "D15": 24.68,
+                        "D66": 24.68,
+                        "D01": 24.18,
+                        "C03": 24.68,
+                        "C04": 24.68,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 26.68
+                    },
+                    "tuition_note": "Ước tính từ nhóm giữa của khoảng học phí 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX10",
+                    "name": "Lịch sử",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 27.3,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 27.3,
+                        "D14": 26.3,
+                        "D15": 26.3,
+                        "D66": 26.3,
+                        "D01": 25.8,
+                        "C03": 26.3,
+                        "C04": 26.3,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 27.3
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX11",
+                    "name": "Lưu trữ học",
+                    "major_code": "KHAC",
+                    "admission_score_2025": 26.04,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 26.04,
+                        "D14": 25.04,
+                        "D15": 25.04,
+                        "D66": 25.04,
+                        "D01": 24.54,
+                        "C03": 25.04,
+                        "C04": 25.04,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 26.04
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX12",
+                    "name": "Ngôn ngữ học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 26.75,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 26.75,
+                        "D14": 25.75,
+                        "D15": 25.75,
+                        "D66": 25.75,
+                        "D01": 25.25,
+                        "C03": 25.75,
+                        "C04": 25.75,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 26.75
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX13",
+                    "name": "Nhân học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 25.8,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 25.8,
+                        "D14": 24.8,
+                        "D15": 24.8,
+                        "D66": 24.8,
+                        "D01": 24.3,
+                        "C03": 24.8,
+                        "C04": 24.8,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 25.8
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX14",
+                    "name": "Nhật Bản học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 21.75,
+                    "tuition_per_semester": 16.5,
+                    "admission_scores_by_combination": {
+                        "D01": 21.75,
+                        "D06": 21.75,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 21.75
+                    },
+                    "tuition_note": "Quy đổi từ nhóm học phí cao trong khoảng 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX15",
+                    "name": "Quan hệ công chúng",
+                    "major_code": "KHAC",
+                    "admission_score_2025": 28.95,
+                    "tuition_per_semester": 16.5,
+                    "admission_scores_by_combination": {
+                        "C00": 28.95,
+                        "D14": 25.95,
+                        "D15": 25.95,
+                        "D66": 25.95,
+                        "D01": 25.45,
+                        "C03": 26.45,
+                        "C04": 26.45,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 28.95
+                    },
+                    "tuition_note": "Quy đổi từ nhóm học phí cao trong khoảng 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX16",
+                    "name": "Quản lý thông tin",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 26.99,
+                    "tuition_per_semester": 11.0,
+                    "admission_scores_by_combination": {
+                        "C00": 26.99,
+                        "D14": 24.99,
+                        "D15": 24.99,
+                        "D66": 24.99,
+                        "D01": 24.49,
+                        "C03": 24.99,
+                        "C04": 24.99,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 26.99
+                    },
+                    "tuition_note": "Ước tính từ nhóm giữa của khoảng học phí 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX17",
+                    "name": "Quản trị dịch vụ du lịch và lữ hành",
+                    "major_code": "DU-LICH",
+                    "admission_score_2025": 27.87,
+                    "tuition_per_semester": 16.5,
+                    "admission_scores_by_combination": {
+                        "C00": 27.87,
+                        "D14": 24.87,
+                        "D15": 24.87,
+                        "D66": 24.87,
+                        "D01": 24.37,
+                        "C03": 25.37,
+                        "C04": 25.37,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 27.87
+                    },
+                    "tuition_note": "Quy đổi từ nhóm học phí cao trong khoảng 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX18",
+                    "name": "Quản trị khách sạn",
+                    "major_code": "DU-LICH",
+                    "admission_score_2025": 27.49,
+                    "tuition_per_semester": 16.5,
+                    "admission_scores_by_combination": {
+                        "C00": 27.49,
+                        "D14": 24.49,
+                        "D15": 24.49,
+                        "D66": 24.49,
+                        "D01": 23.99,
+                        "C03": 24.99,
+                        "C04": 24.99,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 27.49
+                    },
+                    "tuition_note": "Quy đổi từ nhóm học phí cao trong khoảng 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX19",
+                    "name": "Quản trị văn phòng",
+                    "major_code": "KHAC",
+                    "admission_score_2025": 27.43,
+                    "tuition_per_semester": 11.0,
+                    "admission_scores_by_combination": {
+                        "C00": 27.43,
+                        "D14": 25.43,
+                        "D15": 25.43,
+                        "D66": 25.43,
+                        "D01": 24.93,
+                        "C03": 25.43,
+                        "C04": 25.43,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 27.43
+                    },
+                    "tuition_note": "Ước tính từ nhóm giữa của khoảng học phí 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX20",
+                    "name": "Quốc tế học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 26.5,
+                    "tuition_per_semester": 11.0,
+                    "admission_scores_by_combination": {
+                        "C00": 26.5,
+                        "D14": 23.5,
+                        "D15": 23.5,
+                        "D66": 23.5,
+                        "D01": 23.0,
+                        "C03": 24.0,
+                        "C04": 24.0,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 26.5
+                    },
+                    "tuition_note": "Ước tính từ nhóm giữa của khoảng học phí 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX21",
+                    "name": "Tâm lý học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 29.0,
+                    "tuition_per_semester": 16.5,
+                    "admission_scores_by_combination": {
+                        "C00": 29.0,
+                        "D14": 26.0,
+                        "D15": 26.0,
+                        "D66": 26.0,
+                        "D01": 25.5,
+                        "C03": 26.5,
+                        "C04": 26.5,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 29.0
+                    },
+                    "tuition_note": "Quy đổi từ nhóm học phí cao trong khoảng 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX22",
+                    "name": "Thông tin - Thư viện",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 25.41,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 25.41,
+                        "D14": 24.41,
+                        "D15": 24.41,
+                        "D66": 24.41,
+                        "D01": 23.91,
+                        "C03": 24.41,
+                        "C04": 24.41,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 25.41
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX23",
+                    "name": "Tôn giáo học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 25.0,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 25.0,
+                        "D14": 24.0,
+                        "D15": 24.0,
+                        "D66": 24.0,
+                        "D01": 23.5,
+                        "C03": 24.0,
+                        "C04": 24.0,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 25.0
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX24",
+                    "name": "Triết học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 25.89,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 25.89,
+                        "D14": 24.89,
+                        "D15": 24.89,
+                        "D66": 24.89,
+                        "D01": 24.39,
+                        "C03": 24.89,
+                        "C04": 24.89,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 25.89
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX25",
+                    "name": "Văn hóa học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 27.22,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 27.22,
+                        "D14": 25.22,
+                        "D15": 25.22,
+                        "D66": 25.22,
+                        "D01": 24.72,
+                        "C03": 25.22,
+                        "C04": 25.22,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 27.22
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX26",
+                    "name": "Văn học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 27.5,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 27.5,
+                        "D14": 25.5,
+                        "D15": 25.5,
+                        "D66": 25.5,
+                        "D01": 25.0,
+                        "C03": 25.5,
+                        "C04": 25.5,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 27.5
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX27",
+                    "name": "Việt Nam học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 26.62,
+                    "tuition_per_semester": 11.0,
+                    "admission_scores_by_combination": {
+                        "C00": 26.62,
+                        "D14": 24.62,
+                        "D15": 24.62,
+                        "D66": 24.62,
+                        "D01": 24.12,
+                        "C03": 24.62,
+                        "C04": 24.62,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 26.62
+                    },
+                    "tuition_note": "Ước tính từ nhóm giữa của khoảng học phí 16,9-33 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "QHX28",
+                    "name": "Xã hội học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 27.0,
+                    "tuition_per_semester": 8.45,
+                    "admission_scores_by_combination": {
+                        "C00": 27.0,
+                        "D14": 25.0,
+                        "D15": 25.0,
+                        "D66": 25.0,
+                        "D01": 24.5,
+                        "C03": 25.0,
+                        "C04": 25.0,
+                        "PHƯƠNG THỨC 401 (Theo thang 30)": 27.0
+                    },
+                    "tuition_note": "Quy đổi từ mức chuẩn 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "USSH/VNU thông tin học phí 2025-2026 được công bố theo khoảng 16,9-33 triệu VNĐ/năm."
+                }
+            ]
+        },
+        {
+            "name": "Trường Đại học Ngoại ngữ",
+            "short_desc": "Ngôn ngữ & sư phạm ngoại ngữ",
+            "city": "Hà Nội",
+            "website": "https://ulis.vnu.edu.vn",
+            "about": "Đơn vị đào tạo ngôn ngữ, văn hóa, truyền thông xuyên quốc gia và sư phạm ngoại ngữ thuộc ĐHQGHN.",
+            "tags": [
+                "Ngoại ngữ",
+                "Sư phạm",
+                "Ngôn ngữ"
+            ],
+            "highlights": [
+                "Nhiều chương trình ngôn ngữ phổ biến",
+                "Có ngành sư phạm ngoại ngữ điểm cao"
+            ],
+            "code": "QHF",
+            "programs": [
+                {
+                    "program_code": "7140231",
+                    "name": "Sư phạm tiếng Anh",
+                    "major_code": "NN",
+                    "admission_score_2025": 30.0,
+                    "tuition_per_semester": 0.0,
+                    "successful_preference": "NV1",
+                    "tuition_note": "Ngành sư phạm: sinh viên đủ điều kiện có thể được hỗ trợ/miễn học phí theo chính sách đào tạo giáo viên; cần xác nhận khi nhập học.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7140234",
+                    "name": "Sư phạm tiếng Trung",
+                    "major_code": "NN",
+                    "admission_score_2025": 30.0,
+                    "tuition_per_semester": 0.0,
+                    "successful_preference": "NV1",
+                    "tuition_note": "Ngành sư phạm: sinh viên đủ điều kiện có thể được hỗ trợ/miễn học phí theo chính sách đào tạo giáo viên; cần xác nhận khi nhập học.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7140236",
+                    "name": "Sư phạm tiếng Nhật",
+                    "major_code": "NN",
+                    "admission_score_2025": 28.1,
+                    "tuition_per_semester": 0.0,
+                    "successful_preference": "NV1, NV2, NV3",
+                    "tuition_note": "Ngành sư phạm: sinh viên đủ điều kiện có thể được hỗ trợ/miễn học phí theo chính sách đào tạo giáo viên; cần xác nhận khi nhập học.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7140237",
+                    "name": "Sư phạm tiếng Hàn Quốc",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 27.81,
+                    "tuition_per_semester": 0.0,
+                    "successful_preference": "NV1",
+                    "tuition_note": "Ngành sư phạm: sinh viên đủ điều kiện có thể được hỗ trợ/miễn học phí theo chính sách đào tạo giáo viên; cần xác nhận khi nhập học.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7220201",
+                    "name": "Ngôn ngữ Anh",
+                    "major_code": "NN",
+                    "admission_score_2025": 26.85,
+                    "tuition_per_semester": 19.0,
+                    "successful_preference": "NV1, NV2",
+                    "tuition_note": "Quy đổi từ mức 38 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7220202",
+                    "name": "Ngôn ngữ Nga",
+                    "major_code": "NN",
+                    "admission_score_2025": 22.6,
+                    "tuition_per_semester": 10.5,
+                    "successful_preference": "NV1 đến NV14",
+                    "tuition_note": "Quy đổi từ mức 21 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7220203",
+                    "name": "Ngôn ngữ Pháp",
+                    "major_code": "NN",
+                    "admission_score_2025": 23.47,
+                    "tuition_per_semester": 19.0,
+                    "successful_preference": "NV1, NV2, NV3",
+                    "tuition_note": "Quy đổi từ mức 38 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7220204",
+                    "name": "Ngôn ngữ Trung Quốc",
+                    "major_code": "NN",
+                    "admission_score_2025": 27.03,
+                    "tuition_per_semester": 19.0,
+                    "successful_preference": "NV1",
+                    "tuition_note": "Quy đổi từ mức 38 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7220205",
+                    "name": "Ngôn ngữ Đức",
+                    "major_code": "NN",
+                    "admission_score_2025": 24.56,
+                    "tuition_per_semester": 19.0,
+                    "successful_preference": "NV1",
+                    "tuition_note": "Quy đổi từ mức 38 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7220209",
+                    "name": "Ngôn ngữ Nhật",
+                    "major_code": "NN",
+                    "admission_score_2025": 23.93,
+                    "tuition_per_semester": 19.0,
+                    "successful_preference": "NV1, NV2",
+                    "tuition_note": "Quy đổi từ mức 38 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7220210",
+                    "name": "Ngôn ngữ Hàn Quốc",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 24.69,
+                    "tuition_per_semester": 19.0,
+                    "successful_preference": "NV1",
+                    "tuition_note": "Quy đổi từ mức 38 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7220211",
+                    "name": "Ngôn ngữ Ả Rập",
+                    "major_code": "NN",
+                    "admission_score_2025": 21.88,
+                    "tuition_per_semester": 10.5,
+                    "successful_preference": "NV1, NV2",
+                    "tuition_note": "Quy đổi từ mức 21 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7220212QTD",
+                    "name": "Văn hóa và truyền thông xuyên quốc gia",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 24.58,
+                    "tuition_per_semester": 8.45,
+                    "successful_preference": "NV1 đến NV5",
+                    "tuition_note": "Quy đổi từ mức chuẩn khoảng 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7220101",
+                    "name": "Tiếng Việt và Văn hóa Việt Nam",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 22.56,
+                    "tuition_per_semester": 8.45,
+                    "successful_preference": "NV1",
+                    "tuition_note": "Quy đổi từ mức chuẩn khoảng 16,9 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                },
+                {
+                    "program_code": "7903124",
+                    "name": "Kinh tế – Tài chính",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 15.06,
+                    "tuition_per_semester": 32.5,
+                    "successful_preference": "NV1 đến NV19",
+                    "tuition_note": "Quy đổi từ mức dự kiến 65 triệu VNĐ/năm đối với chương trình liên kết quốc tế, chia 2 học kỳ.",
+                    "tuition_source": "ULIS/VNU thông báo học phí 2025-2026."
+                }
+            ]
+        },
+        {
+            "name": "Trường Đại học Kinh tế",
+            "short_desc": "Kinh tế, tài chính & quản trị",
+            "city": "Hà Nội",
+            "website": "https://ueb.edu.vn",
+            "about": "Đơn vị đào tạo các ngành kinh tế, quản trị, tài chính, kế toán và kinh tế quốc tế thuộc ĐHQGHN.",
+            "tags": [
+                "Kinh tế",
+                "Tài chính",
+                "Quản trị"
+            ],
+            "highlights": [
+                "Các ngành kinh tế trọng điểm",
+                "Có tiêu chí phụ môn Toán và nguyện vọng"
+            ],
+            "code": "QHE",
+            "programs": [
+                {
+                    "program_code": "7340101",
+                    "name": "Quản trị kinh doanh",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 24.93,
+                    "tuition_per_semester": 23.0,
+                    "admission_methods": [
+                        "100",
+                        "402",
+                        "410"
+                    ],
+                    "math_subscore": 8.0,
+                    "successful_preference": "NV1 đến NV5",
+                    "tuition_note": "Quy đổi từ mức niên chế 4,6 triệu VNĐ/tháng năm học 2025-2026, tính 5 tháng/học kỳ.",
+                    "tuition_source": "UEB/VNU quyết định học phí bậc đại học năm học 2025-2026."
+                },
+                {
+                    "program_code": "7340201",
+                    "name": "Tài chính - Ngân hàng",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 24.25,
+                    "tuition_per_semester": 23.0,
+                    "admission_methods": [
+                        "100",
+                        "402",
+                        "410"
+                    ],
+                    "math_subscore": 8.0,
+                    "successful_preference": "NV1 đến NV5",
+                    "tuition_note": "Quy đổi từ mức niên chế 4,6 triệu VNĐ/tháng năm học 2025-2026, tính 5 tháng/học kỳ.",
+                    "tuition_source": "UEB/VNU quyết định học phí bậc đại học năm học 2025-2026."
+                },
+                {
+                    "program_code": "7340301",
+                    "name": "Kế toán",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 24.2,
+                    "tuition_per_semester": 23.0,
+                    "admission_methods": [
+                        "100",
+                        "402",
+                        "410"
+                    ],
+                    "math_subscore": 7.25,
+                    "successful_preference": "NV1",
+                    "tuition_note": "Quy đổi từ mức niên chế 4,6 triệu VNĐ/tháng năm học 2025-2026, tính 5 tháng/học kỳ.",
+                    "tuition_source": "UEB/VNU quyết định học phí bậc đại học năm học 2025-2026."
+                },
+                {
+                    "program_code": "7310106",
+                    "name": "Kinh tế quốc tế",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 25.72,
+                    "tuition_per_semester": 23.0,
+                    "admission_methods": [
+                        "100",
+                        "402",
+                        "410"
+                    ],
+                    "math_subscore": 6.25,
+                    "successful_preference": "NV1 đến NV10",
+                    "tuition_note": "Quy đổi từ mức niên chế 4,6 triệu VNĐ/tháng năm học 2025-2026, tính 5 tháng/học kỳ.",
+                    "tuition_source": "UEB/VNU quyết định học phí bậc đại học năm học 2025-2026."
+                },
+                {
+                    "program_code": "7310101",
+                    "name": "Kinh tế",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 24.3,
+                    "tuition_per_semester": 23.0,
+                    "admission_methods": [
+                        "100",
+                        "402",
+                        "410"
+                    ],
+                    "math_subscore": 7.25,
+                    "successful_preference": "NV1, NV2",
+                    "tuition_note": "Quy đổi từ mức niên chế 4,6 triệu VNĐ/tháng năm học 2025-2026, tính 5 tháng/học kỳ.",
+                    "tuition_source": "UEB/VNU quyết định học phí bậc đại học năm học 2025-2026."
+                },
+                {
+                    "program_code": "7310105",
+                    "name": "Kinh tế phát triển",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 24.2,
+                    "tuition_per_semester": 23.0,
+                    "admission_methods": [
+                        "100",
+                        "402",
+                        "410"
+                    ],
+                    "math_subscore": 6.0,
+                    "successful_preference": "NV1",
+                    "tuition_note": "Quy đổi từ mức niên chế 4,6 triệu VNĐ/tháng năm học 2025-2026, tính 5 tháng/học kỳ.",
+                    "tuition_source": "UEB/VNU quyết định học phí bậc đại học năm học 2025-2026."
+                }
+            ]
+        },
+        {
+            "name": "Trường Đại học Giáo dục",
+            "short_desc": "Sư phạm & khoa học giáo dục",
+            "city": "Hà Nội",
+            "website": "https://education.vnu.edu.vn",
+            "about": "Đơn vị đào tạo giáo viên, giáo dục mầm non, giáo dục tiểu học và các ngành khoa học giáo dục thuộc ĐHQGHN.",
+            "tags": [
+                "Sư phạm",
+                "Giáo dục"
+            ],
+            "highlights": [
+                "Nhiều ngành sư phạm điểm chuẩn cao",
+                "Có chỉ tiêu công bố theo ngành"
+            ],
+            "code": "QHS",
+            "programs": [
+                {
+                    "program_code": "QHS01",
+                    "name": "Sư phạm Toán học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 28.57,
+                    "tuition_per_semester": 7.05,
+                    "quota": 45,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                },
+                {
+                    "program_code": "QHS02",
+                    "name": "Sư phạm Vật lí",
+                    "major_code": "SP",
+                    "admission_score_2025": 28.0,
+                    "tuition_per_semester": 7.05,
+                    "quota": 20,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                },
+                {
+                    "program_code": "QHS03",
+                    "name": "Sư phạm Hoá học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 27.74,
+                    "tuition_per_semester": 7.05,
+                    "quota": 20,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                },
+                {
+                    "program_code": "QHS04",
+                    "name": "Sư phạm Sinh học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 25.37,
+                    "tuition_per_semester": 7.05,
+                    "quota": 20,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                },
+                {
+                    "program_code": "QHS05",
+                    "name": "Sư phạm Khoa học Tự nhiên",
+                    "major_code": "SP",
+                    "admission_score_2025": 25.58,
+                    "tuition_per_semester": 7.05,
+                    "quota": 70,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                },
+                {
+                    "program_code": "QHS06",
+                    "name": "Sư phạm Ngữ văn",
+                    "major_code": "SP",
+                    "admission_score_2025": 28.45,
+                    "tuition_per_semester": 7.05,
+                    "quota": 100,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                },
+                {
+                    "program_code": "QHS07",
+                    "name": "Sư phạm Lịch sử",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 28.99,
+                    "tuition_per_semester": 7.05,
+                    "quota": 20,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                },
+                {
+                    "program_code": "QHS08",
+                    "name": "Sư phạm Lịch sử – Địa lí",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 29.84,
+                    "tuition_per_semester": 7.05,
+                    "quota": 70,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                },
+                {
+                    "program_code": "QHS09",
+                    "name": "Giáo dục Mầm non",
+                    "major_code": "SP",
+                    "admission_score_2025": 27.8,
+                    "tuition_per_semester": 7.05,
+                    "quota": 140,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                },
+                {
+                    "program_code": "QHS10",
+                    "name": "Giáo dục Tiểu học",
+                    "major_code": "SP",
+                    "admission_score_2025": 28.6,
+                    "tuition_per_semester": 7.05,
+                    "quota": 100,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                },
+                {
+                    "program_code": "QHS11",
+                    "name": "Khoa học Giáo dục & Khác (6 ngành)",
+                    "major_code": "SP",
+                    "admission_score_2025": 25.57,
+                    "tuition_per_semester": 7.05,
+                    "quota": 950,
+                    "tuition_note": "Quy đổi từ mức dự kiến 14,1 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Giáo dục/VNU thông tin tuyển sinh/học phí 2025-2026."
+                }
+            ]
+        },
+        {
+            "name": "Trường Đại học Y Dược",
+            "short_desc": "Y khoa, dược & kỹ thuật y học",
+            "city": "Hà Nội",
+            "website": "https://ump.vnu.edu.vn",
+            "about": "Đơn vị đào tạo các ngành y khoa, dược học, răng hàm mặt, điều dưỡng và kỹ thuật y học thuộc ĐHQGHN.",
+            "tags": [
+                "Y Dược",
+                "Sức khỏe"
+            ],
+            "highlights": [
+                "Y khoa và Răng hàm mặt điểm chuẩn cao",
+                "Nhiều phương thức xét tuyển"
+            ],
+            "code": "QHY",
+            "programs": [
+                {
+                    "program_code": "7720101",
+                    "name": "Y khoa",
+                    "major_code": "Y-DUOC",
+                    "admission_score_2025": 27.43,
+                    "tuition_per_semester": 31.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "409",
+                        "500",
+                        "501",
+                        "502"
+                    ],
+                    "original_combination": "B00",
+                    "tuition_note": "Quy đổi từ mức học phí năm học 2025-2026 khoảng 62 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Y Dược/VNU thông tin học phí 2025-2026."
+                },
+                {
+                    "program_code": "7720201",
+                    "name": "Dược học",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 23.09,
+                    "tuition_per_semester": 31.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "409",
+                        "500",
+                        "501",
+                        "502"
+                    ],
+                    "original_combination": "A00",
+                    "tuition_note": "Quy đổi từ mức học phí năm học 2025-2026 khoảng 62 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Y Dược/VNU thông tin học phí 2025-2026."
+                },
+                {
+                    "program_code": "7720501",
+                    "name": "Răng hàm mặt",
+                    "major_code": "Y-DUOC",
+                    "admission_score_2025": 26.99,
+                    "tuition_per_semester": 31.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "409",
+                        "500",
+                        "501",
+                        "502"
+                    ],
+                    "original_combination": "B00",
+                    "tuition_note": "Quy đổi từ mức học phí năm học 2025-2026 khoảng 62 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Y Dược/VNU thông tin học phí 2025-2026."
+                },
+                {
+                    "program_code": "7720601",
+                    "name": "Kĩ thuật xét nghiệm y học",
+                    "major_code": "Y-DUOC",
+                    "admission_score_2025": 21.75,
+                    "tuition_per_semester": 31.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "409",
+                        "500",
+                        "501",
+                        "502"
+                    ],
+                    "original_combination": "B00",
+                    "tuition_note": "Quy đổi từ mức học phí năm học 2025-2026 khoảng 62 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Y Dược/VNU thông tin học phí 2025-2026."
+                },
+                {
+                    "program_code": "7720602",
+                    "name": "Kĩ thuật hình ảnh y học",
+                    "major_code": "Y-DUOC",
+                    "admission_score_2025": 20.35,
+                    "tuition_per_semester": 31.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "409",
+                        "500",
+                        "501",
+                        "502"
+                    ],
+                    "original_combination": "B00",
+                    "tuition_note": "Quy đổi từ mức học phí năm học 2025-2026 khoảng 62 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Y Dược/VNU thông tin học phí 2025-2026."
+                },
+                {
+                    "program_code": "7720301",
+                    "name": "Điều dưỡng",
+                    "major_code": "Y-DUOC",
+                    "admission_score_2025": 19.0,
+                    "tuition_per_semester": 31.0,
+                    "admission_methods": [
+                        "100",
+                        "401",
+                        "409",
+                        "500",
+                        "501",
+                        "502"
+                    ],
+                    "original_combination": "B00",
+                    "tuition_note": "Quy đổi từ mức học phí năm học 2025-2026 khoảng 62 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Y Dược/VNU thông tin học phí 2025-2026."
+                }
+            ]
+        },
+        {
+            "name": "Trường Đại học Việt Nhật",
+            "short_desc": "Định hướng Nhật Bản, công nghệ & liên ngành",
+            "city": "Hà Nội",
+            "website": "https://vju.ac.vn",
+            "about": "Đơn vị đào tạo theo định hướng liên ngành, gắn với mô hình giáo dục và hợp tác Việt Nam - Nhật Bản.",
+            "tags": [
+                "Việt Nhật",
+                "Công nghệ",
+                "Liên ngành"
+            ],
+            "highlights": [
+                "Nhiều chương trình định hướng Nhật Bản",
+                "Có ngành chip bán dẫn và tự động hóa"
+            ],
+            "code": "VJU",
+            "programs": [
+                {
+                    "program_code": "VJU1",
+                    "name": "Nhật Bản học",
+                    "major_code": "KHXH",
+                    "admission_score_2025": 22.0,
+                    "tuition_per_semester": 29.0,
+                    "tuition_note": "Quy đổi từ mức 58 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "VJU/VNU thông tin tuyển sinh 2025."
+                },
+                {
+                    "program_code": "VJU2",
+                    "name": "Khoa học và kỹ thuật máy tính",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 20.75,
+                    "tuition_per_semester": 29.0,
+                    "tuition_note": "Quy đổi từ mức 58 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "VJU/VNU thông tin tuyển sinh 2025."
+                },
+                {
+                    "program_code": "VJU3",
+                    "name": "Cơ điện tử thông minh và sản xuất theo phương thức Nhật Bản",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 20.5,
+                    "tuition_per_semester": 29.0,
+                    "tuition_note": "Quy đổi từ mức 58 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "VJU/VNU thông tin tuyển sinh 2025."
+                },
+                {
+                    "program_code": "VJU4",
+                    "name": "Công nghệ thực phẩm và sức khỏe",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 20.0,
+                    "tuition_per_semester": 29.0,
+                    "tuition_note": "Quy đổi từ mức 58 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "VJU/VNU thông tin tuyển sinh 2025."
+                },
+                {
+                    "program_code": "VJU5",
+                    "name": "Nông nghiệp thông minh và bền vững",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 20.0,
+                    "tuition_per_semester": 29.0,
+                    "tuition_note": "Quy đổi từ mức 58 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "VJU/VNU thông tin tuyển sinh 2025."
+                },
+                {
+                    "program_code": "VJU6",
+                    "name": "Kỹ thuật xây dựng",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 20.0,
+                    "tuition_per_semester": 12.5,
+                    "tuition_note": "Quy đổi từ mức 25 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "VJU/VNU thông tin tuyển sinh 2025."
+                },
+                {
+                    "program_code": "VJU7",
+                    "name": "Đổi mới và phát triển toàn cầu",
+                    "major_code": "KHAC",
+                    "admission_score_2025": 20.5,
+                    "tuition_per_semester": 29.0,
+                    "tuition_note": "Quy đổi từ mức 58 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "VJU/VNU thông tin tuyển sinh 2025."
+                },
+                {
+                    "program_code": "VJU8",
+                    "name": "Công nghệ kỹ thuật Chip bán dẫn",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 21.0,
+                    "tuition_per_semester": 29.0,
+                    "tuition_note": "Quy đổi từ mức 58 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "VJU/VNU thông tin tuyển sinh 2025."
+                },
+                {
+                    "program_code": "VJU8",
+                    "name": "Điều khiển thông minh và tự động hóa",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 20.0,
+                    "tuition_per_semester": 29.0,
+                    "tuition_note": "Quy đổi từ mức 58 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "VJU/VNU thông tin tuyển sinh 2025."
+                }
+            ]
+        },
+        {
+            "name": "Trường Đại học Luật",
+            "short_desc": "Luật & pháp lý",
+            "city": "Hà Nội",
+            "website": "https://law.vnu.edu.vn",
+            "about": "Đơn vị đào tạo các ngành luật, luật kinh doanh và luật thương mại quốc tế thuộc ĐHQGHN.",
+            "tags": [
+                "Luật",
+                "Pháp lý"
+            ],
+            "highlights": [
+                "Tập trung các chương trình luật",
+                "Có chương trình luật chất lượng cao"
+            ],
+            "code": "QHL",
+            "programs": [
+                {
+                    "program_code": "7380101",
+                    "name": "Luật",
+                    "major_code": "LUAT",
+                    "admission_score_2025": 24.2,
+                    "tuition_per_semester": 15.215,
+                    "tuition_note": "Quy đổi từ lộ trình học phí 2026-2027 khoảng 30,43 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Luật/VNU tổng hợp thông tin tuyển sinh 2026 và học phí 2025-2026."
+                },
+                {
+                    "program_code": "7380101CLC",
+                    "name": "Luật chất lượng cao",
+                    "major_code": "LUAT",
+                    "admission_score_2025": 24.2,
+                    "tuition_per_semester": 15.9,
+                    "tuition_note": "Quy đổi từ mức nhóm cao khoảng 31,8 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Luật/VNU tổng hợp thông tin tuyển sinh 2026 và học phí 2025-2026."
+                },
+                {
+                    "program_code": "7380109",
+                    "name": "Luật Thương mại quốc tế",
+                    "major_code": "LUAT",
+                    "admission_score_2025": 24.0,
+                    "tuition_per_semester": 15.215,
+                    "tuition_note": "Quy đổi từ lộ trình học phí 2026-2027 khoảng 30,43 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Luật/VNU tổng hợp thông tin tuyển sinh 2026 và học phí 2025-2026."
+                },
+                {
+                    "program_code": "7380110",
+                    "name": "Luật Kinh doanh",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 23.72,
+                    "tuition_per_semester": 15.215,
+                    "tuition_note": "Quy đổi từ lộ trình học phí 2026-2027 khoảng 30,43 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "ĐH Luật/VNU tổng hợp thông tin tuyển sinh 2026 và học phí 2025-2026."
+                }
+            ]
+        },
+        {
+            "name": "Trường Quốc tế",
+            "short_desc": "Kinh doanh, công nghệ & chương trình quốc tế",
+            "city": "Hà Nội",
+            "website": "https://is.vnu.edu.vn",
+            "about": "Đơn vị đào tạo các chương trình kinh doanh, công nghệ, truyền thông và chương trình liên kết quốc tế thuộc ĐHQGHN.",
+            "tags": [
+                "Quốc tế",
+                "Kinh doanh",
+                "Công nghệ"
+            ],
+            "highlights": [
+                "Nhiều chương trình song bằng/liên kết",
+                "Đa dạng ngành kinh doanh số và công nghệ"
+            ],
+            "code": "QHQ",
+            "programs": [
+                {
+                    "program_code": "QHQ01",
+                    "name": "Kinh doanh quốc tế",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 22.0,
+                    "tuition_per_semester": 23.125,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 46.25 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ02",
+                    "name": "Kế toán, Phân tích và Kiểm toán",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 20.0,
+                    "tuition_per_semester": 23.125,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 46.25 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ03",
+                    "name": "Hệ thống thông tin quản lý",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 19.5,
+                    "tuition_per_semester": 19.875,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 39.75 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ04",
+                    "name": "Tin học và Kỹ thuật máy tính",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 19.5,
+                    "tuition_per_semester": 26.125,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 52.25 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ05",
+                    "name": "Phân tích dữ liệu kinh doanh",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 20.0,
+                    "tuition_per_semester": 19.875,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 39.75 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ06",
+                    "name": "Marketing (song bằng VNU-HELP)*",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 19.5,
+                    "tuition_per_semester": 56.35,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 112.7 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ07",
+                    "name": "Quản lý (song bằng VNU-Keuka)**",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 19.0,
+                    "tuition_per_semester": 56.35,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 112.7 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ08",
+                    "name": "Tự động hóa và Tin học (Kỹ sư)",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 19.5,
+                    "tuition_per_semester": 23.125,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 46.25 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ09",
+                    "name": "Ngôn ngữ Anh",
+                    "major_code": "NN",
+                    "admission_score_2025": 21.0,
+                    "tuition_per_semester": 21.125,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 42.25 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ10",
+                    "name": "Công nghệ thông tin ứng dụng",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 19.5,
+                    "tuition_per_semester": 23.125,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 46.25 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ11",
+                    "name": "Công nghệ tài chính và kinh doanh số",
+                    "major_code": "CNTT",
+                    "admission_score_2025": 19.5,
+                    "tuition_per_semester": 23.125,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 46.25 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ12",
+                    "name": "Kỹ thuật hệ thống công nghiệp và Logistics",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 19.5,
+                    "tuition_per_semester": 23.125,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 46.25 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ13",
+                    "name": "Kinh doanh số",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 21.0,
+                    "tuition_per_semester": 19.875,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 39.75 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                },
+                {
+                    "program_code": "QHQ14",
+                    "name": "Truyền thông số",
+                    "major_code": "NGHE-THUAT",
+                    "admission_score_2025": 22.0,
+                    "tuition_per_semester": 21.125,
+                    "tuition_note": "Quy đổi từ mức học phí dự kiến năm học 2025-2026 42.25 triệu VNĐ/năm, chia 2 học kỳ.",
+                    "tuition_source": "Trường Quốc tế/VNU thông tin tuyển sinh đại học chính quy 2025."
+                }
+            ]
+        },
+        {
+            "name": "Trường Quản trị và Kinh doanh",
+            "short_desc": "Quản trị, kinh doanh & công nghệ",
+            "city": "Hà Nội",
+            "website": "https://hsb.edu.vn",
+            "about": "Đơn vị đào tạo các chương trình quản trị, kinh doanh, an ninh phi truyền thống, truyền thông và nhân lực thuộc ĐHQGHN.",
+            "tags": [
+                "Quản trị",
+                "Kinh doanh",
+                "An ninh"
+            ],
+            "highlights": [
+                "Có yêu cầu sơ tuyển đạt",
+                "Chương trình quản trị định hướng thực tiễn"
+            ],
+            "code": "QHD",
+            "programs": [
+                {
+                    "program_code": "7900101",
+                    "name": "Quản trị Doanh nghiệp và Công nghệ (MET)",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 19.5,
+                    "tuition_per_semester": 38.0,
+                    "note": "Thí sinh cần có kết quả sơ tuyển Đạt và đặt nguyện vọng vào Trường Quản trị và Kinh doanh.",
+                    "tuition_note": "Học phí năm học 2025-2026 chia 2 học kỳ; khớp mức tạm thu đầu học kỳ của HSB.",
+                    "tuition_source": "HSB/VNU thông báo học phí và học bổng các chương trình Đại học 2025."
+                },
+                {
+                    "program_code": "7900189",
+                    "name": "Quản trị và An ninh (MAS)",
+                    "major_code": "KHAC",
+                    "admission_score_2025": 19.0,
+                    "tuition_per_semester": 38.0,
+                    "note": "Thí sinh cần có kết quả sơ tuyển Đạt và đặt nguyện vọng vào Trường Quản trị và Kinh doanh.",
+                    "tuition_note": "Học phí năm học 2025-2026 chia 2 học kỳ; khớp mức tạm thu đầu học kỳ của HSB.",
+                    "tuition_source": "HSB/VNU thông báo học phí và học bổng các chương trình Đại học 2025."
+                },
+                {
+                    "program_code": "7340401",
+                    "name": "Quản trị An ninh phi truyền thống (BNS)",
+                    "major_code": "KHAC",
+                    "admission_score_2025": 19.0,
+                    "tuition_per_semester": 20.0,
+                    "note": "Thí sinh cần có kết quả sơ tuyển Đạt và đặt nguyện vọng vào Trường Quản trị và Kinh doanh.",
+                    "tuition_note": "Học phí năm học 2025-2026 chia 2 học kỳ; khớp mức tạm thu đầu học kỳ của HSB.",
+                    "tuition_source": "HSB/VNU thông báo học phí và học bổng các chương trình Đại học 2025."
+                },
+                {
+                    "program_code": "7900102",
+                    "name": "Marketing và Truyền thông (MAC)",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 21.5,
+                    "tuition_per_semester": 33.0,
+                    "note": "Thí sinh cần có kết quả sơ tuyển Đạt và đặt nguyện vọng vào Trường Quản trị và Kinh doanh.",
+                    "tuition_note": "Học phí năm học 2025-2026 chia 2 học kỳ; khớp mức tạm thu đầu học kỳ của HSB.",
+                    "tuition_source": "HSB/VNU thông báo học phí và học bổng các chương trình Đại học 2025."
+                },
+                {
+                    "program_code": "7900103",
+                    "name": "Quản trị Nhân lực và Nhân tài (HAT)",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 20.5,
+                    "tuition_per_semester": 33.0,
+                    "note": "Thí sinh cần có kết quả sơ tuyển Đạt và đặt nguyện vọng vào Trường Quản trị và Kinh doanh.",
+                    "tuition_note": "Học phí năm học 2025-2026 chia 2 học kỳ; khớp mức tạm thu đầu học kỳ của HSB.",
+                    "tuition_source": "HSB/VNU thông báo học phí và học bổng các chương trình Đại học 2025."
+                },
+                {
+                    "program_code": "7340101",
+                    "name": "Quản trị dịch vụ khách hàng và chăm sóc sức khỏe (HAS)",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 19.0,
+                    "tuition_per_semester": 20.0,
+                    "note": "Thí sinh cần có kết quả sơ tuyển Đạt và đặt nguyện vọng vào Trường Quản trị và Kinh doanh.",
+                    "tuition_note": "Học phí năm học 2025-2026 chia 2 học kỳ; khớp mức tạm thu đầu học kỳ của HSB.",
+                    "tuition_source": "HSB/VNU thông báo học phí và học bổng các chương trình Đại học 2025."
+                }
+            ]
+        },
+        {
+            "name": "Trường Khoa học liên ngành và Nghệ thuật",
+            "short_desc": "Liên ngành, nghệ thuật & sáng tạo",
+            "city": "Hà Nội",
+            "website": "https://sis.vnu.edu.vn",
+            "about": "Đơn vị đào tạo các lĩnh vực liên ngành, nghệ thuật, thiết kế, truyền thông, đô thị và di sản thuộc ĐHQGHN.",
+            "tags": [
+                "Liên ngành",
+                "Nghệ thuật",
+                "Thiết kế"
+            ],
+            "highlights": [
+                "Có nhóm ngành nghệ thuật và thiết kế sáng tạo",
+                "Kết hợp quản trị, truyền thông và di sản"
+            ],
+            "code": "QHK",
+            "programs": [
+                {
+                    "program_code": "72101a1",
+                    "name": "Nghệ thuật thị giác",
+                    "major_code": "NGHE-THUAT",
+                    "admission_score_2025": 0,
+                    "tuition_per_semester": 15.2,
+                    "original_combination": "H01",
+                    "tuition_note": "Quy đổi từ mức khoảng 30,4 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm.",
+                    "admission_score_note": "Không điền điểm chuẩn thang 30 do ngành có xét tuyển/kết hợp thi năng khiếu; cần cập nhật theo thông báo điểm trúng tuyển chính thức nếu muốn dùng để so sánh."
+                },
+                {
+                    "program_code": "72101a1A",
+                    "name": "Nhiếp ảnh nghệ thuật",
+                    "major_code": "NGHE-THUAT",
+                    "admission_score_2025": 22.43,
+                    "tuition_per_semester": 15.2,
+                    "original_combination": "H01",
+                    "tuition_note": "Quy đổi từ mức khoảng 30,4 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "72101a1B",
+                    "name": "Nghệ thuật tạo hình đương đại",
+                    "major_code": "NGHE-THUAT",
+                    "admission_score_2025": 23.98,
+                    "tuition_per_semester": 15.2,
+                    "original_combination": "H01",
+                    "tuition_note": "Quy đổi từ mức khoảng 30,4 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "7210407",
+                    "name": "Thiết kế sáng tạo",
+                    "major_code": "NGHE-THUAT",
+                    "admission_score_2025": 0,
+                    "tuition_per_semester": 15.9,
+                    "original_combination": "H01",
+                    "tuition_note": "Quy đổi từ mức khoảng 31,8 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm.",
+                    "admission_score_note": "Không điền điểm chuẩn thang 30 do ngành có xét tuyển/kết hợp thi năng khiếu; cần cập nhật theo thông báo điểm trúng tuyển chính thức nếu muốn dùng để so sánh."
+                },
+                {
+                    "program_code": "7210407A",
+                    "name": "Thời trang và sáng tạo",
+                    "major_code": "NGHE-THUAT",
+                    "admission_score_2025": 22.95,
+                    "tuition_per_semester": 15.9,
+                    "original_combination": "H01",
+                    "tuition_note": "Quy đổi từ mức khoảng 31,8 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "7210407B",
+                    "name": "Thiết kế nội thất bền vững",
+                    "major_code": "NGHE-THUAT",
+                    "admission_score_2025": 22.98,
+                    "tuition_per_semester": 15.9,
+                    "original_combination": "H01",
+                    "tuition_note": "Quy đổi từ mức khoảng 31,8 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "7210407C",
+                    "name": "Đồ họa công nghệ số",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 24.41,
+                    "tuition_per_semester": 15.9,
+                    "original_combination": "H01",
+                    "tuition_note": "Quy đổi từ mức khoảng 31,8 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "7320106",
+                    "name": "Công nghệ truyền thông",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 25.0,
+                    "tuition_per_semester": 15.9,
+                    "original_combination": "A00",
+                    "tuition_note": "Quy đổi từ mức khoảng 31,8 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "7349001",
+                    "name": "Quản trị thương hiệu",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 24.0,
+                    "tuition_per_semester": 15.9,
+                    "original_combination": "D01",
+                    "tuition_note": "Quy đổi từ mức khoảng 31,8 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "7349002",
+                    "name": "Quản lý giải trí và sự kiện",
+                    "major_code": "KINH-TE",
+                    "admission_score_2025": 24.1,
+                    "tuition_per_semester": 15.9,
+                    "original_combination": "D01",
+                    "tuition_note": "Quy đổi từ mức khoảng 31,8 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "7580101A",
+                    "name": "Kiến trúc và Thiết kế cảnh quan",
+                    "major_code": "KT-CN",
+                    "admission_score_2025": 22.56,
+                    "tuition_per_semester": 15.9,
+                    "original_combination": "V00",
+                    "tuition_note": "Quy đổi từ mức khoảng 31,8 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "7900204",
+                    "name": "Quản trị đô thị thông minh và bền vững",
+                    "major_code": "KHAC",
+                    "admission_score_2025": 23.1,
+                    "tuition_per_semester": 15.9,
+                    "original_combination": "A00",
+                    "tuition_note": "Quy đổi từ mức khoảng 31,8 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                },
+                {
+                    "program_code": "7900205",
+                    "name": "Quản trị tài nguyên di sản",
+                    "major_code": "KHTN",
+                    "admission_score_2025": 26.38,
+                    "tuition_per_semester": 15.9,
+                    "original_combination": "C00",
+                    "tuition_note": "Quy đổi từ mức khoảng 31,8 triệu VNĐ/năm học 2025-2026, chia 2 học kỳ.",
+                    "tuition_source": "SIS/VNU thông tin tuyển sinh 2025; mức học phí 30,4-31,8 triệu VNĐ/năm."
+                }
+            ]
+        }
+    ],
+    "majors": [
+        {
+            "major_code": "CNTT",
+            "name": "Công nghệ thông tin, máy tính và dữ liệu"
+        },
+        {
+            "major_code": "DU-LICH",
+            "name": "Du lịch, lữ hành và khách sạn"
+        },
+        {
+            "major_code": "KHAC",
+            "name": "Nhóm ngành khác"
+        },
+        {
+            "major_code": "KHTN",
+            "name": "Khoa học tự nhiên, môi trường và thực phẩm"
+        },
+        {
+            "major_code": "KHXH",
+            "name": "Khoa học xã hội và nhân văn"
+        },
+        {
+            "major_code": "KINH-TE",
+            "name": "Kinh tế, quản trị, tài chính và kinh doanh"
+        },
+        {
+            "major_code": "KT-CN",
+            "name": "Kỹ thuật và công nghệ"
+        },
+        {
+            "major_code": "LUAT",
+            "name": "Luật và pháp lý"
+        },
+        {
+            "major_code": "NGHE-THUAT",
+            "name": "Nghệ thuật, thiết kế và truyền thông sáng tạo"
+        },
+        {
+            "major_code": "NN",
+            "name": "Ngôn ngữ và văn hóa"
+        },
+        {
+            "major_code": "SP",
+            "name": "Sư phạm và giáo dục"
+        },
+        {
+            "major_code": "Y-DUOC",
+            "name": "Y dược và khoa học sức khỏe"
+        }
+    ],
+    "metadata": {
+        "updated_at": "2026-05-07",
+        "currency": "VND",
+        "tuition_per_semester_unit": "million_vnd_per_semester",
+        "conversion_rule": "Nếu nguồn công bố theo năm: chia 2 học kỳ. Nếu nguồn công bố theo tháng: nhân 5 tháng/học kỳ. Nếu nguồn công bố theo khoảng nhưng không tách từng ngành, dùng mức phù hợp theo nhóm ngành và ghi chú ở tuition_note.",
+        "note": "Các trường có thể điều chỉnh học phí theo tín chỉ thực đăng ký, lộ trình tăng hoặc điều kiện miễn/giảm học phí. Nên kiểm tra lại tại website trường khi dùng cho tuyển sinh chính thức."
+    }
+}

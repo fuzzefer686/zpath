@@ -2,6 +2,37 @@ import { supabase } from "@/app/lib/supabase";
 import type { UserProfile } from "@/types/profile";
 import { EMPTY_PROFILE } from "@/types/profile";
 
+const missingProfilesTableMessage =
+  "Database chưa có bảng public.profiles. Hãy apply migration mới trước khi lưu hồ sơ.";
+
+export class MissingProfilesTableError extends Error {
+  constructor() {
+    super(missingProfilesTableMessage);
+    this.name = "MissingProfilesTableError";
+  }
+}
+
+function isMissingProfilesTableError(error: unknown) {
+  if (!error || typeof error !== "object") return false;
+
+  const source = error as { code?: unknown; message?: unknown };
+  const message = typeof source.message === "string" ? source.message : "";
+
+  return (
+    source.code === "PGRST205" ||
+    message.includes("Could not find the table 'public.profiles'") ||
+    message.includes("Could not find the table 'profiles'")
+  );
+}
+
+function normalizeProfileDbError(error: unknown) {
+  if (isMissingProfilesTableError(error)) {
+    return new MissingProfilesTableError();
+  }
+
+  return error;
+}
+
 // DB row → UI profile
 function rowToProfile(r: Record<string, unknown>): UserProfile {
   const get = <T,>(k: string, def: T): T => (r[k] as T) ?? def;
@@ -53,7 +84,7 @@ export async function fetchProfile(userId: string): Promise<UserProfile> {
     .eq("id", userId)
     .maybeSingle();
   
-  if (error) throw error;
+  if (error) throw normalizeProfileDbError(error);
   if (!data) return EMPTY_PROFILE;
   return rowToProfile(data as Record<string, unknown>);
 }
@@ -63,5 +94,5 @@ export async function upsertProfile(userId: string, p: UserProfile) {
     .from("profiles")
     .upsert({ id: userId, ...profileToRow(p) });
     
-  if (error) throw error;
+  if (error) throw normalizeProfileDbError(error);
 }

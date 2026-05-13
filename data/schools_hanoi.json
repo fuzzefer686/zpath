@@ -1,0 +1,596 @@
+[
+  {
+    "school_name": "Đại học - Học viện",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/dai-hoc-hoc-vien/"
+  },
+  {
+    "school_name": "Đại học Bách khoa Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-bach-khoa-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Chính trị",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-chinh-tri/"
+  },
+  {
+    "school_name": "Đại học CMC",
+    "school_code": "CMC",
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-cmc/"
+  },
+  {
+    "school_name": "Đại học Công Đoàn",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-cong-doan/"
+  },
+  {
+    "school_name": "Đại học Công nghiệp và Thương mại Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-cong-nghiep-det-may-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Công nghiệp Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-cong-nghiep-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Công nghiệp Việt – Hung",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-cong-nghiep-viet-hung/"
+  },
+  {
+    "school_name": "Đại học Công nghệ Đông Á",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-cong-nghe-dong-a/"
+  },
+  {
+    "school_name": "Đại học Công nghệ Giao thông Vận tải",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-cong-nghe-giao-thong-van-tai/"
+  },
+  {
+    "school_name": "Đại học Công nghệ – Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-cong-nghe-dhqg-hn/"
+  },
+  {
+    "school_name": "Đại học Công nghệ và Quản lý hữu nghị",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-cong-nghe-va-quan-ly-huu-nghi/"
+  },
+  {
+    "school_name": "Đại học Dược Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-duoc-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Đại Nam",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-dai-nam/"
+  },
+  {
+    "school_name": "Đại học Điện Lực",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-dien-luc/"
+  },
+  {
+    "school_name": "Đại học Đông Đô",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-dong-do/"
+  },
+  {
+    "school_name": "Đại học FPT Hà Nội",
+    "school_code": "FPT",
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-fpt-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Giáo dục – Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-giao-duc-dhqg-hn/"
+  },
+  {
+    "school_name": "Đại học Giao thông Vận tải",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-giao-thong-van-tai/"
+  },
+  {
+    "school_name": "Đại học Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Hòa Bình",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-hoa-binh/"
+  },
+  {
+    "school_name": "Đại học Khoa học tự nhiên – Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-khoa-hoc-tu-nhien-dhqg-hn/"
+  },
+  {
+    "school_name": "Đại học Khoa học và Công nghệ Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-khoa-hoc-va-cong-nghe-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Khoa học xã hội và Nhân văn – Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-khoa-hoc-xa-hoi-nhan-van-dhqg-hn/"
+  },
+  {
+    "school_name": "Đại học Kiểm sát Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-kiem-sat-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Kiến trúc Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-kien-truc-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Kinh doanh và Công nghệ Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-kinh-doanh-va-cong-nghe-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Kinh tế – Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-kinh-te-dhqg-hn/"
+  },
+  {
+    "school_name": "Đại học Kinh tế – Kỹ thuật Công nghiệp",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-kinh-te-ky-thuat-cong-nghiep/"
+  },
+  {
+    "school_name": "Đại học Kinh tế quốc dân",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-kinh-te-quoc-dan/"
+  },
+  {
+    "school_name": "Đại học Lao động – Xã hội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-lao-dong-xa-hoi/"
+  },
+  {
+    "school_name": "Đại học Lâm nghiệp Việt Nam",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-lam-nghiep-viet-nam/"
+  },
+  {
+    "school_name": "Đại học Luật – Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-luat-dhqg-hn/"
+  },
+  {
+    "school_name": "Đại học Luật Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-luat-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Mỏ – Địa chất",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-mo-dia-chat/"
+  },
+  {
+    "school_name": "Đại học Mở Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/vien-dai-hoc-mo-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Mỹ thuật Công nghiệp",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-my-thuat-cong-nghiep/"
+  },
+  {
+    "school_name": "Đại học Mỹ thuật Việt Nam",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-my-thuat-viet-nam/"
+  },
+  {
+    "school_name": "Đại học Ngoại ngữ – Đại học quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-ngoai-ngu-dhqg-hn/"
+  },
+  {
+    "school_name": "Đại học Ngoại thương",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-ngoai-thuong/"
+  },
+  {
+    "school_name": "Đại học Nguyễn Trãi",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-nguyen-trai/"
+  },
+  {
+    "school_name": "Đại học Phenikaa",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-phenikaa/"
+  },
+  {
+    "school_name": "Đại học Phòng cháy chữa cháy",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-phong-chay-chua-chay/"
+  },
+  {
+    "school_name": "Đại học Phương Đông",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-phuong-dong/"
+  },
+  {
+    "school_name": "Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-quoc-gia-ha-noi/"
+  },
+  {
+    "school_name": "Đại học RMIT Hà Nội",
+    "school_code": "RMIT",
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-rmit-viet-nam/"
+  },
+  {
+    "school_name": "Đại học Sân khấu Điện ảnh Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-san-khau-dien-anh-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Sư phạm Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-su-pham-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Sư phạm Nghệ thuật Trung ương",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-su-pham-nghe-thuat-trung-uong/"
+  },
+  {
+    "school_name": "Đại học Sư phạm Thể dục Thể thao Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-su-pham-tdtt-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Tài chính – Ngân hàng Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-tai-chinh-ngan-hang-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Tài nguyên và Môi trường Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-tai-nguyen-va-moi-truong-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Thành Đô",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-thanh-do/"
+  },
+  {
+    "school_name": "Đại học Thăng Long",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-thang-long/"
+  },
+  {
+    "school_name": "Đại học Thủ đô Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-thu-do-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Thủy lợi",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-thuy-loi/"
+  },
+  {
+    "school_name": "Đại học Thương mại",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-thuong-mai/"
+  },
+  {
+    "school_name": "Đại học Văn hóa Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-van-hoa-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Văn hóa – Nghệ thuật Quân đội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-van-hoa-nghe-thuat-quan-doi/"
+  },
+  {
+    "school_name": "Đại học Việt – Nhật – Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-viet-nhat/"
+  },
+  {
+    "school_name": "Đại học Xây dựng Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-xay-dung/"
+  },
+  {
+    "school_name": "Đại học Y Dược – Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-y-duoc-dhqg-hn/"
+  },
+  {
+    "school_name": "Đại học Y Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-y-ha-noi/"
+  },
+  {
+    "school_name": "Đại học Y tế Công cộng",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/dai-hoc-y-te-cong-cong/"
+  },
+  {
+    "school_name": "Trường Khoa học Liên ngành và Nghệ thuật – ĐHQGHN",
+    "school_code": "HQGHN",
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/khoa-cac-khoa-hoc-lien-nganh-dhqghn/"
+  },
+  {
+    "school_name": "Trường Quản trị và Kinh doanh – Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/khoa-quan-tri-va-kinh-doanh-dhqg-ha-noi/"
+  },
+  {
+    "school_name": "Trường Quốc tế – Đại học Quốc gia Hà Nội",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/khoa-quoc-te-dhqg-hn/"
+  },
+  {
+    "school_name": "Trường Sĩ quan Đặc công",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/truong-si-quan-dac-cong/"
+  },
+  {
+    "school_name": "Trường Sĩ quan Lục quân 1",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/si-quan-luc-quan-1/"
+  },
+  {
+    "school_name": "Trường Sĩ quan Pháo binh",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/truong-si-quan-phao-binh/"
+  },
+  {
+    "school_name": "Trường Sĩ quan Phòng hóa",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/si-quan-phong-hoa/"
+  },
+  {
+    "school_name": "Học viện An ninh Nhân dân",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-an-ninh-nhan-dan/"
+  },
+  {
+    "school_name": "Học viện Âm nhạc Quốc gia Việt Nam",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-am-nhac-quoc-gia/"
+  },
+  {
+    "school_name": "Học viện Báo chí và Tuyên truyền",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-bao-chi-va-tuyen-truyen/"
+  },
+  {
+    "school_name": "Học viện Biên phòng",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-bien-phong/"
+  },
+  {
+    "school_name": "Học viện Cảnh sát Nhân dân",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-canh-sat-nhan-dan/"
+  },
+  {
+    "school_name": "Học viện Chính sách và Phát triển",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-chinh-sach-va-phat-trien/"
+  },
+  {
+    "school_name": "Học viện Chính trị Công an Nhân dân",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-chinh-tri-cong-an-nhan-dan/"
+  },
+  {
+    "school_name": "Học viện Công nghệ Bưu chính Viễn thông",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-cong-nghe-buu-chinh-vien-thong/"
+  },
+  {
+    "school_name": "Học viện Dân tộc",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-dan-toc/"
+  },
+  {
+    "school_name": "Học viện Hành chính và Quản trị công",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-hanh-chinh-quoc-gia/"
+  },
+  {
+    "school_name": "Học viện Hậu cần",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-hau-can/"
+  },
+  {
+    "school_name": "Học viện Khoa học Quân sự",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-khoa-hoc-quan-su/"
+  },
+  {
+    "school_name": "Học viện Kỹ thuật Mật mã",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-ky-thuat-mat-ma/"
+  },
+  {
+    "school_name": "Học viện Kỹ thuật Quân sự",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-ky-thuat-quan-su/"
+  },
+  {
+    "school_name": "Học viện Ngoại Giao",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-ngoai-giao/"
+  },
+  {
+    "school_name": "Học viện Ngân Hàng",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-ngan-hang/"
+  },
+  {
+    "school_name": "Học viện Nông nghiệp Việt Nam",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-nong-nghiep-viet-nam/"
+  },
+  {
+    "school_name": "Học viện Phòng không – Không quân",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-phong-khong-khong-quan/"
+  },
+  {
+    "school_name": "Học viện Phụ nữ Việt Nam",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-phu-nu-viet-nam/"
+  },
+  {
+    "school_name": "Học viện Quản lý giáo dục",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-quan-ly-giao-duc/"
+  },
+  {
+    "school_name": "Học viện Quân Y",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-quan-y/"
+  },
+  {
+    "school_name": "Học viện Tài chính",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-tai-chinh/"
+  },
+  {
+    "school_name": "Học viện Thanh thiếu niên Việt Nam",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-thanh-thieu-nien-viet-nam/"
+  },
+  {
+    "school_name": "Học viện Tòa án",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-toa-an/"
+  },
+  {
+    "school_name": "Học viện Y dược học Cổ truyền Việt Nam",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/truong/hoc-vien-y-duoc-hoc-co-truyen-viet-nam/"
+  },
+  {
+    "school_name": "Đại học – Học viện khu vực Thành phố Hồ Chí Minh",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/khu-vuc/dai-hoc-hoc-vien-tai-tp-hcm/"
+  },
+  {
+    "school_name": "Đại học – Học viện khu vực Đà Nẵng",
+    "school_code": null,
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/khu-vuc/dai-hoc-hoc-vien-tai-da-nang/"
+  },
+  {
+    "school_name": "Đại học – Học viện khu vực miền Nam (Ngoài TPHCM)",
+    "school_code": "TPHCM",
+    "area": "Hà Nội",
+    "school_url": "https://trangedu.com/khu-vuc/dai-hoc-khu-vuc-mien-nam/"
+  }
+]

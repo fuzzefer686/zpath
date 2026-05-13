@@ -7,10 +7,10 @@ import { useSearchParams } from "next/navigation";
 import { supabase } from "../lib/supabase";
 
 const sanitizeNextPath = (value: string | null) => {
-  if (!value) return "/dashboard";
+  if (!value) return "/";
   // only allow internal paths to avoid open redirects
-  if (!value.startsWith("/")) return "/dashboard";
-  if (value.startsWith("//")) return "/dashboard";
+  if (!value.startsWith("/")) return "/";
+  if (value.startsWith("//")) return "/";
   return value;
 };
 
@@ -85,4 +85,3 @@ export function LoginClient() {
     </div>
   );
 }
-

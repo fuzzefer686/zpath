@@ -83,8 +83,8 @@ export default function ChatPage() {
     return (
       <div className="max-w-3xl mx-auto p-8">
         <p className="mb-4">Ban chua co ho so de AI tu van.</p>
-        <Link href="/discover" className="inline-flex bg-zpath-gradient text-white px-6 py-3 rounded-full font-semibold">
-          Tao ho so ngay
+        <Link href="/profile" className="inline-flex bg-zpath-gradient text-white px-6 py-3 rounded-full font-semibold">
+          Tao ho so
         </Link>
       </div>
     );

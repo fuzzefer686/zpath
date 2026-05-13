@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Compass, Calculator, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, GraduationCap, Layers } from "lucide-react";
+import { ArrowRight, Compass, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, GraduationCap, Layers, Newspaper, Clock, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/zpath/SectionHeading";
 import { UNIVERSITIES } from "@/data/universities";
 import { UniversityCard } from "@/components/zpath/UniversityCard";
+import { NEWS_ARTICLES } from "@/data/news";
 
 const stats = [
   { label: "Học sinh đã thử", value: "10K+" },
@@ -15,14 +16,6 @@ const stats = [
 ];
 
 const products = [
-  {
-    to: "/landing",
-    icon: Calculator,
-    title: "Tính tỉ lệ đỗ",
-    desc: "Nhập điểm thi, SBTI và bonus — biết ngay mức LOW · MID · HIGH theo vùng.",
-    cta: "Dùng thử ngay",
-    gradient: "from-primary to-accent",
-  },
   {
     to: "/unimap",
     icon: Compass,
@@ -40,6 +33,14 @@ const products = [
     gradient: "from-tier-mid to-accent",
   },
   {
+    to: "/news",
+    icon: Newspaper,
+    title: "Bảng tin",
+    desc: "Cập nhật tin tuyển sinh, học bổng, xu hướng nghề nghiệp và lời khuyên hướng nghiệp.",
+    cta: "Đọc ngay",
+    gradient: "from-primary to-accent",
+  },
+  {
     to: "/profile",
     icon: GraduationCap,
     title: "Hồ sơ cá nhân",
@@ -49,11 +50,7 @@ const products = [
   },
 ];
 
-const newsItems = [
-  { tag: "Tuyển sinh 2026", title: "Bộ GD công bố quy chế thi tốt nghiệp THPT 2026 với nhiều thay đổi", date: "28/04/2026" },
-  { tag: "Học bổng", title: "Top 10 học bổng Gen-Z dễ apply nhất mùa hè này", date: "25/04/2026" },
-  { tag: "Hướng nghiệp", title: "5 ngành học có triển vọng việc làm cao nhất 2030", date: "20/04/2026" },
-];
+const latestNews = NEWS_ARTICLES.slice(0, 4);
 
 export default function Home() {
   return (
@@ -75,12 +72,12 @@ export default function Home() {
               bắt đầu từ ZPATH
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
-              Một nền tảng — đầy đủ công cụ tính tỉ lệ đỗ, khám phá trường đại học và quản lý hồ sơ cá nhân
+              Một nền tảng — đầy đủ công cụ tư vấn ngành, khám phá trường đại học và quản lý hồ sơ cá nhân
               để bạn tự tin chọn đúng con đường.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-                <Link href="/landing">Tính tỉ lệ đỗ <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                <Link href="/advisor">Tư vấn ngành <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
               <Button asChild variant="outline" size="xl" className="w-full sm:w-auto">
                 <Link href="/unimap">Khám phá trường</Link>
@@ -106,7 +103,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Hệ sinh thái ZPATH"
             title={<>Mọi thứ bạn cần <span className="text-gradient-hero">trong một nơi</span></>}
-            description="Ba sản phẩm cốt lõi giúp bạn quyết định đúng — nhanh hơn, thông minh hơn."
+            description="Bốn sản phẩm cốt lõi giúp bạn quyết định đúng — nhanh hơn, thông minh hơn."
           />
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {products.map((p) => {
@@ -187,21 +184,42 @@ export default function Home() {
       {/* NEWS / BLOG */}
       <section className="bg-muted/30 py-20 sm:py-28">
         <div className="container-page">
-          <SectionHeading
-            eyebrow="Blog & Tin tức"
-            title="Cập nhật mới nhất từ ZPATH"
-            description="Thông tin tuyển sinh, học bổng và lời khuyên hướng nghiệp."
-          />
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {newsItems.map((n) => (
-              <article key={n.title} className="group cursor-pointer overflow-hidden rounded-2xl border-2 border-border bg-card transition-all hover:-translate-y-1 hover:shadow-md">
-                <div className="aspect-[16/10] bg-gradient-to-br from-primary/40 via-accent/40 to-secondary/60" />
-                <div className="p-5">
-                  <span className="inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-primary">{n.tag}</span>
-                  <h3 className="mt-3 font-display text-lg font-bold leading-snug group-hover:text-primary">{n.title}</h3>
-                  <div className="mt-3 text-xs text-muted-foreground">{n.date}</div>
+          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary">
+                <Newspaper className="h-3.5 w-3.5" /> Bảng tin
+              </div>
+              <h2 className="font-display text-3xl font-bold sm:text-4xl">Cập nhật mới nhất từ ZPATH</h2>
+            </div>
+            <Button asChild variant="ghost">
+              <Link href="/news">Xem tất cả <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {latestNews.map((article) => (
+              <Link
+                key={article.id}
+                href={`/news#article-${article.slug}`}
+                className="group overflow-hidden rounded-2xl border-2 border-border bg-card transition-all hover:-translate-y-1 hover:shadow-md"
+              >
+                <div className={`aspect-[16/10] bg-gradient-to-br ${article.imageGradient} relative`}>
+                  <div className="absolute inset-0 bg-foreground/5 group-hover:bg-foreground/0 transition-colors" />
+                  <div className="absolute bottom-3 left-3">
+                    <span className="inline-block rounded-full bg-white/90 px-2.5 py-0.5 text-[10px] font-bold text-foreground">
+                      {article.tag}
+                    </span>
+                  </div>
                 </div>
-              </article>
+                <div className="p-5">
+                  <h3 className="font-display text-sm font-bold leading-snug group-hover:text-primary transition-colors line-clamp-2 sm:text-base">
+                    {article.title}
+                  </h3>
+                  <div className="mt-3 flex items-center gap-3 text-[11px] text-muted-foreground">
+                    <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{article.readTime}</span>
+                    <span>{article.date}</span>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -218,7 +236,7 @@ export default function Home() {
             <p className="mx-auto mt-4 max-w-xl opacity-90">Bắt đầu hành trình chỉ với 30 giây — không cần đăng ký, không phí ẩn.</p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild variant="lime" size="xl" className="w-full sm:w-auto">
-                <Link href="/landing">Tính tỉ lệ đỗ ngay</Link>
+                <Link href="/advisor">Tư vấn ngành ngay</Link>
               </Button>
               <Button asChild variant="outline" size="xl" className="w-full border-white/40 bg-white/10 text-white hover:bg-white/20 sm:w-auto">
                 <Link href="/profile">Tạo hồ sơ</Link>

@@ -1,0 +1,2342 @@
+[
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Giáo dục học",
+    "major_code": "7140101",
+    "major_url": "https://trangedu.com/nganh/giao-duc-hoc/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Công nghệ giáo dục",
+    "major_code": "7140103",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-giao-duc/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Quản lý giáo dục",
+    "major_code": "7140114",
+    "major_url": "https://trangedu.com/nganh/quan-ly-giao-duc/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Giáo dục Mầm non",
+    "major_code": "7140201",
+    "major_url": "https://trangedu.com/nganh/giao-duc-mam-non/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Giáo dục Tiểu học",
+    "major_code": "7140202",
+    "major_url": "https://trangedu.com/nganh/giao-duc-tieu-hoc/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Giáo dục Đặc biệt",
+    "major_code": "7140203",
+    "major_url": "https://trangedu.com/nganh/giao-duc-dac-biet/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Giáo dục Công dân",
+    "major_code": "7140204",
+    "major_url": "https://trangedu.com/nganh/giao-duc-cong-dan/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Giáo dục Chính trị",
+    "major_code": "7140205",
+    "major_url": "https://trangedu.com/nganh/giao-duc-chinh-tri/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Giáo dục Thể chất",
+    "major_code": "7140206",
+    "major_url": "https://trangedu.com/nganh/giao-duc-the-chat/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Giáo dục Quốc phòng - An ninh",
+    "major_code": "7140208",
+    "major_url": "https://trangedu.com/nganh/giao-duc-quoc-phong-an-ninh/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Toán học",
+    "major_code": "7140209",
+    "major_url": "https://trangedu.com/nganh/su-pham-toan-hoc/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tin học",
+    "major_code": "7140210",
+    "major_url": "https://trangedu.com/nganh/su-pham-tin-hoc/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Vật lý",
+    "major_code": "7140211",
+    "major_url": "https://trangedu.com/nganh/su-pham-vat-ly/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Hóa học",
+    "major_code": "7140212",
+    "major_url": "https://trangedu.com/nganh/su-pham-hoa-hoc/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Sinh học",
+    "major_code": "7140213",
+    "major_url": "https://trangedu.com/nganh/su-pham-sinh-hoc/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Kỹ thuật công nghiệp",
+    "major_code": "7140214",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Kỹ thuật nông nghiệp",
+    "major_code": "7140215",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Ngữ văn",
+    "major_code": "7140217",
+    "major_url": "https://trangedu.com/nganh/su-pham-ngu-van/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Lịch sử",
+    "major_code": "7140218",
+    "major_url": "https://trangedu.com/nganh/su-pham-lich-su/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Địa lý",
+    "major_code": "7140219",
+    "major_url": "https://trangedu.com/nganh/su-pham-dia-ly/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Âm nhạc",
+    "major_code": "7140221",
+    "major_url": "https://trangedu.com/nganh/su-pham-am-nhac/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Mỹ thuật",
+    "major_code": "7140222",
+    "major_url": "https://trangedu.com/nganh/su-pham-my-thuat/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Bana",
+    "major_code": "7140223",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Êđê",
+    "major_code": "7140224",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Jrai",
+    "major_code": "7140225",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Khmer",
+    "major_code": "7140226",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng H'mong",
+    "major_code": "7140227",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Chăm",
+    "major_code": "7140228",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng M'nông",
+    "major_code": "7140229",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Xêđăng",
+    "major_code": "7140230",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Anh",
+    "major_code": "7140231",
+    "major_url": "https://trangedu.com/nganh/su-pham-tieng-anh/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Nga",
+    "major_code": "7140232",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Pháp",
+    "major_code": "7140233",
+    "major_url": "https://trangedu.com/nganh/su-pham-tieng-phap/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Trung Quốc",
+    "major_code": "7140234",
+    "major_url": "https://trangedu.com/nganh/su-pham-tieng-trung-quoc/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Đức",
+    "major_code": "7140235",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Nhật",
+    "major_code": "7140236",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Tiếng Hàn Quốc",
+    "major_code": "7140237",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Nghệ thuật",
+    "major_code": "7140245",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Công nghệ",
+    "major_code": "7140246",
+    "major_url": "https://trangedu.com/nganh/su-pham-cong-nghe/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Khoa học tự nhiên",
+    "major_code": "7140247",
+    "major_url": "https://trangedu.com/nganh/su-pham-khoa-hoc-tu-nhien/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Giáo dục pháp luật",
+    "major_code": "7140248",
+    "major_url": "https://trangedu.com/nganh/giao-duc-phap-luat/"
+  },
+  {
+    "group_name": "Khoa học giáo dục và Đào tạo giáo viên",
+    "major_name": "Sư phạm Lịch sử - Địa lý",
+    "major_code": "7140249",
+    "major_url": "https://trangedu.com/nganh/su-pham-lich-su-dia-ly/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Lý luận, lịch sử và phê bình mỹ thuật",
+    "major_code": "7210101",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Hội họa",
+    "major_code": "7210103",
+    "major_url": "https://trangedu.com/nganh/hoi-hoa/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Đồ họa",
+    "major_code": "7210104",
+    "major_url": "https://trangedu.com/nganh/do-hoa/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Điêu Khắc",
+    "major_code": "7210105",
+    "major_url": "https://trangedu.com/nganh/dieu-khac/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Gốm",
+    "major_code": "7210107",
+    "major_url": "https://trangedu.com/nganh/gom/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Mỹ thuật đô thị",
+    "major_code": "7210110",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Âm Nhạc học",
+    "major_code": "7210201",
+    "major_url": "https://trangedu.com/nganh/am-nhac-hoc/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Sáng tác Âm nhạc",
+    "major_code": "7210203",
+    "major_url": "https://trangedu.com/nganh/sang-tac-am-nhac/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Chỉ huy âm nhạc",
+    "major_code": "7210204",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Thanh nhạc",
+    "major_code": "7210205",
+    "major_url": "https://trangedu.com/nganh/thanh-nhac/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Biểu diễn Nhạc cụ Phương Tây",
+    "major_code": "7210207",
+    "major_url": "https://trangedu.com/nganh/bieu-dien-nhac-cu-phuong-tay/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Piano",
+    "major_code": "7210208",
+    "major_url": "https://trangedu.com/nganh/piano/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Nhạc Jazz",
+    "major_code": "7210209",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Lý luận, lịch sử và phê bình sân khấu",
+    "major_code": null,
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Biên kịch sân khấu",
+    "major_code": "7210225",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Diễn viên sân khấu kịch hát",
+    "major_code": "7210226",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Đạo diễn Sân khấu",
+    "major_code": "7210227",
+    "major_url": "https://trangedu.com/nganh/dao-dien-san-khau/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Lý luận, lịch sử và phê bình điện ảnh, truyền hình",
+    "major_code": "7210231",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Biên kịch điện ảnh, truyền hình",
+    "major_code": "7210233",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Diễn viên kịch, điện ảnh - truyền hình",
+    "major_code": "7210234",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Đạo diễn điện ảnh, truyền hình",
+    "major_code": "7210235",
+    "major_url": "https://trangedu.com/nganh/dao-dien-dien-anh-truyen-hinh/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Quay Phim",
+    "major_code": "7210236",
+    "major_url": "https://trangedu.com/nganh/quay-phim/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Lý luận, lịch sử và phê bình múa",
+    "major_code": "7210241",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Diễn viên múa",
+    "major_code": "7210242",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Biên Đạo Múa",
+    "major_code": "7210243",
+    "major_url": "https://trangedu.com/nganh/bien-dao-mua/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Huấn luyện múa",
+    "major_code": "7210244",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Nhiếp Ảnh",
+    "major_code": "7210301",
+    "major_url": "https://trangedu.com/nganh/nhiep-anh/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Công nghệ điện ảnh, truyền hình",
+    "major_code": "7210302",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Thiết kế âm thanh, ánh sáng",
+    "major_code": "7210303",
+    "major_url": null
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Thiết kế Công nghiệp",
+    "major_code": "7210402",
+    "major_url": "https://trangedu.com/nganh/thiet-ke-cong-nghiep/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Thiết kế đồ họa",
+    "major_code": "7210403",
+    "major_url": "https://trangedu.com/nganh/thiet-ke-do-hoa/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Thiết kế Thời trang",
+    "major_code": "7210404",
+    "major_url": "https://trangedu.com/nganh/thiet-ke-thoi-trang/"
+  },
+  {
+    "group_name": "Nghệ thuật",
+    "major_name": "Thiết kế mỹ thuật sân khấu, điện ảnh",
+    "major_code": "7210406",
+    "major_url": null
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Tiếng Việt và Văn hóa Việt Nam",
+    "major_code": "7220101",
+    "major_url": "https://trangedu.com/nganh/tieng-viet-va-van-hoa-viet-nam/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Hán Nôm",
+    "major_code": "7220104",
+    "major_url": "https://trangedu.com/nganh/han-nom/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Jrai",
+    "major_code": "7220105",
+    "major_url": null
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Khmer",
+    "major_code": "7220106",
+    "major_url": null
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ H'mong",
+    "major_code": "7220107",
+    "major_url": null
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Chăm",
+    "major_code": "7220108",
+    "major_url": null
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Sáng tác văn học",
+    "major_code": "7220110",
+    "major_url": "https://trangedu.com/nganh/sang-tac-van-hoc/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Văn hóa các Dân tộc thiểu số Việt Nam",
+    "major_code": "7220112",
+    "major_url": "https://trangedu.com/nganh/van-hoa-cac-dan-toc-thieu-so-viet-nam/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Anh",
+    "major_code": "7220201",
+    "major_url": "https://trangedu.com/nganh/ngon-ngu-anh/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Nga",
+    "major_code": "7220202",
+    "major_url": "https://trangedu.com/nganh/ngon-ngu-nga/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Pháp",
+    "major_code": "7220203",
+    "major_url": "https://trangedu.com/nganh/ngon-ngu-phap/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Trung Quốc",
+    "major_code": "7220204",
+    "major_url": "https://trangedu.com/nganh/ngon-ngu-trung-quoc/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Đức",
+    "major_code": "7220205",
+    "major_url": "https://trangedu.com/nganh/ngon-ngu-duc/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Tây Ban Nha",
+    "major_code": "7220206",
+    "major_url": "https://trangedu.com/nganh/ngon-ngu-tay-ban-nha/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Bồ Đào Nha",
+    "major_code": null,
+    "major_url": null
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Italia",
+    "major_code": "7220208",
+    "major_url": "https://trangedu.com/nganh/ngon-ngu-italia/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Nhật",
+    "major_code": "7220209",
+    "major_url": "https://trangedu.com/nganh/ngon-ngu-nhat/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Hàn Quốc",
+    "major_code": "7220210",
+    "major_url": "https://trangedu.com/nganh/ngon-ngu-han-quoc/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn ngữ Ảrập",
+    "major_code": "7220211",
+    "major_url": null
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Triết Học",
+    "major_code": "7229001",
+    "major_url": "https://trangedu.com/nganh/triet-hoc/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Chủ nghĩa xã hội khoa học",
+    "major_code": "7229008",
+    "major_url": null
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Tôn giáo học",
+    "major_code": "7229009",
+    "major_url": "https://trangedu.com/nganh/ton-giao-hoc/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Lịch Sử",
+    "major_code": "7229010",
+    "major_url": "https://trangedu.com/nganh/lich-su/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Ngôn Ngữ học",
+    "major_code": "7229020",
+    "major_url": "https://trangedu.com/nganh/ngon-ngu-hoc/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Văn học",
+    "major_code": "7229030",
+    "major_url": "https://trangedu.com/nganh/van-hoc/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Văn hóa học",
+    "major_code": "7229040",
+    "major_url": "https://trangedu.com/nganh/van-hoa-hoc/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Quản lý Văn hóa",
+    "major_code": "7229042",
+    "major_url": "https://trangedu.com/nganh/quan-ly-van-hoa/"
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Gia đình học",
+    "major_code": "7229045",
+    "major_url": null
+  },
+  {
+    "group_name": "Nhân văn",
+    "major_name": "Di sản học",
+    "major_code": "7229047",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Kinh tế",
+    "major_code": "7310101",
+    "major_url": "https://trangedu.com/nganh/kinh-te-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Kinh tế Chính trị",
+    "major_code": "7310102",
+    "major_url": "https://trangedu.com/nganh/kinh-te-chinh-tri/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Kinh tế Đầu tư",
+    "major_code": "7310104",
+    "major_url": "https://trangedu.com/nganh/kinh-te-dau-tu/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Kinh tế Phát triển",
+    "major_code": "7310105",
+    "major_url": "https://trangedu.com/nganh/kinh-te-phat-trien/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Kinh tế Quốc tế",
+    "major_code": "7310106",
+    "major_url": "https://trangedu.com/nganh/kinh-te-quoc-te/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Thống kê Kinh tế",
+    "major_code": "7310107",
+    "major_url": "https://trangedu.com/nganh/thong-ke-kinh-te/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Toán Kinh tế",
+    "major_code": "7310108",
+    "major_url": "https://trangedu.com/nganh/toan-kinh-te/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Kinh tế số",
+    "major_code": "7310109",
+    "major_url": "https://trangedu.com/nganh/kinh-te-so/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Kinh tế thể thao",
+    "major_code": "7310113",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Chính trị học",
+    "major_code": "7310201",
+    "major_url": "https://trangedu.com/nganh/chinh-tri-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Xây dựng Đảng và Chính quyền Nhà nước",
+    "major_code": "7310202",
+    "major_url": "https://trangedu.com/nganh/xay-dung-dang-va-chinh-quyen-nha-nuoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Quản lý Nhà nước",
+    "major_code": "7310205",
+    "major_url": "https://trangedu.com/nganh/quan-ly-nha-nuoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Quan hệ Quốc tế",
+    "major_code": "7310206",
+    "major_url": "https://trangedu.com/nganh/quan-he-quoc-te/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Xã hội học",
+    "major_code": "7310301",
+    "major_url": "https://trangedu.com/nganh/xa-hoi-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Nhân học",
+    "major_code": "7310302",
+    "major_url": "https://trangedu.com/nganh/nhan-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Tâm lý học",
+    "major_code": "7310401",
+    "major_url": "https://trangedu.com/nganh/tam-ly-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Tâm lý học Giáo dục",
+    "major_code": "7310403",
+    "major_url": "https://trangedu.com/nganh/tam-ly-hoc-giao-duc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Địa lý học",
+    "major_code": "7310501",
+    "major_url": "https://trangedu.com/nganh/dia-ly-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Quốc tế học",
+    "major_code": "7310601",
+    "major_url": "https://trangedu.com/nganh/quoc-te-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Châu Á học",
+    "major_code": "7310602",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Thái Bình Dương học",
+    "major_code": "7310607",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Đông phương học",
+    "major_code": "7310608",
+    "major_url": "https://trangedu.com/nganh/dong-phuong-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Trung Quốc học",
+    "major_code": "7310612",
+    "major_url": "https://trangedu.com/nganh/trung-quoc-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Nhật Bản học",
+    "major_code": "7310613",
+    "major_url": "https://trangedu.com/nganh/nhat-ban-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Hàn Quốc học",
+    "major_code": "7310614",
+    "major_url": "https://trangedu.com/nganh/han-quoc-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Đông Nam Á học",
+    "major_code": "7310620",
+    "major_url": "https://trangedu.com/nganh/dong-nam-a-hoc/"
+  },
+  {
+    "group_name": "Khoa học xã hội và hành vi",
+    "major_name": "Việt Nam học",
+    "major_code": "7310630",
+    "major_url": "https://trangedu.com/nganh/viet-nam-hoc/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Báo chí",
+    "major_code": "7320101",
+    "major_url": "https://trangedu.com/nganh/bao-chi/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Truyền thông Đa phương tiện",
+    "major_code": "7320104",
+    "major_url": "https://trangedu.com/nganh/truyen-thong-da-phuong-tien/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Truyền thông Đại chúng",
+    "major_code": "7320105",
+    "major_url": "https://trangedu.com/nganh/truyen-thong-dai-chung/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Công nghệ Truyền thông",
+    "major_code": "7320106",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-truyen-thong/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Truyền thông Quốc tế",
+    "major_code": "7320107",
+    "major_url": "https://trangedu.com/nganh/truyen-thong-quoc-te/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Quan hệ Công chúng",
+    "major_code": "7320108",
+    "major_url": "https://trangedu.com/nganh/quan-he-cong-chung/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Thông tin - Thư viện",
+    "major_code": "7320201",
+    "major_url": "https://trangedu.com/nganh/thong-tin-thu-vien/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Quản lý thông tin",
+    "major_code": "7320205",
+    "major_url": "https://trangedu.com/nganh/quan-ly-thong-tin/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Lưu trữ học",
+    "major_code": "7320303",
+    "major_url": "https://trangedu.com/nganh/luu-tru-hoc/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Bảo tàng học",
+    "major_code": "7320305",
+    "major_url": "https://trangedu.com/nganh/bao-tang-hoc/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Xuất Bản",
+    "major_code": "7320401",
+    "major_url": "https://trangedu.com/nganh/xuat-ban/"
+  },
+  {
+    "group_name": "Báo chí và Thông tin",
+    "major_name": "Kinh doanh Xuất bản phẩm",
+    "major_code": "7320402",
+    "major_url": "https://trangedu.com/nganh/kinh-doanh-xuat-ban-pham/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Quản trị kinh doanh",
+    "major_code": "7340101",
+    "major_url": "https://trangedu.com/nganh/quan-tri-kinh-doanh/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Marketing",
+    "major_code": "7340115",
+    "major_url": "https://trangedu.com/nganh/marketing/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Bất động sản",
+    "major_code": "7340116",
+    "major_url": "https://trangedu.com/nganh/bat-dong-san/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Kinh doanh quốc tế",
+    "major_code": "7340120",
+    "major_url": "https://trangedu.com/nganh/kinh-doanh-quoc-te/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Kinh doanh thương mại",
+    "major_code": "7340121",
+    "major_url": "https://trangedu.com/nganh/kinh-doanh-thuong-mai/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Thương mại điện tử",
+    "major_code": "7340122",
+    "major_url": "https://trangedu.com/nganh/thuong-mai-dien-tu/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Phân tích dữ liệu kinh doanh",
+    "major_code": "7349004",
+    "major_url": "https://trangedu.com/nganh/phan-tich-du-lieu-kinh-doanh/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Kinh doanh thời trang và dệt may",
+    "major_code": "7340123",
+    "major_url": "https://trangedu.com/nganh/kinh-doanh-thoi-trang-va-det-may/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Quản trị kinh doanh thực phẩm",
+    "major_code": "7340129",
+    "major_url": null
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Tài chính - Ngân hàng",
+    "major_code": "7340201",
+    "major_url": "https://trangedu.com/nganh/tai-chinh-ngan-hang/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Bảo hiểm",
+    "major_code": "7340204",
+    "major_url": "https://trangedu.com/nganh/bao-hiem/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Công nghệ tài chính",
+    "major_code": "7340205",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-tai-chinh/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Kế toán",
+    "major_code": "7340301",
+    "major_url": "https://trangedu.com/nganh/ke-toan/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Kiểm toán",
+    "major_code": "7340302",
+    "major_url": "https://trangedu.com/nganh/kiem-toan/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Khoa học quản lý",
+    "major_code": "7340401",
+    "major_url": "https://trangedu.com/nganh/khoa-hoc-quan-ly/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Quản lý công",
+    "major_code": "7340401",
+    "major_url": "https://trangedu.com/nganh/quan-ly-cong/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Quản trị nhân lực",
+    "major_code": "7340404",
+    "major_url": "https://trangedu.com/nganh/quan-tri-nhan-luc/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Hệ thống thông tin quản lý",
+    "major_code": "7340405",
+    "major_url": "https://trangedu.com/nganh/he-thong-thong-tin-quan-ly/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Quản trị văn phòng",
+    "major_code": "7340406",
+    "major_url": "https://trangedu.com/nganh/quan-tri-van-phong/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Quan hệ lao động",
+    "major_code": "7340408",
+    "major_url": "https://trangedu.com/nganh/quan-he-lao-dong/"
+  },
+  {
+    "group_name": "Kinh doanh và Quản lý",
+    "major_name": "Quản lý dự án",
+    "major_code": "7340409",
+    "major_url": "https://trangedu.com/nganh/quan-ly-du-an/"
+  },
+  {
+    "group_name": "Khoa học sự sống",
+    "major_name": "Sinh học",
+    "major_code": "7420101",
+    "major_url": "https://trangedu.com/nganh/sinh-hoc/"
+  },
+  {
+    "group_name": "Khoa học sự sống",
+    "major_name": "Công nghệ sinh học",
+    "major_code": "7420201",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-sinh-hoc/"
+  },
+  {
+    "group_name": "Khoa học sự sống",
+    "major_name": "Kỹ thuật sinh học",
+    "major_code": "7420202",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học sự sống",
+    "major_name": "Sinh học ứng dụng",
+    "major_code": "7420203",
+    "major_url": "https://trangedu.com/nganh/sinh-hoc-ung-dung/"
+  },
+  {
+    "group_name": "Khoa học sự sống",
+    "major_name": "Công nghệ sinh học Y dược",
+    "major_code": "7420205",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-sinh-hoc-y-duoc/"
+  },
+  {
+    "group_name": "Khoa học sự sống",
+    "major_name": "Công nghệ thẩm mỹ",
+    "major_code": "7420207",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Thiên văn học",
+    "major_code": "7440101",
+    "major_url": "https://trangedu.com/nganh/thien-van-hoc/"
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Vật lý học",
+    "major_code": "7440102",
+    "major_url": "https://trangedu.com/nganh/vat-ly-hoc/"
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Vật lý nguyên tử và hạt nhân",
+    "major_code": "7440106",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Cơ học",
+    "major_code": "7440110",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Hóa học",
+    "major_code": "7440112",
+    "major_url": "https://trangedu.com/nganh/hoa-hoc/"
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Khoa học vật liệu",
+    "major_code": "7440122",
+    "major_url": "https://trangedu.com/nganh/khoa-hoc-vat-lieu/"
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Địa chất học",
+    "major_code": "7440201",
+    "major_url": "https://trangedu.com/nganh/dia-chat-hoc/"
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Biến đổi khí hậu",
+    "major_code": "7440211",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Bản đồ học",
+    "major_code": "7440212",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Địa lý tự nhiên",
+    "major_code": "7440217",
+    "major_url": null
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Khí tượng và khí hậu học",
+    "major_code": "7440221",
+    "major_url": "https://trangedu.com/nganh/khi-tuong-va-khi-hau-hoc/"
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Thủy văn học",
+    "major_code": "7440224",
+    "major_url": "https://trangedu.com/nganh/thuy-van-hoc/"
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Hải dương học",
+    "major_code": "7440228",
+    "major_url": "https://trangedu.com/nganh/hai-duong-hoc/"
+  },
+  {
+    "group_name": "Khoa học tự nhiên",
+    "major_name": "Khoa học môi trường",
+    "major_code": "7440301",
+    "major_url": "https://trangedu.com/nganh/khoa-hoc-moi-truong/"
+  },
+  {
+    "group_name": "Toán và thống kê",
+    "major_name": "Toán học",
+    "major_code": "7460101",
+    "major_url": "https://trangedu.com/nganh/toan-hoc/"
+  },
+  {
+    "group_name": "Toán và thống kê",
+    "major_name": "Khoa học tính toán",
+    "major_code": "7460107",
+    "major_url": null
+  },
+  {
+    "group_name": "Toán và thống kê",
+    "major_name": "Khoa học dữ liệu",
+    "major_code": "7460108",
+    "major_url": "https://trangedu.com/nganh/khoa-hoc-du-lieu/"
+  },
+  {
+    "group_name": "Toán và thống kê",
+    "major_name": "Toán ứng dụng",
+    "major_code": "7460112",
+    "major_url": "https://trangedu.com/nganh/toan-ung-dung/"
+  },
+  {
+    "group_name": "Toán và thống kê",
+    "major_name": "Toán cơ",
+    "major_code": "7460115",
+    "major_url": null
+  },
+  {
+    "group_name": "Toán và thống kê",
+    "major_name": "Toán tin",
+    "major_code": "7460117",
+    "major_url": "https://trangedu.com/nganh/toan-tin/"
+  },
+  {
+    "group_name": "Toán và thống kê",
+    "major_name": "Thống kê",
+    "major_code": "7460201",
+    "major_url": "https://trangedu.com/nganh/thong-ke/"
+  },
+  {
+    "group_name": "Máy tính và công nghệ thông tin",
+    "major_name": "Khoa học máy tính",
+    "major_code": "7480101",
+    "major_url": "https://trangedu.com/nganh/khoa-hoc-may-tinh/"
+  },
+  {
+    "group_name": "Máy tính và công nghệ thông tin",
+    "major_name": "Mạng máy tính và truyền thông dữ liệu",
+    "major_code": "7480102",
+    "major_url": "https://trangedu.com/nganh/mang-may-tinh-va-truyen-thong-du-lieu/"
+  },
+  {
+    "group_name": "Máy tính và công nghệ thông tin",
+    "major_name": "Kỹ thuật phần mềm",
+    "major_code": "7480103",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-phan-mem/"
+  },
+  {
+    "group_name": "Máy tính và công nghệ thông tin",
+    "major_name": "Hệ thống thông tin",
+    "major_code": "7480104",
+    "major_url": "https://trangedu.com/nganh/he-thong-thong-tin/"
+  },
+  {
+    "group_name": "Máy tính và công nghệ thông tin",
+    "major_name": "Kỹ thuật máy tính",
+    "major_code": "7480106",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-may-tinh/"
+  },
+  {
+    "group_name": "Máy tính và công nghệ thông tin",
+    "major_name": "Trí tuệ nhân tạo",
+    "major_code": "7480107",
+    "major_url": "https://trangedu.com/nganh/tri-tue-nhan-tao/"
+  },
+  {
+    "group_name": "Máy tính và công nghệ thông tin",
+    "major_name": "Công nghệ kỹ thuật máy tính",
+    "major_code": "7480108",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-may-tinh/"
+  },
+  {
+    "group_name": "Máy tính và công nghệ thông tin",
+    "major_name": "Công nghệ thông tin",
+    "major_code": "7480201",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-thong-tin/"
+  },
+  {
+    "group_name": "Máy tính và công nghệ thông tin",
+    "major_name": "An toàn thông tin",
+    "major_code": "7480202",
+    "major_url": "https://trangedu.com/nganh/an-toan-thong-tin/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật kiến trúc",
+    "major_code": "7510101",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-kien-truc/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật công trình xây dựng",
+    "major_code": "7510102",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-cong-trinh-xay-dung/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật xây dựng",
+    "major_code": "7510103",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-xay-dung/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật giao thông",
+    "major_code": "7510104",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-giao-thong/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật vật liệu xây dựng",
+    "major_code": "7510105",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-vat-lieu-xay-dung/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật cơ khí",
+    "major_code": "7510201",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-co-khi/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ chế tạo máy",
+    "major_code": "7510202",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-che-tao-may/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật cơ điện tử",
+    "major_code": "7510203",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-co-dien-tu/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật ô tô",
+    "major_code": "7510205",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-o-to/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật nhiệt",
+    "major_code": "7510206",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-nhiet/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật tàu thủy",
+    "major_code": "7510207",
+    "major_url": null
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Bảo dưỡng công nghiệp",
+    "major_code": "7510211",
+    "major_url": "https://trangedu.com/nganh/bao-duong-cong-nghiep/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật điện, điện tử",
+    "major_code": "7510301",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-dien-dien-tu/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật điện tử, viễn thông",
+    "major_code": "7510302",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-dien-tu-vien-thong/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật điều khiển và tự động hóa",
+    "major_code": "7510303",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-dieu-khien-va-tu-dong-hoa/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật hóa học",
+    "major_code": "7510401",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-hoa-hoc/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ vật liệu",
+    "major_code": "7510402",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-vat-lieu/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật môi trường",
+    "major_code": "7510406",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-moi-truong/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật hạt nhân",
+    "major_code": "7510407",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-ky-thuat-hat-nhan/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Quản lý công nghiệp",
+    "major_code": "7510601",
+    "major_url": "https://trangedu.com/nganh/quan-ly-cong-nghiep/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Kinh tế công nghiệp",
+    "major_code": "7510604",
+    "major_url": "https://trangedu.com/nganh/kinh-te-cong-nghiep/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Logistics và Quản lý chuỗi cung ứng",
+    "major_code": "7510605",
+    "major_url": "https://trangedu.com/nganh/logistics-va-quan-ly-chuoi-cung-ung/"
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ dầu khí và khai thác dầu",
+    "major_code": "7510701",
+    "major_url": null
+  },
+  {
+    "group_name": "Công nghệ kỹ thuật",
+    "major_name": "Công nghệ kỹ thuật in",
+    "major_code": "7510801",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Cơ kỹ thuật",
+    "major_code": "7520101",
+    "major_url": "https://trangedu.com/nganh/co-ky-thuat/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật cơ khí",
+    "major_code": "7520103",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-co-khi/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật cơ điện tử",
+    "major_code": "7520114",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-co-dien-tu/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật nhiệt",
+    "major_code": "7520115",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-nhiet/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật cơ khí động lực",
+    "major_code": "7520116",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-co-khi-dong-luc/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật công nghiệp",
+    "major_code": "7520117",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật hệ thống công nghiệp",
+    "major_code": "7520118",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-he-thong-cong-nghiep/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật hàng không",
+    "major_code": "7520120",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-hang-khong/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật không gian",
+    "major_code": "7520121",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật tàu thủy",
+    "major_code": "7520122",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-tau-thuy/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật ô tô",
+    "major_code": "7520130",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-o-to/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật in",
+    "major_code": "7520137",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-in/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật hàng hải",
+    "major_code": "7520138",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Công nghệ ô tô điện",
+    "major_code": "7520141",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật điện",
+    "major_code": "7520201",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-dien/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật rađa - dẫn đường",
+    "major_code": "7520204",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật thủy âm",
+    "major_code": "7520205",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật biển",
+    "major_code": "7520206",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật điện tử - viễn thông",
+    "major_code": "7520207",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-dien-tu-vien-thong/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật y sinh",
+    "major_code": "7520212",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-y-sinh/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật điều khiển và tự động hóa",
+    "major_code": "7520216",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-dieu-khien-va-tu-dong-hoa/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật hóa học",
+    "major_code": "7520301",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-hoa-hoc/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật vật liệu",
+    "major_code": "7520309",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-vat-lieu/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật vật liệu kim loại",
+    "major_code": "7520310",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật hóa phân tích",
+    "major_code": "7520311",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật dệt",
+    "major_code": "7520312",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật môi trường",
+    "major_code": "7520320",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-moi-truong/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Vật lý kỹ thuật",
+    "major_code": "7520401",
+    "major_url": "https://trangedu.com/nganh/vat-ly-ky-thuat/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật hạt nhân",
+    "major_code": "7520402",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-hat-nhan/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật địa chất",
+    "major_code": "7520501",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-dia-chat/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật địa vật lý",
+    "major_code": "7520502",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật trắc địa - bản đồ",
+    "major_code": "7520503",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-trac-dia-ban-do/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật mỏ",
+    "major_code": "7520601",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-mo/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật thăm dò và khảo sát",
+    "major_code": "7520602",
+    "major_url": null
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật dầu khí",
+    "major_code": "7520604",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-dau-khi/"
+  },
+  {
+    "group_name": "Kỹ thuật",
+    "major_name": "Kỹ thuật tuyển khoáng",
+    "major_code": "7520607",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-tuyen-khoang/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Công nghệ thực phẩm",
+    "major_code": "7540101",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-thuc-pham/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Kỹ thuật thực phẩm",
+    "major_code": "7540102",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-thuc-pham/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Công nghệ hóa thực phẩm",
+    "major_code": "7540103",
+    "major_url": null
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Công nghệ sau thu hoạch",
+    "major_code": "7540104",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-sau-thu-hoach/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Công nghệ chế biến thủy sản",
+    "major_code": "7540105",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-che-bien-thuy-san/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Đảm bảo chất lượng và an toàn thực phẩm",
+    "major_code": "7540106",
+    "major_url": "https://trangedu.com/nganh/dam-bao-chat-luong-va-an-toan-thuc-pham/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Công nghệ sợi, dệt",
+    "major_code": "7540202",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-soi-det/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Công nghệ vật liệu dệt, may",
+    "major_code": "7540203",
+    "major_url": null
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Công nghệ dệt, may",
+    "major_code": "7540204",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-det-may/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Công nghệ may",
+    "major_code": "7540205",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-may/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Công nghệ da giày",
+    "major_code": "7540206",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-da-giay/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Công nghệ chế biến lâm sản",
+    "major_code": "7549001",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-che-bien-lam-san/"
+  },
+  {
+    "group_name": "Sản xuất và Chế biến",
+    "major_name": "Dược liệu và hợp chất thiên nhiên",
+    "major_code": "7549002",
+    "major_url": null
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kiến trúc",
+    "major_code": "7580101",
+    "major_url": "https://trangedu.com/nganh/kien-truc/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kiến trúc cảnh quan",
+    "major_code": "7580102",
+    "major_url": "https://trangedu.com/nganh/kien-truc-canh-quan/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kiến trúc nội thất",
+    "major_code": "7580103",
+    "major_url": "https://trangedu.com/nganh/kien-truc-noi-that/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kiến trúc đô thị",
+    "major_code": "7580104",
+    "major_url": "https://trangedu.com/nganh/kien-truc-do-thi/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Quy hoạch vùng và đô thị",
+    "major_code": "7580105",
+    "major_url": "https://trangedu.com/nganh/quy-hoach-vung-va-do-thi/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Quản lý đô thị và công trình",
+    "major_code": "7580106",
+    "major_url": "https://trangedu.com/nganh/quan-ly-do-thi-va-cong-trinh/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Thiết kế nội thất",
+    "major_code": "7580108",
+    "major_url": "https://trangedu.com/nganh/thiet-ke-noi-that/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Quản lý phát triển đô thị và bất động sản",
+    "major_code": "7580109",
+    "major_url": null
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Bảo tồn di sản kiến trúc - Đô thị",
+    "major_code": "7580111",
+    "major_url": null
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Đô thị học",
+    "major_code": "7580112",
+    "major_url": "https://trangedu.com/nganh/do-thi-hoc/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kỹ thuật xây dựng",
+    "major_code": "7580201",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-xay-dung/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kỹ thuật xây dựng công trình thủy",
+    "major_code": "7580202",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-xay-dung-cong-trinh-thuy/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kỹ thuật xây dựng công trình biển",
+    "major_code": "7580203",
+    "major_url": null
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kỹ thuật xây dựng công trình giao thông",
+    "major_code": "7580205",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-xay-dung-cong-trinh-giao-thong/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kỹ thuật cơ sở hạ tầng",
+    "major_code": "7580210",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-co-so-ha-tang/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Địa kỹ thuật xây dựng",
+    "major_code": "7580211",
+    "major_url": "https://trangedu.com/nganh/dia-ky-thuat-xay-dung/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kỹ thuật tài nguyên nước",
+    "major_code": "7580212",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-tai-nguyen-nuoc/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kỹ thuật cấp thoát nước",
+    "major_code": "7580213",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-cap-thoat-nuoc/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kỹ thuật an toàn giao thông",
+    "major_code": "7580215",
+    "major_url": null
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Kinh tế xây dựng",
+    "major_code": "7580301",
+    "major_url": "https://trangedu.com/nganh/kinh-te-xay-dung/"
+  },
+  {
+    "group_name": "Kiến trúc và Xây dựng",
+    "major_name": "Quản lý xây dựng",
+    "major_code": "7580302",
+    "major_url": "https://trangedu.com/nganh/quan-ly-xay-dung/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Nông nghiệp",
+    "major_code": "7620101",
+    "major_url": "https://trangedu.com/nganh/nong-nghiep/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Khuyến nông",
+    "major_code": "7620102",
+    "major_url": "https://trangedu.com/nganh/khuyen-nong/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Khoa học đất",
+    "major_code": "7620103",
+    "major_url": "https://trangedu.com/nganh/khoa-hoc-dat/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Chăn nuôi",
+    "major_code": "7620105",
+    "major_url": "https://trangedu.com/nganh/chan-nuoi/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Nông học",
+    "major_code": "7620109",
+    "major_url": "https://trangedu.com/nganh/nong-hoc/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Khoa học cây trồng",
+    "major_code": "7620110",
+    "major_url": "https://trangedu.com/nganh/khoa-hoc-cay-trong/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Bảo vệ thực vật",
+    "major_code": "7620112",
+    "major_url": "https://trangedu.com/nganh/bao-ve-thuc-vat/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Công nghệ rau hoa quả và cảnh quan",
+    "major_code": "7620113",
+    "major_url": "https://trangedu.com/nganh/cong-nghe-rau-hoa-qua-va-canh-quan/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Kinh doanh nông nghiệp",
+    "major_code": "7620114",
+    "major_url": "https://trangedu.com/nganh/kinh-doanh-nong-nghiep/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Kinh tế nông nghiệp",
+    "major_code": "7620115",
+    "major_url": "https://trangedu.com/nganh/kinh-te-nong-nghiep/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Phát triển nông thôn",
+    "major_code": "7620116",
+    "major_url": "https://trangedu.com/nganh/phat-trien-nong-thon/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Công nghệ nông nghiệp số",
+    "major_code": "7620190",
+    "major_url": null
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Kinh doanh nông nghiệp số",
+    "major_code": "7620191",
+    "major_url": null
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Lâm học",
+    "major_code": "7620201",
+    "major_url": "https://trangedu.com/nganh/lam-hoc/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Lâm nghiệp đô thị",
+    "major_code": "7620202",
+    "major_url": "https://trangedu.com/nganh/lam-nghiep-do-thi/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Lâm sinh",
+    "major_code": "7620205",
+    "major_url": "https://trangedu.com/nganh/lam-sinh/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Lâm nghiệp",
+    "major_code": "7620210",
+    "major_url": null
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Quản lý tài nguyên rừng",
+    "major_code": "7620211",
+    "major_url": "https://trangedu.com/nganh/quan-ly-tai-nguyen-rung/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Nuôi trồng thủy sản",
+    "major_code": "7620301",
+    "major_url": "https://trangedu.com/nganh/nuoi-trong-thuy-san/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Bệnh học thủy sản",
+    "major_code": "7620302",
+    "major_url": "https://trangedu.com/nganh/benh-hoc-thuy-san/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Khoa học thủy sản",
+    "major_code": "7620303",
+    "major_url": "https://trangedu.com/nganh/khoa-hoc-thuy-san/"
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Khai thác thủy sản",
+    "major_code": "7620304",
+    "major_url": null
+  },
+  {
+    "group_name": "Nông, lâm nghiệp và thủy sản",
+    "major_name": "Quản lý thủy sản",
+    "major_code": "7620305",
+    "major_url": "https://trangedu.com/nganh/quan-ly-thuy-san/"
+  },
+  {
+    "group_name": "Thú y",
+    "major_name": "Thú y",
+    "major_code": "7640101",
+    "major_url": "https://trangedu.com/nganh/thu-y/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Y khoa",
+    "major_code": "7720101",
+    "major_url": "https://trangedu.com/nganh/y-khoa/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Y học dự phòng",
+    "major_code": "7720110",
+    "major_url": "https://trangedu.com/nganh/y-hoc-du-phong/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Y học cổ truyền",
+    "major_code": "7720115",
+    "major_url": "https://trangedu.com/nganh/y-hoc-co-truyen/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Dược học",
+    "major_code": "7720201",
+    "major_url": "https://trangedu.com/nganh/duoc-hoc/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Hóa dược",
+    "major_code": "7720203",
+    "major_url": "https://trangedu.com/nganh/hoa-duoc/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Điều dưỡng",
+    "major_code": "7720301",
+    "major_url": "https://trangedu.com/nganh/dieu-duong/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Hộ sinh",
+    "major_code": "7720302",
+    "major_url": "https://trangedu.com/nganh/ho-sinh/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Dinh dưỡng",
+    "major_code": "7720401",
+    "major_url": "https://trangedu.com/nganh/dinh-duong/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Khoa học dinh dưỡng và ẩm thực",
+    "major_code": "7720499",
+    "major_url": null
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Răng - Hàm - Mặt",
+    "major_code": "7720501",
+    "major_url": "https://trangedu.com/nganh/rang-ham-mat/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Kỹ thuật phục hình răng",
+    "major_code": "7720502",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-phuc-hinh-rang/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Kỹ thuật xét nghiệm y học",
+    "major_code": "7720601",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-xet-nghiem-y-hoc/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Kỹ thuật hình ảnh y học",
+    "major_code": "7720602",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-hinh-anh-y-hoc/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Kỹ thuật Phục hồi chức năng",
+    "major_code": "7720603",
+    "major_url": "https://trangedu.com/nganh/ky-thuat-phuc-hoi-chuc-nang/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Y tế công cộng",
+    "major_code": "7720701",
+    "major_url": "https://trangedu.com/nganh/y-te-cong-cong/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Tổ chức và Quản lý y tế",
+    "major_code": "7720801",
+    "major_url": null
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Quản lý bệnh viện",
+    "major_code": "7720802",
+    "major_url": "https://trangedu.com/nganh/quan-ly-benh-vien/"
+  },
+  {
+    "group_name": "Sức khỏe",
+    "major_name": "Y sinh học thể dục thể thao",
+    "major_code": "7729001",
+    "major_url": "https://trangedu.com/nganh/y-sinh-hoc-the-duc-the-thao/"
+  },
+  {
+    "group_name": "Dịch vụ xã hội",
+    "major_name": "Công tác xã hội",
+    "major_code": "7760101",
+    "major_url": "https://trangedu.com/nganh/cong-tac-xa-hoi/"
+  },
+  {
+    "group_name": "Dịch vụ xã hội",
+    "major_name": "Công tác thanh thiếu niên",
+    "major_code": "7760102",
+    "major_url": null
+  },
+  {
+    "group_name": "Dịch vụ xã hội",
+    "major_name": "Hỗ trợ giáo dục người khuyết tật",
+    "major_code": "7760103",
+    "major_url": null
+  },
+  {
+    "group_name": "Du lịch, khách sạn, thể thao và dịch vụ cá nhân",
+    "major_name": "Du lịch",
+    "major_code": "7810101",
+    "major_url": "https://trangedu.com/nganh/du-lich/"
+  },
+  {
+    "group_name": "Du lịch, khách sạn, thể thao và dịch vụ cá nhân",
+    "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+    "major_code": "7810103",
+    "major_url": "https://trangedu.com/nganh/quan-tri-dich-vu-du-lich-va-lu-hanh/"
+  },
+  {
+    "group_name": "Du lịch, khách sạn, thể thao và dịch vụ cá nhân",
+    "major_name": "Quản trị khách sạn",
+    "major_code": "7810201",
+    "major_url": "https://trangedu.com/nganh/quan-tri-khach-san/"
+  },
+  {
+    "group_name": "Du lịch, khách sạn, thể thao và dịch vụ cá nhân",
+    "major_name": "Quản trị nhà hàng và dịch vụ ăn uống",
+    "major_code": "7810202",
+    "major_url": "https://trangedu.com/nganh/quan-tri-nha-hang-va-dich-vu-an-uong/"
+  },
+  {
+    "group_name": "Du lịch, khách sạn, thể thao và dịch vụ cá nhân",
+    "major_name": "Quản lý thể dục thể thao",
+    "major_code": "7810301",
+    "major_url": "https://trangedu.com/nganh/quan-ly-the-duc-the-thao/"
+  },
+  {
+    "group_name": "Du lịch, khách sạn, thể thao và dịch vụ cá nhân",
+    "major_name": "Huấn luyện thể thao",
+    "major_code": "7140207",
+    "major_url": "https://trangedu.com/nganh/huan-luyen-the-thao/"
+  },
+  {
+    "group_name": "Du lịch, khách sạn, thể thao và dịch vụ cá nhân",
+    "major_name": "Kinh tế gia đình",
+    "major_code": "7810501",
+    "major_url": null
+  },
+  {
+    "group_name": "Môi trường và Bảo vệ môi trường",
+    "major_name": "Quản lý tài nguyên và môi trường",
+    "major_code": "7850101",
+    "major_url": "https://trangedu.com/nganh/quan-ly-tai-nguyen-va-moi-truong/"
+  },
+  {
+    "group_name": "Môi trường và Bảo vệ môi trường",
+    "major_name": "Kinh tế tài nguyên thiên nhiên",
+    "major_code": "7850102",
+    "major_url": "https://trangedu.com/nganh/kinh-te-tai-nguyen-thien-nhien/"
+  },
+  {
+    "group_name": "Môi trường và Bảo vệ môi trường",
+    "major_name": "Quản lý đất đai",
+    "major_code": "7850103",
+    "major_url": "https://trangedu.com/nganh/quan-ly-dat-dai/"
+  },
+  {
+    "group_name": "Môi trường và Bảo vệ môi trường",
+    "major_name": "Quản lý tài nguyên thiên nhiên",
+    "major_code": "7850106",
+    "major_url": null
+  },
+  {
+    "group_name": "Môi trường và Bảo vệ môi trường",
+    "major_name": "Quản lý tài nguyên và môi trường biển đảo",
+    "major_code": "7850197",
+    "major_url": null
+  },
+  {
+    "group_name": "Môi trường và Bảo vệ môi trường",
+    "major_name": "Bảo hộ lao động",
+    "major_code": "7850201",
+    "major_url": "https://trangedu.com/nganh/bao-ho-lao-dong/"
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Trinh sát an ninh",
+    "major_code": "7860101",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Trinh sát cảnh sát",
+    "major_code": "7860102",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Trinh sát kỹ thuật",
+    "major_code": "7860103",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Điều tra hình sự",
+    "major_code": "7860104",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Kỹ thuật Công an nhân dân",
+    "major_code": "7860107",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Kỹ thuật hình sự",
+    "major_code": "7860108",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Quản lý nhà nước về an ninh trật tự",
+    "major_code": "7860109",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Quản lý trật tự an toàn giao thông",
+    "major_code": "7860110",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Thi hành án hình sự và hỗ trợ tư pháp",
+    "major_code": "7860111",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Tham mưu, chỉ huy công an nhân dân",
+    "major_code": "7860112",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Phòng cháy chữa cháy và cứu nạn cứu hộ",
+    "major_code": "7860113",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Hậu cần công an nhân dân",
+    "major_code": "7860116",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Tình báo an ninh",
+    "major_code": "7860117",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy tham mưu Lục quân",
+    "major_code": "7860201",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy tham mưu Hải quân",
+    "major_code": "7860202",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy tham mưu Không quân",
+    "major_code": "7860203",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy tham mưu Phòng không",
+    "major_code": "7860204",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy tham mưu Pháo binh",
+    "major_code": "7860205",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy tham mưu Tăng - thiết giáp",
+    "major_code": "7860206",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy tham mưu Đặc công",
+    "major_code": "7860207",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Biên phòng",
+    "major_code": "7860214",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Tình báo quân sự",
+    "major_code": "7860217",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Hậu cần quân sự",
+    "major_code": "7860218",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy, tham mưu thông tin",
+    "major_code": "7860219",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy, quản lý kỹ thuật",
+    "major_code": "7860220",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Quân sự cơ sở",
+    "major_code": "7860222",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy kỹ thuật Phòng không",
+    "major_code": "7860226",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy kỹ thuật Tăng - thiết giáp",
+    "major_code": "7860227",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy kỹ thuật Công binh",
+    "major_code": "7860228",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy kỹ thuật Hóa học",
+    "major_code": "7860229",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Trinh sát kỹ thuật",
+    "major_code": "7860231",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy kỹ thuật hải quân",
+    "major_code": "7860232",
+    "major_url": null
+  },
+  {
+    "group_name": "An ninh, Quốc phòng",
+    "major_name": "Chỉ huy kỹ thuật tác chiến điện tử",
+    "major_code": "7860233",
+    "major_url": null
+  },
+  {
+    "group_name": "Khác",
+    "major_name": "Quản trị doanh nghiệp và công nghệ",
+    "major_code": "7900101",
+    "major_url": null
+  },
+  {
+    "group_name": "Khác",
+    "major_name": "Marketing và truyền thông",
+    "major_code": "7900102",
+    "major_url": null
+  },
+  {
+    "group_name": "Khác",
+    "major_name": "Quản trị nhân lực và nhân tài",
+    "major_code": "7900103",
+    "major_url": null
+  },
+  {
+    "group_name": "Khác",
+    "major_name": "Quản trị và an ninh",
+    "major_code": "7900189",
+    "major_url": null
+  },
+  {
+    "group_name": "Khác",
+    "major_name": "Kinh tế - Tài chính",
+    "major_code": "7903124",
+    "major_url": null
+  }
+]

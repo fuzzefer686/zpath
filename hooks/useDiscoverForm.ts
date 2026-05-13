@@ -31,7 +31,7 @@ export function useDiscoverForm() {
       console.error("Lỗi lưu dữ liệu:", error);
       if (error instanceof Error && error.message.includes("đăng nhập")) {
         // Yêu cầu đăng nhập trước khi lưu hồ sơ
-        router.push("/login?next=/discover");
+        router.push("/login?next=/profile");
         return;
       }
 

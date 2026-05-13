@@ -13,7 +13,8 @@ const links = [
   { href: "/", label: "Trang chủ" },
   { href: "/unimap", label: "UniMap" },
   { href: "/majorly", label: "Majorly" },
-  { href: "/landing", label: "Tính tỉ lệ đỗ" },
+  { href: "/advisor", label: "Tư vấn ngành" },
+  { href: "/news", label: "Bảng tin" },
 ];
 
 export function Navbar() {
@@ -37,9 +38,9 @@ export function Navbar() {
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
-            <Link 
-              key={l.href} 
-              href={l.href} 
+            <Link
+              key={l.href}
+              href={l.href}
               className={`text-sm font-medium transition-colors hover:text-primary ${pathname === l.href ? "text-primary font-bold" : "text-foreground/70"}`}
             >
               {l.label}
