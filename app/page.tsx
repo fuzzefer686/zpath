@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, GraduationCap, Newspaper, Clock } from "lucide-react";
+import { ArrowRight, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/zpath/SectionHeading";
-import { NEWS_ARTICLES } from "@/data/news";
 
 const stats = [
   { label: "Học sinh đã thử", value: "10K+" },
@@ -15,14 +14,6 @@ const stats = [
 
 const products = [
   {
-    to: "/news",
-    icon: Newspaper,
-    title: "Bảng tin",
-    desc: "Cập nhật tin tuyển sinh, học bổng, xu hướng nghề nghiệp và lời khuyên hướng nghiệp.",
-    cta: "Đọc ngay",
-    gradient: "from-primary to-accent",
-  },
-  {
     to: "/profile",
     icon: GraduationCap,
     title: "Hồ sơ cá nhân",
@@ -31,8 +22,6 @@ const products = [
     gradient: "from-accent to-primary-glow",
   },
 ];
-
-const latestNews = NEWS_ARTICLES.slice(0, 4);
 
 export default function Home() {
   return (
@@ -137,50 +126,6 @@ export default function Home() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* NEWS / BLOG */}
-      <section className="bg-muted/30 py-20 sm:py-28">
-        <div className="container-page">
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary">
-                <Newspaper className="h-3.5 w-3.5" /> Bảng tin
-              </div>
-              <h2 className="font-display text-3xl font-bold sm:text-4xl">Cập nhật mới nhất từ ZPATH</h2>
-            </div>
-            <Button asChild variant="ghost">
-              <Link href="/news">Xem tất cả <ArrowRight className="ml-2 h-4 w-4" /></Link>
-            </Button>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {latestNews.map((article) => (
-              <Link
-                key={article.id}
-                href={`/news#article-${article.slug}`}
-                className="group overflow-hidden rounded-2xl border-2 border-border bg-card transition-all hover:-translate-y-1 hover:shadow-md"
-              >
-                <div className={`aspect-[16/10] bg-gradient-to-br ${article.imageGradient} relative`}>
-                  <div className="absolute inset-0 bg-foreground/5 group-hover:bg-foreground/0 transition-colors" />
-                  <div className="absolute bottom-3 left-3">
-                    <span className="inline-block rounded-full bg-white/90 px-2.5 py-0.5 text-[10px] font-bold text-foreground">
-                      {article.tag}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display text-sm font-bold leading-snug group-hover:text-primary transition-colors line-clamp-2 sm:text-base">
-                    {article.title}
-                  </h3>
-                  <div className="mt-3 flex items-center gap-3 text-[11px] text-muted-foreground">
-                    <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{article.readTime}</span>
-                    <span>{article.date}</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
           </div>
         </div>
       </section>

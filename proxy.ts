@@ -1,12 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-const hiddenCatalogPrefixes = ["/majorly", "/unimap"];
+const hiddenPagePrefixes = ["/majorly", "/unimap", "/news"];
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (
-    hiddenCatalogPrefixes.some(
+    hiddenPagePrefixes.some(
       (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
     )
   ) {
@@ -20,5 +20,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/majorly/:path*", "/unimap/:path*"],
+  matcher: ["/majorly/:path*", "/unimap/:path*", "/news/:path*"],
 };

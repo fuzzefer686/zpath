@@ -12,7 +12,6 @@ import { supabase } from "@/app/lib/supabase";
 const links = [
   { href: "/", label: "Trang chủ" },
   { href: "/advisor", label: "Tư vấn ngành" },
-  { href: "/news", label: "Bảng tin" },
 ];
 
 export function Navbar() {
