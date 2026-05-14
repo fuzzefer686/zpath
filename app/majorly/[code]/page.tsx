@@ -12,7 +12,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { formatVND } from "@/lib/utils";
-import { supabase } from "@/app/lib/supabase";
+import { getSupabaseClient, hasSupabaseConfig } from "@/app/lib/supabase";
 import type { Major, Program } from "@/types/majorly";
 
 interface MajorDetailPageProps {
@@ -22,29 +22,63 @@ interface MajorDetailPageProps {
 }
 
 export async function generateStaticParams() {
-  const { data } = await supabase.from("majors").select("code");
-  if (!data) return [];
-  return data.map((major) => ({
-    code: major.code.toLowerCase(),
-  }));
+  if (!hasSupabaseConfig()) return [];
+
+  try {
+    const supabase = getSupabaseClient();
+    const { data, error } = await supabase.from("majors").select("code");
+    if (error || !data) return [];
+    return data.map((major) => ({
+      code: major.code.toLowerCase(),
+    }));
+  } catch (error) {
+    console.error("Cannot generate major static params:", error);
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: MajorDetailPageProps) {
   const { code } = await params;
-  const { data: major } = await supabase.from("majors").select("name").eq("code", code).maybeSingle();
+  if (!hasSupabaseConfig()) {
+    return {
+      title: "Không tìm thấy ngành",
+    };
+  }
 
-  return {
-    title: major ? `${major.name} - Majorly` : "Không tìm thấy ngành",
-  };
+  try {
+    const supabase = getSupabaseClient();
+    const { data: major } = await supabase.from("majors").select("name").eq("code", code).maybeSingle();
+
+    return {
+      title: major ? `${major.name} - Majorly` : "Không tìm thấy ngành",
+    };
+  } catch (error) {
+    console.error("Cannot generate major metadata:", error);
+    return {
+      title: "Không tìm thấy ngành",
+    };
+  }
 }
 
 export default async function MajorDetailPage({ params }: MajorDetailPageProps) {
   const { code } = await params;
-  
-  const { data: majorData } = await supabase.from("majors").select("*").eq("code", code).maybeSingle();
+  let supabase: ReturnType<typeof getSupabaseClient> | null = null;
+  let majorData: unknown = null;
+
+  if (hasSupabaseConfig()) {
+    try {
+      supabase = getSupabaseClient();
+      const { data, error } = await supabase.from("majors").select("*").eq("code", code).maybeSingle();
+      if (error) throw error;
+      majorData = data;
+    } catch (error) {
+      console.error("Cannot load major detail:", error);
+    }
+  }
+
   const major = majorData as Major | null;
 
-  if (!major) {
+  if (!major || !supabase) {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <div className="container-page py-20 text-center">
@@ -57,7 +91,15 @@ export default async function MajorDetailPage({ params }: MajorDetailPageProps) 
     );
   }
 
-  const { data: programsData } = await supabase.from("programs").select("*").eq("major_id", major.id);
+  let programsData: unknown[] | null = null;
+  try {
+    const { data, error } = await supabase.from("programs").select("*").eq("major_id", major.id);
+    if (error) throw error;
+    programsData = data;
+  } catch (error) {
+    console.error("Cannot load major programs:", error);
+  }
+
   const programs = (programsData ?? []) as Program[];
 
   return (

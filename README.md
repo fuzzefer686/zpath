@@ -7,6 +7,9 @@ ZPATH là ứng dụng EdTech giúp học sinh THPT khám phá bản thân và t
 2. **Cài đặt:** `npm install`
 3. **Môi trường:** Tạo file `.env.local` (Lấy nội dung từ Tech Lead).
 4. **Database:** `npx supabase start` để khởi động DB ảo.
+5. **Chạy app:** `npm run dev` mở Next.js bằng webpack dev compiler ở `http://localhost:3001`.
+
+> Lưu ý local: tránh dùng `curl http://localhost:3000` hoặc `curl http://127.0.0.1:3000` trên máy dev này. Dev server mặc định đã chuyển sang port `3001`; dev compiler dùng webpack vì Turbopack đang có dấu hiệu kẹt ở `Compiling / ...`, và các request Supabase có timeout để không giữ màn hình tải vô hạn khi DB/API chậm.
 
 ## 🌿 Quy trình Gitflow (Bắt buộc)
 - **main:** Code sạch, ổn định (Deploy Vercel).

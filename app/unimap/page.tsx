@@ -15,14 +15,30 @@ export default function UniMapPage() {
   const [query, setQuery] = useState("");
   const [universities, setUniversities] = useState<University[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
+    let isCancelled = false;
+
     async function fetchUniversities() {
-      const { data } = await supabase.from("universities").select("*").order("name");
-      setUniversities((data ?? []) as University[]);
-      setIsLoading(false);
+      try {
+        const { data, error } = await supabase.from("universities").select("*").order("name");
+        if (error) throw error;
+        if (!isCancelled) {
+          setUniversities((data ?? []) as University[]);
+        }
+      } catch (err) {
+        console.error("Error fetching universities:", err);
+        if (!isCancelled) setError(true);
+      } finally {
+        if (!isCancelled) setIsLoading(false);
+      }
     }
-    fetchUniversities();
+
+    void fetchUniversities();
+    return () => {
+      isCancelled = true;
+    };
   }, []);
 
   const filtered = useMemo(() => {
@@ -98,6 +114,10 @@ export default function UniMapPage() {
           <div className="flex flex-col items-center justify-center py-20">
             <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
             <p className="mt-3 text-sm text-muted-foreground">Đang tải danh sách trường...</p>
+          </div>
+        ) : error ? (
+          <div className="rounded-2xl border-2 border-destructive/30 bg-destructive/5 p-8 text-center">
+            <p className="text-sm font-semibold text-destructive">Không thể tải dữ liệu trường. Vui lòng kiểm tra Supabase rồi thử lại.</p>
           </div>
         ) : filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-muted/30 py-16 text-center">

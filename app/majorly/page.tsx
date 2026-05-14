@@ -28,19 +28,27 @@ export default function MajorlyPage() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    let isCancelled = false;
+
     async function fetchMajors() {
       try {
         const { data, error } = await supabase.from("majors").select("*").order("name");
         if (error) throw error;
-        setMajors((data ?? []) as Major[]);
+        if (!isCancelled) {
+          setMajors((data ?? []) as Major[]);
+        }
       } catch (err) {
         console.error("Error fetching majors:", err);
-        setError(true);
+        if (!isCancelled) setError(true);
       } finally {
-        setIsLoading(false);
+        if (!isCancelled) setIsLoading(false);
       }
     }
-    fetchMajors();
+
+    void fetchMajors();
+    return () => {
+      isCancelled = true;
+    };
   }, []);
 
   const filtered = useMemo(() => {

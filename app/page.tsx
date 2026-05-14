@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Compass, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, GraduationCap, Layers, Newspaper, Clock, User } from "lucide-react";
+import { ArrowRight, Compass, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, GraduationCap, Layers, Newspaper, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/zpath/SectionHeading";
 import { UNIVERSITIES } from "@/data/universities";

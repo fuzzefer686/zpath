@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Clock, User, Tag, ChevronRight, Newspaper, TrendingUp, Search } from "lucide-react";
+import { Clock, User, Tag, ChevronRight, Newspaper, TrendingUp, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NEWS_ARTICLES } from "@/data/news";
 import { useState, useEffect } from "react";
@@ -22,8 +22,6 @@ export default function NewsPage() {
   });
 
   const featured = NEWS_ARTICLES.filter((a) => a.featured);
-  const latest = NEWS_ARTICLES.slice(0, 6);
-
   // Handle hash-based scroll on load
   useEffect(() => {
     const hash = window.location.hash;
@@ -194,7 +192,7 @@ export default function NewsPage() {
                   <p className="mt-4 text-muted-foreground">Không tìm thấy bài viết phù hợp.</p>
                 </div>
               )}
-              {filtered.map((article, idx) => (
+              {filtered.map((article) => (
                 <article
                   key={article.id}
                   id={`article-${article.slug}`}

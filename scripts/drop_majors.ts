@@ -1,4 +1,3 @@
-import { createClient } from "@supabase/supabase-js";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -14,4 +13,9 @@ if (fs.existsSync(envPath)) {
   if (keyMatch) supabaseKey = keyMatch[1].trim();
 }
 
-// Since I only have Anon Key, I cannot run DROP TABLE via REST API, but wait!
+if (!supabaseUrl || !supabaseKey) {
+  console.error("Khong tim thay NEXT_PUBLIC_SUPABASE_URL hoac SUPABASE_SERVICE_ROLE_KEY trong .env.local");
+  process.exit(1);
+}
+
+console.log("Drop majors script is disabled. Use a Supabase migration for destructive schema changes.");

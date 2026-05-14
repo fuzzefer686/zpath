@@ -10,9 +10,16 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/app/lib/supabase";
+import { getSupabaseClient, hasSupabaseConfig } from "@/app/lib/supabase";
 import { InlineEditable } from "@/components/zpath/InlineEditable";
-import type { University, UniProgram } from "@/data/universities";
+import type { University } from "@/data/universities";
+
+interface ProgramRow {
+  name: string;
+  program_code: string;
+  admission_score_2025?: number | null;
+  tuition_per_semester?: number | null;
+}
 
 interface UniversityDetailPageProps {
   params: Promise<{
@@ -21,29 +28,63 @@ interface UniversityDetailPageProps {
 }
 
 export async function generateStaticParams() {
-  const { data } = await supabase.from("universities").select("code");
-  if (!data) return [];
-  return data.map((university) => ({
-    code: university.code.toLowerCase(),
-  }));
+  if (!hasSupabaseConfig()) return [];
+
+  try {
+    const supabase = getSupabaseClient();
+    const { data, error } = await supabase.from("universities").select("code");
+    if (error || !data) return [];
+    return data.map((university) => ({
+      code: university.code.toLowerCase(),
+    }));
+  } catch (error) {
+    console.error("Cannot generate university static params:", error);
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: UniversityDetailPageProps) {
   const { code } = await params;
-  const { data: university } = await supabase.from("universities").select("name").eq("code", code.toUpperCase()).maybeSingle();
+  if (!hasSupabaseConfig()) {
+    return {
+      title: "Không tìm thấy trường",
+    };
+  }
 
-  return {
-    title: university ? `${code.toUpperCase()} - ${university.name}` : "Không tìm thấy trường",
-  };
+  try {
+    const supabase = getSupabaseClient();
+    const { data: university } = await supabase.from("universities").select("name").eq("code", code.toUpperCase()).maybeSingle();
+
+    return {
+      title: university ? `${code.toUpperCase()} - ${university.name}` : "Không tìm thấy trường",
+    };
+  } catch (error) {
+    console.error("Cannot generate university metadata:", error);
+    return {
+      title: "Không tìm thấy trường",
+    };
+  }
 }
 
 export default async function UniversityDetailPage({ params }: UniversityDetailPageProps) {
   const { code } = await params;
-  
-  const { data: universityData } = await supabase.from("universities").select("*").eq("code", code.toUpperCase()).maybeSingle();
+  let supabase: ReturnType<typeof getSupabaseClient> | null = null;
+  let universityData: unknown = null;
+
+  if (hasSupabaseConfig()) {
+    try {
+      supabase = getSupabaseClient();
+      const { data, error } = await supabase.from("universities").select("*").eq("code", code.toUpperCase()).maybeSingle();
+      if (error) throw error;
+      universityData = data;
+    } catch (error) {
+      console.error("Cannot load university detail:", error);
+    }
+  }
+
   const university = universityData as University | null;
 
-  if (!university) {
+  if (!university || !supabase) {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <div className="container-page flex flex-col items-center justify-center py-24 text-center">
@@ -58,8 +99,16 @@ export default async function UniversityDetailPage({ params }: UniversityDetailP
     );
   }
 
-  const { data: programsData } = await supabase.from("programs").select("*").eq("university_code", university.code).order("program_code");
-  const programs = (programsData ?? []) as any[];
+  let programsData: unknown[] | null = null;
+  try {
+    const { data, error } = await supabase.from("programs").select("*").eq("university_code", university.code).order("program_code");
+    if (error) throw error;
+    programsData = data;
+  } catch (error) {
+    console.error("Cannot load university programs:", error);
+  }
+
+  const programs = (programsData ?? []) as ProgramRow[];
   const channels = university.channels ?? [];
 
   return (

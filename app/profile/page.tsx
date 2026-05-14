@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Camera, Save, Trash2, CheckCircle2, ArrowRight, User, GraduationCap, Trophy, MapPin, Sparkles, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Field, NumberInput, SelectInput } from "@/components/zpath/FormFields";
@@ -130,7 +131,7 @@ export default function ProfilePage() {
                 className="group relative flex h-28 w-28 items-center justify-center overflow-hidden rounded-3xl border-2 border-dashed border-border bg-muted/40 transition-colors hover:border-primary"
               >
                 {data.avatar ? (
-                  <img src={data.avatar} alt="avatar" className="h-full w-full object-cover" />
+                  <Image src={data.avatar} alt="avatar" fill sizes="112px" className="object-cover" unoptimized />
                 ) : (
                   <Camera className="h-7 w-7 text-muted-foreground" />
                 )}

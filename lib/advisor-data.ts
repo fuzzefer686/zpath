@@ -2,6 +2,7 @@ import majorsData from "@/data/advisor-majors.json";
 import { createClient } from "@supabase/supabase-js";
 import type { Major } from "@/lib/advisor-types";
 import { createAdminClient } from "@/lib/supabase-admin";
+import { fetchWithSupabaseTimeout } from "@/lib/supabase-fetch";
 import {
   ADVISOR_SCORE_WEIGHT_FIELDS,
   ADVISOR_SUBJECT_WEIGHT_FIELDS,
@@ -131,6 +132,9 @@ function createServerSupabaseClient() {
     auth: {
       autoRefreshToken: false,
       persistSession: false,
+    },
+    global: {
+      fetch: fetchWithSupabaseTimeout,
     },
   });
 }

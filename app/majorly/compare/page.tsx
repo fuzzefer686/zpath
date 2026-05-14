@@ -2,7 +2,7 @@
 
 import { useMemo, useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, Layers, Loader2, Plus, X, Trophy, Crown, Equal } from "lucide-react";
+import { ArrowLeft, Layers, Loader2, X, Trophy, Crown, Equal } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/app/lib/supabase";
@@ -65,6 +65,7 @@ export default function MajorlyComparePage() {
 
   const [majors, setMajors] = useState<Major[]>([]);
   const [isLoadingMajors, setIsLoadingMajors] = useState(true);
+  const [loadMajorsError, setLoadMajorsError] = useState(false);
 
   const [aggA, setAggA] = useState<Aggregated | null>(null);
   const [loadingA, setLoadingA] = useState(false);
@@ -73,46 +74,105 @@ export default function MajorlyComparePage() {
   const [loadingB, setLoadingB] = useState(false);
 
   useEffect(() => {
+    let isCancelled = false;
+
     async function fetchMajors() {
-      const { data } = await supabase.from("majors").select("*").order("name");
-      setMajors((data ?? []) as Major[]);
-      setIsLoadingMajors(false);
+      try {
+        const { data, error } = await supabase.from("majors").select("*").order("name");
+        if (error) throw error;
+        if (!isCancelled) {
+          setMajors((data ?? []) as Major[]);
+        }
+      } catch (err) {
+        console.error("Error fetching majors for comparison:", err);
+        if (!isCancelled) setLoadMajorsError(true);
+      } finally {
+        if (!isCancelled) setIsLoadingMajors(false);
+      }
     }
-    fetchMajors();
+
+    void fetchMajors();
+    return () => {
+      isCancelled = true;
+    };
   }, []);
 
   useEffect(() => {
-    if (!codeA || !majors.length) {
-      setAggA(null);
-      return;
-    }
+    let isCancelled = false;
+
     async function fetchA() {
-      setLoadingA(true);
-      const m = majors.find((x) => x.code === codeA)!;
-      if (m) {
-        const { data } = await supabase.from("programs").select("*").eq("major_id", m.id);
-        setAggA(aggregate(m, (data ?? []) as Program[]));
+      if (!codeA || !majors.length) {
+        setAggA(null);
+        setLoadingA(false);
+        return;
       }
-      setLoadingA(false);
+
+      setLoadingA(true);
+      try {
+        const m = majors.find((x) => x.code === codeA);
+        if (!m) {
+          if (!isCancelled) setAggA(null);
+          return;
+        }
+
+        const { data, error } = await supabase.from("programs").select("*").eq("major_id", m.id);
+        if (error) throw error;
+        if (!isCancelled) {
+          setAggA(aggregate(m, (data ?? []) as Program[]));
+        }
+      } catch (err) {
+        console.error("Error fetching first major programs:", err);
+        if (!isCancelled) setAggA(null);
+      } finally {
+        if (!isCancelled) {
+          setLoadingA(false);
+        }
+      }
     }
-    fetchA();
+
+    void fetchA();
+    return () => {
+      isCancelled = true;
+    };
   }, [codeA, majors]);
 
   useEffect(() => {
-    if (!codeB || !majors.length) {
-      setAggB(null);
-      return;
-    }
+    let isCancelled = false;
+
     async function fetchB() {
-      setLoadingB(true);
-      const m = majors.find((x) => x.code === codeB)!;
-      if (m) {
-        const { data } = await supabase.from("programs").select("*").eq("major_id", m.id);
-        setAggB(aggregate(m, (data ?? []) as Program[]));
+      if (!codeB || !majors.length) {
+        setAggB(null);
+        setLoadingB(false);
+        return;
       }
-      setLoadingB(false);
+
+      setLoadingB(true);
+      try {
+        const m = majors.find((x) => x.code === codeB);
+        if (!m) {
+          if (!isCancelled) setAggB(null);
+          return;
+        }
+
+        const { data, error } = await supabase.from("programs").select("*").eq("major_id", m.id);
+        if (error) throw error;
+        if (!isCancelled) {
+          setAggB(aggregate(m, (data ?? []) as Program[]));
+        }
+      } catch (err) {
+        console.error("Error fetching second major programs:", err);
+        if (!isCancelled) setAggB(null);
+      } finally {
+        if (!isCancelled) {
+          setLoadingB(false);
+        }
+      }
     }
-    fetchB();
+
+    void fetchB();
+    return () => {
+      isCancelled = true;
+    };
   }, [codeB, majors]);
 
   const winnerSide = useMemo<"A" | "B" | "tie" | null>(() => {
@@ -151,6 +211,11 @@ export default function MajorlyComparePage() {
           <PickerCard side="A" code={codeA} setCode={setCodeA} majors={majors} loading={isLoadingMajors} />
           <PickerCard side="B" code={codeB} setCode={setCodeB} majors={majors} loading={isLoadingMajors} />
         </div>
+        {loadMajorsError && (
+          <div className="mt-4 rounded-2xl border-2 border-destructive/30 bg-destructive/5 p-4 text-sm font-semibold text-destructive">
+            Không thể tải danh sách ngành. Vui lòng kiểm tra Supabase rồi thử lại.
+          </div>
+        )}
 
         {/* Criteria selector */}
         <div className="mt-8 rounded-2xl border-2 border-border bg-card p-5">
@@ -310,4 +375,3 @@ function Cell({ value, winner }: { value: string; winner: boolean }) {
     </div>
   );
 }
-
