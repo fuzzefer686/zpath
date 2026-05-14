@@ -322,12 +322,6 @@ export default function NewsPage() {
                     Khám phá thêm
                   </h3>
                   <div className="space-y-2">
-                    <Link href="/unimap" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground/70 hover:bg-muted transition-colors">
-                      🏫 UniMap — Trường ĐH
-                    </Link>
-                    <Link href="/majorly" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground/70 hover:bg-muted transition-colors">
-                      📚 Majorly — Ngành học
-                    </Link>
                     <Link href="/advisor" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground/70 hover:bg-muted transition-colors">
                       🤖 Tư vấn ngành AI
                     </Link>

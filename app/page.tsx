@@ -1,11 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Compass, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, GraduationCap, Layers, Newspaper, Clock } from "lucide-react";
+import { ArrowRight, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, GraduationCap, Newspaper, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/zpath/SectionHeading";
-import { UNIVERSITIES } from "@/data/universities";
-import { UniversityCard } from "@/components/zpath/UniversityCard";
 import { NEWS_ARTICLES } from "@/data/news";
 
 const stats = [
@@ -16,22 +14,6 @@ const stats = [
 ];
 
 const products = [
-  {
-    to: "/unimap",
-    icon: Compass,
-    title: "UniMap — Trường ĐH",
-    desc: "Khám phá thông tin, ngành mạnh và tag chuyên môn của hơn 50 trường đại học.",
-    cta: "Khám phá trường",
-    gradient: "from-secondary to-tier-high",
-  },
-  {
-    to: "/majorly",
-    icon: Layers,
-    title: "Majorly — Ngành học",
-    desc: "Tra cứu chương trình, học phí, tỉ lệ có việc — và so sánh ngành học bằng Matrix.",
-    cta: "Khám phá ngành",
-    gradient: "from-tier-mid to-accent",
-  },
   {
     to: "/news",
     icon: Newspaper,
@@ -80,7 +62,7 @@ export default function Home() {
                 <Link href="/advisor">Tư vấn ngành <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
               <Button asChild variant="outline" size="xl" className="w-full sm:w-auto">
-                <Link href="/unimap">Khám phá trường</Link>
+                <Link href="/advisor">Bắt đầu tư vấn</Link>
               </Button>
             </div>
           </div>
@@ -103,9 +85,9 @@ export default function Home() {
           <SectionHeading
             eyebrow="Hệ sinh thái ZPATH"
             title={<>Mọi thứ bạn cần <span className="text-gradient-hero">trong một nơi</span></>}
-            description="Bốn sản phẩm cốt lõi giúp bạn quyết định đúng — nhanh hơn, thông minh hơn."
+            description="Các công cụ cốt lõi giúp bạn quyết định đúng — nhanh hơn, thông minh hơn."
           />
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
             {products.map((p) => {
               const Icon = p.icon;
               return (
@@ -125,28 +107,6 @@ export default function Home() {
                 </Link>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* TRENDING UNIVERSITIES */}
-      <section className="bg-muted/30 py-20 sm:py-28">
-        <div className="container-page">
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary">
-                <Sparkles className="h-3.5 w-3.5" /> Trending
-              </div>
-              <h2 className="font-display text-3xl font-bold sm:text-4xl">Trường được tìm kiếm nhiều</h2>
-            </div>
-            <Button asChild variant="ghost">
-              <Link href="/unimap">Xem tất cả <ArrowRight className="ml-2 h-4 w-4" /></Link>
-            </Button>
-          </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {UNIVERSITIES.slice(0, 4).map((u) => (
-              <UniversityCard key={u.code} uni={u} />
-            ))}
           </div>
         </div>
       </section>

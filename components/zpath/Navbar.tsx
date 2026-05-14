@@ -61,7 +61,7 @@ export function Navbar() {
                 <Link href="/login">Đăng nhập</Link>
               </Button>
               <Button asChild variant="hero" size="sm">
-                <Link href="/landing">Dùng thử ngay</Link>
+                <Link href="/advisor">Dùng thử ngay</Link>
               </Button>
             </>
           ) : (
@@ -104,7 +104,7 @@ export function Navbar() {
                   Đăng nhập / Đăng ký
                 </Link>
                 <Button asChild variant="hero" className="mt-2 w-full">
-                  <Link href="/landing" onClick={() => setOpen(false)}>Dùng thử ngay</Link>
+                  <Link href="/advisor" onClick={() => setOpen(false)}>Dùng thử ngay</Link>
                 </Button>
               </>
             ) : null}

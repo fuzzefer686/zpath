@@ -14,16 +14,36 @@ const sanitizeNextPath = (value: string | null) => {
   return value;
 };
 
+const normalizeSiteUrl = (value: string | undefined) => {
+  if (!value) return null;
+  return value.replace(/\/+$/, "");
+};
+
+const getAuthRedirectOrigin = () => {
+  const configuredSiteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
+  const currentOrigin = window.location.origin;
+
+  if (
+    configuredSiteUrl &&
+    (currentOrigin.includes("localhost") || process.env.NODE_ENV === "production")
+  ) {
+    return configuredSiteUrl;
+  }
+
+  return currentOrigin;
+};
+
 export function LoginClient() {
   const searchParams = useSearchParams();
 
   const handleGoogleLogin = async () => {
     const nextPath = sanitizeNextPath(searchParams.get("next"));
+    const redirectOrigin = getAuthRedirectOrigin();
 
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${window.location.origin}${nextPath}`,
+        redirectTo: `${redirectOrigin}${nextPath}`,
       },
     });
 

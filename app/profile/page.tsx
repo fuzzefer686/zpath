@@ -253,7 +253,7 @@ export default function ProfilePage() {
                 </span>
               )}
               <Button asChild variant="outline">
-                <Link href="/landing">Đi tính tỉ lệ <ArrowRight className="h-4 w-4 ml-1" /></Link>
+                <Link href="/advisor">Đi tính tỉ lệ <ArrowRight className="h-4 w-4 ml-1" /></Link>
               </Button>
               <Button type="submit" variant="hero" disabled={saving || !!profileError}>
                 {saving ? <><Loader2 className="h-4 w-4 animate-spin mr-1" /> Đang lưu...</> : <><Save className="h-4 w-4 mr-1" /> Lưu hồ sơ</>}

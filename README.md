@@ -11,6 +11,10 @@ ZPATH là ứng dụng EdTech giúp học sinh THPT khám phá bản thân và t
 
 > Lưu ý local: tránh dùng `curl http://localhost:3000` hoặc `curl http://127.0.0.1:3000` trên máy dev này. Dev server mặc định đã chuyển sang port `3001`; dev compiler dùng webpack vì Turbopack đang có dấu hiệu kẹt ở `Compiling / ...`, và các request Supabase có timeout để không giữ màn hình tải vô hạn khi DB/API chậm.
 
+## 🔐 Cấu hình Auth khi deploy
+- Set `NEXT_PUBLIC_SITE_URL` trên Vercel bằng domain production, ví dụ `https://zpath.vercel.app`.
+- Trong Supabase Auth URL Configuration, thêm production domain vào **Site URL** và **Redirect URLs** để Google OAuth không quay về localhost.
+
 ## 🌿 Quy trình Gitflow (Bắt buộc)
 - **main:** Code sạch, ổn định (Deploy Vercel).
 - **develop:** Nhánh tích hợp chính của team.
