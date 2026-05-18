@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useAdminEdit } from "./AdminEditContext";
 
 interface InlineEditableProps {
@@ -28,18 +28,14 @@ export function InlineEditable({
   const pendingChange = pendingChanges.find((c) => c.table === table && c.id === id && c.field === field);
   const displayValue = pendingChange ? pendingChange.value : initialValue;
 
-  const [localValue, setLocalValue] = useState(displayValue);
   const elementRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    setLocalValue(displayValue);
-  }, [displayValue]);
 
   if (!isEditMode) {
     return <Component className={className}>{displayValue}</Component>;
   }
 
-  const handleBlur = () => {
+  const handleBlur = (event: React.FocusEvent<HTMLElement>) => {
+    const localValue = event.currentTarget.innerText || "";
     if (localValue !== initialValue) {
       registerChange({ table, id, field, value: localValue });
     }
@@ -51,15 +47,9 @@ export function InlineEditable({
       contentEditable
       suppressContentEditableWarning
       onBlur={handleBlur}
-      onInput={(e: React.FormEvent<HTMLElement>) => {
-        setLocalValue(e.currentTarget.innerText || "");
-      }}
-      className={`outline-none transition-all duration-200 hover:ring-2 hover:ring-primary/50 focus:ring-2 focus:ring-primary focus:bg-primary/5 rounded-sm px-1 -mx-1 cursor-text ${className}`}
+      className={`outline-none transition-all duration-200 hover:ring-2 hover:ring-primary/50 focus:ring-2 focus:ring-primary focus:bg-primary/5 rounded-sm px-1 -mx-1 cursor-text ${multiline ? "whitespace-pre-wrap" : ""} ${className}`}
       style={{ minWidth: "20px", display: "inline-block" }}
     >
-      {/* We set the inner text initially, but let React manage it. 
-          For contentEditable, it's usually better to just set the dangerouslySetInnerHTML once 
-          if it's not controlled, but we want it controlled so we can type. */}
       {displayValue}
     </Component>
   );
