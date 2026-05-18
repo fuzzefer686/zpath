@@ -3,11 +3,14 @@
 import { createContext, useContext, useState, ReactNode, useCallback } from "react";
 import { supabase } from "@/app/lib/supabase";
 
+type EditableValue = string | number | boolean | null;
+type EditableTable = "universities" | "majors" | "programs";
+
 export interface PendingChange {
-  table: "universities" | "majors" | "programs";
+  table: EditableTable;
   id: string; // The primary key (could be code or id)
   field: string;
-  value: any;
+  value: EditableValue;
 }
 
 interface AdminEditContextType {
@@ -52,7 +55,11 @@ export function AdminEditProvider({
 
     // Group changes by table and id
     // { "universities": { "HUST": { about: "...", city: "..." } } }
-    const grouped: Record<string, Record<string, Record<string, any>>> = {};
+    const grouped: Record<EditableTable, Record<string, Record<string, EditableValue>>> = {
+      universities: {},
+      majors: {},
+      programs: {},
+    };
 
     for (const change of pendingChanges) {
       if (!grouped[change.table]) grouped[change.table] = {};

@@ -16,8 +16,9 @@ export function AdminSaveWidget() {
     try {
       await commitChanges();
       alert("Đã lưu các thay đổi lên Supabase thành công!");
-    } catch (err: any) {
-      alert("Lỗi khi lưu: " + err.message);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Không rõ nguyên nhân";
+      alert("Lỗi khi lưu: " + message);
     } finally {
       setIsSaving(false);
     }
