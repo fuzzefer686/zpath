@@ -348,15 +348,16 @@ async function renderAdmissionSchoolDetail(
         },
       ]
     : [];
-  const canUseStaticFallback = selectedYear === FALLBACK_YEAR;
+  const canUseStaticFallback = Boolean(university.programs?.length);
+  const fallbackDataYear = FALLBACK_YEAR;
   const fallbackPrograms = canUseStaticFallback
-    ? createFallbackPrograms(university, selectedYear)
+    ? createFallbackPrograms(university, fallbackDataYear)
     : [];
   const fallbackMethods = canUseStaticFallback
-    ? createFallbackMethods(school.code, selectedYear)
+    ? createFallbackMethods(school.code, fallbackDataYear)
     : [];
   const fallbackAdmissionInfo = canUseStaticFallback
-    ? createFallbackAdmissionInfo(school, selectedYear)
+    ? createFallbackAdmissionInfo(school, fallbackDataYear)
     : null;
 
   const [loadedPrograms, loadedMethods, loadedBenchmarks, loadedTuitionFees, loadedAdmissionInfo, loadedSubjectCombinations] =
@@ -374,12 +375,12 @@ async function renderAdmissionSchoolDetail(
   const benchmarks = loadedBenchmarks.length
     ? loadedBenchmarks
     : canUseStaticFallback
-      ? createFallbackBenchmarks(university, programs, selectedYear)
+      ? createFallbackBenchmarks(university, programs, fallbackDataYear)
       : [];
   const tuitionFees = loadedTuitionFees.length
     ? loadedTuitionFees
     : canUseStaticFallback
-      ? createFallbackTuitionFees(university, programs, selectedYear)
+      ? createFallbackTuitionFees(university, programs, fallbackDataYear)
       : [];
   const admissionInfo = loadedAdmissionInfo ?? fallbackAdmissionInfo;
   const subjectCombinations = loadedSubjectCombinations.length
@@ -392,7 +393,7 @@ async function renderAdmissionSchoolDetail(
         "program combinations",
       )
     : canUseStaticFallback
-      ? createFallbackProgramCombinations(programs, selectedYear)
+      ? createFallbackProgramCombinations(programs, fallbackDataYear)
       : [];
 
   return (
