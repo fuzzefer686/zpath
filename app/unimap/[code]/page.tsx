@@ -63,6 +63,7 @@ interface UniversityDetailPageProps {
 }
 
 const FALLBACK_YEAR = 2025;
+const BENCHMARK_REFERENCE_YEAR = 2025;
 const ADMISSION_YEAR_OPTIONS = [2026, 2025, 2024, 2023] as const;
 const PRO_MAX_VARIANT = "pro-max";
 const PRO_MAX_PLACEHOLDER_MESSAGE =
@@ -360,7 +361,17 @@ async function renderAdmissionSchoolDetail(
     ? createFallbackAdmissionInfo(school, fallbackDataYear)
     : null;
 
-  const [loadedPrograms, loadedMethods, loadedBenchmarks, loadedTuitionFees, loadedAdmissionInfo, loadedSubjectCombinations] =
+  const [
+    loadedPrograms,
+    loadedMethods,
+    loadedBenchmarks,
+    loadedTuitionFees,
+    loadedAdmissionInfo,
+    loadedSubjectCombinations,
+    loadedCalculatorPrograms,
+    loadedCalculatorMethods,
+    loadedCalculatorBenchmarks,
+  ] =
     await Promise.all([
       loadOrFallback(() => getSchoolPrograms(school.code, selectedYear), [], "school programs"),
       loadOrFallback(() => getSchoolAdmissionMethods(school.code, selectedYear), [], "admission methods"),
@@ -368,6 +379,21 @@ async function renderAdmissionSchoolDetail(
       loadOrFallback(() => getSchoolTuitionFees(school.code, selectedYear), [], "tuition fees"),
       loadOrFallback(() => getSchoolAdmissionInfo(school.code, selectedYear), null, "admission info"),
       loadOrFallback(() => getSubjectCombinations(), [], "subject combinations"),
+      loadOrFallback(
+        () => getSchoolPrograms(school.code, BENCHMARK_REFERENCE_YEAR),
+        [],
+        "calculator programs",
+      ),
+      loadOrFallback(
+        () => getSchoolAdmissionMethods(school.code, BENCHMARK_REFERENCE_YEAR),
+        [],
+        "calculator admission methods",
+      ),
+      loadOrFallback(
+        () => getSchoolBenchmarks(school.code, BENCHMARK_REFERENCE_YEAR),
+        [],
+        "calculator benchmarks",
+      ),
     ]);
 
   const programs = loadedPrograms.length ? loadedPrograms : fallbackPrograms;
@@ -383,6 +409,17 @@ async function renderAdmissionSchoolDetail(
       ? createFallbackTuitionFees(university, programs, fallbackDataYear)
       : [];
   const admissionInfo = loadedAdmissionInfo ?? fallbackAdmissionInfo;
+  const calculatorPrograms = loadedCalculatorPrograms.length
+    ? loadedCalculatorPrograms
+    : fallbackPrograms;
+  const calculatorMethods = loadedCalculatorMethods.length
+    ? loadedCalculatorMethods
+    : fallbackMethods;
+  const calculatorBenchmarks = loadedCalculatorBenchmarks.length
+    ? loadedCalculatorBenchmarks
+    : canUseStaticFallback
+      ? createFallbackBenchmarks(university, calculatorPrograms, fallbackDataYear)
+      : [];
   const subjectCombinations = loadedSubjectCombinations.length
     ? loadedSubjectCombinations
     : FALLBACK_SUBJECT_COMBINATIONS;
@@ -495,9 +532,9 @@ async function renderAdmissionSchoolDetail(
               <section id="calculator" className="scroll-mt-24">
                 <AdmissionCalculatorSection
                   schoolCode={school.code}
-                  programs={programs}
-                  benchmarks={benchmarks}
-                  methods={methods}
+                  programs={calculatorPrograms}
+                  benchmarks={calculatorBenchmarks}
+                  methods={calculatorMethods}
                 />
               </section>
             </>

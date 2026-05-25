@@ -528,6 +528,9 @@ export function AdmissionCalculatorSection({
                   </option>
                 ))}
               </select>
+              <span className="block text-xs text-muted-foreground">
+                Dữ liệu so sánh lấy từ bảng điểm chuẩn năm 2025.
+              </span>
             </label>
 
             {comparablePrograms.length === 0 ? (
