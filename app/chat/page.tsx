@@ -13,7 +13,7 @@ interface ChatMessage {
 }
 
 export default function ChatPage() {
-  const { googleUser, userProfile, isLoading: isProfileLoading, errorMessage } = useUserProfile();
+  const { user, userProfile, isLoading: isProfileLoading, errorMessage } = useUserProfile();
   const [message, setMessage] = useState('');
   const [chatHistory, setChatHistory] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -24,13 +24,13 @@ export default function ChatPage() {
     }
 
     const topMatch = buildCareerMatches(userProfile)[0];
-    const firstName = googleUser?.user_metadata?.full_name?.split(' ')?.slice(-1)[0] ?? 'ban';
+    const firstName = user?.username ?? 'ban';
 
     return {
       role: 'ai',
       content: `Chao ${firstName}! Minh da doc ho so cua ban trong he thong. Hien nhom tinh cach cua ban la ${userProfile.personality} va huong phu hop nhat luc nay la ${topMatch?.title ?? 'mot lo trinh dang duoc cap nhat'}. Ban muon hoi ve nganh, truong hay cach cai thien ho so?`,
     };
-  }, [googleUser, userProfile]);
+  }, [user, userProfile]);
 
   const visibleChatHistory =
     chatHistory.length === 0 && initialAssistantMessage ? [initialAssistantMessage] : chatHistory;
@@ -83,8 +83,8 @@ export default function ChatPage() {
     return (
       <div className="max-w-3xl mx-auto p-8">
         <p className="mb-4">Ban chua co ho so de AI tu van.</p>
-        <Link href="/profile" className="inline-flex bg-zpath-gradient text-white px-6 py-3 rounded-full font-semibold">
-          Tao ho so
+        <Link href="/survey" className="inline-flex bg-zpath-gradient text-white px-6 py-3 rounded-full font-semibold">
+          Lam khao sat
         </Link>
       </div>
     );

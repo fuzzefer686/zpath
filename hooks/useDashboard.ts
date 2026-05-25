@@ -1,23 +1,20 @@
-import { useRouter } from "next/navigation";
-
-import { supabase } from "@/app/lib/supabase";
 import { buildCareerMatches } from "@/lib/matching-engine";
 import { useUserProfile } from "@/hooks/useUserProfile";
+import { useAuth } from "@/components/zpath/AuthProvider";
 
 export function useDashboard() {
-  const router = useRouter();
-  const { googleUser, userProfile, isLoading, errorMessage } = useUserProfile();
+  const { user, userProfile, isLoading, errorMessage } = useUserProfile();
+  const { logout } = useAuth();
   const matches = userProfile ? buildCareerMatches(userProfile) : [];
 
   // Hàm đăng xuất
   const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push("/login");
+    await logout();
   };
 
   // Trả về những dữ liệu mà giao diện cần
   return {
-    googleUser,
+    user,
     userProfile,
     matches,
     isLoading,

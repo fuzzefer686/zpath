@@ -20,6 +20,7 @@ export interface University {
   city: string;
   website?: string;
   heroGradient: string;
+  heroImageUrl?: string;
   about: string;
   highlights: string[];
   majors: string[];
@@ -93,6 +94,28 @@ export const UNIVERSITIES: University[] = [
       { name: "Kinh tế Đối ngoại", majorCode: "KTDN", programCode: "FTU01", admissionScore2025: 28.5, tuitionPerSemester: 12 },
       { name: "Marketing Quốc tế", majorCode: "MKT", programCode: "FTU02", admissionScore2025: 28.1, tuitionPerSemester: 12 },
       { name: "Logistics & Quản lý chuỗi cung ứng", programCode: "FTU04", admissionScore2025: 27.95, tuitionPerSemester: 12 },
+    ],
+  },
+  {
+    code: "VINUNI",
+    name: "Đại học VinUni",
+    shortDesc: "Tinh hoa & Quốc tế",
+    tags: ["Quốc tế", "Đổi mới"],
+    city: "Hà Nội",
+    website: "https://vinuni.edu.vn",
+    heroGradient: "from-violet-500 via-rose-500 to-amber-500",
+    about:
+      "Đại học VinUni là trường đại học tư thục định hướng quốc tế, tập trung vào đào tạo tinh hoa, nghiên cứu ứng dụng và kết nối doanh nghiệp.",
+    highlights: [
+      "Môi trường học tập chuẩn quốc tế",
+      "Liên kết học thuật và doanh nghiệp mạnh",
+      "Tập trung công nghệ, kinh doanh, kỹ thuật và khoa học sức khỏe",
+    ],
+    majors: ["Khoa học Máy tính", "Kinh doanh", "Kỹ thuật", "Điều dưỡng", "Y khoa"],
+    programs: [
+      { name: "Khoa học Máy tính", majorCode: "CNTT", programCode: "VIN-CS", admissionScore2025: 27.5, tuitionPerSemester: 180 },
+      { name: "Quản trị Kinh doanh", majorCode: "QTKD", programCode: "VIN-BBA", admissionScore2025: 27.1, tuitionPerSemester: 180 },
+      { name: "Kỹ thuật Cơ khí", programCode: "VIN-ME", admissionScore2025: 26.8, tuitionPerSemester: 180 },
     ],
   },
   {

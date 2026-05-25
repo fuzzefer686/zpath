@@ -12,6 +12,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { formatVND } from "@/lib/utils";
+import { createSchoolSlug } from "@/lib/school-slug";
 import { getSupabaseClient, hasSupabaseConfig } from "@/app/lib/supabase";
 import type { Major, Program } from "@/types/majorly";
 
@@ -166,7 +167,7 @@ export default async function MajorDetailPage({ params }: MajorDetailPageProps) 
                     <h3 className="mt-1 font-display text-xl font-bold">{program.university_name}</h3>
                   </div>
                   <Button asChild variant="ghost" size="sm">
-                    <Link href={`/unimap/${program.university_code?.toLowerCase()}`}>Xem trường</Link>
+                    <Link href={`/unimap/${createSchoolSlug(program.university_name)}`}>Xem trường</Link>
                   </Button>
                 </div>
 

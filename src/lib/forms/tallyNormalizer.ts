@@ -102,8 +102,6 @@ export function mapLaptopAnswer(value: unknown): boolean | "shared" | null {
 
   if (normalized === "co" || normalized === "có") return true;
   if (normalized === "khong" || normalized === "không") return false;
-  if (normalized === "dung chung voi nguoi khac") return "shared";
-  if (normalized === "dùng chung với người khác") return "shared";
 
   return null;
 }

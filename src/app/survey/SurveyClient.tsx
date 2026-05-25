@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
-import { ExternalLink } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import { ZPATH_TALLY_SESSION_STORAGE_KEY } from "@/src/lib/forms/tallySession";
+import {
+  ZPATH_TALLY_SESSION_STORAGE_KEY,
+} from "@/src/lib/forms/tallySession";
 
 const TALLY_BASE_URL = "https://tally.so/r";
 
@@ -22,15 +20,24 @@ export function SurveyClient() {
   const formId = process.env.NEXT_PUBLIC_TALLY_FORM_ID?.trim();
 
   useEffect(() => {
-    const nextSessionId = createSessionId();
+    let cancelled = false;
 
-    setSessionId(nextSessionId);
+    queueMicrotask(() => {
+      if (cancelled) return;
 
-    try {
-      window.localStorage.setItem(ZPATH_TALLY_SESSION_STORAGE_KEY, nextSessionId);
-    } catch {
-      // Some browsers can block storage; the URL still carries the session id.
-    }
+      const nextSessionId = createSessionId();
+      setSessionId(nextSessionId);
+
+      try {
+        window.localStorage.setItem(ZPATH_TALLY_SESSION_STORAGE_KEY, nextSessionId);
+      } catch {
+        // Some browsers can block storage; the URL still carries the session id.
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const tallyUrl = useMemo(() => {
@@ -66,15 +73,6 @@ export function SurveyClient() {
             Hãy trả lời trung thực. Kết quả chỉ mang tính tham khảo.
           </p>
         </div>
-
-        {tallyUrl ? (
-          <Button asChild variant="outline">
-            <Link href={tallyUrl} target="_blank" rel="noreferrer">
-              <ExternalLink className="h-4 w-4" />
-              Mở trong Tally
-            </Link>
-          </Button>
-        ) : null}
       </div>
 
       <div className="overflow-hidden rounded-lg border bg-card shadow-sm">

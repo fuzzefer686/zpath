@@ -1,13 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { Briefcase, MessageCircle, LogOut } from 'lucide-react';
+import { Briefcase, MessageCircle } from 'lucide-react';
 import { useDashboard } from '../../hooks/useDashboard';
 import { CareerCard } from '../../components/CareerCard';
 
 export default function DashboardPage() {
   // 1. GỌI LOGIC TỪ HOOK
-  const { googleUser, userProfile, matches, isLoading, errorMessage, handleLogout } = useDashboard();
+  const { user, userProfile, matches, isLoading, errorMessage } = useDashboard();
 
   // 2. XỬ LÝ CÁC TRẠNG THÁI CHỜ/LỖI
   if (isLoading) return <div className="min-h-screen flex items-center justify-center">Đang tải dữ liệu...</div>;
@@ -23,8 +23,8 @@ export default function DashboardPage() {
         <p className="mb-6 max-w-md text-gray-600">
           Hãy tạo hồ sơ cá nhân để ZPATH có đủ dữ liệu tư vấn ngành học phù hợp.
         </p>
-        <Link href="/profile" className="bg-zpath-gradient text-white px-6 py-3 rounded-full">
-          Tạo hồ sơ
+        <Link href="/survey" className="bg-zpath-gradient text-white px-6 py-3 rounded-full">
+          Làm khảo sát
         </Link>
       </div>
     );
@@ -38,19 +38,15 @@ export default function DashboardPage() {
         {/* HEADER */}
         <header className="flex justify-between items-center bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
           <div className="flex items-center gap-4">
-            {googleUser?.user_metadata?.avatar_url ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={googleUser.user_metadata.avatar_url} alt="Avatar" className="w-16 h-16 rounded-full" />
-            ) : (
-              <div className="w-16 h-16 rounded-full bg-gray-100" />
-            )}
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gray-100 text-xl font-bold text-gray-500">
+              {user?.username?.slice(0, 1).toUpperCase() ?? "Z"}
+            </div>
             <div>
-              <h1 className="text-2xl font-bold">Chào mừng trở lại, {googleUser?.user_metadata?.full_name} 👋</h1>
+              <h1 className="text-2xl font-bold">Chào mừng trở lại, {user?.username} 👋</h1>
               <p className="text-gray-600">Nhóm: <span className="font-bold">{userProfile.personality}</span></p>
               <p className="text-sm text-gray-500 mt-1">Tổng điểm hiện tại: {userProfile.scores.total.toFixed(1)} / 30</p>
             </div>
           </div>
-          <button onClick={handleLogout} className="flex gap-2 text-gray-500 hover:text-red-500 transition"><LogOut/> Đăng xuất</button>
         </header>
 
         <section className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex flex-col md:flex-row md:items-center md:justify-between gap-4">

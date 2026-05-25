@@ -2,20 +2,29 @@ import Link from "next/link";
 import { Coins } from "lucide-react";
 
 import type { University } from "@/data/universities";
+import { createSchoolSlug } from "@/lib/school-slug";
 
 interface UniversityCardProps {
   uni: University;
 }
 
 export function UniversityCard({ uni }: UniversityCardProps) {
+  const hasHeroImage = Boolean(uni.heroImageUrl);
+
   return (
     <Link
-      href={`/unimap/${uni.code.toLowerCase()}`}
+      href={`/unimap/${createSchoolSlug(uni.name)}`}
       className="group relative block overflow-hidden rounded-2xl border-2 border-border bg-card shadow-md transition-all hover:-translate-y-1 hover:border-primary hover:shadow-xl"
     >
       <div className={`relative h-44 bg-gradient-to-br ${uni.heroGradient}`}>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.25),transparent_60%)]" />
+        {hasHeroImage ? (
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+            style={{ backgroundImage: `url(${uni.heroImageUrl})` }}
+          />
+        ) : null}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/5" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.22),transparent_60%)]" />
         <div className="absolute left-4 top-4 text-white drop-shadow-md">
           <div className="font-display text-3xl font-extrabold leading-tight">{uni.code}</div>
           <div className="mt-1 text-sm font-medium opacity-90">{uni.shortDesc}</div>

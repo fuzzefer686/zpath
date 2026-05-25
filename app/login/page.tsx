@@ -1,10 +1,5 @@
-import { Suspense } from "react";
-import { LoginClient } from "./LoginClient";
+import { redirect } from "next/navigation";
 
 export default function LoginPage() {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-gray-50" />}>
-      <LoginClient />
-    </Suspense>
-  );
+  redirect("/survey");
 }

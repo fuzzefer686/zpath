@@ -16,6 +16,16 @@ export async function GET(request: Request) {
     );
   }
 
+  const { data: surveyProfile, error: surveyProfileError } = await supabaseServer
+    .from("user_survey_profiles")
+    .select("user_id")
+    .eq("session_id", sessionId)
+    .maybeSingle();
+
+  if (surveyProfileError) {
+    console.error("Survey profile by session API error:", surveyProfileError);
+  }
+
   const { data, error } = await supabaseServer
     .from("career_evaluations")
     .select("id")
@@ -30,11 +40,19 @@ export async function GET(request: Request) {
   }
 
   if (!data) {
+    if (surveyProfile) {
+      return NextResponse.json({
+        status: "completed",
+        survey_completed: true,
+      });
+    }
+
     return NextResponse.json({ status: "processing" });
   }
 
   return NextResponse.json({
     status: "completed",
     evaluation_id: data.id,
+    survey_completed: Boolean(surveyProfile),
   });
 }

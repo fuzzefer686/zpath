@@ -2,30 +2,22 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Menu, X, LogOut, LayoutDashboard } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
-import { useUserProfile } from "@/hooks/useUserProfile";
-import { supabase } from "@/app/lib/supabase";
 
 const links = [
   { href: "/", label: "Trang chủ" },
-  { href: "/advisor", label: "Tư vấn ngành" },
+  { href: "/unimap", label: "UniMap" },
+  { href: "/survey", label: "Tư vấn ngành" },
 ];
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const { googleUser: user, isLoading } = useUserProfile({ requireAuth: false });
-  const router = useRouter();
   const pathname = usePathname();
-
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    setOpen(false);
-    router.push("/");
-    router.refresh();
-  };
+  const isActive = (href: string) =>
+    href === "/" ? pathname === href : pathname.startsWith(href);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl">
@@ -38,34 +30,16 @@ export function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${pathname === l.href ? "text-primary font-bold" : "text-foreground/70"}`}
+              className={`text-sm font-medium transition-colors hover:text-primary ${isActive(l.href) ? "text-primary font-bold" : "text-foreground/70"}`}
             >
               {l.label}
             </Link>
           ))}
         </nav>
         <div className="hidden items-center gap-2 md:flex">
-          {!isLoading && user ? (
-            <>
-              <Button asChild variant="ghost" size="sm">
-                <Link href="/dashboard"><LayoutDashboard className="h-4 w-4 mr-1" /> Dashboard</Link>
-              </Button>
-              <Button variant="outline" size="sm" onClick={handleLogout}>
-                <LogOut className="h-4 w-4 mr-1" /> Đăng xuất
-              </Button>
-            </>
-          ) : !isLoading ? (
-            <>
-              <Button asChild variant="ghost" size="sm">
-                <Link href="/login">Đăng nhập</Link>
-              </Button>
-              <Button asChild variant="hero" size="sm">
-                <Link href="/advisor">Dùng thử ngay</Link>
-              </Button>
-            </>
-          ) : (
-            <div className="h-9 w-32 animate-pulse rounded-md bg-muted" />
-          )}
+          <Button asChild variant="hero" size="sm">
+            <Link href="/survey">Dùng thử ngay</Link>
+          </Button>
         </div>
         <button
           className="flex h-10 w-10 items-center justify-center rounded-xl border-2 border-foreground/10 md:hidden"
@@ -83,30 +57,14 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className={`rounded-lg px-3 py-3 text-sm font-medium hover:bg-muted ${pathname === l.href ? "text-primary bg-primary/5 font-bold" : ""}`}
+                className={`rounded-lg px-3 py-3 text-sm font-medium hover:bg-muted ${isActive(l.href) ? "text-primary bg-primary/5 font-bold" : ""}`}
               >
                 {l.label}
               </Link>
             ))}
-            {!isLoading && user ? (
-              <>
-                <Link href="/dashboard" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm font-medium hover:bg-muted">
-                  <LayoutDashboard className="h-4 w-4 inline-block mr-2" /> Dashboard
-                </Link>
-                <Button variant="outline" className="mt-2 w-full" onClick={handleLogout}>
-                  <LogOut className="h-4 w-4 mr-2" /> Đăng xuất
-                </Button>
-              </>
-            ) : !isLoading ? (
-              <>
-                <Link href="/login" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm font-medium hover:bg-muted">
-                  Đăng nhập / Đăng ký
-                </Link>
-                <Button asChild variant="hero" className="mt-2 w-full">
-                  <Link href="/advisor" onClick={() => setOpen(false)}>Dùng thử ngay</Link>
-                </Button>
-              </>
-            ) : null}
+            <Button asChild variant="hero" className="mt-2 w-full">
+              <Link href="/survey" onClick={() => setOpen(false)}>Dùng thử ngay</Link>
+            </Button>
           </div>
         </div>
       )}

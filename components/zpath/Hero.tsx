@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -41,9 +42,9 @@ export function Hero() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-              <a href="#try">
+              <Link href="/survey">
                 Dùng thử miễn phí <ArrowRight className="h-5 w-5" />
-              </a>
+              </Link>
             </Button>
             <Button asChild variant="outline" size="xl" className="w-full sm:w-auto">
               <a href="#how">Xem cách hoạt động</a>

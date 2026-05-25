@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, GraduationCap } from "lucide-react";
+import { ArrowRight, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/zpath/SectionHeading";
 
@@ -14,11 +14,11 @@ const stats = [
 
 const products = [
   {
-    to: "/profile",
-    icon: GraduationCap,
-    title: "Hồ sơ cá nhân",
-    desc: "Lưu điểm thi, trường mục tiêu — một chạm import vào mọi tính năng của ZPATH.",
-    cta: "Tạo hồ sơ",
+    to: "/survey",
+    icon: Compass,
+    title: "Khảo sát định hướng",
+    desc: "Trả lời nhanh các câu hỏi cốt lõi để nhận gợi ý hướng nghề phù hợp.",
+    cta: "Làm khảo sát",
     gradient: "from-accent to-primary-glow",
   },
 ];
@@ -48,10 +48,10 @@ export default function Home() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-                <Link href="/advisor">Tư vấn ngành <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                <Link href="/survey">Tư vấn ngành <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
               <Button asChild variant="outline" size="xl" className="w-full sm:w-auto">
-                <Link href="/advisor">Bắt đầu tư vấn</Link>
+                <Link href="/survey">Bắt đầu tư vấn</Link>
               </Button>
             </div>
           </div>
@@ -141,10 +141,10 @@ export default function Home() {
             <p className="mx-auto mt-4 max-w-xl opacity-90">Bắt đầu hành trình chỉ với 30 giây — không cần đăng ký, không phí ẩn.</p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild variant="lime" size="xl" className="w-full sm:w-auto">
-                <Link href="/advisor">Tư vấn ngành ngay</Link>
+                <Link href="/survey">Tư vấn ngành ngay</Link>
               </Button>
               <Button asChild variant="outline" size="xl" className="w-full border-white/40 bg-white/10 text-white hover:bg-white/20 sm:w-auto">
-                <Link href="/profile">Tạo hồ sơ</Link>
+                <Link href="/survey">Làm khảo sát</Link>
               </Button>
             </div>
           </div>
