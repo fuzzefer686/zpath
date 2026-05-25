@@ -2,6 +2,7 @@ import Link from "next/link";
 import { GraduationCap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import hustProMaxData from "@/data/hust-pro-max.json";
 import type { University } from "@/data/universities";
 import { createSchoolSlug } from "@/lib/school-slug";
 import {
@@ -34,7 +35,18 @@ import type {
 import { AdmissionCalculatorSection } from "@/src/components/admission/AdmissionCalculatorSection";
 import { AdmissionInfoSection } from "@/src/components/admission/AdmissionInfoSection";
 import { AdmissionProgramsSection } from "@/src/components/admission/AdmissionProgramsSection";
+import {
+  AdmissionSectionNavigator,
+  PRO_MAX_NAV_ITEMS,
+} from "@/src/components/admission/AdmissionSectionNavigator";
 import { BenchmarksSection } from "@/src/components/admission/BenchmarksSection";
+import {
+  ProMaxCalculatorLinkSection,
+  ProMaxContentSection,
+  ProMaxMediaGrid,
+  ProMaxPlaceholderSection,
+  type ProMaxContentBlock,
+} from "@/src/components/admission/ProMaxSections";
 import { SchoolHeader } from "@/src/components/admission/SchoolHeader";
 import { SchoolOverviewSection } from "@/src/components/admission/SchoolOverviewSection";
 import { SubjectCombinationsSection } from "@/src/components/admission/SubjectCombinationsSection";
@@ -44,9 +56,32 @@ interface UniversityDetailPageProps {
   params: Promise<{
     code: string;
   }>;
+  searchParams?: Promise<{
+    year?: string | string[];
+    variant?: string | string[];
+  }>;
 }
 
 const FALLBACK_YEAR = 2025;
+const ADMISSION_YEAR_OPTIONS = [2026, 2025, 2024, 2023] as const;
+const PRO_MAX_VARIANT = "pro-max";
+const PRO_MAX_PLACEHOLDER_MESSAGE =
+  "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D";
+
+type AdmissionPageVariant = "default" | typeof PRO_MAX_VARIANT;
+
+type ProMaxSchoolContent = {
+  overview: ProMaxContentBlock[];
+  admissionInfo: ProMaxContentBlock[];
+  combinations: ProMaxContentBlock[];
+  placeholders: {
+    programs?: string;
+    benchmarks?: string;
+    tuition?: string;
+  };
+};
+
+const PRO_MAX_CONTENT_BY_CODE = hustProMaxData as Record<string, ProMaxSchoolContent>;
 
 const FALLBACK_SUBJECT_COMBINATIONS: SubjectCombination[] = [
   {
@@ -99,7 +134,47 @@ function createFallbackSchool(university: University): School {
   };
 }
 
-function createFallbackPrograms(university: University): AdmissionProgram[] {
+function applyUniversityMediaToSchool(school: School, university: University): School {
+  return {
+    ...school,
+    hero_image_url: university.heroImageUrl ?? school.hero_image_url ?? null,
+  };
+}
+
+function getSelectedAdmissionYear(yearParam: string | string[] | undefined) {
+  const rawYear = Array.isArray(yearParam) ? yearParam[0] : yearParam;
+  const parsedYear = rawYear ? Number.parseInt(rawYear, 10) : FALLBACK_YEAR;
+
+  return ADMISSION_YEAR_OPTIONS.includes(parsedYear as (typeof ADMISSION_YEAR_OPTIONS)[number])
+    ? parsedYear
+    : FALLBACK_YEAR;
+}
+
+function getSelectedAdmissionVariant(
+  variantParam: string | string[] | undefined,
+): AdmissionPageVariant {
+  const rawVariant = Array.isArray(variantParam) ? variantParam[0] : variantParam;
+  return rawVariant === PRO_MAX_VARIANT ? PRO_MAX_VARIANT : "default";
+}
+
+function createVariantHref(
+  routeParam: string,
+  selectedYear: number,
+  variant: AdmissionPageVariant,
+) {
+  const params = new URLSearchParams();
+  if (selectedYear !== FALLBACK_YEAR) {
+    params.set("year", String(selectedYear));
+  }
+  if (variant === PRO_MAX_VARIANT) {
+    params.set("variant", PRO_MAX_VARIANT);
+  }
+
+  const query = params.toString();
+  return query ? `/unimap/${routeParam}?${query}` : `/unimap/${routeParam}`;
+}
+
+function createFallbackPrograms(university: University, year: number): AdmissionProgram[] {
   return (university.programs ?? []).map((program, index) => ({
     id: `fallback-program-${university.code.toLowerCase()}-${index}`,
     school_code: university.code,
@@ -107,7 +182,7 @@ function createFallbackPrograms(university: University): AdmissionProgram[] {
     program_name: program.name,
     major_code: program.majorCode ?? null,
     major_name: program.majorCode ?? null,
-    year: FALLBACK_YEAR,
+    year,
     quota: null,
     degree_level: "Đại học",
     training_type: "Chính quy",
@@ -117,7 +192,7 @@ function createFallbackPrograms(university: University): AdmissionProgram[] {
   }));
 }
 
-function createFallbackMethods(schoolCode: string): AdmissionMethodRecord[] {
+function createFallbackMethods(schoolCode: string, year: number): AdmissionMethodRecord[] {
   return [
     ["THPT", "Xét tuyển theo điểm thi tốt nghiệp THPT"],
     ["TSA", "Xét tuyển theo điểm đánh giá tư duy/năng lực"],
@@ -127,7 +202,7 @@ function createFallbackMethods(schoolCode: string): AdmissionMethodRecord[] {
     school_code: schoolCode,
     method_code: methodCode,
     method_name: methodName,
-    year: FALLBACK_YEAR,
+    year,
     description: "Phương thức demo để giữ cấu trúc trang giống HUST trong MVP.",
     is_active: true,
     source_url: null,
@@ -135,11 +210,11 @@ function createFallbackMethods(schoolCode: string): AdmissionMethodRecord[] {
   }));
 }
 
-function createFallbackAdmissionInfo(school: School): AdmissionInfo {
+function createFallbackAdmissionInfo(school: School, year: number): AdmissionInfo {
   return {
     id: `fallback-admission-info-${school.code.toLowerCase()}`,
     school_code: school.code,
-    year: FALLBACK_YEAR,
+    year,
     total_quota: null,
     admission_scope: "Toàn quốc",
     application_timeline: "Cập nhật theo đề án tuyển sinh từng năm.",
@@ -153,6 +228,7 @@ function createFallbackAdmissionInfo(school: School): AdmissionInfo {
 function createFallbackBenchmarks(
   university: University,
   programs: AdmissionProgram[],
+  year: number,
 ): Benchmark[] {
   const scoreByProgramCode = new Map(
     (university.programs ?? []).map((program) => [
@@ -171,7 +247,7 @@ function createFallbackBenchmarks(
       id: `fallback-benchmark-${program.id}`,
       school_code: university.code,
       program_id: program.id,
-      year: FALLBACK_YEAR,
+      year,
       method_code: "THPT",
       combination_code: null,
       score,
@@ -186,6 +262,7 @@ function createFallbackBenchmarks(
 function createFallbackTuitionFees(
   university: University,
   programs: AdmissionProgram[],
+  year: number,
 ): TuitionFee[] {
   const tuitionByProgramCode = new Map(
     (university.programs ?? []).map((program) => [
@@ -204,7 +281,7 @@ function createFallbackTuitionFees(
       id: `fallback-tuition-${program.id}`,
       school_code: university.code,
       program_id: program.id,
-      year: FALLBACK_YEAR,
+      year,
       min_fee: tuition,
       max_fee: tuition,
       currency: "VND",
@@ -219,13 +296,14 @@ function createFallbackTuitionFees(
 
 function createFallbackProgramCombinations(
   programs: AdmissionProgram[],
+  year: number,
 ): ProgramCombination[] {
   return programs.flatMap((program) =>
     ["A00", "A01", "D01"].map((combinationCode) => ({
       id: `fallback-combination-${program.id}-${combinationCode.toLowerCase()}`,
       program_id: program.id,
       combination_code: combinationCode,
-      year: FALLBACK_YEAR,
+      year,
       method_code: "THPT",
       source_url: program.source_url,
     })),
@@ -248,18 +326,46 @@ async function loadOrFallback<T>(
 async function renderAdmissionSchoolDetail(
   school: School,
   university: University,
+  selectedYear: number,
+  selectedVariant: AdmissionPageVariant,
+  routeParam: string,
 ) {
-  const fallbackPrograms = createFallbackPrograms(university);
-  const fallbackMethods = createFallbackMethods(school.code);
-  const fallbackAdmissionInfo = createFallbackAdmissionInfo(school);
+  const canUseProMax = school.code === "HUST";
+  const isProMax = canUseProMax && selectedVariant === PRO_MAX_VARIANT;
+  const proMaxContent = PRO_MAX_CONTENT_BY_CODE[school.code];
+  const defaultCalculatorHref = `${createVariantHref(routeParam, selectedYear, "default")}#calculator`;
+  const variantLinks = canUseProMax
+    ? [
+        {
+          label: "Mặc định",
+          href: createVariantHref(routeParam, selectedYear, "default"),
+          isActive: !isProMax,
+        },
+        {
+          label: "Pro Max :))",
+          href: createVariantHref(routeParam, selectedYear, PRO_MAX_VARIANT),
+          isActive: isProMax,
+        },
+      ]
+    : [];
+  const canUseStaticFallback = selectedYear === FALLBACK_YEAR;
+  const fallbackPrograms = canUseStaticFallback
+    ? createFallbackPrograms(university, selectedYear)
+    : [];
+  const fallbackMethods = canUseStaticFallback
+    ? createFallbackMethods(school.code, selectedYear)
+    : [];
+  const fallbackAdmissionInfo = canUseStaticFallback
+    ? createFallbackAdmissionInfo(school, selectedYear)
+    : null;
 
   const [loadedPrograms, loadedMethods, loadedBenchmarks, loadedTuitionFees, loadedAdmissionInfo, loadedSubjectCombinations] =
     await Promise.all([
-      loadOrFallback(() => getSchoolPrograms(school.code), [], "school programs"),
-      loadOrFallback(() => getSchoolAdmissionMethods(school.code), [], "admission methods"),
-      loadOrFallback(() => getSchoolBenchmarks(school.code), [], "benchmarks"),
-      loadOrFallback(() => getSchoolTuitionFees(school.code), [], "tuition fees"),
-      loadOrFallback(() => getSchoolAdmissionInfo(school.code), null, "admission info"),
+      loadOrFallback(() => getSchoolPrograms(school.code, selectedYear), [], "school programs"),
+      loadOrFallback(() => getSchoolAdmissionMethods(school.code, selectedYear), [], "admission methods"),
+      loadOrFallback(() => getSchoolBenchmarks(school.code, selectedYear), [], "benchmarks"),
+      loadOrFallback(() => getSchoolTuitionFees(school.code, selectedYear), [], "tuition fees"),
+      loadOrFallback(() => getSchoolAdmissionInfo(school.code, selectedYear), null, "admission info"),
       loadOrFallback(() => getSubjectCombinations(), [], "subject combinations"),
     ]);
 
@@ -267,42 +373,135 @@ async function renderAdmissionSchoolDetail(
   const methods = loadedMethods.length ? loadedMethods : fallbackMethods;
   const benchmarks = loadedBenchmarks.length
     ? loadedBenchmarks
-    : createFallbackBenchmarks(university, programs);
+    : canUseStaticFallback
+      ? createFallbackBenchmarks(university, programs, selectedYear)
+      : [];
   const tuitionFees = loadedTuitionFees.length
     ? loadedTuitionFees
-    : createFallbackTuitionFees(university, programs);
+    : canUseStaticFallback
+      ? createFallbackTuitionFees(university, programs, selectedYear)
+      : [];
   const admissionInfo = loadedAdmissionInfo ?? fallbackAdmissionInfo;
   const subjectCombinations = loadedSubjectCombinations.length
     ? loadedSubjectCombinations
     : FALLBACK_SUBJECT_COMBINATIONS;
   const programCombinations = loadedPrograms.length
     ? await loadOrFallback(
-        () => getProgramCombinations(programs.map((program) => program.id)),
+        () => getProgramCombinations(programs.map((program) => program.id), selectedYear),
         [],
         "program combinations",
       )
-    : createFallbackProgramCombinations(programs);
+    : canUseStaticFallback
+      ? createFallbackProgramCombinations(programs, selectedYear)
+      : [];
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SchoolHeader school={school} />
+      <SchoolHeader school={school} variantLinks={variantLinks} />
 
-      <div className="container-page space-y-8 py-10">
-        <SchoolOverviewSection school={school} />
-        <AdmissionProgramsSection programs={programs} />
-        <SubjectCombinationsSection
-          subjectCombinations={subjectCombinations}
-          programCombinations={programCombinations}
-        />
-        <AdmissionInfoSection admissionInfo={admissionInfo} methods={methods} />
-        <BenchmarksSection benchmarks={benchmarks} programs={programs} />
-        <TuitionSection tuitionFees={tuitionFees} programs={programs} />
-        <AdmissionCalculatorSection
-          schoolCode={school.code}
-          programs={programs}
-          benchmarks={benchmarks}
-          methods={methods}
-        />
+      <div className="container-page grid gap-6 py-10 lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start">
+        <AdmissionSectionNavigator items={isProMax ? PRO_MAX_NAV_ITEMS : undefined} />
+
+        <div className="space-y-8">
+          {isProMax && proMaxContent ? (
+            <>
+              <section id="calculator" className="scroll-mt-24">
+                <ProMaxCalculatorLinkSection href={defaultCalculatorHref} />
+              </section>
+
+              <section id="overview" className="scroll-mt-24">
+                <ProMaxContentSection title="Tổng quan" blocks={proMaxContent.overview} />
+              </section>
+
+              <section id="admission-info" className="scroll-mt-24">
+                <ProMaxContentSection
+                  title="Thông tin tuyển sinh"
+                  blocks={proMaxContent.admissionInfo}
+                />
+              </section>
+
+              <section id="programs" className="scroll-mt-24">
+                <ProMaxPlaceholderSection
+                  title="Chương trình tuyển sinh"
+                  message={proMaxContent.placeholders.programs ?? PRO_MAX_PLACEHOLDER_MESSAGE}
+                />
+              </section>
+
+              <section id="combinations" className="scroll-mt-24">
+                <ProMaxMediaGrid
+                  title="Tổ hợp xét tuyển"
+                  blocks={proMaxContent.combinations}
+                />
+              </section>
+
+              <section id="benchmarks" className="scroll-mt-24">
+                <ProMaxPlaceholderSection
+                  title="Điểm chuẩn tham khảo"
+                  message={proMaxContent.placeholders.benchmarks ?? PRO_MAX_PLACEHOLDER_MESSAGE}
+                />
+              </section>
+
+              <section id="tuition" className="scroll-mt-24">
+                <ProMaxPlaceholderSection
+                  title="Học phí"
+                  message={proMaxContent.placeholders.tuition ?? PRO_MAX_PLACEHOLDER_MESSAGE}
+                />
+              </section>
+            </>
+          ) : (
+            <>
+              <section id="overview" className="scroll-mt-24">
+                <SchoolOverviewSection school={school} />
+              </section>
+
+              <section id="admission-info" className="scroll-mt-24">
+                <AdmissionInfoSection
+                  admissionInfo={admissionInfo}
+                  methods={methods}
+                  selectedYear={selectedYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </section>
+
+              <section id="programs" className="scroll-mt-24">
+                <AdmissionProgramsSection
+                  programs={programs}
+                  selectedYear={selectedYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </section>
+
+              <section id="combinations" className="scroll-mt-24">
+                <SubjectCombinationsSection
+                  subjectCombinations={subjectCombinations}
+                  programCombinations={programCombinations}
+                />
+              </section>
+
+              <section id="benchmarks" className="scroll-mt-24">
+                <BenchmarksSection
+                  benchmarks={benchmarks}
+                  programs={programs}
+                  selectedYear={selectedYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </section>
+
+              <section id="tuition" className="scroll-mt-24">
+                <TuitionSection tuitionFees={tuitionFees} programs={programs} />
+              </section>
+
+              <section id="calculator" className="scroll-mt-24">
+                <AdmissionCalculatorSection
+                  schoolCode={school.code}
+                  programs={programs}
+                  benchmarks={benchmarks}
+                  methods={methods}
+                />
+              </section>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -350,8 +549,14 @@ export async function generateMetadata({ params }: UniversityDetailPageProps) {
   };
 }
 
-export default async function UniversityDetailPage({ params }: UniversityDetailPageProps) {
+export default async function UniversityDetailPage({
+  params,
+  searchParams,
+}: UniversityDetailPageProps) {
   const { code } = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : undefined;
+  const selectedYear = getSelectedAdmissionYear(resolvedSearchParams?.year);
+  const selectedVariant = getSelectedAdmissionVariant(resolvedSearchParams?.variant);
   const routeParam = code.toLowerCase();
   const university = findVisibleUnimapUniversityByRouteParam(routeParam);
 
@@ -361,9 +566,17 @@ export default async function UniversityDetailPage({ params }: UniversityDetailP
 
   const school = await getAdmissionSchoolBySlug(routeParam);
   const visibleSchool =
-    school && isVisibleUnimapCode(school.code) ? school : createFallbackSchool(university);
+    school && isVisibleUnimapCode(school.code)
+      ? applyUniversityMediaToSchool(school, university)
+      : createFallbackSchool(university);
 
-  return renderAdmissionSchoolDetail(visibleSchool, university);
+  return renderAdmissionSchoolDetail(
+    visibleSchool,
+    university,
+    selectedYear,
+    selectedVariant,
+    routeParam,
+  );
 }
 
 function UniversityNotFound({ code }: { code: string }) {

@@ -50,6 +50,10 @@ export function normalizeUniversityRecord(value: unknown): University | null {
       record.heroImageUrl ?? record.hero_image_url,
       fallback.heroImageUrl,
     ),
+    unimapImageUrl: asString(
+      record.unimapImageUrl ?? record.unimap_image_url,
+      fallback.unimapImageUrl,
+    ),
     about: asString(record.about, fallback.about),
     highlights: asStringArray(record.highlights, fallback.highlights),
     majors: asStringArray(record.majors, fallback.majors),

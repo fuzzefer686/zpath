@@ -1,19 +1,25 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { AdmissionInfo, AdmissionMethodRecord } from "@/src/types/admission-data";
+import { AdmissionYearSelect } from "./AdmissionYearSelect";
 
 type AdmissionInfoSectionProps = {
   admissionInfo: AdmissionInfo | null;
   methods: AdmissionMethodRecord[];
+  selectedYear: number;
+  availableYears: readonly number[];
 };
 
 export function AdmissionInfoSection({
   admissionInfo,
   methods,
+  selectedYear,
+  availableYears,
 }: AdmissionInfoSectionProps) {
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="flex-row items-center justify-between gap-4 space-y-0">
         <CardTitle className="text-xl">Thông tin tuyển sinh</CardTitle>
+        <AdmissionYearSelect selectedYear={selectedYear} years={availableYears} />
       </CardHeader>
       <CardContent className="space-y-5">
         {admissionInfo ? (
@@ -26,7 +32,9 @@ export function AdmissionInfoSection({
             <InfoBlock label="Ghi chú" value={admissionInfo.notes ?? "-"} />
           </div>
         ) : (
-          <p className="text-sm text-muted-foreground">Chưa có thông tin tuyển sinh.</p>
+          <p className="text-sm text-muted-foreground">
+            Chưa có thông tin tuyển sinh cho năm {selectedYear}.
+          </p>
         )}
 
         <div>
@@ -34,7 +42,9 @@ export function AdmissionInfoSection({
             Phương thức
           </h3>
           {methods.length === 0 ? (
-            <p className="text-sm text-muted-foreground">Chưa có phương thức tuyển sinh.</p>
+            <p className="text-sm text-muted-foreground">
+              Chưa có phương thức tuyển sinh cho năm {selectedYear}.
+            </p>
           ) : (
             <div className="grid gap-3 md:grid-cols-3">
               {methods.map((method) => (

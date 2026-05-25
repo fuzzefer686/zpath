@@ -1,13 +1,21 @@
+import Link from "next/link";
 import { ExternalLink, MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import type { School } from "@/src/types/admission-data";
 
-type SchoolHeaderProps = {
-  school: School;
+type SchoolHeaderVariantLink = {
+  label: string;
+  href: string;
+  isActive: boolean;
 };
 
-export function SchoolHeader({ school }: SchoolHeaderProps) {
+type SchoolHeaderProps = {
+  school: School;
+  variantLinks?: SchoolHeaderVariantLink[];
+};
+
+export function SchoolHeader({ school, variantLinks = [] }: SchoolHeaderProps) {
   const hasHeroImage = Boolean(school.hero_image_url);
 
   return (
@@ -16,7 +24,10 @@ export function SchoolHeader({ school }: SchoolHeaderProps) {
         <>
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${school.hero_image_url})` }}
+            style={{
+              backgroundImage: `url(${school.hero_image_url})`,
+              backgroundPosition: "center center",
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
         </>
@@ -51,21 +62,38 @@ export function SchoolHeader({ school }: SchoolHeaderProps) {
               </span>
             ) : null}
           </div>
-          {school.website ? (
-            <Button
-              asChild
-              variant="outline"
-              className={`mt-6 ${
-                hasHeroImage
-                  ? "border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white"
-                  : ""
-              }`}
-            >
-              <a href={school.website} target="_blank" rel="noreferrer">
-                Website trường <ExternalLink className="h-4 w-4" />
-              </a>
-            </Button>
-          ) : null}
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            {school.website ? (
+              <Button
+                asChild
+                variant="outline"
+                className={
+                  hasHeroImage
+                    ? "border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white"
+                    : ""
+                }
+              >
+                <a href={school.website} target="_blank" rel="noreferrer">
+                  Website trường <ExternalLink className="h-4 w-4" />
+                </a>
+              </Button>
+            ) : null}
+
+            {variantLinks.map((variantLink) => (
+              <Button
+                key={variantLink.href}
+                asChild
+                variant={variantLink.isActive ? "hero" : "outline"}
+                className={
+                  hasHeroImage && !variantLink.isActive
+                    ? "border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white"
+                    : ""
+                }
+              >
+                <Link href={variantLink.href}>{variantLink.label}</Link>
+              </Button>
+            ))}
+          </div>
         </div>
       </div>
     </section>

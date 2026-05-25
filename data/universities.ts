@@ -21,6 +21,7 @@ export interface University {
   website?: string;
   heroGradient: string;
   heroImageUrl?: string;
+  unimapImageUrl?: string;
   about: string;
   highlights: string[];
   majors: string[];
@@ -28,6 +29,12 @@ export interface University {
   channels?: UniChannel[];
   avatarUrl?: string;
 }
+
+const HUST_LOGO_URL =
+  "https://upload.wikimedia.org/wikipedia/vi/e/ef/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%C3%A1ch_Khoa_H%C3%A0_N%E1%BB%99i.svg";
+
+const HUST_HERO_IMAGE_URL =
+  "https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/484718587_1053901893434470_7118580338303601839_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFSgiHith2GgA0cciMCK-QY1KuwcEm-uBbUq7BwSb64Fr4ycEQxOttkBvFACdosWbWHopQp0kwi7w6YBdZGF4Br&_nc_ohc=4Z8i6yRIea4Q7kNvwF9qvsJ&_nc_oc=AdpEOc8tab0vgAk5NvFIMX3ec85xu6lKOJYy4XqDZLh-sAM8MRoIPxQo1dKqTtDG4Us&_nc_zt=23&_nc_ht=scontent.fhan14-1.fna&_nc_gid=3HVton6JrMSELWQU-A6JOQ&_nc_ss=7b2a8&oh=00_Af5pt3lN34nmV88zpmvE1A-2GwwPFxGjOkZXxwjCy0fxcg&oe=6A1A2DF4";
 
 export const UNIVERSITIES: University[] = [
   {
@@ -38,6 +45,8 @@ export const UNIVERSITIES: University[] = [
     city: "Hà Nội",
     website: "https://hust.edu.vn",
     heroGradient: "from-orange-500 via-red-500 to-pink-500",
+    heroImageUrl: HUST_HERO_IMAGE_URL,
+    unimapImageUrl: HUST_LOGO_URL,
     about:
       "Đại học Bách Khoa Hà Nội là trường đại học kỹ thuật hàng đầu Việt Nam, nổi bật về kỹ sư, công nghệ thông tin và nghiên cứu khoa học.",
     highlights: [
