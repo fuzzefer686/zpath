@@ -47,7 +47,11 @@ export function AdmissionProgramsSection({
     <Card>
       <CardHeader className="flex-row items-center justify-between gap-4 space-y-0">
         <CardTitle className="text-xl">Chương trình tuyển sinh</CardTitle>
-        <AdmissionYearSelect selectedYear={selectedYear} years={availableYears} />
+        <AdmissionYearSelect
+          selectedYear={selectedYear}
+          years={availableYears}
+          paramName="programYear"
+        />
       </CardHeader>
       <CardContent className="space-y-4">
         {programs.length === 0 ? (

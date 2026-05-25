@@ -56,7 +56,11 @@ export function BenchmarksSection({
     <Card>
       <CardHeader className="flex-row items-center justify-between gap-4 space-y-0">
         <CardTitle className="text-xl">Điểm chuẩn tham khảo</CardTitle>
-        <AdmissionYearSelect selectedYear={selectedYear} years={availableYears} />
+        <AdmissionYearSelect
+          selectedYear={selectedYear}
+          years={availableYears}
+          paramName="benchmarkYear"
+        />
       </CardHeader>
       <CardContent className="space-y-4">
         {benchmarks.length === 0 ? (

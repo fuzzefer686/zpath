@@ -7,13 +7,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { formatVND } from "@/lib/utils";
 import type { AdmissionProgram, TuitionFee } from "@/src/types/admission-data";
+import { AdmissionYearSelect } from "./AdmissionYearSelect";
 
 type TuitionSectionProps = {
   tuitionFees: TuitionFee[];
   programs: AdmissionProgram[];
+  selectedYear: number;
+  availableYears: readonly number[];
 };
 
-export function TuitionSection({ tuitionFees, programs }: TuitionSectionProps) {
+export function TuitionSection({
+  tuitionFees,
+  programs,
+  selectedYear,
+  availableYears,
+}: TuitionSectionProps) {
   const [query, setQuery] = useState("");
   const normalizedQuery = query.trim().toLowerCase();
   const programById = useMemo(
@@ -46,12 +54,19 @@ export function TuitionSection({ tuitionFees, programs }: TuitionSectionProps) {
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="flex-row items-center justify-between gap-4 space-y-0">
         <CardTitle className="text-xl">Học phí</CardTitle>
+        <AdmissionYearSelect
+          selectedYear={selectedYear}
+          years={availableYears}
+          paramName="tuitionYear"
+        />
       </CardHeader>
       <CardContent className="space-y-4">
         {tuitionFees.length === 0 ? (
-          <p className="text-sm text-muted-foreground">Chưa có dữ liệu học phí.</p>
+          <p className="text-sm text-muted-foreground">
+            Chưa có dữ liệu học phí cho năm {selectedYear}.
+          </p>
         ) : (
           <>
             <div className="relative max-w-md">

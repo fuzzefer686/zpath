@@ -58,12 +58,18 @@ interface UniversityDetailPageProps {
   }>;
   searchParams?: Promise<{
     year?: string | string[];
+    programYear?: string | string[];
+    benchmarkYear?: string | string[];
+    tuitionYear?: string | string[];
     variant?: string | string[];
   }>;
 }
 
 const FALLBACK_YEAR = 2025;
+const PROGRAMS_DEFAULT_YEAR = 2026;
 const BENCHMARK_REFERENCE_YEAR = 2025;
+const BENCHMARKS_DEFAULT_YEAR = 2025;
+const TUITION_DEFAULT_YEAR = 2025;
 const ADMISSION_YEAR_OPTIONS = [2026, 2025, 2024, 2023] as const;
 const PRO_MAX_VARIANT = "pro-max";
 const PRO_MAX_PLACEHOLDER_MESSAGE =
@@ -142,13 +148,16 @@ function applyUniversityMediaToSchool(school: School, university: University): S
   };
 }
 
-function getSelectedAdmissionYear(yearParam: string | string[] | undefined) {
+function getSelectedAdmissionYear(
+  yearParam: string | string[] | undefined,
+  defaultYear = FALLBACK_YEAR,
+) {
   const rawYear = Array.isArray(yearParam) ? yearParam[0] : yearParam;
-  const parsedYear = rawYear ? Number.parseInt(rawYear, 10) : FALLBACK_YEAR;
+  const parsedYear = rawYear ? Number.parseInt(rawYear, 10) : defaultYear;
 
   return ADMISSION_YEAR_OPTIONS.includes(parsedYear as (typeof ADMISSION_YEAR_OPTIONS)[number])
     ? parsedYear
-    : FALLBACK_YEAR;
+    : defaultYear;
 }
 
 function getSelectedAdmissionVariant(
@@ -160,12 +169,20 @@ function getSelectedAdmissionVariant(
 
 function createVariantHref(
   routeParam: string,
-  selectedYear: number,
+  selectedProgramYear: number,
+  selectedBenchmarkYear: number,
+  selectedTuitionYear: number,
   variant: AdmissionPageVariant,
 ) {
   const params = new URLSearchParams();
-  if (selectedYear !== FALLBACK_YEAR) {
-    params.set("year", String(selectedYear));
+  if (selectedProgramYear !== PROGRAMS_DEFAULT_YEAR) {
+    params.set("programYear", String(selectedProgramYear));
+  }
+  if (selectedBenchmarkYear !== BENCHMARKS_DEFAULT_YEAR) {
+    params.set("benchmarkYear", String(selectedBenchmarkYear));
+  }
+  if (selectedTuitionYear !== TUITION_DEFAULT_YEAR) {
+    params.set("tuitionYear", String(selectedTuitionYear));
   }
   if (variant === PRO_MAX_VARIANT) {
     params.set("variant", PRO_MAX_VARIANT);
@@ -327,38 +344,69 @@ async function loadOrFallback<T>(
 async function renderAdmissionSchoolDetail(
   school: School,
   university: University,
-  selectedYear: number,
+  selectedProgramYear: number,
+  selectedBenchmarkYear: number,
+  selectedTuitionYear: number,
   selectedVariant: AdmissionPageVariant,
   routeParam: string,
 ) {
   const canUseProMax = school.code === "HUST";
   const isProMax = canUseProMax && selectedVariant === PRO_MAX_VARIANT;
   const proMaxContent = PRO_MAX_CONTENT_BY_CODE[school.code];
-  const defaultCalculatorHref = `${createVariantHref(routeParam, selectedYear, "default")}#calculator`;
+  const defaultCalculatorHref = `${createVariantHref(
+    routeParam,
+    selectedProgramYear,
+    selectedBenchmarkYear,
+    selectedTuitionYear,
+    "default",
+  )}#calculator`;
   const variantLinks = canUseProMax
     ? [
         {
           label: "Mặc định",
-          href: createVariantHref(routeParam, selectedYear, "default"),
+          href: createVariantHref(
+            routeParam,
+            selectedProgramYear,
+            selectedBenchmarkYear,
+            selectedTuitionYear,
+            "default",
+          ),
           isActive: !isProMax,
         },
         {
           label: "Pro Max :))",
-          href: createVariantHref(routeParam, selectedYear, PRO_MAX_VARIANT),
+          href: createVariantHref(
+            routeParam,
+            selectedProgramYear,
+            selectedBenchmarkYear,
+            selectedTuitionYear,
+            PRO_MAX_VARIANT,
+          ),
           isActive: isProMax,
         },
       ]
     : [];
   const canUseStaticFallback = Boolean(university.programs?.length);
-  const fallbackDataYear = FALLBACK_YEAR;
   const fallbackPrograms = canUseStaticFallback
-    ? createFallbackPrograms(university, fallbackDataYear)
+    ? createFallbackPrograms(university, selectedProgramYear)
+    : [];
+  const fallbackBenchmarkPrograms = canUseStaticFallback
+    ? createFallbackPrograms(university, selectedBenchmarkYear)
+    : [];
+  const fallbackTuitionPrograms = canUseStaticFallback
+    ? createFallbackPrograms(university, selectedTuitionYear)
     : [];
   const fallbackMethods = canUseStaticFallback
-    ? createFallbackMethods(school.code, fallbackDataYear)
+    ? createFallbackMethods(school.code, selectedProgramYear)
+    : [];
+  const fallbackCalculatorPrograms = canUseStaticFallback
+    ? createFallbackPrograms(university, BENCHMARK_REFERENCE_YEAR)
+    : [];
+  const fallbackCalculatorMethods = canUseStaticFallback
+    ? createFallbackMethods(school.code, BENCHMARK_REFERENCE_YEAR)
     : [];
   const fallbackAdmissionInfo = canUseStaticFallback
-    ? createFallbackAdmissionInfo(school, fallbackDataYear)
+    ? createFallbackAdmissionInfo(school, selectedProgramYear)
     : null;
 
   const [
@@ -368,17 +416,45 @@ async function renderAdmissionSchoolDetail(
     loadedTuitionFees,
     loadedAdmissionInfo,
     loadedSubjectCombinations,
+    loadedBenchmarkPrograms,
+    loadedTuitionPrograms,
     loadedCalculatorPrograms,
     loadedCalculatorMethods,
     loadedCalculatorBenchmarks,
   ] =
     await Promise.all([
-      loadOrFallback(() => getSchoolPrograms(school.code, selectedYear), [], "school programs"),
-      loadOrFallback(() => getSchoolAdmissionMethods(school.code, selectedYear), [], "admission methods"),
-      loadOrFallback(() => getSchoolBenchmarks(school.code, selectedYear), [], "benchmarks"),
-      loadOrFallback(() => getSchoolTuitionFees(school.code, selectedYear), [], "tuition fees"),
-      loadOrFallback(() => getSchoolAdmissionInfo(school.code, selectedYear), null, "admission info"),
+      loadOrFallback(() => getSchoolPrograms(school.code, selectedProgramYear), [], "school programs"),
+      loadOrFallback(
+        () => getSchoolAdmissionMethods(school.code, selectedProgramYear),
+        [],
+        "admission methods",
+      ),
+      loadOrFallback(
+        () => getSchoolBenchmarks(school.code, selectedBenchmarkYear),
+        [],
+        "benchmarks",
+      ),
+      loadOrFallback(
+        () => getSchoolTuitionFees(school.code, selectedTuitionYear),
+        [],
+        "tuition fees",
+      ),
+      loadOrFallback(
+        () => getSchoolAdmissionInfo(school.code, selectedProgramYear),
+        null,
+        "admission info",
+      ),
       loadOrFallback(() => getSubjectCombinations(), [], "subject combinations"),
+      loadOrFallback(
+        () => getSchoolPrograms(school.code, selectedBenchmarkYear),
+        [],
+        "benchmark programs",
+      ),
+      loadOrFallback(
+        () => getSchoolPrograms(school.code, selectedTuitionYear),
+        [],
+        "tuition programs",
+      ),
       loadOrFallback(
         () => getSchoolPrograms(school.code, BENCHMARK_REFERENCE_YEAR),
         [],
@@ -398,39 +474,45 @@ async function renderAdmissionSchoolDetail(
 
   const programs = loadedPrograms.length ? loadedPrograms : fallbackPrograms;
   const methods = loadedMethods.length ? loadedMethods : fallbackMethods;
+  const benchmarkPrograms = loadedBenchmarkPrograms.length
+    ? loadedBenchmarkPrograms
+    : fallbackBenchmarkPrograms;
+  const tuitionPrograms = loadedTuitionPrograms.length
+    ? loadedTuitionPrograms
+    : fallbackTuitionPrograms;
   const benchmarks = loadedBenchmarks.length
     ? loadedBenchmarks
     : canUseStaticFallback
-      ? createFallbackBenchmarks(university, programs, fallbackDataYear)
+      ? createFallbackBenchmarks(university, benchmarkPrograms, selectedBenchmarkYear)
       : [];
   const tuitionFees = loadedTuitionFees.length
     ? loadedTuitionFees
     : canUseStaticFallback
-      ? createFallbackTuitionFees(university, programs, fallbackDataYear)
+      ? createFallbackTuitionFees(university, tuitionPrograms, selectedTuitionYear)
       : [];
   const admissionInfo = loadedAdmissionInfo ?? fallbackAdmissionInfo;
   const calculatorPrograms = loadedCalculatorPrograms.length
     ? loadedCalculatorPrograms
-    : fallbackPrograms;
+    : fallbackCalculatorPrograms;
   const calculatorMethods = loadedCalculatorMethods.length
     ? loadedCalculatorMethods
-    : fallbackMethods;
+    : fallbackCalculatorMethods;
   const calculatorBenchmarks = loadedCalculatorBenchmarks.length
     ? loadedCalculatorBenchmarks
     : canUseStaticFallback
-      ? createFallbackBenchmarks(university, calculatorPrograms, fallbackDataYear)
+      ? createFallbackBenchmarks(university, calculatorPrograms, BENCHMARK_REFERENCE_YEAR)
       : [];
   const subjectCombinations = loadedSubjectCombinations.length
     ? loadedSubjectCombinations
     : FALLBACK_SUBJECT_COMBINATIONS;
   const programCombinations = loadedPrograms.length
     ? await loadOrFallback(
-        () => getProgramCombinations(programs.map((program) => program.id), selectedYear),
+        () => getProgramCombinations(programs.map((program) => program.id), selectedProgramYear),
         [],
         "program combinations",
       )
     : canUseStaticFallback
-      ? createFallbackProgramCombinations(programs, fallbackDataYear)
+      ? createFallbackProgramCombinations(programs, selectedProgramYear)
       : [];
 
   return (
@@ -496,7 +578,7 @@ async function renderAdmissionSchoolDetail(
                 <AdmissionInfoSection
                   admissionInfo={admissionInfo}
                   methods={methods}
-                  selectedYear={selectedYear}
+                  selectedYear={selectedProgramYear}
                   availableYears={ADMISSION_YEAR_OPTIONS}
                 />
               </section>
@@ -504,7 +586,7 @@ async function renderAdmissionSchoolDetail(
               <section id="programs" className="scroll-mt-24">
                 <AdmissionProgramsSection
                   programs={programs}
-                  selectedYear={selectedYear}
+                  selectedYear={selectedProgramYear}
                   availableYears={ADMISSION_YEAR_OPTIONS}
                 />
               </section>
@@ -519,14 +601,19 @@ async function renderAdmissionSchoolDetail(
               <section id="benchmarks" className="scroll-mt-24">
                 <BenchmarksSection
                   benchmarks={benchmarks}
-                  programs={programs}
-                  selectedYear={selectedYear}
+                  programs={benchmarkPrograms}
+                  selectedYear={selectedBenchmarkYear}
                   availableYears={ADMISSION_YEAR_OPTIONS}
                 />
               </section>
 
               <section id="tuition" className="scroll-mt-24">
-                <TuitionSection tuitionFees={tuitionFees} programs={programs} />
+                <TuitionSection
+                  tuitionFees={tuitionFees}
+                  programs={tuitionPrograms}
+                  selectedYear={selectedTuitionYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
               </section>
 
               <section id="calculator" className="scroll-mt-24">
@@ -593,7 +680,18 @@ export default async function UniversityDetailPage({
 }: UniversityDetailPageProps) {
   const { code } = await params;
   const resolvedSearchParams = searchParams ? await searchParams : undefined;
-  const selectedYear = getSelectedAdmissionYear(resolvedSearchParams?.year);
+  const selectedProgramYear = getSelectedAdmissionYear(
+    resolvedSearchParams?.programYear ?? resolvedSearchParams?.year,
+    PROGRAMS_DEFAULT_YEAR,
+  );
+  const selectedBenchmarkYear = getSelectedAdmissionYear(
+    resolvedSearchParams?.benchmarkYear,
+    BENCHMARKS_DEFAULT_YEAR,
+  );
+  const selectedTuitionYear = getSelectedAdmissionYear(
+    resolvedSearchParams?.tuitionYear,
+    TUITION_DEFAULT_YEAR,
+  );
   const selectedVariant = getSelectedAdmissionVariant(resolvedSearchParams?.variant);
   const routeParam = code.toLowerCase();
   const university = findVisibleUnimapUniversityByRouteParam(routeParam);
@@ -611,7 +709,9 @@ export default async function UniversityDetailPage({
   return renderAdmissionSchoolDetail(
     visibleSchool,
     university,
-    selectedYear,
+    selectedProgramYear,
+    selectedBenchmarkYear,
+    selectedTuitionYear,
     selectedVariant,
     routeParam,
   );
