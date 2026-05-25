@@ -114,11 +114,13 @@ export function calculateHustThptScore(
 ): AdmissionScoreResult {
   const payload = parseHustThptPayload(input.payload);
   const subjects = COMBINATION_SUBJECTS[payload.combinationCode];
-  const subjectTotal = subjects.reduce((total, subject) => {
-    return total + (payload.scores[subject] ?? 0);
+  const mathScore = payload.scores.math ?? 0;
+  const otherSubjectTotal = subjects.reduce((total, subject) => {
+    return subject === "math" ? total : total + (payload.scores[subject] ?? 0);
   }, 0);
+  const weightedSubjectTotal = mathScore * 2 + otherSubjectTotal;
   const priorityScore = payload.priorityScore ?? 0;
-  const finalScore = subjectTotal + priorityScore;
+  const finalScore = (weightedSubjectTotal * 3) / 4 + priorityScore;
 
   return {
     schoolCode: input.schoolCode,
@@ -128,12 +130,14 @@ export function calculateHustThptScore(
     originalScale: 30,
     normalizedScore30: finalScore,
     targetScale: 30,
-    formulaUsed: `${input.schoolCode}_THPT_${payload.combinationCode}`,
+    formulaUsed: "(Toán x 2 + môn 1 + môn 2) x 3/4 + điểm ưu tiên",
     details: {
       combinationCode: payload.combinationCode,
       subjects,
       subjectScores: payload.scores,
-      subjectTotal,
+      mathScore,
+      otherSubjectTotal,
+      weightedSubjectTotal,
       priorityScore,
     },
     warnings: [getThptWarning(input.schoolCode)],
