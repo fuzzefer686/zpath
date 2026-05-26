@@ -45,17 +45,20 @@ export function AdmissionSectionNavigator({
   return (
     <nav
       aria-label="Điều hướng nội dung tuyển sinh"
-      className="sticky top-4 rounded-lg border border-border bg-card p-2 shadow-sm lg:top-6"
+      className="sticky top-4 z-30 rounded-lg border border-border bg-card p-2 shadow-sm lg:fixed lg:left-4 lg:top-1/2 lg:-translate-y-1/2 lg:rounded-full lg:p-1"
     >
       <div className="flex gap-1 overflow-x-auto lg:flex-col lg:overflow-visible">
         {items.map(({ href, label, Icon }) => (
           <a
             key={href}
             href={href}
-            className="flex min-h-10 shrink-0 items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-accent/10 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            title={label}
+            className="group relative flex min-h-10 shrink-0 items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-accent/10 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:h-10 lg:w-10 lg:justify-center lg:rounded-full lg:px-0 lg:py-0"
           >
             <Icon className="h-4 w-4" aria-hidden="true" />
-            <span className="whitespace-nowrap">{label}</span>
+            <span className="whitespace-nowrap lg:pointer-events-none lg:absolute lg:left-12 lg:rounded-md lg:border lg:border-border lg:bg-popover lg:px-2 lg:py-1 lg:text-xs lg:text-popover-foreground lg:opacity-0 lg:shadow-sm lg:transition-opacity lg:group-hover:opacity-100 lg:group-focus-visible:opacity-100">
+              {label}
+            </span>
           </a>
         ))}
       </div>

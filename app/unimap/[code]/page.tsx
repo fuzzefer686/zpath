@@ -519,10 +519,10 @@ async function renderAdmissionSchoolDetail(
     <div className="min-h-screen bg-background text-foreground">
       <SchoolHeader school={school} variantLinks={variantLinks} />
 
-      <div className="container-page grid gap-6 py-10 lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start">
+      <div className="container-page py-10 lg:pl-16">
         <AdmissionSectionNavigator items={isProMax ? PRO_MAX_NAV_ITEMS : undefined} />
 
-        <div className="space-y-8">
+        <div className="mt-6 space-y-8 lg:mt-0">
           {isProMax && proMaxContent ? (
             <>
               <section id="calculator" className="scroll-mt-24">
@@ -585,6 +585,7 @@ async function renderAdmissionSchoolDetail(
 
               <section id="programs" className="scroll-mt-24">
                 <AdmissionProgramsSection
+                  schoolCode={school.code}
                   programs={programs}
                   selectedYear={selectedProgramYear}
                   availableYears={ADMISSION_YEAR_OPTIONS}
