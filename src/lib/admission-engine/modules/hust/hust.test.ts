@@ -347,6 +347,39 @@ test("HUST ED2 D01 without IELTS compares against 2025 benchmark table data", ()
   );
 });
 
+test("HUST THPT uses a program benchmark as the shared cutoff for every combination", () => {
+  const benchmarkRows = [
+    createBenchmarkRow({
+      programCode: "TE-E2",
+      methodCode: "THPT",
+      combinationCode: "A00",
+      score: 27.1,
+    }),
+  ];
+  const a00Benchmark = findBenchmarkForProgram({
+    schoolCode: "HUST",
+    programs: [],
+    benchmarks: benchmarkRows,
+    programCode: "TE-E2",
+    method: "THPT",
+    combinationCode: "A00",
+    benchmarkYear: 2025,
+  });
+  const a01Benchmark = findBenchmarkForProgram({
+    schoolCode: "HUST",
+    programs: [],
+    benchmarks: benchmarkRows,
+    programCode: "TE-E2",
+    method: "THPT",
+    combinationCode: "A01",
+    benchmarkYear: 2025,
+  });
+
+  assert.equal(a00Benchmark?.score, 27.1);
+  assert.equal(a01Benchmark?.score, 27.1);
+  assert.equal(a01Benchmark?.combination_code, "A00");
+});
+
 test("HUST THPT A00 does not allow English certificate replacement", () => {
   assert.throws(
     () =>

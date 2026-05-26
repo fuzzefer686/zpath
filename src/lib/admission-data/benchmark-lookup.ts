@@ -41,6 +41,7 @@ export function findBenchmarkForProgram({
         (benchmark) => benchmark.combination_code === combinationCode,
       ) ??
       sameProgramBenchmarks.find((benchmark) => benchmark.combination_code === null) ??
+      sameProgramBenchmarks[0] ??
       null
     );
   }
