@@ -33,6 +33,7 @@ import type {
   TuitionFee,
 } from "@/src/types/admission-data";
 import { AdmissionCalculatorSection } from "@/src/components/admission/AdmissionCalculatorSection";
+import { CollapsibleAdmissionSection } from "@/src/components/admission/CollapsibleAdmissionSection";
 import { AdmissionInfoSection } from "@/src/components/admission/AdmissionInfoSection";
 import { AdmissionProgramsSection } from "@/src/components/admission/AdmissionProgramsSection";
 import {
@@ -525,106 +526,106 @@ async function renderAdmissionSchoolDetail(
         <div className="mt-6 space-y-8 lg:mt-0">
           {isProMax && proMaxContent ? (
             <>
-              <section id="calculator" className="scroll-mt-24">
+              <CollapsibleAdmissionSection id="calculator" title="Công cụ tính điểm">
                 <ProMaxCalculatorLinkSection href={defaultCalculatorHref} />
-              </section>
+              </CollapsibleAdmissionSection>
 
-              <section id="overview" className="scroll-mt-24">
+              <CollapsibleAdmissionSection id="overview" title="Tổng quan">
                 <ProMaxContentSection title="Tổng quan" blocks={proMaxContent.overview} />
-              </section>
+              </CollapsibleAdmissionSection>
 
-              <section id="admission-info" className="scroll-mt-24">
+              <CollapsibleAdmissionSection id="admission-info" title="Thông tin tuyển sinh">
                 <ProMaxContentSection
                   title="Thông tin tuyển sinh"
                   blocks={proMaxContent.admissionInfo}
                 />
-              </section>
+              </CollapsibleAdmissionSection>
 
-              <section id="programs" className="scroll-mt-24">
+              <CollapsibleAdmissionSection id="programs" title="Chương trình tuyển sinh">
                 <ProMaxPlaceholderSection
                   title="Chương trình tuyển sinh"
                   message={proMaxContent.placeholders.programs ?? PRO_MAX_PLACEHOLDER_MESSAGE}
                 />
-              </section>
+              </CollapsibleAdmissionSection>
 
-              <section id="combinations" className="scroll-mt-24">
+              <CollapsibleAdmissionSection id="combinations" title="Tổ hợp xét tuyển">
                 <ProMaxMediaGrid
                   title="Tổ hợp xét tuyển"
                   blocks={proMaxContent.combinations}
                 />
-              </section>
+              </CollapsibleAdmissionSection>
 
-              <section id="benchmarks" className="scroll-mt-24">
+              <CollapsibleAdmissionSection id="benchmarks" title="Điểm chuẩn tham khảo">
                 <ProMaxPlaceholderSection
                   title="Điểm chuẩn tham khảo"
                   message={proMaxContent.placeholders.benchmarks ?? PRO_MAX_PLACEHOLDER_MESSAGE}
                 />
-              </section>
+              </CollapsibleAdmissionSection>
 
-              <section id="tuition" className="scroll-mt-24">
+              <CollapsibleAdmissionSection id="tuition" title="Học phí">
                 <ProMaxPlaceholderSection
                   title="Học phí"
                   message={proMaxContent.placeholders.tuition ?? PRO_MAX_PLACEHOLDER_MESSAGE}
                 />
-              </section>
+              </CollapsibleAdmissionSection>
             </>
           ) : (
             <>
-              <section id="overview" className="scroll-mt-24">
-                <SchoolOverviewSection school={school} />
-              </section>
-
-              <section id="admission-info" className="scroll-mt-24">
-                <AdmissionInfoSection
-                  admissionInfo={admissionInfo}
-                  methods={methods}
-                  selectedYear={selectedProgramYear}
-                  availableYears={ADMISSION_YEAR_OPTIONS}
-                />
-              </section>
-
-              <section id="programs" className="scroll-mt-24">
-                <AdmissionProgramsSection
-                  schoolCode={school.code}
-                  programs={programs}
-                  selectedYear={selectedProgramYear}
-                  availableYears={ADMISSION_YEAR_OPTIONS}
-                />
-              </section>
-
-              <section id="combinations" className="scroll-mt-24">
-                <SubjectCombinationsSection
-                  subjectCombinations={subjectCombinations}
-                  programCombinations={programCombinations}
-                />
-              </section>
-
-              <section id="benchmarks" className="scroll-mt-24">
-                <BenchmarksSection
-                  benchmarks={benchmarks}
-                  programs={benchmarkPrograms}
-                  selectedYear={selectedBenchmarkYear}
-                  availableYears={ADMISSION_YEAR_OPTIONS}
-                />
-              </section>
-
-              <section id="tuition" className="scroll-mt-24">
-                <TuitionSection
-                  tuitionFees={tuitionFees}
-                  programs={tuitionPrograms}
-                  selectedYear={selectedTuitionYear}
-                  availableYears={ADMISSION_YEAR_OPTIONS}
-                />
-              </section>
-
-              <section id="calculator" className="scroll-mt-24">
+              <CollapsibleAdmissionSection id="calculator" title="Công cụ tính điểm">
                 <AdmissionCalculatorSection
                   schoolCode={school.code}
                   programs={calculatorPrograms}
                   benchmarks={calculatorBenchmarks}
                   methods={calculatorMethods}
                 />
-              </section>
+              </CollapsibleAdmissionSection>
+
+              <CollapsibleAdmissionSection id="overview" title="Tổng quan">
+                <SchoolOverviewSection school={school} />
+              </CollapsibleAdmissionSection>
+
+              <CollapsibleAdmissionSection id="admission-info" title="Thông tin tuyển sinh">
+                <AdmissionInfoSection
+                  admissionInfo={admissionInfo}
+                  methods={methods}
+                  selectedYear={selectedProgramYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </CollapsibleAdmissionSection>
+
+              <CollapsibleAdmissionSection id="programs" title="Chương trình tuyển sinh">
+                <AdmissionProgramsSection
+                  schoolCode={school.code}
+                  programs={programs}
+                  selectedYear={selectedProgramYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </CollapsibleAdmissionSection>
+
+              <CollapsibleAdmissionSection id="combinations" title="Tổ hợp xét tuyển">
+                <SubjectCombinationsSection
+                  subjectCombinations={subjectCombinations}
+                  programCombinations={programCombinations}
+                />
+              </CollapsibleAdmissionSection>
+
+              <CollapsibleAdmissionSection id="benchmarks" title="Điểm chuẩn tham khảo">
+                <BenchmarksSection
+                  benchmarks={benchmarks}
+                  programs={benchmarkPrograms}
+                  selectedYear={selectedBenchmarkYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </CollapsibleAdmissionSection>
+
+              <CollapsibleAdmissionSection id="tuition" title="Học phí">
+                <TuitionSection
+                  tuitionFees={tuitionFees}
+                  programs={tuitionPrograms}
+                  selectedYear={selectedTuitionYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </CollapsibleAdmissionSection>
             </>
           )}
         </div>

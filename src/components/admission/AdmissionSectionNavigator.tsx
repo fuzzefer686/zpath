@@ -16,13 +16,13 @@ export type AdmissionSectionNavItem = {
 };
 
 const DEFAULT_NAV_ITEMS: AdmissionSectionNavItem[] = [
+  { href: "#calculator", label: "Công cụ tính điểm", Icon: Calculator },
   { href: "#overview", label: "Tổng quan", Icon: LayoutDashboard },
   { href: "#admission-info", label: "Thông tin tuyển sinh", Icon: Info },
   { href: "#programs", label: "Chương trình tuyển sinh", Icon: ListChecks },
   { href: "#combinations", label: "Tổ hợp xét tuyển", Icon: Grid3X3 },
   { href: "#benchmarks", label: "Điểm chuẩn tham khảo", Icon: BarChart3 },
   { href: "#tuition", label: "Học phí", Icon: WalletCards },
-  { href: "#calculator", label: "Tính cơ hội", Icon: Calculator },
 ];
 
 export const PRO_MAX_NAV_ITEMS: AdmissionSectionNavItem[] = [
