@@ -6,6 +6,36 @@ export type HustAdmissionProgramGroup =
   | "international_cooperation"
   | "international_joint";
 
+export type HustSubjectKey =
+  | "math"
+  | "physics"
+  | "chemistry"
+  | "english"
+  | "biology"
+  | "literature"
+  | "chinese"
+  | "korean"
+  | "informatics";
+
+export type HustThptCombinationCode =
+  | "K01"
+  | "A00"
+  | "A01"
+  | "B00"
+  | "D01"
+  | "D04"
+  | "D07"
+  | "DD2";
+
+export type HustThptFormulaType = "NORMAL" | "K01" | "MATH_COEFFICIENT_2";
+
+export type HustThptCombinationConfig = {
+  combinationCode: HustThptCombinationCode;
+  subjects: HustSubjectKey[];
+  formulaType: HustThptFormulaType;
+  mathCoefficient?: 1 | 2 | 3;
+};
+
 export type HustAdmissionProgram2026 = {
   order: number;
   code: string;
@@ -17,7 +47,16 @@ export type HustAdmissionProgram2026 = {
     dgtd: boolean;
     thpt: string[];
   };
+  thptCombinations: HustThptCombinationConfig[];
+  languageRequirement?: {
+    note: string;
+  };
 };
+
+type HustAdmissionProgram2026Seed = Omit<
+  HustAdmissionProgram2026,
+  "thptCombinations"
+>;
 
 export const HUST_PROGRAM_GROUP_LABELS: Record<HustAdmissionProgramGroup, string> = {
   standard: "Các chương trình đào tạo chuẩn",
@@ -34,7 +73,45 @@ const allMethods = (thpt: string[]) => ({
   thpt,
 });
 
-export const HUST_ADMISSION_PROGRAMS_2026: HustAdmissionProgram2026[] = [
+const COMBINATION_SUBJECTS: Record<HustThptCombinationCode, HustSubjectKey[]> = {
+  K01: ["math", "literature", "physics", "chemistry", "biology", "informatics"],
+  A00: ["math", "physics", "chemistry"],
+  A01: ["math", "physics", "english"],
+  B00: ["math", "chemistry", "biology"],
+  D01: ["math", "literature", "english"],
+  D04: ["math", "literature", "chinese"],
+  D07: ["math", "chemistry", "english"],
+  DD2: ["math", "literature", "korean"],
+};
+
+const SUPPORTED_THPT_COMBINATIONS = new Set<string>(Object.keys(COMBINATION_SUBJECTS));
+
+function createThptCombinationConfig(code: string): HustThptCombinationConfig | null {
+  if (!SUPPORTED_THPT_COMBINATIONS.has(code)) return null;
+
+  const combinationCode = code as HustThptCombinationCode;
+  return {
+    combinationCode,
+    subjects: COMBINATION_SUBJECTS[combinationCode],
+    formulaType: combinationCode === "K01" ? "K01" : "NORMAL",
+    mathCoefficient: combinationCode === "K01" ? 3 : 1,
+  };
+}
+
+function withThptConfig<T extends Omit<HustAdmissionProgram2026, "thptCombinations">>(
+  program: T,
+): HustAdmissionProgram2026 {
+  const thptCombinations = program.methods.thpt
+    .map(createThptCombinationConfig)
+    .filter((config): config is HustThptCombinationConfig => Boolean(config));
+
+  return {
+    ...program,
+    thptCombinations,
+  };
+}
+
+const HUST_ADMISSION_PROGRAMS_2026_SEED: HustAdmissionProgram2026Seed[] = [
   { order: 1, code: "BF1", name: "Kỹ thuật Sinh học", quota: 160, group: "standard", methods: allMethods(["K01", "A00", "B00", "D07"]) },
   { order: 2, code: "BF2", name: "Kỹ thuật Thực phẩm", quota: 360, group: "standard", methods: allMethods(["K01", "A00", "B00", "D07"]) },
   { order: 3, code: "CH1", name: "Kỹ thuật Hoá học", quota: 680, group: "standard", methods: allMethods(["K01", "A00", "B00", "D07"]) },
@@ -101,3 +178,24 @@ export const HUST_ADMISSION_PROGRAMS_2026: HustAdmissionProgram2026[] = [
   { order: 64, code: "TROY-BA", name: "Quản trị kinh doanh - hợp tác với Đại học Troy (Hoa Kỳ)", quota: 60, group: "international_joint", methods: allMethods(["K01", "A00", "A01", "D01"]) },
   { order: 65, code: "TROY-IT", name: "Khoa học máy tính - hợp tác với Đại học Troy (Hoa Kỳ)", quota: 120, group: "international_joint", methods: allMethods(["K01", "A00", "A01", "D01"]) },
 ];
+
+export const HUST_ADMISSION_PROGRAMS_2026: HustAdmissionProgram2026[] =
+  HUST_ADMISSION_PROGRAMS_2026_SEED.map(withThptConfig);
+
+export function getHustAdmissionProgram2026(programCode: string) {
+  return HUST_ADMISSION_PROGRAMS_2026.find((program) => program.code === programCode) ?? null;
+}
+
+export function getHustThptCombinationConfig(
+  programCode: string,
+  combinationCode: string,
+) {
+  const program = getHustAdmissionProgram2026(programCode);
+  if (!program) return null;
+
+  return (
+    program.thptCombinations.find(
+      (combination) => combination.combinationCode === combinationCode,
+    ) ?? null
+  );
+}

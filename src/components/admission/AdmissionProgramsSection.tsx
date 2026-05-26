@@ -232,7 +232,7 @@ function HustProgramsTable({ programs }: { programs: HustAdmissionProgram2026[] 
         </table>
       </div>
       <p className="text-xs italic leading-5 text-muted-foreground">
-        Ghi chú: Các tổ hợp xét tuyển theo điểm thi tốt nghiệp THPT có tính hệ số môn chính.
+        Ghi chú: Các tổ hợp xét tuyển in đậm theo điểm thi tốt nghiệp THPT có tính hệ số môn chính nhân đôi.
       </p>
     </>
   );

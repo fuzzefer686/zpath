@@ -7,12 +7,21 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import {
-  evaluateAdmissionChance,
-  type AdmissionChanceEvaluation,
-  type AdmissionMethod,
-  type AdmissionScoreResult,
-  type SchoolCode,
+  HUST_ADMISSION_PROGRAMS_2026,
+  HUST_PROGRAM_GROUP_LABELS,
+  type HustAdmissionProgram2026,
+  type HustSubjectKey,
+  type HustThptCombinationCode,
+} from "@/src/lib/admission-data/hust-programs-2026";
+import type {
+  AdmissionMethod,
+  AdmissionScoreResult,
+  SchoolCode,
 } from "@/src/lib/admission-engine";
+import {
+  compareHustScoreWithPreviousCutoff,
+  type HustScoreComparisonResult,
+} from "@/src/lib/admission-engine/modules/hust/compare";
 import type {
   AdmissionMethodRecord,
   AdmissionProgram,
@@ -26,20 +35,10 @@ type AdmissionCalculatorSectionProps = {
   methods: AdmissionMethodRecord[];
 };
 
-type ThptCombinationCode = "A00" | "A01" | "B00" | "D01" | "D07";
-type SubjectKey =
-  | "math"
-  | "physics"
-  | "chemistry"
-  | "english"
-  | "biology"
-  | "literature";
-
 type ApiSuccessResponse = {
   ok: true;
   data: {
     score: AdmissionScoreResult;
-    chance: AdmissionChanceEvaluation | null;
   };
 };
 
@@ -49,50 +48,70 @@ type ApiErrorResponse = {
 };
 
 type ApiResponse = ApiSuccessResponse | ApiErrorResponse;
+type XttnSubtype =
+  | "direct_admission"
+  | "international_certificate"
+  | "portfolio_interview";
 
 const DISCLAIMER =
   "Kết quả chỉ mang tính tham khảo dựa trên điểm chuẩn năm trước. Điểm chuẩn năm nay có thể thay đổi theo chỉ tiêu, phổ điểm, số lượng thí sinh và quy chế tuyển sinh.";
 
-const SUPPORTED_METHODS: AdmissionMethod[] = ["THPT", "TSA", "XTTN"];
-const THPT_COMBINATIONS: ThptCombinationCode[] = ["A00", "A01", "B00", "D01", "D07"];
+const HUST_METHODS: AdmissionMethod[] = ["XTTN", "TSA", "THPT"];
+const HUST_CALCULATOR_YEAR = 2026;
+const HUST_CUTOFF_YEAR = 2025;
 
-const SUBJECT_LABELS: Record<SubjectKey, string> = {
+const METHOD_LABELS: Record<AdmissionMethod, string> = {
+  XTTN: "Xét tuyển tài năng",
+  TSA: "Đánh giá tư duy",
+  THPT: "Điểm thi THPT",
+};
+
+const XTTN_SUBTYPE_LABELS: Record<XttnSubtype, string> = {
+  direct_admission: "Xét tuyển thẳng theo quy định Bộ GD&ĐT",
+  international_certificate: "Xét tuyển theo chứng chỉ quốc tế",
+  portfolio_interview: "Hồ sơ năng lực + phỏng vấn",
+};
+
+const SUBJECT_LABELS: Record<HustSubjectKey, string> = {
   math: "Toán",
   physics: "Vật lý",
   chemistry: "Hóa học",
   english: "Tiếng Anh",
   biology: "Sinh học",
   literature: "Ngữ văn",
+  chinese: "Tiếng Trung",
+  korean: "Tiếng Hàn",
+  informatics: "Tin học",
 };
 
-const COMBINATION_SUBJECTS: Record<ThptCombinationCode, SubjectKey[]> = {
-  A00: ["math", "physics", "chemistry"],
-  A01: ["math", "physics", "english"],
-  B00: ["math", "chemistry", "biology"],
-  D01: ["math", "literature", "english"],
-  D07: ["math", "chemistry", "english"],
-};
-
-const EMPTY_SUBJECT_SCORES: Record<SubjectKey, string> = {
+const EMPTY_SUBJECT_SCORES: Record<HustSubjectKey, string> = {
   math: "",
   physics: "",
   chemistry: "",
   english: "",
   biology: "",
   literature: "",
+  chinese: "",
+  korean: "",
+  informatics: "",
 };
-
-function isAdmissionMethod(value: string): value is AdmissionMethod {
-  return SUPPORTED_METHODS.includes(value as AdmissionMethod);
-}
 
 function isSchoolCode(value: string): value is SchoolCode {
   return value === "HUST" || value === "FTU" || value === "VINUNI" || value === "NEU";
 }
 
-function parseScore(value: string, label: string) {
-  const score = Number(value);
+function isApiResponse(value: unknown): value is ApiResponse {
+  if (typeof value !== "object" || value === null) return false;
+  return typeof (value as { ok?: unknown }).ok === "boolean";
+}
 
+function parseScore(value: string, label: string) {
+  const trimmed = value.trim();
+  if (!trimmed) {
+    throw new Error(`Vui lòng nhập ${label}.`);
+  }
+
+  const score = Number(trimmed);
   if (!Number.isFinite(score)) {
     throw new Error(`${label} phải là một số hợp lệ.`);
   }
@@ -100,11 +119,9 @@ function parseScore(value: string, label: string) {
   return score;
 }
 
-function getLatestYear(values: Array<{ year: number }>) {
-  return values.reduce<number | null>((latest, item) => {
-    if (latest === null) return item.year;
-    return Math.max(latest, item.year);
-  }, null);
+function parseOptionalScore(value: string, label: string) {
+  if (!value.trim()) return 0;
+  return parseScore(value, label);
 }
 
 function normalizeBenchmarkScore30(benchmark: Benchmark) {
@@ -112,55 +129,82 @@ function normalizeBenchmarkScore30(benchmark: Benchmark) {
   return scale === 30 ? benchmark.score : (benchmark.score / scale) * 30;
 }
 
-function formatSignedDiff(diff: number) {
-  return diff > 0 ? `+${diff.toFixed(2)}` : diff.toFixed(2);
+function formatScore(value: number | null, suffix = "") {
+  if (value === null) return "Chưa có";
+  return `${value.toFixed(2)}${suffix}`;
 }
 
-function getChanceClass(level: AdmissionChanceEvaluation["level"]) {
-  if (level === "VERY_HIGH" || level === "HIGH") return "text-tier-high";
-  if (level === "MEDIUM") return "text-tier-mid";
+function formatDifference(value: number | null) {
+  if (value === null) return "Chưa có";
+  return value > 0 ? `+${value.toFixed(2)}` : value.toFixed(2);
+}
+
+function getSubjectListLabel(subjects: HustSubjectKey[]) {
+  return subjects.map((subject) => SUBJECT_LABELS[subject]).join(" + ");
+}
+
+function getVisibleSubjects(program: HustAdmissionProgram2026 | null, combinationCode: string) {
+  const combination = program?.thptCombinations.find(
+    (item) => item.combinationCode === combinationCode,
+  );
+
+  if (!combination) return [];
+  return combination.subjects;
+}
+
+function findBenchmarkForProgram({
+  programs,
+  benchmarks,
+  programCode,
+  method,
+  combinationCode,
+}: {
+  programs: AdmissionProgram[];
+  benchmarks: Benchmark[];
+  programCode: string;
+  method: AdmissionMethod;
+  combinationCode?: string;
+}) {
+  const benchmarkProgram = programs.find(
+    (program) => program.program_code === programCode && program.year === HUST_CUTOFF_YEAR,
+  );
+  if (!benchmarkProgram) return null;
+
+  const sameProgramBenchmarks = benchmarks.filter((benchmark) => {
+    if (benchmark.school_code !== "HUST") return false;
+    if (benchmark.year !== HUST_CUTOFF_YEAR) return false;
+    if (benchmark.method_code !== method) return false;
+    if (benchmark.program_id !== benchmarkProgram.id) return false;
+    return true;
+  });
+
+  if (method === "THPT") {
+    return (
+      sameProgramBenchmarks.find(
+        (benchmark) => benchmark.combination_code === combinationCode,
+      ) ??
+      sameProgramBenchmarks.find((benchmark) => benchmark.combination_code === null) ??
+      null
+    );
+  }
+
+  return sameProgramBenchmarks.find((benchmark) => benchmark.combination_code === null) ?? null;
+}
+
+function getComparisonClass(status: HustScoreComparisonResult["status"]) {
+  if (status === "above" || status === "equal") return "text-tier-high";
+  if (status === "missing_cutoff" || status === "insufficient_data") {
+    return "text-muted-foreground";
+  }
   return "text-tier-low";
 }
 
-function isApiResponse(value: unknown): value is ApiResponse {
-  if (typeof value !== "object" || value === null) return false;
-  const response = value as { ok?: unknown };
-  return typeof response.ok === "boolean";
-}
-
-function findMatchingBenchmark({
-  benchmarks,
-  programId,
-  method,
-  combinationCode,
-  selectedAdmissionYear,
-}: {
-  benchmarks: Benchmark[];
-  programId: string;
-  method: AdmissionMethod;
-  combinationCode: ThptCombinationCode;
-  selectedAdmissionYear: number;
-}) {
-  const methodBenchmarks = benchmarks
-    .filter((benchmark) => benchmark.program_id === programId)
-    .filter((benchmark) => benchmark.method_code === method)
-    .filter((benchmark) => benchmark.year <= selectedAdmissionYear);
-
-  if (method === "THPT") {
-    const sameCombinationBenchmarks = methodBenchmarks.filter(
-      (benchmark) => benchmark.combination_code === combinationCode,
-    );
-    const fallbackBenchmarks = methodBenchmarks.filter(
-      (benchmark) => benchmark.combination_code === null,
-    );
-    const candidates = sameCombinationBenchmarks.length
-      ? sameCombinationBenchmarks
-      : fallbackBenchmarks;
-
-    return candidates.sort((left, right) => right.year - left.year)[0] ?? null;
+function getScoreForComparison(score: AdmissionScoreResult) {
+  if (score.method === "XTTN" && score.details?.resultType === "eligibility") {
+    return null;
   }
 
-  return methodBenchmarks.sort((left, right) => right.year - left.year)[0] ?? null;
+  return score.method === "XTTN" ? score.originalScore : score.normalizedScore30;
 }
 
 export function AdmissionCalculatorSection({
@@ -169,102 +213,157 @@ export function AdmissionCalculatorSection({
   benchmarks,
   methods,
 }: AdmissionCalculatorSectionProps) {
-  const availableMethods = useMemo(() => {
-    const methodCodes = new Set(
-      methods
-        .map((method) => method.method_code)
-        .filter((methodCode): methodCode is AdmissionMethod => isAdmissionMethod(methodCode)),
-    );
-
-    return SUPPORTED_METHODS.filter((method) => methodCodes.size === 0 || methodCodes.has(method));
-  }, [methods]);
-
-  const [method, setMethod] = useState<AdmissionMethod>(
-    availableMethods.includes("THPT") ? "THPT" : availableMethods[0] ?? "THPT",
+  const isHust = schoolCode === "HUST";
+  const [method, setMethod] = useState<AdmissionMethod>("THPT");
+  const [programCode, setProgramCode] = useState(
+    HUST_ADMISSION_PROGRAMS_2026[0]?.code ?? "",
   );
-  const [combinationCode, setCombinationCode] = useState<ThptCombinationCode>("A00");
+  const [combinationCode, setCombinationCode] =
+    useState<HustThptCombinationCode>("K01");
   const [subjectScores, setSubjectScores] =
-    useState<Record<SubjectKey, string>>(EMPTY_SUBJECT_SCORES);
+    useState<Record<HustSubjectKey, string>>(EMPTY_SUBJECT_SCORES);
   const [priorityScore, setPriorityScore] = useState("0");
   const [tsaScore, setTsaScore] = useState("");
-  const [xttnScore, setXttnScore] = useState("");
-  const [xttnScale, setXttnScale] = useState<30 | 100>(30);
+  const [xttnSubtype, setXttnSubtype] =
+    useState<XttnSubtype>("portfolio_interview");
+  const [achievementScore, setAchievementScore] = useState("");
+  const [bonusScore, setBonusScore] = useState("0");
+  const [interviewStatus, setInterviewStatus] = useState("");
   const [scoreResult, setScoreResult] = useState<AdmissionScoreResult | null>(null);
-  const [selectedProgramId, setSelectedProgramId] = useState("");
-  const [selectedBenchmark, setSelectedBenchmark] = useState<Benchmark | null>(null);
-  const [chance, setChance] = useState<AdmissionChanceEvaluation | null>(null);
+  const [comparison, setComparison] =
+    useState<HustScoreComparisonResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
 
-  const selectedMethodYear = useMemo(() => {
-    const methodYears = methods.filter((item) => item.method_code === method);
-    return getLatestYear(methodYears) ?? getLatestYear(methods) ?? new Date().getFullYear();
-  }, [method, methods]);
-
-  const requiredSubjects = COMBINATION_SUBJECTS[combinationCode];
   const selectedProgram = useMemo(
-    () => programs.find((program) => program.id === selectedProgramId) ?? null,
-    [programs, selectedProgramId],
+    () =>
+      HUST_ADMISSION_PROGRAMS_2026.find((program) => program.code === programCode) ??
+      null,
+    [programCode],
   );
-  const schoolBenchmarks = useMemo(
-    () => benchmarks.filter((benchmark) => benchmark.school_code === schoolCode),
-    [benchmarks, schoolCode],
+  const selectedCombination = selectedProgram?.thptCombinations.find(
+    (combination) => combination.combinationCode === combinationCode,
   );
-  const comparablePrograms = useMemo(() => {
-    if (!scoreResult) return [];
-
-    return programs.filter((program) =>
-      Boolean(
-        findMatchingBenchmark({
-          benchmarks: schoolBenchmarks,
-          programId: program.id,
-          method,
-          combinationCode,
-          selectedAdmissionYear: scoreResult.year,
-        }),
-      ),
+  const visibleSubjects = getVisibleSubjects(selectedProgram, combinationCode);
+  const methodYearText = isHust ? `${HUST_CALCULATOR_YEAR}` : "Chưa hỗ trợ";
+  const availableMethods = useMemo(() => {
+    const methodCodes = new Set(methods.map((item) => item.method_code));
+    const supportedMethods = HUST_METHODS.filter(
+      (item) => methodCodes.size === 0 || methodCodes.has(item),
     );
-  }, [combinationCode, method, programs, schoolBenchmarks, scoreResult]);
+    return supportedMethods.length ? supportedMethods : HUST_METHODS;
+  }, [methods]);
 
-  function resetComparison() {
-    setSelectedProgramId("");
-    setSelectedBenchmark(null);
-    setChance(null);
+  function resetResult() {
+    setScoreResult(null);
+    setComparison(null);
+    setError(null);
+  }
+
+  function updateProgram(nextProgramCode: string) {
+    const nextProgram = HUST_ADMISSION_PROGRAMS_2026.find(
+      (program) => program.code === nextProgramCode,
+    );
+    const firstCombination = nextProgram?.thptCombinations[0]?.combinationCode;
+
+    setProgramCode(nextProgramCode);
+    if (firstCombination) {
+      setCombinationCode(firstCombination);
+    }
+    resetResult();
+  }
+
+  function buildThptPayload() {
+    if (!selectedProgram) {
+      throw new Error("Vui lòng chọn chương trình xét tuyển.");
+    }
+
+    if (!selectedCombination) {
+      throw new Error("Chương trình này không hỗ trợ tổ hợp đã chọn.");
+    }
+
+    const scores = visibleSubjects.reduce<Partial<Record<HustSubjectKey, number>>>(
+      (next, subject) => {
+        if (
+          selectedCombination.formulaType === "K01" &&
+          !["math", "literature"].includes(subject) &&
+          !subjectScores[subject].trim()
+        ) {
+          return next;
+        }
+
+        next[subject] = parseScore(subjectScores[subject], `điểm ${SUBJECT_LABELS[subject]}`);
+        return next;
+      },
+      {},
+    );
+
+    return {
+      programCode,
+      combinationCode,
+      scores,
+      priorityScore: parseOptionalScore(priorityScore, "điểm ưu tiên"),
+    };
   }
 
   function buildPayload() {
-    if (method === "THPT") {
-      const scores = requiredSubjects.reduce(
-        (next, subject) => {
-          next[subject] = parseScore(subjectScores[subject], SUBJECT_LABELS[subject]);
-          return next;
-        },
-        {} as Partial<Record<SubjectKey, number>>,
-      );
-
-      return {
-        combinationCode,
-        scores,
-        priorityScore: priorityScore.trim() ? parseScore(priorityScore, "Điểm ưu tiên") : 0,
-      };
-    }
+    if (method === "THPT") return buildThptPayload();
 
     if (method === "TSA") {
       return {
-        tsaScore: parseScore(tsaScore, "Điểm TSA"),
+        tsaScore: parseScore(tsaScore, "điểm Đánh giá tư duy"),
+      };
+    }
+
+    if (xttnSubtype !== "portfolio_interview") {
+      return {
+        subtype: xttnSubtype,
+        eligible: true,
       };
     }
 
     return {
-      xttnScore: parseScore(xttnScore, "Điểm XTTN"),
-      scale: xttnScale,
+      subtype: xttnSubtype,
+      tsaScore: parseScore(tsaScore, "điểm Đánh giá tư duy"),
+      achievementScore: parseScore(achievementScore, "điểm thành tích"),
+      bonusScore: parseOptionalScore(bonusScore, "điểm thưởng"),
+      interviewStatus: interviewStatus.trim() || undefined,
     };
+  }
+
+  function buildComparison(score: AdmissionScoreResult) {
+    const previousBenchmark = findBenchmarkForProgram({
+      programs,
+      benchmarks,
+      programCode,
+      method,
+      combinationCode: method === "THPT" ? combinationCode : undefined,
+    });
+    const previousYearCutoff = previousBenchmark
+      ? method === "XTTN"
+        ? previousBenchmark.score
+        : normalizeBenchmarkScore30(previousBenchmark)
+      : null;
+
+    return compareHustScoreWithPreviousCutoff({
+      year: score.year,
+      programCode,
+      method,
+      combinationCode: method === "THPT" ? combinationCode : undefined,
+      score: getScoreForComparison(score),
+      previousYearCutoff,
+    });
   }
 
   async function handleCalculate() {
     setError(null);
     setScoreResult(null);
-    resetComparison();
+    setComparison(null);
+
+    if (!isHust) {
+      setError("Bộ tính điểm hiện mới hỗ trợ Đại học Bách khoa Hà Nội.");
+      return;
+    }
 
     if (!isSchoolCode(schoolCode)) {
       setError(`Bộ tính điểm MVP hiện chưa hỗ trợ trường ${schoolCode}.`);
@@ -282,7 +381,7 @@ export function AdmissionCalculatorSection({
         body: JSON.stringify({
           schoolCode,
           method,
-          year: selectedMethodYear,
+          year: HUST_CALCULATOR_YEAR,
           payload: buildPayload(),
         }),
       });
@@ -297,6 +396,7 @@ export function AdmissionCalculatorSection({
       }
 
       setScoreResult(body.data.score);
+      setComparison(buildComparison(body.data.score));
     } catch (calculationError) {
       setError(
         calculationError instanceof Error
@@ -308,71 +408,61 @@ export function AdmissionCalculatorSection({
     }
   }
 
-  function handleProgramChange(programId: string) {
-    setSelectedProgramId(programId);
-    setError(null);
-
-    if (!scoreResult || !programId) {
-      setSelectedBenchmark(null);
-      setChance(null);
-      return;
-    }
-
-    const benchmark = findMatchingBenchmark({
-      benchmarks: schoolBenchmarks,
-      programId,
-      method,
-      combinationCode,
-      selectedAdmissionYear: scoreResult.year,
-    });
-
-    if (!benchmark) {
-      setSelectedBenchmark(null);
-      setChance(null);
-      setError("Chưa có dữ liệu điểm chuẩn phù hợp cho ngành/phương thức này.");
-      return;
-    }
-
-    const benchmark30 = normalizeBenchmarkScore30(benchmark);
-    setSelectedBenchmark(benchmark);
-    setChance(evaluateAdmissionChance(scoreResult.normalizedScore30, benchmark30));
-  }
-
   return (
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-xl">
           <Calculator className="h-5 w-5 text-primary" />
-          Công cụ tính điểm
+          Công cụ tính điểm xét tuyển HUST
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-3">
           <label className="space-y-2">
             <span className="text-sm font-semibold">Phương thức xét tuyển</span>
             <select
               value={method}
               onChange={(event) => {
-                const nextMethod = event.target.value;
-                if (!isAdmissionMethod(nextMethod)) return;
-                setMethod(nextMethod);
-                setScoreResult(null);
-                setError(null);
-                resetComparison();
+                setMethod(event.target.value as AdmissionMethod);
+                resetResult();
               }}
               className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
             >
               {availableMethods.map((availableMethod) => (
                 <option key={availableMethod} value={availableMethod}>
-                  {availableMethod}
+                  {METHOD_LABELS[availableMethod]}
                 </option>
               ))}
             </select>
           </label>
 
-          <div className="rounded-lg border border-border bg-muted/30 p-3 text-sm text-muted-foreground">
-            Năm dữ liệu: <span className="font-semibold text-foreground">{selectedMethodYear}</span>
-          </div>
+          <label className="space-y-2 md:col-span-2">
+            <span className="text-sm font-semibold">Chương trình tuyển sinh</span>
+            <select
+              value={programCode}
+              onChange={(event) => updateProgram(event.target.value)}
+              className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
+            >
+              {HUST_ADMISSION_PROGRAMS_2026.map((program) => (
+                <option key={program.code} value={program.code}>
+                  {program.code} - {program.name}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <div className="grid gap-3 text-sm md:grid-cols-3">
+          <InfoPill label="Năm tuyển sinh" value={methodYearText} />
+          <InfoPill label="Điểm chuẩn so sánh" value={`${HUST_CUTOFF_YEAR}`} />
+          <InfoPill
+            label="Nhóm chương trình"
+            value={
+              selectedProgram
+                ? HUST_PROGRAM_GROUP_LABELS[selectedProgram.group]
+                : "Chưa chọn"
+            }
+          />
         </div>
 
         {method === "THPT" ? (
@@ -382,22 +472,31 @@ export function AdmissionCalculatorSection({
               <select
                 value={combinationCode}
                 onChange={(event) => {
-                  setCombinationCode(event.target.value as ThptCombinationCode);
-                  setScoreResult(null);
-                  resetComparison();
+                  setCombinationCode(event.target.value as HustThptCombinationCode);
+                  resetResult();
                 }}
                 className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
               >
-                {THPT_COMBINATIONS.map((combination) => (
-                  <option key={combination} value={combination}>
-                    {combination} - {COMBINATION_SUBJECTS[combination].map((subject) => SUBJECT_LABELS[subject]).join(" + ")}
+                {selectedProgram?.thptCombinations.map((combination) => (
+                  <option
+                    key={combination.combinationCode}
+                    value={combination.combinationCode}
+                  >
+                    {combination.combinationCode} -{" "}
+                    {getSubjectListLabel(combination.subjects)}
                   </option>
                 ))}
               </select>
             </label>
 
+            {selectedCombination?.formulaType === "K01" ? (
+              <p className="rounded-md bg-muted/40 p-3 text-xs leading-5 text-muted-foreground">
+                K01 dùng Toán, Ngữ văn và môn cao nhất trong Lý/Hóa/Sinh/Tin học.
+              </p>
+            ) : null}
+
             <div className="grid gap-4 md:grid-cols-3">
-              {requiredSubjects.map((subject) => (
+              {visibleSubjects.map((subject) => (
                 <label key={subject} className="space-y-2">
                   <span className="text-sm font-semibold">{SUBJECT_LABELS[subject]}</span>
                   <Input
@@ -411,10 +510,14 @@ export function AdmissionCalculatorSection({
                         ...current,
                         [subject]: event.target.value,
                       }));
-                      setScoreResult(null);
-                      resetComparison();
+                      resetResult();
                     }}
-                    placeholder="0 - 10"
+                    placeholder={
+                      selectedCombination?.formulaType === "K01" &&
+                      !["math", "literature"].includes(subject)
+                        ? "Có thể bỏ trống"
+                        : "0 - 10"
+                    }
                   />
                 </label>
               ))}
@@ -428,8 +531,7 @@ export function AdmissionCalculatorSection({
                 value={priorityScore}
                 onChange={(event) => {
                   setPriorityScore(event.target.value);
-                  setScoreResult(null);
-                  resetComparison();
+                  resetResult();
                 }}
               />
             </label>
@@ -438,7 +540,7 @@ export function AdmissionCalculatorSection({
 
         {method === "TSA" ? (
           <label className="block max-w-xs space-y-2">
-            <span className="text-sm font-semibold">Điểm TSA</span>
+            <span className="text-sm font-semibold">Điểm Đánh giá tư duy</span>
             <Input
               type="number"
               min="0"
@@ -447,8 +549,7 @@ export function AdmissionCalculatorSection({
               value={tsaScore}
               onChange={(event) => {
                 setTsaScore(event.target.value);
-                setScoreResult(null);
-                resetComparison();
+                resetResult();
               }}
               placeholder="0 - 100"
             />
@@ -456,38 +557,89 @@ export function AdmissionCalculatorSection({
         ) : null}
 
         {method === "XTTN" ? (
-          <div className="grid gap-4 md:grid-cols-2">
-            <label className="space-y-2">
-              <span className="text-sm font-semibold">Điểm XTTN</span>
-              <Input
-                type="number"
-                min="0"
-                max={xttnScale}
-                step="0.01"
-                value={xttnScore}
-                onChange={(event) => {
-                  setXttnScore(event.target.value);
-                  setScoreResult(null);
-                  resetComparison();
-                }}
-                placeholder={`0 - ${xttnScale}`}
-              />
-            </label>
-            <label className="space-y-2">
-              <span className="text-sm font-semibold">Thang điểm</span>
+          <div className="space-y-4">
+            <label className="block space-y-2">
+              <span className="text-sm font-semibold">Loại xét tuyển tài năng</span>
               <select
-                value={xttnScale}
+                value={xttnSubtype}
                 onChange={(event) => {
-                  setXttnScale(Number(event.target.value) === 100 ? 100 : 30);
-                  setScoreResult(null);
-                  resetComparison();
+                  setXttnSubtype(event.target.value as XttnSubtype);
+                  resetResult();
                 }}
                 className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
               >
-                <option value={30}>30</option>
-                <option value={100}>100</option>
+                {Object.entries(XTTN_SUBTYPE_LABELS).map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
               </select>
             </label>
+
+            {xttnSubtype === "portfolio_interview" ? (
+              <div className="grid gap-4 md:grid-cols-4">
+                <label className="space-y-2">
+                  <span className="text-sm font-semibold">Điểm Đánh giá tư duy</span>
+                  <Input
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="0.01"
+                    value={tsaScore}
+                    onChange={(event) => {
+                      setTsaScore(event.target.value);
+                      resetResult();
+                    }}
+                    placeholder="0 - 100"
+                  />
+                </label>
+                <label className="space-y-2">
+                  <span className="text-sm font-semibold">Điểm thành tích</span>
+                  <Input
+                    type="number"
+                    min="0"
+                    max="50"
+                    step="0.01"
+                    value={achievementScore}
+                    onChange={(event) => {
+                      setAchievementScore(event.target.value);
+                      resetResult();
+                    }}
+                    placeholder="0 - 50"
+                  />
+                </label>
+                <label className="space-y-2">
+                  <span className="text-sm font-semibold">Điểm thưởng</span>
+                  <Input
+                    type="number"
+                    min="0"
+                    max="10"
+                    step="0.01"
+                    value={bonusScore}
+                    onChange={(event) => {
+                      setBonusScore(event.target.value);
+                      resetResult();
+                    }}
+                    placeholder="0 - 10"
+                  />
+                </label>
+                <label className="space-y-2">
+                  <span className="text-sm font-semibold">Kết quả phỏng vấn</span>
+                  <Input
+                    value={interviewStatus}
+                    onChange={(event) => {
+                      setInterviewStatus(event.target.value);
+                      resetResult();
+                    }}
+                    placeholder="Nếu có"
+                  />
+                </label>
+              </div>
+            ) : (
+              <p className="rounded-md bg-muted/40 p-3 text-sm text-muted-foreground">
+                Diện này trả về kết quả đủ điều kiện, không giả lập điểm số.
+              </p>
+            )}
           </div>
         ) : null}
 
@@ -501,86 +653,58 @@ export function AdmissionCalculatorSection({
           </div>
         ) : null}
 
-        {scoreResult ? (
+        {scoreResult && comparison ? (
           <div className="space-y-5 rounded-lg border border-border bg-background p-5">
-            <div>
-              <div className="text-sm text-muted-foreground">Điểm quy đổi của bạn</div>
-              <div className="mt-1 font-display text-3xl font-bold text-primary">
-                {scoreResult.normalizedScore30.toFixed(2)}/30
-              </div>
-              <p className="mt-2 text-xs text-muted-foreground">
-                Công thức: {scoreResult.formulaUsed}
-              </p>
+            <div className="grid gap-4 md:grid-cols-4">
+              <ResultStat
+                label="Điểm của bạn"
+                value={
+                  scoreResult.method === "XTTN" &&
+                  scoreResult.details?.resultType === "eligibility"
+                    ? "Đủ điều kiện hồ sơ"
+                    : scoreResult.method === "XTTN"
+                      ? formatScore(scoreResult.originalScore, "/100")
+                      : formatScore(scoreResult.normalizedScore30, "/30")
+                }
+              />
+              <ResultStat
+                label="Điểm chuẩn năm trước"
+                value={
+                  scoreResult.method === "XTTN"
+                    ? formatScore(comparison.previousYearCutoff, "/100")
+                    : formatScore(comparison.previousYearCutoff, "/30")
+                }
+              />
+              <ResultStat
+                label="Chênh lệch"
+                value={formatDifference(comparison.difference)}
+              />
+              <ResultStat
+                label="Kết quả so sánh"
+                value={
+                  comparison.status === "missing_cutoff"
+                    ? "Chưa có dữ liệu điểm chuẩn năm trước"
+                    : comparison.message
+                }
+                className={getComparisonClass(comparison.status)}
+              />
             </div>
 
-            <label className="block space-y-2">
-              <span className="text-sm font-semibold">So sánh với ngành/chương trình</span>
-              <select
-                value={selectedProgramId}
-                onChange={(event) => handleProgramChange(event.target.value)}
-                className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
-              >
-                <option value="">Chọn chương trình</option>
-                {comparablePrograms.map((program) => (
-                  <option key={program.id} value={program.id}>
-                    {program.program_code ? `${program.program_code} - ` : ""}
-                    {program.program_name}
-                  </option>
-                ))}
-              </select>
-              <span className="block text-xs text-muted-foreground">
-                Dữ liệu so sánh lấy từ bảng điểm chuẩn năm 2025.
-              </span>
-            </label>
-
-            {comparablePrograms.length === 0 ? (
-              <p className="rounded-lg border border-border bg-muted/30 p-3 text-sm text-muted-foreground">
-                Chưa có dữ liệu điểm chuẩn phù hợp cho ngành/phương thức này.
-              </p>
-            ) : null}
-
-            {selectedBenchmark && chance ? (
-              <div className="space-y-4">
-                <div className="rounded-lg border border-border bg-muted/20 p-4">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Chương trình so sánh
-                  </div>
-                  <div className="mt-1 font-display text-lg font-bold">
-                    {selectedProgram?.program_code ? `${selectedProgram.program_code} - ` : ""}
-                    {selectedProgram?.program_name ?? "Chương trình đã chọn"}
-                  </div>
-                  <div className="mt-2 flex flex-wrap gap-2 text-xs text-muted-foreground">
-                    <span>Phương thức: {method}</span>
-                    {method === "THPT" ? (
-                      <span>
-                        Tổ hợp: {selectedBenchmark.combination_code ?? "Không phân tổ hợp"}
-                      </span>
-                    ) : null}
-                    <span>Năm điểm chuẩn: {selectedBenchmark.year}</span>
-                  </div>
-                </div>
-                <div className="grid gap-4 md:grid-cols-4">
-                  <ResultStat
-                    label="Điểm của bạn"
-                    value={`${scoreResult.normalizedScore30.toFixed(2)}/30`}
-                  />
-                  <ResultStat
-                    label="Điểm chuẩn"
-                    value={`${normalizeBenchmarkScore30(selectedBenchmark).toFixed(2)}/30`}
-                  />
-                  <ResultStat label="Chênh lệch" value={formatSignedDiff(chance.diff)} />
-                  <ResultStat
-                    label="Khả năng trúng tuyển"
-                    value={chance.label}
-                    className={getChanceClass(chance.level)}
-                  />
-                </div>
+            <div className="rounded-lg border border-border bg-muted/20 p-4 text-sm">
+              <div className="font-semibold">
+                {selectedProgram?.code} - {selectedProgram?.name}
               </div>
-            ) : null}
+              <div className="mt-2 flex flex-wrap gap-2 text-xs text-muted-foreground">
+                <span>Phương thức: {METHOD_LABELS[method]}</span>
+                {method === "THPT" ? <span>Tổ hợp: {combinationCode}</span> : null}
+                <span>Năm tuyển sinh: {scoreResult.year}</span>
+              </div>
+              <p className="mt-3 text-muted-foreground">{comparison.message}</p>
+            </div>
 
-            {chance ? (
-              <p className="text-sm font-medium">{chance.message}</p>
-            ) : null}
+            <p className="text-xs text-muted-foreground">
+              Công thức: {scoreResult.formulaUsed}
+            </p>
 
             <p className="rounded-lg bg-muted/40 p-3 text-xs leading-5 text-muted-foreground">
               {DISCLAIMER}
@@ -589,6 +713,15 @@ export function AdmissionCalculatorSection({
         ) : null}
       </CardContent>
     </Card>
+  );
+}
+
+function InfoPill({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-lg border border-border bg-muted/30 p-3">
+      <div className="text-xs font-semibold uppercase text-muted-foreground">{label}</div>
+      <div className="mt-1 font-medium text-foreground">{value}</div>
+    </div>
   );
 }
 
@@ -603,12 +736,8 @@ function ResultStat({
 }) {
   return (
     <div className="rounded-lg border border-border p-4">
-      <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-        {label}
-      </div>
-      <div className={`mt-1 font-display text-xl font-bold ${className ?? ""}`}>
-        {value}
-      </div>
+      <div className="text-xs font-semibold uppercase text-muted-foreground">{label}</div>
+      <div className={`mt-1 text-xl font-bold ${className ?? ""}`}>{value}</div>
     </div>
   );
 }
