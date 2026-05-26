@@ -1,293 +1,733 @@
 import Link from "next/link";
-import {
-  ArrowLeft,
-  ExternalLink,
-  GraduationCap,
-  Link as LinkIcon,
-  MapPin,
-  Sparkles,
-  Star,
-} from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { getSupabaseClient, hasSupabaseConfig } from "@/app/lib/supabase";
-import { InlineEditable } from "@/components/zpath/InlineEditable";
+import hustProMaxData from "@/data/hust-pro-max.json";
 import type { University } from "@/data/universities";
-
-interface ProgramRow {
-  name: string;
-  program_code: string;
-  admission_score_2025?: number | null;
-  tuition_per_semester?: number | null;
-}
+import { createSchoolSlug } from "@/lib/school-slug";
+import {
+  findVisibleUnimapUniversityByRouteParam,
+  getVisibleUnimapUniversities,
+  isVisibleUnimapCode,
+  UNIMAP_VISIBLE_CODES,
+} from "@/lib/unimap-visible-schools";
+import {
+  getProgramCombinations,
+  getSchoolAdmissionInfo,
+  getSchoolAdmissionMethods,
+  getSchoolBenchmarks,
+  getSchoolBySlug,
+  getSchoolPrograms,
+  getSchoolSlugs,
+  getSchoolTuitionFees,
+  getSubjectCombinations,
+} from "@/src/lib/admission-data";
+import type {
+  AdmissionInfo,
+  AdmissionMethodRecord,
+  AdmissionProgram,
+  Benchmark,
+  ProgramCombination,
+  School,
+  SubjectCombination,
+  TuitionFee,
+} from "@/src/types/admission-data";
+import { AdmissionCalculatorSection } from "@/src/components/admission/AdmissionCalculatorSection";
+import { AdmissionInfoSection } from "@/src/components/admission/AdmissionInfoSection";
+import { AdmissionProgramsSection } from "@/src/components/admission/AdmissionProgramsSection";
+import {
+  AdmissionSectionNavigator,
+  PRO_MAX_NAV_ITEMS,
+} from "@/src/components/admission/AdmissionSectionNavigator";
+import { BenchmarksSection } from "@/src/components/admission/BenchmarksSection";
+import {
+  ProMaxCalculatorLinkSection,
+  ProMaxContentSection,
+  ProMaxMediaGrid,
+  ProMaxPlaceholderSection,
+  type ProMaxContentBlock,
+} from "@/src/components/admission/ProMaxSections";
+import { SchoolHeader } from "@/src/components/admission/SchoolHeader";
+import { SchoolOverviewSection } from "@/src/components/admission/SchoolOverviewSection";
+import { SubjectCombinationsSection } from "@/src/components/admission/SubjectCombinationsSection";
+import { TuitionSection } from "@/src/components/admission/TuitionSection";
 
 interface UniversityDetailPageProps {
   params: Promise<{
     code: string;
   }>;
+  searchParams?: Promise<{
+    year?: string | string[];
+    programYear?: string | string[];
+    benchmarkYear?: string | string[];
+    tuitionYear?: string | string[];
+    variant?: string | string[];
+  }>;
+}
+
+const FALLBACK_YEAR = 2025;
+const PROGRAMS_DEFAULT_YEAR = 2026;
+const BENCHMARK_REFERENCE_YEAR = 2025;
+const BENCHMARKS_DEFAULT_YEAR = 2025;
+const TUITION_DEFAULT_YEAR = 2025;
+const ADMISSION_YEAR_OPTIONS = [2026, 2025, 2024, 2023] as const;
+const PRO_MAX_VARIANT = "pro-max";
+const PRO_MAX_PLACEHOLDER_MESSAGE =
+  "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D";
+
+type AdmissionPageVariant = "default" | typeof PRO_MAX_VARIANT;
+
+type ProMaxSchoolContent = {
+  overview: ProMaxContentBlock[];
+  admissionInfo: ProMaxContentBlock[];
+  combinations: ProMaxContentBlock[];
+  placeholders: {
+    programs?: string;
+    benchmarks?: string;
+    tuition?: string;
+  };
+};
+
+const PRO_MAX_CONTENT_BY_CODE = hustProMaxData as Record<string, ProMaxSchoolContent>;
+
+const FALLBACK_SUBJECT_COMBINATIONS: SubjectCombination[] = [
+  {
+    id: "fallback-a00",
+    code: "A00",
+    subjects: ["Toán", "Vật lý", "Hóa học"],
+    description: "Tổ hợp xét tuyển phổ biến cho khối kỹ thuật, kinh tế và công nghệ.",
+  },
+  {
+    id: "fallback-a01",
+    code: "A01",
+    subjects: ["Toán", "Vật lý", "Tiếng Anh"],
+    description: "Tổ hợp phù hợp với các chương trình có yêu cầu ngoại ngữ.",
+  },
+  {
+    id: "fallback-d01",
+    code: "D01",
+    subjects: ["Toán", "Ngữ văn", "Tiếng Anh"],
+    description: "Tổ hợp phổ biến cho nhóm kinh tế, kinh doanh và xã hội.",
+  },
+];
+
+async function getAdmissionSchoolBySlug(slug: string) {
+  try {
+    return await getSchoolBySlug(slug);
+  } catch (error) {
+    console.error("Cannot load admission school detail:", error);
+    return null;
+  }
+}
+
+function createFallbackSchool(university: University): School {
+  return {
+    id: `fallback-school-${university.code.toLowerCase()}`,
+    code: university.code,
+    name: university.name,
+    slug: createSchoolSlug(university.name),
+    english_name: null,
+    type: university.code === "VINUNI" ? "Tư thục" : "Công lập",
+    city: university.city,
+    address: null,
+    website: university.website ?? null,
+    fanpage: null,
+    hero_image_url: university.heroImageUrl ?? null,
+    description: university.about,
+    source_url: university.website ?? null,
+    last_checked_at: null,
+    created_at: null,
+    updated_at: null,
+  };
+}
+
+function applyUniversityMediaToSchool(school: School, university: University): School {
+  return {
+    ...school,
+    hero_image_url: university.heroImageUrl ?? school.hero_image_url ?? null,
+  };
+}
+
+function getSelectedAdmissionYear(
+  yearParam: string | string[] | undefined,
+  defaultYear = FALLBACK_YEAR,
+) {
+  const rawYear = Array.isArray(yearParam) ? yearParam[0] : yearParam;
+  const parsedYear = rawYear ? Number.parseInt(rawYear, 10) : defaultYear;
+
+  return ADMISSION_YEAR_OPTIONS.includes(parsedYear as (typeof ADMISSION_YEAR_OPTIONS)[number])
+    ? parsedYear
+    : defaultYear;
+}
+
+function getSelectedAdmissionVariant(
+  variantParam: string | string[] | undefined,
+): AdmissionPageVariant {
+  const rawVariant = Array.isArray(variantParam) ? variantParam[0] : variantParam;
+  return rawVariant === PRO_MAX_VARIANT ? PRO_MAX_VARIANT : "default";
+}
+
+function createVariantHref(
+  routeParam: string,
+  selectedProgramYear: number,
+  selectedBenchmarkYear: number,
+  selectedTuitionYear: number,
+  variant: AdmissionPageVariant,
+) {
+  const params = new URLSearchParams();
+  if (selectedProgramYear !== PROGRAMS_DEFAULT_YEAR) {
+    params.set("programYear", String(selectedProgramYear));
+  }
+  if (selectedBenchmarkYear !== BENCHMARKS_DEFAULT_YEAR) {
+    params.set("benchmarkYear", String(selectedBenchmarkYear));
+  }
+  if (selectedTuitionYear !== TUITION_DEFAULT_YEAR) {
+    params.set("tuitionYear", String(selectedTuitionYear));
+  }
+  if (variant === PRO_MAX_VARIANT) {
+    params.set("variant", PRO_MAX_VARIANT);
+  }
+
+  const query = params.toString();
+  return query ? `/unimap/${routeParam}?${query}` : `/unimap/${routeParam}`;
+}
+
+function createFallbackPrograms(university: University, year: number): AdmissionProgram[] {
+  return (university.programs ?? []).map((program, index) => ({
+    id: `fallback-program-${university.code.toLowerCase()}-${index}`,
+    school_code: university.code,
+    program_code: program.programCode,
+    program_name: program.name,
+    major_code: program.majorCode ?? null,
+    major_name: program.majorCode ?? null,
+    year,
+    quota: null,
+    degree_level: "Đại học",
+    training_type: "Chính quy",
+    note: "Dữ liệu demo UniMap, cần đối chiếu đề án tuyển sinh chính thức.",
+    source_url: university.website ?? null,
+    created_at: null,
+  }));
+}
+
+function createFallbackMethods(schoolCode: string, year: number): AdmissionMethodRecord[] {
+  return [
+    ["THPT", "Xét tuyển theo điểm thi tốt nghiệp THPT"],
+    ["TSA", "Xét tuyển theo điểm đánh giá tư duy/năng lực"],
+    ["XTTN", "Xét tuyển tài năng hoặc phương thức riêng"],
+  ].map(([methodCode, methodName]) => ({
+    id: `fallback-method-${schoolCode.toLowerCase()}-${methodCode.toLowerCase()}`,
+    school_code: schoolCode,
+    method_code: methodCode,
+    method_name: methodName,
+    year,
+    description: "Phương thức demo để giữ cấu trúc trang giống HUST trong MVP.",
+    is_active: true,
+    source_url: null,
+    created_at: null,
+  }));
+}
+
+function createFallbackAdmissionInfo(school: School, year: number): AdmissionInfo {
+  return {
+    id: `fallback-admission-info-${school.code.toLowerCase()}`,
+    school_code: school.code,
+    year,
+    total_quota: null,
+    admission_scope: "Toàn quốc",
+    application_timeline: "Cập nhật theo đề án tuyển sinh từng năm.",
+    eligibility: "Theo quy chế tuyển sinh đại học hiện hành.",
+    notes: "Dữ liệu demo UniMap, cần đối chiếu thông báo chính thức của trường.",
+    source_url: school.website,
+    created_at: null,
+  };
+}
+
+function createFallbackBenchmarks(
+  university: University,
+  programs: AdmissionProgram[],
+  year: number,
+): Benchmark[] {
+  const scoreByProgramCode = new Map(
+    (university.programs ?? []).map((program) => [
+      program.programCode,
+      program.admissionScore2025,
+    ]),
+  );
+
+  return programs.flatMap((program) => {
+    const score = program.program_code
+      ? scoreByProgramCode.get(program.program_code)
+      : undefined;
+    if (score === undefined) return [];
+
+    return {
+      id: `fallback-benchmark-${program.id}`,
+      school_code: university.code,
+      program_id: program.id,
+      year,
+      method_code: "THPT",
+      combination_code: null,
+      score,
+      scale: 30,
+      note: "Mốc demo UniMap, chưa phải dữ liệu tuyển sinh chính thức.",
+      source_url: university.website ?? null,
+      created_at: null,
+    } satisfies Benchmark;
+  });
+}
+
+function createFallbackTuitionFees(
+  university: University,
+  programs: AdmissionProgram[],
+  year: number,
+): TuitionFee[] {
+  const tuitionByProgramCode = new Map(
+    (university.programs ?? []).map((program) => [
+      program.programCode,
+      program.tuitionPerSemester * 1_000_000,
+    ]),
+  );
+
+  return programs.flatMap((program) => {
+    const tuition = program.program_code
+      ? tuitionByProgramCode.get(program.program_code)
+      : undefined;
+    if (tuition === undefined) return [];
+
+    return {
+      id: `fallback-tuition-${program.id}`,
+      school_code: university.code,
+      program_id: program.id,
+      year,
+      min_fee: tuition,
+      max_fee: tuition,
+      currency: "VND",
+      unit: "học kỳ",
+      description: "Học phí demo theo dữ liệu UniMap.",
+      note: "Cần đối chiếu biểu phí chính thức của trường.",
+      source_url: university.website ?? null,
+      created_at: null,
+    } satisfies TuitionFee;
+  });
+}
+
+function createFallbackProgramCombinations(
+  programs: AdmissionProgram[],
+  year: number,
+): ProgramCombination[] {
+  return programs.flatMap((program) =>
+    ["A00", "A01", "D01"].map((combinationCode) => ({
+      id: `fallback-combination-${program.id}-${combinationCode.toLowerCase()}`,
+      program_id: program.id,
+      combination_code: combinationCode,
+      year,
+      method_code: "THPT",
+      source_url: program.source_url,
+    })),
+  );
+}
+
+async function loadOrFallback<T>(
+  load: () => Promise<T>,
+  fallback: T,
+  label: string,
+) {
+  try {
+    return await load();
+  } catch (error) {
+    console.error(`Cannot load ${label}:`, error);
+    return fallback;
+  }
+}
+
+async function renderAdmissionSchoolDetail(
+  school: School,
+  university: University,
+  selectedProgramYear: number,
+  selectedBenchmarkYear: number,
+  selectedTuitionYear: number,
+  selectedVariant: AdmissionPageVariant,
+  routeParam: string,
+) {
+  const canUseProMax = school.code === "HUST";
+  const isProMax = canUseProMax && selectedVariant === PRO_MAX_VARIANT;
+  const proMaxContent = PRO_MAX_CONTENT_BY_CODE[school.code];
+  const defaultCalculatorHref = `${createVariantHref(
+    routeParam,
+    selectedProgramYear,
+    selectedBenchmarkYear,
+    selectedTuitionYear,
+    "default",
+  )}#calculator`;
+  const variantLinks = canUseProMax
+    ? [
+        {
+          label: "Mặc định",
+          href: createVariantHref(
+            routeParam,
+            selectedProgramYear,
+            selectedBenchmarkYear,
+            selectedTuitionYear,
+            "default",
+          ),
+          isActive: !isProMax,
+        },
+        {
+          label: "Pro Max :))",
+          href: createVariantHref(
+            routeParam,
+            selectedProgramYear,
+            selectedBenchmarkYear,
+            selectedTuitionYear,
+            PRO_MAX_VARIANT,
+          ),
+          isActive: isProMax,
+        },
+      ]
+    : [];
+  const canUseStaticFallback = Boolean(university.programs?.length);
+  const fallbackPrograms = canUseStaticFallback
+    ? createFallbackPrograms(university, selectedProgramYear)
+    : [];
+  const fallbackBenchmarkPrograms = canUseStaticFallback
+    ? createFallbackPrograms(university, selectedBenchmarkYear)
+    : [];
+  const fallbackTuitionPrograms = canUseStaticFallback
+    ? createFallbackPrograms(university, selectedTuitionYear)
+    : [];
+  const fallbackMethods = canUseStaticFallback
+    ? createFallbackMethods(school.code, selectedProgramYear)
+    : [];
+  const fallbackCalculatorPrograms = canUseStaticFallback
+    ? createFallbackPrograms(university, BENCHMARK_REFERENCE_YEAR)
+    : [];
+  const fallbackCalculatorMethods = canUseStaticFallback
+    ? createFallbackMethods(school.code, BENCHMARK_REFERENCE_YEAR)
+    : [];
+  const fallbackAdmissionInfo = canUseStaticFallback
+    ? createFallbackAdmissionInfo(school, selectedProgramYear)
+    : null;
+
+  const [
+    loadedPrograms,
+    loadedMethods,
+    loadedBenchmarks,
+    loadedTuitionFees,
+    loadedAdmissionInfo,
+    loadedSubjectCombinations,
+    loadedBenchmarkPrograms,
+    loadedTuitionPrograms,
+    loadedCalculatorPrograms,
+    loadedCalculatorMethods,
+    loadedCalculatorBenchmarks,
+  ] =
+    await Promise.all([
+      loadOrFallback(() => getSchoolPrograms(school.code, selectedProgramYear), [], "school programs"),
+      loadOrFallback(
+        () => getSchoolAdmissionMethods(school.code, selectedProgramYear),
+        [],
+        "admission methods",
+      ),
+      loadOrFallback(
+        () => getSchoolBenchmarks(school.code, selectedBenchmarkYear),
+        [],
+        "benchmarks",
+      ),
+      loadOrFallback(
+        () => getSchoolTuitionFees(school.code, selectedTuitionYear),
+        [],
+        "tuition fees",
+      ),
+      loadOrFallback(
+        () => getSchoolAdmissionInfo(school.code, selectedProgramYear),
+        null,
+        "admission info",
+      ),
+      loadOrFallback(() => getSubjectCombinations(), [], "subject combinations"),
+      loadOrFallback(
+        () => getSchoolPrograms(school.code, selectedBenchmarkYear),
+        [],
+        "benchmark programs",
+      ),
+      loadOrFallback(
+        () => getSchoolPrograms(school.code, selectedTuitionYear),
+        [],
+        "tuition programs",
+      ),
+      loadOrFallback(
+        () => getSchoolPrograms(school.code, BENCHMARK_REFERENCE_YEAR),
+        [],
+        "calculator programs",
+      ),
+      loadOrFallback(
+        () => getSchoolAdmissionMethods(school.code, BENCHMARK_REFERENCE_YEAR),
+        [],
+        "calculator admission methods",
+      ),
+      loadOrFallback(
+        () => getSchoolBenchmarks(school.code, BENCHMARK_REFERENCE_YEAR),
+        [],
+        "calculator benchmarks",
+      ),
+    ]);
+
+  const programs = loadedPrograms.length ? loadedPrograms : fallbackPrograms;
+  const methods = loadedMethods.length ? loadedMethods : fallbackMethods;
+  const benchmarkPrograms = loadedBenchmarkPrograms.length
+    ? loadedBenchmarkPrograms
+    : fallbackBenchmarkPrograms;
+  const tuitionPrograms = loadedTuitionPrograms.length
+    ? loadedTuitionPrograms
+    : fallbackTuitionPrograms;
+  const benchmarks = loadedBenchmarks.length
+    ? loadedBenchmarks
+    : canUseStaticFallback
+      ? createFallbackBenchmarks(university, benchmarkPrograms, selectedBenchmarkYear)
+      : [];
+  const tuitionFees = loadedTuitionFees.length
+    ? loadedTuitionFees
+    : canUseStaticFallback
+      ? createFallbackTuitionFees(university, tuitionPrograms, selectedTuitionYear)
+      : [];
+  const admissionInfo = loadedAdmissionInfo ?? fallbackAdmissionInfo;
+  const calculatorPrograms = loadedCalculatorPrograms.length
+    ? loadedCalculatorPrograms
+    : fallbackCalculatorPrograms;
+  const calculatorMethods = loadedCalculatorMethods.length
+    ? loadedCalculatorMethods
+    : fallbackCalculatorMethods;
+  const calculatorBenchmarks = loadedCalculatorBenchmarks.length
+    ? loadedCalculatorBenchmarks
+    : canUseStaticFallback
+      ? createFallbackBenchmarks(university, calculatorPrograms, BENCHMARK_REFERENCE_YEAR)
+      : [];
+  const subjectCombinations = loadedSubjectCombinations.length
+    ? loadedSubjectCombinations
+    : FALLBACK_SUBJECT_COMBINATIONS;
+  const programCombinations = loadedPrograms.length
+    ? await loadOrFallback(
+        () => getProgramCombinations(programs.map((program) => program.id), selectedProgramYear),
+        [],
+        "program combinations",
+      )
+    : canUseStaticFallback
+      ? createFallbackProgramCombinations(programs, selectedProgramYear)
+      : [];
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <SchoolHeader school={school} variantLinks={variantLinks} />
+
+      <div className="container-page grid gap-6 py-10 lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start">
+        <AdmissionSectionNavigator items={isProMax ? PRO_MAX_NAV_ITEMS : undefined} />
+
+        <div className="space-y-8">
+          {isProMax && proMaxContent ? (
+            <>
+              <section id="calculator" className="scroll-mt-24">
+                <ProMaxCalculatorLinkSection href={defaultCalculatorHref} />
+              </section>
+
+              <section id="overview" className="scroll-mt-24">
+                <ProMaxContentSection title="Tổng quan" blocks={proMaxContent.overview} />
+              </section>
+
+              <section id="admission-info" className="scroll-mt-24">
+                <ProMaxContentSection
+                  title="Thông tin tuyển sinh"
+                  blocks={proMaxContent.admissionInfo}
+                />
+              </section>
+
+              <section id="programs" className="scroll-mt-24">
+                <ProMaxPlaceholderSection
+                  title="Chương trình tuyển sinh"
+                  message={proMaxContent.placeholders.programs ?? PRO_MAX_PLACEHOLDER_MESSAGE}
+                />
+              </section>
+
+              <section id="combinations" className="scroll-mt-24">
+                <ProMaxMediaGrid
+                  title="Tổ hợp xét tuyển"
+                  blocks={proMaxContent.combinations}
+                />
+              </section>
+
+              <section id="benchmarks" className="scroll-mt-24">
+                <ProMaxPlaceholderSection
+                  title="Điểm chuẩn tham khảo"
+                  message={proMaxContent.placeholders.benchmarks ?? PRO_MAX_PLACEHOLDER_MESSAGE}
+                />
+              </section>
+
+              <section id="tuition" className="scroll-mt-24">
+                <ProMaxPlaceholderSection
+                  title="Học phí"
+                  message={proMaxContent.placeholders.tuition ?? PRO_MAX_PLACEHOLDER_MESSAGE}
+                />
+              </section>
+            </>
+          ) : (
+            <>
+              <section id="overview" className="scroll-mt-24">
+                <SchoolOverviewSection school={school} />
+              </section>
+
+              <section id="admission-info" className="scroll-mt-24">
+                <AdmissionInfoSection
+                  admissionInfo={admissionInfo}
+                  methods={methods}
+                  selectedYear={selectedProgramYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </section>
+
+              <section id="programs" className="scroll-mt-24">
+                <AdmissionProgramsSection
+                  programs={programs}
+                  selectedYear={selectedProgramYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </section>
+
+              <section id="combinations" className="scroll-mt-24">
+                <SubjectCombinationsSection
+                  subjectCombinations={subjectCombinations}
+                  programCombinations={programCombinations}
+                />
+              </section>
+
+              <section id="benchmarks" className="scroll-mt-24">
+                <BenchmarksSection
+                  benchmarks={benchmarks}
+                  programs={benchmarkPrograms}
+                  selectedYear={selectedBenchmarkYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </section>
+
+              <section id="tuition" className="scroll-mt-24">
+                <TuitionSection
+                  tuitionFees={tuitionFees}
+                  programs={tuitionPrograms}
+                  selectedYear={selectedTuitionYear}
+                  availableYears={ADMISSION_YEAR_OPTIONS}
+                />
+              </section>
+
+              <section id="calculator" className="scroll-mt-24">
+                <AdmissionCalculatorSection
+                  schoolCode={school.code}
+                  programs={calculatorPrograms}
+                  benchmarks={calculatorBenchmarks}
+                  methods={calculatorMethods}
+                />
+              </section>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export async function generateStaticParams() {
-  if (!hasSupabaseConfig()) return [];
+  const params = new Set<string>();
 
   try {
-    const supabase = getSupabaseClient();
-    const { data, error } = await supabase.from("universities").select("code");
-    if (error || !data) return [];
-    return data.map((university) => ({
-      code: university.code.toLowerCase(),
-    }));
+    const slugs = await getSchoolSlugs(UNIMAP_VISIBLE_CODES);
+    slugs.forEach((slug) => params.add(slug));
   } catch (error) {
-    console.error("Cannot generate university static params:", error);
-    return [];
+    console.error("Cannot generate school static params:", error);
   }
+
+  getVisibleUnimapUniversities().forEach((university) => {
+    params.add(university.code.toLowerCase());
+    params.add(createSchoolSlug(university.name));
+  });
+
+  return Array.from(params).map((code) => ({ code }));
 }
 
 export async function generateMetadata({ params }: UniversityDetailPageProps) {
   const { code } = await params;
-  if (!hasSupabaseConfig()) {
+  const routeParam = code.toLowerCase();
+  const university = findVisibleUnimapUniversityByRouteParam(routeParam);
+  if (!university) {
     return {
       title: "Không tìm thấy trường",
     };
   }
 
-  try {
-    const supabase = getSupabaseClient();
-    const { data: university } = await supabase.from("universities").select("name").eq("code", code.toUpperCase()).maybeSingle();
-
+  const school = await getAdmissionSchoolBySlug(routeParam);
+  if (school) {
     return {
-      title: university ? `${code.toUpperCase()} - ${university.name}` : "Không tìm thấy trường",
-    };
-  } catch (error) {
-    console.error("Cannot generate university metadata:", error);
-    return {
-      title: "Không tìm thấy trường",
+      title: `${school.name} - Tuyển sinh ZPATH`,
+      description: school.description ?? `Thông tin tuyển sinh ${school.name}`,
     };
   }
+
+  return {
+    title: `${university.name} - Tuyển sinh ZPATH`,
+    description: university.about,
+  };
 }
 
-export default async function UniversityDetailPage({ params }: UniversityDetailPageProps) {
+export default async function UniversityDetailPage({
+  params,
+  searchParams,
+}: UniversityDetailPageProps) {
   const { code } = await params;
-  let supabase: ReturnType<typeof getSupabaseClient> | null = null;
-  let universityData: unknown = null;
+  const resolvedSearchParams = searchParams ? await searchParams : undefined;
+  const selectedProgramYear = getSelectedAdmissionYear(
+    resolvedSearchParams?.programYear ?? resolvedSearchParams?.year,
+    PROGRAMS_DEFAULT_YEAR,
+  );
+  const selectedBenchmarkYear = getSelectedAdmissionYear(
+    resolvedSearchParams?.benchmarkYear,
+    BENCHMARKS_DEFAULT_YEAR,
+  );
+  const selectedTuitionYear = getSelectedAdmissionYear(
+    resolvedSearchParams?.tuitionYear,
+    TUITION_DEFAULT_YEAR,
+  );
+  const selectedVariant = getSelectedAdmissionVariant(resolvedSearchParams?.variant);
+  const routeParam = code.toLowerCase();
+  const university = findVisibleUnimapUniversityByRouteParam(routeParam);
 
-  if (hasSupabaseConfig()) {
-    try {
-      supabase = getSupabaseClient();
-      const { data, error } = await supabase.from("universities").select("*").eq("code", code.toUpperCase()).maybeSingle();
-      if (error) throw error;
-      universityData = data;
-    } catch (error) {
-      console.error("Cannot load university detail:", error);
-    }
+  if (!university) {
+    return <UniversityNotFound code={code} />;
   }
 
-  const university = universityData as University | null;
+  const school = await getAdmissionSchoolBySlug(routeParam);
+  const visibleSchool =
+    school && isVisibleUnimapCode(school.code)
+      ? applyUniversityMediaToSchool(school, university)
+      : createFallbackSchool(university);
 
-  if (!university || !supabase) {
-    return (
-      <div className="min-h-screen bg-background text-foreground">
-        <div className="container-page flex flex-col items-center justify-center py-24 text-center">
-          <GraduationCap className="h-14 w-14 text-muted-foreground" />
-          <h1 className="mt-4 font-display text-3xl font-bold">Không tìm thấy trường</h1>
-          <p className="mt-2 text-muted-foreground">Trường &quot;{code}&quot; không có trong hệ thống.</p>
-          <Button asChild className="mt-6" variant="hero">
-            <Link href="/unimap">Quay lại danh sách</Link>
-          </Button>
-        </div>
-      </div>
-    );
-  }
+  return renderAdmissionSchoolDetail(
+    visibleSchool,
+    university,
+    selectedProgramYear,
+    selectedBenchmarkYear,
+    selectedTuitionYear,
+    selectedVariant,
+    routeParam,
+  );
+}
 
-  let programsData: unknown[] | null = null;
-  try {
-    const { data, error } = await supabase.from("programs").select("*").eq("university_code", university.code).order("program_code");
-    if (error) throw error;
-    programsData = data;
-  } catch (error) {
-    console.error("Cannot load university programs:", error);
-  }
-
-  const programs = (programsData ?? []) as ProgramRow[];
-  const channels = university.channels ?? [];
-
+function UniversityNotFound({ code }: { code: string }) {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <section className={`relative overflow-hidden bg-gradient-to-br ${university.heroGradient} py-16 text-white md:py-24`}>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.25),transparent_60%)]" />
-
-        <div className="container-page relative">
-          <Link
-            href="/unimap"
-            className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1.5 text-sm font-medium backdrop-blur-sm transition-colors hover:bg-white/25"
-          >
-            <ArrowLeft className="h-4 w-4" /> UniMap
-          </Link>
-
-          <div className="mt-6 grid items-center gap-8 md:grid-cols-[1fr_auto]">
-            <div>
-              <div className="font-display text-5xl font-extrabold drop-shadow md:text-7xl">
-                {university.code}
-              </div>
-              <h1 className="mt-3 max-w-2xl text-xl font-semibold md:text-2xl">
-                {university.name}
-              </h1>
-              <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 backdrop-blur-sm">
-                  <MapPin className="h-3.5 w-3.5" /> {university.city}
-                </span>
-                {university.tags?.map((tag) => (
-                  <span key={tag} className="rounded-full bg-white/20 px-3 py-1 font-semibold backdrop-blur-sm">
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              {university.website && (
-                <Button asChild variant="outline" className="border-white/40 bg-white/10 text-white hover:bg-white/20">
-                  <a href={university.website} target="_blank" rel="noreferrer">
-                    Website <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
-              )}
-              <Button asChild variant="lime">
-                <Link href="/landing#try">Tính tỉ lệ đỗ</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="container-page grid gap-10 py-12 md:grid-cols-3">
-        <div className="space-y-10 md:col-span-2">
-          <section>
-            <h2 className="flex items-center gap-2 font-display text-2xl font-bold">
-              <Sparkles className="h-5 w-5 text-primary" /> Giới thiệu
-            </h2>
-            <p className="mt-3 leading-relaxed text-foreground/80">
-              <InlineEditable table="universities" id={university.code} field="about" value={university.about} />
-            </p>
-          </section>
-
-          <section>
-            <h2 className="flex items-center gap-2 font-display text-2xl font-bold">
-              <Star className="h-5 w-5 text-primary" /> Điểm nổi bật
-            </h2>
-            <ul className="mt-4 space-y-3">
-              {university.highlights?.map((highlight) => (
-                <li key={highlight} className="flex gap-3 rounded-xl border border-border bg-card p-4">
-                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                  <span className="text-foreground/80">{highlight}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="flex items-center gap-2 font-display text-2xl font-bold">
-              <GraduationCap className="h-5 w-5 text-primary" /> Ngành đào tạo
-            </h2>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Dữ liệu đang dùng để demo frontend. Phase sau có thể chuyển sang Supabase.
-            </p>
-
-            {programs.length === 0 ? (
-              <div className="mt-4 rounded-xl border-2 border-dashed border-border bg-muted/30 p-6 text-center text-sm text-muted-foreground">
-                Chưa cập nhật danh sách ngành cho trường này.
-              </div>
-            ) : (
-              <div className="mt-4 overflow-hidden rounded-2xl border-2 border-border bg-card">
-                <div className="overflow-x-auto">
-                  <table className="w-full min-w-[680px] text-sm">
-                    <thead className="bg-muted/40 text-left">
-                      <tr className="border-b border-border">
-                        <th className="w-12 px-4 py-3 text-center font-semibold">STT</th>
-                        <th className="px-4 py-3 font-semibold">Tên ngành</th>
-                        <th className="w-28 px-4 py-3 font-semibold">Mã ngành</th>
-                        <th className="w-36 px-4 py-3 text-right font-semibold">Điểm chuẩn 2025</th>
-                        <th className="w-40 px-4 py-3 text-right font-semibold">Học phí 2025</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {programs.map((program, index) => (
-                        <tr key={`${program.program_code}-${index}`} className="border-b border-border last:border-0">
-                          <td className="px-4 py-3 text-center font-semibold text-muted-foreground">
-                            {index + 1}
-                          </td>
-                          <td className="px-4 py-3 font-semibold">
-                            {program.name}
-                          </td>
-                          <td className="px-4 py-3 font-mono text-xs text-muted-foreground">
-                            {program.program_code}
-                          </td>
-                          <td className="px-4 py-3 text-right font-bold text-tier-high">
-                            {program.admission_score_2025?.toFixed(2) || "N/A"}
-                          </td>
-                          <td className="px-4 py-3 text-right font-semibold">
-                            {program.tuition_per_semester === 0 ? (
-                              <span className="text-emerald-600">Miễn phí</span>
-                            ) : (
-                              <>
-                                {program.tuition_per_semester}{" "}
-                                <span className="text-xs font-normal text-muted-foreground">tr/kỳ</span>
-                              </>
-                            )}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            )}
-          </section>
-        </div>
-
-        <aside className="space-y-4">
-          <div className="rounded-2xl border-2 border-border bg-card p-6">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
-              <LinkIcon className="h-3.5 w-3.5" /> Các kênh thông tin chính
-            </div>
-            <ul className="mt-4 space-y-2">
-              {channels.length === 0 && (
-                <li className="text-sm text-muted-foreground">Chưa có dữ liệu kênh thông tin.</li>
-              )}
-              {channels.map((channel) => (
-                <li key={channel.url}>
-                  <a
-                    href={channel.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group flex items-center gap-3 rounded-xl border border-border bg-background px-3 py-2 text-sm font-semibold transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:text-primary"
-                  >
-                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                      <LinkIcon className="h-4 w-4" />
-                    </span>
-                    <span className="flex-1 truncate">{channel.label}</span>
-                    <ExternalLink className="h-3.5 w-3.5 opacity-50 group-hover:opacity-100" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-secondary/10 p-6">
-            <div className="text-xs font-bold uppercase tracking-wider text-primary">Bạn đã biết?</div>
-            <div className="mt-2 font-display text-lg font-bold">
-              Dùng ZPATH để tính tỉ lệ đỗ vào {university.code}
-            </div>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Nhập điểm khảo sát và kết quả SBTI để xem bạn có bao nhiêu cơ hội.
-            </p>
-            <Button asChild variant="hero" className="mt-4 w-full">
-              <Link href="/landing#try">Dùng thử ngay</Link>
-            </Button>
-          </div>
-        </aside>
-      </section>
+      <div className="container-page flex flex-col items-center justify-center py-24 text-center">
+        <GraduationCap className="h-14 w-14 text-muted-foreground" />
+        <h1 className="mt-4 font-display text-3xl font-bold">Không tìm thấy trường</h1>
+        <p className="mt-2 text-muted-foreground">Trường &quot;{code}&quot; không có trong UniMap.</p>
+        <Button asChild className="mt-6" variant="hero">
+          <Link href="/unimap">Quay lại danh sách</Link>
+        </Button>
+      </div>
     </div>
   );
 }

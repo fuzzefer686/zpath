@@ -10,7 +10,6 @@ import {
   X,
 } from "lucide-react";
 
-import { supabase } from "@/app/lib/supabase";
 import { Button } from "@/components/ui/button";
 import type { AdvisorWeightContribution } from "@/lib/advisor-data";
 import { ADVISOR_WEIGHT_FIELDS } from "@/lib/advisor-weight-schema";
@@ -39,27 +38,12 @@ export function AdvisorApplyChangesClient() {
   const allSelected =
     contributions.length > 0 && selectedIds.length === contributions.length;
 
-  async function getAccessToken() {
-    const { data } = await supabase.auth.getSession();
-    return data.session?.access_token ?? null;
-  }
-
   useEffect(() => {
     let isActive = true;
 
     async function loadContributions() {
       try {
-        const token = await getAccessToken();
-        if (!token) {
-          if (isActive) setLoadState("forbidden");
-          return;
-        }
-
-        const res = await fetch("/api/advisor/apply-changes", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const res = await fetch("/api/advisor/apply-changes");
 
         if (res.status === 401 || res.status === 403) {
           if (isActive) setLoadState("forbidden");
@@ -111,14 +95,10 @@ export function AdvisorApplyChangesClient() {
     setMessage("");
 
     try {
-      const token = await getAccessToken();
-      if (!token) throw new Error("Chưa đăng nhập.");
-
       const res = await fetch("/api/advisor/apply-changes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({ contributionIds: pendingApplyIds }),
       });

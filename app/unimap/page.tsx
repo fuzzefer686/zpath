@@ -8,8 +8,12 @@ import { Input } from "@/components/ui/input";
 import { UniversityCard } from "@/components/zpath/UniversityCard";
 import { supabase } from "@/app/lib/supabase";
 import type { University } from "@/data/universities";
+import {
+  getVisibleUnimapUniversities,
+  UNIMAP_VISIBLE_CODES,
+} from "@/lib/unimap-visible-schools";
 
-const SUGGESTED = ["HUST", "FTU", "NEU", "HNUE", "VNU", "UEH"];
+const SUGGESTED = [...UNIMAP_VISIBLE_CODES];
 
 export default function UniMapPage() {
   const [query, setQuery] = useState("");
@@ -25,11 +29,14 @@ export default function UniMapPage() {
         const { data, error } = await supabase.from("universities").select("*").order("name");
         if (error) throw error;
         if (!isCancelled) {
-          setUniversities((data ?? []) as University[]);
+          setUniversities(getVisibleUnimapUniversities(data ?? []));
         }
       } catch (err) {
         console.error("Error fetching universities:", err);
-        if (!isCancelled) setError(true);
+        if (!isCancelled) {
+          setUniversities(getVisibleUnimapUniversities());
+          setError(false);
+        }
       } finally {
         if (!isCancelled) setIsLoading(false);
       }

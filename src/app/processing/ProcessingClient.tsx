@@ -4,19 +4,22 @@ import { useEffect, useState } from "react";
 import { Loader2 } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 
+import { useAuth } from "@/components/zpath/AuthProvider";
 import {
   isValidTallySessionId,
+  ZPATH_SURVEY_NEXT_STORAGE_KEY,
   ZPATH_TALLY_SESSION_STORAGE_KEY,
 } from "@/src/lib/forms/tallySession";
 
 type PollResponse =
   | { status: "processing" }
-  | { status: "completed"; evaluation_id: string }
+  | { status: "completed"; evaluation_id?: string; survey_completed?: boolean }
   | { status: "error"; message?: string };
 
 export function ProcessingClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { markSurveyCompleted, reloadAuth } = useAuth();
   const rawSessionId = searchParams.get("session_id");
   const querySessionId = isValidTallySessionId(rawSessionId)
     ? rawSessionId.trim()
@@ -27,25 +30,43 @@ export function ProcessingClient() {
   const sessionId = querySessionId || storedSessionId;
 
   useEffect(() => {
+    let cancelled = false;
+
+    const finishStoredSessionCheck = () => {
+      if (!cancelled) setCheckedStoredSession(true);
+    };
+
     if (querySessionId) {
-      setCheckedStoredSession(true);
-      return;
+      queueMicrotask(finishStoredSessionCheck);
+      return () => {
+        cancelled = true;
+      };
     }
 
-    try {
-      const storedValue = window.localStorage.getItem(ZPATH_TALLY_SESSION_STORAGE_KEY);
+    const resolveStoredSession = () => {
+      try {
+        const storedValue = window.localStorage.getItem(ZPATH_TALLY_SESSION_STORAGE_KEY);
 
-      if (isValidTallySessionId(storedValue)) {
-        const nextSessionId = storedValue.trim();
+        if (isValidTallySessionId(storedValue)) {
+          const nextSessionId = storedValue.trim();
 
-        setStoredSessionId(nextSessionId);
-        router.replace(`/processing?session_id=${encodeURIComponent(nextSessionId)}`);
+          setStoredSessionId(nextSessionId);
+          router.replace(`/processing?session_id=${encodeURIComponent(nextSessionId)}`);
+        }
+      } catch {
+        setStoredSessionId(null);
+      } finally {
+        finishStoredSessionCheck();
       }
-    } catch {
-      setStoredSessionId(null);
-    } finally {
-      setCheckedStoredSession(true);
-    }
+    };
+
+    queueMicrotask(() => {
+      if (!cancelled) resolveStoredSession();
+    });
+
+    return () => {
+      cancelled = true;
+    };
   }, [querySessionId, router]);
 
   useEffect(() => {
@@ -70,7 +91,34 @@ export function ProcessingClient() {
         if (cancelled) return;
 
         if (data.status === "completed") {
-          router.replace(`/result/${data.evaluation_id}`);
+          markSurveyCompleted();
+          void reloadAuth();
+
+          let nextPath: string | null = null;
+          try {
+            const storedNextPath = window.localStorage.getItem(
+              ZPATH_SURVEY_NEXT_STORAGE_KEY,
+            );
+
+            if (storedNextPath?.startsWith("/") && !storedNextPath.startsWith("//")) {
+              nextPath = storedNextPath;
+              window.localStorage.removeItem(ZPATH_SURVEY_NEXT_STORAGE_KEY);
+            }
+          } catch {
+            nextPath = null;
+          }
+
+          if (nextPath) {
+            router.replace(nextPath);
+            return;
+          }
+
+          if (data.evaluation_id) {
+            router.replace(`/result/${data.evaluation_id}`);
+            return;
+          }
+
+          router.replace("/survey");
           return;
         }
 
@@ -93,7 +141,7 @@ export function ProcessingClient() {
       cancelled = true;
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [router, sessionId]);
+  }, [markSurveyCompleted, reloadAuth, router, sessionId]);
 
   if (!sessionId && !checkedStoredSession) {
     return (

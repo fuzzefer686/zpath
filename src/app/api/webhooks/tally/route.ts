@@ -54,6 +54,15 @@ function extractProviderSubmissionId(payload: unknown) {
   return null;
 }
 
+function isUuid(value: string | null) {
+  return Boolean(
+    value &&
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
+        value,
+      ),
+  );
+}
+
 function jsonProcessingError() {
   return NextResponse.json(
     {
@@ -88,6 +97,33 @@ export async function POST(request: Request) {
 
     if (surveyResponseError || !surveyResponse?.id) {
       throw surveyResponseError ?? new Error("survey_response_id missing");
+    }
+
+    if (isUuid(hiddenFields.student_ref)) {
+      const { data: user, error: userLookupError } = await supabaseServer
+        .from("zpath_users")
+        .select("id")
+        .eq("id", hiddenFields.student_ref)
+        .maybeSingle();
+
+      if (userLookupError) {
+        throw userLookupError;
+      }
+
+      if (user?.id) {
+        const { error: surveyProfileError } = await supabaseServer
+          .from("user_survey_profiles")
+          .upsert({
+            user_id: user.id,
+            latest_survey_response_id: surveyResponse.id,
+            session_id: hiddenFields.session_id,
+            normalized_profile: normalizedProfile,
+          });
+
+        if (surveyProfileError) {
+          throw surveyProfileError;
+        }
+      }
     }
 
     const aiOutput = await evaluateCareerWithGemini(normalizedProfile);

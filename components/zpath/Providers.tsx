@@ -2,13 +2,21 @@
 
 import { ReactNode } from "react";
 import { AdminEditProvider } from "./AdminEditContext";
-import { useUserRole } from "@/hooks/useUserRole";
+import { AuthProvider, useAuth } from "./AuthProvider";
 
 export function Providers({ children }: { children: ReactNode }) {
-  const { isAdmin } = useUserRole();
+  return (
+    <AuthProvider>
+      <ProvidersWithAuth>{children}</ProvidersWithAuth>
+    </AuthProvider>
+  );
+}
+
+function ProvidersWithAuth({ children }: { children: ReactNode }) {
+  const { user } = useAuth();
 
   return (
-    <AdminEditProvider isAdmin={isAdmin}>
+    <AdminEditProvider isAdmin={user?.role === "admin"}>
       {children}
     </AdminEditProvider>
   );

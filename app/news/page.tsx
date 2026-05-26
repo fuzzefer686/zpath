@@ -322,11 +322,8 @@ export default function NewsPage() {
                     Khám phá thêm
                   </h3>
                   <div className="space-y-2">
-                    <Link href="/advisor" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground/70 hover:bg-muted transition-colors">
+                    <Link href="/survey" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground/70 hover:bg-muted transition-colors">
                       🤖 Tư vấn ngành AI
-                    </Link>
-                    <Link href="/profile" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground/70 hover:bg-muted transition-colors">
-                      👤 Hồ sơ cá nhân
                     </Link>
                   </div>
                 </div>

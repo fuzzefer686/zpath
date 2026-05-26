@@ -1,15 +1,10 @@
 import { NextRequest } from "next/server";
-import type { User } from "@supabase/supabase-js";
 
-import {
-  getBootstrapRoleForEmail,
-  normalizeUserRole,
-  type UserRole,
-} from "@/lib/auth-roles";
-import { createAdminClient } from "@/lib/supabase-admin";
+import type { UserRole } from "@/lib/auth-roles";
+import { getAuthContextFromToken, type ZpathAuthUser } from "@/lib/zpath-auth";
 
 export type AuthenticatedUserRole = {
-  user: User;
+  user: ZpathAuthUser;
   role: UserRole;
 };
 
@@ -22,28 +17,9 @@ export function getBearerToken(req: NextRequest) {
 export async function getAuthenticatedUserRole(
   req: NextRequest,
 ): Promise<AuthenticatedUserRole | null> {
-  const token = getBearerToken(req);
+  const token = getBearerToken(req) ?? req.cookies.get("zpath_auth")?.value;
   if (!token) return null;
 
-  const supabase = createAdminClient();
-  const { data, error } = await supabase.auth.getUser(token);
-  const user = data.user;
-
-  if (error || !user) return null;
-
-  const metadata = user.app_metadata ?? {};
-  const currentRole = normalizeUserRole(metadata.role);
-  const bootstrapRole = getBootstrapRoleForEmail(user.email);
-  const role = bootstrapRole === "admin" ? "admin" : currentRole ?? "user";
-
-  if (metadata.role !== role) {
-    await supabase.auth.admin.updateUserById(user.id, {
-      app_metadata: {
-        ...metadata,
-        role,
-      },
-    });
-  }
-
-  return { user, role };
+  const auth = await getAuthContextFromToken(token);
+  return auth ? { user: auth.user, role: auth.user.role } : null;
 }

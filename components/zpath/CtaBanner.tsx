@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -18,9 +19,9 @@ export function CtaBanner() {
               Chỉ khoảng 2 phút. Không đăng ký. Không cam kết. Thử ngay phiên bản demo.
             </p>
             <Button asChild variant="lime" size="xl" className="mt-8">
-              <a href="#try">
+              <Link href="/survey">
                 Bắt đầu dùng thử <ArrowRight className="h-5 w-5" />
-              </a>
+              </Link>
             </Button>
           </div>
         </div>

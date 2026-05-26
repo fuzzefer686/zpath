@@ -1,5 +1,11 @@
+import { Suspense } from "react";
+
 import { SurveyClient } from "./SurveyClient";
 
 export default function SurveyPage() {
-  return <SurveyClient />;
+  return (
+    <Suspense fallback={null}>
+      <SurveyClient />
+    </Suspense>
+  );
 }
