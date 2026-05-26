@@ -33,6 +33,9 @@ export type HustThptCombinationConfig = {
   combinationCode: HustThptCombinationCode;
   subjects: HustSubjectKey[];
   formulaType: HustThptFormulaType;
+  mainSubject?: HustSubjectKey;
+  mainSubjectCoefficient: 1 | 2;
+  isMainSubjectDoubled: boolean;
   mathCoefficient?: 1 | 2 | 3;
 };
 
@@ -47,6 +50,7 @@ export type HustAdmissionProgram2026 = {
     dgtd: boolean;
     thpt: string[];
   };
+  mathCoefficient2Thpt?: string[];
   thptCombinations: HustThptCombinationConfig[];
   languageRequirement?: {
     note: string;
@@ -86,23 +90,97 @@ const COMBINATION_SUBJECTS: Record<HustThptCombinationCode, HustSubjectKey[]> = 
 
 const SUPPORTED_THPT_COMBINATIONS = new Set<string>(Object.keys(COMBINATION_SUBJECTS));
 
-function createThptCombinationConfig(code: string): HustThptCombinationConfig | null {
+const HUST_MATH_COEFFICIENT_2_BY_PROGRAM: Record<string, string[]> = {
+  BF1: ["A00", "B00", "D07"],
+  BF2: ["A00", "B00", "D07"],
+  CH1: ["A00", "B00", "D07"],
+  CH2: ["A00", "B00", "D07"],
+  EE1: ["A00", "A01"],
+  EE2: ["A00", "A01"],
+  ET1: ["A00", "A01"],
+  ET2: ["A00", "A01", "B00"],
+  EV1: ["A00", "B00", "D07"],
+  EV2: ["A00", "B00", "D07"],
+  HE1: ["A00", "A01"],
+  IT1: ["A00", "A01"],
+  IT2: ["A00", "A01"],
+  ME1: ["A00", "A01"],
+  ME2: ["A00", "A01"],
+  MI1: ["A00", "A01"],
+  MI2: ["A00", "A01"],
+  MS1: ["A00", "A01", "D07"],
+  MS2: ["A00", "A01", "D07"],
+  MS3: ["A00", "A01", "D07"],
+  MS5: ["A00", "A01", "D07"],
+  PH1: ["A00", "A01"],
+  PH2: ["A00", "A01"],
+  PH3: ["A00", "A01"],
+  TE1: ["A00", "A01"],
+  TE2: ["A00", "A01"],
+  TE3: ["A00", "A01"],
+  TX1: ["A00", "A01", "D07"],
+  "BF-E12": ["A00", "B00", "D07"],
+  "BF-E19": ["A00", "B00", "D07"],
+  "CH-E11": ["A00", "B00", "D07"],
+  "EE-E8": ["A00", "A01"],
+  "EE-E18": ["A00", "A01"],
+  "ET-E4": ["A00", "A01"],
+  "ET-E5": ["A00", "A01"],
+  "ET-E16": ["A00", "A01"],
+  "IT-E7": ["A00", "A01"],
+  "IT-E10": ["A00", "A01"],
+  "IT-E15": ["A00", "A01"],
+  "ME-E1": ["A00", "A01"],
+  "MS-E3": ["A00", "A01", "D07"],
+  "TE-E2": ["A00", "A01"],
+  "ET-E9": ["A00", "A01"],
+  "IT-E6": ["A00", "A01"],
+  "IT-EP": ["A00", "A01"],
+  "EE-EP": ["A00", "A01"],
+  "TE-EP": ["A00", "A01"],
+  "ET-LUH": ["A00", "A01"],
+  "ME-GU": ["A00", "A01"],
+  "ME-LUH": ["A00", "A01"],
+  "ME-NUT": ["A00", "A01"],
+  "TROY-IT": ["A00", "A01"],
+};
+
+function createThptCombinationConfig(
+  code: string,
+  doubledCombinationCodes: Set<string>,
+): HustThptCombinationConfig | null {
   if (!SUPPORTED_THPT_COMBINATIONS.has(code)) return null;
 
   const combinationCode = code as HustThptCombinationCode;
+  const isMainSubjectDoubled =
+    combinationCode !== "K01" && doubledCombinationCodes.has(combinationCode);
+
   return {
     combinationCode,
     subjects: COMBINATION_SUBJECTS[combinationCode],
-    formulaType: combinationCode === "K01" ? "K01" : "NORMAL",
-    mathCoefficient: combinationCode === "K01" ? 3 : 1,
+    formulaType:
+      combinationCode === "K01"
+        ? "K01"
+        : isMainSubjectDoubled
+          ? "MATH_COEFFICIENT_2"
+          : "NORMAL",
+    mainSubject: combinationCode === "K01" ? undefined : "math",
+    mainSubjectCoefficient: isMainSubjectDoubled ? 2 : 1,
+    isMainSubjectDoubled,
+    mathCoefficient: combinationCode === "K01" ? 3 : isMainSubjectDoubled ? 2 : 1,
   };
 }
 
 function withThptConfig<T extends Omit<HustAdmissionProgram2026, "thptCombinations">>(
   program: T,
 ): HustAdmissionProgram2026 {
+  const doubledCombinationCodes = new Set(
+    program.mathCoefficient2Thpt ??
+      HUST_MATH_COEFFICIENT_2_BY_PROGRAM[program.code] ??
+      [],
+  );
   const thptCombinations = program.methods.thpt
-    .map(createThptCombinationConfig)
+    .map((code) => createThptCombinationConfig(code, doubledCombinationCodes))
     .filter((config): config is HustThptCombinationConfig => Boolean(config));
 
   return {

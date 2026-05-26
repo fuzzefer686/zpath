@@ -13,6 +13,10 @@ import {
 } from "@/src/lib/admission-data/hust-programs-2026";
 import type { AdmissionProgram } from "@/src/types/admission-data";
 import { AdmissionYearSelect } from "./AdmissionYearSelect";
+import {
+  HUST_THPT_BOLD_NOTE,
+  HustThptCombinationCode,
+} from "./HustThptCombinationCode";
 
 type AdmissionProgramsSectionProps = {
   schoolCode: string;
@@ -222,7 +226,12 @@ function HustProgramsTable({ programs }: { programs: HustAdmissionProgram2026[] 
                       <MethodStar enabled={program.methods.dgtd} label="ĐGTD" />
                     </td>
                     <td className="border border-border px-3 text-center text-muted-foreground">
-                      {program.methods.thpt.join(", ")}
+                      {program.thptCombinations.map((combination, index) => (
+                        <span key={combination.combinationCode}>
+                          {index > 0 ? ", " : null}
+                          <HustThptCombinationCode combination={combination} />
+                        </span>
+                      ))}
                     </td>
                   </tr>
                 )),
@@ -232,7 +241,7 @@ function HustProgramsTable({ programs }: { programs: HustAdmissionProgram2026[] 
         </table>
       </div>
       <p className="text-xs italic leading-5 text-muted-foreground">
-        Ghi chú: Các tổ hợp xét tuyển in đậm theo điểm thi tốt nghiệp THPT có tính hệ số môn chính nhân đôi.
+        {HUST_THPT_BOLD_NOTE}
       </p>
     </>
   );

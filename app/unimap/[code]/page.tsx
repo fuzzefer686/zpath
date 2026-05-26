@@ -577,6 +577,7 @@ async function renderAdmissionSchoolDetail(
                   programs={calculatorPrograms}
                   benchmarks={calculatorBenchmarks}
                   methods={calculatorMethods}
+                  benchmarkYear={BENCHMARK_REFERENCE_YEAR}
                 />
               </CollapsibleAdmissionSection>
 

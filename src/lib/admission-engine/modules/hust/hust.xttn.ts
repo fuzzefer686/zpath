@@ -1,4 +1,12 @@
 import type { AdmissionInput, AdmissionScoreResult } from "../../core/types";
+import {
+  convertLanguageCertificateToBand,
+  convertToeicFourSkills,
+  isLanguageCertificateType,
+  type LanguageCertificateConversionInput,
+  type ToeicFourSkillsInput,
+  type ToeicSkillName,
+} from "./language-certificate";
 
 type HustXttnSubtype =
   | "direct_admission"
@@ -10,6 +18,10 @@ type HustXttnPayload = {
   tsaScore?: number;
   achievementScore?: number;
   bonusScore?: number;
+  bonusScoreManual?: number;
+  languageCertificateBonus?: number;
+  otherBonus?: number;
+  languageCertificateConversion?: ReturnType<typeof convertLanguageCertificateBonusFromPayload>;
   interviewStatus?: string;
   eligible?: boolean;
 };
@@ -19,6 +31,40 @@ const XTTN_WARNING =
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
+}
+
+function parseOptionalNumber(value: unknown) {
+  return typeof value === "number" && Number.isFinite(value) ? value : undefined;
+}
+
+function parseToeicPayload(value: unknown): ToeicFourSkillsInput | null {
+  if (!isRecord(value)) return null;
+
+  const skillNames: ToeicSkillName[] = ["listening", "speaking", "reading", "writing"];
+  return skillNames.reduce<ToeicFourSkillsInput>((next, skillName) => {
+    next[skillName] = parseOptionalNumber(value[skillName]);
+    return next;
+  }, {});
+}
+
+function convertLanguageCertificateBonusFromPayload(value: unknown) {
+  if (!isRecord(value) || !isLanguageCertificateType(value.certificateType)) {
+    return null;
+  }
+
+  if (value.certificateType === "TOEIC") {
+    const toeic = parseToeicPayload(value.toeic);
+    return toeic ? convertToeicFourSkills(toeic) : null;
+  }
+
+  const input: LanguageCertificateConversionInput = {
+    certificateType: value.certificateType,
+    score: parseOptionalNumber(value.score),
+    textValue: typeof value.textValue === "string" ? value.textValue : undefined,
+    bandId: typeof value.bandId === "string" ? value.bandId : undefined,
+  };
+
+  return convertLanguageCertificateToBand(input);
 }
 
 function clamp(value: number, min: number, max: number) {
@@ -68,16 +114,39 @@ function parseHustXttnPayload(payload: unknown): HustXttnPayload {
     throw new Error("Điểm thành tích không được âm.");
   }
 
-  const bonusScore = parseFiniteNumber(payload.bonusScore ?? 0, "Điểm thưởng");
-  if (bonusScore < 0) {
-    throw new Error("Điểm thưởng không được âm.");
+  const hasLegacyBonusScore = payload.bonusScore !== undefined;
+  const bonusScoreManual = parseFiniteNumber(
+    payload.bonusScoreManual ?? payload.bonusScore ?? 0,
+    "Điểm thưởng thủ công",
+  );
+  if (bonusScoreManual < 0) {
+    throw new Error("Điểm thưởng thủ công không được âm.");
+  }
+
+  const otherBonus = parseFiniteNumber(payload.otherBonus ?? 0, "Điểm thưởng khác");
+  if (otherBonus < 0) {
+    throw new Error("Điểm thưởng khác không được âm.");
+  }
+
+  const languageCertificateConversion =
+    hasLegacyBonusScore || payload.useLanguageCertificateBonus === false
+      ? null
+      : convertLanguageCertificateBonusFromPayload(payload.languageCertificate);
+  const languageCertificateBonus =
+    languageCertificateConversion?.bonusScoreOutOf10 ??
+    parseFiniteNumber(payload.languageCertificateBonus ?? 0, "Điểm thưởng chứng chỉ ngoại ngữ");
+  if (languageCertificateBonus < 0) {
+    throw new Error("Điểm thưởng chứng chỉ ngoại ngữ không được âm.");
   }
 
   return {
     subtype,
     tsaScore,
     achievementScore,
-    bonusScore,
+    bonusScoreManual,
+    languageCertificateBonus,
+    otherBonus,
+    languageCertificateConversion,
     interviewStatus:
       typeof payload.interviewStatus === "string" ? payload.interviewStatus : undefined,
   };
@@ -112,7 +181,13 @@ export function calculateHustXttnScore(
 
   const thinkingScore = clamp((payload.tsaScore ?? 0) * 40 / 60, 0, 40);
   const achievementScore = clamp(payload.achievementScore ?? 0, 0, 50);
-  const bonusScore = clamp(payload.bonusScore ?? 0, 0, 10);
+  const bonusScore = clamp(
+    (payload.bonusScoreManual ?? 0) +
+      (payload.languageCertificateBonus ?? 0) +
+      (payload.otherBonus ?? 0),
+    0,
+    10,
+  );
   const profileScore = clamp(thinkingScore + achievementScore + bonusScore, 0, 100);
   const normalizedScore30 = profileScore * 30 / 100;
 
@@ -131,10 +206,12 @@ export function calculateHustXttnScore(
       thinkingScore,
       achievementScore,
       bonusScore,
+      bonusScoreManual: payload.bonusScoreManual,
+      languageCertificateBonus: payload.languageCertificateBonus,
+      otherBonus: payload.otherBonus,
       profileScore,
       interviewStatus: payload.interviewStatus,
-      languageCertificateBonus:
-        "TODO: thêm cộng điểm chứng chỉ ngoại ngữ khi ZPath có dữ liệu chính thức.",
+      languageCertificateConversion: payload.languageCertificateConversion,
     },
     warnings: [XTTN_WARNING],
   };

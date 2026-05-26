@@ -7,18 +7,34 @@ import {
 } from "@/src/lib/admission-data/hust-programs-2026";
 
 import type { AdmissionInput, AdmissionScoreResult } from "../../core/types";
-import { convertLanguageCertificateToSubjectScore } from "./language-certificate";
+import {
+  convertLanguageCertificateToBand,
+  convertToeicFourSkills,
+  isLanguageCertificateType,
+  type LanguageCertificateConversionInput,
+  type LanguageCertificateConversionResult,
+  type ToeicFourSkillsConversionResult,
+  type ToeicFourSkillsInput,
+  type ToeicSkillName,
+} from "./language-certificate";
 
 type HustThptPayload = {
   programCode: string;
   combinationCode: HustThptCombinationCode;
   scores: Partial<Record<HustSubjectKey, number>>;
   priorityScore?: number;
-  languageCertificate?: {
-    certificateType: string;
-    certificateScore: number;
-  };
+  englishScoreSource?: "exam" | "certificate";
+  languageCertificate?: HustLanguageCertificatePayload;
 };
+
+type HustLanguageCertificatePayload = LanguageCertificateConversionInput | {
+  certificateType: "TOEIC";
+  toeic: ToeicFourSkillsInput;
+};
+
+type HustLanguageCertificateConversion =
+  | LanguageCertificateConversionResult
+  | ToeicFourSkillsConversionResult;
 
 const SUBJECT_LABELS: Record<HustSubjectKey, string> = {
   math: "Toán",
@@ -62,6 +78,62 @@ function assertOptionalPriorityScore(value: unknown): number {
   return value;
 }
 
+function isEnglishCertificateCombination(
+  combinationConfig: HustThptCombinationConfig,
+) {
+  return (
+    combinationConfig.subjects.includes("english") &&
+    ["A01", "D01", "D07"].includes(combinationConfig.combinationCode)
+  );
+}
+
+function parseOptionalNumber(value: unknown) {
+  return typeof value === "number" && Number.isFinite(value) ? value : undefined;
+}
+
+function parseToeicPayload(value: unknown): ToeicFourSkillsInput | null {
+  if (!isRecord(value)) return null;
+
+  const skillNames: ToeicSkillName[] = ["listening", "speaking", "reading", "writing"];
+  return skillNames.reduce<ToeicFourSkillsInput>((next, skillName) => {
+    next[skillName] = parseOptionalNumber(value[skillName]);
+    return next;
+  }, {});
+}
+
+function parseLanguageCertificatePayload(
+  value: unknown,
+): HustLanguageCertificatePayload | undefined {
+  if (!isRecord(value) || !isLanguageCertificateType(value.certificateType)) {
+    return undefined;
+  }
+
+  const certificateType = value.certificateType;
+  if (certificateType === "TOEIC") {
+    const toeic = parseToeicPayload(value.toeic);
+    return toeic ? { certificateType, toeic } : undefined;
+  }
+
+  return {
+    certificateType,
+    score: parseOptionalNumber(value.score),
+    textValue: typeof value.textValue === "string" ? value.textValue : undefined,
+    bandId: typeof value.bandId === "string" ? value.bandId : undefined,
+  };
+}
+
+function convertLanguageCertificatePayload(
+  payload: HustLanguageCertificatePayload | undefined,
+): HustLanguageCertificateConversion | null {
+  if (!payload) return null;
+
+  if (payload.certificateType === "TOEIC") {
+    return "toeic" in payload ? convertToeicFourSkills(payload.toeic) : null;
+  }
+
+  return convertLanguageCertificateToBand(payload);
+}
+
 function parseHustThptPayload(payload: unknown): HustThptPayload {
   if (!isRecord(payload)) {
     throw new Error("Dữ liệu tính điểm THPT không hợp lệ.");
@@ -96,12 +168,19 @@ function parseHustThptPayload(payload: unknown): HustThptPayload {
   const payloadScores = payload.scores;
 
   const scores: Partial<Record<HustSubjectKey, number>> = {};
-  const languageCertificateScore = isRecord(payload.languageCertificate)
-    ? convertLanguageCertificateToSubjectScore(
-        String(payload.languageCertificate.certificateType ?? ""),
-        Number(payload.languageCertificate.certificateScore),
-      )
-    : null;
+  const englishScoreSource =
+    payload.englishScoreSource === "certificate" ? "certificate" : "exam";
+  const languageCertificate = parseLanguageCertificatePayload(payload.languageCertificate);
+  const languageCertificateConversion = convertLanguageCertificatePayload(languageCertificate);
+  const shouldUseCertificateForEnglish = englishScoreSource === "certificate";
+
+  if (shouldUseCertificateForEnglish && !isEnglishCertificateCombination(combinationConfig)) {
+    throw new Error("Tổ hợp này không hỗ trợ quy đổi chứng chỉ ngoại ngữ thành điểm tiếng Anh.");
+  }
+
+  if (shouldUseCertificateForEnglish && !languageCertificateConversion) {
+    throw new Error("Không tìm thấy mức quy đổi phù hợp.");
+  }
 
   for (const subject of combinationConfig.subjects) {
     if (combinationConfig.formulaType === "K01" && !["math", "literature"].includes(subject)) {
@@ -109,8 +188,8 @@ function parseHustThptPayload(payload: unknown): HustThptPayload {
     }
 
     const rawScore =
-      subject === "english" && payloadScores[subject] === undefined
-        ? languageCertificateScore
+      subject === "english" && shouldUseCertificateForEnglish
+        ? languageCertificateConversion?.convertedSubjectScoreOutOf10
         : payloadScores[subject];
 
     if (rawScore === null || rawScore === undefined) {
@@ -144,12 +223,8 @@ function parseHustThptPayload(payload: unknown): HustThptPayload {
     combinationCode: payload.combinationCode as HustThptCombinationCode,
     scores,
     priorityScore: assertOptionalPriorityScore(payload.priorityScore),
-    languageCertificate: isRecord(payload.languageCertificate)
-      ? {
-          certificateType: String(payload.languageCertificate.certificateType ?? ""),
-          certificateScore: Number(payload.languageCertificate.certificateScore),
-        }
-      : undefined,
+    englishScoreSource,
+    languageCertificate,
   };
 }
 
@@ -180,11 +255,15 @@ export function calculateHustThptSubjectScore({
   combinationConfig: HustThptCombinationConfig;
   scores: Partial<Record<HustSubjectKey, number>>;
 }) {
+  const usesMathCoefficient2 =
+    combinationConfig.isMainSubjectDoubled ||
+    combinationConfig.mainSubjectCoefficient === 2;
+
   if (combinationConfig.formulaType === "K01") {
     return calculateK01(scores);
   }
 
-  if (combinationConfig.formulaType === "MATH_COEFFICIENT_2") {
+  if (usesMathCoefficient2) {
     const otherSubjectTotal = combinationConfig.subjects.reduce((total, subject) => {
       return subject === "math" ? total : total + (scores[subject] ?? 0);
     }, 0);
@@ -240,6 +319,9 @@ export function calculateHustThptScore(
       combinationCode: payload.combinationCode,
       subjects: combinationConfig.subjects,
       formulaType: combinationConfig.formulaType,
+      mainSubject: combinationConfig.mainSubject,
+      mainSubjectCoefficient: combinationConfig.mainSubjectCoefficient,
+      isMainSubjectDoubled: combinationConfig.isMainSubjectDoubled,
       mathCoefficient: combinationConfig.mathCoefficient,
       subjectScores: payload.scores,
       subjectScore,
@@ -250,9 +332,13 @@ export function calculateHustThptScore(
           ? undefined
           : {
               ...payload.languageCertificate,
-              conversion:
-                "TODO: thêm bảng quy đổi chứng chỉ ngoại ngữ chính thức khi có dữ liệu.",
+              conversion: convertLanguageCertificatePayload(payload.languageCertificate),
+              note:
+                payload.englishScoreSource === "certificate"
+                  ? "Điểm tiếng Anh được quy đổi từ chứng chỉ ngoại ngữ theo bảng tham chiếu của HUST từ năm 2026."
+                  : undefined,
             },
+      englishScoreSource: payload.englishScoreSource,
     },
     warnings: [getThptWarning(input.schoolCode)],
   };

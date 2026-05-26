@@ -12,6 +12,7 @@ export type HustScoreComparisonStatus =
 export type HustScoreComparisonResult = {
   schoolCode: "HUST";
   year: number;
+  benchmarkYear: number;
   programCode: string;
   method: AdmissionMethod;
   combinationCode?: string;
@@ -34,8 +35,10 @@ export function compareHustScoreWithPreviousCutoff({
   combinationCode,
   score,
   previousYearCutoff,
+  benchmarkYear = year - 1,
 }: {
   year: number;
+  benchmarkYear?: number;
   programCode: string;
   method: AdmissionMethod;
   combinationCode?: string;
@@ -46,6 +49,7 @@ export function compareHustScoreWithPreviousCutoff({
     return {
       schoolCode: "HUST",
       year,
+      benchmarkYear,
       programCode,
       method,
       combinationCode,
@@ -61,6 +65,7 @@ export function compareHustScoreWithPreviousCutoff({
     return {
       schoolCode: "HUST",
       year,
+      benchmarkYear,
       programCode,
       method,
       combinationCode,
@@ -69,7 +74,7 @@ export function compareHustScoreWithPreviousCutoff({
       difference: null,
       status: "missing_cutoff",
       message:
-        "ZPath chưa có điểm chuẩn năm trước cho ngành/phương thức này, nên chỉ hiển thị điểm tính được.",
+        `ZPath chưa có điểm chuẩn ${benchmarkYear} cho ngành/phương thức này, nên chỉ hiển thị điểm tính được.`,
     };
   }
 
@@ -80,6 +85,7 @@ export function compareHustScoreWithPreviousCutoff({
   return {
     schoolCode: "HUST",
     year,
+    benchmarkYear,
     programCode,
     method,
     combinationCode,
@@ -87,11 +93,11 @@ export function compareHustScoreWithPreviousCutoff({
     previousYearCutoff,
     difference,
     status,
-    message:
+  message:
       status === "above"
-        ? "Cao hơn điểm chuẩn năm trước"
+        ? `Cao hơn điểm chuẩn ${benchmarkYear}`
         : status === "below"
-          ? "Thấp hơn điểm chuẩn năm trước"
-          : "Bằng điểm chuẩn năm trước",
+          ? `Thấp hơn điểm chuẩn ${benchmarkYear}`
+          : `Bằng điểm chuẩn ${benchmarkYear}`,
   };
 }

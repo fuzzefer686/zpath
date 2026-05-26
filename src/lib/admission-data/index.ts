@@ -151,7 +151,7 @@ export async function getSchoolBenchmarks(
 
   let query = supabaseServer
     .from("benchmarks")
-    .select("*")
+    .select("*, admission_programs(program_code, year)")
     .eq("school_code", schoolCode)
     .order("year", { ascending: false })
     .order("method_code");

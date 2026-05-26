@@ -1,11 +1,23 @@
-export function convertLanguageCertificateToSubjectScore(
-  certificateType: string,
-  certificateScore: number,
-) {
-  void certificateType;
-  void certificateScore;
-
-  // TODO: Wire this to an official HUST/ZPath certificate conversion table.
-  // Returning null keeps calculation honest instead of inventing conversion values.
-  return null;
-}
+export {
+  HUST_LANGUAGE_CERTIFICATE_CONVERSION_BANDS_2026,
+  HUST_LANGUAGE_CERTIFICATE_EFFECTIVE_YEAR,
+  HUST_LANGUAGE_CERTIFICATE_SOURCE_LABEL,
+  LANGUAGE_CERTIFICATE_TYPE_LABELS,
+  convertLanguageCertificateToBand,
+  convertLanguageCertificateToBonusScore,
+  convertLanguageCertificateToSubjectScore,
+  convertToeicFourSkills,
+  getLanguageCertificateBands,
+  getLanguageCertificateInputMode,
+  getLanguageCertificateLevelOptions,
+  getLanguageCertificateScoreRange,
+  getLanguageCertificateTypes,
+  isLanguageCertificateType,
+  type LanguageCertificateConversionBand,
+  type LanguageCertificateConversionInput,
+  type LanguageCertificateConversionResult,
+  type LanguageCertificateType,
+  type ToeicFourSkillsConversionResult,
+  type ToeicFourSkillsInput,
+  type ToeicSkillName,
+} from "../../schools/hust/language-certificates-2026";

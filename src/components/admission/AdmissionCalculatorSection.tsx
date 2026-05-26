@@ -13,6 +13,7 @@ import {
   type HustSubjectKey,
   type HustThptCombinationCode,
 } from "@/src/lib/admission-data/hust-programs-2026";
+import { findHustBenchmark2025 } from "@/src/lib/admission-data/hust-benchmarks-2025";
 import type {
   AdmissionMethod,
   AdmissionScoreResult,
@@ -27,12 +28,23 @@ import type {
   AdmissionProgram,
   Benchmark,
 } from "@/src/types/admission-data";
+import {
+  CertificateConversionInput,
+  createDefaultCertificateConversionInputValue,
+  type CertificateConversionInputValue,
+  type CertificateConversionStructuredValue,
+} from "./CertificateConversionInput";
+import {
+  HUST_THPT_BOLD_NOTE,
+  HustThptCombinationCode as HustThptCombinationCodeLabel,
+} from "./HustThptCombinationCode";
 
 type AdmissionCalculatorSectionProps = {
   schoolCode: string;
   programs: AdmissionProgram[];
   benchmarks: Benchmark[];
   methods: AdmissionMethodRecord[];
+  benchmarkYear?: number;
 };
 
 type ApiSuccessResponse = {
@@ -59,6 +71,7 @@ const DISCLAIMER =
 const HUST_METHODS: AdmissionMethod[] = ["XTTN", "TSA", "THPT"];
 const HUST_CALCULATOR_YEAR = 2026;
 const HUST_CUTOFF_YEAR = 2025;
+const HUST_ENGLISH_CERTIFICATE_COMBINATIONS = new Set(["A01", "D01", "D07"]);
 
 const METHOD_LABELS: Record<AdmissionMethod, string> = {
   XTTN: "Xét tuyển tài năng",
@@ -152,43 +165,67 @@ function getVisibleSubjects(program: HustAdmissionProgram2026 | null, combinatio
   return combination.subjects;
 }
 
+function canUseEnglishCertificate(combination: HustAdmissionProgram2026["thptCombinations"][number] | undefined) {
+  return Boolean(
+    combination?.subjects.includes("english") &&
+      HUST_ENGLISH_CERTIFICATE_COMBINATIONS.has(combination.combinationCode),
+  );
+}
+
 function findBenchmarkForProgram({
   programs,
   benchmarks,
   programCode,
   method,
   combinationCode,
+  benchmarkYear,
 }: {
   programs: AdmissionProgram[];
   benchmarks: Benchmark[];
   programCode: string;
   method: AdmissionMethod;
   combinationCode?: string;
+  benchmarkYear: number;
 }) {
-  const benchmarkProgram = programs.find(
-    (program) => program.program_code === programCode && program.year === HUST_CUTOFF_YEAR,
+  const benchmarkProgramIds = new Set(
+    programs
+      .filter((program) => program.program_code === programCode)
+      .map((program) => program.id),
   );
-  if (!benchmarkProgram) return null;
 
   const sameProgramBenchmarks = benchmarks.filter((benchmark) => {
     if (benchmark.school_code !== "HUST") return false;
-    if (benchmark.year !== HUST_CUTOFF_YEAR) return false;
+    if (benchmark.year !== benchmarkYear) return false;
     if (benchmark.method_code !== method) return false;
-    if (benchmark.program_id !== benchmarkProgram.id) return false;
-    return true;
+
+    const benchmarkProgramCode = benchmark.admission_programs?.program_code ?? null;
+    if (benchmarkProgramCode) return benchmarkProgramCode === programCode;
+
+    return benchmark.program_id !== null && benchmarkProgramIds.has(benchmark.program_id);
   });
 
   if (method === "THPT") {
-    return (
+    const matchedBenchmark =
       sameProgramBenchmarks.find(
         (benchmark) => benchmark.combination_code === combinationCode,
       ) ??
       sameProgramBenchmarks.find((benchmark) => benchmark.combination_code === null) ??
-      null
+      null;
+
+    return (
+      matchedBenchmark ??
+      (benchmarkYear === HUST_CUTOFF_YEAR
+        ? findHustBenchmark2025({ programCode, method, combinationCode })
+        : null)
     );
   }
 
-  return sameProgramBenchmarks.find((benchmark) => benchmark.combination_code === null) ?? null;
+  return (
+    sameProgramBenchmarks.find((benchmark) => benchmark.combination_code === null) ??
+    (benchmarkYear === HUST_CUTOFF_YEAR
+      ? findHustBenchmark2025({ programCode, method, combinationCode })
+      : null)
+  );
 }
 
 function getComparisonClass(status: HustScoreComparisonResult["status"]) {
@@ -212,6 +249,7 @@ export function AdmissionCalculatorSection({
   programs,
   benchmarks,
   methods,
+  benchmarkYear = HUST_CUTOFF_YEAR,
 }: AdmissionCalculatorSectionProps) {
   const isHust = schoolCode === "HUST";
   const [method, setMethod] = useState<AdmissionMethod>("THPT");
@@ -228,7 +266,13 @@ export function AdmissionCalculatorSection({
     useState<XttnSubtype>("portfolio_interview");
   const [achievementScore, setAchievementScore] = useState("");
   const [bonusScore, setBonusScore] = useState("0");
+  const [otherBonus, setOtherBonus] = useState("0");
   const [interviewStatus, setInterviewStatus] = useState("");
+  const [useEnglishCertificate, setUseEnglishCertificate] = useState(false);
+  const [languageCertificateInput, setLanguageCertificateInput] =
+    useState<CertificateConversionInputValue>(createDefaultCertificateConversionInputValue);
+  const [languageCertificateStructured, setLanguageCertificateStructured] =
+    useState<CertificateConversionStructuredValue>(null);
   const [scoreResult, setScoreResult] = useState<AdmissionScoreResult | null>(null);
   const [comparison, setComparison] =
     useState<HustScoreComparisonResult | null>(null);
@@ -245,6 +289,7 @@ export function AdmissionCalculatorSection({
     (combination) => combination.combinationCode === combinationCode,
   );
   const visibleSubjects = getVisibleSubjects(selectedProgram, combinationCode);
+  const allowEnglishCertificate = canUseEnglishCertificate(selectedCombination);
   const methodYearText = isHust ? `${HUST_CALCULATOR_YEAR}` : "Chưa hỗ trợ";
   const availableMethods = useMemo(() => {
     const methodCodes = new Set(methods.map((item) => item.method_code));
@@ -284,6 +329,10 @@ export function AdmissionCalculatorSection({
 
     const scores = visibleSubjects.reduce<Partial<Record<HustSubjectKey, number>>>(
       (next, subject) => {
+        if (subject === "english" && allowEnglishCertificate && useEnglishCertificate) {
+          return next;
+        }
+
         if (
           selectedCombination.formulaType === "K01" &&
           !["math", "literature"].includes(subject) &&
@@ -298,11 +347,21 @@ export function AdmissionCalculatorSection({
       {},
     );
 
+    if (allowEnglishCertificate && useEnglishCertificate && !languageCertificateStructured) {
+      throw new Error("Không tìm thấy mức quy đổi phù hợp.");
+    }
+
     return {
       programCode,
       combinationCode,
       scores,
       priorityScore: parseOptionalScore(priorityScore, "điểm ưu tiên"),
+      englishScoreSource:
+        allowEnglishCertificate && useEnglishCertificate ? "certificate" : "exam",
+      languageCertificate:
+        allowEnglishCertificate && useEnglishCertificate
+          ? languageCertificateStructured?.input
+          : undefined,
     };
   }
 
@@ -312,6 +371,9 @@ export function AdmissionCalculatorSection({
     if (method === "TSA") {
       return {
         tsaScore: parseScore(tsaScore, "điểm Đánh giá tư duy"),
+        languageCertificate: languageCertificateStructured?.input,
+        useLanguageCertificateBonus: Boolean(languageCertificateStructured),
+        maxScore: 100,
       };
     }
 
@@ -326,9 +388,21 @@ export function AdmissionCalculatorSection({
       subtype: xttnSubtype,
       tsaScore: parseScore(tsaScore, "điểm Đánh giá tư duy"),
       achievementScore: parseScore(achievementScore, "điểm thành tích"),
-      bonusScore: parseOptionalScore(bonusScore, "điểm thưởng"),
+      bonusScoreManual: parseOptionalScore(bonusScore, "điểm thưởng thủ công"),
+      languageCertificate: languageCertificateStructured?.input,
+      useLanguageCertificateBonus: Boolean(languageCertificateStructured),
+      otherBonus: parseOptionalScore(otherBonus, "điểm thưởng khác"),
       interviewStatus: interviewStatus.trim() || undefined,
     };
+  }
+
+  function updateLanguageCertificate(
+    nextValue: CertificateConversionInputValue,
+    nextStructuredValue: CertificateConversionStructuredValue,
+  ) {
+    setLanguageCertificateInput(nextValue);
+    setLanguageCertificateStructured(nextStructuredValue);
+    resetResult();
   }
 
   function buildComparison(score: AdmissionScoreResult) {
@@ -338,6 +412,7 @@ export function AdmissionCalculatorSection({
       programCode,
       method,
       combinationCode: method === "THPT" ? combinationCode : undefined,
+      benchmarkYear,
     });
     const previousYearCutoff = previousBenchmark
       ? method === "XTTN"
@@ -347,6 +422,7 @@ export function AdmissionCalculatorSection({
 
     return compareHustScoreWithPreviousCutoff({
       year: score.year,
+      benchmarkYear,
       programCode,
       method,
       combinationCode: method === "THPT" ? combinationCode : undefined,
@@ -454,7 +530,7 @@ export function AdmissionCalculatorSection({
 
         <div className="grid gap-3 text-sm md:grid-cols-3">
           <InfoPill label="Năm tuyển sinh" value={methodYearText} />
-          <InfoPill label="Điểm chuẩn so sánh" value={`${HUST_CUTOFF_YEAR}`} />
+          <InfoPill label="Điểm chuẩn so sánh" value={`${benchmarkYear}`} />
           <InfoPill
             label="Nhóm chương trình"
             value={
@@ -467,27 +543,34 @@ export function AdmissionCalculatorSection({
 
         {method === "THPT" ? (
           <div className="space-y-4">
-            <label className="block space-y-2">
-              <span className="text-sm font-semibold">Tổ hợp xét tuyển</span>
-              <select
-                value={combinationCode}
-                onChange={(event) => {
-                  setCombinationCode(event.target.value as HustThptCombinationCode);
-                  resetResult();
-                }}
-                className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
-              >
+            <div className="space-y-2">
+              <div className="text-sm font-semibold">Tổ hợp xét tuyển</div>
+              <div className="flex flex-wrap gap-2">
                 {selectedProgram?.thptCombinations.map((combination) => (
-                  <option
+                  <button
+                    type="button"
                     key={combination.combinationCode}
-                    value={combination.combinationCode}
+                    onClick={() => {
+                      setCombinationCode(combination.combinationCode);
+                      resetResult();
+                    }}
+                    className={`min-h-10 rounded-md border px-3 py-2 text-sm transition-colors ${
+                      combination.combinationCode === combinationCode
+                        ? "border-primary bg-primary text-primary-foreground"
+                        : "border-border bg-background text-foreground hover:bg-muted/50"
+                    }`}
                   >
-                    {combination.combinationCode} -{" "}
-                    {getSubjectListLabel(combination.subjects)}
-                  </option>
+                    <HustThptCombinationCodeLabel combination={combination} />{" "}
+                    <span className="text-xs opacity-80">
+                      {getSubjectListLabel(combination.subjects)}
+                    </span>
+                  </button>
                 ))}
-              </select>
-            </label>
+              </div>
+              <p className="text-xs italic leading-5 text-muted-foreground">
+                {HUST_THPT_BOLD_NOTE}
+              </p>
+            </div>
 
             {selectedCombination?.formulaType === "K01" ? (
               <p className="rounded-md bg-muted/40 p-3 text-xs leading-5 text-muted-foreground">
@@ -495,8 +578,59 @@ export function AdmissionCalculatorSection({
               </p>
             ) : null}
 
+            {allowEnglishCertificate ? (
+              <div className="space-y-3 rounded-lg border border-border bg-muted/20 p-4">
+                <div className="text-sm font-semibold">
+                  Dùng chứng chỉ để quy đổi điểm tiếng Anh
+                </div>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <label className="inline-flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name="english-score-source"
+                      checked={!useEnglishCertificate}
+                      onChange={() => {
+                        setUseEnglishCertificate(false);
+                        resetResult();
+                      }}
+                    />
+                    <span>Dùng điểm thi THPT tiếng Anh</span>
+                  </label>
+                  <label className="inline-flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name="english-score-source"
+                      checked={useEnglishCertificate}
+                      onChange={() => {
+                        setUseEnglishCertificate(true);
+                        resetResult();
+                      }}
+                    />
+                    <span>Dùng chứng chỉ để quy đổi điểm tiếng Anh</span>
+                  </label>
+                </div>
+                {useEnglishCertificate ? (
+                  <>
+                    <CertificateConversionInput
+                      value={languageCertificateInput}
+                      onChange={updateLanguageCertificate}
+                    />
+                    <p className="text-xs leading-5 text-muted-foreground">
+                      Điểm tiếng Anh được quy đổi từ chứng chỉ ngoại ngữ theo bảng
+                      tham chiếu của HUST từ năm 2026.
+                    </p>
+                  </>
+                ) : null}
+              </div>
+            ) : null}
+
             <div className="grid gap-4 md:grid-cols-3">
-              {visibleSubjects.map((subject) => (
+              {visibleSubjects
+                .filter(
+                  (subject) =>
+                    !(subject === "english" && allowEnglishCertificate && useEnglishCertificate),
+                )
+                .map((subject) => (
                 <label key={subject} className="space-y-2">
                   <span className="text-sm font-semibold">{SUBJECT_LABELS[subject]}</span>
                   <Input
@@ -539,21 +673,28 @@ export function AdmissionCalculatorSection({
         ) : null}
 
         {method === "TSA" ? (
-          <label className="block max-w-xs space-y-2">
-            <span className="text-sm font-semibold">Điểm Đánh giá tư duy</span>
-            <Input
-              type="number"
-              min="0"
-              max="100"
-              step="0.01"
-              value={tsaScore}
-              onChange={(event) => {
-                setTsaScore(event.target.value);
-                resetResult();
-              }}
-              placeholder="0 - 100"
+          <div className="space-y-4">
+            <label className="block max-w-xs space-y-2">
+              <span className="text-sm font-semibold">Điểm Đánh giá tư duy</span>
+              <Input
+                type="number"
+                min="0"
+                max="100"
+                step="0.01"
+                value={tsaScore}
+                onChange={(event) => {
+                  setTsaScore(event.target.value);
+                  resetResult();
+                }}
+                placeholder="0 - 100"
+              />
+            </label>
+
+            <CertificateConversionInput
+              value={languageCertificateInput}
+              onChange={updateLanguageCertificate}
             />
-          </label>
+          </div>
         ) : null}
 
         {method === "XTTN" ? (
@@ -577,53 +718,76 @@ export function AdmissionCalculatorSection({
             </label>
 
             {xttnSubtype === "portfolio_interview" ? (
-              <div className="grid gap-4 md:grid-cols-4">
-                <label className="space-y-2">
-                  <span className="text-sm font-semibold">Điểm Đánh giá tư duy</span>
-                  <Input
-                    type="number"
-                    min="0"
-                    max="100"
-                    step="0.01"
-                    value={tsaScore}
-                    onChange={(event) => {
-                      setTsaScore(event.target.value);
-                      resetResult();
-                    }}
-                    placeholder="0 - 100"
-                  />
-                </label>
-                <label className="space-y-2">
-                  <span className="text-sm font-semibold">Điểm thành tích</span>
-                  <Input
-                    type="number"
-                    min="0"
-                    max="50"
-                    step="0.01"
-                    value={achievementScore}
-                    onChange={(event) => {
-                      setAchievementScore(event.target.value);
-                      resetResult();
-                    }}
-                    placeholder="0 - 50"
-                  />
-                </label>
-                <label className="space-y-2">
-                  <span className="text-sm font-semibold">Điểm thưởng</span>
-                  <Input
-                    type="number"
-                    min="0"
-                    max="10"
-                    step="0.01"
-                    value={bonusScore}
-                    onChange={(event) => {
-                      setBonusScore(event.target.value);
-                      resetResult();
-                    }}
-                    placeholder="0 - 10"
-                  />
-                </label>
-                <label className="space-y-2">
+              <div className="space-y-4">
+                <div className="grid gap-4 md:grid-cols-4">
+                  <label className="space-y-2">
+                    <span className="text-sm font-semibold">Điểm Đánh giá tư duy</span>
+                    <Input
+                      type="number"
+                      min="0"
+                      max="100"
+                      step="0.01"
+                      value={tsaScore}
+                      onChange={(event) => {
+                        setTsaScore(event.target.value);
+                        resetResult();
+                      }}
+                      placeholder="0 - 100"
+                    />
+                  </label>
+                  <label className="space-y-2">
+                    <span className="text-sm font-semibold">Điểm thành tích</span>
+                    <Input
+                      type="number"
+                      min="0"
+                      max="50"
+                      step="0.01"
+                      value={achievementScore}
+                      onChange={(event) => {
+                        setAchievementScore(event.target.value);
+                        resetResult();
+                      }}
+                      placeholder="0 - 50"
+                    />
+                  </label>
+                  <label className="space-y-2">
+                    <span className="text-sm font-semibold">Điểm thưởng thủ công</span>
+                    <Input
+                      type="number"
+                      min="0"
+                      max="10"
+                      step="0.01"
+                      value={bonusScore}
+                      onChange={(event) => {
+                        setBonusScore(event.target.value);
+                        resetResult();
+                      }}
+                      placeholder="0 - 10"
+                    />
+                  </label>
+                  <label className="space-y-2">
+                    <span className="text-sm font-semibold">Điểm thưởng khác</span>
+                    <Input
+                      type="number"
+                      min="0"
+                      max="10"
+                      step="0.01"
+                      value={otherBonus}
+                      onChange={(event) => {
+                        setOtherBonus(event.target.value);
+                        resetResult();
+                      }}
+                      placeholder="0 - 10"
+                    />
+                  </label>
+                </div>
+
+                <CertificateConversionInput
+                  value={languageCertificateInput}
+                  onChange={updateLanguageCertificate}
+                />
+
+                <label className="block max-w-xs space-y-2">
                   <span className="text-sm font-semibold">Kết quả phỏng vấn</span>
                   <Input
                     value={interviewStatus}
@@ -668,7 +832,7 @@ export function AdmissionCalculatorSection({
                 }
               />
               <ResultStat
-                label="Điểm chuẩn năm trước"
+                label={`Điểm chuẩn ${comparison.benchmarkYear}`}
                 value={
                   scoreResult.method === "XTTN"
                     ? formatScore(comparison.previousYearCutoff, "/100")
@@ -696,7 +860,11 @@ export function AdmissionCalculatorSection({
               </div>
               <div className="mt-2 flex flex-wrap gap-2 text-xs text-muted-foreground">
                 <span>Phương thức: {METHOD_LABELS[method]}</span>
-                {method === "THPT" ? <span>Tổ hợp: {combinationCode}</span> : null}
+                {method === "THPT" && selectedCombination ? (
+                  <span>
+                    Tổ hợp: <HustThptCombinationCodeLabel combination={selectedCombination} />
+                  </span>
+                ) : null}
                 <span>Năm tuyển sinh: {scoreResult.year}</span>
               </div>
               <p className="mt-3 text-muted-foreground">{comparison.message}</p>
