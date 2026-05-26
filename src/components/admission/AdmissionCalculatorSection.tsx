@@ -13,7 +13,7 @@ import {
   type HustSubjectKey,
   type HustThptCombinationCode,
 } from "@/src/lib/admission-data/hust-programs-2026";
-import { findHustBenchmark2025 } from "@/src/lib/admission-data/hust-benchmarks-2025";
+import { findBenchmarkForProgram } from "@/src/lib/admission-data/benchmark-lookup";
 import type {
   AdmissionMethod,
   AdmissionScoreResult,
@@ -169,62 +169,6 @@ function canUseEnglishCertificate(combination: HustAdmissionProgram2026["thptCom
   return Boolean(
     combination?.subjects.includes("english") &&
       HUST_ENGLISH_CERTIFICATE_COMBINATIONS.has(combination.combinationCode),
-  );
-}
-
-function findBenchmarkForProgram({
-  programs,
-  benchmarks,
-  programCode,
-  method,
-  combinationCode,
-  benchmarkYear,
-}: {
-  programs: AdmissionProgram[];
-  benchmarks: Benchmark[];
-  programCode: string;
-  method: AdmissionMethod;
-  combinationCode?: string;
-  benchmarkYear: number;
-}) {
-  const benchmarkProgramIds = new Set(
-    programs
-      .filter((program) => program.program_code === programCode)
-      .map((program) => program.id),
-  );
-
-  const sameProgramBenchmarks = benchmarks.filter((benchmark) => {
-    if (benchmark.school_code !== "HUST") return false;
-    if (benchmark.year !== benchmarkYear) return false;
-    if (benchmark.method_code !== method) return false;
-
-    const benchmarkProgramCode = benchmark.admission_programs?.program_code ?? null;
-    if (benchmarkProgramCode) return benchmarkProgramCode === programCode;
-
-    return benchmark.program_id !== null && benchmarkProgramIds.has(benchmark.program_id);
-  });
-
-  if (method === "THPT") {
-    const matchedBenchmark =
-      sameProgramBenchmarks.find(
-        (benchmark) => benchmark.combination_code === combinationCode,
-      ) ??
-      sameProgramBenchmarks.find((benchmark) => benchmark.combination_code === null) ??
-      null;
-
-    return (
-      matchedBenchmark ??
-      (benchmarkYear === HUST_CUTOFF_YEAR
-        ? findHustBenchmark2025({ programCode, method, combinationCode })
-        : null)
-    );
-  }
-
-  return (
-    sameProgramBenchmarks.find((benchmark) => benchmark.combination_code === null) ??
-    (benchmarkYear === HUST_CUTOFF_YEAR
-      ? findHustBenchmark2025({ programCode, method, combinationCode })
-      : null)
   );
 }
 
@@ -407,6 +351,7 @@ export function AdmissionCalculatorSection({
 
   function buildComparison(score: AdmissionScoreResult) {
     const previousBenchmark = findBenchmarkForProgram({
+      schoolCode: "HUST",
       programs,
       benchmarks,
       programCode,

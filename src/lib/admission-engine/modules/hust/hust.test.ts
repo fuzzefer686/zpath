@@ -4,11 +4,14 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
 import {
+  HUST_ADMISSION_PROGRAMS_2026,
   getHustThptCombinationConfig,
+  type HustSubjectKey,
   type HustThptCombinationConfig,
 } from "@/src/lib/admission-data/hust-programs-2026";
-import { findHustBenchmark2025 } from "@/src/lib/admission-data/hust-benchmarks-2025";
+import { findBenchmarkForProgram } from "@/src/lib/admission-data/benchmark-lookup";
 import { HustThptCombinationCode } from "@/src/components/admission/HustThptCombinationCode";
+import type { AdmissionProgram, Benchmark } from "@/src/types/admission-data";
 import type { AdmissionInput } from "../../core/types";
 import { compareHustScoreWithPreviousCutoff } from "./compare";
 import {
@@ -19,7 +22,70 @@ import {
   calculateHustThptScore,
   calculateHustThptSubjectScore,
 } from "./hust.thpt";
+import { calculateHustTsaScore } from "./hust.tsa";
 import { calculateHustXttnScore } from "./hust.xttn";
+
+const subjectScoreFixture: Record<HustSubjectKey, number> = {
+  math: 8.4,
+  physics: 9.25,
+  chemistry: 8.1,
+  english: 8.5,
+  biology: 8,
+  literature: 8.2,
+  chinese: 8.3,
+  korean: 8.3,
+  informatics: 9,
+};
+
+function createBenchmarkProgram(programCode: string): AdmissionProgram {
+  return {
+    id: `program-2025-${programCode}`,
+    school_code: "HUST",
+    program_code: programCode,
+    program_name: programCode,
+    major_code: null,
+    major_name: null,
+    year: 2025,
+    quota: null,
+    degree_level: "Đại học",
+    training_type: "Chính quy",
+    note: null,
+    source_url: null,
+    created_at: null,
+  };
+}
+
+function createBenchmarkRow({
+  programCode,
+  methodCode,
+  combinationCode,
+  score,
+  scale = 30,
+}: {
+  programCode: string;
+  methodCode: "THPT" | "TSA" | "XTTN";
+  combinationCode: string | null;
+  score: number;
+  scale?: number;
+}): Benchmark {
+  return {
+    id: `benchmark-2025-${programCode}-${methodCode}-${combinationCode ?? "all"}`,
+    school_code: "HUST",
+    program_id: `program-2025-${programCode}`,
+    admission_programs: {
+      program_code: programCode,
+      year: 2025,
+    },
+    year: 2025,
+    method_code: methodCode,
+    combination_code: combinationCode,
+    score,
+    scale,
+    note: null,
+    source_url: null,
+    created_at: null,
+  };
+}
 
 test("HUST language certificate conversion maps IELTS 5.0 to band 1", () => {
   const result = convertLanguageCertificateToBand({
@@ -179,7 +245,7 @@ test("HUST THPT A01 uses converted English score when certificate mode is select
   });
 });
 
-test("HUST IT2 A01 can compare against 2025 benchmark fallback", () => {
+test("HUST IT2 A01 can compare against 2025 benchmark table data", () => {
   const score = calculateHustThptScore({
     schoolCode: "HUST",
     method: "THPT",
@@ -199,10 +265,21 @@ test("HUST IT2 A01 can compare against 2025 benchmark fallback", () => {
       },
     },
   });
-  const benchmark = findHustBenchmark2025({
+  const benchmark = findBenchmarkForProgram({
+    schoolCode: "HUST",
+    programs: [],
+    benchmarks: [
+      createBenchmarkRow({
+        programCode: "IT2",
+        methodCode: "THPT",
+        combinationCode: null,
+        score: 28.87,
+      }),
+    ],
     programCode: "IT2",
     method: "THPT",
     combinationCode: "A01",
+    benchmarkYear: 2025,
   });
 
   assert.equal(Number(score.normalizedScore30.toFixed(4)), 26.9125);
@@ -218,6 +295,55 @@ test("HUST IT2 A01 can compare against 2025 benchmark fallback", () => {
       previousYearCutoff: benchmark?.score ?? null,
     }).status,
     "below",
+  );
+});
+
+test("HUST ED2 D01 without IELTS compares against 2025 benchmark table data", () => {
+  const score = calculateHustThptScore({
+    schoolCode: "HUST",
+    method: "THPT",
+    year: 2026,
+    payload: {
+      programCode: "ED2",
+      combinationCode: "D01",
+      scores: {
+        math: 8.4,
+        literature: 8.2,
+        english: 8.5,
+      },
+      priorityScore: 0.25,
+    },
+  });
+  const benchmark = findBenchmarkForProgram({
+    schoolCode: "HUST",
+    programs: [createBenchmarkProgram("ED2")],
+    benchmarks: [
+      createBenchmarkRow({
+        programCode: "ED2",
+        methodCode: "THPT",
+        combinationCode: "D01",
+        score: 23.3,
+      }),
+    ],
+    programCode: "ED2",
+    method: "THPT",
+    combinationCode: "D01",
+    benchmarkYear: 2025,
+  });
+
+  assert.equal(Number(score.normalizedScore30.toFixed(2)), 25.35);
+  assert.equal(benchmark?.score, 23.3);
+  assert.equal(
+    compareHustScoreWithPreviousCutoff({
+      year: 2026,
+      benchmarkYear: 2025,
+      programCode: "ED2",
+      method: "THPT",
+      combinationCode: "D01",
+      score: score.normalizedScore30,
+      previousYearCutoff: benchmark?.score ?? null,
+    }).status,
+    "above",
   );
 });
 
@@ -349,6 +475,154 @@ test("HUST K01 is not automatically rendered as bold", () => {
 
   assert.match(html, /^<span/);
   assert.match(html, />K01<\/span>$/);
+});
+
+test("HUST THPT benchmark lookup works across every supported 2026 program combination", () => {
+  for (const program of HUST_ADMISSION_PROGRAMS_2026) {
+    for (const combination of program.thptCombinations) {
+      const scores = combination.subjects.reduce<Partial<Record<HustSubjectKey, number>>>(
+        (next, subject) => {
+          if (combination.formulaType === "K01") {
+            if (subject === "math" || subject === "literature" || subject === "physics") {
+              next[subject] = subjectScoreFixture[subject];
+            }
+            return next;
+          }
+
+          next[subject] = subjectScoreFixture[subject];
+          return next;
+        },
+        {},
+      );
+      const result = calculateHustThptScore({
+        schoolCode: "HUST",
+        method: "THPT",
+        year: 2026,
+        payload: {
+          programCode: program.code,
+          combinationCode: combination.combinationCode,
+          scores,
+          priorityScore: 0,
+        },
+      });
+      const benchmark = findBenchmarkForProgram({
+        schoolCode: "HUST",
+        programs: [],
+        benchmarks: [
+          createBenchmarkRow({
+            programCode: program.code,
+            methodCode: "THPT",
+            combinationCode: combination.combinationCode,
+            score: 20,
+          }),
+        ],
+        programCode: program.code,
+        method: "THPT",
+        combinationCode: combination.combinationCode,
+        benchmarkYear: 2025,
+      });
+      const comparison = compareHustScoreWithPreviousCutoff({
+        year: 2026,
+        benchmarkYear: 2025,
+        programCode: program.code,
+        method: "THPT",
+        combinationCode: combination.combinationCode,
+        score: result.normalizedScore30,
+        previousYearCutoff: benchmark?.score ?? null,
+      });
+
+      assert.notEqual(
+        comparison.status,
+        "missing_cutoff",
+        `${program.code}/${combination.combinationCode} should compare with benchmark table row`,
+      );
+    }
+  }
+});
+
+test("HUST TSA and XTTN benchmark lookup works across every 2026 program", () => {
+  for (const program of HUST_ADMISSION_PROGRAMS_2026) {
+    const tsaResult = calculateHustTsaScore({
+      schoolCode: "HUST",
+      method: "TSA",
+      year: 2026,
+      payload: {
+        tsaScore: 75,
+      },
+    });
+    const tsaBenchmark = findBenchmarkForProgram({
+      schoolCode: "HUST",
+      programs: [],
+      benchmarks: [
+        createBenchmarkRow({
+          programCode: program.code,
+          methodCode: "TSA",
+          combinationCode: null,
+          score: 70,
+          scale: 100,
+        }),
+      ],
+      programCode: program.code,
+      method: "TSA",
+      benchmarkYear: 2025,
+    });
+    const tsaComparison = compareHustScoreWithPreviousCutoff({
+      year: 2026,
+      benchmarkYear: 2025,
+      programCode: program.code,
+      method: "TSA",
+      score: tsaResult.originalScore,
+      previousYearCutoff: tsaBenchmark?.score ?? null,
+    });
+
+    assert.notEqual(
+      tsaComparison.status,
+      "missing_cutoff",
+      `${program.code}/TSA should compare with benchmark table row`,
+    );
+
+    const xttnResult = calculateHustXttnScore({
+      schoolCode: "HUST",
+      method: "XTTN",
+      year: 2026,
+      payload: {
+        subtype: "portfolio_interview",
+        tsaScore: 45,
+        achievementScore: 35,
+        bonusScoreManual: 3,
+      },
+    });
+    const xttnBenchmark = findBenchmarkForProgram({
+      schoolCode: "HUST",
+      programs: [],
+      benchmarks: [
+        createBenchmarkRow({
+          programCode: program.code,
+          methodCode: "XTTN",
+          combinationCode: null,
+          score: 60,
+          scale: 100,
+        }),
+      ],
+      programCode: program.code,
+      method: "XTTN",
+      benchmarkYear: 2025,
+    });
+    const xttnComparison = compareHustScoreWithPreviousCutoff({
+      year: 2026,
+      benchmarkYear: 2025,
+      programCode: program.code,
+      method: "XTTN",
+      score: xttnResult.originalScore,
+      previousYearCutoff: xttnBenchmark?.score ?? null,
+    });
+
+    assert.notEqual(
+      xttnComparison.status,
+      "missing_cutoff",
+      `${program.code}/XTTN should compare with benchmark table row`,
+    );
+  }
 });
 
 test("HUST TSA comparison covers above, equal, below, and missing cutoff", () => {
