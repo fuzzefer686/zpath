@@ -169,7 +169,47 @@ export async function getSchoolBenchmarks(
     );
   }
 
-  return (data ?? []) as Benchmark[];
+  const benchmarks = (data ?? []) as Benchmark[];
+  const programIds = Array.from(
+    new Set(
+      benchmarks
+        .map((benchmark) => benchmark.program_id)
+        .filter((programId): programId is string => Boolean(programId)),
+    ),
+  );
+
+  if (!programIds.length) {
+    return benchmarks;
+  }
+
+  const { data: programs, error: programsError } = await supabaseServer
+    .from("admission_programs")
+    .select("id, program_code, year")
+    .in("id", programIds);
+
+  if (programsError) {
+    throwAdmissionDataError(
+      `loading benchmark programs for school "${schoolCode}"`,
+      programsError,
+    );
+  }
+
+  const programById = new Map(
+    (programs ?? []).map((program) => [
+      program.id,
+      {
+        program_code: program.program_code,
+        year: program.year,
+      },
+    ]),
+  );
+
+  return benchmarks.map((benchmark) => ({
+    ...benchmark,
+    admission_programs: benchmark.program_id
+      ? programById.get(benchmark.program_id) ?? null
+      : null,
+  }));
 }
 
 export async function getSchoolTuitionFees(

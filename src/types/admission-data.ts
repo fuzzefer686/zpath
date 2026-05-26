@@ -65,6 +65,10 @@ export type Benchmark = {
   id: string;
   school_code: string;
   program_id: string | null;
+  admission_programs?: {
+    program_code: string | null;
+    year: number;
+  } | null;
   year: number;
   method_code: string;
   combination_code: string | null;
