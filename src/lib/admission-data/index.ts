@@ -20,6 +20,31 @@ type SupabaseQueryError = {
   hint?: string | null;
 };
 
+const DEFAULT_ADMISSION_DATA_TIMEOUT_MS = 2500;
+
+type MaybeAbortableSupabaseQuery<T> = T & {
+  abortSignal?: (signal: AbortSignal) => T;
+};
+
+function getAdmissionDataTimeoutMs() {
+  const rawValue =
+    process.env.SUPABASE_ADMISSION_DATA_TIMEOUT_MS ??
+    process.env.NEXT_PUBLIC_SUPABASE_TIMEOUT_MS;
+  const parsed = rawValue ? Number.parseInt(rawValue, 10) : NaN;
+
+  return Number.isFinite(parsed) && parsed > 0
+    ? parsed
+    : DEFAULT_ADMISSION_DATA_TIMEOUT_MS;
+}
+
+function withAdmissionDataTimeout<T>(query: T) {
+  const abortableQuery = query as MaybeAbortableSupabaseQuery<T>;
+
+  return typeof abortableQuery.abortSignal === "function"
+    ? abortableQuery.abortSignal(AbortSignal.timeout(getAdmissionDataTimeoutMs()))
+    : query;
+}
+
 function assertNonEmptyString(value: string, fieldName: string) {
   if (!value.trim()) {
     throw new Error(`${fieldName} must be a non-empty string.`);
@@ -48,11 +73,13 @@ function throwAdmissionDataError(
 export async function getSchoolBySlug(slug: string): Promise<School | null> {
   assertNonEmptyString(slug, "slug");
 
-  const { data, error } = await supabaseServer
-    .from("schools")
-    .select("*")
-    .eq("slug", slug)
-    .maybeSingle();
+  const { data, error } = await withAdmissionDataTimeout(
+    supabaseServer
+      .from("schools")
+      .select("*")
+      .eq("slug", slug)
+      .maybeSingle(),
+  );
 
   if (error) {
     throwAdmissionDataError(`loading school by slug "${slug}"`, error);
@@ -73,7 +100,7 @@ export async function getSchoolSlugs(
     query = query.in("code", allowedCodes);
   }
 
-  const { data, error } = await query;
+  const { data, error } = await withAdmissionDataTimeout(query);
 
   if (error) {
     throwAdmissionDataError("loading school slugs", error);
@@ -100,7 +127,7 @@ export async function getSchoolPrograms(
     query = query.eq("year", year);
   }
 
-  const { data, error } = await query;
+  const { data, error } = await withAdmissionDataTimeout(query);
 
   if (error) {
     throwAdmissionDataError(
@@ -130,7 +157,7 @@ export async function getSchoolAdmissionMethods(
     query = query.eq("year", year);
   }
 
-  const { data, error } = await query;
+  const { data, error } = await withAdmissionDataTimeout(query);
 
   if (error) {
     throwAdmissionDataError(
@@ -160,7 +187,7 @@ export async function getSchoolBenchmarks(
     query = query.eq("year", year);
   }
 
-  const { data, error } = await query;
+  const { data, error } = await withAdmissionDataTimeout(query);
 
   if (error) {
     throwAdmissionDataError(
@@ -182,10 +209,12 @@ export async function getSchoolBenchmarks(
     return benchmarks;
   }
 
-  const { data: programs, error: programsError } = await supabaseServer
-    .from("admission_programs")
-    .select("id, program_code, year")
-    .in("id", programIds);
+  const { data: programs, error: programsError } = await withAdmissionDataTimeout(
+    supabaseServer
+      .from("admission_programs")
+      .select("id, program_code, year")
+      .in("id", programIds),
+  );
 
   if (programsError) {
     throwAdmissionDataError(
@@ -229,7 +258,7 @@ export async function getSchoolTuitionFees(
     query = query.eq("year", year);
   }
 
-  const { data, error } = await query;
+  const { data, error } = await withAdmissionDataTimeout(query);
 
   if (error) {
     throwAdmissionDataError(
@@ -259,7 +288,7 @@ export async function getSchoolAdmissionInfo(
     query = query.eq("year", year);
   }
 
-  const { data, error } = await query.maybeSingle();
+  const { data, error } = await withAdmissionDataTimeout(query.maybeSingle());
 
   if (error) {
     throwAdmissionDataError(
@@ -274,10 +303,12 @@ export async function getSchoolAdmissionInfo(
 }
 
 export async function getSubjectCombinations(): Promise<SubjectCombination[]> {
-  const { data, error } = await supabaseServer
-    .from("subject_combinations")
-    .select("*")
-    .order("code");
+  const { data, error } = await withAdmissionDataTimeout(
+    supabaseServer
+      .from("subject_combinations")
+      .select("*")
+      .order("code"),
+  );
 
   if (error) {
     throwAdmissionDataError("loading subject combinations", error);
@@ -312,7 +343,7 @@ export async function getProgramCombinations(
     query = query.eq("year", year);
   }
 
-  const { data, error } = await query;
+  const { data, error } = await withAdmissionDataTimeout(query);
 
   if (error) {
     throwAdmissionDataError("loading program combinations", error);

@@ -16,6 +16,7 @@ export function UniversityCard({ uni }: UniversityCardProps) {
   return (
     <Link
       href={`/unimap/${createSchoolSlug(uni.name)}`}
+      prefetch={false}
       className="group relative block overflow-hidden rounded-2xl border-2 border-border bg-card shadow-md transition-all hover:-translate-y-1 hover:border-primary hover:shadow-xl"
     >
       <div className={`relative h-44 bg-gradient-to-br ${uni.heroGradient}`}>

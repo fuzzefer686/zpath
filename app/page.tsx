@@ -1,27 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Sparkles, BookOpen, Users, Trophy, ShieldCheck, Zap, Compass } from "lucide-react";
+import { ArrowRight, BookOpenCheck, Compass, GraduationCap, MapPinned } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SectionHeading } from "@/components/zpath/SectionHeading";
-
-const stats = [
-  { label: "Học sinh đã thử", value: "10K+" },
-  { label: "Trường ĐH", value: "50+" },
-  { label: "Tỉ lệ chính xác", value: "92%" },
-  { label: "Tư vấn miễn phí", value: "24/7" },
-];
-
-const products = [
-  {
-    to: "/survey",
-    icon: Compass,
-    title: "Khảo sát định hướng",
-    desc: "Trả lời nhanh các câu hỏi cốt lõi để nhận gợi ý hướng nghề phù hợp.",
-    cta: "Làm khảo sát",
-    gradient: "from-accent to-primary-glow",
-  },
-];
 
 export default function Home() {
   return (
@@ -36,93 +17,69 @@ export default function Home() {
         <div className="container-page relative pt-16 pb-20 sm:pt-24 sm:pb-28">
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-foreground/10 bg-card/80 px-4 py-2 text-xs font-bold uppercase tracking-widest backdrop-blur">
-              <Zap className="h-3.5 w-3.5 text-accent" /> Nền tảng hướng nghiệp #1 cho Gen-Z
+              <Compass className="h-3.5 w-3.5 text-accent" /> Định hướng ngành và trường đại học
             </div>
             <h1 className="font-display text-4xl font-bold leading-[1.05] sm:text-6xl md:text-7xl">
               Mở đường <span className="text-gradient-hero">tương lai</span><br />
               bắt đầu từ ZPATH
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
-              Một nền tảng — đầy đủ công cụ tư vấn ngành, khám phá trường đại học và quản lý hồ sơ cá nhân
-              để bạn tự tin chọn đúng con đường.
+              Tìm ngành học hợp với hồ sơ của bạn, rồi đối chiếu với trường, tổ hợp,
+              điểm chuẩn và phương thức tuyển sinh đang được cập nhật trong ZPath.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-                <Link href="/survey">Tư vấn ngành <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                <Link href="/survey">Tư vấn Ngành <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
               <Button asChild variant="outline" size="xl" className="w-full sm:w-auto">
-                <Link href="/survey">Bắt đầu tư vấn</Link>
+                <Link href="/unimap">Khám phá trường</Link>
               </Button>
             </div>
           </div>
-
-          {/* Stats */}
-          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-            {stats.map((s) => (
-              <div key={s.label} className="rounded-2xl border-2 border-border bg-card p-5 text-center shadow-sm">
-                <div className="font-display text-2xl font-bold text-gradient-hero sm:text-3xl">{s.value}</div>
-                <div className="mt-1 text-xs font-medium text-muted-foreground sm:text-sm">{s.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* PRODUCTS */}
-      <section className="py-20 sm:py-28">
+      {/* GUIDANCE */}
+      <section className="py-18 sm:py-24">
         <div className="container-page">
-          <SectionHeading
-            eyebrow="Hệ sinh thái ZPATH"
-            title={<>Mọi thứ bạn cần <span className="text-gradient-hero">trong một nơi</span></>}
-            description="Các công cụ cốt lõi giúp bạn quyết định đúng — nhanh hơn, thông minh hơn."
-          />
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            {products.map((p) => {
-              const Icon = p.icon;
-              return (
-                <Link
-                  key={p.title}
-                  href={p.to}
-                  className="group relative overflow-hidden rounded-3xl border-2 border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-glow"
-                >
-                  <div className={`mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${p.gradient} text-white shadow-md`}>
-                    <Icon className="h-7 w-7" />
-                  </div>
-                  <h3 className="font-display text-xl font-bold">{p.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
-                  <div className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
-                    {p.cta} <ArrowRight className="h-4 w-4" />
-                  </div>
-                </Link>
-              );
-            })}
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-bold uppercase tracking-widest text-primary">
+              Lộ trình tuyển sinh cá nhân
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-bold sm:text-5xl">
+              Bắt đầu từ ngành phù hợp, kết thúc bằng lựa chọn có dữ liệu
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              ZPath tập trung vào hai việc quan trọng nhất: hiểu hồ sơ định hướng
+              của bạn và kiểm tra các trường phù hợp với dữ liệu tuyển sinh thực tế.
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* WHY US */}
-      <section className="py-20 sm:py-28">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="Vì sao chọn ZPATH"
-            title={<>Hơn cả một <span className="text-gradient-hero">công cụ</span></>}
-            description="Chúng mình kết hợp dữ liệu, AI và sự thấu hiểu Gen-Z để hướng nghiệp đúng cách."
-          />
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
             {[
-              { icon: ShieldCheck, title: "Dữ liệu thực tế", desc: "Tỉ lệ đỗ tính theo dữ liệu thật của từng vùng & từng trường." },
-              { icon: Sparkles, title: "AI cá nhân hoá", desc: "ZPath-AI tư vấn 24/7 dựa trên hồ sơ riêng của bạn." },
-              { icon: BookOpen, title: "Thông tin đầy đủ", desc: "Chi tiết ngành học, học phí, môi trường, network alumni." },
-              { icon: Users, title: "Cộng đồng học sinh", desc: "Trao đổi với hơn 10K Gen-Z khác đã sử dụng ZPATH." },
-            ].map((f) => {
-              const Icon = f.icon;
+              {
+                icon: BookOpenCheck,
+                title: "Hồ sơ định hướng",
+                desc: "Ghi nhận sở thích, thế mạnh và ưu tiên học tập để gợi ý nhóm ngành hợp lý.",
+              },
+              {
+                icon: MapPinned,
+                title: "Dữ liệu tuyển sinh",
+                desc: "Đối chiếu chương trình, tổ hợp, học phí và điểm chuẩn theo từng trường.",
+              },
+              {
+                icon: GraduationCap,
+                title: "Kế hoạch ứng tuyển",
+                desc: "So sánh kết quả tính điểm với mốc tham khảo để chọn phương án an toàn hơn.",
+              },
+            ].map((item) => {
+              const Icon = item.icon;
               return (
-                <div key={f.title} className="rounded-2xl border-2 border-border bg-card p-6">
+                <div key={item.title} className="rounded-2xl border-2 border-border bg-card p-6">
                   <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="font-display text-lg font-bold">{f.title}</h3>
-                  <p className="mt-1.5 text-sm text-muted-foreground">{f.desc}</p>
+                  <h3 className="font-display text-lg font-bold">{item.title}</h3>
+                  <p className="mt-1.5 text-sm text-muted-foreground">{item.desc}</p>
                 </div>
               );
             })}
@@ -136,15 +93,17 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-[2rem] bg-gradient-hero p-10 text-center text-primary-foreground shadow-glow sm:p-16">
             <div className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 animate-blob bg-white/20 blur-2xl" />
             <div className="pointer-events-none absolute -right-10 -bottom-10 h-52 w-52 animate-blob bg-white/20 blur-2xl" style={{ animationDelay: "3s" }} />
-            <Trophy className="mx-auto mb-4 h-10 w-10 opacity-90" />
+            <GraduationCap className="mx-auto mb-4 h-10 w-10 opacity-90" />
             <h2 className="font-display text-3xl font-bold sm:text-5xl">Sẵn sàng cho mùa thi 2026?</h2>
-            <p className="mx-auto mt-4 max-w-xl opacity-90">Bắt đầu hành trình chỉ với 30 giây — không cần đăng ký, không phí ẩn.</p>
+            <p className="mx-auto mt-4 max-w-xl opacity-90">
+              Chọn hướng đi trước, rồi kiểm tra trường và phương thức tuyển sinh phù hợp.
+            </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild variant="lime" size="xl" className="w-full sm:w-auto">
-                <Link href="/survey">Tư vấn ngành ngay</Link>
+                <Link href="/survey">Tư vấn Ngành</Link>
               </Button>
               <Button asChild variant="outline" size="xl" className="w-full border-white/40 bg-white/10 text-white hover:bg-white/20 sm:w-auto">
-                <Link href="/survey">Làm khảo sát</Link>
+                <Link href="/unimap">Khám phá trường</Link>
               </Button>
             </div>
           </div>
