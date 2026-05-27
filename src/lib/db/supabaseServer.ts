@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { fetchWithSupabaseTimeout } from "@/lib/supabase-fetch";
 
 if (typeof window !== "undefined") {
   throw new Error(
@@ -23,5 +24,8 @@ export const supabaseServer = createClient(supabaseUrl, serviceRoleKey, {
   auth: {
     autoRefreshToken: false,
     persistSession: false,
+  },
+  global: {
+    fetch: fetchWithSupabaseTimeout,
   },
 });
