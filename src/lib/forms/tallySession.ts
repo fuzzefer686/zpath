@@ -1,3 +1,5 @@
+// Deprecated legacy Tally session keys. Kept for /processing and older result flows.
+
 export const ZPATH_TALLY_SESSION_STORAGE_KEY = "zpath:tally_session_id";
 export const ZPATH_SURVEY_NEXT_STORAGE_KEY = "zpath:survey_next_path";
 

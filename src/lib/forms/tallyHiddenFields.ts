@@ -1,3 +1,5 @@
+// Deprecated legacy Tally helper. Kept for the webhook and /processing flow.
+
 type HiddenFieldKey = "session_id" | "source" | "student_ref";
 
 type HiddenFields = Record<HiddenFieldKey, string | null>;

@@ -1,5 +1,8 @@
 import type { NormalizedSurveyProfile } from "../../types/zpath";
 
+// Deprecated legacy Tally parser. Kept because the Tally webhook can still
+// receive historical submissions used by evaluation/result flows.
+
 type JsonRecord = Record<string, unknown>;
 
 const FIELD_ID_KEYS = ["label", "key", "title", "name", "id"] as const;
