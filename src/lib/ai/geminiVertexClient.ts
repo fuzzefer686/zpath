@@ -1,6 +1,7 @@
 import "server-only";
 
-import { existsSync, readFileSync } from "fs";
+import { existsSync, readFileSync, writeFileSync } from "fs";
+import { tmpdir } from "os";
 import path from "path";
 import { GoogleGenAI, type GenerateContentConfig } from "@google/genai";
 
@@ -15,9 +16,76 @@ const DEFAULT_VERTEX_LOCATION = "global";
 
 type ServiceAccountCredentials = {
   project_id?: string;
+  client_email?: string;
+  private_key?: string;
+  type?: string;
 };
 
 let client: GoogleGenAI | null = null;
+let envCredentialsPath: string | undefined;
+
+function normalizePrivateKey(credentials: ServiceAccountCredentials) {
+  if (typeof credentials.private_key !== "string") return credentials;
+
+  return {
+    ...credentials,
+    private_key: credentials.private_key.replace(/\\n/g, "\n"),
+  };
+}
+
+function parseServiceAccountCredentials(rawCredentials: string) {
+  const credentials = normalizePrivateKey(
+    JSON.parse(rawCredentials) as ServiceAccountCredentials,
+  );
+
+  if (
+    credentials.type !== "service_account" ||
+    !credentials.project_id?.trim() ||
+    !credentials.client_email?.trim() ||
+    !credentials.private_key?.trim()
+  ) {
+    throw new Error("Invalid Google service account credentials.");
+  }
+
+  return credentials;
+}
+
+function readCredentialsFromEnvironment() {
+  const base64Credentials =
+    process.env.GOOGLE_APPLICATION_CREDENTIALS_BASE64?.trim();
+
+  if (base64Credentials) {
+    return parseServiceAccountCredentials(
+      Buffer.from(base64Credentials.replace(/\s/g, ""), "base64").toString(
+        "utf8",
+      ),
+    );
+  }
+
+  const jsonCredentials = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON?.trim();
+  if (jsonCredentials) {
+    return parseServiceAccountCredentials(jsonCredentials);
+  }
+
+  return undefined;
+}
+
+function writeEnvironmentCredentialsFile() {
+  if (envCredentialsPath && existsSync(envCredentialsPath)) {
+    return envCredentialsPath;
+  }
+
+  const credentials = readCredentialsFromEnvironment();
+  if (!credentials) return undefined;
+
+  envCredentialsPath = path.join(tmpdir(), "zpath-google-credentials.json");
+  writeFileSync(envCredentialsPath, JSON.stringify(credentials), {
+    encoding: "utf8",
+    mode: 0o600,
+  });
+
+  return envCredentialsPath;
+}
 
 function resolveCredentialsPath() {
   const configuredPath = process.env.GOOGLE_APPLICATION_CREDENTIALS?.trim();
@@ -34,6 +102,11 @@ function resolveCredentialsPath() {
     if (existsSync(resolvedPath)) {
       return resolvedPath;
     }
+  }
+
+  const environmentCredentialsPath = writeEnvironmentCredentialsFile();
+  if (environmentCredentialsPath) {
+    return environmentCredentialsPath;
   }
 
   return existsSync(localPath) ? localPath : undefined;
