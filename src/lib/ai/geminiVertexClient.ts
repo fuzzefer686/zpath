@@ -123,11 +123,17 @@ function ensureGoogleApplicationCredentials() {
 }
 
 function preferVertexServiceAccountCredentials() {
-  ensureGoogleApplicationCredentials();
+  const credentialsPath = ensureGoogleApplicationCredentials();
   process.env.GOOGLE_GENAI_USE_VERTEXAI = "true";
 
   delete process.env.GOOGLE_API_KEY;
   delete process.env.GEMINI_API_KEY;
+
+  if (!credentialsPath) {
+    throw new Error(
+      "VERTEX_SERVICE_ACCOUNT_NOT_CONFIGURED: Set GOOGLE_APPLICATION_CREDENTIALS_BASE64 or GOOGLE_APPLICATION_CREDENTIALS_JSON on Vercel, or GOOGLE_APPLICATION_CREDENTIALS to an existing local file path.",
+    );
+  }
 }
 
 function readProjectIdFromCredentials(credentialsPath: string | undefined) {
