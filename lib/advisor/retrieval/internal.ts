@@ -3,6 +3,7 @@ import "server-only";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 import { fetchWithSupabaseTimeout } from "@/lib/supabase-fetch";
+import { canonicalizeAdvisorProgramCode } from "@/lib/advisor/programCodes";
 import type {
   AdmissionData,
   AdvisorInternalSource,
@@ -233,7 +234,7 @@ function normalizeSchoolCode(value?: string) {
 }
 
 function normalizeProgramCode(value?: string) {
-  return value?.trim().toUpperCase() || undefined;
+  return canonicalizeAdvisorProgramCode(value);
 }
 
 function isProvided(value?: string) {

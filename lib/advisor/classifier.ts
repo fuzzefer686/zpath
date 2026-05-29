@@ -1,4 +1,5 @@
 import { AdvisorIntent } from "@/lib/advisor/intents";
+import { canonicalizeAdvisorProgramCode } from "@/lib/advisor/programCodes";
 
 export type AdvisorClassification = {
   intent: AdvisorIntent;
@@ -44,7 +45,16 @@ const SCHOOL_CODE_ALIASES: Record<string, string> = {
   "hanoi university science and technology": "HUST",
   hust: "HUST",
   bka: "HUST",
+  "ngoại thương": "FTU",
+  "ngoai thuong": "FTU",
+  "đại học ngoại thương": "FTU",
+  "dai hoc ngoai thuong": "FTU",
+  "foreign trade university": "FTU",
   neu: "NEU",
+  "kinh tế quốc dân": "NEU",
+  "kinh te quoc dan": "NEU",
+  "đại học kinh tế quốc dân": "NEU",
+  "dai hoc kinh te quoc dan": "NEU",
   ftu: "FTU",
   vinuni: "VINUNI",
   hanu: "HANU",
@@ -313,6 +323,10 @@ function extractYear(text: string) {
 function extractScore(text: string): number | undefined {
   // Normalize commas to dots
   const normalizedText = text.replace(/,/g, ".");
+  const textWithoutProgramCodes = normalizedText.replace(
+    /\b[A-Z]{1,4}[\s-]?E[\s-]?\d{1,3}[A-Z]?\b|\b[A-Z]{2,4}\d{1,3}[A-Z]?\b/gi,
+    " ",
+  );
 
   // Check explicit range: "tầm 24-25" -> return 25
   const rangeMatch = normalizedText.match(/\btầm\s+(\d{1,2}(?:\.\d{1,2})?)\s*-\s*(\d{1,2}(?:\.\d{1,2})?)\b/i);
@@ -343,7 +357,7 @@ function extractScore(text: string): number | undefined {
   }
 
   // General standalone number between 10 and 40
-  const standaloneMatch = normalizedText.match(/\b(\d{1,2}(?:\.\d{1,2})?)\b/);
+  const standaloneMatch = textWithoutProgramCodes.match(/\b(\d{1,2}(?:\.\d{1,2})?)\b/);
   if (standaloneMatch) {
     const s = Number(standaloneMatch[1]);
     if (s >= 10 && s <= 40) return s;
@@ -384,12 +398,25 @@ function extractSchoolCode(text: string) {
 }
 
 function extractProgramCode(text: string) {
+  const advancedProgramMatch = text.match(
+    /(?:^|[^\p{L}\p{N}])([A-Z]{1,3}[\s-]?E[\s-]?\d{1,3}[A-Z]?)(?=$|[^\p{L}\p{N}])/iu,
+  );
+  const advancedProgramCode = canonicalizeAdvisorProgramCode(
+    advancedProgramMatch?.[1],
+  );
+  if (advancedProgramCode && !ADMISSION_COMBINATION_CODES.has(advancedProgramCode)) {
+    return advancedProgramCode;
+  }
+
   const matches = text.match(
     /(?:^|[^\p{L}\p{N}])([A-Z]{1,4}(?:-[A-Z]{1,3})?\d{1,3}[A-Z]?)(?=$|[^\p{L}\p{N}])/gu,
   ) ?? [];
 
   for (const rawMatch of matches) {
-    const code = rawMatch.replace(/[^\p{L}\p{N}-]/gu, "").toUpperCase();
+    const code = canonicalizeAdvisorProgramCode(
+      rawMatch.replace(/[^\p{L}\p{N}-]/gu, ""),
+    );
+    if (/^E\d{1,3}[A-Z]?$/.test(code ?? "")) continue;
     if (!code || ADMISSION_COMBINATION_CODES.has(code)) continue;
     return code;
   }
@@ -413,6 +440,7 @@ function extractMajorName(text: string) {
   return (
     extractAfter(text, /(?:^|[^\p{L}\p{N}])review\s+(?:ngành|nganh)\s+(.+)/iu) ??
     extractAfter(text, /(?:^|[^\p{L}\p{N}])(?:ngành|nganh)\s+(.+?)\s+(?:học gì|hoc gi|có khó không|co kho khong|ra làm gì|ra lam gi|cơ hội|co hoi)/iu) ??
+    extractAfter(text, /(?:^|[^\p{L}\p{N}])(?:ngành|nganh)\s+(.+?)(?:\s+(?:năm|nam|20[2-3]\d|tại|tai|ở|o|của|cua)|$)/iu) ??
     extractAfter(text, /(?:^|[^\p{L}\p{N}])học\s+(?:ngành\s+)?(.+?)\s+(?:ra làm gì|có dễ|có khó|hiện nay|hoc phi|học phí)/iu) ??
     extractAfter(text, /(?:^|[^\p{L}\p{N}])hoc\s+(?:nganh\s+)?(.+?)\s+(?:ra lam gi|co de|co kho|hien nay|hoc phi)/iu) ??
     extractAfter(text, /(?:^|[^\p{L}\p{N}])học phí\s+(?:ngành\s+)?(.+)/iu) ??
@@ -591,7 +619,12 @@ export function classifyAdvisorQuestion(question: string): AdvisorClassification
   }
 
   const majorName = extractMajorName(text);
-  if (majorName) extracted.majorName = majorName;
+  if (majorName) {
+    extracted.majorName =
+      programCode && canonicalizeAdvisorProgramCode(majorName) === programCode
+        ? programCode
+        : majorName;
+  }
 
   if (intent === AdvisorIntent.COMPARE_MAJORS) {
     const majors = extractComparedMajors(text);

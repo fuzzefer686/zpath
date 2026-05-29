@@ -407,8 +407,13 @@ export async function generateAdvisorAnswerWithGemini(
   const prompt = buildAdvisorGeminiPrompt(input);
   const config: GenerateContentConfig = {
     responseMimeType: "application/json",
-    temperature: 0.2,
-    maxOutputTokens: 1024,
+    temperature: 0.05,
+    topP: 0.85,
+    maxOutputTokens: 1536,
+    thinkingConfig: {
+      thinkingBudget: -1,
+      thinkingLevel: "HIGH",
+    } as GenerateContentConfig["thinkingConfig"],
   };
 
   const text = await generateGeminiText({

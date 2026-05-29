@@ -13,7 +13,7 @@ import { rankWebSearchResults } from "@/lib/advisor/retrieval/sourceRanker";
 import {
   getGeminiClient,
   getGeminiModelName,
-  isGeminiVertexConfigured,
+  isGeminiConfigured,
 } from "@/src/lib/ai/geminiVertexClient";
 
 export type WebSearchProvider =
@@ -36,7 +36,9 @@ export type WebSearchResult = {
 export type AdvisorWebSearchOptions = {
   maxResults?: number;
   preferOfficialSources?: boolean;
+  forceRefresh?: boolean;
   schoolName?: string;
+  programCode?: string;
   year?: number;
 };
 
@@ -82,8 +84,8 @@ type GeminiGroundingResponse = {
   }>;
 };
 
-const DEFAULT_MAX_RESULTS = 5;
-const SEARCH_TIMEOUT_MS = 8000;
+const DEFAULT_MAX_RESULTS = 8;
+const SEARCH_TIMEOUT_MS = 12000;
 
 function getConfiguredProvider(): WebSearchProvider {
   const configured = process.env.WEB_SEARCH_PROVIDER?.trim();
@@ -97,7 +99,7 @@ function getConfiguredProvider(): WebSearchProvider {
     return configured;
   }
 
-  if (isGeminiVertexConfigured()) return "gemini_grounding";
+  if (isGeminiConfigured()) return "gemini_grounding";
   if (process.env.TAVILY_API_KEY) return "tavily";
   if (process.env.SERPER_API_KEY) return "serper";
 
@@ -149,8 +151,11 @@ async function searchWithGeminiGrounding(
 ): Promise<RawWebSearchResult[]> {
   const config: GenerateContentConfig = {
     temperature: 0,
-    maxOutputTokens: 2048,
-    thinkingConfig: { thinkingBudget: 0 },
+    maxOutputTokens: 4096,
+    thinkingConfig: {
+      thinkingBudget: -1,
+      thinkingLevel: "HIGH",
+    } as GenerateContentConfig["thinkingConfig"],
     tools: [{ googleSearch: {} }],
   };
 
@@ -197,7 +202,7 @@ async function searchWithTavily(
       search_depth: "basic",
       include_answer: false,
       include_raw_content: false,
-      max_results: Math.min(options.maxResults ?? DEFAULT_MAX_RESULTS, 8),
+      max_results: Math.min(options.maxResults ?? DEFAULT_MAX_RESULTS, 10),
     },
   });
 
@@ -273,7 +278,10 @@ export async function searchWebForAdvisor(
   const provider = getConfiguredProvider();
   if (provider === "none") return [];
   const cacheKey = normalizeAdvisorSearchQuery(normalizedQuery);
-  const canUseCache = canCacheAdvisorSearchQuery(normalizedQuery);
+  const canUseCache =
+    !options.forceRefresh &&
+    options.year === undefined &&
+    canCacheAdvisorSearchQuery(normalizedQuery);
   const maxResults = Math.min(
     options.maxResults ?? DEFAULT_MAX_RESULTS,
     DEFAULT_MAX_RESULTS,
@@ -297,6 +305,7 @@ export async function searchWebForAdvisor(
       maxResults,
       preferOfficialSources: options.preferOfficialSources,
       schoolName: options.schoolName,
+      programCode: options.programCode,
       year: options.year,
     });
 
@@ -335,7 +344,7 @@ export async function searchWebForAdvisorQueries(
     options.maxResults ?? DEFAULT_MAX_RESULTS,
     DEFAULT_MAX_RESULTS,
   );
-  const perQueryMaxResults = Math.min(4, maxResults);
+  const perQueryMaxResults = Math.min(5, maxResults);
   const resultSets = await Promise.all(
     normalizedQueries.map((query) =>
       searchWebForAdvisor(query, {

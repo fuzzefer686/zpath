@@ -46,12 +46,17 @@ import {
   parseAdvisorAnswerRequest,
   validateAdvisorTemplateFields,
 } from "@/lib/advisor/schemas";
+import { canonicalizeAdvisorProgramCode } from "@/lib/advisor/programCodes";
 import { getAdvisorTemplateById } from "@/lib/advisor/templates";
 import type {
   AdvisorAnswer,
   AdvisorQuestionTemplate,
   AdvisorTemplateValues,
 } from "@/lib/advisor/types";
+import {
+  getHustAdmissionProgram2026,
+  HUST_PROGRAM_GROUP_LABELS,
+} from "@/src/lib/admission-data/hust-programs-2026";
 
 type ExtractedAdvisorEntities = AdvisorClassification["extracted"];
 
@@ -68,6 +73,37 @@ function readNumberField(fields: AdvisorTemplateValues | undefined, name: string
 function readYear(fields: AdvisorTemplateValues | undefined) {
   const year = readNumberField(fields, "year");
   return Number.isInteger(year) ? year : undefined;
+}
+
+function getVerifiedProgramContext(extracted: ExtractedAdvisorEntities) {
+  if (!extracted.programCode) return undefined;
+  if (extracted.schoolCode !== "HUST") return undefined;
+
+  const programCode = canonicalizeAdvisorProgramCode(extracted.programCode);
+  const program = programCode ? getHustAdmissionProgram2026(programCode) : null;
+  if (!program) return undefined;
+
+  return {
+    status: "success",
+    data: {
+      schoolCode: "HUST",
+      schoolName: "Đại học Bách khoa Hà Nội",
+      programCode: program.code,
+      programName: program.name,
+      quota: program.quota,
+      group: HUST_PROGRAM_GROUP_LABELS[program.group],
+      methods: program.methods,
+    },
+    sources: [
+      {
+        sourceType: "zpath_database",
+        title: `ZPath verified HUST program: ${program.code} ${program.name}`,
+        url: "https://ts.hust.edu.vn/",
+        table: "hust_admission_programs_2026",
+        recordId: program.code,
+      },
+    ],
+  };
 }
 
 function entitiesFromTemplateFields(
@@ -90,7 +126,10 @@ function entitiesFromTemplateFields(
   for (const field of stringFields) {
     const value = readField(fields, field);
     if (value) {
-      extracted[field] = value as never;
+      extracted[field] =
+        field === "programCode"
+          ? (canonicalizeAdvisorProgramCode(value) as never)
+          : (value as never);
     }
   }
 
@@ -129,12 +168,14 @@ async function getInternalContextForAdvisor({
   const programCode = extracted.programCode;
   const majorName = extracted.majorName;
   const year = extracted.year;
+  const verifiedProgram = getVerifiedProgramContext(extracted);
 
   switch (intent) {
     case AdvisorIntent.REVIEW_MAJOR:
     case AdvisorIntent.CAREER_PATH:
     case AdvisorIntent.STUDY_PLAN:
       return {
+        verifiedProgram,
         majorProfile: majorName
           ? await getMajorProfile({ majorName, programCode, schoolName, schoolCode })
           : programCode
@@ -144,6 +185,7 @@ async function getInternalContextForAdvisor({
 
     case AdvisorIntent.COMPARE_MAJORS:
       return {
+        verifiedProgram,
         majorA: extracted.majorA
           ? await getMajorProfile({
               majorName: extracted.majorA,
@@ -184,6 +226,7 @@ async function getInternalContextForAdvisor({
 
     case AdvisorIntent.COMPARE_SCHOOLS:
       return {
+        verifiedProgram,
         schoolA: await getSchoolProfile({
           schoolName: extracted.schoolA,
         }),
@@ -197,6 +240,7 @@ async function getInternalContextForAdvisor({
 
     case AdvisorIntent.ADMISSION_CHANCE:
       return {
+        verifiedProgram,
         admissionData: await getAdmissionData({
           schoolName,
           schoolCode,
@@ -215,6 +259,7 @@ async function getInternalContextForAdvisor({
 
     case AdvisorIntent.SCORE_SUGGESTION:
       return {
+        verifiedProgram,
         scoreSuggestions:
           extracted.score === undefined
             ? undefined
@@ -227,6 +272,7 @@ async function getInternalContextForAdvisor({
 
     case AdvisorIntent.TUITION:
       return {
+        verifiedProgram,
         tuitionData: await getTuitionData({
           schoolName,
           schoolCode,
@@ -238,6 +284,7 @@ async function getInternalContextForAdvisor({
 
     case AdvisorIntent.LATEST_ADMISSION_INFO:
       return {
+        verifiedProgram,
         schoolProfile: await getSchoolProfile({ schoolName, schoolCode }),
         admissionData: await getAdmissionData({
           schoolName,
@@ -253,6 +300,7 @@ async function getInternalContextForAdvisor({
     case AdvisorIntent.UNKNOWN:
     default:
       return {
+        verifiedProgram,
         schools: await searchSchools(message),
         majors: await searchMajors(message),
       };
@@ -479,9 +527,14 @@ async function tryWebSearch({
   }
 
   const results = await searchWebForAdvisorQueries(queries, {
-    maxResults: 5,
+    maxResults:
+      extracted.year !== undefined || questionAsksForBenchmark(question)
+        ? 8
+        : 5,
+    forceRefresh: extracted.year !== undefined || questionAsksForBenchmark(question),
     preferOfficialSources: queryPrefersOfficialSources(intent),
     schoolName: extracted.schoolName ?? extracted.schoolCode,
+    programCode: extracted.programCode,
     year: extracted.year,
   });
 

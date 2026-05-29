@@ -1,4 +1,6 @@
 import { AdvisorIntent } from "@/lib/advisor/intents";
+import { canonicalizeAdvisorProgramCode } from "@/lib/advisor/programCodes";
+import { getHustAdmissionProgram2026 } from "@/src/lib/admission-data/hust-programs-2026";
 
 export type AdvisorWebSearchQueryInput = {
   intent: AdvisorIntent;
@@ -36,6 +38,20 @@ function joinQueryParts(parts: Array<string | number | undefined | null>) {
   return parts.map(cleanPart).filter(Boolean).join(" ");
 }
 
+function expandSchoolSearchName(value?: string | null) {
+  const normalized = cleanPart(value).toUpperCase();
+
+  if (normalized === "FTU") return "Đại học Ngoại thương";
+  if (normalized === "HUST" || normalized === "BKA") return "Đại học Bách khoa Hà Nội";
+  if (normalized === "NEU") return "Đại học Kinh tế Quốc dân";
+  if (normalized === "PTIT") return "Học viện Công nghệ Bưu chính Viễn thông";
+  if (normalized === "UIT") return "Đại học Công nghệ Thông tin ĐHQG TP.HCM";
+  if (normalized === "HCMUT") return "Đại học Bách khoa ĐHQG TP.HCM";
+  if (normalized === "UEH") return "Đại học Kinh tế TP.HCM";
+
+  return cleanPart(value);
+}
+
 function uniqueQueries(queries: string[]) {
   const seen = new Set<string>();
 
@@ -51,7 +67,16 @@ function uniqueQueries(queries: string[]) {
 }
 
 function inferMajorSearchTerm(input: AdvisorWebSearchQueryInput) {
-  if (input.programCode) return cleanPart(input.programCode);
+  const programCode = canonicalizeAdvisorProgramCode(input.programCode);
+  if (programCode) {
+    const hustProgram = getHustAdmissionProgram2026(programCode);
+    return cleanPart(
+      hustProgram ? `${programCode} ${hustProgram.name}` : programCode,
+    );
+  }
+
+  const namedMajor = input.majorName ?? input.majorA ?? input.majorB;
+  if (namedMajor) return cleanPart(namedMajor);
 
   const explicitMajor = input.majorName ?? input.majorA ?? input.majorB ?? input.message;
   const interestText = input.interests?.join(" ").toLowerCase() ?? "";
@@ -89,6 +114,17 @@ function inferMajorSearchTerm(input: AdvisorWebSearchQueryInput) {
   }
   if (/y dược|y duoc|y khoa|dược học|duoc hoc/.test(haystack)) {
     return "y dược";
+  }
+
+  if (
+    (input.intent === AdvisorIntent.ADMISSION_CHANCE ||
+      input.intent === AdvisorIntent.SCORE_CALCULATION) &&
+    !input.majorName &&
+    !input.majorA &&
+    !input.majorB &&
+    !input.interests?.length
+  ) {
+    return "";
   }
 
   return cleanPart(explicitMajor);
@@ -138,20 +174,88 @@ function buildScoreSuggestionQueries(input: AdvisorWebSearchQueryInput) {
   ]);
 }
 
+function buildSchoolBenchmarkQueries(input: AdvisorWebSearchQueryInput) {
+  const school = expandSchoolSearchName(input.schoolName);
+  if (!school) return [];
+
+  const year = latestBenchmarkYear(input);
+  const majorTerm = inferMajorSearchTerm(input);
+
+  return uniqueQueries([
+    joinQueryParts([
+      school,
+      "điểm chuẩn",
+      input.majorName,
+      input.combination,
+      year,
+      "chính thức",
+    ]),
+    joinQueryParts([
+      school,
+      "điểm trúng tuyển",
+      input.majorName,
+      year,
+      "pdf",
+    ]),
+    joinQueryParts([
+      school,
+      "đề án tuyển sinh",
+      year,
+      "pdf",
+    ]),
+    joinQueryParts([
+      `"${school}"`,
+      `"${year}"`,
+      "điểm chuẩn",
+    ]),
+    joinQueryParts([
+      school,
+      "tuyển sinh",
+      majorTerm,
+      input.combination,
+      year,
+    ]),
+  ]);
+}
+
 export function buildAdvisorWebSearchQueries(input: AdvisorWebSearchQueryInput) {
   const year = input.year ?? currentAdmissionYear();
+  const schoolName = expandSchoolSearchName(input.schoolName);
+  const programCode = canonicalizeAdvisorProgramCode(input.programCode);
+  const hustProgram = programCode
+    ? getHustAdmissionProgram2026(programCode)
+    : null;
+  const exactProgramQueries =
+    programCode && hustProgram
+      ? [
+          joinQueryParts([
+            `"${programCode}"`,
+            `"${hustProgram.name}"`,
+            "HUST",
+            "chương trình đào tạo",
+          ]),
+          joinQueryParts([
+            `"${programCode}"`,
+            "site:soict.hust.edu.vn",
+          ]),
+          joinQueryParts([
+            `"${programCode}"`,
+            "site:ts.hust.edu.vn",
+          ]),
+        ]
+      : [];
 
   switch (input.intent) {
     case AdvisorIntent.LATEST_ADMISSION_INFO:
       return uniqueQueries([
         joinQueryParts([
-          input.schoolName,
+          schoolName,
           "thông tin tuyển sinh",
           year,
           "chính thức",
         ]),
         joinQueryParts([
-          input.schoolName,
+          schoolName,
           "đề án tuyển sinh",
           year,
           "pdf",
@@ -161,14 +265,14 @@ export function buildAdvisorWebSearchQueries(input: AdvisorWebSearchQueryInput) 
     case AdvisorIntent.TUITION:
       return uniqueQueries([
         joinQueryParts([
-          input.schoolName,
+          schoolName,
           "học phí",
           input.majorName,
           year,
           "chính thức",
         ]),
         joinQueryParts([
-          input.schoolName,
+          schoolName,
           "mức thu học phí",
           input.majorName,
           year,
@@ -179,8 +283,10 @@ export function buildAdvisorWebSearchQueries(input: AdvisorWebSearchQueryInput) 
     case AdvisorIntent.ADMISSION_CHANCE:
     case AdvisorIntent.SCORE_CALCULATION:
       return uniqueQueries([
+        ...exactProgramQueries,
+        ...buildSchoolBenchmarkQueries(input),
         joinQueryParts([
-          input.schoolName,
+          schoolName,
           "điểm chuẩn",
           inferMajorSearchTerm(input),
           input.combination,
@@ -188,7 +294,7 @@ export function buildAdvisorWebSearchQueries(input: AdvisorWebSearchQueryInput) 
           "chính thức",
         ]),
         joinQueryParts([
-          input.schoolName,
+          schoolName,
           "tuyển sinh",
           inferMajorSearchTerm(input),
           input.combination,
@@ -197,13 +303,17 @@ export function buildAdvisorWebSearchQueries(input: AdvisorWebSearchQueryInput) 
       ]);
 
     case AdvisorIntent.SCORE_SUGGESTION:
-      return buildScoreSuggestionQueries(input);
+      return uniqueQueries([
+        ...buildSchoolBenchmarkQueries(input),
+        ...buildScoreSuggestionQueries(input),
+      ]);
 
     case AdvisorIntent.REVIEW_MAJOR:
     case AdvisorIntent.CAREER_PATH:
     case AdvisorIntent.PERSONAL_FIT:
     case AdvisorIntent.STUDY_PLAN:
       return uniqueQueries([
+        ...exactProgramQueries,
         joinQueryParts([
           inferMajorSearchTerm(input),
           "học gì cơ hội việc làm",
@@ -232,6 +342,14 @@ export function buildAdvisorWebSearchQueries(input: AdvisorWebSearchQueryInput) 
 
     case AdvisorIntent.COMPARE_SCHOOLS:
       return uniqueQueries([
+        ...buildSchoolBenchmarkQueries({
+          ...input,
+          schoolName: input.schoolA,
+        }),
+        ...buildSchoolBenchmarkQueries({
+          ...input,
+          schoolName: input.schoolB,
+        }),
         joinQueryParts([
           input.schoolA,
           input.schoolB,
