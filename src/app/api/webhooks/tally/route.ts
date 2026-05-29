@@ -12,6 +12,9 @@ type JsonRecord = Record<string, unknown>;
 
 export const runtime = "nodejs";
 
+// Deprecated legacy flow: kept for historical Tally submissions, /processing,
+// and result/evaluation pages. The new /survey advisor does not call this route.
+
 function isRecord(value: unknown): value is JsonRecord {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }

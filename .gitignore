@@ -23,6 +23,9 @@
 # misc
 .DS_Store
 *.pem
+gen-lang-client-*.json
+*service-account*.json
+.google-credentials/
 
 # debug
 npm-debug.log*

@@ -1,1 +1,5 @@
-export { default } from "@/src/app/survey/page";
+import { AdvisorPage } from "@/components/advisor/AdvisorPage";
+
+export default function SurveyPage() {
+  return <AdvisorPage />;
+}

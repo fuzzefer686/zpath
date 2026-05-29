@@ -7,6 +7,9 @@ import { buildZPathCareerEvaluationPrompt } from "./prompts/zpathCareerEvaluatio
 import { zpathEvaluationResponseSchema } from "./schemas/zpathEvaluationSchema";
 import { validateZpathEvaluationOutput } from "./validateZpathEvaluationOutput";
 
+// Deprecated legacy survey evaluation. Kept for existing Tally webhook,
+// evaluation, and scoring flows; /survey "Hỏi ZPath" uses lib/advisor instead.
+
 export async function evaluateCareerWithGemini(
   profile: NormalizedSurveyProfile,
 ): Promise<AIEvaluationOutput> {

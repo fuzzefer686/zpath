@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { Send, Bot, User, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
+import { MarkdownContent } from '@/components/advisor/MarkdownContent';
 import { buildCareerMatches } from '@/lib/matching-engine';
 import { useUserProfile } from '@/hooks/useUserProfile';
 
@@ -110,8 +111,12 @@ export default function ChatPage() {
               <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${msg.role === 'user' ? 'bg-zpath-primary text-white' : 'bg-zpath-gradient text-white'}`}>
                 {msg.role === 'user' ? <User size={16} /> : <Bot size={16} />}
               </div>
-              <div className={`max-w-[80%] p-4 rounded-2xl text-sm leading-relaxed ${msg.role === 'user' ? 'bg-blue-50 text-zpath-dark rounded-tr-none' : 'bg-gray-50 text-gray-800 rounded-tl-none whitespace-pre-line'}`}>
-                {msg.content}
+              <div className={`max-w-[80%] p-4 rounded-2xl text-sm leading-relaxed ${msg.role === 'user' ? 'bg-blue-50 text-zpath-dark rounded-tr-none' : 'bg-gray-50 text-gray-800 rounded-tl-none'}`}>
+                {msg.role === 'ai' ? (
+                  <MarkdownContent content={msg.content} />
+                ) : (
+                  msg.content
+                )}
               </div>
             </div>
           ))}

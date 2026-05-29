@@ -1,30 +1,11 @@
-import { GoogleGenAI, type GenerateContentConfig } from "@google/genai";
+import type { GenerateContentConfig } from "@google/genai";
+import {
+  geminiModelName,
+  generateGeminiText,
+} from "@/src/lib/ai/geminiVertexClient";
 
 if (typeof window !== "undefined") {
   throw new Error("geminiClient must only be imported from server-side code.");
-}
-
-export const geminiModelName =
-  process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash";
-
-let geminiClient: GoogleGenAI | null = null;
-
-function getGeminiClient() {
-  const apiKey = process.env.GEMINI_API_KEY;
-
-  if (!apiKey) {
-    throw new Error("Missing required environment variable: GEMINI_API_KEY");
-  }
-
-  if (!geminiClient) {
-    geminiClient = new GoogleGenAI({
-      apiKey,
-      enterprise: false,
-      vertexai: false,
-    });
-  }
-
-  return geminiClient;
 }
 
 function stripJsonCodeFence(text: string) {
@@ -55,17 +36,12 @@ export async function generateGeminiJson(
       responseSchema as GenerateContentConfig["responseSchema"];
   }
 
-  const response = await getGeminiClient().models.generateContent({
-    model: geminiModelName,
-    contents: prompt,
+  const text = await generateGeminiText({
+    prompt,
     config,
   });
 
-  const text = response.text?.trim();
-
-  if (!text) {
-    throw new Error("GEMINI_EMPTY_RESPONSE");
-  }
-
   return parseJsonResponse(text);
 }
+
+export { geminiModelName };
