@@ -45,16 +45,7 @@ const SCHOOL_CODE_ALIASES: Record<string, string> = {
   "hanoi university science and technology": "HUST",
   hust: "HUST",
   bka: "HUST",
-  "ngoại thương": "FTU",
-  "ngoai thuong": "FTU",
-  "đại học ngoại thương": "FTU",
-  "dai hoc ngoai thuong": "FTU",
-  "foreign trade university": "FTU",
   neu: "NEU",
-  "kinh tế quốc dân": "NEU",
-  "kinh te quoc dan": "NEU",
-  "đại học kinh tế quốc dân": "NEU",
-  "dai hoc kinh te quoc dan": "NEU",
   ftu: "FTU",
   vinuni: "VINUNI",
   hanu: "HANU",
@@ -440,7 +431,6 @@ function extractMajorName(text: string) {
   return (
     extractAfter(text, /(?:^|[^\p{L}\p{N}])review\s+(?:ngành|nganh)\s+(.+)/iu) ??
     extractAfter(text, /(?:^|[^\p{L}\p{N}])(?:ngành|nganh)\s+(.+?)\s+(?:học gì|hoc gi|có khó không|co kho khong|ra làm gì|ra lam gi|cơ hội|co hoi)/iu) ??
-    extractAfter(text, /(?:^|[^\p{L}\p{N}])(?:ngành|nganh)\s+(.+?)(?:\s+(?:năm|nam|20[2-3]\d|tại|tai|ở|o|của|cua)|$)/iu) ??
     extractAfter(text, /(?:^|[^\p{L}\p{N}])học\s+(?:ngành\s+)?(.+?)\s+(?:ra làm gì|có dễ|có khó|hiện nay|hoc phi|học phí)/iu) ??
     extractAfter(text, /(?:^|[^\p{L}\p{N}])hoc\s+(?:nganh\s+)?(.+?)\s+(?:ra lam gi|co de|co kho|hien nay|hoc phi)/iu) ??
     extractAfter(text, /(?:^|[^\p{L}\p{N}])học phí\s+(?:ngành\s+)?(.+)/iu) ??

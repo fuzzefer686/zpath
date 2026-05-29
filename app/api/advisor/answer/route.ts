@@ -77,7 +77,7 @@ function readYear(fields: AdvisorTemplateValues | undefined) {
 
 function getVerifiedProgramContext(extracted: ExtractedAdvisorEntities) {
   if (!extracted.programCode) return undefined;
-  if (extracted.schoolCode !== "HUST") return undefined;
+  if (extracted.schoolCode && extracted.schoolCode !== "HUST") return undefined;
 
   const programCode = canonicalizeAdvisorProgramCode(extracted.programCode);
   const program = programCode ? getHustAdmissionProgram2026(programCode) : null;
@@ -527,11 +527,7 @@ async function tryWebSearch({
   }
 
   const results = await searchWebForAdvisorQueries(queries, {
-    maxResults:
-      extracted.year !== undefined || questionAsksForBenchmark(question)
-        ? 8
-        : 5,
-    forceRefresh: extracted.year !== undefined || questionAsksForBenchmark(question),
+    maxResults: 5,
     preferOfficialSources: queryPrefersOfficialSources(intent),
     schoolName: extracted.schoolName ?? extracted.schoolCode,
     programCode: extracted.programCode,
