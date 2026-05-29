@@ -24,6 +24,14 @@ type ServiceAccountCredentials = {
 let client: GoogleGenAI | null = null;
 let envCredentialsPath: string | undefined;
 
+function readGeminiApiKey() {
+  return (
+    process.env.GEMINI_API_KEY?.trim() ||
+    process.env.GOOGLE_API_KEY?.trim() ||
+    undefined
+  );
+}
+
 function normalizePrivateKey(credentials: ServiceAccountCredentials) {
   if (typeof credentials.private_key !== "string") return credentials;
 
@@ -122,7 +130,11 @@ function ensureGoogleApplicationCredentials() {
   return credentialsPath;
 }
 
-function preferVertexServiceAccountCredentials() {
+function hasVertexServiceAccountCredentials() {
+  return Boolean(resolveCredentialsPath());
+}
+
+function configureVertexServiceAccountCredentials() {
   const credentialsPath = ensureGoogleApplicationCredentials();
   process.env.GOOGLE_GENAI_USE_VERTEXAI = "true";
 
@@ -176,10 +188,14 @@ function getVertexLocation() {
 
 export function isGeminiVertexConfigured() {
   try {
-    return Boolean(getVertexProjectId());
+    return hasVertexServiceAccountCredentials() && Boolean(getVertexProjectId());
   } catch {
     return false;
   }
+}
+
+export function isGeminiConfigured() {
+  return Boolean(readGeminiApiKey()) || isGeminiVertexConfigured();
 }
 
 export function getGeminiModelName() {
@@ -229,13 +245,25 @@ function readFinishReason(response: unknown) {
 
 export function getGeminiClient() {
   if (!client) {
-    preferVertexServiceAccountCredentials();
+    if (hasVertexServiceAccountCredentials()) {
+      configureVertexServiceAccountCredentials();
 
-    client = new GoogleGenAI({
-      vertexai: true,
-      project: getVertexProjectId(),
-      location: getVertexLocation(),
-    });
+      client = new GoogleGenAI({
+        vertexai: true,
+        project: getVertexProjectId(),
+        location: getVertexLocation(),
+      });
+    } else {
+      const apiKey = readGeminiApiKey();
+      if (!apiKey) {
+        throw new Error(
+          "GEMINI_NOT_CONFIGURED: Set GEMINI_API_KEY, GOOGLE_API_KEY, GOOGLE_APPLICATION_CREDENTIALS_BASE64, or GOOGLE_APPLICATION_CREDENTIALS_JSON on Vercel.",
+        );
+      }
+
+      delete process.env.GOOGLE_GENAI_USE_VERTEXAI;
+      client = new GoogleGenAI({ apiKey });
+    }
   }
 
   return client;
