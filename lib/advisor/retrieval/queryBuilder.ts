@@ -5,6 +5,7 @@ export type AdvisorWebSearchQueryInput = {
   schoolName?: string;
   schoolA?: string;
   schoolB?: string;
+  programCode?: string;
   majorName?: string;
   majorA?: string;
   majorB?: string;
@@ -50,8 +51,9 @@ function uniqueQueries(queries: string[]) {
 }
 
 function inferMajorSearchTerm(input: AdvisorWebSearchQueryInput) {
-  const explicitMajor =
-    input.majorName ?? input.majorA ?? input.majorB ?? input.message;
+  if (input.programCode) return cleanPart(input.programCode);
+
+  const explicitMajor = input.majorName ?? input.majorA ?? input.majorB ?? input.message;
   const interestText = input.interests?.join(" ").toLowerCase() ?? "";
   const haystack = [explicitMajor, interestText, input.message]
     .filter(Boolean)
@@ -294,19 +296,6 @@ export function shouldUseAdvisorWebSearch(
   if (input.asksForLatest) return true;
   if (input.asksForBenchmark) return true;
 
-  const webFirstIntents: AdvisorIntent[] = [
-    AdvisorIntent.LATEST_ADMISSION_INFO,
-    AdvisorIntent.TUITION,
-    AdvisorIntent.ADMISSION_CHANCE,
-    AdvisorIntent.SCORE_SUGGESTION,
-    AdvisorIntent.SCORE_CALCULATION,
-    AdvisorIntent.COMPARE_SCHOOLS,
-  ];
-
-  if (webFirstIntents.includes(input.intent)) {
-    return true;
-  }
-
   if (
     input.intent === AdvisorIntent.REVIEW_MAJOR &&
     input.internalDataStatus !== "success"
@@ -314,7 +303,6 @@ export function shouldUseAdvisorWebSearch(
     return true;
   }
 
-  if (input.broadQuestion) return true;
   if (input.internalDataStatus === "empty") return true;
   if (input.internalDataStatus === "unavailable") return true;
   if (input.internalDataStatus === "error") return true;

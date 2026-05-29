@@ -154,7 +154,8 @@ export type GetSchoolProfileParams = {
 };
 
 export type GetMajorProfileParams = {
-  majorName: string;
+  majorName?: string;
+  programCode?: string;
   schoolName?: string;
   schoolCode?: string;
 };
@@ -162,6 +163,7 @@ export type GetMajorProfileParams = {
 export type GetAdmissionDataParams = {
   schoolName?: string;
   schoolCode?: string;
+  programCode?: string;
   majorName?: string;
   year?: number;
 };

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Báo cáo kiến trúc hiện tại của Chatbot AI ZPath</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="zpath-report.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Báo cáo kiến trúc hiện tại của Chatbot AI ZPath</h1>
+</header>
+<h1 id="báo-cáo-kiến-trúc-hiện-tại-của-chatbot-ai-zpath">Báo cáo kiến
+trúc hiện tại của Chatbot AI ZPath</h1>
+<p>Ngày lập báo cáo: 28/05/2026</p>
+<h2 id="tóm-tắt-điều-hành">1. Tóm tắt điều hành</h2>
+<p>Chatbot AI hiện tại của ZPath gồm hai luồng chính:</p>
+<ul>
+<li><strong>Advisor chuyên sâu tại <code>/survey</code> và
+<code>/advisor</code></strong>: tiếp nhận câu hỏi tuyển sinh/hướng
+nghiệp, phân loại intent, trích xuất dữ kiện, lấy dữ liệu nội bộ, bổ
+sung web search khi cần, gọi Gemini Vertex AI để sinh câu trả lời JSON
+có cấu trúc, sau đó render thành giao diện trực quan.</li>
+<li><strong>AI Mentor ngắn tại <code>/api/chat</code></strong>: nhận câu
+hỏi và hồ sơ học sinh, gọi chung Gemini Vertex client để trả lời ngắn
+gọn.</li>
+</ul>
+<p>Kiến trúc đang đi theo hướng production-ready: backend ưu tiên dữ
+liệu nội bộ ZPath, dùng nguồn web đáng tin cậy khi cần thông tin cập
+nhật, ép Gemini trả JSON theo schema ổn định, có fallback an toàn khi AI
+lỗi, và có cơ chế lưu hội thoại/feedback vào Supabase.</p>
+<p>Vấn đề triển khai đáng chú ý nhất hiện nay là <strong>credential
+Google Cloud AI trên Vercel</strong>. Local dùng file service account
+JSON, còn Vercel không có file này. Backend đã được bổ sung cơ chế đọc
+service account từ biến môi trường
+<code>GOOGLE_APPLICATION_CREDENTIALS_BASE64</code> hoặc
+<code>GOOGLE_APPLICATION_CREDENTIALS_JSON</code>.</p>
+<h2 id="sơ-đồ-kiến-trúc-tổng-quan">2. Sơ đồ kiến trúc tổng quan</h2>
+<pre class="text"><code>Người dùng
+   |
+   v
+Frontend Advisor UI
+components/advisor/AdvisorPage.tsx
+   |
+   | POST /api/advisor/answer
+   v
+Next.js API Route
+app/api/advisor/answer/route.ts
+   |
+   +--&gt; Validate request
+   |
+   +--&gt; Classify intent + extract entities
+   |    lib/advisor/classifier.ts
+   |
+   +--&gt; Internal retrieval
+   |    lib/advisor/retrieval/internal.ts
+   |    Supabase admission/school/major/tuition tables
+   |
+   +--&gt; Web search decision + query building
+   |    lib/advisor/retrieval/queryBuilder.ts
+   |    lib/advisor/retrieval/webSearch.ts
+   |
+   +--&gt; Prompt assembly
+   |    lib/advisor/prompts.ts
+   |
+   +--&gt; Gemini Vertex AI
+   |    lib/advisor/gemini.ts
+   |    src/lib/ai/geminiVertexClient.ts
+   |
+   +--&gt; JSON validation + normalization
+   |
+   +--&gt; Persistence
+   |    lib/advisor/persistence.ts
+   |    Supabase advisor_conversations / advisor_messages / advisor_feedback
+   |
+   v
+AdvisorAnswer JSON
+   |
+   v
+Frontend visual rendering
+components/advisor/AdvisorAnswer.tsx
+components/advisor/MarkdownContent.tsx
+components/advisor/SourceList.tsx</code></pre>
+<h2 id="thành-phần-chính">3. Thành phần chính</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Lớp</th>
+<th>File chính</th>
+<th>Vai trò</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frontend container</td>
+<td><code>components/advisor/AdvisorPage.tsx</code></td>
+<td>Quản lý câu hỏi, trạng thái loading/error, hội thoại, auto-scroll
+xuống output, gửi request đến API.</td>
+</tr>
+<tr>
+<td>API orchestration</td>
+<td><code>app/api/advisor/answer/route.ts</code></td>
+<td>Điều phối toàn bộ pipeline: validate, classify, retrieval, web
+search, Gemini, fallback, persistence.</td>
+</tr>
+<tr>
+<td>Intent classifier</td>
+<td><code>lib/advisor/classifier.ts</code></td>
+<td>Phân loại câu hỏi thành intent và trích xuất trường/ngành/điểm/tổ
+hợp/khu vực/năm/sở thích.</td>
+</tr>
+<tr>
+<td>Internal retrieval</td>
+<td><code>lib/advisor/retrieval/internal.ts</code></td>
+<td>Đọc dữ liệu Supabase về trường, ngành, điểm chuẩn, học phí, tuyển
+sinh.</td>
+</tr>
+<tr>
+<td>Web retrieval</td>
+<td><code>lib/advisor/retrieval/webSearch.ts</code></td>
+<td>Tìm nguồn web qua Gemini grounding, Tavily hoặc Serper, sau đó rank
+nguồn.</td>
+</tr>
+<tr>
+<td>Query builder</td>
+<td><code>lib/advisor/retrieval/queryBuilder.ts</code></td>
+<td>Sinh truy vấn web theo intent, ví dụ điểm chuẩn, học phí, đề án
+tuyển sinh.</td>
+</tr>
+<tr>
+<td>Prompt builder</td>
+<td><code>lib/advisor/prompts.ts</code></td>
+<td>Định nghĩa system prompt, schema JSON, section bắt buộc theo từng
+intent.</td>
+</tr>
+<tr>
+<td>Gemini adapter</td>
+<td><code>lib/advisor/gemini.ts</code></td>
+<td>Gọi Gemini, parse JSON, validate schema, tạo fallback an toàn khi
+lỗi.</td>
+</tr>
+<tr>
+<td>Vertex client</td>
+<td><code>src/lib/ai/geminiVertexClient.ts</code></td>
+<td>Cấu hình Google GenAI SDK, Vertex AI, model, credential
+local/Vercel.</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td><code>lib/advisor/persistence.ts</code></td>
+<td>Lưu conversation, message, metadata và feedback vào Supabase.</td>
+</tr>
+<tr>
+<td>Answer renderer</td>
+<td><code>components/advisor/AdvisorAnswer.tsx</code></td>
+<td>Hiển thị confidence, data status, section cards, warning, source
+list, follow-up và feedback.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="luồng-xử-lý-apiadvisoranswer">4. Luồng xử lý
+<code>/api/advisor/answer</code></h2>
+<h3 id="nhận-và-validate-request">4.1 Nhận và validate request</h3>
+<p>Request được validate bởi <code>parseAdvisorAnswerRequest</code>
+trong <code>lib/advisor/schemas.ts</code>.</p>
+<p>API hỗ trợ hai mode:</p>
+<ul>
+<li><code>free_text</code>: người dùng nhập câu hỏi tự do.</li>
+<li><code>template</code>: người dùng chọn mẫu câu hỏi và điền
+fields.</li>
+</ul>
+<p><code>allowWebSearch</code> mặc định là <code>true</code> trừ khi
+frontend hoặc request gửi <code>false</code>.</p>
+<h3 id="phân-loại-intent-và-trích-xuất-dữ-kiện">4.2 Phân loại intent và
+trích xuất dữ kiện</h3>
+<p>Với câu hỏi tự do, <code>classifyAdvisorQuestion</code> dùng
+rule-based pattern để xác định intent:</p>
+<ul>
+<li><code>SCORE_SUGGESTION</code></li>
+<li><code>REVIEW_MAJOR</code></li>
+<li><code>COMPARE_MAJORS</code></li>
+<li><code>COMPARE_SCHOOLS</code></li>
+<li><code>ADMISSION_CHANCE</code></li>
+<li><code>TUITION</code></li>
+<li><code>LATEST_ADMISSION_INFO</code></li>
+<li><code>CAREER_PATH</code></li>
+<li><code>PERSONAL_FIT</code></li>
+<li><code>STUDY_PLAN</code></li>
+<li><code>GENERAL_ADVICE</code> hoặc <code>UNKNOWN</code></li>
+</ul>
+<p>Classifier cũng trích xuất các dữ kiện quan trọng:</p>
+<ul>
+<li>tên trường hoặc mã trường</li>
+<li>tên ngành</li>
+<li>điểm số</li>
+<li>tổ hợp xét tuyển</li>
+<li>khu vực</li>
+<li>năm tuyển sinh</li>
+<li>sở thích và nhóm lĩnh vực quan tâm</li>
+</ul>
+<h3 id="lấy-dữ-liệu-nội-bộ-zpath">4.3 Lấy dữ liệu nội bộ ZPath</h3>
+<p><code>getInternalContextForAdvisor</code> chọn hàm retrieval theo
+intent:</p>
+<ul>
+<li>Review ngành/career/study plan: lấy major profile hoặc search
+majors.</li>
+<li>Compare majors: lấy profile từng ngành và benchmark nếu câu hỏi hỏi
+điểm chuẩn.</li>
+<li>Compare schools: lấy profile từng trường và major nếu có.</li>
+<li>Admission chance: lấy admission data và benchmark scores.</li>
+<li>Score suggestion: gợi ý ngành/trường theo điểm và tổ hợp.</li>
+<li>Tuition: lấy dữ liệu học phí.</li>
+<li>Latest admission info: lấy school profile và admission data.</li>
+<li>General/personal fit: search schools và majors.</li>
+</ul>
+<p>Nếu Supabase lỗi hoặc thiếu schema, pipeline không dừng hẳn. Hệ thống
+trả về trạng thái <code>error</code>, <code>unavailable</code> hoặc
+<code>empty</code>, sau đó vẫn tiếp tục web search và Gemini.</p>
+<h3 id="quyết-định-web-search">4.4 Quyết định web search</h3>
+<p><code>tryWebSearch</code> quyết định có tìm web không dựa trên:</p>
+<ul>
+<li><code>allowWebSearch</code></li>
+<li>intent</li>
+<li>câu hỏi có yêu cầu thông tin mới nhất không</li>
+<li>câu hỏi có hỏi điểm chuẩn không</li>
+<li>trạng thái dữ liệu nội bộ</li>
+<li>câu hỏi rộng như “nên chọn trường/ngành nào”</li>
+</ul>
+<p>Các intent ưu tiên web search gồm:</p>
+<ul>
+<li>điểm chuẩn</li>
+<li>tư vấn theo điểm</li>
+<li>học phí</li>
+<li>tuyển sinh mới nhất</li>
+<li>so sánh trường</li>
+<li>so sánh ngành</li>
+<li>review ngành khi dữ liệu nội bộ hạn chế</li>
+</ul>
+<p>Provider web search được auto-detect:</p>
+<ol type="1">
+<li><code>gemini_grounding</code> nếu Vertex Gemini đã cấu hình.</li>
+<li><code>tavily</code> nếu có <code>TAVILY_API_KEY</code>.</li>
+<li><code>serper</code> nếu có <code>SERPER_API_KEY</code>.</li>
+<li><code>none</code> nếu không có provider.</li>
+</ol>
+<p>Kết quả web được rank để ưu tiên:</p>
+<ul>
+<li>website tuyển sinh chính thức của trường</li>
+<li>nguồn chính phủ/Bộ GD&amp;ĐT</li>
+<li>PDF chính thức</li>
+<li>báo giáo dục uy tín</li>
+<li>loại bỏ hoặc hạ điểm nguồn SEO kém tin cậy</li>
+</ul>
+<h3 id="build-prompt-và-gọi-gemini">4.5 Build prompt và gọi Gemini</h3>
+<p><code>buildAdvisorGeminiPrompt</code> ghép:</p>
+<ul>
+<li>system prompt vai trò ZPath Advisor</li>
+<li>contract JSON bắt buộc</li>
+<li>hướng dẫn theo intent</li>
+<li>dữ liệu đã trích xuất</li>
+<li>internal context</li>
+<li>web search results</li>
+<li>danh sách allowed sources</li>
+</ul>
+<p>Gemini bắt buộc trả JSON theo schema:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;summary&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;answerType&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;confidence&quot;</span><span class="fu">:</span> <span class="st">&quot;high | medium | low&quot;</span><span class="fu">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;dataStatus&quot;</span><span class="fu">:</span> <span class="st">&quot;internal_data | web_augmented | limited_data | general_advice&quot;</span><span class="fu">,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;sections&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;heading&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;content&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;warnings&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;string&quot;</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;sources&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;url&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;publisher&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;accessedAt&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;sourceType&quot;</span><span class="fu">:</span> <span class="st">&quot;zpath_database | official_school_site | government_site | news | other&quot;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;followUpQuestions&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;string&quot;</span><span class="ot">]</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p><code>generateAdvisorAnswerWithGemini</code> dùng:</p>
+<ul>
+<li><code>responseMimeType: "application/json"</code></li>
+<li><code>temperature: 0.2</code></li>
+<li><code>maxOutputTokens: 8192</code></li>
+</ul>
+<p>Sau khi nhận response, <code>validateAdvisorAnswerJson</code> parse
+JSON, chuẩn hóa sections, warnings, sources và loại source không nằm
+trong <code>allowedSources</code>.</p>
+<h3 id="fallback">4.6 Fallback</h3>
+<p>Fallback chỉ dùng khi Gemini thật sự lỗi:</p>
+<ul>
+<li>lỗi credential</li>
+<li>lỗi network</li>
+<li>lỗi parse JSON</li>
+<li>lỗi model không trả section hợp lệ</li>
+</ul>
+<p>Fallback hiện tại không còn là mock cũ, nhưng vẫn báo người dùng rằng
+AI chưa phân tích được. Trong production, fallback là dấu hiệu cần kiểm
+tra logs, đặc biệt dòng:</p>
+<pre class="text"><code>Advisor Gemini fallback:</code></pre>
+<p>Nếu log có:</p>
+<pre class="text"><code>Could not load the default credentials</code></pre>
+<p>thì nguyên nhân là Vercel chưa nạp được Google service account.</p>
+<h2 id="kiến-trúc-gemini-vertex-ai">5. Kiến trúc Gemini Vertex AI</h2>
+<p>File <code>src/lib/ai/geminiVertexClient.ts</code> là client dùng
+chung cho Advisor và Chat.</p>
+<p>Client hiện có các trách nhiệm:</p>
+<ul>
+<li>Đảm bảo chỉ chạy server-side.</li>
+<li>Chọn model từ <code>GEMINI_MODEL</code>, mặc định
+<code>gemini-3.5-flash</code>.</li>
+<li>Chọn location từ <code>GOOGLE_CLOUD_LOCATION</code> hoặc
+<code>VERTEX_AI_LOCATION</code>, mặc định <code>global</code>.</li>
+<li>Dùng Vertex AI qua <code>GOOGLE_GENAI_USE_VERTEXAI=true</code>.</li>
+<li>Xóa <code>GOOGLE_API_KEY</code> và <code>GEMINI_API_KEY</code> để
+tránh chạy nhầm API key path.</li>
+<li>Đọc credential theo thứ tự:
+<ol type="1">
+<li><code>GOOGLE_APPLICATION_CREDENTIALS</code> nếu trỏ tới file có
+thật.</li>
+<li><code>GOOGLE_APPLICATION_CREDENTIALS_BASE64</code>.</li>
+<li><code>GOOGLE_APPLICATION_CREDENTIALS_JSON</code>.</li>
+<li>File local
+<code>gen-lang-client-0447269763-8fc0688f2b27.json</code>.</li>
+</ol></li>
+<li>Với credential từ env, ghi file tạm vào
+<code>/tmp/zpath-google-credentials.json</code>.</li>
+<li>Tự lấy <code>project_id</code> từ env hoặc từ service account
+JSON.</li>
+</ul>
+<p>Các biến production khuyến nghị trên Vercel:</p>
+<pre class="env"><code>GOOGLE_APPLICATION_CREDENTIALS_BASE64=...
+GOOGLE_CLOUD_PROJECT=gen-lang-client-0447269763
+GOOGLE_CLOUD_LOCATION=global
+GEMINI_MODEL=gemini-3.5-flash</code></pre>
+<p>Không được dùng prefix <code>NEXT_PUBLIC_</code> cho credential.</p>
+<h2 id="frontend-rendering">6. Frontend rendering</h2>
+<p>Frontend Advisor hiện có các đặc điểm:</p>
+<ul>
+<li><code>AdvisorPage</code> giữ state câu hỏi, câu trả lời, lỗi,
+loading, conversation id và message id.</li>
+<li>Khi người dùng gửi câu hỏi, UI reset answer cũ, bật loading và tự
+scroll xuống vùng output.</li>
+<li>Trong development, nếu API trả debug metadata, frontend log ra
+console.</li>
+<li><code>AdvisorAnswer</code> render:
+<ul>
+<li>confidence badge</li>
+<li>data status badge</li>
+<li>title và summary lớn</li>
+<li>từng section dạng card</li>
+<li>warning</li>
+<li>source list</li>
+<li>follow-up suggestions</li>
+<li>feedback</li>
+</ul></li>
+<li><code>MarkdownContent</code> hỗ trợ:
+<ul>
+<li>paragraph</li>
+<li>bullet/numbered list</li>
+<li>markdown table</li>
+<li>inline bold</li>
+<li>inline code</li>
+</ul></li>
+</ul>
+<p>Thiết kế này giúp Gemini có thể trả nội dung dạng markdown table
+trong <code>section.content</code> mà frontend vẫn render trực quan thay
+vì hiển thị raw markdown.</p>
+<h2 id="persistence-và-feedback">7. Persistence và feedback</h2>
+<p><code>persistAdvisorExchange</code> lưu:</p>
+<ul>
+<li>conversation</li>
+<li>user message</li>
+<li>assistant message</li>
+<li>metadata gồm <code>webSearchAllowed</code>,
+<code>webSearchUsed</code>, <code>sourceUrls</code>,
+<code>confidence</code>, <code>dataStatus</code></li>
+</ul>
+<p>Nếu người dùng đã đăng nhập, conversation gắn với
+<code>user_id</code>. Nếu chưa đăng nhập, frontend tạo
+<code>anonymousId</code> trong localStorage.</p>
+<p>Feedback được lưu qua <code>advisor_feedback</code>, gồm:</p>
+<ul>
+<li>message id</li>
+<li>rating up/down</li>
+<li>comment tùy chọn</li>
+</ul>
+<h2 id="các-điểm-mạnh-hiện-tại">8. Các điểm mạnh hiện tại</h2>
+<ul>
+<li>Pipeline có cấu trúc rõ: classify -&gt; retrieve -&gt; search -&gt;
+generate -&gt; validate -&gt; persist.</li>
+<li>Schema câu trả lời ổn định, frontend không phụ thuộc raw text từ
+model.</li>
+<li>Prompt đã có section strategy riêng theo intent.</li>
+<li>Dữ liệu nội bộ được ưu tiên trước web.</li>
+<li>Web search mặc định bật cho các câu hỏi cần thông tin cập nhật.</li>
+<li>Sources được kiểm soát bằng <code>allowedSources</code>, hạn chế
+Gemini bịa URL.</li>
+<li>Có fallback an toàn thay vì crash UI.</li>
+<li>Có debug metadata trong development để xác minh Gemini, internal
+retrieval và web search.</li>
+</ul>
+<h2 id="rủi-ro-và-điểm-cần-cải-thiện">9. Rủi ro và điểm cần cải
+thiện</h2>
+<h3 id="credential-production">9.1 Credential production</h3>
+<p>Rủi ro lớn nhất là deployment thiếu Google Cloud service account. Khi
+đó Gemini và Gemini grounding đều lỗi, Advisor rơi vào fallback.</p>
+<p>Khuyến nghị:</p>
+<ul>
+<li>Bắt buộc set <code>GOOGLE_APPLICATION_CREDENTIALS_BASE64</code> trên
+Vercel.</li>
+<li>Không set <code>GOOGLE_APPLICATION_CREDENTIALS</code> bằng tên file
+nếu file không tồn tại trên Vercel.</li>
+<li>Sau khi đổi env phải redeploy.</li>
+<li>Service account cần quyền gọi Vertex AI, tối thiểu vai trò phù hợp
+như Vertex AI User.</li>
+</ul>
+<h3 id="coupling-giữa-web-search-và-gemini-credential">9.2 Coupling giữa
+web search và Gemini credential</h3>
+<p>Nếu provider là <code>gemini_grounding</code>, web search cũng phụ
+thuộc Vertex credential. Khi credential lỗi, cả generation và search đều
+fail.</p>
+<p>Khuyến nghị:</p>
+<ul>
+<li>Cấu hình thêm Tavily hoặc Serper làm provider dự phòng nếu cần độ ổn
+định cao.</li>
+<li>Log rõ provider đang dùng và số kết quả web.</li>
+</ul>
+<h3 id="internal-retrieval-phụ-thuộc-supabase-schema">9.3 Internal
+retrieval phụ thuộc Supabase schema</h3>
+<p>Nếu thiếu bảng hoặc env Supabase, retrieval trả
+<code>unavailable</code>. Pipeline vẫn chạy nhưng chất lượng câu trả lời
+giảm.</p>
+<p>Khuyến nghị:</p>
+<ul>
+<li>Theo dõi <code>internalResultCount</code> trong debug
+development.</li>
+<li>Kiểm tra đầy đủ migration admission/school/major/benchmark/tuition
+trước deploy.</li>
+</ul>
+<h3 id="fallback-vẫn-hiển-thị-không-thể-kết-nối-ai">9.4 Fallback vẫn
+hiển thị “không thể kết nối AI”</h3>
+<p>Fallback hiện đúng về mặt an toàn, nhưng nếu xuất hiện ở production
+thì là tín hiệu vận hành, không phải trạng thái bình thường.</p>
+<p>Khuyến nghị:</p>
+<ul>
+<li>Sau khi credential ổn định, production không nên thường xuyên rơi
+vào fallback.</li>
+<li>Có thể bổ sung alert log khi <code>Advisor Gemini fallback</code>
+xuất hiện nhiều lần.</li>
+</ul>
+<h2 id="checklist-vận-hành-production">10. Checklist vận hành
+production</h2>
+<p>Trước khi deploy:</p>
+<ul>
+<li><code>npm run build</code> pass.</li>
+<li>Vercel có <code>GOOGLE_APPLICATION_CREDENTIALS_BASE64</code>.</li>
+<li>Vercel có <code>GOOGLE_CLOUD_PROJECT</code>.</li>
+<li>Vercel có <code>GOOGLE_CLOUD_LOCATION</code>.</li>
+<li>Vercel có <code>GEMINI_MODEL</code>.</li>
+<li>Supabase env đã set đúng.</li>
+<li>Nếu dùng web search ngoài Gemini, set
+<code>WEB_SEARCH_PROVIDER</code> và key tương ứng.</li>
+</ul>
+<p>Sau khi deploy:</p>
+<ul>
+<li>Hỏi thử câu score suggestion: “26.9 điểm A00 nên chọn trường/ngành
+nào ở Miền Bắc nếu em thích Công nghệ?”</li>
+<li>Kiểm tra câu trả lời có section đúng intent.</li>
+<li>Kiểm tra sources có nguồn nội bộ hoặc web.</li>
+<li>Kiểm tra Vercel logs không còn
+<code>Could not load the default credentials</code>.</li>
+<li>Nếu có fallback, đọc dòng <code>Advisor Gemini fallback:</code> để
+xác định lỗi thật.</li>
+</ul>
+<h2 id="kết-luận">11. Kết luận</h2>
+<p>Kiến trúc chatbot AI hiện tại đã vượt qua mức mock đơn giản và có đầy
+đủ các lớp cần thiết cho một advisor production: hiểu intent, lấy dữ
+liệu nội bộ, dùng web search có kiểm soát, gọi Gemini Vertex AI,
+validate JSON, render trực quan, lưu hội thoại và nhận feedback.</p>
+<p>Ưu tiên kỹ thuật tiếp theo nên là ổn định credential production trên
+Vercel, bổ sung quan sát lỗi Gemini/web search, và đảm bảo Supabase
+admission dataset đủ sâu để câu trả lời có nhiều dữ liệu cụ thể hơn.</p>
+</body>
+</html>

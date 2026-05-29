@@ -232,6 +232,10 @@ function normalizeSchoolCode(value?: string) {
   return value?.trim().toUpperCase() || undefined;
 }
 
+function normalizeProgramCode(value?: string) {
+  return value?.trim().toUpperCase() || undefined;
+}
+
 function isProvided(value?: string) {
   return Boolean(value?.trim());
 }
@@ -367,11 +371,41 @@ async function findProgramIdsForMajor(
   client: SupabaseClient,
   params: {
     majorName?: string;
+    programCode?: string;
     schoolCode?: string;
     year?: number;
     limit?: number;
   },
 ) {
+  const programCode = normalizeProgramCode(params.programCode);
+
+  if (programCode) {
+    let exactQuery = client
+      .from("admission_programs")
+      .select(
+        "id, school_code, program_code, program_name, major_code, major_name, year, quota, degree_level, training_type, note, source_url",
+      )
+      .eq("program_code", programCode)
+      .order("year", { ascending: false })
+      .limit(params.limit ?? 40);
+
+    if (params.schoolCode) {
+      exactQuery = exactQuery.eq("school_code", params.schoolCode);
+    }
+
+    if (params.year !== undefined) {
+      exactQuery = exactQuery.eq("year", params.year);
+    }
+
+    const { data, error } = await exactQuery;
+    if (error) return [];
+
+    const exactIds = ((data ?? []) as AdmissionProgramRow[]).map(
+      (program) => program.id,
+    );
+    if (exactIds.length) return exactIds;
+  }
+
   if (!isProvided(params.majorName)) return [];
 
   let query = client
@@ -540,6 +574,52 @@ export async function searchMajors(
 
   const normalizedQuery = cleanQuery(query);
   if (!normalizedQuery) return emptyResult("Major search query is empty.");
+  const exactProgramCode = normalizeProgramCode(normalizedQuery);
+
+  if (exactProgramCode) {
+    const { data: exactData, error: exactError } = await clientStatus.client
+      .from("admission_programs")
+      .select(
+        "id, school_code, program_code, program_name, major_code, major_name, year, quota, degree_level, training_type, note, source_url",
+      )
+      .eq("program_code", exactProgramCode)
+      .order("year", { ascending: false })
+      .order("program_name")
+      .limit(DEFAULT_LIMIT);
+
+    if (exactError) return resultFromError("admission_programs", exactError);
+
+    const exactRows = (exactData ?? []) as AdmissionProgramRow[];
+    if (exactRows.length) {
+      const schoolByCode = await fetchSchoolsByCodes(
+        clientStatus.client,
+        exactRows.map((program) => program.school_code),
+      );
+
+      return successResult(
+        exactRows.map((program) => ({
+          id: program.id,
+          name: program.major_name ?? program.program_name,
+          code: program.major_code ?? program.program_code,
+          category: null,
+          schoolCode: program.school_code,
+          schoolName: schoolByCode.get(program.school_code)?.name ?? null,
+          programCode: program.program_code,
+          programName: program.program_name,
+          year: program.year,
+          sourceUrl: program.source_url,
+        })),
+        exactRows.map((program) =>
+          sourceFromRow(
+            `ZPath admission program: ${program.program_name}`,
+            "admission_programs",
+            program,
+          ),
+        ),
+        "No matching majors found in ZPath database.",
+      );
+    }
+  }
 
   const { data, error } = await clientStatus.client
     .from("admission_programs")
@@ -675,8 +755,9 @@ export async function getMajorProfile(
   const clientStatus = getInternalSupabaseClient();
   if (!clientStatus.ok) return unavailableResult(clientStatus.reason);
 
-  if (!isProvided(params.majorName)) {
-    return emptyResult("majorName is required.");
+  const programCode = normalizeProgramCode(params.programCode);
+  if (!isProvided(params.majorName) && !programCode) {
+    return emptyResult("majorName or programCode is required.");
   }
 
   const schoolCode = await resolveSchoolCode(clientStatus.client, params);
@@ -685,12 +766,22 @@ export async function getMajorProfile(
     .select(
       "id, school_code, program_code, program_name, major_code, major_name, year, quota, degree_level, training_type, note, source_url",
     )
-    .or(
-      `program_name.ilike.${ilikePattern(params.majorName)},major_name.ilike.${ilikePattern(params.majorName)},major_code.ilike.${ilikePattern(params.majorName)},program_code.ilike.${ilikePattern(params.majorName)}`,
-    )
     .order("year", { ascending: false })
     .order("program_name")
     .limit(20);
+
+  if (programCode) {
+    query = query.eq("program_code", programCode);
+  } else {
+    const majorName = params.majorName;
+    if (!majorName) {
+      return emptyResult("majorName or programCode is required.");
+    }
+
+    query = query.or(
+      `program_name.ilike.${ilikePattern(majorName)},major_name.ilike.${ilikePattern(majorName)},major_code.ilike.${ilikePattern(majorName)},program_code.ilike.${ilikePattern(majorName)}`,
+    );
+  }
 
   if (schoolCode) {
     query = query.eq("school_code", schoolCode);
@@ -737,6 +828,7 @@ export async function getAdmissionData(
   const schoolCode = await resolveSchoolCode(clientStatus.client, params);
   const programIds = await findProgramIdsForMajor(clientStatus.client, {
     majorName: params.majorName,
+    programCode: params.programCode,
     schoolCode: schoolCode ?? undefined,
     year: params.year,
   });
@@ -883,6 +975,7 @@ export async function getBenchmarkScores(
   const schoolCode = await resolveSchoolCode(clientStatus.client, params);
   const programIds = await findProgramIdsForMajor(clientStatus.client, {
     majorName: params.majorName,
+    programCode: params.programCode,
     schoolCode: schoolCode ?? undefined,
     year: params.year,
   });
@@ -937,6 +1030,7 @@ export async function getTuitionData(
   const schoolCode = await resolveSchoolCode(clientStatus.client, params);
   const programIds = await findProgramIdsForMajor(clientStatus.client, {
     majorName: params.majorName,
+    programCode: params.programCode,
     schoolCode: schoolCode ?? undefined,
     year: params.year,
   });

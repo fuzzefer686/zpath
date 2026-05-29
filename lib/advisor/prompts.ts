@@ -64,10 +64,11 @@ Tone:
 
 Answer quality requirements:
 - title: A concise, specific title that reflects the question (not generic like "Tư vấn tổng quan").
-- summary: 1-2 sentences summarizing the key takeaway. Must be specific and actionable.
-- sections: Follow the intent-specific required section headings exactly when provided. Each section must contain direct, actionable advice with substantive content.
-- Each section should contain real analysis, data points, or practical advice — not filler text.
-- followUpQuestions: 0-3 specific follow-up questions the student might want to ask next.
+- summary: 1 short sentence summarizing the key takeaway. Must be specific and actionable.
+- sections: Return 2-3 short sections only. Each section should be 1-2 compact sentences.
+- Total answer length should be about 50-80 Vietnamese words, excluding sources and follow-up questions.
+- Bold important names/codes with Markdown, for example **HUST**, **IT-E15**, **Đại học Bách khoa Hà Nội**.
+- followUpQuestions: 0-2 specific follow-up questions the student might want to ask next.
 - warnings: Only include if there are genuine caveats. Do NOT include warnings about "chưa gọi Gemini" or "chưa kết nối".
 - confidence: Set to "high" if strong internal/web data supports the answer, "medium" if partial data, "low" only if mostly general advice.
 - dataStatus: "internal_data" if mostly from ZPath DB, "web_augmented" if web search helped, "limited_data" if partial, "general_advice" if no specific data.
@@ -324,6 +325,35 @@ Provide a solid academic progression plan:
   }
 }
 
+void buildIntentGuidance;
+
+function buildCompactIntentGuidance(intent: AdvisorIntent): string {
+  switch (intent) {
+    case AdvisorIntent.REVIEW_MAJOR:
+      return 'Return 2-3 sections: "Tóm tắt", "Có hợp không?", "Nên làm gì tiếp?". Focus on the exact major/program code if provided.';
+    case AdvisorIntent.COMPARE_MAJORS:
+      return 'Return 2-3 sections: "Khác nhau chính", "Nên chọn theo kiểu học sinh", "Bước tiếp theo". Use a tiny comparison list if useful.';
+    case AdvisorIntent.COMPARE_SCHOOLS:
+      return 'Return 2-3 sections: "Khác nhau chính", "Nên chọn trường nào", "Điểm cần kiểm chứng".';
+    case AdvisorIntent.ADMISSION_CHANCE:
+      return 'Return 2-3 sections: "Mức rủi ro", "So với dữ liệu", "Chiến lược nguyện vọng". Never guarantee admission.';
+    case AdvisorIntent.SCORE_SUGGESTION:
+      return 'Return 2-3 sections: "Nhóm phù hợp", "Gợi ý ưu tiên", "Điểm cần kiểm chứng". Keep school/program suggestions concise.';
+    case AdvisorIntent.PERSONAL_FIT:
+      return 'Return 2-3 sections: "Nhận định nhanh", "Ngành nên cân nhắc", "Bước tiếp theo".';
+    case AdvisorIntent.TUITION:
+      return 'Return 2-3 sections: "Mức học phí", "Khác biệt chương trình", "Cần kiểm chứng".';
+    case AdvisorIntent.CAREER_PATH:
+      return 'Return 2-3 sections: "Việc có thể làm", "Kỹ năng cần có", "Bước tiếp theo".';
+    case AdvisorIntent.LATEST_ADMISSION_INFO:
+      return 'Return 2-3 sections: "Thông tin chính", "Mốc cần chú ý", "Nguồn cần kiểm chứng". Prefer official sources.';
+    case AdvisorIntent.STUDY_PLAN:
+      return 'Return 2-3 sections: "Trọng tâm học", "Kỹ năng cần luyện", "Bước tiếp theo".';
+    default:
+      return "Return 2-3 short sections with specific, actionable advice. Keep the whole answer about 50-80 Vietnamese words.";
+  }
+}
+
 export function buildAdvisorGeminiPrompt(input: BuildAdvisorPromptInput) {
   return [
     ADVISOR_SYSTEM_PROMPT,
@@ -332,7 +362,7 @@ export function buildAdvisorGeminiPrompt(input: BuildAdvisorPromptInput) {
     truncateJson(REQUIRED_JSON_CONTRACT, 4000),
     "",
     `Intent-specific guidance for ${input.intent}:`,
-    buildIntentGuidance(input.intent),
+    buildCompactIntentGuidance(input.intent),
     "",
     "Forbidden generic headings unless explicitly required by the intent guidance above:",
     truncateJson(FORBIDDEN_GENERIC_HEADINGS, 1000),
@@ -363,7 +393,9 @@ export function buildAdvisorGeminiPrompt(input: BuildAdvisorPromptInput) {
     "- If internalContext has real data (status: 'success'), USE IT to build specific, data-backed answers.",
     "- If webSearchResults has results, USE THEM to add current information and cite sources.",
     "- If the user did not provide enough details, answer generally and ask useful follow-up questions.",
-    "- Do NOT produce generic placeholder text. Every section must contain substantive information.",
+    "- Keep the final answer compact: about 50-80 Vietnamese words total across summary and sections.",
+    "- Use Markdown bold for important school names, major names, and program codes.",
+    "- Do NOT produce generic placeholder text. Every section must contain useful information.",
     "- Do NOT use forbidden generic headings unless they are explicitly required by the intent-specific section list.",
     "- Do NOT include warnings like 'chưa gọi Gemini' or 'phản hồi mẫu' — you ARE the AI generating this answer.",
     "- If data is limited, be honest but still provide the best analysis you can from what's available.",

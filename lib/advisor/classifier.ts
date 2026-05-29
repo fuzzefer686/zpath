@@ -6,6 +6,7 @@ export type AdvisorClassification = {
   extracted: {
     schoolName?: string;
     schoolCode?: string;
+    programCode?: string;
     majorName?: string;
     majorA?: string;
     majorB?: string;
@@ -35,6 +36,12 @@ type PatternRule = {
 };
 
 const SCHOOL_CODE_ALIASES: Record<string, string> = {
+  "bách khoa": "HUST",
+  "bach khoa": "HUST",
+  "bkhn": "HUST",
+  "đại học bách khoa hà nội": "HUST",
+  "dai hoc bach khoa ha noi": "HUST",
+  "hanoi university science and technology": "HUST",
   hust: "HUST",
   bka: "HUST",
   neu: "NEU",
@@ -50,6 +57,20 @@ const SCHOOL_CODE_ALIASES: Record<string, string> = {
   vnu: "VNU",
   ptit: "PTIT",
 };
+
+const KNOWN_SCHOOL_CODES = new Set(Object.values(SCHOOL_CODE_ALIASES));
+const ADMISSION_COMBINATION_CODES = new Set([
+  "A00",
+  "A01",
+  "B00",
+  "C00",
+  "D01",
+  "D07",
+  "D14",
+  "D15",
+  "H00",
+  "V00",
+]);
 
 // A helper to construct a Unicode-aware word boundary pattern
 function w(pattern: string): RegExp {
@@ -358,8 +379,22 @@ function extractSchoolCode(text: string) {
 
   if (alias) return alias[1];
 
-  const explicitCode = text.match(/\b[A-Z]{2,8}\b/);
-  return explicitCode?.[0];
+  const explicitCodes = text.match(/\b[A-Z]{2,8}\b/g) ?? [];
+  return explicitCodes.find((code) => KNOWN_SCHOOL_CODES.has(code));
+}
+
+function extractProgramCode(text: string) {
+  const matches = text.match(
+    /(?:^|[^\p{L}\p{N}])([A-Z]{1,4}(?:-[A-Z]{1,3})?\d{1,3}[A-Z]?)(?=$|[^\p{L}\p{N}])/gu,
+  ) ?? [];
+
+  for (const rawMatch of matches) {
+    const code = rawMatch.replace(/[^\p{L}\p{N}-]/gu, "").toUpperCase();
+    if (!code || ADMISSION_COMBINATION_CODES.has(code)) continue;
+    return code;
+  }
+
+  return undefined;
 }
 
 function extractAfter(
@@ -545,6 +580,9 @@ export function classifyAdvisorQuestion(question: string): AdvisorClassification
 
   const schoolCode = extractSchoolCode(text);
   if (schoolCode) extracted.schoolCode = schoolCode;
+
+  const programCode = extractProgramCode(text);
+  if (programCode) extracted.programCode = programCode;
 
   const schoolName = extractSchoolName(text);
   // Clear schoolName if it duplicates the region to prevent confusion

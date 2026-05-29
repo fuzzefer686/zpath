@@ -111,7 +111,7 @@ function normalizeSections(value: unknown) {
     .filter((section): section is { heading: string; content: string } =>
       Boolean(section),
     )
-    .slice(0, 7);
+    .slice(0, 3);
 }
 
 export function validateAdvisorAnswerJson({
@@ -160,7 +160,7 @@ export function validateAdvisorAnswerJson({
       sections,
       warnings: readStringArray(raw.warnings),
       sources: normalizeSources(raw.sources, allowedSources),
-      followUpQuestions: readStringArray(raw.followUpQuestions).slice(0, 5),
+      followUpQuestions: readStringArray(raw.followUpQuestions).slice(0, 2),
     },
   };
 }
@@ -179,7 +179,8 @@ function buildFallbackSections(
   extracted: Record<string, unknown>,
 ): AdvisorAnswer["sections"] {
   const schoolName = (extracted.schoolName as string) ?? (extracted.schoolCode as string) ?? "";
-  const majorName = (extracted.majorName as string) ?? "";
+  const majorName =
+    (extracted.majorName as string) ?? (extracted.programCode as string) ?? "";
   const score = extracted.score as number | undefined;
   const combination = (extracted.combination as string) ?? "";
 
@@ -308,7 +309,8 @@ function buildFallbackFollowUpQuestions(
   intent: AdvisorIntent,
   extracted: Record<string, unknown>,
 ): string[] {
-  const majorName = (extracted.majorName as string) ?? "";
+  const majorName =
+    (extracted.majorName as string) ?? (extracted.programCode as string) ?? "";
   const schoolName = (extracted.schoolName as string) ?? "";
 
   const generic = [
@@ -341,7 +343,8 @@ function buildFallbackTitle(
   question: string,
 ): string {
   const schoolName = (extracted.schoolName as string) ?? "";
-  const majorName = (extracted.majorName as string) ?? "";
+  const majorName =
+    (extracted.majorName as string) ?? (extracted.programCode as string) ?? "";
   const score = extracted.score as number | undefined;
 
   switch (intent) {
@@ -405,7 +408,7 @@ export async function generateAdvisorAnswerWithGemini(
   const config: GenerateContentConfig = {
     responseMimeType: "application/json",
     temperature: 0.2,
-    maxOutputTokens: 8192,
+    maxOutputTokens: 1024,
   };
 
   const text = await generateGeminiText({

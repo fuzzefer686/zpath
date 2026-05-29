@@ -77,6 +77,7 @@ function entitiesFromTemplateFields(
   const stringFields: Array<keyof ExtractedAdvisorEntities> = [
     "schoolName",
     "schoolCode",
+    "programCode",
     "majorName",
     "majorA",
     "majorB",
@@ -125,6 +126,7 @@ async function getInternalContextForAdvisor({
 }) {
   const schoolName = extracted.schoolName;
   const schoolCode = extracted.schoolCode;
+  const programCode = extracted.programCode;
   const majorName = extracted.majorName;
   const year = extracted.year;
 
@@ -134,7 +136,9 @@ async function getInternalContextForAdvisor({
     case AdvisorIntent.STUDY_PLAN:
       return {
         majorProfile: majorName
-          ? await getMajorProfile({ majorName, schoolName, schoolCode })
+          ? await getMajorProfile({ majorName, programCode, schoolName, schoolCode })
+          : programCode
+            ? await getMajorProfile({ programCode, schoolName, schoolCode })
           : await searchMajors(message),
       };
 
@@ -143,6 +147,7 @@ async function getInternalContextForAdvisor({
         majorA: extracted.majorA
           ? await getMajorProfile({
               majorName: extracted.majorA,
+              programCode,
               schoolName,
               schoolCode,
             })
@@ -150,6 +155,7 @@ async function getInternalContextForAdvisor({
         majorB: extracted.majorB
           ? await getMajorProfile({
               majorName: extracted.majorB,
+              programCode,
               schoolName,
               schoolCode,
             })
@@ -159,6 +165,7 @@ async function getInternalContextForAdvisor({
             ? await getBenchmarkScores({
                 schoolName,
                 schoolCode,
+                programCode,
                 majorName: extracted.majorA,
                 year,
               })
@@ -168,6 +175,7 @@ async function getInternalContextForAdvisor({
             ? await getBenchmarkScores({
                 schoolName,
                 schoolCode,
+                programCode,
                 majorName: extracted.majorB,
                 year,
               })
@@ -192,12 +200,14 @@ async function getInternalContextForAdvisor({
         admissionData: await getAdmissionData({
           schoolName,
           schoolCode,
+          programCode,
           majorName,
           year,
         }),
         benchmarkScores: await getBenchmarkScores({
           schoolName,
           schoolCode,
+          programCode,
           majorName,
           year,
         }),
@@ -220,6 +230,7 @@ async function getInternalContextForAdvisor({
         tuitionData: await getTuitionData({
           schoolName,
           schoolCode,
+          programCode,
           majorName,
           year,
         }),
@@ -228,7 +239,13 @@ async function getInternalContextForAdvisor({
     case AdvisorIntent.LATEST_ADMISSION_INFO:
       return {
         schoolProfile: await getSchoolProfile({ schoolName, schoolCode }),
-        admissionData: await getAdmissionData({ schoolName, schoolCode, year }),
+        admissionData: await getAdmissionData({
+          schoolName,
+          schoolCode,
+          programCode,
+          majorName,
+          year,
+        }),
       };
 
     case AdvisorIntent.PERSONAL_FIT:
@@ -363,6 +380,7 @@ function buildWebSearchQueries({
     schoolA: extracted.schoolA,
     schoolB: extracted.schoolB,
     majorName: extracted.majorName,
+    programCode: extracted.programCode,
     majorA: extracted.majorA,
     majorB: extracted.majorB,
     score: extracted.score,

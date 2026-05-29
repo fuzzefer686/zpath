@@ -15,11 +15,18 @@ export async function POST(request: Request) {
       Bạn là ZPATH AI Mentor, chuyên gia hướng nghiệp tại Việt Nam.
       Học sinh: Tính cách ${userProfile?.personality || 'Chưa rõ'}, Điểm: ${totalScore}.
       Câu hỏi: "${message}"
-      Hãy trả lời ngắn gọn (dưới 150 chữ), tư vấn thân thiện, cá nhân hóa theo điểm và tính cách.
+      Hãy trả lời bằng tiếng Việt trong khoảng 50-80 từ.
+      Chỉ tập trung 2-3 ý chính, có thể dùng bullet ngắn.
+      In đậm bằng Markdown các từ khóa quan trọng như **tên trường**, **tên ngành**, **mã chương trình**.
+      Không lan man, không mở bài dài, không cam kết chắc chắn đỗ/trượt.
     `;
 
     const aiReply = await generateGeminiText({
       prompt: systemPrompt,
+      config: {
+        temperature: 0.2,
+        maxOutputTokens: 512,
+      },
     });
 
     return NextResponse.json({ reply: aiReply });
