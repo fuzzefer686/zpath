@@ -52,6 +52,9 @@ Core rules:
 18. Do not claim information is certainly 100% correct.
 19. Return only valid JSON. Do not wrap it in Markdown code fences.
 20. Never use generic/mock headings such as "Cách ZPath sẽ trả lời" or "Tư vấn tổng quan từ ZPath". Use the intent-specific headings below.
+21. If extracted.programCode exists, treat it as an exact identifier. Do not infer the program name from similar codes.
+22. If internalContext.verifiedProgram exists, its programCode and programName are authoritative for that code.
+23. If web context conflicts with verifiedProgram or exact internal program data, explain the verified source basis briefly and do not use the conflicting name.
 
 Tone:
 - Friendly
@@ -330,7 +333,7 @@ void buildIntentGuidance;
 function buildCompactIntentGuidance(intent: AdvisorIntent): string {
   switch (intent) {
     case AdvisorIntent.REVIEW_MAJOR:
-      return 'Return 2-3 sections: "Tóm tắt", "Có hợp không?", "Nên làm gì tiếp?". Focus on the exact major/program code if provided.';
+      return 'Return 2-3 sections: "Căn cứ", "Tóm tắt", "Có hợp không?". Focus on the exact major/program code if provided.';
     case AdvisorIntent.COMPARE_MAJORS:
       return 'Return 2-3 sections: "Khác nhau chính", "Nên chọn theo kiểu học sinh", "Bước tiếp theo". Use a tiny comparison list if useful.';
     case AdvisorIntent.COMPARE_SCHOOLS:
@@ -395,6 +398,7 @@ export function buildAdvisorGeminiPrompt(input: BuildAdvisorPromptInput) {
     "- If the user did not provide enough details, answer generally and ask useful follow-up questions.",
     "- Keep the final answer compact: about 50-80 Vietnamese words total across summary and sections.",
     "- Use Markdown bold for important school names, major names, and program codes.",
+    "- Add a short source-basis sentence when exact program codes are involved, for example: 'Căn cứ: dữ liệu HUST/ZPath ghi **IT-E15** là ...'.",
     "- Do NOT produce generic placeholder text. Every section must contain useful information.",
     "- Do NOT use forbidden generic headings unless they are explicitly required by the intent-specific section list.",
     "- Do NOT include warnings like 'chưa gọi Gemini' or 'phản hồi mẫu' — you ARE the AI generating this answer.",

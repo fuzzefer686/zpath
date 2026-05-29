@@ -11,6 +11,7 @@ type RankSourceInput = {
 export type SourceRankOptions = {
   preferOfficialSources?: boolean;
   schoolName?: string;
+  programCode?: string;
   year?: number;
 };
 
@@ -27,6 +28,13 @@ const OFFICIAL_EDUCATION_DOMAIN_PATTERNS = [
   "admissions.",
   "tuyensinh.",
   "daotao.",
+];
+
+const HUST_OFFICIAL_DOMAIN_PATTERNS = [
+  "hust.edu.vn",
+  "ts.hust.edu.vn",
+  "tuyensinh.hust.edu.vn",
+  "soict.hust.edu.vn",
 ];
 
 const NEWS_DOMAIN_PATTERNS = [
@@ -170,10 +178,25 @@ export function scoreWebSource(
     if (sourceType === "news") score -= 4;
   }
 
+  if (includesAny(hostname, HUST_OFFICIAL_DOMAIN_PATTERNS)) score += 16;
   if (includesAny(haystack, ADMISSION_TERMS)) score += 8;
   if (url.endsWith(".pdf") || url.includes(".pdf")) score += 4;
   if (hasRequestedYear(input, options.year)) score += 8;
   if (options.year && !hasRequestedYear(input, options.year)) score -= 10;
+
+  if (options.programCode) {
+    const exactCode = normalizeText(options.programCode);
+    const compactCode = exactCode.replace(/-/g, "");
+    const hasExactCode =
+      haystack.includes(exactCode) ||
+      haystack.replace(/-/g, "").includes(compactCode);
+
+    if (hasExactCode) {
+      score += 22;
+    } else {
+      score -= 24;
+    }
+  }
 
   if (options.schoolName) {
     const schoolTokens = normalizeText(options.schoolName)

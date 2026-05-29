@@ -1,4 +1,6 @@
 import { AdvisorIntent } from "@/lib/advisor/intents";
+import { canonicalizeAdvisorProgramCode } from "@/lib/advisor/programCodes";
+import { getHustAdmissionProgram2026 } from "@/src/lib/admission-data/hust-programs-2026";
 
 export type AdvisorWebSearchQueryInput = {
   intent: AdvisorIntent;
@@ -51,7 +53,13 @@ function uniqueQueries(queries: string[]) {
 }
 
 function inferMajorSearchTerm(input: AdvisorWebSearchQueryInput) {
-  if (input.programCode) return cleanPart(input.programCode);
+  const programCode = canonicalizeAdvisorProgramCode(input.programCode);
+  if (programCode) {
+    const hustProgram = getHustAdmissionProgram2026(programCode);
+    return cleanPart(
+      hustProgram ? `${programCode} ${hustProgram.name}` : programCode,
+    );
+  }
 
   const explicitMajor = input.majorName ?? input.majorA ?? input.majorB ?? input.message;
   const interestText = input.interests?.join(" ").toLowerCase() ?? "";
@@ -140,6 +148,29 @@ function buildScoreSuggestionQueries(input: AdvisorWebSearchQueryInput) {
 
 export function buildAdvisorWebSearchQueries(input: AdvisorWebSearchQueryInput) {
   const year = input.year ?? currentAdmissionYear();
+  const programCode = canonicalizeAdvisorProgramCode(input.programCode);
+  const hustProgram = programCode
+    ? getHustAdmissionProgram2026(programCode)
+    : null;
+  const exactProgramQueries =
+    programCode && hustProgram
+      ? [
+          joinQueryParts([
+            `"${programCode}"`,
+            `"${hustProgram.name}"`,
+            "HUST",
+            "chương trình đào tạo",
+          ]),
+          joinQueryParts([
+            `"${programCode}"`,
+            "site:soict.hust.edu.vn",
+          ]),
+          joinQueryParts([
+            `"${programCode}"`,
+            "site:ts.hust.edu.vn",
+          ]),
+        ]
+      : [];
 
   switch (input.intent) {
     case AdvisorIntent.LATEST_ADMISSION_INFO:
@@ -179,6 +210,7 @@ export function buildAdvisorWebSearchQueries(input: AdvisorWebSearchQueryInput) 
     case AdvisorIntent.ADMISSION_CHANCE:
     case AdvisorIntent.SCORE_CALCULATION:
       return uniqueQueries([
+        ...exactProgramQueries,
         joinQueryParts([
           input.schoolName,
           "điểm chuẩn",
@@ -204,6 +236,7 @@ export function buildAdvisorWebSearchQueries(input: AdvisorWebSearchQueryInput) 
     case AdvisorIntent.PERSONAL_FIT:
     case AdvisorIntent.STUDY_PLAN:
       return uniqueQueries([
+        ...exactProgramQueries,
         joinQueryParts([
           inferMajorSearchTerm(input),
           "học gì cơ hội việc làm",

@@ -37,6 +37,7 @@ export type AdvisorWebSearchOptions = {
   maxResults?: number;
   preferOfficialSources?: boolean;
   schoolName?: string;
+  programCode?: string;
   year?: number;
 };
 
@@ -297,6 +298,7 @@ export async function searchWebForAdvisor(
       maxResults,
       preferOfficialSources: options.preferOfficialSources,
       schoolName: options.schoolName,
+      programCode: options.programCode,
       year: options.year,
     });
 
