@@ -135,8 +135,8 @@ function renderCells(cells: string[], tag: "th" | "td") {
   return cells.map((cell, index) => {
     const className =
       tag === "th"
-        ? "border-b border-border bg-muted/70 px-4 py-3 text-left text-sm font-bold text-foreground"
-        : "border-b border-border/70 px-4 py-3 align-top text-sm leading-6 text-foreground";
+        ? "border-b border-border bg-transparent px-4 py-3.5 text-left text-sm font-bold text-foreground"
+        : "border-b border-border/50 px-4 py-3 align-top text-sm leading-6 text-foreground";
 
     const content = renderInline(cell);
     return tag === "th" ? (
@@ -161,14 +161,14 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
           const [header, ...rows] = block.rows;
 
           return (
-            <div key={block.key} className="overflow-x-auto rounded-md border border-border bg-background">
-              <table className="w-full min-w-[680px] border-collapse">
+            <div key={block.key} className="overflow-x-auto bg-transparent my-4">
+              <table className="w-full min-w-[680px] border-collapse bg-transparent">
                 <thead>
                   <tr>{renderCells(header, "th")}</tr>
                 </thead>
                 <tbody>
                   {rows.map((row, rowIndex) => (
-                    <tr key={`${block.key}-${rowIndex}`} className="odd:bg-muted/20">
+                    <tr key={`${block.key}-${rowIndex}`} className="hover:bg-muted/10 transition-colors">
                       {renderCells(row, "td")}
                     </tr>
                   ))}

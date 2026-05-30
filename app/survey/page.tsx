@@ -1,5 +1,5 @@
-import { AdvisorPage } from "@/components/advisor/AdvisorPage";
+import { redirect } from "next/navigation";
 
 export default function SurveyPage() {
-  return <AdvisorPage />;
+  redirect("/advisor");
 }

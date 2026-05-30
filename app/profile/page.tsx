@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import { ProfilePage } from "@/components/zpath/ProfilePage";
 
-export default function ProfilePage() {
-  redirect("/survey");
+export default function ProfileRoute() {
+  return <ProfilePage />;
 }

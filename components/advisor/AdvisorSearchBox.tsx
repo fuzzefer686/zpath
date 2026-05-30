@@ -50,29 +50,22 @@ export function AdvisorSearchBox({
       </div>
 
       <div className="flex flex-col gap-2 px-2 pb-1 pt-2 text-left sm:flex-row sm:items-center sm:justify-between">
-        <label className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-foreground">
+        <label className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-foreground opacity-80 cursor-not-allowed">
           <input
             type="checkbox"
-            checked={allowWebSearch}
-            onChange={(event) => onAllowWebSearchChange(event.target.checked)}
-            className="h-4 w-4 rounded border-border accent-primary"
+            checked={true}
+            disabled={true}
+            className="h-4 w-4 rounded border-border accent-primary cursor-not-allowed"
           />
-          <span className="inline-flex items-center gap-1.5">
+          <span className="inline-flex items-center gap-1.5 select-none">
             <Globe2 className="h-4 w-4 text-primary" />
             Tìm thêm trên web
           </span>
         </label>
-        <span className="text-xs leading-5 text-muted-foreground">
-          {allowWebSearch
-            ? "ZPath sẽ ưu tiên dữ liệu nội bộ, sau đó bổ sung nguồn web nếu cần."
-            : "ZPath sẽ chỉ dùng dữ liệu hiện có và tư vấn tổng quan."}
+        <span className="text-xs leading-5 text-muted-foreground select-none">
+          Chế độ tìm kiếm web luôn BẬT để đảm bảo cập nhật thông tin tuyển sinh mới nhất.
         </span>
       </div>
-      {allowWebSearch && (
-        <div className="px-2 pb-1 text-xs leading-5 text-primary">
-          Đang bật mặc định để ZPath kiểm tra thêm nguồn mới nhất khi cần.
-        </div>
-      )}
     </div>
   );
 }

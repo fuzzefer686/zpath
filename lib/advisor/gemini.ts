@@ -408,7 +408,7 @@ export async function generateAdvisorAnswerWithGemini(
   const config: GenerateContentConfig = {
     responseMimeType: "application/json",
     temperature: 0.2,
-    maxOutputTokens: 1024,
+    maxOutputTokens: 2048,
   };
 
   const text = await generateGeminiText({

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import {
   ArrowRight,
   BookOpenCheck,
@@ -14,6 +17,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/components/zpath/AuthProvider";
 
 const concerns = [
   {
@@ -57,6 +61,20 @@ const roadmap = [
 ];
 
 export function Homepage() {
+  const { openAuthPrompt } = useAuth();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("auth") === "required") {
+        openAuthPrompt();
+        // Clear the search param to avoid showing modal on reload
+        const newUrl = window.location.pathname;
+        window.history.replaceState({}, "", newUrl);
+      }
+    }
+  }, [openAuthPrompt]);
+
   return (
     <main className="bg-background text-foreground">
       <section className="relative overflow-hidden">
@@ -93,7 +111,7 @@ export function Homepage() {
               style={{ animationDelay: "270ms" }}
             >
               <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-                <Link href="/survey">
+                <Link href="/advisor">
                   Bắt đầu định hướng <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
@@ -240,7 +258,7 @@ export function Homepage() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild variant="lime" size="xl" className="w-full sm:w-auto">
-                <Link href="/survey">Tư vấn ngành</Link>
+                <Link href="/advisor">Tư vấn ngành</Link>
               </Button>
               <Button
                 asChild
