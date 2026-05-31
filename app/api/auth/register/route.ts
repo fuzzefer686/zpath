@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 
 import {
+  AuthConfigError,
+  assertAuthConfig,
   createAuthToken,
   getAuthCookieOptions,
   hashPassword,
@@ -52,6 +54,8 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     }
+
+    assertAuthConfig();
 
     const email = String(body.email).trim().toLowerCase();
     const role = email === "fuzzefer.real0@gmail.com" ? "admin" : "user";
@@ -106,6 +110,16 @@ export async function POST(request: Request) {
     return response;
   } catch (error) {
     console.error("Register API error:", error);
+    if (error instanceof AuthConfigError) {
+      return NextResponse.json(
+        {
+          error:
+            "Cấu hình đăng nhập chưa hợp lệ. Hãy đặt AUTH_JWT_SECRET tối thiểu 32 ký tự trên server.",
+        },
+        { status: 503 },
+      );
+    }
+
     return NextResponse.json(
       { error: "Không thể tạo tài khoản lúc này." },
       { status: 500 },
