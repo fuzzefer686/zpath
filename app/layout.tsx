@@ -3,6 +3,8 @@ import "./globals.css";
 import { Navbar } from "@/components/zpath/Navbar";
 import { Footer } from "@/components/zpath/Footer";
 import { Providers } from "@/components/zpath/Providers";
+import { AdminSaveWidget } from "@/components/zpath/AdminSaveWidget";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "ZPATH - Định hướng tương lai",
@@ -27,6 +29,7 @@ export default function RootLayout({
 
           <Footer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
