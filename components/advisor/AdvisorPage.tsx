@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   Loader2,
-  Globe2,
   Sparkles,
   ClipboardList,
   User,
@@ -514,14 +513,7 @@ export function AdvisorPage() {
               </div>
             )}
 
-            {/* Messenger Bottom Input Bar */}
             <div className="border-t border-white/20 bg-white/60 p-4 backdrop-blur-2xl flex flex-col sm:flex-row gap-3 items-center">
-              {/* Web Search Badge (Always Enabled & Locked) */}
-              <div className="flex items-center gap-1.5 rounded-full bg-white/70 border border-white/25 px-3.5 py-2 text-xs font-bold text-foreground shrink-0 select-none shadow-sm">
-                <Globe2 className="h-3.5 w-3.5 text-primary animate-pulse" />
-                <span>Tìm kiếm Web: BẬT</span>
-              </div>
-
               {/* Messenger Text box Form */}
               <form
                 onSubmit={(e) => {
@@ -555,7 +547,12 @@ export function AdvisorPage() {
 
   // Initial dashboard layout when no messages started
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-background relative overflow-hidden bg-mesh text-foreground">
+      {/* Background Dots & Glowing Blobs */}
+      <div className="absolute inset-0 grid-dots opacity-20 pointer-events-none" />
+      <div className="absolute top-[40%] left-[-10%] h-96 w-96 rounded-full bg-primary/10 blur-3xl animate-float pointer-events-none" />
+      <div className="absolute bottom-10 right-[-10%] h-96 w-96 rounded-full bg-zpath-secondary/10 blur-3xl animate-float-slow pointer-events-none" />
+
       <AdvisorHero
         question={question}
         allowWebSearch={allowWebSearch}
@@ -564,14 +561,14 @@ export function AdvisorPage() {
         onAllowWebSearchChange={handleAllowWebSearchChange}
       />
 
-      <section className="mx-auto w-full max-w-[56rem] px-5 pb-14 pt-8 sm:px-8 sm:pb-20 sm:pt-10 lg:px-12 animate-fade-up">
-        <div className="rounded-2xl border border-white/20 bg-white/55 p-6 sm:p-8 backdrop-blur-2xl space-y-6 shadow-none">
+      <section className="mx-auto w-full max-w-[56rem] px-5 pb-16 pt-8 sm:px-8 sm:pb-24 sm:pt-10 lg:px-12 relative z-10 animate-fade-up">
+        <div className="rounded-3xl border border-white/40 bg-white/55 p-6 sm:p-8 backdrop-blur-2xl space-y-6 shadow-glow">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/40 pb-4">
             <div>
-              <h2 className="font-display text-lg font-bold flex items-center gap-2">
+              <h2 className="font-display text-base sm:text-lg font-black flex items-center gap-2">
                 <Sparkles className="h-5 w-5 text-primary animate-pulse" /> Gợi ý câu hỏi hướng nghiệp dành cho bạn
               </h2>
-              <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+              <p className="text-xs text-muted-foreground mt-1.5 font-semibold leading-relaxed">
                 {hasSuggestionsBio 
                   ? "Câu hỏi được thiết kế riêng dựa trên thông tin mô tả bản thân trong hồ sơ của bạn." 
                   : "Hãy cập nhật mô tả bản thân trong Trang cá nhân để nhận được gợi ý câu hỏi cá nhân hóa từ AI."}
@@ -580,7 +577,7 @@ export function AdvisorPage() {
             {!hasSuggestionsBio && (
               <Link
                 href="/profile"
-                className="text-xs font-bold text-primary hover:underline bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full shrink-0 w-fit transition-colors"
+                className="text-xs font-bold text-primary hover:underline bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full shrink-0 w-fit transition-colors shadow-sm"
               >
                 Cập nhật Hồ sơ ➔
               </Link>
@@ -590,15 +587,15 @@ export function AdvisorPage() {
           {isSuggestionsLoading ? (
             <div className="flex flex-col items-center py-12 gap-3">
               <Loader2 className="h-8 w-8 animate-spin text-primary shrink-0" />
-              <span className="text-sm text-muted-foreground font-medium animate-pulse">ZPath AI đang chuẩn bị câu gợi ý...</span>
+              <span className="text-sm text-muted-foreground font-semibold animate-pulse">ZPath AI đang chuẩn bị câu gợi ý...</span>
             </div>
           ) : (
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-3.5 sm:grid-cols-2">
               {aiSuggestions.map((suggestion, index) => (
                 <button
                   key={index}
                   onClick={() => handleFollowUpQuestion(suggestion)}
-                  className="w-full text-left rounded-2xl p-4 text-xs sm:text-sm font-medium bg-white/60 border border-white/20 text-foreground hover:border-white/40 hover:bg-white/75 transition-all leading-relaxed shadow-sm hover:shadow hover:-translate-y-0.5 cursor-pointer"
+                  className="w-full text-left rounded-2xl p-4.5 text-xs sm:text-sm font-semibold bg-white/60 border border-white/25 text-foreground hover:border-white/50 hover:bg-white/85 transition-all duration-300 hover:shadow-glow hover:-translate-y-1 leading-relaxed cursor-pointer shadow-sm"
                 >
                   {suggestion}
                 </button>

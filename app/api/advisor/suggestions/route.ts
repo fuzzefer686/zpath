@@ -8,8 +8,8 @@ export const runtime = "nodejs";
 
 const DEFAULT_SUGGESTIONS = [
   "Review ngành Khoa học Máy tính tại Đại học Bách khoa Hà Nội",
-  "So sánh ngành Công nghệ Thông tin (IT1) và Kỹ thuật Máy tính (IT2)",
-  "Học phí ngành Công nghệ Thông tin tại HUST là bao nhiêu?",
+  "So sánh ngành Khoa học Máy tính (IT1) và Kỹ thuật Máy tính (IT2)",
+  "Học phí ngành Khoa học Máy tính tại HUST là bao nhiêu?",
   "Cơ hội việc làm của ngành Kỹ thuật Phần mềm sau khi tốt nghiệp?",
   "25 điểm tổ hợp A00 nên chọn ngành nào của Đại học Bách khoa?",
 ];

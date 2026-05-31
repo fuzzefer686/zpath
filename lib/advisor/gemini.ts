@@ -35,16 +35,56 @@ const DATA_STATUS_VALUES: AdvisorAnswerDataStatus[] = [
 ];
 
 function stripJsonCodeFence(text: string) {
-  const trimmed = text.trim();
-  const fenced = trimmed.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/i);
-  return fenced ? fenced[1].trim() : trimmed;
+  let cleaned = text.trim();
+  
+  // 1. Strip markdown code fences if wrapped
+  const fenced = cleaned.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/i);
+  if (fenced) {
+    cleaned = fenced[1].trim();
+  }
+  
+  // 2. Extract only the content between the first '{' and the last '}'
+  // This discards any leading/trailing conversational text that Gemini sometimes outputs
+  const firstBrace = cleaned.indexOf("{");
+  const lastBrace = cleaned.lastIndexOf("}");
+  if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+    cleaned = cleaned.substring(firstBrace, lastBrace + 1);
+  }
+  
+  return cleaned;
 }
 
 function parseGeminiJson(text: string): unknown {
+  const cleanedText = stripJsonCodeFence(text);
   try {
-    return JSON.parse(stripJsonCodeFence(text));
-  } catch {
-    throw new Error("GEMINI_JSON_PARSE_FAILED");
+    return JSON.parse(cleanedText);
+  } catch (firstError) {
+    // Attempt advanced sanitization for common LLM JSON mistakes
+    try {
+      console.warn("Gemini standard JSON parse failed, attempting sanitization...", firstError);
+      
+      let sanitized = cleanedText;
+      
+      // A. Remove trailing commas before closing braces/brackets
+      // e.g. [1, 2, ] -> [1, 2] or {"a": 1, } -> {"a": 1}
+      sanitized = sanitized.replace(/,(\s*[\]\}])/g, "$1");
+      
+      // B. Escape literal newlines inside JSON string values.
+      // In JSON, literal newlines inside double quotes are invalid. They must be escaped as \n.
+      // This is a common issue when Gemini outputs Markdown tables/lists with actual line breaks.
+      // We can find all text between double quotes and replace real newlines with \n.
+      sanitized = sanitized.replace(/"([^"\\]*(?:\\.[^"\\]*)*)"/g, (match, p1) => {
+        // Replace actual newlines inside the matched string literal with escaped \n
+        const escaped = p1.replace(/\n/g, "\\n").replace(/\r/g, "\\r");
+        return `"${escaped}"`;
+      });
+      
+      return JSON.parse(sanitized);
+    } catch (secondError) {
+      console.error("Gemini JSON sanitization also failed:", secondError);
+      console.error("Raw text was:", text);
+      throw new Error("GEMINI_JSON_PARSE_FAILED");
+    }
   }
 }
 
