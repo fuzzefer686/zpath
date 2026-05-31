@@ -19,7 +19,7 @@ export function CtaBanner() {
               Chỉ khoảng 2 phút. Không đăng ký. Không cam kết. Thử ngay phiên bản demo.
             </p>
             <Button asChild variant="lime" size="xl" className="mt-8">
-              <Link href="/survey">
+              <Link href="/advisor">
                 Bắt đầu dùng thử <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>

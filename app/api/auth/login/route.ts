@@ -33,7 +33,7 @@ export async function POST(request: Request) {
 
     const { data: user, error } = await supabaseServer
       .from("zpath_users")
-      .select("id, username, password_hash, role")
+      .select("id, username, password_hash, role, email")
       .eq("username_normalized", username.toLowerCase())
       .maybeSingle();
 
@@ -54,6 +54,7 @@ export async function POST(request: Request) {
       id: String(user.id),
       username: String(user.username),
       role: user.role === "admin" ? "admin" as const : "user" as const,
+      email: String(user.email || ""),
     };
     const token = createAuthToken(authUser);
 

@@ -12,6 +12,7 @@ export type ZpathAuthUser = {
   id: string;
   username: string;
   role: ZpathUserRole;
+  email: string;
 };
 
 export type ZpathAuthContext = {
@@ -23,6 +24,7 @@ type JwtPayload = {
   sub: string;
   username: string;
   role: ZpathUserRole;
+  email: string;
   exp: number;
 };
 
@@ -61,6 +63,11 @@ export function validateUsername(username: string) {
   return /^[A-Za-z0-9_.-]{3,32}$/.test(username);
 }
 
+export function validateEmail(email: unknown): email is string {
+  if (typeof email !== "string") return false;
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 export function validatePassword(password: unknown): password is string {
   return typeof password === "string" && password.length >= 8;
 }
@@ -89,6 +96,7 @@ export function createAuthToken(user: ZpathAuthUser) {
     sub: user.id,
     username: user.username,
     role: user.role,
+    email: user.email,
     exp: Math.floor(Date.now() / 1000) + TOKEN_TTL_SECONDS,
   } satisfies JwtPayload);
   const body = `${header}.${payload}`;
@@ -116,7 +124,7 @@ export function verifyAuthToken(token: string): JwtPayload | null {
     const parsed = JSON.parse(Buffer.from(payload, "base64url").toString()) as JwtPayload;
     const isValidRole = parsed.role === "admin" || parsed.role === "user";
 
-    if (!parsed.sub || !parsed.username || !isValidRole) return null;
+    if (!parsed.sub || !parsed.username || !parsed.email || !isValidRole) return null;
     if (!parsed.exp || parsed.exp < Math.floor(Date.now() / 1000)) return null;
 
     return parsed;
@@ -145,7 +153,7 @@ export async function getAuthContextFromToken(
 
   const { data: user, error } = await supabaseServer
     .from("zpath_users")
-    .select("id, username, role")
+    .select("id, username, role, email")
     .eq("id", payload.sub)
     .maybeSingle();
 
@@ -162,6 +170,7 @@ export async function getAuthContextFromToken(
       id: String(user.id),
       username: String(user.username),
       role: user.role === "admin" ? "admin" : "user",
+      email: String(user.email || ""),
     },
     surveyCompleted: Boolean(surveyProfile),
   };

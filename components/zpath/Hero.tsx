@@ -42,7 +42,7 @@ export function Hero() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-              <Link href="/survey">
+              <Link href="/advisor">
                 Dùng thử miễn phí <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>

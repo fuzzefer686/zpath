@@ -15,12 +15,13 @@ import { usePathname, useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 
-const AUTH_FEATURE_ENABLED = false;
+const AUTH_FEATURE_ENABLED = true;
 
 export type AuthUser = {
   id: string;
   username: string;
   role: "admin" | "user";
+  email: string;
 };
 
 type AuthResponse = {
@@ -34,7 +35,7 @@ type AuthContextValue = {
   surveyCompleted: boolean;
   isLoading: boolean;
   login: (username: string, password: string) => Promise<void>;
-  register: (username: string, password: string) => Promise<void>;
+  register: (username: string, email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
   reloadAuth: () => Promise<void>;
   markSurveyCompleted: () => void;
@@ -99,7 +100,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [reloadAuth]);
 
   const submitCredentials = useCallback(
-    async (endpoint: "/api/auth/login" | "/api/auth/register", username: string, password: string) => {
+    async (
+      endpoint: "/api/auth/login" | "/api/auth/register",
+      username: string,
+      password: string,
+      email?: string,
+    ) => {
       if (!AUTH_FEATURE_ENABLED) {
         throw new Error("Tính năng đăng nhập đang tạm tắt.");
       }
@@ -107,7 +113,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const response = await fetch(endpoint, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, password, email }),
       });
       const data = (await response.json()) as AuthResponse;
 
@@ -119,7 +125,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setSurveyCompleted(Boolean(data.surveyCompleted));
       setAuthPromptOpen(false);
       setAuthPromptDismissed(false);
-
     },
     [],
   );
@@ -131,8 +136,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   );
 
   const register = useCallback(
-    (username: string, password: string) =>
-      submitCredentials("/api/auth/register", username, password),
+    (username: string, email: string, password: string) =>
+      submitCredentials("/api/auth/register", username, password, email),
     [submitCredentials],
   );
 
@@ -195,6 +200,7 @@ export function AuthForm({
   const { login, register } = useAuth();
   const [mode, setMode] = useState<"login" | "register">("login");
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -208,7 +214,7 @@ export function AuthForm({
       if (mode === "login") {
         await login(username, password);
       } else {
-        await register(username, password);
+        await register(username, email, password);
       }
 
       onSuccess?.();
@@ -250,8 +256,24 @@ export function AuthForm({
           autoComplete="username"
           className="mt-2 h-11 w-full rounded-xl border-2 border-input bg-background px-3 text-sm outline-none focus:border-primary"
           placeholder="vd: minh_anh"
+          required
         />
       </label>
+
+      {mode === "register" && (
+        <label className="block text-left text-sm font-semibold">
+          Địa chỉ Email
+          <input
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            type="email"
+            autoComplete="email"
+            className="mt-2 h-11 w-full rounded-xl border-2 border-input bg-background px-3 text-sm outline-none focus:border-primary"
+            placeholder="vd: user@example.com"
+            required
+          />
+        </label>
+      )}
 
       <label className="block text-left text-sm font-semibold">
         Mật khẩu
@@ -262,6 +284,7 @@ export function AuthForm({
           autoComplete={mode === "login" ? "current-password" : "new-password"}
           className="mt-2 h-11 w-full rounded-xl border-2 border-input bg-background px-3 text-sm outline-none focus:border-primary"
           placeholder="Ít nhất 8 ký tự"
+          required
         />
       </label>
 

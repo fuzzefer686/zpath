@@ -1,4 +1,4 @@
-import { ArrowRight, Globe2, Search } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,10 +22,11 @@ export function AdvisorSearchBox({
   onAllowWebSearchChange,
 }: AdvisorSearchBoxProps) {
   return (
-    <div className="mx-auto max-w-3xl rounded-lg border border-border bg-card p-2 shadow-md">
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-        <div className="relative flex-1">
-          <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+    <div className="mx-auto max-w-3xl rounded-3xl border border-white/40 bg-white/55 p-3 sm:p-4 backdrop-blur-2xl shadow-glow hover:border-white/60 transition-all duration-300">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+        {/* Soft glowing input container */}
+        <div className="relative flex-1 rounded-2xl border border-white/20 bg-white/70 focus-within:border-primary/40 focus-within:ring-4 focus-within:ring-primary/10 transition-all shadow-inner overflow-hidden">
+          <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-primary" />
           <Input
             value={value}
             onChange={(event) => onChange(event.target.value)}
@@ -33,46 +34,22 @@ export function AdvisorSearchBox({
               if (event.key === "Enter") onAsk();
             }}
             placeholder={inputPlaceholder}
-            className="h-14 rounded-md border-0 bg-background pl-12 pr-4 text-sm shadow-none ring-0 focus-visible:ring-0 sm:text-base"
+            className="h-14 rounded-2xl border-0 bg-transparent pl-12 pr-4 text-sm font-medium text-foreground placeholder-foreground/60 shadow-none ring-0 focus-visible:ring-0 sm:text-base outline-none w-full"
           />
         </div>
 
+        {/* Premium gradient action button */}
         <Button
           type="button"
           onClick={onAsk}
           disabled={!value.trim()}
           size="lg"
-          className="h-14 w-full rounded-md px-6 sm:w-auto"
+          className="h-14 w-full rounded-2xl px-8 sm:w-auto bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/95 hover:to-indigo-600/95 shadow-glow hover:shadow-glow/85 text-white font-bold cursor-pointer transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-sm sm:text-base gap-2 shrink-0"
         >
           Hỏi ngay
-          <ArrowRight className="h-4 w-4" />
+          <ArrowRight className="h-4 w-4 text-white" />
         </Button>
       </div>
-
-      <div className="flex flex-col gap-2 px-2 pb-1 pt-2 text-left sm:flex-row sm:items-center sm:justify-between">
-        <label className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-foreground">
-          <input
-            type="checkbox"
-            checked={allowWebSearch}
-            onChange={(event) => onAllowWebSearchChange(event.target.checked)}
-            className="h-4 w-4 rounded border-border accent-primary"
-          />
-          <span className="inline-flex items-center gap-1.5">
-            <Globe2 className="h-4 w-4 text-primary" />
-            Tìm thêm trên web
-          </span>
-        </label>
-        <span className="text-xs leading-5 text-muted-foreground">
-          {allowWebSearch
-            ? "ZPath sẽ ưu tiên dữ liệu nội bộ, sau đó bổ sung nguồn web nếu cần."
-            : "ZPath sẽ chỉ dùng dữ liệu hiện có và tư vấn tổng quan."}
-        </span>
-      </div>
-      {allowWebSearch && (
-        <div className="px-2 pb-1 text-xs leading-5 text-primary">
-          Đang bật mặc định để ZPath kiểm tra thêm nguồn mới nhất khi cần.
-        </div>
-      )}
     </div>
   );
 }

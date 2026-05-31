@@ -14,6 +14,7 @@ export type BuildAdvisorPromptInput = {
   internalContext: unknown;
   webResults: WebSearchResult[];
   sources: AdvisorPromptSource[];
+  chatHistory?: Array<{ role: "user" | "assistant"; content: string }>;
 };
 
 export const ADVISOR_SYSTEM_PROMPT = `
@@ -55,6 +56,7 @@ Core rules:
 21. If extracted.programCode exists, treat it as an exact identifier. Do not infer the program name from similar codes.
 22. If internalContext.verifiedProgram exists, its programCode and programName are authoritative for that code.
 23. If web context conflicts with verifiedProgram or exact internal program data, explain the verified source basis briefly and do not use the conflicting name.
+24. Always review the Chat History below to ensure your response flows naturally as a continuation of the conversation, answers any follow-up questions directly, and avoids repeating details the user already knows.
 
 Tone:
 - Friendly
@@ -67,9 +69,9 @@ Tone:
 
 Answer quality requirements:
 - title: A concise, specific title that reflects the question (not generic like "Tư vấn tổng quan").
-- summary: 1 short sentence summarizing the key takeaway. Must be specific and actionable.
-- sections: Return 2-3 short sections only. Each section should be 1-2 compact sentences.
-- Total answer length should be about 50-80 Vietnamese words, excluding sources and follow-up questions.
+- summary: 1-2 short sentences summarizing the key takeaway. Must be specific and actionable.
+- sections: Return 2-3 detailed sections. Each section's content MUST focus heavily on detailed, rich bullet points (using standard markdown lists with '*' or '-'). Each bullet point must contain rich, comprehensive information and a detailed explanation of the fact or criterion.
+- Total answer length should be comprehensive and detailed (about 150-300 Vietnamese words) to ensure the student gets highly valuable, complete information.
 - Bold important names/codes with Markdown, for example **HUST**, **IT-E15**, **Đại học Bách khoa Hà Nội**.
 - followUpQuestions: 0-2 specific follow-up questions the student might want to ask next.
 - warnings: Only include if there are genuine caveats. Do NOT include warnings about "chưa gọi Gemini" or "chưa kết nối".
@@ -162,207 +164,46 @@ export function buildAdvisorPromptSources({
   });
 }
 
-function buildIntentGuidance(intent: AdvisorIntent): string {
-  switch (intent) {
-    case AdvisorIntent.REVIEW_MAJOR:
-      return `
-You MUST return exactly the following 6 sections in the "sections" array in this exact order, with the exact heading names in Vietnamese:
-1. Heading: "Ngành này là gì?"
-   Content: Define the major in clear, Gen Z-friendly but professional Vietnamese. Explain the core concept and its significance in today's economy.
-2. Heading: "Học những gì?"
-   Content: Provide a detailed, substantive overview of the typical university curriculum, key subjects, and practical skills students will develop.
-3. Heading: "Phù hợp với ai?"
-   Content: Detail specific personality traits, strengths, logical thinking style, or academic interests that make a student perfect for this major.
-4. Heading: "Không phù hợp với ai?"
-   Content: Honestly explain traits, habits, or career expectations that might make this major a bad fit (e.g. if they dislike math or repetitive coding, etc.).
-5. Heading: "Cơ hội nghề nghiệp"
-   Content: Highlight specific job roles, business sectors, growth trends, and typical career paths in Vietnam.
-6. Heading: "Nên chuẩn bị gì?"
-   Content: Give specific, actionable advice on what a high schooler or freshman can do right now to prepare (e.g. self-study resources, key skills, soft skills).
-
-Every section must be highly detailed and completely free of generic placeholders or generic ZPath meta-talk.
-`.trim();
-
-    case AdvisorIntent.COMPARE_MAJORS:
-      return `
-You MUST return exactly the following 5 sections in the "sections" array in this exact order, with the exact heading names in Vietnamese:
-1. Heading: "Bảng so sánh nhanh"
-   Content: A bulleted comparison or markdown table showing the main differences between the two majors at a glance.
-2. Heading: "Khác nhau ở bản chất ngành"
-   Content: A deep explanation of the fundamental academic and practical differences between both fields.
-3. Heading: "Phù hợp với kiểu học sinh nào?"
-   Content: Clear descriptions of who should choose Major A vs who should choose Major B based on personal traits, strengths, and professional goals.
-4. Heading: "Cơ hội việc làm"
-   Content: Compare market demand, popular career tracks, work environments, and salary potentials for both majors in Vietnam.
-5. Heading: "Nên chọn ngành nào?"
-   Content: Provide a structured decision-making framework or practical guidance to help the student confidently choose between the two.
-
-Every section must be highly detailed and completely free of generic placeholders or generic ZPath meta-talk.
-`.trim();
-
-    case AdvisorIntent.COMPARE_SCHOOLS:
-      return `
-You MUST return exactly the following 5 sections in the "sections" array in this exact order, with the exact heading names in Vietnamese:
-1. Heading: "Bảng so sánh"
-   Content: A clear markdown table comparing the two schools (e.g., public/private, city/location, general prestige, tuition overview).
-2. Heading: "Điểm mạnh từng trường"
-   Content: Substantive details on the unique training advantages, reputation, academic faculties, and industry connections of each school.
-3. Heading: "Khác biệt về môi trường học"
-   Content: Compare the campus facilities, student community dynamic, extracurricular activities, and overall culture of both institutions.
-4. Heading: "Học phí/tuyển sinh nếu có dữ liệu"
-   Content: Present specific, comparative tuition figures and admission methods based on the provided internal/web context. If no concrete data is found, clearly advise them how/where to check the official figures.
-5. Heading: "Nên chọn trường nào theo mục tiêu"
-   Content: Tailored recommendations matching different student priorities (e.g. financial budget, desire for high dynamics, preference for academic depth, location constraints).
-
-Every section must be highly detailed and completely free of generic placeholders or generic ZPath meta-talk.
-`.trim();
-
-    case AdvisorIntent.ADMISSION_CHANCE:
-      return `
-You MUST return exactly the following 4 sections in the "sections" array in this exact order, with the exact heading names in Vietnamese:
-1. Heading: "Đánh giá mức độ rủi ro"
-   Content: Deliver a clear, cautious assessment of the student's admission risk (e.g., using terms like "An toàn", "Có khả năng", "Hơi rủi ro", "Rất rủi ro") with logical explanations based on their score.
-2. Heading: "So với điểm chuẩn gần nhất"
-   Content: Perform a detailed comparison using recent benchmark scores from the provided internalContext or webSearchResults.
-3. Heading: "Chiến lược nguyện vọng"
-   Content: Provide actionable guidance on how they should rank this choice, and advise them on selecting alternative safe backup schools/programs.
-4. Heading: "Lưu ý quan trọng"
-   Content: Add critical reminders (e.g., that admission results are not guaranteed, benchmark scores fluctuate, and auxiliary admission criteria/methods must be checked).
-
-Every section must be highly detailed and completely free of generic placeholders or generic ZPath meta-talk.
-`.trim();
-
-    case AdvisorIntent.SCORE_SUGGESTION:
-      return `
-You MUST return exactly the following 6 sections in the "sections" array in this exact order, with the exact heading names in Vietnamese:
-1. Heading: "Tóm tắt nhanh"
-   Content: A concise overview of what a student with the given score and combination can expect in the current admissions climate.
-2. Heading: "Các nhóm ngành phù hợp"
-   Content: Suggest the general major groups that align well with their interests, strengths, and score level.
-3. Heading: "Gợi ý trường/ngành nên tham khảo"
-   Content: Provide highly specific school and major options, grouping them into:
-     - Nhóm an toàn (Safe choices): recent benchmark scores are 1-2 points below the student's score.
-     - Nhóm vừa sức (Balanced choices): recent benchmark scores are xấp xỉ/approximately equal to the student's score.
-     - Nhóm thử sức/mạo hiểm (Reach/risky choices): recent benchmark scores are slightly higher, if benchmark data exists.
-4. Heading: "Chiến lược đặt nguyện vọng"
-   Content: Practical, strategic advice on how to structure their application choices on the system. Explicitly warn them that admission results are not guaranteed.
-5. Heading: "Điểm cần kiểm chứng"
-   Content: Strongly advise the student to compare recent benchmark scores across years, check current year quotas, and verify auxiliary criteria on official school websites.
-6. Heading: "Câu hỏi tiếp theo nên hỏi"
-   Content: 2-3 highly relevant and specific questions the student should investigate next.
-
-Every section must be highly detailed and completely free of generic placeholders or generic ZPath meta-talk.
-`.trim();
-
-    case AdvisorIntent.PERSONAL_FIT:
-      return `
-You MUST return exactly the following 5 sections in the "sections" array in this exact order, with the exact heading names in Vietnamese:
-1. Heading: "Nhận định nhanh"
-   Content: A personalized summary of the student's compatibility profile based on their interests, strengths, and priorities.
-2. Heading: "Nhóm ngành có thể hợp"
-   Content: Introduce specific majors that match their strengths and interests, explaining why they are a strong fit.
-3. Heading: "Nhóm ngành nên cân nhắc kỹ"
-   Content: Highlight fields that might conflict with their listed dislikes or weaknesses, offering clear and honest reasons.
-4. Heading: "3 câu hỏi để tự kiểm tra"
-   Content: 3 deep, reflective questions designed specifically for the student to assess their own motivation and suitability.
-5. Heading: "Bước tiếp theo"
-   Content: Practical, concrete action steps to research recommended careers, speak with mentors, or find related training courses.
-
-Every section must be highly detailed and completely free of generic placeholders or generic ZPath meta-talk.
-`.trim();
-
-    case AdvisorIntent.TUITION:
-      return `
-Provide specific tuition details from context:
-1. Heading: "Tổng quan học phí"
-   Content: General cost per semester/year.
-2. Heading: "Phân loại chương trình"
-   Content: Costs for standard (chính quy) vs CLC (Chất lượng cao) or international/joint programs if available.
-3. Heading: "Chính sách hỗ trợ & học bổng"
-   Content: Information on available student assistance, scholarship criteria, or tuition exemptions.
-4. Heading: "Lưu ý tài chính đường dài"
-   Content: Actionable financial planning advice.
-`.trim();
-
-    case AdvisorIntent.CAREER_PATH:
-      return `
-Provide specific, detailed career guidelines:
-1. Heading: "Các vị trí công việc phổ biến"
-   Content: List specific jobs and typical entry-level roles.
-2. Heading: "Môi trường làm việc"
-   Content: Work style, company types, and stress/dynamics.
-3. Heading: "Lộ trình thăng tiến"
-   Content: 3-year, 5-year, and 10-year career progression.
-4. Heading: "Kỹ năng cần tích lũy"
-   Content: Critical soft/hard skills required to command high salaries.
-`.trim();
-
-    case AdvisorIntent.LATEST_ADMISSION_INFO:
-      return `
-Provide the latest official admissions details:
-1. Heading: "Các mốc thời gian quan trọng"
-   Content: Key application registration and verification dates.
-2. Heading: "Phương thức xét tuyển áp dụng"
-   Content: Quotas, requirements, and weight for different admission methods.
-3. Heading: "Chỉ tiêu tuyển sinh và chỉ tiêu phụ"
-   Content: Major quotas, target numbers, and secondary conditions if any.
-4. Heading: "Khuyến nghị từ ZPath"
-   Content: Actionable strategic advice.
-`.trim();
-
-    case AdvisorIntent.STUDY_PLAN:
-      return `
-Provide a solid academic progression plan:
-1. Heading: "Lộ trình học tập tổng quan"
-   Content: Semester-by-semester focus areas.
-2. Heading: "Các môn học cốt lõi"
-   Content: Critical courses and projects they must master.
-3. Heading: "Định hướng kiến tập & thực tập"
-   Content: Recommended timeline and target companies.
-4. Heading: "Kế hoạch phát triển bản thân"
-   Content: Certifications and extra-curricular advice.
-`.trim();
-
-    default:
-      return "Provide a helpful, highly specific, and actionable answer based on the available data. Avoid generic templates and placeholder text.";
-  }
-}
-
-void buildIntentGuidance;
-
 function buildCompactIntentGuidance(intent: AdvisorIntent): string {
   switch (intent) {
     case AdvisorIntent.REVIEW_MAJOR:
-      return 'Return 2-3 sections: "Căn cứ", "Tóm tắt", "Có hợp không?". Focus on the exact major/program code if provided.';
+      return 'Return 2-3 detailed sections focusing heavily on bullet points: "Căn cứ khoa học", "Trọng tâm kiến thức & kỹ năng", "Mức độ phù hợp thực tế". Focus on the exact major/program code if provided. Every bullet point must have a rich, comprehensive explanation.';
     case AdvisorIntent.COMPARE_MAJORS:
-      return 'Return 2-3 sections: "Khác nhau chính", "Nên chọn theo kiểu học sinh", "Bước tiếp theo". Use a tiny comparison list if useful.';
+      return 'Return exactly 3 detailed sections: (1) "Bảng so sánh tổng quan" (YOU MUST GENERATE A DETAILED, COMPREHENSIVE MARKDOWN COMPARISON TABLE with columns: | Tiêu chí | [Tên ngành A] | [Tên ngành B] | and at least 4 rows comparing key criteria with rich, complete explanations in each cell), (2) "Khác biệt cốt lõi" (3-4 highly detailed, rich bullet points explaining academic differences), (3) "Lời khuyên lựa chọn" (detailed bullet points on who should choose which based on strengths).';
     case AdvisorIntent.COMPARE_SCHOOLS:
-      return 'Return 2-3 sections: "Khác nhau chính", "Nên chọn trường nào", "Điểm cần kiểm chứng".';
+      return 'Return exactly 3 detailed sections: (1) "Bảng so sánh tổng quan" (YOU MUST GENERATE A DETAILED, COMPREHENSIVE MARKDOWN COMPARISON TABLE with columns: | Tiêu chí | [Tên trường A] | [Tên trường B] | and at least 4 rows comparing key criteria with rich, complete explanations in each cell), (2) "Điểm mạnh từng trường" (3-4 detailed bullet points), (3) "Khuyến nghị theo mục tiêu" (detailed bullet points).';
     case AdvisorIntent.ADMISSION_CHANCE:
-      return 'Return 2-3 sections: "Mức rủi ro", "So với dữ liệu", "Chiến lược nguyện vọng". Never guarantee admission.';
+      return 'Return 2-3 detailed sections focusing heavily on bullet points: "Đánh giá mức độ rủi ro & cơ hội", "Chi tiết điểm chuẩn & phương thức xét tuyển", "Khuyến nghị chiến lược đặt nguyện vọng". Never guarantee admission. Use detailed bullet points.';
     case AdvisorIntent.SCORE_SUGGESTION:
-      return 'Return 2-3 sections: "Nhóm phù hợp", "Gợi ý ưu tiên", "Điểm cần kiểm chứng". Keep school/program suggestions concise.';
+      return 'Return 2-3 detailed sections focusing heavily on bullet points: "Danh sách trường/ngành an toàn", "Danh sách trường/ngành vừa sức", "Chiến lược tối ưu hóa nguyện vọng". List specific options as detailed bullet points with explanation of recent benchmark scores.';
     case AdvisorIntent.PERSONAL_FIT:
-      return 'Return 2-3 sections: "Nhận định nhanh", "Ngành nên cân nhắc", "Bước tiếp theo".';
+      return 'Return 2-3 detailed sections focusing heavily on bullet points: "Nhận định năng lực & tính cách", "Các nhóm ngành đề xuất", "Các câu hỏi tự vấn & kế hoạch hành động".';
     case AdvisorIntent.TUITION:
-      return 'Return 2-3 sections: "Mức học phí", "Khác biệt chương trình", "Cần kiểm chứng".';
+      return 'Return 2-3 detailed sections focusing heavily on bullet points: "Mức học phí chi tiết các chương trình", "Chính sách miễn giảm & học bổng", "Chi phí sinh hoạt & lời khuyên tài chính".';
     case AdvisorIntent.CAREER_PATH:
-      return 'Return 2-3 sections: "Việc có thể làm", "Kỹ năng cần có", "Bước tiếp theo".';
+      return 'Return 2-3 detailed sections focusing heavily on bullet points: "Các vị trí công việc & mức thu nhập", "Lộ trình thăng tiến 3-5-10 năm", "Kỹ năng vàng cần tích lũy".';
     case AdvisorIntent.LATEST_ADMISSION_INFO:
-      return 'Return 2-3 sections: "Thông tin chính", "Mốc cần chú ý", "Nguồn cần kiểm chứng". Prefer official sources.';
+      return 'Return 2-3 detailed sections focusing heavily on bullet points: "Thông tin tuyển sinh mới nhất", "Mốc thời gian tuyển sinh quan trọng", "Khuyến nghị từ ban tuyển sinh".';
     case AdvisorIntent.STUDY_PLAN:
-      return 'Return 2-3 sections: "Trọng tâm học", "Kỹ năng cần luyện", "Bước tiếp theo".';
+      return 'Return 2-3 detailed sections focusing heavily on bullet points: "Lộ trình học tập chi tiết", "Các chứng chỉ & môn học cốt lõi", "Kế hoạch thực tập & trải nghiệm thực tế".';
     default:
-      return "Return 2-3 short sections with specific, actionable advice. Keep the whole answer about 50-80 Vietnamese words.";
+      return "Return 2-3 detailed sections with specific, actionable advice using detailed bullet points extensively. Keep the answer comprehensive and highly informative (150-300 words).";
   }
 }
 
 export function buildAdvisorGeminiPrompt(input: BuildAdvisorPromptInput) {
+  const historyText = input.chatHistory && input.chatHistory.length > 0
+    ? input.chatHistory.map((m) => `${m.role === "user" ? "User" : "Advisor"}: ${m.content}`).join("\n")
+    : "No previous messages in this conversation.";
+
   return [
     ADVISOR_SYSTEM_PROMPT,
     "",
     "Required JSON output shape:",
     truncateJson(REQUIRED_JSON_CONTRACT, 4000),
+    "",
+    "Chat History (previous conversational turns for context):",
+    historyText,
     "",
     `Intent-specific guidance for ${input.intent}:`,
     buildCompactIntentGuidance(input.intent),
@@ -396,10 +237,11 @@ export function buildAdvisorGeminiPrompt(input: BuildAdvisorPromptInput) {
     "- If internalContext has real data (status: 'success'), USE IT to build specific, data-backed answers.",
     "- If webSearchResults has results, USE THEM to add current information and cite sources.",
     "- If the user did not provide enough details, answer generally and ask useful follow-up questions.",
-    "- Keep the final answer compact: about 50-80 Vietnamese words total across summary and sections.",
+    "- Keep the final answer comprehensive, detailed, and rich in information: about 150-300 Vietnamese words total across summary and sections.",
+    "- Focus heavily on bullet points in each section. Every bullet point should contain a specific fact, a rich description, and a complete explanation.",
     "- Use Markdown bold for important school names, major names, and program codes.",
     "- Add a short source-basis sentence when exact program codes are involved, for example: 'Căn cứ: dữ liệu HUST/ZPath ghi **IT-E15** là ...'.",
-    "- Do NOT produce generic placeholder text. Every section must contain useful information.",
+    "- Do NOT produce generic placeholder text. Every section must contain useful, detailed information.",
     "- Do NOT use forbidden generic headings unless they are explicitly required by the intent-specific section list.",
     "- Do NOT include warnings like 'chưa gọi Gemini' or 'phản hồi mẫu' — you ARE the AI generating this answer.",
     "- If data is limited, be honest but still provide the best analysis you can from what's available.",

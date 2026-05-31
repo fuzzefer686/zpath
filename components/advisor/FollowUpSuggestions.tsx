@@ -10,15 +10,15 @@ export function FollowUpSuggestions({
   if (!questions.length) return null;
 
   return (
-    <div>
-      <h3 className="font-display text-base font-bold">Câu hỏi tiếp theo</h3>
-      <div className="mt-3 flex flex-wrap gap-2">
+    <div className="space-y-2.5 mt-4">
+      <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Gợi ý câu hỏi tiếp theo</h4>
+      <div className="flex flex-wrap gap-2">
         {questions.map((question) => (
           <button
             key={question}
             type="button"
             onClick={() => onSelect?.(question)}
-            className="rounded-md border border-border bg-card px-3 py-2 text-left text-xs font-semibold leading-5 transition-colors hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+            className="rounded-full bg-muted hover:bg-muted/80 text-foreground text-xs font-semibold px-4 py-2 transition-colors text-left"
           >
             {question}
           </button>

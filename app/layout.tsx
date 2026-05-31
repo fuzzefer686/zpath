@@ -3,7 +3,6 @@ import "./globals.css";
 import { Navbar } from "@/components/zpath/Navbar";
 import { Footer } from "@/components/zpath/Footer";
 import { Providers } from "@/components/zpath/Providers";
-import { AdminSaveWidget } from "@/components/zpath/AdminSaveWidget";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
@@ -28,7 +27,6 @@ export default function RootLayout({
           </main>
 
           <Footer />
-          <AdminSaveWidget />
         </Providers>
         <Analytics />
       </body>

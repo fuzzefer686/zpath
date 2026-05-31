@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { supabaseServer } from "@/src/lib/db/supabaseServer";
 
 import {
   createMockAdvisorAnswer,
@@ -762,6 +763,40 @@ export async function POST(request: Request) {
       webResults: webSearch.results,
     });
 
+    let chatHistory: Array<{ role: "user" | "assistant"; content: string }> = [];
+    if (requestData.conversationId) {
+      try {
+        const { data: messages } = await supabaseServer
+          .from("advisor_messages")
+          .select("role, content")
+          .eq("conversation_id", requestData.conversationId)
+          .order("created_at", { ascending: true })
+          .limit(10);
+
+        if (messages) {
+          chatHistory = messages.map((m) => {
+            if (m.role === "assistant") {
+              try {
+                const parsed = JSON.parse(m.content) as AdvisorAnswer;
+                const sectionText = parsed.sections
+                  ?.map((s) => `${s.heading}: ${s.content}`)
+                  .join("\n") || "";
+                return {
+                  role: "assistant",
+                  content: `${parsed.summary}\n${sectionText}`,
+                };
+              } catch {
+                return { role: "assistant", content: m.content };
+              }
+            }
+            return { role: "user", content: m.content };
+          });
+        }
+      } catch (dbErr) {
+        console.warn("Failed to retrieve chat history:", dbErr);
+      }
+    }
+
     let answer: AdvisorAnswer;
     let usedFallback = false;
     let usedGemini = false;
@@ -779,6 +814,7 @@ export async function POST(request: Request) {
         sources,
         template,
         values: fields,
+        chatHistory,
       });
     } catch (error) {
       usedFallback = true;

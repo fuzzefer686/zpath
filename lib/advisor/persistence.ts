@@ -134,6 +134,27 @@ export async function persistAdvisorExchange(
 
   if (assistantMessageError) throw assistantMessageError;
 
+  // Log question to separate user_survey_questions table for AI quality improvement
+  try {
+    await supabaseServer
+      .from("user_survey_questions")
+      .insert({
+        user_id: userId,
+        anonymous_id: userId ? null : anonymousId,
+        question: input.question,
+        intent: input.intent,
+        metadata: {
+          webSearchAllowed: input.webSearchAllowed,
+          webSearchUsed: input.webSearchUsed,
+          sourceUrls: input.sourceUrls,
+          confidence: input.answer.confidence,
+          dataStatus: input.answer.dataStatus,
+        },
+      });
+  } catch (surveyErr) {
+    console.warn("Failed to log survey question to user_survey_questions:", surveyErr);
+  }
+
   await supabaseServer
     .from("advisor_conversations")
     .update({ updated_at: new Date().toISOString() })

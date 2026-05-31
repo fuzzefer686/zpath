@@ -29,7 +29,7 @@ export function Footer() {
           <div>
             <div className="font-bold">Sản phẩm</div>
             <ul className="mt-4 space-y-3 text-sm text-background/60">
-              <li><Link href="/survey" className="hover:text-background">Tư vấn ngành</Link></li>
+              <li><Link href="/advisor" className="hover:text-background">Tư vấn ngành</Link></li>
             </ul>
           </div>
           <div>
