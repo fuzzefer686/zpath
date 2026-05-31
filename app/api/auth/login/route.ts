@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 
 import {
+  AuthConfigError,
+  assertAuthConfig,
   createAuthToken,
   getAuthCookieOptions,
   hashPassword,
@@ -30,6 +32,8 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     }
+
+    assertAuthConfig();
 
     const { data: user, error } = await supabaseServer
       .from("zpath_users")
@@ -73,6 +77,16 @@ export async function POST(request: Request) {
     return response;
   } catch (error) {
     console.error("Login API error:", error);
+    if (error instanceof AuthConfigError) {
+      return NextResponse.json(
+        {
+          error:
+            "Cấu hình đăng nhập chưa hợp lệ. Hãy đặt AUTH_JWT_SECRET tối thiểu 32 ký tự trên server.",
+        },
+        { status: 503 },
+      );
+    }
+
     return NextResponse.json(
       { error: "Không thể đăng nhập lúc này." },
       { status: 500 },

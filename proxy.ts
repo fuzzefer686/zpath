@@ -9,8 +9,8 @@ export function proxy(request: NextRequest) {
   if (pathname.startsWith("/profile") || pathname.startsWith("/dashboard")) {
     if (!token) {
       const url = request.nextUrl.clone();
-      url.pathname = "/";
-      url.searchParams.set("auth", "required");
+      url.pathname = "/login";
+      url.searchParams.set("next", pathname);
       return NextResponse.redirect(url);
     }
   }

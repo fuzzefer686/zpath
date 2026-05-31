@@ -33,14 +33,37 @@ const TOKEN_TTL_SECONDS = 60 * 60 * 24 * 30;
 
 export const ZPATH_AUTH_COOKIE_NAME = "zpath_auth";
 
-function getJwtSecret() {
-  const secret = process.env.AUTH_JWT_SECRET;
+export class AuthConfigError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "AuthConfigError";
+  }
+}
 
-  if (!secret || secret.length < 32) {
-    throw new Error("AUTH_JWT_SECRET must be set to at least 32 characters.");
+function getJwtSecret() {
+  const secret = process.env.AUTH_JWT_SECRET?.trim();
+
+  if (secret && secret.length >= 32) {
+    return secret;
   }
 
-  return secret;
+  if (secret) {
+    throw new AuthConfigError("AUTH_JWT_SECRET must be set to at least 32 characters.");
+  }
+
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY?.trim();
+
+  // Keep existing deployments working if the dedicated cookie secret has not
+  // been added yet. AUTH_JWT_SECRET remains the preferred explicit config.
+  if (serviceRoleKey && serviceRoleKey.length >= 32) {
+    return serviceRoleKey;
+  }
+
+  throw new AuthConfigError("AUTH_JWT_SECRET must be set to at least 32 characters.");
+}
+
+export function assertAuthConfig() {
+  getJwtSecret();
 }
 
 function base64UrlEncode(value: string | Buffer) {
