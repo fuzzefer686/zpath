@@ -96,5 +96,305 @@
       "benchmarks": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D",
       "tuition": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D"
     }
+  },
+  "FTU": {
+    "overview": [
+      {
+        "type": "text",
+        "title": "Top sự thật có thể bạn ko biết về FTU:",
+        "body": "Thông tin được tổng hợp dạng vui vẻ cho MVP UniMap. Dữ liệu tuyển sinh chính thức vẫn cần đối chiếu website trường."
+      },
+      {
+        "type": "text",
+        "title": "1. FTU không chỉ có Kinh tế đối ngoại",
+        "body": "Ngoại Thương thường được nhớ tới với Kinh tế đối ngoại, nhưng hệ ngành của trường còn trải qua nhiều nhánh như kinh doanh quốc tế, tài chính, logistics, marketing và ngôn ngữ thương mại."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/1d4ed8/ffffff?text=FTU+Campus",
+        "alt": "FTU campus placeholder",
+        "caption": "Ảnh minh họa khu vực campus FTU"
+      },
+      {
+        "type": "text",
+        "title": "2. Profile sinh viên thường rất đa nhiệm",
+        "body": "Một lịch học bình thường có thể đi kèm câu lạc bộ, case competition, thực tập sớm và hoạt động đối ngoại. Đây là lý do FTU hay được gắn với hình ảnh sinh viên năng động."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/2563eb/ffffff?text=FTU+Activities",
+        "alt": "FTU activities placeholder",
+        "caption": "Khu vực ảnh hoạt động sinh viên"
+      },
+      {
+        "type": "text",
+        "title": "3. Điểm mạnh nằm ở ngoại ngữ và networking",
+        "body": "Nếu bạn thích môi trường cạnh tranh, định hướng quốc tế và muốn va chạm sớm với doanh nghiệp, FTU là một lựa chọn đáng cân nhắc."
+      }
+    ],
+    "admissionInfo": [
+      {
+        "type": "text",
+        "title": "Thông tin tuyển sinh cần nhớ",
+        "body": "Các ngành hot của FTU thường có điểm chuẩn cao và biến động theo tổ hợp, cơ sở đào tạo, chương trình tiêu chuẩn/chất lượng cao. Nên kiểm tra đề án tuyển sinh chính thức từng năm trước khi chốt nguyện vọng."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/dbeafe/1e3a8a?text=FTU+Admissions",
+        "alt": "FTU admissions placeholder",
+        "fit": "contain",
+        "caption": ""
+      }
+    ],
+    "combinations": [
+      {
+        "type": "image",
+        "src": "https://placehold.co/640x640/facc15/111827?text=FTU%3A+D01+A01+A00",
+        "alt": "FTU combination placeholder",
+        "caption": "Các tổ hợp kinh tế, ngoại ngữ thường xuất hiện nhiều."
+      },
+      {
+        "type": "gif",
+        "src": "https://placehold.co/640x640/22c55e/111827?text=FTU+Interview+Mood",
+        "alt": "FTU gif placeholder",
+        "caption": "Khu vực thay GIF thật khi có asset."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/640x640/38bdf8/111827?text=Logistics+%2B+International+Business",
+        "alt": "FTU major placeholder",
+        "caption": "Kinh doanh quốc tế và logistics là nhóm ngành đáng xem kỹ."
+      }
+    ],
+    "placeholders": {
+      "programs": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D",
+      "benchmarks": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D",
+      "tuition": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D"
+    }
+  },
+  "NEU": {
+    "overview": [
+      {
+        "type": "text",
+        "title": "Top sự thật có thể bạn ko biết về NEU:",
+        "body": "Thông tin dạng tóm tắt vui vẻ cho UniMap MVP. Khi dùng để chọn nguyện vọng, hãy đối chiếu đề án tuyển sinh chính thức."
+      },
+      {
+        "type": "text",
+        "title": "1. NEU là hệ sinh thái kinh tế rất rộng",
+        "body": "Không chỉ có quản trị kinh doanh, NEU có nhiều nhánh như marketing, tài chính, kế toán, kiểm toán, kinh tế quốc tế, logistics, phân tích kinh doanh và hệ chương trình tiên tiến/chất lượng cao."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/059669/ffffff?text=NEU+Campus",
+        "alt": "NEU campus placeholder",
+        "caption": "Ảnh minh họa campus NEU"
+      },
+      {
+        "type": "text",
+        "title": "2. Mạng lưới alumni là một lợi thế lớn",
+        "body": "Sinh viên NEU có lợi thế từ cộng đồng cựu sinh viên rộng trong doanh nghiệp, tài chính, ngân hàng, kiểm toán và quản trị."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/10b981/ffffff?text=NEU+Business+Network",
+        "alt": "NEU business network placeholder",
+        "caption": "Khu vực ảnh sự kiện, doanh nghiệp, câu lạc bộ"
+      },
+      {
+        "type": "text",
+        "title": "3. Hợp với người thích kinh doanh thực chiến",
+        "body": "Nếu bạn muốn học trong môi trường đông, năng động, nhiều hoạt động học thuật và cơ hội thực tập sớm, NEU là một lựa chọn rất mạnh."
+      }
+    ],
+    "admissionInfo": [
+      {
+        "type": "text",
+        "title": "Thông tin tuyển sinh cần nhớ",
+        "body": "Các ngành kinh tế, marketing, kinh doanh quốc tế, logistics và tài chính thường cạnh tranh cao. Cần xem kỹ mã ngành, phương thức xét tuyển và chương trình đào tạo trước khi đăng ký."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/d1fae5/064e3b?text=NEU+Admissions",
+        "alt": "NEU admissions placeholder",
+        "fit": "contain",
+        "caption": ""
+      }
+    ],
+    "combinations": [
+      {
+        "type": "image",
+        "src": "https://placehold.co/640x640/facc15/111827?text=NEU%3A+A00+A01+D01",
+        "alt": "NEU combination placeholder",
+        "caption": "Nhóm tổ hợp kinh tế phổ biến."
+      },
+      {
+        "type": "gif",
+        "src": "https://placehold.co/640x640/22c55e/111827?text=NEU+Case+Study",
+        "alt": "NEU gif placeholder",
+        "caption": "Khu vực thay GIF case study khi có asset."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/640x640/38bdf8/111827?text=Marketing+Finance+Logistics",
+        "alt": "NEU major placeholder",
+        "caption": "Marketing, tài chính và logistics là các nhóm ngành nên soi kỹ."
+      }
+    ],
+    "placeholders": {
+      "programs": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D",
+      "benchmarks": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D",
+      "tuition": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D"
+    }
+  },
+  "UET": {
+    "overview": [
+      {
+        "type": "text",
+        "title": "Top sự thật có thể bạn ko biết về UET:",
+        "body": "Thông tin dạng MVP để trang UET có cấu trúc giống HUST. Dữ liệu chính thức cần đối chiếu website Trường Đại học Công nghệ - ĐHQGHN."
+      },
+      {
+        "type": "text",
+        "title": "1. UET là một điểm mạnh công nghệ trong hệ ĐHQGHN",
+        "body": "UET tập trung vào công nghệ thông tin, khoa học máy tính, kỹ thuật máy tính, điện tử viễn thông và các hướng công nghệ cao."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/0284c7/ffffff?text=UET+Campus",
+        "alt": "UET campus placeholder",
+        "caption": "Ảnh minh họa UET"
+      },
+      {
+        "type": "text",
+        "title": "2. Hợp với học sinh thích kỹ thuật nhưng muốn môi trường gọn",
+        "body": "UET thường được cân nhắc bởi học sinh thích công nghệ, nghiên cứu ứng dụng và muốn nằm trong hệ sinh thái Đại học Quốc gia Hà Nội."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/06b6d4/ffffff?text=UET+Labs",
+        "alt": "UET labs placeholder",
+        "caption": "Khu vực ảnh lab, nghiên cứu, dự án sinh viên"
+      },
+      {
+        "type": "text",
+        "title": "3. Cần đọc kỹ mã ngành công nghệ",
+        "body": "Các ngành công nghệ nghe gần nhau nhưng chương trình học khác nhau. Công nghệ thông tin, khoa học máy tính và kỹ thuật máy tính nên được so sánh bằng học phần, chuẩn đầu ra và hướng nghề nghiệp."
+      }
+    ],
+    "admissionInfo": [
+      {
+        "type": "text",
+        "title": "Thông tin tuyển sinh cần nhớ",
+        "body": "Nhóm ngành công nghệ thường cạnh tranh cao. Nên kiểm tra phương thức xét tuyển, tổ hợp, chỉ tiêu và điều kiện phụ trong đề án tuyển sinh chính thức của UET."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/e0f2fe/075985?text=UET+Admissions",
+        "alt": "UET admissions placeholder",
+        "fit": "contain",
+        "caption": ""
+      }
+    ],
+    "combinations": [
+      {
+        "type": "image",
+        "src": "https://placehold.co/640x640/facc15/111827?text=UET%3A+A00+A01",
+        "alt": "UET combination placeholder",
+        "caption": "Các tổ hợp thiên về toán, lý, tiếng Anh thường quan trọng."
+      },
+      {
+        "type": "gif",
+        "src": "https://placehold.co/640x640/22c55e/111827?text=Debugging+Mood",
+        "alt": "UET gif placeholder",
+        "caption": "Khu vực thay GIF lập trình khi có asset."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/640x640/38bdf8/111827?text=CS+IT+CE",
+        "alt": "UET major placeholder",
+        "caption": "CS, IT, CE nhìn giống nhau nhưng nên đọc chương trình học."
+      }
+    ],
+    "placeholders": {
+      "programs": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D",
+      "benchmarks": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D",
+      "tuition": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D"
+    }
+  },
+  "VINUNI": {
+    "overview": [
+      {
+        "type": "text",
+        "title": "Top sự thật có thể bạn ko biết về VinUni:",
+        "body": "Thông tin dạng tóm tắt vui vẻ cho UniMap MVP. Với học phí, học bổng và điều kiện tuyển sinh, hãy kiểm tra nguồn chính thức của VinUni."
+      },
+      {
+        "type": "text",
+        "title": "1. VinUni đi theo mô hình đại học quốc tế",
+        "body": "VinUni tập trung vào chương trình đào tạo bằng tiếng Anh, quy mô lớp học nhỏ hơn nhiều trường công lập và trải nghiệm học thuật gần chuẩn quốc tế."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/7c3aed/ffffff?text=VinUni+Campus",
+        "alt": "VinUni campus placeholder",
+        "caption": "Ảnh minh họa VinUni"
+      },
+      {
+        "type": "text",
+        "title": "2. Học phí và học bổng là hai biến quan trọng",
+        "body": "Khi cân nhắc VinUni, cần xem đồng thời học phí, học bổng, hỗ trợ tài chính, yêu cầu tiếng Anh và định hướng nghề nghiệp sau tốt nghiệp."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/a855f7/ffffff?text=VinUni+International+Programs",
+        "alt": "VinUni programs placeholder",
+        "caption": "Khu vực ảnh chương trình quốc tế, lab, campus"
+      },
+      {
+        "type": "text",
+        "title": "3. Phù hợp với người muốn môi trường cường độ cao",
+        "body": "Nếu bạn muốn học bằng tiếng Anh, tiếp cận dự án sớm và chấp nhận áp lực học thuật cao, VinUni là một lựa chọn nên tìm hiểu sâu."
+      }
+    ],
+    "admissionInfo": [
+      {
+        "type": "text",
+        "title": "Thông tin tuyển sinh cần nhớ",
+        "body": "VinUni thường xét hồ sơ theo nhiều thành phần như học thuật, tiếng Anh, hoạt động, phỏng vấn và học bổng. Cần kiểm tra deadline, yêu cầu hồ sơ và chính sách tài chính từng kỳ tuyển sinh."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/960x640/f3e8ff/581c87?text=VinUni+Admissions",
+        "alt": "VinUni admissions placeholder",
+        "fit": "contain",
+        "caption": ""
+      }
+    ],
+    "combinations": [
+      {
+        "type": "image",
+        "src": "https://placehold.co/640x640/facc15/111827?text=VinUni%3A+Portfolio+%2B+Interview",
+        "alt": "VinUni admission placeholder",
+        "caption": "Hồ sơ và phỏng vấn có thể quan trọng hơn một con số điểm đơn lẻ."
+      },
+      {
+        "type": "gif",
+        "src": "https://placehold.co/640x640/22c55e/111827?text=Scholarship+Checklist",
+        "alt": "VinUni gif placeholder",
+        "caption": "Khu vực thay GIF checklist học bổng khi có asset."
+      },
+      {
+        "type": "image",
+        "src": "https://placehold.co/640x640/38bdf8/111827?text=English+%2B+Academics+%2B+Activities",
+        "alt": "VinUni profile placeholder",
+        "caption": "Tiếng Anh, học thuật và hoạt động nên được chuẩn bị cùng lúc."
+      }
+    ],
+    "placeholders": {
+      "programs": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D",
+      "benchmarks": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D",
+      "tuition": "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D"
+    }
   }
 }

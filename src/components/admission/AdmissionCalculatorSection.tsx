@@ -85,6 +85,14 @@ const XTTN_SUBTYPE_LABELS: Record<XttnSubtype, string> = {
   portfolio_interview: "Hồ sơ năng lực + phỏng vấn",
 };
 
+const SCHOOL_LABELS: Record<SchoolCode, string> = {
+  HUST: "Đại học Bách khoa Hà Nội",
+  FTU: "Đại học Ngoại Thương",
+  NEU: "Đại học Kinh tế Quốc dân",
+  UET: "Trường Đại học Công nghệ - ĐHQGHN",
+  VINUNI: "Đại học VinUni",
+};
+
 const SUBJECT_LABELS: Record<HustSubjectKey, string> = {
   math: "Toán",
   physics: "Vật lý",
@@ -110,7 +118,7 @@ const EMPTY_SUBJECT_SCORES: Record<HustSubjectKey, string> = {
 };
 
 function isSchoolCode(value: string): value is SchoolCode {
-  return value === "HUST" || value === "FTU" || value === "VINUNI" || value === "NEU";
+  return value === "HUST" || value === "FTU" || value === "NEU" || value === "UET" || value === "VINUNI";
 }
 
 function isApiResponse(value: unknown): value is ApiResponse {
@@ -196,6 +204,7 @@ export function AdmissionCalculatorSection({
   benchmarkYear = HUST_CUTOFF_YEAR,
 }: AdmissionCalculatorSectionProps) {
   const isHust = schoolCode === "HUST";
+  const schoolLabel = isSchoolCode(schoolCode) ? SCHOOL_LABELS[schoolCode] : schoolCode;
   const [method, setMethod] = useState<AdmissionMethod>("THPT");
   const [programCode, setProgramCode] = useState(
     HUST_ADMISSION_PROGRAMS_2026[0]?.code ?? "",
@@ -242,6 +251,27 @@ export function AdmissionCalculatorSection({
     );
     return supportedMethods.length ? supportedMethods : HUST_METHODS;
   }, [methods]);
+
+  if (!isHust) {
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-xl">
+            <Calculator className="h-5 w-5 text-primary" />
+            Công cụ tính điểm xét tuyển {schoolCode}
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="rounded-lg border border-dashed border-border bg-muted/30 p-5">
+            <p className="text-sm font-semibold text-foreground">{schoolLabel}</p>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">
+              Module tính điểm xét tuyển cho trường này: to be developed.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
 
   function resetResult() {
     setScoreResult(null);

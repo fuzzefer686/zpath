@@ -1,4 +1,4 @@
-export type SchoolCode = "HUST" | "FTU" | "VINUNI" | "NEU";
+export type SchoolCode = "HUST" | "FTU" | "NEU" | "UET" | "VINUNI";
 
 export type AdmissionMethod = "THPT" | "TSA" | "XTTN";
 

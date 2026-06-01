@@ -128,6 +128,28 @@ export const UNIVERSITIES: University[] = [
     ],
   },
   {
+    code: "UET",
+    name: "Trường Đại học Công nghệ - ĐHQGHN",
+    shortDesc: "Công nghệ & Kỹ thuật",
+    tags: ["Công nghệ", "Kỹ thuật"],
+    city: "Hà Nội",
+    website: "https://uet.vnu.edu.vn",
+    heroGradient: "from-blue-600 via-cyan-500 to-emerald-500",
+    about:
+      "Trường Đại học Công nghệ - ĐHQGHN là đơn vị đào tạo và nghiên cứu mạnh về công nghệ thông tin, điện tử viễn thông, kỹ thuật máy tính và các lĩnh vực công nghệ cao.",
+    highlights: [
+      "Thế mạnh về công nghệ thông tin và kỹ thuật máy tính",
+      "Nằm trong hệ sinh thái Đại học Quốc gia Hà Nội",
+      "Định hướng nghiên cứu, đổi mới sáng tạo và công nghệ cao",
+    ],
+    majors: ["Công nghệ Thông tin", "Khoa học Máy tính", "Kỹ thuật Máy tính", "Điện tử Viễn thông", "Trí tuệ Nhân tạo"],
+    programs: [
+      { name: "Công nghệ Thông tin", majorCode: "CNTT", programCode: "UET-CNTT", admissionScore2025: 27.8, tuitionPerSemester: 18 },
+      { name: "Khoa học Máy tính", majorCode: "KHMT", programCode: "UET-KHMT", admissionScore2025: 27.6, tuitionPerSemester: 18 },
+      { name: "Kỹ thuật Máy tính", majorCode: "KTMT", programCode: "UET-KTMT", admissionScore2025: 26.9, tuitionPerSemester: 18 },
+    ],
+  },
+  {
     code: "HNUE",
     name: "Đại học Sư phạm Hà Nội",
     shortDesc: "Giáo dục & Sư phạm",

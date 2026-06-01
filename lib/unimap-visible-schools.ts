@@ -1,7 +1,7 @@
 import { UNIVERSITIES, type University } from "@/data/universities";
 import { createSchoolSlug } from "@/lib/school-slug";
 
-export const UNIMAP_VISIBLE_CODES = ["HUST", "FTU", "VINUNI", "NEU"] as const;
+export const UNIMAP_VISIBLE_CODES = ["HUST", "FTU", "NEU", "UET", "VINUNI"] as const;
 
 export type UnimapVisibleCode = (typeof UNIMAP_VISIBLE_CODES)[number];
 
