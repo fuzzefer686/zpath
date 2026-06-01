@@ -85,35 +85,44 @@ export function TuitionSection({
               </p>
             ) : (
               <div className="max-h-[1004px] overflow-auto">
-                <table className="w-full min-w-[720px] table-fixed text-left text-sm">
+                <table className="w-full min-w-[1040px] table-auto text-left text-sm">
                   <thead className="sticky top-0 z-10 border-b bg-card text-xs uppercase tracking-wider text-muted-foreground">
                     <tr>
-                      <th className="h-11 w-72 pr-4">Chương trình</th>
-                      <th className="h-11 w-20 pr-4">Năm</th>
-                      <th className="h-11 w-48 pr-4">Học phí</th>
-                      <th className="h-11 w-28 pr-4">Đơn vị</th>
-                      <th className="h-11 w-72 pr-4">Mô tả</th>
-                      <th className="h-11 w-72 pr-4">Ghi chú</th>
+                      <th className="h-11 w-[260px] pr-5 align-bottom">Chương trình</th>
+                      <th className="h-11 w-20 pr-5 align-bottom">Năm</th>
+                      <th className="h-11 w-[220px] pr-5 align-bottom">Học phí</th>
+                      <th className="h-11 w-28 pr-5 align-bottom">Đơn vị</th>
+                      <th className="h-11 w-[260px] pr-5 align-bottom">Mô tả</th>
+                      <th className="h-11 w-[260px] pr-5 align-bottom">Ghi chú</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y">
                     {filteredTuitionFees.map((fee) => {
                       const program = fee.program_id ? programById.get(fee.program_id) : null;
                       return (
-                        <tr key={fee.id} className="h-12">
-                          <td className="truncate pr-4">
-                            {program?.program_code ? `${program.program_code} - ` : ""}
-                            {program?.program_name ?? "Thông tin chung"}
+                        <tr key={fee.id} className="align-top">
+                          <td className="py-3 pr-5 leading-6">
+                            {program?.program_code ? (
+                              <span className="font-medium text-foreground">
+                                {program.program_code}
+                                {" - "}
+                              </span>
+                            ) : null}
+                            <span className="break-words">
+                              {program?.program_name ?? "Thông tin chung"}
+                            </span>
                           </td>
-                          <td className="whitespace-nowrap pr-4">{fee.year}</td>
-                          <td className="truncate pr-4 font-bold text-primary">
+                          <td className="whitespace-nowrap py-3 pr-5 leading-6">{fee.year}</td>
+                          <td className="whitespace-normal break-words py-3 pr-5 font-bold leading-6 text-primary tabular-nums">
                             {formatFeeRange(fee)}
                           </td>
-                          <td className="truncate pr-4">{fee.unit ?? "-"}</td>
-                          <td className="truncate pr-4 text-muted-foreground">
+                          <td className="whitespace-normal break-words py-3 pr-5 leading-6">
+                            {fee.unit ?? "-"}
+                          </td>
+                          <td className="whitespace-normal break-words py-3 pr-5 leading-6 text-muted-foreground">
                             {fee.description ?? "-"}
                           </td>
-                          <td className="truncate pr-4 text-muted-foreground">
+                          <td className="whitespace-normal break-words py-3 pr-5 leading-6 text-muted-foreground">
                             {fee.note ?? "-"}
                           </td>
                         </tr>

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   BarChart3,
   Calculator,
@@ -42,6 +44,14 @@ type AdmissionSectionNavigatorProps = {
 export function AdmissionSectionNavigator({
   items = DEFAULT_NAV_ITEMS,
 }: AdmissionSectionNavigatorProps) {
+  function handleNavigate(id: string) {
+    window.dispatchEvent(
+      new CustomEvent("admission-section:navigate", {
+        detail: { id },
+      }),
+    );
+  }
+
   return (
     <nav
       aria-label="Điều hướng nội dung tuyển sinh"
@@ -53,6 +63,7 @@ export function AdmissionSectionNavigator({
             key={href}
             href={href}
             title={label}
+            onClick={() => handleNavigate(href.slice(1))}
             className="group relative flex min-h-10 shrink-0 items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-accent/10 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:h-10 lg:w-10 lg:justify-center lg:rounded-full lg:px-0 lg:py-0"
           >
             <Icon className="h-4 w-4" aria-hidden="true" />
