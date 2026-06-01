@@ -233,6 +233,7 @@ export function buildAdvisorGeminiPrompt(input: BuildAdvisorPromptInput) {
     "",
     "Critical instructions for this answer:",
     "- Use only allowedSources in sources[].",
+    "- Return exactly one JSON object. Do not include a second JSON object, Markdown fence, or prose before/after the JSON.",
     "- If allowedSources is empty, return sources: [] and explain what still needs verification.",
     "- If internalContext has real data (status: 'success'), USE IT to build specific, data-backed answers.",
     "- If webSearchResults has results, USE THEM to add current information and cite sources.",
