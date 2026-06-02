@@ -23,6 +23,11 @@ export function LoginClient() {
   useEffect(() => {
     if (!user) return;
 
+    if (!user.phone) {
+      router.replace(`/login/complete-profile?next=${encodeURIComponent(nextPath)}`);
+      return;
+    }
+
     if (surveyCompleted) {
       router.replace(nextPath);
       return;

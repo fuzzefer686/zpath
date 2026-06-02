@@ -64,11 +64,34 @@ function sanitizeJsonObject(text: string) {
   return sanitized;
 }
 
+function getTrailingJsonPosition(error: unknown) {
+  if (!(error instanceof SyntaxError)) return null;
+
+  const match = error.message.match(
+    /Unexpected non-whitespace character after JSON at position (\d+)/,
+  );
+  if (!match) return null;
+
+  const position = Number.parseInt(match[1], 10);
+  return Number.isFinite(position) && position > 0 ? position : null;
+}
+
+function parseJsonAllowingTrailingText(text: string) {
+  try {
+    return JSON.parse(text);
+  } catch (error) {
+    const trailingPosition = getTrailingJsonPosition(error);
+    if (trailingPosition === null) throw error;
+
+    return JSON.parse(text.slice(0, trailingPosition));
+  }
+}
+
 export function parseGeminiJson(text: string): unknown {
   const cleanedText = extractFirstJsonObject(text);
 
   try {
-    return JSON.parse(cleanedText);
+    return parseJsonAllowingTrailingText(cleanedText);
   } catch (firstError) {
     try {
       console.warn(
@@ -76,7 +99,7 @@ export function parseGeminiJson(text: string): unknown {
         firstError,
       );
 
-      return JSON.parse(sanitizeJsonObject(cleanedText));
+      return parseJsonAllowingTrailingText(sanitizeJsonObject(cleanedText));
     } catch (secondError) {
       console.error("Gemini JSON sanitization also failed:", secondError);
       console.error("Raw text was:", text);

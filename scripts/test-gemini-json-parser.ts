@@ -61,6 +61,21 @@ function runGeminiJsonParserChecks() {
     "literal } inside string",
     "brace in string content",
   );
+
+  assertEqual(
+    assertObject(parseGeminiJson('`{"title":"single fenced"}`'), "single backtick fenced json").title,
+    "single fenced",
+    "single backtick fenced json title",
+  );
+
+  assertEqual(
+    assertObject(
+      parseWithMutedWarning('{"title":"sanitized trailing comma",}\n`'),
+      "sanitized json with trailing backtick",
+    ).title,
+    "sanitized trailing comma",
+    "sanitized json with trailing backtick title",
+  );
 }
 
 runGeminiJsonParserChecks();

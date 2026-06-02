@@ -37,14 +37,15 @@ export async function POST(request: Request) {
 
     const { data: user, error } = await supabaseServer
       .from("zpath_users")
-      .select("id, username, password_hash, role, email")
+      .select("id, username, password_hash, role, email, phone")
       .eq("username_normalized", username.toLowerCase())
       .maybeSingle();
 
     if (error) throw error;
 
     const passwordMatches =
-      user && (await verifyPassword(body.password, String(user.password_hash)));
+      user?.password_hash &&
+      (await verifyPassword(body.password, String(user.password_hash)));
 
     if (!user || !passwordMatches) {
       await hashPassword(body.password);
@@ -59,6 +60,7 @@ export async function POST(request: Request) {
       username: String(user.username),
       role: user.role === "admin" ? "admin" as const : "user" as const,
       email: String(user.email || ""),
+      phone: String(user.phone || ""),
     };
     const token = createAuthToken(authUser);
 

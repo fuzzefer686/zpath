@@ -5,13 +5,18 @@ import Link from "next/link";
 import { useEffect } from "react";
 import {
   ArrowRight,
+  BarChart3,
   BookOpenCheck,
   Brain,
   BriefcaseBusiness,
   ClipboardCheck,
   Compass,
+  DatabaseZap,
   GraduationCap,
+  MessageCircle,
   MapPinned,
+  ShieldCheck,
+  Sparkles,
   Target,
   UsersRound,
 } from "lucide-react";
@@ -60,6 +65,37 @@ const roadmap = [
   },
 ];
 
+const productFeatures = [
+  {
+    eyebrow: "AI chatbot tư vấn",
+    title: "Hỏi đáp tuyển sinh như đang nói chuyện với cố vấn",
+    desc: "Chatbot AI của ZPATH giúp học sinh hỏi về ngành, trường, lộ trình học, cơ hội nghề nghiệp và chiến lược nguyện vọng dựa trên dữ liệu nội bộ cùng ngữ cảnh câu hỏi.",
+    href: "/advisor",
+    cta: "Mở AI chatbot",
+    icon: MessageCircle,
+    accent: "bg-primary/10 text-primary",
+    bullets: [
+      "Tư vấn theo ngành, trường, điểm và mục tiêu cá nhân.",
+      "Tóm tắt dữ liệu tuyển sinh thành khuyến nghị dễ hành động.",
+      "Gợi ý câu hỏi tiếp theo để học sinh không bị lạc hướng.",
+    ],
+  },
+  {
+    eyebrow: "Scoring",
+    title: "Tính điểm xét tuyển và so sánh điểm chuẩn theo trường",
+    desc: "Scoring hỗ trợ tính điểm theo phương thức xét tuyển của từng trường, đối chiếu với điểm chuẩn tham chiếu 2025 để học sinh nhìn nhanh mức độ an toàn, vừa sức hay rủi ro.",
+    href: "/unimap#calculator",
+    cta: "Dùng Scoring",
+    icon: BarChart3,
+    accent: "bg-accent/10 text-accent",
+    bullets: [
+      "Tính điểm theo từng phương thức xét tuyển được hỗ trợ.",
+      "So sánh với dữ liệu điểm chuẩn 2025 trong ZPATH.",
+      "Hiển thị chênh lệch để lập danh sách nguyện vọng thực tế hơn.",
+    ],
+  },
+];
+
 export function Homepage() {
   const { openAuthPrompt } = useAuth();
 
@@ -77,33 +113,31 @@ export function Homepage() {
 
   return (
     <main className="bg-background text-foreground">
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden border-b border-border/70">
         <div className="absolute inset-0 bg-mesh" />
-        <div className="absolute inset-0 grid-dots opacity-40" />
+        <div className="absolute inset-0 grid-dots opacity-30" />
 
-        <div className="container-page relative grid gap-10 pt-14 pb-16 sm:pt-20 sm:pb-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="container-page relative grid gap-10 pt-14 pb-12 sm:pt-20 sm:pb-18 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
           <div>
-            <div className="mb-6 inline-flex animate-fade-up items-center gap-2 rounded-full border-2 border-foreground/10 bg-card/85 px-4 py-2 text-xs font-bold uppercase tracking-widest backdrop-blur">
+            <div className="mb-6 inline-flex animate-fade-up items-center gap-2 rounded-full border border-foreground/10 bg-card/90 px-4 py-2 text-xs font-bold uppercase tracking-widest backdrop-blur">
               <Compass className="h-3.5 w-3.5 text-accent" />
-              Tư vấn tuyển sinh và hướng nghiệp
+              AI advisor + scoring engine
             </div>
 
             <h1
-              className="animate-fade-up font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl"
+              className="animate-fade-up font-display text-4xl font-bold leading-[1.04] sm:text-5xl md:text-6xl"
               style={{ animationDelay: "90ms" }}
             >
-              Đồng hành cùng học sinh Việt Nam trên hành trình{" "}
-              <span className="text-gradient-hero">chọn đúng ngành, vào đúng trường</span>
+              Chọn ngành, chọn trường bằng{" "}
+              <span className="text-gradient-hero">dữ liệu và tư vấn AI</span>
             </h1>
 
             <p
               className="mt-6 max-w-2xl animate-fade-up text-base leading-8 text-muted-foreground sm:text-lg"
               style={{ animationDelay: "180ms" }}
             >
-              Việc chọn ngành, chọn trường đại học không chỉ là một quyết định tuyển sinh,
-              mà còn là bước ngoặt quan trọng ảnh hưởng đến tương lai nghề nghiệp của mỗi
-              học sinh. ZPATH giúp học sinh và phụ huynh có một lộ trình rõ ràng, thực tế
-              và phù hợp hơn.
+              ZPATH giúp học sinh đặt câu hỏi với AI chatbot tư vấn, tính điểm xét tuyển
+              bằng Scoring và biến dữ liệu tuyển sinh thành một kế hoạch nguyện vọng rõ ràng hơn.
             </p>
 
             <div
@@ -112,22 +146,38 @@ export function Homepage() {
             >
               <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
                 <Link href="/advisor">
-                  Bắt đầu định hướng <ArrowRight className="h-5 w-5" />
+                  Hỏi AI chatbot <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="xl" className="w-full sm:w-auto">
-                <Link href="/unimap">Khám phá trường</Link>
+                <Link href="/unimap#calculator">Dùng Scoring</Link>
               </Button>
+            </div>
+
+            <div
+              className="mt-8 grid max-w-xl animate-fade-up gap-3 text-sm text-muted-foreground sm:grid-cols-3"
+              style={{ animationDelay: "330ms" }}
+            >
+              {[
+                ["2025", "điểm chuẩn tham chiếu"],
+                ["AI", "tư vấn theo ngữ cảnh"],
+                ["UniMap", "dữ liệu trường/ngành"],
+              ].map(([value, label]) => (
+                <div key={label} className="border-l border-border/80 pl-4">
+                  <div className="font-display text-2xl font-bold text-foreground">{value}</div>
+                  <div className="mt-1 leading-5">{label}</div>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="relative">
             <div
-              className="animate-fade-up rounded-2xl border-2 border-border bg-card p-5 shadow-md transition-transform duration-500 hover:-translate-y-1 sm:p-6 lg:animate-float-slow"
+              className="animate-fade-up rounded-[2rem] border border-border bg-card/95 p-4 shadow-md backdrop-blur transition-transform duration-500 hover:-translate-y-1 sm:p-5 lg:animate-float-slow"
               style={{ animationDelay: "360ms" }}
             >
-              <div className="flex items-center gap-4 border-b-2 border-border pb-5">
-                <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border-2 border-border bg-background">
+              <div className="flex items-center gap-4 border-b border-border pb-5">
+                <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-border bg-background">
                   <Image
                     src="/zpath-logo.jpg"
                     alt="ZPATH"
@@ -139,25 +189,42 @@ export function Homepage() {
                 </div>
                 <div>
                   <p className="text-sm font-bold uppercase tracking-widest text-primary">ZPATH</p>
-                  <p className="mt-1 font-display text-xl font-bold">Hiểu mình - hiểu ngành - chọn đúng tương lai</p>
+                  <p className="mt-1 font-display text-xl font-bold">Advisor workspace</p>
                 </div>
               </div>
 
-              <div className="mt-6 grid gap-4">
+              <div className="mt-5 rounded-2xl bg-muted/45 p-4">
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-primary">
+                      AI chatbot tư vấn
+                    </p>
+                    <p className="mt-1 text-sm font-semibold">Em nên chọn EE-E18 không?</p>
+                  </div>
+                  <Sparkles className="h-5 w-5 text-accent" />
+                </div>
+                <div className="space-y-3 text-sm leading-6">
+                  <div className="ml-auto max-w-[82%] rounded-2xl rounded-tr-sm bg-primary px-4 py-3 text-primary-foreground">
+                    Em có điểm XTTN 1.3 là 71.33, muốn xét HUST.
+                  </div>
+                  <div className="max-w-[88%] rounded-2xl rounded-tl-sm border border-border bg-card px-4 py-3">
+                    ZPATH sẽ so sánh với điểm chuẩn 2025 và phân tích mức độ rủi ro theo ngành.
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {[
-                  "Phân tích năng lực cá nhân",
-                  "Định hướng ngành nghề",
-                  "Tư vấn tuyển sinh theo dữ liệu",
-                  "Kế hoạch học tập và xét tuyển",
-                ].map((item, index) => (
+                  { title: "Scoring", desc: "Điểm chuẩn 2025", icon: DatabaseZap },
+                  { title: "Advisor", desc: "Khuyến nghị hành động", icon: ShieldCheck },
+                ].map(({ title, desc, icon: Icon }) => (
                   <div
-                    key={item}
-                    className="flex items-center gap-4 rounded-xl bg-muted/55 p-4 transition-all duration-300 hover:translate-x-1 hover:bg-primary/10"
+                    key={title}
+                    className="rounded-2xl border border-border bg-background p-4"
                   >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-primary text-sm font-bold text-primary-foreground">
-                      {index + 1}
-                    </span>
-                    <span className="text-sm font-semibold sm:text-base">{item}</span>
+                    <Icon className="mb-3 h-5 w-5 text-primary" />
+                    <div className="font-display text-lg font-bold">{title}</div>
+                    <div className="mt-1 text-xs leading-5 text-muted-foreground">{desc}</div>
                   </div>
                 ))}
               </div>
@@ -167,6 +234,77 @@ export function Homepage() {
       </section>
 
       <section className="py-16 sm:py-24">
+        <div className="container-page">
+          <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+            <div className="animate-fade-up">
+              <p className="text-sm font-bold uppercase tracking-widest text-primary">
+                Hai tính năng chính
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">
+                Một nơi để hỏi, một nơi để tính điểm
+              </h2>
+              <p className="mt-5 text-base leading-8 text-muted-foreground sm:text-lg">
+                ZPATH tập trung vào hai việc học sinh cần nhất trong mùa tuyển sinh:
+                hiểu lựa chọn của mình và kiểm tra lựa chọn đó bằng điểm số.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              {productFeatures.map((feature, index) => {
+                const Icon = feature.icon;
+
+                return (
+                  <article
+                    key={feature.title}
+                    className="group animate-fade-up overflow-hidden rounded-[2rem] border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-md"
+                    style={{ animationDelay: `${index * 120}ms` }}
+                  >
+                    <div className="flex items-start justify-between gap-5">
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-widest text-primary">
+                          {feature.eyebrow}
+                        </p>
+                        <h3 className="mt-3 font-display text-2xl font-bold leading-tight">
+                          {feature.title}
+                        </h3>
+                      </div>
+                      <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${feature.accent}`}>
+                        <Icon className="h-6 w-6" />
+                      </div>
+                    </div>
+
+                    <p className="mt-5 text-sm leading-7 text-muted-foreground">
+                      {feature.desc}
+                    </p>
+
+                    <div className="mt-6 space-y-3">
+                      {feature.bullets.map((bullet) => (
+                        <div key={bullet} className="flex gap-3 text-sm leading-6">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                          <span>{bullet}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <Button
+                      asChild
+                      variant={index === 0 ? "hero" : "coral"}
+                      size="lg"
+                      className="mt-7 w-full"
+                    >
+                      <Link href={feature.href}>
+                        {feature.cta} <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border/70 bg-muted/30 py-16 sm:py-24">
         <div className="container-page">
           <div className="mx-auto max-w-3xl animate-fade-up text-center">
             <p className="text-sm font-bold uppercase tracking-widest text-primary">
@@ -189,7 +327,7 @@ export function Homepage() {
               return (
                 <article
                   key={item.title}
-                  className="group animate-fade-up rounded-2xl border-2 border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-md"
+                  className="group animate-fade-up rounded-[1.5rem] border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-md"
                   style={{ animationDelay: `${index * 110}ms` }}
                 >
                   <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
@@ -204,7 +342,7 @@ export function Homepage() {
         </div>
       </section>
 
-      <section className="bg-muted/40 py-16 sm:py-24">
+      <section className="py-16 sm:py-24">
         <div className="container-page">
           <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <div className="animate-fade-up">
@@ -229,7 +367,7 @@ export function Homepage() {
                 return (
                   <article
                     key={item.title}
-                    className="group animate-fade-up rounded-2xl border-2 border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-md"
+                    className="group animate-fade-up rounded-[1.5rem] border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-md"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
@@ -247,7 +385,7 @@ export function Homepage() {
 
       <section className="py-16 sm:py-24">
         <div className="container-page">
-          <div className="relative animate-fade-up overflow-hidden rounded-2xl bg-gradient-hero px-6 py-12 text-center text-primary-foreground shadow-glow transition-transform duration-500 hover:-translate-y-1 sm:px-10 sm:py-16">
+          <div className="relative animate-fade-up overflow-hidden rounded-[2rem] bg-gradient-hero px-6 py-12 text-center text-primary-foreground shadow-glow transition-transform duration-500 hover:-translate-y-1 sm:px-10 sm:py-16">
             <UsersRound className="mx-auto mb-5 h-11 w-11 animate-pulse-glow rounded-full opacity-90" />
             <h2 className="mx-auto max-w-3xl font-display text-3xl font-bold leading-tight sm:text-5xl">
               Tìm con đường phù hợp nhất với năng lực, đam mê và tương lai của bạn

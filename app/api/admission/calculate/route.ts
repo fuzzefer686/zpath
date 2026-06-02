@@ -7,6 +7,7 @@ import {
   type AdmissionMethod,
   type SchoolCode,
 } from "@/src/lib/admission-engine";
+import { getAuthContext } from "@/lib/zpath-auth";
 
 type AdmissionCalculateRequest = {
   schoolCode: SchoolCode;
@@ -78,6 +79,27 @@ function parseAdmissionCalculateRequest(
 }
 
 export async function POST(request: Request) {
+  const auth = await getAuthContext();
+  if (!auth) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "Bạn cần đăng nhập để dùng Scoring.",
+      },
+      { status: 401 },
+    );
+  }
+
+  if (!auth.user.phone) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "Bạn cần bổ sung số điện thoại trước khi dùng Scoring.",
+      },
+      { status: 403 },
+    );
+  }
+
   let body: unknown;
 
   try {

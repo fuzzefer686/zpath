@@ -54,6 +54,7 @@ import type {
   AdvisorQuestionTemplate,
   AdvisorTemplateValues,
 } from "@/lib/advisor/types";
+import { getAuthContext } from "@/lib/zpath-auth";
 import {
   getHustAdmissionProgram2026,
   HUST_PROGRAM_GROUP_LABELS,
@@ -621,6 +622,31 @@ function shouldUseMock() {
 
 export async function POST(request: Request) {
   try {
+    const auth = await getAuthContext();
+    if (!auth) {
+      return NextResponse.json(
+        {
+          error: {
+            code: "AUTH_REQUIRED",
+            message: "Bạn cần đăng nhập để dùng Advisor.",
+          },
+        },
+        { status: 401 },
+      );
+    }
+
+    if (!auth.user.phone) {
+      return NextResponse.json(
+        {
+          error: {
+            code: "PHONE_REQUIRED",
+            message: "Bạn cần bổ sung số điện thoại trước khi dùng Advisor.",
+          },
+        },
+        { status: 403 },
+      );
+    }
+
     let body: unknown;
 
     try {

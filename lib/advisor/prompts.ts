@@ -57,6 +57,7 @@ Core rules:
 22. If internalContext.verifiedProgram exists, its programCode and programName are authoritative for that code.
 23. If web context conflicts with verifiedProgram or exact internal program data, explain the verified source basis briefly and do not use the conflicting name.
 24. Always review the Chat History below to ensure your response flows naturally as a continuation of the conversation, answers any follow-up questions directly, and avoids repeating details the user already knows.
+25. For any question involving scores, admission scores, benchmarks, admission chances, score-based recommendations, or score calculation, always use 2025 as the benchmark/reference year. If the user asks for another year, explain that ZPath currently answers score-related questions using 2025 reference data unless verified context for that requested year is explicitly provided.
 
 Tone:
 - Friendly
@@ -236,6 +237,7 @@ export function buildAdvisorGeminiPrompt(input: BuildAdvisorPromptInput) {
     "- Return exactly one JSON object. Do not include a second JSON object, Markdown fence, or prose before/after the JSON.",
     "- If allowedSources is empty, return sources: [] and explain what still needs verification.",
     "- If internalContext has real data (status: 'success'), USE IT to build specific, data-backed answers.",
+    "- For score-related questions, always anchor the answer in 2025 benchmark/reference data. Mention 2025 explicitly when discussing admission scores or admission chances.",
     "- If webSearchResults has results, USE THEM to add current information and cite sources.",
     "- If the user did not provide enough details, answer generally and ask useful follow-up questions.",
     "- Keep the final answer comprehensive, detailed, and rich in information: about 150-300 Vietnamese words total across summary and sections.",
