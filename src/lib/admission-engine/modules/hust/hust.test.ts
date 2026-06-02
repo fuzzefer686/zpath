@@ -63,7 +63,7 @@ function createBenchmarkRow({
   scale = 30,
 }: {
   programCode: string;
-  methodCode: "THPT" | "TSA" | "XTTN";
+  methodCode: "THPT" | "TSA" | "XTTN" | "XTTN13";
   combinationCode: string | null;
   score: number;
   scale?: number;
@@ -658,6 +658,46 @@ test("HUST TSA and XTTN benchmark lookup works across every 2026 program", () =>
   }
 });
 
+test("HUST benchmark lookup supports database TSA and XTTN13 method rows", () => {
+  const tsaBenchmark = findBenchmarkForProgram({
+    schoolCode: "HUST",
+    programs: [],
+    benchmarks: [
+      createBenchmarkRow({
+        programCode: "IT1",
+        methodCode: "TSA",
+        combinationCode: "A00",
+        score: 83.39,
+        scale: 100,
+      }),
+    ],
+    programCode: "IT1",
+    method: "TSA",
+    benchmarkYear: 2025,
+  });
+
+  assert.equal(tsaBenchmark?.score, 83.39);
+
+  const xttnBenchmark = findBenchmarkForProgram({
+    schoolCode: "HUST",
+    programs: [],
+    benchmarks: [
+      createBenchmarkRow({
+        programCode: "IT1",
+        methodCode: "XTTN13",
+        combinationCode: "A00",
+        score: 93.92,
+        scale: 100,
+      }),
+    ],
+    programCode: "IT1",
+    method: "XTTN13",
+    benchmarkYear: 2025,
+  });
+
+  assert.equal(xttnBenchmark?.score, 93.92);
+});
+
 test("HUST TSA comparison covers above, equal, below, and missing cutoff", () => {
   const aboveComparison = compareHustScoreWithPreviousCutoff({
     year: 2026,
@@ -743,6 +783,22 @@ test("HUST XTTN clamps manual, language certificate, and other bonus to max 10",
   assert.equal(result.details?.bonusScoreManual, 8);
   assert.equal(result.details?.otherBonus, 2);
   assert.equal(result.details?.bonusScore, 10);
+});
+
+test("HUST XTTN only supports the XTTN13 portfolio interview subtype", () => {
+  assert.throws(
+    () =>
+      calculateHustXttnScore({
+        schoolCode: "HUST",
+        method: "XTTN",
+        year: 2026,
+        payload: {
+          subtype: "international_certificate",
+          eligible: true,
+        },
+      }),
+    /Loại xét tuyển tài năng không hợp lệ/,
+  );
 });
 
 test("HUST THPT validation rejects invalid subject score", () => {

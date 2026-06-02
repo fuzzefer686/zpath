@@ -13,7 +13,10 @@ import {
   type HustSubjectKey,
   type HustThptCombinationCode,
 } from "@/src/lib/admission-data/hust-programs-2026";
-import { findBenchmarkForProgram } from "@/src/lib/admission-data/benchmark-lookup";
+import {
+  findBenchmarkForProgram,
+  type BenchmarkMethodCode,
+} from "@/src/lib/admission-data/benchmark-lookup";
 import type {
   AdmissionMethod,
   AdmissionScoreResult,
@@ -60,10 +63,7 @@ type ApiErrorResponse = {
 };
 
 type ApiResponse = ApiSuccessResponse | ApiErrorResponse;
-type XttnSubtype =
-  | "direct_admission"
-  | "international_certificate"
-  | "portfolio_interview";
+type XttnSubtype = "portfolio_interview";
 
 const DISCLAIMER =
   "Kết quả chỉ mang tính tham khảo dựa trên điểm chuẩn năm trước. Điểm chuẩn năm nay có thể thay đổi theo chỉ tiêu, phổ điểm, số lượng thí sinh và quy chế tuyển sinh.";
@@ -80,9 +80,7 @@ const METHOD_LABELS: Record<AdmissionMethod, string> = {
 };
 
 const XTTN_SUBTYPE_LABELS: Record<XttnSubtype, string> = {
-  direct_admission: "Xét tuyển thẳng theo quy định Bộ GD&ĐT",
-  international_certificate: "Xét tuyển theo chứng chỉ quốc tế",
-  portfolio_interview: "Hồ sơ năng lực + phỏng vấn",
+  portfolio_interview: "Hồ sơ năng lực + phỏng vấn (XTTN13)",
 };
 
 const SCHOOL_LABELS: Record<SchoolCode, string> = {
@@ -150,6 +148,11 @@ function normalizeBenchmarkScore30(benchmark: Benchmark) {
   return scale === 30 ? benchmark.score : (benchmark.score / scale) * 30;
 }
 
+function normalizeBenchmarkScore100(benchmark: Benchmark) {
+  const scale = benchmark.scale ?? 100;
+  return scale === 100 ? benchmark.score : (benchmark.score / scale) * 100;
+}
+
 function formatScore(value: number | null, suffix = "") {
   if (value === null) return "Chưa có";
   return `${value.toFixed(2)}${suffix}`;
@@ -193,7 +196,16 @@ function getScoreForComparison(score: AdmissionScoreResult) {
     return null;
   }
 
-  return score.method === "XTTN" ? score.originalScore : score.normalizedScore30;
+  return score.method === "THPT" ? score.normalizedScore30 : score.originalScore;
+}
+
+function getComparisonScaleLabel(method: AdmissionMethod) {
+  return method === "THPT" ? "/30" : "/100";
+}
+
+function getBenchmarkMethodCode(method: AdmissionMethod): BenchmarkMethodCode {
+  if (method !== "XTTN") return method;
+  return "XTTN13";
 }
 
 export function AdmissionCalculatorSection({
@@ -215,8 +227,7 @@ export function AdmissionCalculatorSection({
     useState<Record<HustSubjectKey, string>>(EMPTY_SUBJECT_SCORES);
   const [priorityScore, setPriorityScore] = useState("0");
   const [tsaScore, setTsaScore] = useState("");
-  const [xttnSubtype, setXttnSubtype] =
-    useState<XttnSubtype>("portfolio_interview");
+  const xttnSubtype: XttnSubtype = "portfolio_interview";
   const [achievementScore, setAchievementScore] = useState("");
   const [bonusScore, setBonusScore] = useState("0");
   const [otherBonus, setOtherBonus] = useState("0");
@@ -351,13 +362,6 @@ export function AdmissionCalculatorSection({
       };
     }
 
-    if (xttnSubtype !== "portfolio_interview") {
-      return {
-        subtype: xttnSubtype,
-        eligible: true,
-      };
-    }
-
     return {
       subtype: xttnSubtype,
       tsaScore: parseScore(tsaScore, "điểm Đánh giá tư duy"),
@@ -380,19 +384,20 @@ export function AdmissionCalculatorSection({
   }
 
   function buildComparison(score: AdmissionScoreResult) {
+    const benchmarkMethodCode = getBenchmarkMethodCode(method);
     const previousBenchmark = findBenchmarkForProgram({
       schoolCode: "HUST",
       programs,
       benchmarks,
       programCode,
-      method,
+      method: benchmarkMethodCode,
       combinationCode: method === "THPT" ? combinationCode : undefined,
       benchmarkYear,
     });
     const previousYearCutoff = previousBenchmark
-      ? method === "XTTN"
-        ? previousBenchmark.score
-        : normalizeBenchmarkScore30(previousBenchmark)
+      ? method === "THPT"
+        ? normalizeBenchmarkScore30(previousBenchmark)
+        : normalizeBenchmarkScore100(previousBenchmark)
       : null;
 
     return compareHustScoreWithPreviousCutoff({
@@ -674,111 +679,89 @@ export function AdmissionCalculatorSection({
 
         {method === "XTTN" ? (
           <div className="space-y-4">
-            <label className="block space-y-2">
-              <span className="text-sm font-semibold">Loại xét tuyển tài năng</span>
-              <select
-                value={xttnSubtype}
-                onChange={(event) => {
-                  setXttnSubtype(event.target.value as XttnSubtype);
-                  resetResult();
-                }}
-                className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
-              >
-                {Object.entries(XTTN_SUBTYPE_LABELS).map(([value, label]) => (
-                  <option key={value} value={value}>
-                    {label}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <InfoPill label="Loại xét tuyển tài năng" value={XTTN_SUBTYPE_LABELS[xttnSubtype]} />
 
-            {xttnSubtype === "portfolio_interview" ? (
-              <div className="space-y-4">
-                <div className="grid gap-4 md:grid-cols-4">
-                  <label className="space-y-2">
-                    <span className="text-sm font-semibold">Điểm Đánh giá tư duy</span>
-                    <Input
-                      type="number"
-                      min="0"
-                      max="100"
-                      step="0.01"
-                      value={tsaScore}
-                      onChange={(event) => {
-                        setTsaScore(event.target.value);
-                        resetResult();
-                      }}
-                      placeholder="0 - 100"
-                    />
-                  </label>
-                  <label className="space-y-2">
-                    <span className="text-sm font-semibold">Điểm thành tích</span>
-                    <Input
-                      type="number"
-                      min="0"
-                      max="50"
-                      step="0.01"
-                      value={achievementScore}
-                      onChange={(event) => {
-                        setAchievementScore(event.target.value);
-                        resetResult();
-                      }}
-                      placeholder="0 - 50"
-                    />
-                  </label>
-                  <label className="space-y-2">
-                    <span className="text-sm font-semibold">Điểm thưởng thủ công</span>
-                    <Input
-                      type="number"
-                      min="0"
-                      max="10"
-                      step="0.01"
-                      value={bonusScore}
-                      onChange={(event) => {
-                        setBonusScore(event.target.value);
-                        resetResult();
-                      }}
-                      placeholder="0 - 10"
-                    />
-                  </label>
-                  <label className="space-y-2">
-                    <span className="text-sm font-semibold">Điểm thưởng khác</span>
-                    <Input
-                      type="number"
-                      min="0"
-                      max="10"
-                      step="0.01"
-                      value={otherBonus}
-                      onChange={(event) => {
-                        setOtherBonus(event.target.value);
-                        resetResult();
-                      }}
-                      placeholder="0 - 10"
-                    />
-                  </label>
-                </div>
-
-                <CertificateConversionInput
-                  value={languageCertificateInput}
-                  onChange={updateLanguageCertificate}
-                />
-
-                <label className="block max-w-xs space-y-2">
-                  <span className="text-sm font-semibold">Kết quả phỏng vấn</span>
+            <div className="space-y-4">
+              <div className="grid gap-4 md:grid-cols-4">
+                <label className="space-y-2">
+                  <span className="text-sm font-semibold">Điểm Đánh giá tư duy</span>
                   <Input
-                    value={interviewStatus}
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="0.01"
+                    value={tsaScore}
                     onChange={(event) => {
-                      setInterviewStatus(event.target.value);
+                      setTsaScore(event.target.value);
                       resetResult();
                     }}
-                    placeholder="Nếu có"
+                    placeholder="0 - 100"
+                  />
+                </label>
+                <label className="space-y-2">
+                  <span className="text-sm font-semibold">Điểm thành tích</span>
+                  <Input
+                    type="number"
+                    min="0"
+                    max="50"
+                    step="0.01"
+                    value={achievementScore}
+                    onChange={(event) => {
+                      setAchievementScore(event.target.value);
+                      resetResult();
+                    }}
+                    placeholder="0 - 50"
+                  />
+                </label>
+                <label className="space-y-2">
+                  <span className="text-sm font-semibold">Điểm thưởng thủ công</span>
+                  <Input
+                    type="number"
+                    min="0"
+                    max="10"
+                    step="0.01"
+                    value={bonusScore}
+                    onChange={(event) => {
+                      setBonusScore(event.target.value);
+                      resetResult();
+                    }}
+                    placeholder="0 - 10"
+                  />
+                </label>
+                <label className="space-y-2">
+                  <span className="text-sm font-semibold">Điểm thưởng khác</span>
+                  <Input
+                    type="number"
+                    min="0"
+                    max="10"
+                    step="0.01"
+                    value={otherBonus}
+                    onChange={(event) => {
+                      setOtherBonus(event.target.value);
+                      resetResult();
+                    }}
+                    placeholder="0 - 10"
                   />
                 </label>
               </div>
-            ) : (
-              <p className="rounded-md bg-muted/40 p-3 text-sm text-muted-foreground">
-                Diện này trả về kết quả đủ điều kiện, không giả lập điểm số.
-              </p>
-            )}
+
+              <CertificateConversionInput
+                value={languageCertificateInput}
+                onChange={updateLanguageCertificate}
+              />
+
+              <label className="block max-w-xs space-y-2">
+                <span className="text-sm font-semibold">Kết quả phỏng vấn</span>
+                <Input
+                  value={interviewStatus}
+                  onChange={(event) => {
+                    setInterviewStatus(event.target.value);
+                    resetResult();
+                  }}
+                  placeholder="Nếu có"
+                />
+              </label>
+            </div>
           </div>
         ) : null}
 
@@ -801,18 +784,18 @@ export function AdmissionCalculatorSection({
                   scoreResult.method === "XTTN" &&
                   scoreResult.details?.resultType === "eligibility"
                     ? "Đủ điều kiện hồ sơ"
-                    : scoreResult.method === "XTTN"
-                      ? formatScore(scoreResult.originalScore, "/100")
-                      : formatScore(scoreResult.normalizedScore30, "/30")
+                    : formatScore(
+                        getScoreForComparison(scoreResult),
+                        getComparisonScaleLabel(scoreResult.method),
+                      )
                 }
               />
               <ResultStat
                 label={`Điểm chuẩn ${comparison.benchmarkYear}`}
-                value={
-                  scoreResult.method === "XTTN"
-                    ? formatScore(comparison.previousYearCutoff, "/100")
-                    : formatScore(comparison.previousYearCutoff, "/30")
-                }
+                value={formatScore(
+                  comparison.previousYearCutoff,
+                  getComparisonScaleLabel(scoreResult.method),
+                )}
               />
               <ResultStat
                 label="Chênh lệch"

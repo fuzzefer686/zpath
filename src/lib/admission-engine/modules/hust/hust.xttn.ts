@@ -8,10 +8,7 @@ import {
   type ToeicSkillName,
 } from "./language-certificate";
 
-type HustXttnSubtype =
-  | "direct_admission"
-  | "international_certificate"
-  | "portfolio_interview";
+type HustXttnSubtype = "portfolio_interview";
 
 type HustXttnPayload = {
   subtype: HustXttnSubtype;
@@ -23,7 +20,6 @@ type HustXttnPayload = {
   otherBonus?: number;
   languageCertificateConversion?: ReturnType<typeof convertLanguageCertificateBonusFromPayload>;
   interviewStatus?: string;
-  eligible?: boolean;
 };
 
 const XTTN_WARNING =
@@ -86,19 +82,8 @@ function parseHustXttnPayload(payload: unknown): HustXttnPayload {
 
   const subtype =
     typeof payload.subtype === "string" ? payload.subtype : "portfolio_interview";
-  if (
-    subtype !== "direct_admission" &&
-    subtype !== "international_certificate" &&
-    subtype !== "portfolio_interview"
-  ) {
-    throw new Error("Loại xét tuyển tài năng không hợp lệ.");
-  }
-
   if (subtype !== "portfolio_interview") {
-    return {
-      subtype,
-      eligible: typeof payload.eligible === "boolean" ? payload.eligible : true,
-    };
+    throw new Error("Loại xét tuyển tài năng không hợp lệ.");
   }
 
   const tsaScore = parseFiniteNumber(payload.tsaScore, "Điểm TSA");
@@ -156,28 +141,6 @@ export function calculateHustXttnScore(
   input: AdmissionInput,
 ): AdmissionScoreResult {
   const payload = parseHustXttnPayload(input.payload);
-
-  if (payload.subtype !== "portfolio_interview") {
-    return {
-      schoolCode: input.schoolCode,
-      method: "XTTN",
-      year: input.year,
-      originalScore: 0,
-      originalScale: 100,
-      normalizedScore30: 0,
-      targetScale: 30,
-      formulaUsed: `${input.schoolCode}_XTTN_ELIGIBILITY`,
-      details: {
-        subtype: payload.subtype,
-        eligible: payload.eligible,
-        resultType: "eligibility",
-        note: "Diện này trả về kết quả đủ điều kiện, không giả lập điểm số.",
-      },
-      warnings: [
-        "Diện xét tuyển thẳng/chứng chỉ quốc tế cần đối chiếu điều kiện hồ sơ chính thức.",
-      ],
-    };
-  }
 
   const thinkingScore = clamp((payload.tsaScore ?? 0) * 40 / 60, 0, 40);
   const achievementScore = clamp(payload.achievementScore ?? 0, 0, 50);
