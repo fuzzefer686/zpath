@@ -351,9 +351,9 @@ async function renderAdmissionSchoolDetail(
   selectedVariant: AdmissionPageVariant,
   routeParam: string,
 ) {
-  const canUseProMax = school.code === "HUST";
-  const isProMax = canUseProMax && selectedVariant === PRO_MAX_VARIANT;
   const proMaxContent = PRO_MAX_CONTENT_BY_CODE[school.code];
+  const canUseProMax = false;
+  const isProMax = canUseProMax && selectedVariant === PRO_MAX_VARIANT;
   const defaultCalculatorHref = `${createVariantHref(
     routeParam,
     selectedProgramYear,
