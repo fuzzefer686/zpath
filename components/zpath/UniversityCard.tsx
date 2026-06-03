@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Coins } from "lucide-react";
 
 import type { University } from "@/data/universities";
-import { createSchoolSlug } from "@/lib/school-slug";
 
 interface UniversityCardProps {
   uni: University;
@@ -15,7 +14,7 @@ export function UniversityCard({ uni }: UniversityCardProps) {
 
   return (
     <Link
-      href={`/unimap/${createSchoolSlug(uni.name)}`}
+      href={`/unimap/${uni.code.toLowerCase()}`}
       prefetch={false}
       className="group relative block overflow-hidden rounded-2xl border-2 border-border bg-card shadow-md transition-all hover:-translate-y-1 hover:border-primary hover:shadow-xl"
     >
