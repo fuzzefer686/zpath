@@ -37,6 +37,7 @@ import {
   type CertificateConversionInputValue,
   type CertificateConversionStructuredValue,
 } from "./CertificateConversionInput";
+import { FtuAdmissionCalculator } from "./FtuAdmissionCalculator";
 import {
   HUST_THPT_BOLD_NOTE,
   HustThptCombinationCode as HustThptCombinationCodeLabel,
@@ -73,7 +74,7 @@ const HUST_CALCULATOR_YEAR = 2026;
 const HUST_CUTOFF_YEAR = 2025;
 const HUST_ENGLISH_CERTIFICATE_COMBINATIONS = new Set(["A01", "D01", "D07"]);
 
-const METHOD_LABELS: Record<AdmissionMethod, string> = {
+const METHOD_LABELS: Partial<Record<AdmissionMethod, string>> = {
   XTTN: "Xét tuyển tài năng",
   TSA: "Đánh giá tư duy",
   THPT: "Điểm thi THPT",
@@ -216,6 +217,7 @@ export function AdmissionCalculatorSection({
   benchmarkYear = HUST_CUTOFF_YEAR,
 }: AdmissionCalculatorSectionProps) {
   const isHust = schoolCode === "HUST";
+  const isFtu = schoolCode === "FTU";
   const schoolLabel = isSchoolCode(schoolCode) ? SCHOOL_LABELS[schoolCode] : schoolCode;
   const [method, setMethod] = useState<AdmissionMethod>("THPT");
   const [programCode, setProgramCode] = useState(
@@ -262,6 +264,16 @@ export function AdmissionCalculatorSection({
     );
     return supportedMethods.length ? supportedMethods : HUST_METHODS;
   }, [methods]);
+
+  if (isFtu) {
+    return (
+      <FtuAdmissionCalculator
+        programs={programs}
+        benchmarks={benchmarks}
+        benchmarkYear={benchmarkYear}
+      />
+    );
+  }
 
   if (!isHust) {
     return (
