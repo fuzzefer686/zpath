@@ -18,7 +18,12 @@ import {
   buildAdvisorPromptSources,
   type AdvisorPromptSource,
 } from "@/lib/advisor/prompts";
-import { persistAdvisorExchange } from "@/lib/advisor/persistence";
+import {
+  persistAdvisorClarificationAnswers,
+  persistAdvisorClarificationPrompt,
+  persistAdvisorExchange,
+} from "@/lib/advisor/persistence";
+import { buildVerifiedAdvisorFacts } from "@/lib/advisor/verifiedFacts";
 import {
   getAdmissionData,
   getBenchmarkScores,
@@ -51,6 +56,8 @@ import { canonicalizeAdvisorProgramCode } from "@/lib/advisor/programCodes";
 import { getAdvisorTemplateById } from "@/lib/advisor/templates";
 import type {
   AdvisorAnswer,
+  AdvisorClarificationAnswer,
+  AdvisorClarificationQuestion,
   AdvisorQuestionTemplate,
   AdvisorTemplateValues,
 } from "@/lib/advisor/types";
@@ -61,6 +68,50 @@ import {
 } from "@/src/lib/admission-data/hust-programs-2026";
 
 type ExtractedAdvisorEntities = AdvisorClassification["extracted"];
+
+const PERSONAL_FIT_CLARIFICATION_QUESTIONS: AdvisorClarificationQuestion[] = [
+  {
+    id: "interests",
+    label: "Bạn thích lĩnh vực nào?",
+    placeholder: "VD: công nghệ, kinh doanh, ngôn ngữ",
+    required: true,
+  },
+  {
+    id: "strengths",
+    label: "Bạn mạnh môn/kỹ năng nào?",
+    placeholder: "VD: Toán, tiếng Anh, giao tiếp",
+    required: true,
+  },
+  {
+    id: "academicLevel",
+    label: "Điểm hoặc học lực hiện tại?",
+    placeholder: "VD: 24 A00, học lực khá",
+    required: true,
+  },
+  {
+    id: "priority",
+    label: "Bạn ưu tiên điều gì?",
+    placeholder: "VD: dễ xin việc, thu nhập tốt",
+    required: true,
+  },
+  {
+    id: "dislikes",
+    label: "Bạn không thích điều gì?",
+    placeholder: "VD: ít code, không làm ca đêm",
+    required: false,
+  },
+];
+
+const PERSONAL_FIT_CLARIFICATION_LABELS: Record<string, string> = Object.fromEntries(
+  PERSONAL_FIT_CLARIFICATION_QUESTIONS.map((question) => [
+    question.id,
+    question.label,
+  ]),
+);
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
 
 function readField(fields: AdvisorTemplateValues | undefined, name: string) {
   return fields?.[name]?.trim() ?? "";
@@ -75,6 +126,219 @@ function readNumberField(fields: AdvisorTemplateValues | undefined, name: string
 function readYear(fields: AdvisorTemplateValues | undefined) {
   const year = readNumberField(fields, "year");
   return Number.isInteger(year) ? year : undefined;
+}
+
+function matchesAnyPattern(text: string, patterns: RegExp[]) {
+  return patterns.some((pattern) => pattern.test(text));
+}
+
+function asksForPersonalMajorAdvice(question: string, classification: AdvisorClassification) {
+  if (classification.intent === AdvisorIntent.PERSONAL_FIT) return true;
+
+  return matchesAnyPattern(question, [
+    /\btư vấn ngành\b/iu,
+    /\btu van nganh\b/iu,
+    /\btư vấn chọn ngành\b/iu,
+    /\btu van chon nganh\b/iu,
+    /\bnên học ngành nào\b/iu,
+    /\bnen hoc nganh nao\b/iu,
+    /\bnên chọn ngành nào\b/iu,
+    /\bnen chon nganh nao\b/iu,
+    /\bngành nào phù hợp\b/iu,
+    /\bnganh nao phu hop\b/iu,
+    /\bngành phù hợp với em\b/iu,
+    /\bnganh phu hop voi em\b/iu,
+    /\btìm ngành phù hợp\b/iu,
+    /\btim nganh phu hop\b/iu,
+  ]);
+}
+
+function getPersonalFitSignalIds(
+  question: string,
+  classification: AdvisorClassification,
+) {
+  const signals = new Set<string>();
+
+  if (classification.extracted.interests?.length || classification.interests?.length) {
+    signals.add("interests");
+  }
+
+  if (
+    matchesAnyPattern(question, [
+      /\b(thích|thich|quan tâm|quan tam|đam mê|dam me)\b/iu,
+      /\b(công nghệ|cong nghe|kinh doanh|marketing|thiết kế|thiet ke|y dược|y duoc)\b/iu,
+    ])
+  ) {
+    signals.add("interests");
+  }
+
+  if (
+    matchesAnyPattern(question, [
+      /\b(mạnh|manh|giỏi|gioi|học tốt|hoc tot|khá|kha|kỹ năng|ky nang)\b/iu,
+      /\b(toán|toan|văn|van|anh|tiếng anh|tieng anh|lý|ly|hóa|hoa|sinh)\b/iu,
+    ])
+  ) {
+    signals.add("strengths");
+  }
+
+  if (
+    classification.extracted.score !== undefined ||
+    classification.extracted.combination ||
+    matchesAnyPattern(question, [
+      /\b(điểm|diem|học lực|hoc luc|gpa|ielts|sat|act)\b/iu,
+      /\b(A00|A01|B00|C00|D01|D07|D14|D15)\b/u,
+    ])
+  ) {
+    signals.add("academicLevel");
+  }
+
+  if (
+    matchesAnyPattern(question, [
+      /\b(ưu tiên|uu tien|thu nhập|thu nhap|dễ xin việc|de xin viec)\b/iu,
+      /\b(ổn định|on dinh|ít áp lực|it ap luc|đi nước ngoài|di nuoc ngoai)\b/iu,
+    ])
+  ) {
+    signals.add("priority");
+  }
+
+  return signals;
+}
+
+function buildPersonalFitClarificationQuestions({
+  question,
+  classification,
+}: {
+  question: string;
+  classification: AdvisorClassification;
+}) {
+  const presentSignals = getPersonalFitSignalIds(question, classification);
+  const questions = PERSONAL_FIT_CLARIFICATION_QUESTIONS.filter(
+    (clarificationQuestion) => !presentSignals.has(clarificationQuestion.id),
+  );
+
+  for (const clarificationQuestion of PERSONAL_FIT_CLARIFICATION_QUESTIONS) {
+    if (questions.length >= 3) break;
+    if (!questions.some((questionItem) => questionItem.id === clarificationQuestion.id)) {
+      questions.push(clarificationQuestion);
+    }
+  }
+
+  return questions.slice(0, 5);
+}
+
+function shouldRequestPersonalFitClarification({
+  question,
+  classification,
+  conversationId,
+}: {
+  question: string;
+  classification: AdvisorClassification;
+  conversationId?: string;
+}) {
+  if (conversationId) return false;
+  if (classification.extracted.score !== undefined && classification.extracted.combination) {
+    return false;
+  }
+  if (!asksForPersonalMajorAdvice(question, classification)) return false;
+
+  const presentSignals = getPersonalFitSignalIds(question, classification);
+  return presentSignals.size < 3;
+}
+
+function formatClarificationAnswers(answers: AdvisorClarificationAnswer[]) {
+  return answers
+    .map((answer) => {
+      const label = PERSONAL_FIT_CLARIFICATION_LABELS[answer.id] ?? answer.id;
+      return `- ${label}: ${answer.value}`;
+    })
+    .join("\n");
+}
+
+function buildClarifiedQuestion({
+  originalQuestion,
+  answers,
+}: {
+  originalQuestion: string;
+  answers: AdvisorClarificationAnswer[];
+}) {
+  return [
+    `Câu hỏi gốc: ${originalQuestion}`,
+    "Thông tin trả lời nhanh của học sinh:",
+    formatClarificationAnswers(answers),
+    "Hãy tư vấn các nhóm ngành phù hợp nhất dựa trên thông tin này.",
+  ].join("\n");
+}
+
+function formatAdvisorHistoryMessage(message: {
+  role: string | null;
+  content: string | null;
+}): { role: "user" | "assistant"; content: string } {
+  const role: "user" | "assistant" = message.role === "assistant" ? "assistant" : "user";
+  const content = message.content ?? "";
+
+  try {
+    const parsed = JSON.parse(content) as unknown;
+
+    if (isRecord(parsed) && parsed.type === "clarification_prompt") {
+      const questions = Array.isArray(parsed.questions)
+        ? parsed.questions
+            .map((question) =>
+              isRecord(question) && typeof question.label === "string"
+                ? question.label
+                : "",
+            )
+            .filter(Boolean)
+        : [];
+
+      return {
+        role,
+        content: `Advisor đã hỏi nhanh: ${questions.join("; ")}`,
+      };
+    }
+
+    if (isRecord(parsed) && parsed.type === "clarification_answers") {
+      const answers = Array.isArray(parsed.answers)
+        ? parsed.answers
+            .map((answer) => {
+              if (!isRecord(answer)) return "";
+              const label = typeof answer.label === "string" ? answer.label : answer.id;
+              const value = typeof answer.value === "string" ? answer.value : "";
+              return label && value ? `- ${label}: ${value}` : "";
+            })
+            .filter(Boolean)
+        : [];
+
+      return {
+        role,
+        content: `User đã trả lời nhanh:\n${answers.join("\n")}`,
+      };
+    }
+
+    if (isRecord(parsed) && typeof parsed.summary === "string") {
+      const sections = Array.isArray(parsed.sections)
+        ? parsed.sections
+            .map((section) => {
+              if (!isRecord(section)) return "";
+              const heading = typeof section.heading === "string" ? section.heading : "";
+              const sectionContent =
+                typeof section.content === "string" ? section.content : "";
+              return heading && sectionContent
+                ? `${heading}: ${sectionContent}`
+                : "";
+            })
+            .filter(Boolean)
+        : [];
+
+      return {
+        role,
+        content: [parsed.summary, ...sections].filter(Boolean).join("\n"),
+      };
+    }
+  } catch {
+    return { role, content };
+  }
+
+  return { role, content };
 }
 
 function getVerifiedProgramContext(extracted: ExtractedAdvisorEntities) {
@@ -609,6 +873,45 @@ function normalizeAnswerForWebSearch({
   };
 }
 
+function normalizeAnswerForVerifiedFacts({
+  answer,
+  verifiedFacts,
+}: {
+  answer: AdvisorAnswer;
+  verifiedFacts: ReturnType<typeof buildVerifiedAdvisorFacts>;
+}): AdvisorAnswer {
+  const ftuIelts = verifiedFacts?.ftuIeltsConversion?.data;
+  if (!ftuIelts || ftuIelts.band === null || ftuIelts.convertedScoreOutOf10 === null) {
+    return answer;
+  }
+
+  const exactSentence = `Với **FTU**, **IELTS Academic ${ftuIelts.band}** được quy đổi thành **${ftuIelts.convertedScoreOutOf10}/10**; IELTS Academic từ **8.0** trở lên mới được quy đổi **10/10**.`;
+  const alreadyStatesExactRule = [
+    answer.summary,
+    ...answer.sections.map((section) => section.content),
+  ].some(
+    (content) =>
+      content.includes(`${ftuIelts.convertedScoreOutOf10}`) &&
+      /8\.0|8,0|8\s*ielts/iu.test(content),
+  );
+
+  if (alreadyStatesExactRule) return answer;
+
+  return {
+    ...answer,
+    summary: exactSentence,
+    confidence: "high",
+    dataStatus: "internal_data",
+    sections: [
+      {
+        heading: "Quy đổi IELTS tại FTU",
+        content: `- ${exactSentence}\n- Không nên dùng bảng quy đổi của trường khác cho **Đại học Ngoại thương**, vì mỗi trường có thang quy đổi chứng chỉ ngoại ngữ riêng.`,
+      },
+      ...answer.sections,
+    ].slice(0, 3),
+  };
+}
+
 // ---------------------------------------------------------------------------
 // Mock-only gating: only used when ADVISOR_USE_MOCK=true in env.
 // In production, the real pipeline is ALWAYS attempted first.
@@ -678,6 +981,7 @@ export async function POST(request: Request) {
 
     const requestData = parsed.data;
     const allowWebSearch = requestData.allowWebSearch !== false;
+    let resolvedConversationId = requestData.conversationId;
     let question: string;
     let template: AdvisorQuestionTemplate | null = null;
     let fields: AdvisorTemplateValues | undefined;
@@ -721,11 +1025,79 @@ export async function POST(request: Request) {
       intent = template.defaultIntent;
       extracted = entitiesFromTemplateFields(fieldValidation.data);
       question = generateVietnameseQuestion(template, fieldValidation.data);
-    } else {
+    } else if (requestData.mode === "free_text") {
       question = requestData.message;
       classification = classifyAdvisorQuestion(question);
       intent = classification.intent;
       extracted = classification.extracted;
+    } else {
+      question = buildClarifiedQuestion({
+        originalQuestion: requestData.originalQuestion,
+        answers: requestData.clarificationAnswers,
+      });
+      classification = classifyAdvisorQuestion(question);
+      intent = AdvisorIntent.PERSONAL_FIT;
+      extracted = classification.extracted;
+
+      const clarificationPersistence = await persistAdvisorClarificationAnswers({
+        conversationId: requestData.conversationId,
+        anonymousId: requestData.anonymousId,
+        originalQuestion: requestData.originalQuestion,
+        intent,
+        answers: requestData.clarificationAnswers,
+        answerLabels: PERSONAL_FIT_CLARIFICATION_LABELS,
+      });
+      resolvedConversationId = clarificationPersistence.conversationId;
+    }
+
+    if (
+      requestData.mode === "free_text" &&
+      classification &&
+      shouldRequestPersonalFitClarification({
+        question,
+        classification,
+        conversationId: requestData.conversationId,
+      })
+    ) {
+      const questions = buildPersonalFitClarificationQuestions({
+        question,
+        classification,
+      });
+      const clarificationPersistence = await persistAdvisorClarificationPrompt({
+        conversationId: requestData.conversationId,
+        anonymousId: requestData.anonymousId,
+        originalQuestion: question,
+        intent: AdvisorIntent.PERSONAL_FIT,
+        questions,
+      });
+
+      return NextResponse.json({
+        clarification: {
+          conversationId: clarificationPersistence.conversationId,
+          originalQuestion: question,
+          intent: AdvisorIntent.PERSONAL_FIT,
+          questions,
+        },
+        conversationId: clarificationPersistence.conversationId,
+        userMessageId: clarificationPersistence.userMessageId,
+        assistantMessageId: clarificationPersistence.assistantMessageId,
+        ...(process.env.NODE_ENV === "development"
+          ? {
+              debug: {
+                usedMock: false,
+                usedGemini: false,
+                usedInternalRetrieval: false,
+                usedWebSearch: false,
+                intent: AdvisorIntent.PERSONAL_FIT,
+                extracted,
+                webSearchProvider: getAdvisorWebSearchProvider(),
+                webSearchResultCount: 0,
+                internalResultCount: 0,
+                fallbackReason: "clarification_required",
+              },
+            }
+          : {}),
+      });
     }
 
     // -----------------------------------------------------------------------
@@ -784,44 +1156,51 @@ export async function POST(request: Request) {
       question,
     });
 
-    const sources: AdvisorPromptSource[] = buildAdvisorPromptSources({
-      internalSources: collectInternalSources(internalContext),
-      webResults: webSearch.results,
-    });
-
     let chatHistory: Array<{ role: "user" | "assistant"; content: string }> = [];
-    if (requestData.conversationId) {
+    if (resolvedConversationId) {
       try {
-        const { data: messages } = await supabaseServer
-          .from("advisor_messages")
-          .select("role, content")
-          .eq("conversation_id", requestData.conversationId)
-          .order("created_at", { ascending: true })
-          .limit(10);
+        const { data: conversation } = await supabaseServer
+          .from("advisor_conversations")
+          .select("id")
+          .eq("id", resolvedConversationId)
+          .eq("user_id", auth.user.id)
+          .maybeSingle();
 
-        if (messages) {
-          chatHistory = messages.map((m) => {
-            if (m.role === "assistant") {
-              try {
-                const parsed = JSON.parse(m.content) as AdvisorAnswer;
-                const sectionText = parsed.sections
-                  ?.map((s) => `${s.heading}: ${s.content}`)
-                  .join("\n") || "";
-                return {
-                  role: "assistant",
-                  content: `${parsed.summary}\n${sectionText}`,
-                };
-              } catch {
-                return { role: "assistant", content: m.content };
-              }
-            }
-            return { role: "user", content: m.content };
-          });
+        if (conversation?.id) {
+          const { data: messages } = await supabaseServer
+            .from("advisor_messages")
+            .select("role, content")
+            .eq("conversation_id", resolvedConversationId)
+            .order("created_at", { ascending: true })
+            .limit(12);
+
+          if (messages) {
+            chatHistory = messages.map((message) =>
+              formatAdvisorHistoryMessage(message),
+            );
+          }
         }
       } catch (dbErr) {
         console.warn("Failed to retrieve chat history:", dbErr);
       }
     }
+
+    const verifiedFacts = buildVerifiedAdvisorFacts({
+      question,
+      chatHistory,
+    });
+    if (verifiedFacts) {
+      internalContext = {
+        advisorRetrieval: internalContext,
+        verifiedFacts,
+      };
+    }
+
+    const effectiveInternalDataStatus = getInternalDataStatus(internalContext);
+    const sources: AdvisorPromptSource[] = buildAdvisorPromptSources({
+      internalSources: collectInternalSources(internalContext),
+      webResults: webSearch.results,
+    });
 
     let answer: AdvisorAnswer;
     let usedFallback = false;
@@ -859,10 +1238,15 @@ export async function POST(request: Request) {
       });
     }
 
+    answer = normalizeAnswerForVerifiedFacts({
+      answer,
+      verifiedFacts,
+    });
+
     answer = normalizeAnswerForWebSearch({
       answer,
       webSearch,
-      internalDataStatus,
+      internalDataStatus: effectiveInternalDataStatus,
     });
 
     let persistence:
@@ -871,7 +1255,7 @@ export async function POST(request: Request) {
 
     try {
       persistence = await persistAdvisorExchange({
-        conversationId: requestData.conversationId,
+        conversationId: resolvedConversationId,
         anonymousId: requestData.anonymousId,
         question,
         answer,

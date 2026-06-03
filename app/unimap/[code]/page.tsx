@@ -16,7 +16,7 @@ import {
   getSchoolAdmissionInfo,
   getSchoolAdmissionMethods,
   getSchoolBenchmarks,
-  getSchoolBySlug,
+  getSchoolBySlugOrCode,
   getSchoolPrograms,
   getSchoolSlugs,
   getSchoolTuitionFees,
@@ -41,6 +41,7 @@ import {
   PRO_MAX_NAV_ITEMS,
 } from "@/src/components/admission/AdmissionSectionNavigator";
 import { BenchmarksSection } from "@/src/components/admission/BenchmarksSection";
+import { FtuUnimapPage } from "@/src/components/admission/FtuUnimapPage";
 import {
   ProMaxCalculatorLinkSection,
   ProMaxContentSection,
@@ -114,11 +115,20 @@ const FALLBACK_SUBJECT_COMBINATIONS: SubjectCombination[] = [
 
 async function getAdmissionSchoolBySlug(slug: string) {
   try {
-    return await getSchoolBySlug(slug);
+    return await getSchoolBySlugOrCode(slug);
   } catch (error) {
     console.error("Cannot load admission school detail:", error);
     return null;
   }
+}
+
+function findVisibleUniversityForRoute(routeParam: string, school?: School | null) {
+  const university = findVisibleUnimapUniversityByRouteParam(routeParam);
+  if (university) return university;
+
+  return school?.code && isVisibleUnimapCode(school.code)
+    ? findVisibleUnimapUniversityByRouteParam(school.code.toLowerCase())
+    : null;
 }
 
 function createFallbackSchool(university: University): School {
@@ -516,6 +526,25 @@ async function renderAdmissionSchoolDetail(
       ? createFallbackProgramCombinations(programs, selectedProgramYear)
       : [];
 
+  if (school.code === "FTU" && !isProMax) {
+    return (
+      <FtuUnimapPage
+        school={school}
+        programs={programs}
+        methods={methods}
+        benchmarks={benchmarks}
+        benchmarkPrograms={benchmarkPrograms}
+        tuitionFees={tuitionFees}
+        tuitionPrograms={tuitionPrograms}
+        admissionInfo={admissionInfo}
+        selectedProgramYear={selectedProgramYear}
+        selectedBenchmarkYear={selectedBenchmarkYear}
+        selectedTuitionYear={selectedTuitionYear}
+        availableYears={ADMISSION_YEAR_OPTIONS}
+      />
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SchoolHeader school={school} variantLinks={variantLinks} />
@@ -656,14 +685,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: UniversityDetailPageProps) {
   const { code } = await params;
   const routeParam = code.toLowerCase();
-  const university = findVisibleUnimapUniversityByRouteParam(routeParam);
+  const school = await getAdmissionSchoolBySlug(routeParam);
+  const university = findVisibleUniversityForRoute(routeParam, school);
+
   if (!university) {
     return {
       title: "Không tìm thấy trường",
     };
   }
 
-  const school = await getAdmissionSchoolBySlug(routeParam);
   if (school) {
     return {
       title: `${school.name} - Tuyển sinh ZPATH`,
@@ -697,13 +727,13 @@ export default async function UniversityDetailPage({
   );
   const selectedVariant = getSelectedAdmissionVariant(resolvedSearchParams?.variant);
   const routeParam = code.toLowerCase();
-  const university = findVisibleUnimapUniversityByRouteParam(routeParam);
+  const school = await getAdmissionSchoolBySlug(routeParam);
+  const university = findVisibleUniversityForRoute(routeParam, school);
 
   if (!university) {
     return <UniversityNotFound code={code} />;
   }
 
-  const school = await getAdmissionSchoolBySlug(routeParam);
   const visibleSchool =
     school && isVisibleUnimapCode(school.code)
       ? applyUniversityMediaToSchool(school, university)
