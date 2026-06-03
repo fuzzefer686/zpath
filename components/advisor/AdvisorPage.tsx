@@ -15,6 +15,7 @@ import { AdvisorHero } from "@/components/advisor/AdvisorHero";
 import { QuestionCategoryTabs } from "@/components/advisor/QuestionCategoryTabs";
 import { QuestionTemplateGrid } from "@/components/advisor/QuestionTemplateGrid";
 import { AdvisorAnswer } from "@/components/advisor/AdvisorAnswer";
+import { AdvisorClarificationForm } from "@/components/advisor/AdvisorClarificationForm";
 import { DynamicQuestionForm } from "@/components/advisor/DynamicQuestionForm";
 import { Button } from "@/components/ui/button";
 import type { AdvisorAnswerRequest } from "@/lib/advisor/schemas";
@@ -24,6 +25,8 @@ import {
 } from "@/lib/advisor/templates";
 import type {
   AdvisorAnswer as AdvisorAnswerData,
+  AdvisorClarification,
+  AdvisorClarificationAnswer,
   AdvisorQuestionTemplate,
   AdvisorTemplateValues,
 } from "@/lib/advisor/types";
@@ -37,14 +40,17 @@ type LastAdvisorRequest = {
 type ChatMessage = {
   id: string;
   role: "user" | "assistant";
-  type: "text" | "answer";
+  type: "text" | "answer" | "clarification";
   text: string;
   answer?: AdvisorAnswerData;
+  clarification?: AdvisorClarification;
+  clarificationSubmitted?: boolean;
   timestamp: Date;
 };
 
 type AdvisorApiResponse = {
   answer?: AdvisorAnswerData;
+  clarification?: AdvisorClarification;
   conversationId?: string;
   userMessageId?: string;
   assistantMessageId?: string;
@@ -234,7 +240,7 @@ export function AdvisorPage() {
 
     // 1. Add user question to messages thread
     const userMsg: ChatMessage = {
-      id: `user-${Date.now()}`,
+      id: `user-${requestId}`,
       role: "user",
       type: "text",
       text: displayQuestion,
@@ -260,6 +266,28 @@ export function AdvisorPage() {
         );
       }
 
+      if (result?.clarification) {
+        if (chatSequence.current === requestId) {
+          if (process.env.NODE_ENV === "development" && result.debug) {
+            console.info("[ZPath advisor debug]", result.debug);
+          }
+
+          const assistantMsg: ChatMessage = {
+            id: result.assistantMessageId || `clarification-${requestId}`,
+            role: "assistant",
+            type: "clarification",
+            text: "ZPath cần vài thông tin nhanh để tư vấn ngành phù hợp hơn.",
+            clarification: result.clarification,
+            timestamp: new Date(),
+          };
+
+          setMessages((prev) => [...prev, assistantMsg]);
+          setConversationId(result.clarification.conversationId);
+          setSelectedTemplate(null);
+        }
+        return;
+      }
+
       if (!result?.answer) {
         throw new Error("Phản hồi từ ZPath không hợp lệ.");
       }
@@ -271,7 +299,7 @@ export function AdvisorPage() {
 
         // 2. Add assistant answer to messages thread
         const assistantMsg: ChatMessage = {
-          id: result.assistantMessageId || `assistant-${Date.now()}`,
+          id: result.assistantMessageId || `assistant-${requestId}`,
           role: "assistant",
           type: "answer",
           text: result.answer.summary,
@@ -352,6 +380,42 @@ export function AdvisorPage() {
         allowWebSearch: true,
       },
       nextQuestion,
+    );
+  };
+
+  const handleSubmitClarification = (
+    messageId: string,
+    clarification: AdvisorClarification,
+    answers: AdvisorClarificationAnswer[],
+  ) => {
+    setMessages((prev) =>
+      prev.map((message) =>
+        message.id === messageId
+          ? { ...message, clarificationSubmitted: true }
+          : message,
+      ),
+    );
+
+    const answersById = new Map(answers.map((answer) => [answer.id, answer.value]));
+    const displayQuestion = [
+      "Mình trả lời nhanh:",
+      ...clarification.questions
+        .map((clarificationQuestion) => {
+          const value = answersById.get(clarificationQuestion.id);
+          return value ? `- ${clarificationQuestion.label}: ${value}` : "";
+        })
+        .filter(Boolean),
+    ].join("\n");
+
+    void requestAdvisorAnswer(
+      {
+        mode: "clarification",
+        originalQuestion: clarification.originalQuestion,
+        clarificationAnswers: answers,
+        conversationId: clarification.conversationId,
+        allowWebSearch,
+      },
+      displayQuestion,
     );
   };
 
@@ -444,9 +508,18 @@ export function AdvisorPage() {
                 <div key={msg.id} id={`msg-anchor-${msg.id}`} className={`flex flex-col ${msg.role === "user" ? "items-end" : "items-start"}`}>
                   <div className={`max-w-[88%] md:max-w-[82%] ${msg.role === "user" ? "" : "w-full"}`}>
                     {msg.role === "user" ? (
-                      <div className="rounded-2xl bg-gradient-to-r from-primary to-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-md rounded-br-none">
+                      <div className="whitespace-pre-line rounded-2xl bg-gradient-to-r from-primary to-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-md rounded-br-none">
                         {msg.text}
                       </div>
+                    ) : msg.type === "clarification" && msg.clarification ? (
+                      <AdvisorClarificationForm
+                        clarification={msg.clarification}
+                        submitted={msg.clarificationSubmitted}
+                        disabled={isAnswerLoading}
+                        onSubmit={(answers) =>
+                          handleSubmitClarification(msg.id, msg.clarification!, answers)
+                        }
+                      />
                     ) : (
                       <AdvisorAnswer
                         answer={msg.answer!}

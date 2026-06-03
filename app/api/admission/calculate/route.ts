@@ -7,6 +7,7 @@ import {
   type AdmissionMethod,
   type SchoolCode,
 } from "@/src/lib/admission-engine";
+import { getAuthContext } from "@/lib/zpath-auth";
 
 type AdmissionCalculateRequest = {
   schoolCode: SchoolCode;
@@ -16,7 +17,7 @@ type AdmissionCalculateRequest = {
   benchmark30?: number;
 };
 
-const SCHOOL_CODES: readonly SchoolCode[] = ["HUST", "FTU", "VINUNI", "NEU"];
+const SCHOOL_CODES: readonly SchoolCode[] = ["HUST", "FTU", "NEU", "UET", "VINUNI"];
 const ADMISSION_METHODS: readonly AdmissionMethod[] = ["THPT", "TSA", "XTTN"];
 
 export const runtime = "nodejs";
@@ -41,7 +42,7 @@ function parseAdmissionCalculateRequest(
   }
 
   if (!isSchoolCode(body.schoolCode)) {
-    throw new Error('schoolCode must be one of: "HUST", "FTU", "VINUNI", "NEU".');
+    throw new Error('schoolCode must be one of: "HUST", "FTU", "NEU", "UET", "VINUNI".');
   }
 
   if (!isAdmissionMethod(body.method)) {
@@ -78,6 +79,27 @@ function parseAdmissionCalculateRequest(
 }
 
 export async function POST(request: Request) {
+  const auth = await getAuthContext();
+  if (!auth) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "Bạn cần đăng nhập để dùng Scoring.",
+      },
+      { status: 401 },
+    );
+  }
+
+  if (!auth.user.phone) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "Bạn cần bổ sung số điện thoại trước khi dùng Scoring.",
+      },
+      { status: 403 },
+    );
+  }
+
   let body: unknown;
 
   try {

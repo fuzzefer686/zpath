@@ -88,6 +88,31 @@ export async function getSchoolBySlug(slug: string): Promise<School | null> {
   return (data as School | null) ?? null;
 }
 
+export async function getSchoolByCode(code: string): Promise<School | null> {
+  assertNonEmptyString(code, "code");
+
+  const { data, error } = await withAdmissionDataTimeout(
+    supabaseServer
+      .from("schools")
+      .select("*")
+      .eq("code", code.toUpperCase())
+      .maybeSingle(),
+  );
+
+  if (error) {
+    throwAdmissionDataError(`loading school by code "${code}"`, error);
+  }
+
+  return (data as School | null) ?? null;
+}
+
+export async function getSchoolBySlugOrCode(value: string): Promise<School | null> {
+  const schoolBySlug = await getSchoolBySlug(value);
+  if (schoolBySlug) return schoolBySlug;
+
+  return getSchoolByCode(value);
+}
+
 export async function getSchoolSlugs(
   allowedCodes?: readonly string[],
 ): Promise<string[]> {

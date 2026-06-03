@@ -1,4 +1,8 @@
+import { ftuModule } from "../modules/ftu";
 import { hustModule } from "../modules/hust";
+import { neuModule } from "../modules/neu";
+import { uetModule } from "../modules/uet";
+import { vinUniModule } from "../modules/vinuni";
 import type { SchoolAdmissionModule, SchoolCode } from "./types";
 
 const admissionModuleRegistry = new Map<SchoolCode, SchoolAdmissionModule>();
@@ -16,18 +20,7 @@ export function listRegisteredSchoolAdmissionModules() {
 }
 
 registerSchoolAdmissionModule(hustModule);
-registerSchoolAdmissionModule({
-  ...hustModule,
-  schoolCode: "FTU",
-  schoolName: "Đại học Ngoại Thương",
-});
-registerSchoolAdmissionModule({
-  ...hustModule,
-  schoolCode: "VINUNI",
-  schoolName: "Đại học VinUni",
-});
-registerSchoolAdmissionModule({
-  ...hustModule,
-  schoolCode: "NEU",
-  schoolName: "Đại học Kinh tế Quốc dân",
-});
+registerSchoolAdmissionModule(ftuModule);
+registerSchoolAdmissionModule(neuModule);
+registerSchoolAdmissionModule(uetModule);
+registerSchoolAdmissionModule(vinUniModule);

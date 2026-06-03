@@ -6,8 +6,11 @@ import {
   createAuthToken,
   getAuthCookieOptions,
   hashPassword,
+  normalizePhone,
+  normalizePhoneForStorage,
   normalizeUsername,
   validatePassword,
+  validatePhone,
   validateUsername,
   validateEmail,
   ZPATH_AUTH_COOKIE_NAME,
@@ -17,6 +20,7 @@ import { supabaseServer } from "@/src/lib/db/supabaseServer";
 type RegisterBody = {
   username?: unknown;
   email?: unknown;
+  phone?: unknown;
   password?: unknown;
 };
 
@@ -55,9 +59,18 @@ export async function POST(request: Request) {
       );
     }
 
+    if (!validatePhone(body.phone)) {
+      return NextResponse.json(
+        { error: "Số điện thoại không hợp lệ. Hãy nhập tối thiểu 9 chữ số." },
+        { status: 400 },
+      );
+    }
+
     assertAuthConfig();
 
     const email = String(body.email).trim().toLowerCase();
+    const phone = normalizePhone(body.phone);
+    const phoneNormalized = normalizePhoneForStorage(phone);
     const role = email === "fuzzefer.real0@gmail.com" ? "admin" : "user";
     const passwordHash = await hashPassword(body.password);
 
@@ -66,10 +79,13 @@ export async function POST(request: Request) {
       .insert({
         username,
         email,
+        phone,
+        phone_normalized: phoneNormalized,
         password_hash: passwordHash,
+        auth_provider: "password",
         role,
       })
-      .select("id, username, role, email")
+      .select("id, username, role, email, phone")
       .single();
 
     if (error) {
@@ -99,6 +115,7 @@ export async function POST(request: Request) {
       username: String(user.username),
       role: user.role === "admin" ? "admin" as const : "user" as const,
       email: String(user.email || ""),
+      phone: String(user.phone || ""),
     };
     const token = createAuthToken(authUser);
     const response = NextResponse.json({

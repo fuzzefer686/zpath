@@ -14,6 +14,94 @@ const DEFAULT_SUGGESTIONS = [
   "25 điểm tổ hợp A00 nên chọn ngành nào của Đại học Bách khoa?",
 ];
 
+function stripJsonCodeFence(text: string) {
+  const cleaned = text.trim();
+  const fenced = cleaned.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/i);
+
+  return fenced ? fenced[1].trim() : cleaned;
+}
+
+function extractFirstJsonArray(text: string) {
+  const cleaned = stripJsonCodeFence(text);
+  const start = cleaned.indexOf("[");
+  if (start === -1) return cleaned;
+
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+
+  for (let index = start; index < cleaned.length; index += 1) {
+    const char = cleaned[index];
+
+    if (inString) {
+      if (escaped) {
+        escaped = false;
+      } else if (char === "\\") {
+        escaped = true;
+      } else if (char === "\"") {
+        inString = false;
+      }
+      continue;
+    }
+
+    if (char === "\"") {
+      inString = true;
+      continue;
+    }
+
+    if (char === "[") {
+      depth += 1;
+      continue;
+    }
+
+    if (char === "]") {
+      depth -= 1;
+      if (depth === 0) return cleaned.slice(start, index + 1);
+    }
+  }
+
+  return cleaned.slice(start);
+}
+
+function sanitizeJsonArray(text: string) {
+  return text
+    .replace(/,(\s*[\]}])/g, "$1")
+    .replace(/"([^"\\]*(?:\\.[^"\\]*)*)"/g, (match, value) => {
+      const escaped = value.replace(/\n/g, "\\n").replace(/\r/g, "\\r");
+      return `"${escaped}"`;
+    });
+}
+
+function normalizeSuggestionItems(value: unknown) {
+  if (!Array.isArray(value)) return [];
+
+  return value.map((suggestion) => String(suggestion).trim()).filter(Boolean).slice(0, 5);
+}
+
+function parseSuggestionsFromGeminiText(responseText: string) {
+  const arrayText = extractFirstJsonArray(responseText);
+
+  for (const candidate of [arrayText, sanitizeJsonArray(arrayText)]) {
+    try {
+      const suggestions = normalizeSuggestionItems(JSON.parse(candidate));
+      if (suggestions.length) return suggestions;
+    } catch {
+      // Try the next recovery strategy.
+    }
+  }
+
+  return Array.from(arrayText.matchAll(/"((?:[^"\\]|\\.)*)"/g))
+    .map((match) => {
+      try {
+        return JSON.parse(`"${match[1]}"`) as string;
+      } catch {
+        return match[1].replace(/\\"/g, "\"").trim();
+      }
+    })
+    .filter(Boolean)
+    .slice(0, 5);
+}
+
 export async function GET() {
   try {
     const auth = await getAuthContext();
@@ -67,11 +155,7 @@ Không bao gồm bất kỳ phần text giải thích, không bọc trong markdo
 
     let suggestions: string[] = [];
     try {
-      const sanitizedText = responseText.trim().replace(/^```json\s*|```$/g, "");
-      const parsed = JSON.parse(sanitizedText);
-      if (Array.isArray(parsed)) {
-        suggestions = parsed.map((s) => String(s).trim()).filter(Boolean).slice(0, 5);
-      }
+      suggestions = parseSuggestionsFromGeminiText(responseText);
     } catch (e) {
       console.error("Failed to parse Gemini suggestions response:", e);
     }

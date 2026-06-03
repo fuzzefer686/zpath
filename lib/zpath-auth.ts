@@ -13,6 +13,7 @@ export type ZpathAuthUser = {
   username: string;
   role: ZpathUserRole;
   email: string;
+  phone: string;
 };
 
 export type ZpathAuthContext = {
@@ -25,6 +26,7 @@ type JwtPayload = {
   username: string;
   role: ZpathUserRole;
   email: string;
+  phone?: string;
   exp: number;
 };
 
@@ -78,6 +80,36 @@ function signValue(value: string) {
   return createHmac("sha256", getJwtSecret()).update(value).digest("base64url");
 }
 
+export function createSignedState(payload: Record<string, unknown>) {
+  const body = base64UrlJson(payload);
+  return `${body}.${signValue(body)}`;
+}
+
+export function verifySignedState<T extends Record<string, unknown>>(
+  state: string | null | undefined,
+): T | null {
+  if (!state) return null;
+  const [body, signature] = state.split(".");
+  if (!body || !signature) return null;
+
+  const expectedSignature = signValue(body);
+  const signatureBuffer = Buffer.from(signature);
+  const expectedBuffer = Buffer.from(expectedSignature);
+
+  if (
+    signatureBuffer.length !== expectedBuffer.length ||
+    !timingSafeEqual(signatureBuffer, expectedBuffer)
+  ) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(Buffer.from(body, "base64url").toString()) as T;
+  } catch {
+    return null;
+  }
+}
+
 export function normalizeUsername(username: unknown) {
   return typeof username === "string" ? username.trim() : "";
 }
@@ -93,6 +125,25 @@ export function validateEmail(email: unknown): email is string {
 
 export function validatePassword(password: unknown): password is string {
   return typeof password === "string" && password.length >= 8;
+}
+
+export function normalizePhone(phone: unknown) {
+  return typeof phone === "string" ? phone.trim().replace(/\s+/g, " ") : "";
+}
+
+export function normalizePhoneForStorage(phone: unknown) {
+  const normalizedPhone = normalizePhone(phone);
+  if (!normalizedPhone) return "";
+  const startsWithPlus = normalizedPhone.startsWith("+");
+  const digits = normalizedPhone.replace(/\D/g, "");
+  return `${startsWithPlus ? "+" : ""}${digits}`;
+}
+
+export function validatePhone(phone: unknown): phone is string {
+  const normalizedPhone = normalizePhone(phone);
+  if (!normalizedPhone) return false;
+  if (!/^\+?[0-9][0-9\s().-]*$/.test(normalizedPhone)) return false;
+  return normalizedPhone.replace(/\D/g, "").length >= 9;
 }
 
 export async function hashPassword(password: string) {
@@ -120,6 +171,7 @@ export function createAuthToken(user: ZpathAuthUser) {
     username: user.username,
     role: user.role,
     email: user.email,
+    phone: user.phone,
     exp: Math.floor(Date.now() / 1000) + TOKEN_TTL_SECONDS,
   } satisfies JwtPayload);
   const body = `${header}.${payload}`;
@@ -176,7 +228,7 @@ export async function getAuthContextFromToken(
 
   const { data: user, error } = await supabaseServer
     .from("zpath_users")
-    .select("id, username, role, email")
+    .select("id, username, role, email, phone")
     .eq("id", payload.sub)
     .maybeSingle();
 
@@ -194,6 +246,7 @@ export async function getAuthContextFromToken(
       username: String(user.username),
       role: user.role === "admin" ? "admin" : "user",
       email: String(user.email || ""),
+      phone: String(user.phone || ""),
     },
     surveyCompleted: Boolean(surveyProfile),
   };

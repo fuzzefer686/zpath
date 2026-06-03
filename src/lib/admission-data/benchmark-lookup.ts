@@ -1,6 +1,8 @@
 import type { AdmissionMethod, SchoolCode } from "@/src/lib/admission-engine";
 import type { AdmissionProgram, Benchmark } from "@/src/types/admission-data";
 
+export type BenchmarkMethodCode = AdmissionMethod | "XTTN13";
+
 export function findBenchmarkForProgram({
   schoolCode,
   programs,
@@ -14,7 +16,7 @@ export function findBenchmarkForProgram({
   programs: AdmissionProgram[];
   benchmarks: Benchmark[];
   programCode: string;
-  method: AdmissionMethod;
+  method: BenchmarkMethodCode;
   combinationCode?: string;
   benchmarkYear: number;
 }) {
@@ -46,5 +48,9 @@ export function findBenchmarkForProgram({
     );
   }
 
-  return sameProgramBenchmarks.find((benchmark) => benchmark.combination_code === null) ?? null;
+  return (
+    sameProgramBenchmarks.find((benchmark) => benchmark.combination_code === null) ??
+    sameProgramBenchmarks[0] ??
+    null
+  );
 }

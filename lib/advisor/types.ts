@@ -30,6 +30,25 @@ export type AdvisorQuestionTemplate = {
 
 export type AdvisorTemplateValues = Record<string, string>;
 
+export type AdvisorClarificationQuestion = {
+  id: string;
+  label: string;
+  placeholder: string;
+  required: boolean;
+};
+
+export type AdvisorClarificationAnswer = {
+  id: string;
+  value: string;
+};
+
+export type AdvisorClarification = {
+  conversationId: string;
+  originalQuestion: string;
+  intent: AdvisorIntent;
+  questions: AdvisorClarificationQuestion[];
+};
+
 export type AdvisorAnswerConfidence = "high" | "medium" | "low";
 
 export type AdvisorAnswerDataStatus =

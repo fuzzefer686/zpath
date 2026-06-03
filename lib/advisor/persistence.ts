@@ -5,7 +5,11 @@ import { randomUUID } from "crypto";
 import { getAuthContext } from "@/lib/zpath-auth";
 import { supabaseServer } from "@/src/lib/db/supabaseServer";
 import type { AdvisorIntent } from "@/lib/advisor/intents";
-import type { AdvisorAnswer } from "@/lib/advisor/types";
+import type {
+  AdvisorAnswer,
+  AdvisorClarificationAnswer,
+  AdvisorClarificationQuestion,
+} from "@/lib/advisor/types";
 
 export type AdvisorPersistenceInput = {
   conversationId?: string;
@@ -22,6 +26,23 @@ export type AdvisorPersistenceResult = {
   conversationId: string;
   userMessageId: string;
   assistantMessageId: string;
+};
+
+export type AdvisorClarificationPromptPersistenceInput = {
+  conversationId?: string;
+  anonymousId?: string;
+  originalQuestion: string;
+  intent: AdvisorIntent;
+  questions: AdvisorClarificationQuestion[];
+};
+
+export type AdvisorClarificationAnswersPersistenceInput = {
+  conversationId?: string;
+  anonymousId?: string;
+  originalQuestion: string;
+  intent: AdvisorIntent;
+  answers: AdvisorClarificationAnswer[];
+  answerLabels: Record<string, string>;
 };
 
 function normalizeAnonymousId(value?: string) {
@@ -84,6 +105,115 @@ async function resolveConversation({
 
   if (error) throw error;
   return String(data.id);
+}
+
+export async function persistAdvisorClarificationPrompt(
+  input: AdvisorClarificationPromptPersistenceInput,
+): Promise<AdvisorPersistenceResult> {
+  const userId = await getCurrentUserId();
+  const anonymousId = normalizeAnonymousId(input.anonymousId);
+  const conversationId = await resolveConversation({
+    conversationId: input.conversationId,
+    userId,
+    anonymousId,
+    title: createConversationTitle(input.originalQuestion),
+  });
+
+  const { data: userMessage, error: userMessageError } = await supabaseServer
+    .from("advisor_messages")
+    .insert({
+      conversation_id: conversationId,
+      role: "user",
+      content: input.originalQuestion,
+      intent: input.intent,
+      metadata: {
+        kind: "original_question",
+      },
+    })
+    .select("id")
+    .single();
+
+  if (userMessageError) throw userMessageError;
+
+  const { data: assistantMessage, error: assistantMessageError } =
+    await supabaseServer
+      .from("advisor_messages")
+      .insert({
+        conversation_id: conversationId,
+        role: "assistant",
+        content: JSON.stringify({
+          type: "clarification_prompt",
+          originalQuestion: input.originalQuestion,
+          questions: input.questions,
+        }),
+        intent: input.intent,
+        metadata: {
+          kind: "clarification_prompt",
+          questionIds: input.questions.map((question) => question.id),
+        },
+      })
+      .select("id")
+      .single();
+
+  if (assistantMessageError) throw assistantMessageError;
+
+  await supabaseServer
+    .from("advisor_conversations")
+    .update({ updated_at: new Date().toISOString() })
+    .eq("id", conversationId);
+
+  return {
+    conversationId,
+    userMessageId: String(userMessage.id),
+    assistantMessageId: String(assistantMessage.id),
+  };
+}
+
+export async function persistAdvisorClarificationAnswers(
+  input: AdvisorClarificationAnswersPersistenceInput,
+): Promise<{ conversationId: string; userMessageId: string }> {
+  const userId = await getCurrentUserId();
+  const anonymousId = normalizeAnonymousId(input.anonymousId);
+  const conversationId = await resolveConversation({
+    conversationId: input.conversationId,
+    userId,
+    anonymousId,
+    title: createConversationTitle(input.originalQuestion),
+  });
+
+  const { data: userMessage, error: userMessageError } = await supabaseServer
+    .from("advisor_messages")
+    .insert({
+      conversation_id: conversationId,
+      role: "user",
+      content: JSON.stringify({
+        type: "clarification_answers",
+        originalQuestion: input.originalQuestion,
+        answers: input.answers.map((answer) => ({
+          ...answer,
+          label: input.answerLabels[answer.id] ?? answer.id,
+        })),
+      }),
+      intent: input.intent,
+      metadata: {
+        kind: "clarification_answers",
+        answerIds: input.answers.map((answer) => answer.id),
+      },
+    })
+    .select("id")
+    .single();
+
+  if (userMessageError) throw userMessageError;
+
+  await supabaseServer
+    .from("advisor_conversations")
+    .update({ updated_at: new Date().toISOString() })
+    .eq("id", conversationId);
+
+  return {
+    conversationId,
+    userMessageId: String(userMessage.id),
+  };
 }
 
 export async function persistAdvisorExchange(

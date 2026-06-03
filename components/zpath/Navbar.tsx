@@ -11,6 +11,7 @@ import { useAuth } from "@/components/zpath/AuthProvider";
 const links = [
   { href: "/", label: "Trang chủ" },
   { href: "/unimap", label: "UniMap" },
+  { href: "/scoring", label: "Tính điểm" },
   { href: "/advisor", label: "Tư vấn ngành" },
 ];
 

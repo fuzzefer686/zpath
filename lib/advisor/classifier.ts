@@ -173,10 +173,14 @@ const INTENT_RULES: PatternRule[] = [
     patterns: [
       w("tính điểm"),
       w("tinh diem"),
+      w("quy đổi"),
+      w("quy doi"),
       w("quy đổi điểm"),
       w("quy doi diem"),
       w("ielts\\s+quy đổi"),
       w("ielts\\s+quy doi"),
+      /(?:^|[^\p{L}\p{N}])ielts\s*\d(?:[.,]\d)?\s*(?:được|duoc)?\s*(?:quy đổi|quy doi|ra|thành|thanh|bao nhiêu điểm|bao nhieu diem)(?:$|[^\p{L}\p{N}])/iu,
+      /(?:^|[^\p{L}\p{N}])\d(?:[.,]\d)?\s*ielts\s*(?:được|duoc)?\s*(?:quy đổi|quy doi|ra|thành|thanh|bao nhiêu điểm|bao nhieu diem)(?:$|[^\p{L}\p{N}])/iu,
       w("chứng chỉ\\s+quy đổi"),
       w("chung chi\\s+quy doi"),
     ],
@@ -586,6 +590,16 @@ export function classifyAdvisorQuestion(question: string): AdvisorClassification
   if (benchmark && /\b(compare|so sánh|so sanh)\b/i.test(text)) {
     intent = AdvisorIntent.COMPARE_MAJORS;
     confidence = Math.max(confidence, 0.78);
+  }
+
+  if (
+    /\bielts\b/i.test(text) &&
+    /\b(quy đổi|quy doi|bao nhiêu điểm|bao nhieu diem|được mấy điểm|duoc may diem|được bao nhiêu|duoc bao nhieu)\b/iu.test(
+      text,
+    )
+  ) {
+    intent = AdvisorIntent.SCORE_CALCULATION;
+    confidence = Math.max(confidence, 0.9);
   }
 
   const extracted: AdvisorClassification["extracted"] = {

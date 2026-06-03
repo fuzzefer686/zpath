@@ -11,13 +11,15 @@ export async function GET() {
       return NextResponse.json({ error: "Chưa đăng nhập." }, { status: 401 });
     }
 
-    let { data: profile, error } = await supabaseServer
+    const { data: existingProfile, error } = await supabaseServer
       .from("profiles")
       .select("*")
       .eq("id", auth.user.id)
       .maybeSingle();
 
     if (error) throw error;
+
+    let profile = existingProfile;
 
     // If profile doesn't exist for legacy users, create one on the fly
     if (!profile) {
@@ -39,6 +41,7 @@ export async function GET() {
       role: auth.user.role,
       email: auth.user.email,
       username: auth.user.username,
+      phone: auth.user.phone,
     });
   } catch (error) {
     console.error("GET /api/profile error:", error);
@@ -88,6 +91,7 @@ export async function PUT(request: Request) {
       role: auth.user.role,
       email: auth.user.email,
       username: auth.user.username,
+      phone: auth.user.phone,
     });
   } catch (error) {
     console.error("PUT /api/profile error:", error);

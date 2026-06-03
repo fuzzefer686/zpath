@@ -1,4 +1,5 @@
 import type {
+  AdvisorClarificationAnswer,
   AdvisorQuestionTemplate,
   AdvisorTemplateValues,
 } from "@/lib/advisor/types";
@@ -20,9 +21,19 @@ export type AdvisorFreeTextAnswerRequest = {
   anonymousId?: string;
 };
 
+export type AdvisorClarificationAnswerRequest = {
+  mode: "clarification";
+  originalQuestion: string;
+  clarificationAnswers: AdvisorClarificationAnswer[];
+  allowWebSearch?: boolean;
+  conversationId?: string;
+  anonymousId?: string;
+};
+
 export type AdvisorAnswerRequest =
   | AdvisorTemplateAnswerRequest
-  | AdvisorFreeTextAnswerRequest;
+  | AdvisorFreeTextAnswerRequest
+  | AdvisorClarificationAnswerRequest;
 
 export type AdvisorAnswerValidationError = {
   code: string;
@@ -39,6 +50,8 @@ const MAX_FIELD_KEY_LENGTH = 80;
 const MAX_FIELD_VALUE_LENGTH = 500;
 const MAX_FIELD_COUNT = 24;
 const MAX_ANONYMOUS_ID_LENGTH = 120;
+const MAX_CLARIFICATION_ANSWER_LENGTH = 120;
+const MAX_CLARIFICATION_ANSWER_COUNT = 8;
 const UUID_PATTERN =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
@@ -128,6 +141,45 @@ function parseTemplateFields(value: unknown): ValidationResult<AdvisorTemplateVa
   return { success: true, data: fields };
 }
 
+function parseClarificationAnswers(
+  value: unknown,
+): ValidationResult<AdvisorClarificationAnswer[]> {
+  if (!Array.isArray(value)) {
+    return validationError("INVALID_CLARIFICATION", "clarificationAnswers phải là một mảng.");
+  }
+
+  if (!value.length) {
+    return validationError("MISSING_CLARIFICATION", "Vui lòng trả lời ít nhất một câu hỏi.");
+  }
+
+  if (value.length > MAX_CLARIFICATION_ANSWER_COUNT) {
+    return validationError("TOO_MANY_CLARIFICATION_ANSWERS", "Số câu trả lời vượt giới hạn.");
+  }
+
+  const answers: AdvisorClarificationAnswer[] = [];
+
+  for (const item of value) {
+    if (!isRecord(item)) {
+      return validationError("INVALID_CLARIFICATION_ANSWER", "Câu trả lời không hợp lệ.");
+    }
+
+    const id = readOptionalString(item.id, 64);
+    const valueText = readOptionalString(item.value, MAX_CLARIFICATION_ANSWER_LENGTH);
+
+    if (!id || !/^[A-Za-z0-9_-]+$/.test(id)) {
+      return validationError("INVALID_CLARIFICATION_ID", "Mã câu hỏi làm rõ không hợp lệ.");
+    }
+
+    if (!valueText) {
+      return validationError("INVALID_CLARIFICATION_VALUE", "Câu trả lời không được để trống.");
+    }
+
+    answers.push({ id, value: valueText });
+  }
+
+  return { success: true, data: answers };
+}
+
 export function parseAdvisorAnswerRequest(
   input: unknown,
 ): ValidationResult<AdvisorAnswerRequest> {
@@ -171,9 +223,29 @@ export function parseAdvisorAnswerRequest(
     };
   }
 
+  if (input.mode === "clarification") {
+    const originalQuestion = parseTextField(input.originalQuestion, "originalQuestion");
+    if (!originalQuestion.success) return originalQuestion;
+
+    const clarificationAnswers = parseClarificationAnswers(input.clarificationAnswers);
+    if (!clarificationAnswers.success) return clarificationAnswers;
+
+    return {
+      success: true,
+      data: {
+        mode: "clarification",
+        originalQuestion: originalQuestion.data,
+        clarificationAnswers: clarificationAnswers.data,
+        allowWebSearch: readAllowWebSearch(input.allowWebSearch),
+        conversationId: readOptionalUuid(input.conversationId),
+        anonymousId: readOptionalString(input.anonymousId, MAX_ANONYMOUS_ID_LENGTH),
+      },
+    };
+  }
+
   return validationError(
     "INVALID_MODE",
-    "mode phải là 'template' hoặc 'free_text'.",
+    "mode phải là 'template', 'free_text' hoặc 'clarification'.",
   );
 }
 

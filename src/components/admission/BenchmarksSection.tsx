@@ -85,15 +85,15 @@ export function BenchmarksSection({
               </p>
             ) : (
               <div className="max-h-[1004px] overflow-auto">
-                <table className="w-full min-w-[720px] table-fixed text-left text-sm">
+                <table className="w-full min-w-[920px] table-auto text-left text-sm">
                   <thead className="sticky top-0 z-10 border-b bg-card text-xs uppercase tracking-wider text-muted-foreground">
                     <tr>
-                      <th className="h-11 w-72 pr-4">Chương trình</th>
-                      <th className="h-11 w-20 pr-4">Năm</th>
-                      <th className="h-11 w-28 pr-4">Phương thức</th>
-                      <th className="h-11 w-24 pr-4">Tổ hợp</th>
-                      <th className="h-11 w-24 pr-4">Điểm</th>
-                      <th className="h-11 w-72 pr-4">Ghi chú</th>
+                      <th className="h-11 w-[300px] pr-5 align-bottom">Chương trình</th>
+                      <th className="h-11 w-20 pr-5 align-bottom">Năm</th>
+                      <th className="h-11 w-32 pr-5 align-bottom">Phương thức</th>
+                      <th className="h-11 w-28 pr-5 align-bottom">Tổ hợp</th>
+                      <th className="h-11 w-28 pr-5 align-bottom">Điểm</th>
+                      <th className="h-11 w-[300px] pr-5 align-bottom">Ghi chú</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y">
@@ -103,18 +103,29 @@ export function BenchmarksSection({
                         : null;
 
                       return (
-                        <tr key={benchmark.id} className="h-12">
-                          <td className="truncate pr-4">
-                            {program?.program_code ? `${program.program_code} - ` : ""}
-                            {program?.program_name ?? "-"}
+                        <tr key={benchmark.id} className="align-top">
+                          <td className="py-3 pr-5 leading-6">
+                            {program?.program_code ? (
+                              <span className="font-medium text-foreground">
+                                {program.program_code}
+                                {" - "}
+                              </span>
+                            ) : null}
+                            <span className="break-words">{program?.program_name ?? "-"}</span>
                           </td>
-                          <td className="whitespace-nowrap pr-4">{benchmark.year}</td>
-                          <td className="truncate pr-4">{benchmark.method_code}</td>
-                          <td className="truncate pr-4">{benchmark.combination_code ?? "-"}</td>
-                          <td className="whitespace-nowrap pr-4 font-bold">
+                          <td className="whitespace-nowrap py-3 pr-5 leading-6">
+                            {benchmark.year}
+                          </td>
+                          <td className="whitespace-normal break-words py-3 pr-5 leading-6">
+                            {benchmark.method_code}
+                          </td>
+                          <td className="whitespace-normal break-words py-3 pr-5 leading-6">
+                            {benchmark.combination_code ?? "-"}
+                          </td>
+                          <td className="whitespace-nowrap py-3 pr-5 font-bold leading-6 tabular-nums">
                             {benchmark.score}/{benchmark.scale ?? 30}
                           </td>
-                          <td className="truncate pr-4 text-muted-foreground">
+                          <td className="whitespace-normal break-words py-3 pr-5 leading-6 text-muted-foreground">
                             {benchmark.note ?? "-"}
                           </td>
                         </tr>
