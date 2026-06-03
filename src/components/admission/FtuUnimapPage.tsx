@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 
 import { formatVND } from "@/lib/utils";
+import { BrandedAdmissionSectionNav } from "./BrandedAdmissionSectionNav";
 import type {
   AdmissionInfo,
   AdmissionMethodRecord,
@@ -40,11 +41,105 @@ type FtuUnimapPageProps = {
   selectedBenchmarkYear: number;
   selectedTuitionYear: number;
   availableYears: readonly number[];
+  brand?: BrandedUnimapTheme;
 };
 
-const FTU_ACCENT = "text-[#b91c1c]";
-const FTU_ACCENT_BG = "bg-[#b91c1c]";
-const FTU_ACCENT_BORDER = "border-[#b91c1c]/20";
+type BrandedUnimapTheme = {
+  code: "FTU" | "HUST" | "NEU";
+  background: string;
+  stickyBackground: string;
+  heroFade: string;
+  accentText: string;
+  accentBg: string;
+  accentBorder: string;
+  accentSoftBg: string;
+  accentTintBg: string;
+  accentHoverBg: string;
+  navHover: string;
+  navActive: string;
+  heroOverlay: string;
+  badge: string;
+  eyebrow: string;
+  overviewTitle: string;
+  overviewDescription: string;
+  descriptionFallback: string;
+  emptyFallback: string;
+};
+
+export const BRANDED_UNIMAP_THEMES: Record<BrandedUnimapTheme["code"], BrandedUnimapTheme> = {
+  FTU: {
+    code: "FTU",
+    background: "bg-[#f7f8fb]",
+    stickyBackground: "bg-[#f7f8fb]/90",
+    heroFade: "from-[#f7f8fb]",
+    accentText: "text-[#b91c1c]",
+    accentBg: "bg-[#b91c1c]",
+    accentBorder: "border-[#b91c1c]/20",
+    accentSoftBg: "bg-[#fff7f7]",
+    accentTintBg: "bg-[#b91c1c]/10",
+    accentHoverBg: "hover:bg-[#b91c1c]/[0.03]",
+    navHover: "hover:border-[#b91c1c]/30 hover:bg-[#b91c1c]/5 hover:text-[#b91c1c]",
+    navActive: "border-[#b91c1c] bg-[#b91c1c] text-white",
+    heroOverlay:
+      "bg-[linear-gradient(115deg,rgba(15,23,42,0.98)_0%,rgba(15,23,42,0.9)_42%,rgba(127,29,29,0.74)_100%)]",
+    badge: "border-red-200/20 bg-red-500/15 text-red-100",
+    eyebrow: "FTU at a glance",
+    overviewTitle: "Nhìn nhanh trước khi chọn nguyện vọng",
+    overviewDescription:
+      "Các thông tin nhận diện trường và quy mô dữ liệu đang có trong UniMap.",
+    descriptionFallback:
+      "Thông tin tuyển sinh FTU được tổng hợp thành một trang dễ quét: phương thức, chương trình, điểm chuẩn và học phí.",
+    emptyFallback: "UniMap đang cập nhật mô tả chi tiết cho FTU.",
+  },
+  HUST: {
+    code: "HUST",
+    background: "bg-[#f8f7f4]",
+    stickyBackground: "bg-[#f8f7f4]/90",
+    heroFade: "from-[#f8f7f4]",
+    accentText: "text-[#c2410c]",
+    accentBg: "bg-[#c2410c]",
+    accentBorder: "border-[#c2410c]/20",
+    accentSoftBg: "bg-[#fff3ed]",
+    accentTintBg: "bg-[#c2410c]/10",
+    accentHoverBg: "hover:bg-[#c2410c]/[0.035]",
+    navHover: "hover:border-[#c2410c]/30 hover:bg-[#c2410c]/5 hover:text-[#c2410c]",
+    navActive: "border-[#c2410c] bg-[#c2410c] text-white",
+    heroOverlay:
+      "bg-[linear-gradient(115deg,rgba(24,24,27,0.98)_0%,rgba(63,23,13,0.88)_46%,rgba(194,65,12,0.72)_100%)]",
+    badge: "border-orange-200/20 bg-orange-500/15 text-orange-100",
+    eyebrow: "HUST engineering brief",
+    overviewTitle: "Đọc nhanh bức tranh kỹ thuật trước khi chọn ngành",
+    overviewDescription:
+      "Tập trung vào quy mô chương trình, phương thức xét tuyển và các mốc cạnh tranh của Bách Khoa.",
+    descriptionFallback:
+      "Thông tin tuyển sinh HUST được gom thành một trang dễ quét cho học sinh khối kỹ thuật: phương thức, chương trình, điểm chuẩn và học phí.",
+    emptyFallback: "UniMap đang cập nhật mô tả chi tiết cho HUST.",
+  },
+  NEU: {
+    code: "NEU",
+    background: "bg-[#f5f8f6]",
+    stickyBackground: "bg-[#f5f8f6]/90",
+    heroFade: "from-[#f5f8f6]",
+    accentText: "text-[#047857]",
+    accentBg: "bg-[#047857]",
+    accentBorder: "border-[#047857]/20",
+    accentSoftBg: "bg-[#ecfdf5]",
+    accentTintBg: "bg-[#047857]/10",
+    accentHoverBg: "hover:bg-[#047857]/[0.035]",
+    navHover: "hover:border-[#047857]/30 hover:bg-[#047857]/5 hover:text-[#047857]",
+    navActive: "border-[#047857] bg-[#047857] text-white",
+    heroOverlay:
+      "bg-[linear-gradient(115deg,rgba(15,23,42,0.98)_0%,rgba(6,78,59,0.9)_48%,rgba(4,120,87,0.72)_100%)]",
+    badge: "border-emerald-200/20 bg-emerald-500/15 text-emerald-100",
+    eyebrow: "NEU business brief",
+    overviewTitle: "Nhìn nhanh hệ sinh thái kinh tế trước khi chọn ngành",
+    overviewDescription:
+      "Ưu tiên các thông tin giúp so sánh ngành kinh doanh, tài chính, marketing và logistics.",
+    descriptionFallback:
+      "Thông tin tuyển sinh NEU được gom thành một trang dễ quét cho nhóm ngành kinh tế: phương thức, chương trình, điểm chuẩn và học phí.",
+    emptyFallback: "UniMap đang cập nhật mô tả chi tiết cho NEU.",
+  },
+};
 
 function formatNumber(value: number) {
   return new Intl.NumberFormat("vi-VN").format(value);
@@ -109,17 +204,6 @@ function getProgramLabel(
     : program.program_name;
 }
 
-function NavPill({ href, children }: { href: string; children: string }) {
-  return (
-    <a
-      href={href}
-      className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm transition-colors hover:border-[#b91c1c]/30 hover:bg-[#b91c1c]/5 hover:text-[#b91c1c]"
-    >
-      {children}
-    </a>
-  );
-}
-
 function StatTile({
   label,
   value,
@@ -146,6 +230,7 @@ function SectionShell({
   title,
   description,
   action,
+  accentText,
   children,
 }: {
   id: string;
@@ -153,13 +238,14 @@ function SectionShell({
   title: string;
   description: string;
   action?: ReactNode;
+  accentText: string;
   children: ReactNode;
 }) {
   return (
     <section id={id} className="scroll-mt-24 border-t border-slate-200 py-10">
       <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
-          <div className={`text-xs font-bold uppercase tracking-[0.18em] ${FTU_ACCENT}`}>
+          <div className={`text-xs font-bold uppercase tracking-[0.18em] ${accentText}`}>
             {eyebrow}
           </div>
           <h2 className="mt-2 font-display text-2xl font-extrabold tracking-tight text-slate-950 md:text-3xl">
@@ -211,7 +297,9 @@ export function FtuUnimapPage({
   selectedBenchmarkYear,
   selectedTuitionYear,
   availableYears,
+  brand,
 }: FtuUnimapPageProps) {
+  const theme = brand ?? BRANDED_UNIMAP_THEMES.FTU;
   const benchmarkProgramById = createProgramMap(benchmarkPrograms);
   const tuitionProgramById = createProgramMap(tuitionPrograms);
   const topBenchmarks = getTopBenchmarks(benchmarks);
@@ -220,7 +308,7 @@ export function FtuUnimapPage({
   const activeMethods = methods.filter((method) => method.is_active !== false);
 
   return (
-    <main className="min-h-screen bg-[#f7f8fb] text-slate-950">
+    <main className={`min-h-screen ${theme.background} text-slate-950`}>
       <section className="relative overflow-hidden bg-slate-950">
         {school.hero_image_url ? (
           <div
@@ -228,8 +316,8 @@ export function FtuUnimapPage({
             style={{ backgroundImage: `url(${school.hero_image_url})` }}
           />
         ) : null}
-        <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(15,23,42,0.98)_0%,rgba(15,23,42,0.9)_42%,rgba(127,29,29,0.74)_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#f7f8fb] to-transparent" />
+        <div className={`absolute inset-0 ${theme.heroOverlay}`} />
+        <div className={`absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t ${theme.heroFade} to-transparent`} />
 
         <div className="container-page relative py-12 md:py-16">
           <Link
@@ -242,7 +330,7 @@ export function FtuUnimapPage({
 
           <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-end">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-red-200/20 bg-red-500/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-red-100">
+              <div className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] ${theme.badge}`}>
                 <Landmark className="h-4 w-4" />
                 {school.code}
               </div>
@@ -253,8 +341,7 @@ export function FtuUnimapPage({
                 <p className="mt-3 text-lg font-medium text-white/70">{school.english_name}</p>
               ) : null}
               <p className="mt-5 max-w-3xl text-base leading-7 text-white/75 md:text-lg">
-                {school.description ??
-                  "Thông tin tuyển sinh FTU được tổng hợp thành một trang dễ quét: phương thức, chương trình, điểm chuẩn và học phí."}
+                {school.description ?? theme.descriptionFallback}
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -300,23 +387,29 @@ export function FtuUnimapPage({
         </div>
       </section>
 
-      <div className="sticky top-0 z-30 border-b border-slate-200 bg-[#f7f8fb]/90 backdrop-blur">
-        <div className="container-page flex gap-2 overflow-x-auto py-3">
-          <NavPill href="#overview">Tổng quan</NavPill>
-          <NavPill href="#admission-info">Tuyển sinh</NavPill>
-          <NavPill href="#programs">Chương trình</NavPill>
-          <NavPill href="#benchmarks">Điểm chuẩn</NavPill>
-          <NavPill href="#tuition">Học phí</NavPill>
-        </div>
-      </div>
+      <div className="container-page grid gap-8 pb-16 lg:grid-cols-[220px_minmax(0,1fr)] lg:items-start">
+        <aside className="sticky top-4 z-20 pt-6 lg:pt-10">
+          <BrandedAdmissionSectionNav
+            hoverClass={theme.navHover}
+            activeClass={theme.navActive}
+            items={[
+              { href: "#overview", label: "Tổng quan" },
+              { href: "#admission-info", label: "Tuyển sinh" },
+              { href: "#programs", label: "Chương trình" },
+              { href: "#benchmarks", label: "Điểm chuẩn" },
+              { href: "#tuition", label: "Học phí" },
+            ]}
+          />
+        </aside>
 
-      <div className="container-page pb-16">
-        <SectionShell
-          id="overview"
-          eyebrow="FTU at a glance"
-          title="Nhìn nhanh trước khi chọn nguyện vọng"
-          description="Các thông tin nhận diện trường và quy mô dữ liệu đang có trong UniMap."
-        >
+        <div className="min-w-0">
+          <SectionShell
+            id="overview"
+            eyebrow={theme.eyebrow}
+            title={theme.overviewTitle}
+            description={theme.overviewDescription}
+            accentText={theme.accentText}
+          >
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             <InfoStrip icon={Building2} label="Loại hình" value={school.type ?? "Đang cập nhật"} />
             <InfoStrip icon={MapPin} label="Khu vực" value={school.city ?? "Đang cập nhật"} />
@@ -340,7 +433,7 @@ export function FtuUnimapPage({
               <p className="mt-3 text-sm leading-7 text-slate-600">
                 {admissionInfo?.notes ??
                   school.description ??
-                  "UniMap đang cập nhật mô tả chi tiết cho FTU."}
+                  theme.emptyFallback}
               </p>
               {school.address || school.source_url ? (
                 <div className="mt-5 grid gap-3 text-sm text-slate-600">
@@ -350,7 +443,7 @@ export function FtuUnimapPage({
                       href={school.source_url}
                       target="_blank"
                       rel="noreferrer"
-                      className={`inline-flex items-center gap-2 font-semibold ${FTU_ACCENT}`}
+                      className={`inline-flex items-center gap-2 font-semibold ${theme.accentText}`}
                     >
                       Nguồn dữ liệu
                       <ExternalLink className="h-4 w-4" />
@@ -360,8 +453,8 @@ export function FtuUnimapPage({
               ) : null}
             </div>
 
-            <div className={`rounded-3xl border ${FTU_ACCENT_BORDER} bg-[#fff7f7] p-6`}>
-              <div className={`inline-flex h-11 w-11 items-center justify-center rounded-2xl ${FTU_ACCENT_BG} text-white`}>
+            <div className={`rounded-3xl border ${theme.accentBorder} ${theme.accentSoftBg} p-6`}>
+              <div className={`inline-flex h-11 w-11 items-center justify-center rounded-2xl ${theme.accentBg} text-white`}>
                 <ClipboardList className="h-5 w-5" />
               </div>
               <h3 className="mt-4 font-display text-xl font-extrabold text-slate-950">
@@ -374,21 +467,22 @@ export function FtuUnimapPage({
               </ul>
             </div>
           </div>
-        </SectionShell>
+          </SectionShell>
 
-        <SectionShell
-          id="admission-info"
-          eyebrow="Admission brief"
-          title="Phương thức và mốc tuyển sinh"
-          description="Tách phần phương thức khỏi bảng chương trình để dễ hiểu hơn khi đọc đề án tuyển sinh."
-          action={
-            <AdmissionYearSelect
-              selectedYear={selectedProgramYear}
-              years={availableYears}
-              paramName="programYear"
-            />
-          }
-        >
+          <SectionShell
+            id="admission-info"
+            eyebrow="Admission brief"
+            title="Phương thức và mốc tuyển sinh"
+            description="Tách phần phương thức khỏi bảng chương trình để dễ hiểu hơn khi đọc đề án tuyển sinh."
+            accentText={theme.accentText}
+            action={
+              <AdmissionYearSelect
+                selectedYear={selectedProgramYear}
+                years={availableYears}
+                paramName="programYear"
+              />
+            }
+          >
           <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="rounded-3xl border border-slate-200 bg-white p-6">
               <div className="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">
@@ -406,7 +500,7 @@ export function FtuUnimapPage({
               {activeMethods.length ? (
                 activeMethods.map((method) => (
                   <div key={method.id} className="rounded-2xl border border-slate-200 bg-white p-5">
-                    <div className={`inline-flex rounded-full bg-[#b91c1c]/10 px-3 py-1 text-xs font-bold ${FTU_ACCENT}`}>
+                    <div className={`inline-flex rounded-full ${theme.accentTintBg} px-3 py-1 text-xs font-bold ${theme.accentText}`}>
                       {method.method_code}
                     </div>
                     <h3 className="mt-3 text-base font-extrabold leading-6 text-slate-950">
@@ -424,21 +518,22 @@ export function FtuUnimapPage({
               )}
             </div>
           </div>
-        </SectionShell>
+          </SectionShell>
 
-        <SectionShell
-          id="programs"
-          eyebrow="Programs"
-          title="Chương trình tuyển sinh"
-          description="Danh sách chương trình được làm thoáng hơn, ưu tiên mã xét tuyển, tên chương trình và chỉ tiêu."
-          action={
-            <AdmissionYearSelect
-              selectedYear={selectedProgramYear}
-              years={availableYears}
-              paramName="programYear"
-            />
-          }
-        >
+          <SectionShell
+            id="programs"
+            eyebrow="Programs"
+            title="Chương trình tuyển sinh"
+            description="Danh sách chương trình được làm thoáng hơn, ưu tiên mã xét tuyển, tên chương trình và chỉ tiêu."
+            accentText={theme.accentText}
+            action={
+              <AdmissionYearSelect
+                selectedYear={selectedProgramYear}
+                years={availableYears}
+                paramName="programYear"
+              />
+            }
+          >
           {programs.length ? (
             <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
               <div className="flex items-center gap-3 border-b border-slate-200 bg-slate-50 px-5 py-4">
@@ -459,7 +554,7 @@ export function FtuUnimapPage({
                   </thead>
                   <tbody className="divide-y divide-slate-100">
                     {programs.map((program) => (
-                      <tr key={program.id} className="align-top transition-colors hover:bg-[#b91c1c]/[0.03]">
+                      <tr key={program.id} className={`align-top transition-colors ${theme.accentHoverBg}`}>
                         <td className="px-5 py-4 font-display text-base font-extrabold text-slate-950">
                           {program.program_code ?? "-"}
                         </td>
@@ -486,28 +581,29 @@ export function FtuUnimapPage({
           ) : (
             <EmptyPanel text={`Chưa có dữ liệu chương trình cho năm ${selectedProgramYear}.`} />
           )}
-        </SectionShell>
+          </SectionShell>
 
-        <SectionShell
-          id="benchmarks"
-          eyebrow="Benchmarks"
-          title="Điểm chuẩn tham khảo"
-          description="Phần điểm chuẩn tách riêng top điểm cao và bảng đầy đủ để học sinh nhanh chóng xác định mức cạnh tranh."
-          action={
-            <AdmissionYearSelect
-              selectedYear={selectedBenchmarkYear}
-              years={availableYears}
-              paramName="benchmarkYear"
-            />
-          }
-        >
+          <SectionShell
+            id="benchmarks"
+            eyebrow="Benchmarks"
+            title="Điểm chuẩn tham khảo"
+            description="Phần điểm chuẩn tách riêng top điểm cao và bảng đầy đủ để học sinh nhanh chóng xác định mức cạnh tranh."
+            accentText={theme.accentText}
+            action={
+              <AdmissionYearSelect
+                selectedYear={selectedBenchmarkYear}
+                years={availableYears}
+                paramName="benchmarkYear"
+              />
+            }
+          >
           {benchmarks.length ? (
             <div className="space-y-5">
               <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                 {topBenchmarks.map((benchmark) => (
                   <div key={benchmark.id} className="rounded-2xl border border-slate-200 bg-white p-5">
                     <div className="flex items-start justify-between gap-4">
-                      <div className={`rounded-full bg-[#b91c1c]/10 px-3 py-1 text-xs font-bold ${FTU_ACCENT}`}>
+                      <div className={`rounded-full ${theme.accentTintBg} px-3 py-1 text-xs font-bold ${theme.accentText}`}>
                         {benchmark.method_code}
                       </div>
                       <div className="font-display text-2xl font-extrabold text-slate-950">
@@ -544,7 +640,7 @@ export function FtuUnimapPage({
                     </thead>
                     <tbody className="divide-y divide-slate-100">
                       {benchmarks.map((benchmark) => (
-                        <tr key={benchmark.id} className="align-top transition-colors hover:bg-[#b91c1c]/[0.03]">
+                        <tr key={benchmark.id} className={`align-top transition-colors ${theme.accentHoverBg}`}>
                           <td className="px-5 py-4 font-semibold leading-6 text-slate-950">
                             {getProgramLabel(benchmarkProgramById, benchmark.program_id)}
                           </td>
@@ -564,21 +660,22 @@ export function FtuUnimapPage({
           ) : (
             <EmptyPanel text={`Chưa có dữ liệu điểm chuẩn cho năm ${selectedBenchmarkYear}.`} />
           )}
-        </SectionShell>
+          </SectionShell>
 
-        <SectionShell
-          id="tuition"
-          eyebrow="Tuition"
-          title="Học phí theo chương trình"
-          description="Hiển thị khoảng học phí theo chương trình để phụ huynh và học sinh dễ so sánh trước khi chốt nguyện vọng."
-          action={
-            <AdmissionYearSelect
-              selectedYear={selectedTuitionYear}
-              years={availableYears}
-              paramName="tuitionYear"
-            />
-          }
-        >
+          <SectionShell
+            id="tuition"
+            eyebrow="Tuition"
+            title="Học phí theo chương trình"
+            description="Hiển thị khoảng học phí theo chương trình để phụ huynh và học sinh dễ so sánh trước khi chốt nguyện vọng."
+            accentText={theme.accentText}
+            action={
+              <AdmissionYearSelect
+                selectedYear={selectedTuitionYear}
+                years={availableYears}
+                paramName="tuitionYear"
+              />
+            }
+          >
           <div className="mb-5 grid gap-4 md:grid-cols-3">
             <InfoStrip
               icon={CircleDollarSign}
@@ -604,7 +701,7 @@ export function FtuUnimapPage({
                   <div className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
                     {getProgramLabel(tuitionProgramById, fee.program_id)}
                   </div>
-                  <div className={`mt-3 font-display text-2xl font-extrabold ${FTU_ACCENT}`}>
+                  <div className={`mt-3 font-display text-2xl font-extrabold ${theme.accentText}`}>
                     {formatFeeRange(fee)}
                   </div>
                   <div className="mt-2 text-sm text-slate-500">{fee.unit ?? "Theo công bố"}</div>
@@ -619,7 +716,8 @@ export function FtuUnimapPage({
           ) : (
             <EmptyPanel text={`Chưa có dữ liệu học phí cho năm ${selectedTuitionYear}.`} />
           )}
-        </SectionShell>
+          </SectionShell>
+        </div>
       </div>
     </main>
   );

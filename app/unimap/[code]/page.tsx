@@ -41,7 +41,10 @@ import {
   PRO_MAX_NAV_ITEMS,
 } from "@/src/components/admission/AdmissionSectionNavigator";
 import { BenchmarksSection } from "@/src/components/admission/BenchmarksSection";
-import { FtuUnimapPage } from "@/src/components/admission/FtuUnimapPage";
+import {
+  BRANDED_UNIMAP_THEMES,
+  FtuUnimapPage,
+} from "@/src/components/admission/FtuUnimapPage";
 import {
   ProMaxCalculatorLinkSection,
   ProMaxContentSection,
@@ -526,7 +529,12 @@ async function renderAdmissionSchoolDetail(
       ? createFallbackProgramCombinations(programs, selectedProgramYear)
       : [];
 
-  if (school.code === "FTU" && !isProMax) {
+  const brandedTheme =
+    school.code === "FTU" || school.code === "HUST" || school.code === "NEU"
+      ? BRANDED_UNIMAP_THEMES[school.code]
+      : null;
+
+  if (brandedTheme && !isProMax) {
     return (
       <FtuUnimapPage
         school={school}
@@ -541,6 +549,7 @@ async function renderAdmissionSchoolDetail(
         selectedBenchmarkYear={selectedBenchmarkYear}
         selectedTuitionYear={selectedTuitionYear}
         availableYears={ADMISSION_YEAR_OPTIONS}
+        brand={brandedTheme}
       />
     );
   }

@@ -84,7 +84,7 @@ const productFeatures = [
     eyebrow: "Scoring",
     title: "Tính điểm xét tuyển và so sánh điểm chuẩn theo trường",
     desc: "Scoring hỗ trợ tính điểm theo phương thức xét tuyển của từng trường, đối chiếu với điểm chuẩn tham chiếu 2025 để học sinh nhìn nhanh mức độ an toàn, vừa sức hay rủi ro.",
-    href: "/unimap#calculator",
+    href: "/scoring",
     cta: "Dùng Scoring",
     icon: BarChart3,
     accent: "bg-accent/10 text-accent",
@@ -150,7 +150,7 @@ export function Homepage() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="xl" className="w-full sm:w-auto">
-                <Link href="/unimap#calculator">Dùng Scoring</Link>
+                <Link href="/scoring">Dùng Scoring</Link>
               </Button>
             </div>
 
