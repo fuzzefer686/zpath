@@ -41,6 +41,7 @@ import {
   HUST_THPT_BOLD_NOTE,
   HustThptCombinationCode as HustThptCombinationCodeLabel,
 } from "./HustThptCombinationCode";
+import { FtuAdmissionCalculatorSection } from "./FtuAdmissionCalculatorSection";
 
 type AdmissionCalculatorSectionProps = {
   schoolCode: string;
@@ -216,6 +217,7 @@ export function AdmissionCalculatorSection({
   benchmarkYear = HUST_CUTOFF_YEAR,
 }: AdmissionCalculatorSectionProps) {
   const isHust = schoolCode === "HUST";
+  const isFtu = schoolCode === "FTU";
   const schoolLabel = isSchoolCode(schoolCode) ? SCHOOL_LABELS[schoolCode] : schoolCode;
   const [method, setMethod] = useState<AdmissionMethod>("THPT");
   const [programCode, setProgramCode] = useState(
@@ -262,6 +264,16 @@ export function AdmissionCalculatorSection({
     );
     return supportedMethods.length ? supportedMethods : HUST_METHODS;
   }, [methods]);
+
+  if (isFtu) {
+    return (
+      <FtuAdmissionCalculatorSection
+        programs={programs}
+        benchmarks={benchmarks}
+        benchmarkYear={benchmarkYear}
+      />
+    );
+  }
 
   if (!isHust) {
     return (
