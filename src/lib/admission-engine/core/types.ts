@@ -1,6 +1,6 @@
 export type SchoolCode = "HUST" | "FTU" | "NEU" | "UET" | "VINUNI";
 
-export type AdmissionMethod = "THPT" | "TSA" | "XTTN";
+export type AdmissionMethod = "THPT" | "TSA" | "XTTN" | "DGNL";
 
 export type AdmissionInput = {
   schoolCode: SchoolCode;
