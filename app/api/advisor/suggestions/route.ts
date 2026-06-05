@@ -7,12 +7,32 @@ import type { GenerateContentConfig } from "@google/genai";
 export const runtime = "nodejs";
 
 const DEFAULT_SUGGESTIONS = [
-  "Review ngành Khoa học Máy tính tại Đại học Bách khoa Hà Nội",
-  "So sánh ngành Khoa học Máy tính (IT1) và Kỹ thuật Máy tính (IT2)",
-  "Học phí ngành Khoa học Máy tính tại HUST là bao nhiêu?",
-  "Cơ hội việc làm của ngành Kỹ thuật Phần mềm sau khi tốt nghiệp?",
-  "25 điểm tổ hợp A00 nên chọn ngành nào của Đại học Bách khoa?",
+  "Em hợp ngành nào nếu thích công nghệ?",
+  "25 điểm A00 nên chọn ngành nào?",
+  "Nên chọn NEU hay FTU?",
+  "Ngành Marketing học gì?",
+  "Học phí HUST khoảng bao nhiêu?",
+  "Ngành nào dễ xin việc?",
+  "So sánh IT và Kinh tế số",
+  "IELTS giúp xét tuyển thế nào?",
+  "Em thích giao tiếp nên học gì?",
+  "Ngành Logistics có phù hợp không?",
+  "Điểm chuẩn năm nay thay đổi ra sao?",
+  "Nên học ngành gì nếu không thích code?",
 ];
+
+const MAX_SUGGESTIONS = 5;
+
+function shuffleSuggestions(suggestions: string[]) {
+  const shuffled = [...suggestions];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+
+  return shuffled;
+}
 
 function stripJsonCodeFence(text: string) {
   const cleaned = text.trim();
@@ -75,7 +95,10 @@ function sanitizeJsonArray(text: string) {
 function normalizeSuggestionItems(value: unknown) {
   if (!Array.isArray(value)) return [];
 
-  return value.map((suggestion) => String(suggestion).trim()).filter(Boolean).slice(0, 5);
+  return value
+    .map((suggestion) => String(suggestion).trim())
+    .filter(Boolean)
+    .slice(0, 10);
 }
 
 function parseSuggestionsFromGeminiText(responseText: string) {
@@ -99,14 +122,21 @@ function parseSuggestionsFromGeminiText(responseText: string) {
       }
     })
     .filter(Boolean)
-    .slice(0, 5);
+    .slice(0, 10);
+}
+
+function createSuggestionsResponse(suggestions: string[], hasBio: boolean) {
+  return NextResponse.json({
+    suggestions: shuffleSuggestions(suggestions).slice(0, MAX_SUGGESTIONS),
+    hasBio,
+  });
 }
 
 export async function GET() {
   try {
     const auth = await getAuthContext();
     if (!auth) {
-      return NextResponse.json({ suggestions: DEFAULT_SUGGESTIONS, hasBio: false });
+      return createSuggestionsResponse(DEFAULT_SUGGESTIONS, false);
     }
 
     const { data: profile } = await supabaseServer
@@ -117,10 +147,7 @@ export async function GET() {
 
     const bio = profile?.bio?.trim();
     if (!bio) {
-      return NextResponse.json({
-        suggestions: DEFAULT_SUGGESTIONS,
-        hasBio: false,
-      });
+      return createSuggestionsResponse(DEFAULT_SUGGESTIONS, false);
     }
 
     // Call Gemini to generate personalized suggestions based on bio
@@ -128,17 +155,16 @@ export async function GET() {
 Dưới đây là phần tự mô tả bản thân (bio/profile) của một học sinh:
 "${bio}"
 
-Dựa trên thông tin này, hãy tạo ra 5 câu hỏi hướng nghiệp hoặc tư vấn tuyển sinh cụ thể, thiết thực và cá nhân hóa nhất mà học sinh này có thể muốn hỏi ZPath Advisor.
-Các câu hỏi này nên liên quan trực tiếp đến sở thích, năng lực, trường hoặc ngành học mà học sinh đề cập trong mô tả bản thân. Nếu mô tả quá ngắn hoặc chung chung, hãy tạo các câu hỏi hướng nghiệp phổ biến nhưng thiết kế gần gũi.
+Dựa trên thông tin này, hãy tạo ra 8-10 câu hỏi hướng nghiệp hoặc tư vấn tuyển sinh cụ thể, thiết thực và cá nhân hóa nhất mà học sinh này có thể muốn hỏi ZPath Advisor.
+Các câu hỏi này nên ngắn, đa dạng, liên quan đến sở thích, năng lực, trường hoặc ngành học mà học sinh đề cập. Nếu mô tả quá ngắn hoặc chung chung, hãy tạo các câu hỏi hướng nghiệp phổ biến nhưng thiết kế gần gũi.
 
 Yêu cầu định dạng phản hồi:
-Trả về duy nhất một mảng JSON chứa 5 chuỗi câu hỏi bằng tiếng Việt, ví dụ:
+Trả về duy nhất một mảng JSON chứa 8-10 chuỗi câu hỏi bằng tiếng Việt. Mỗi câu tối đa khoảng 70 ký tự, ví dụ:
 [
   "Câu hỏi 1...",
   "Câu hỏi 2...",
   "Câu hỏi 3...",
-  "Câu hỏi 4...",
-  "Câu hỏi 5..."
+  "Câu hỏi 4..."
 ]
 Không bao gồm bất kỳ phần text giải thích, không bọc trong markdown block. Chỉ trả về chuỗi JSON hợp lệ.`;
 
@@ -164,9 +190,9 @@ Không bao gồm bất kỳ phần text giải thích, không bọc trong markdo
       suggestions = DEFAULT_SUGGESTIONS;
     }
 
-    return NextResponse.json({ suggestions, hasBio: true });
+    return createSuggestionsResponse(suggestions, true);
   } catch (error) {
     console.error("GET /api/advisor/suggestions error:", error);
-    return NextResponse.json({ suggestions: DEFAULT_SUGGESTIONS, hasBio: false });
+    return createSuggestionsResponse(DEFAULT_SUGGESTIONS, false);
   }
 }
