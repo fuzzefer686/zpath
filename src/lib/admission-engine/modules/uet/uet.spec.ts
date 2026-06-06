@@ -17,7 +17,7 @@ const programs: UetProgram[] = UET_PROGRAMS_2026.map((program) => ({
   specialConditions: program.note ? [program.note] : undefined,
 }));
 
-const benchmarkThresholds = {
+export const UET_BENCHMARKS_2025 = {
   thpt2025: {
     CN1: 28.19,
     CN2: 27.0,
@@ -118,46 +118,26 @@ const combinations: UetCombination[] = [
 
 const admissionMethods: UetAdmissionMethod[] = [
   {
-    code: "METHOD_1",
-    name: "Xét tuyển thẳng",
-    quotaPercentage: "5%",
-    eligibility: {
-      has_national_or_international_award: true,
-      max_years_since_award: 3,
-    },
-    appliesToPrograms: "mapped_by_subject",
-  },
-  {
     code: "METHOD_2_1",
-    name: "Xét tuyển kết quả thi THPT 2026",
+    externalCode: "THPT",
+    name: "Xét tuyển theo kết quả thi tốt nghiệp THPT 2026",
     quotaPercentage: "shared_in_95_percent",
     combinations: ["A00", "A01", "X06", "A02"],
-    hardConstraints: ["requires_2026_threshold"],
+    hardConstraints: ["subject_scores_0_10", "bonus_total_cap_3", "certificate_validity_2_years"],
   },
   {
     code: "METHOD_2_2",
+    externalCode: "ĐGNL",
     name: "Xét tuyển ĐGNL (HSA)",
     quotaPercentage: "shared_in_95_percent",
     validityYears: 2,
   },
   {
     code: "METHOD_2_3",
+    externalCode: "SAT",
     name: "Xét tuyển chứng chỉ SAT",
     quotaPercentage: "shared_in_95_percent",
     validityYears: 2,
-  },
-  {
-    code: "METHOD_2_5",
-    name: "Ưu tiên xét tuyển",
-    type: "priority_bonus",
-    eligibility: { did_not_use_METHOD_1: true, valid_award_subject: true },
-  },
-  {
-    code: "METHOD_2_6",
-    name: "Xét tuyển diện dự bị đại học",
-    quotaPercentage: "1%",
-    eligibility: { completed_pre_uni_program: true, graduated_year: 2025 },
-    hardConstraints: ["uses_threshold_year_2025", "sorting_metric_THPT_2025_score_desc"],
   },
 ];
 
@@ -184,6 +164,12 @@ export const uetSpec: UetSpec = {
       maxTotalBonus: 3,
       maxComponentBonus: 1.5,
       accumulationRule: "MAX_ONLY",
+      regionPriority: {
+        KV1: 0.75,
+        "KV2-NT": 0.5,
+        KV2: 0.25,
+        KV3: 0,
+      },
     },
     certificateValidation: {
       allowedTypes: ["IELTS", "TOEFL_iBT"],
@@ -210,6 +196,7 @@ export const uetSpec: UetSpec = {
     ],
   },
   combinations,
+  benchmarks: UET_BENCHMARKS_2025,
   edgeCases: [],
   implementationNotes: [],
   unknowns: {

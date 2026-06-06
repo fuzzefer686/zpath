@@ -5,12 +5,13 @@ import type {
   SchoolAdmissionModule,
 } from "../../core/types";
 import { uetSpec } from "./uet.config";
-import { roundHalfUp } from "./uet.helpers";
 import {
   InvalidCombinationException,
   assertCombinationAllowed,
-  computeMethod1Bonus,
-  computePriorityBonus,
+  convertHsaToThpt,
+  convertSatToThpt,
+  computeTotalPriorityBonus,
+  getCombination,
   normalizeScore,
   validateCertificate,
   validateUetApplicationPayload,
@@ -49,120 +50,104 @@ function createResult(
   };
 }
 
-function calculateMethod1(input: AdmissionInput): AdmissionScoreResult {
-  const app = validateUetApplicationPayload(input.payload);
-  const baseScore = 0;
-  const bonusScore = computeMethod1Bonus(app.awards, app.programCode);
-  return createResult(input, "METHOD_1", app, baseScore, bonusScore, {
-    awardBonus: bonusScore,
-    selectedAwards: app.awards ?? [],
-  });
-}
-
-function calculateMethod25(input: AdmissionInput): AdmissionScoreResult {
-  const app = validateUetApplicationPayload(input.payload);
-  const bonusScore = computePriorityBonus(app.awards, app.programCode, app.usedMethod1);
-  const cappedBonus = roundHalfUp(Math.min(bonusScore, uetSpec.scoringRules.bonusPoints.maxTotalBonus), 2);
-  return createResult(input, "METHOD_2_5", app, 0, cappedBonus, {
-    priorityBonus: cappedBonus,
-    usedMethod1: Boolean(app.usedMethod1),
-    awardSubjects: app.awards?.map((award) => award.subject) ?? [],
-    maxComponentBonus: uetSpec.scoringRules.bonusPoints.maxComponentBonus,
-  });
-}
-
 function calculateMethod21(input: AdmissionInput): AdmissionScoreResult {
-  const app = validateUetApplicationPayload(input.payload);
+  const app = validateUetApplicationPayload(input.payload, input.method);
   assertCombinationAllowed(app.programCode, app.combinationCode);
-  const combination = uetSpec.combinations.find((c) => c.code === app.combinationCode)!;
+  const combination = getCombination(app.combinationCode);
   const scores = app.scores;
   const certificateWarnings = validateCertificate(app.certificate);
 
-  const english = scores.english ?? 0;
-  const certificate = app.certificate;
-  const certificateScore = certificate?.replacementEnglishScore ?? 0;
+  const SUBJECT_TO_SCORE_KEY: Record<string, keyof UetApplication["scores"]> = {
+    "Toán": "math",
+    "Vật lý": "physics",
+    "Lý": "physics",
+    "Hóa học": "chemistry",
+    "Hóa": "chemistry",
+    "Tiếng Anh": "english",
+    "Anh": "english",
+    "Tin học": "informatics",
+    "Tin": "informatics",
+    "Sinh học": "biology",
+    "Sinh": "biology",
+  };
+
   let baseScore = 0;
-  if (app.combinationCode === "A01") {
-    if (certificate && combination.englishReplacementAllowed) {
-      baseScore = scores.math + scores.physics + certificateScore;
-    } else {
-      baseScore = scores.math + scores.physics + english;
+  for (const subjectName of combination.subjects) {
+    const scoreKey = SUBJECT_TO_SCORE_KEY[subjectName];
+    if (!scoreKey) {
+      throw new Error(`Môn học không hỗ trợ tính điểm: ${subjectName}`);
     }
-  } else {
-    const third = app.combinationCode === "A00"
-      ? (scores.chemistry ?? 0)
-      : app.combinationCode === "X06"
-        ? (scores.informatics ?? 0)
-        : (scores.biology ?? 0);
-    baseScore = scores.math + scores.physics + third;
-    if (certificate && ["A00", "X06", "A02"].includes(app.combinationCode) && certificate.bonusPoints) {
-      baseScore += certificate.bonusPoints;
+    // For English, check certificate replacement
+    if (subjectName === "Anh" || subjectName === "Tiếng Anh") {
+      const certificate = app.certificate;
+      const certificateScore = certificate?.replacementEnglishScore ?? 0;
+      if (certificate && combination.englishReplacementAllowed) {
+        baseScore += certificateScore;
+        continue;
+      }
     }
+    baseScore += scores[scoreKey] ?? 0;
   }
-  return createResult(input, "METHOD_2_1", app, baseScore, 0, {
+
+  const bonusScore = computeTotalPriorityBonus(app);
+
+  return createResult(input, "METHOD_2_1", app, baseScore, bonusScore, {
     combination: app.combinationCode,
-    certificate: certificate ? { type: certificate.type } : null,
+    certificate: app.certificate ? { type: app.certificate.type } : null,
     certificateWarnings,
+    thirdSubject: combination.subjects[2],
+    priorityBonus: bonusScore,
   });
 }
 
 function calculateMethod22(input: AdmissionInput): AdmissionScoreResult {
-  const app = validateUetApplicationPayload(input.payload);
+  const app = validateUetApplicationPayload(input.payload, input.method);
   if (app.hsaScore === undefined || !Number.isFinite(app.hsaScore)) {
     throw new Error("HSA score is required.");
   }
-  const baseScore = app.hsaScore;
-  return createResult(input, "METHOD_2_2", app, baseScore, 0, {
-    thresholdSource: "infor_md",
+  const baseScore = convertHsaToThpt(app.hsaScore, app.hsaYear);
+  const bonusScore = computeTotalPriorityBonus(app);
+
+  return createResult(input, "METHOD_2_2", app, baseScore, bonusScore, {
+    thresholdSource: "quydoi.md",
     scoreType: "HSA",
+    rawHsaScore: app.hsaScore,
+    hsaYear: app.hsaYear ?? 2025,
+    convertedThptScore: baseScore,
+    priorityBonus: bonusScore,
   });
 }
 
 function calculateMethod23(input: AdmissionInput): AdmissionScoreResult {
-  const app = validateUetApplicationPayload(input.payload);
+  const app = validateUetApplicationPayload(input.payload, input.method);
   if (app.satScore === undefined || !Number.isFinite(app.satScore)) {
     throw new Error("SAT score is required.");
   }
-  const baseScore = app.satScore;
-  return createResult(input, "METHOD_2_3", app, baseScore, 0, {
+  const baseScore = convertSatToThpt(app.satScore);
+  const bonusScore = computeTotalPriorityBonus(app);
+
+  return createResult(input, "METHOD_2_3", app, baseScore, bonusScore, {
     thresholdSource: "infor_md",
     scoreType: "SAT",
-  });
-}
-
-function calculateMethod26(input: AdmissionInput): AdmissionScoreResult {
-  const app = validateUetApplicationPayload(input.payload);
-  if (!app.preUniversityCompleted || app.preUniversityGraduatedYear !== 2025) {
-    throw new Error("Dự bị đại học không hợp lệ.");
-  }
-  if (app.thpt2025Score === undefined || !Number.isFinite(app.thpt2025Score)) {
-    throw new Error("THPT 2025 score is required.");
-  }
-  const thresholdConfig: Record<string, number> = {
-    CN10: 22,
-    CN14: 24,
-  };
-  return createResult(input, "METHOD_2_6", app, app.thpt2025Score, 0, {
-    thresholdYear: 2025,
-    thresholdConfig,
-    sortingMetric: "THPT_2025_score_desc",
+    rawSatScore: app.satScore,
+    convertedThptScore: baseScore,
+    priorityBonus: bonusScore,
   });
 }
 
 function calculate(input: AdmissionInput): AdmissionScoreResult {
   switch (input.method as AdmissionMethod) {
-    case "METHOD_1":
-      return calculateMethod1(input);
+    case "THPT":
     case "METHOD_2_1":
       return calculateMethod21(input);
+    case "ĐGNL":
+    case "DGNL":
     case "METHOD_2_2":
       return calculateMethod22(input);
+    case "CCQT":
+    case "SAT":
     case "METHOD_2_3":
       return calculateMethod23(input);
-    case "METHOD_2_5":
-      return calculateMethod25(input);
-    case "METHOD_2_6":
-      return calculateMethod26(input);
     default:
       throw new Error(`Unsupported UET admission method: ${input.method}`);
   }
@@ -171,7 +156,10 @@ function calculate(input: AdmissionInput): AdmissionScoreResult {
 export const uetModule: SchoolAdmissionModule = {
   schoolCode: "UET",
   schoolName: uetSpec.summary.university,
-  supportedMethods: ["METHOD_1", "METHOD_2_1", "METHOD_2_2", "METHOD_2_3", "METHOD_2_5", "METHOD_2_6"],
+  supportedMethods: [
+    "METHOD_2_1", "METHOD_2_2", "METHOD_2_3",
+    "THPT", "ĐGNL", "DGNL", "CCQT", "SAT"
+  ],
   calculate,
 };
 

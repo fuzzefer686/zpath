@@ -44,7 +44,9 @@ import { BenchmarksSection } from "@/src/components/admission/BenchmarksSection"
 import {
   BRANDED_UNIMAP_THEMES,
   FtuUnimapPage,
+  type BrandedUnimapTheme,
 } from "@/src/components/admission/FtuUnimapPage";
+import { loadUetStaticData, getUetStaticProgramCombinations } from "@/src/lib/admission-data/uet-static-data";
 import {
   ProMaxCalculatorLinkSection,
   ProMaxContentSection,
@@ -423,20 +425,45 @@ async function renderAdmissionSchoolDetail(
     ? createFallbackAdmissionInfo(school, selectedProgramYear)
     : null;
 
-  const [
-    loadedPrograms,
-    loadedMethods,
-    loadedBenchmarks,
-    loadedTuitionFees,
-    loadedAdmissionInfo,
-    loadedSubjectCombinations,
-    loadedBenchmarkPrograms,
-    loadedTuitionPrograms,
-    loadedCalculatorPrograms,
-    loadedCalculatorMethods,
-    loadedCalculatorBenchmarks,
-  ] =
-    await Promise.all([
+  let loadedPrograms: AdmissionProgram[];
+  let loadedMethods: AdmissionMethodRecord[];
+  let loadedBenchmarks: Benchmark[];
+  let loadedTuitionFees: TuitionFee[];
+  let loadedAdmissionInfo: AdmissionInfo | null;
+  let loadedSubjectCombinations: SubjectCombination[];
+  let loadedBenchmarkPrograms: AdmissionProgram[];
+  let loadedTuitionPrograms: AdmissionProgram[];
+  let loadedCalculatorPrograms: AdmissionProgram[];
+  let loadedCalculatorMethods: AdmissionMethodRecord[];
+  let loadedCalculatorBenchmarks: Benchmark[];
+
+  if (school.code === "UET") {
+    const localData = loadUetStaticData(selectedProgramYear, selectedBenchmarkYear, selectedTuitionYear);
+    loadedPrograms = localData.programs;
+    loadedMethods = localData.methods;
+    loadedBenchmarks = localData.benchmarks;
+    loadedTuitionFees = localData.tuitionFees;
+    loadedAdmissionInfo = localData.admissionInfo;
+    loadedSubjectCombinations = await loadOrFallback(() => getSubjectCombinations(), [], "subject combinations");
+    loadedBenchmarkPrograms = localData.benchmarkPrograms;
+    loadedTuitionPrograms = localData.tuitionPrograms;
+    loadedCalculatorPrograms = localData.calculatorPrograms;
+    loadedCalculatorMethods = localData.calculatorMethods;
+    loadedCalculatorBenchmarks = localData.calculatorBenchmarks;
+  } else {
+    [
+      loadedPrograms,
+      loadedMethods,
+      loadedBenchmarks,
+      loadedTuitionFees,
+      loadedAdmissionInfo,
+      loadedSubjectCombinations,
+      loadedBenchmarkPrograms,
+      loadedTuitionPrograms,
+      loadedCalculatorPrograms,
+      loadedCalculatorMethods,
+      loadedCalculatorBenchmarks,
+    ] = await Promise.all([
       loadOrFallback(() => getSchoolPrograms(school.code, selectedProgramYear), [], "school programs"),
       loadOrFallback(
         () => getSchoolAdmissionMethods(school.code, selectedProgramYear),
@@ -485,6 +512,7 @@ async function renderAdmissionSchoolDetail(
         "calculator benchmarks",
       ),
     ]);
+  }
 
   const programs = loadedPrograms.length ? loadedPrograms : fallbackPrograms;
   const methods = loadedMethods.length ? loadedMethods : fallbackMethods;
@@ -519,19 +547,21 @@ async function renderAdmissionSchoolDetail(
   const subjectCombinations = loadedSubjectCombinations.length
     ? loadedSubjectCombinations
     : FALLBACK_SUBJECT_COMBINATIONS;
-  const programCombinations = loadedPrograms.length
-    ? await loadOrFallback(
-        () => getProgramCombinations(programs.map((program) => program.id), selectedProgramYear),
-        [],
-        "program combinations",
-      )
-    : canUseStaticFallback
-      ? createFallbackProgramCombinations(programs, selectedProgramYear)
-      : [];
+  const programCombinations = school.code === "UET"
+    ? getUetStaticProgramCombinations(programs.map((program) => program.id), selectedProgramYear)
+    : loadedPrograms.length
+      ? await loadOrFallback(
+          () => getProgramCombinations(programs.map((program) => program.id), selectedProgramYear),
+          [],
+          "program combinations",
+        )
+      : canUseStaticFallback
+        ? createFallbackProgramCombinations(programs, selectedProgramYear)
+        : [];
 
   const brandedTheme =
-    school.code === "FTU" || school.code === "HUST" || school.code === "NEU"
-      ? BRANDED_UNIMAP_THEMES[school.code]
+    school.code === "FTU" || school.code === "HUST" || school.code === "NEU" || school.code === "UET"
+      ? BRANDED_UNIMAP_THEMES[school.code as BrandedUnimapTheme["code"]]
       : null;
 
   if (brandedTheme && !isProMax) {

@@ -26,7 +26,9 @@ export type UetAdmissionMethodCode =
   | "METHOD_2_2"
   | "METHOD_2_3"
   | "METHOD_2_5"
-  | "METHOD_2_6";
+  | "METHOD_2_6"
+  | "TSA";
+export type UetRegionCode = "KV1" | "KV2-NT" | "KV2" | "KV3";
 
 export type UetProgram = {
   code: UetProgramCode;
@@ -45,7 +47,8 @@ export type UetCombination = {
 };
 
 export type UetAdmissionMethod = {
-  code: UetAdmissionMethodCode | "METHOD_2_5";
+  code: UetAdmissionMethodCode;
+  externalCode?: "THPT" | "ĐGNL" | "XTTN" | "CCQT" | "SAT" | "TSA";
   name: string;
   quotaPercentage?: string;
   validityYears?: number;
@@ -60,8 +63,9 @@ export type UetAward = {
   name: string;
   subject: string;
   year: number;
-  scoreBonus: number;
+  scoreBonus?: number;
   level?: "national" | "international" | "provincial" | "city";
+  rank?: "Nhất" | "Nhì" | "Ba" | "Khuyến khích";
   isGdtx?: boolean;
 };
 
@@ -92,11 +96,17 @@ export type UetApplication = {
     english?: number;
     informatics?: number;
   };
+  regionCode?: UetRegionCode;
+  regionPriorityBonus?: number;
   certificate?: UetCertificate;
   awards?: UetAward[];
   usedMethod1?: boolean;
   hsaScore?: number;
+  hsaYear?: number;
+  hsaTestDate?: string;
   satScore?: number;
+  satTestDate?: string;
+  tsaScore?: number;
   thpt2025Score?: number;
   preUniversityCompleted?: boolean;
   preUniversityGraduatedYear?: number;
@@ -126,6 +136,7 @@ export type UetSpec = {
       maxTotalBonus: number;
       maxComponentBonus: number;
       accumulationRule: "MAX_ONLY";
+      regionPriority: Record<UetRegionCode, number>;
     };
     certificateValidation: {
       allowedTypes: Array<"IELTS" | "TOEFL_iBT">;
@@ -150,6 +161,9 @@ export type UetSpec = {
   };
   edgeCases: string[];
   implementationNotes: string[];
+  benchmarks?: {
+    thpt2025: Partial<Record<UetProgramCode, number>>;
+  };
   unknowns: {
     needsVerification: string;
     pendingConfig: string;

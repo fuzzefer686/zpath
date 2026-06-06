@@ -58,6 +58,17 @@ const SCORING_SCHOOLS: ScoringSchoolOption[] = [
     accentRingClassName: "ring-sky-500/25",
     accentSoftClassName: "bg-sky-500/10",
   },
+  {
+    code: "UET",
+    shortName: "UET",
+    name: "Trường Đại học Công nghệ - ĐHQGHN",
+    status: "available",
+    avatarColor: "#0f766e",
+    accentTextClassName: "text-teal-600",
+    accentBorderClassName: "border-teal-600",
+    accentRingClassName: "ring-teal-600/25",
+    accentSoftClassName: "bg-teal-50",
+  },
 ];
 
 type ScoringPageProps = {

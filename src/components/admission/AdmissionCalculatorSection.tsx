@@ -37,7 +37,6 @@ import {
   type CertificateConversionInputValue,
   type CertificateConversionStructuredValue,
 } from "./CertificateConversionInput";
-import { FtuAdmissionCalculator } from "./FtuAdmissionCalculator";
 import { UetAdmissionCalculator } from "./UetAdmissionCalculator";
 import {
   HUST_THPT_BOLD_NOTE,
@@ -275,6 +274,10 @@ export function AdmissionCalculatorSection({
         benchmarkYear={benchmarkYear}
       />
     );
+  }
+
+  if (schoolCode === "UET") {
+    return <UetAdmissionCalculator />;
   }
 
   if (!isHust) {

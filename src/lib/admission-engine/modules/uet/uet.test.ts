@@ -4,7 +4,7 @@ import test from "node:test";
 import { calculateAdmissionScore } from "../../core/engine";
 import { InvalidCombinationException } from "./index";
 import { roundHalfUp } from "./uet.helpers";
-import { computeMethod1Bonus, validateCertificate } from "./uet.validators";
+import { computePriorityBonusFromAwards, validateCertificate } from "./uet.validators";
 
 const basePayload = {
   programCode: "CN1",
@@ -13,26 +13,16 @@ const basePayload = {
   scores: { math: 9, physics: 8, chemistry: 7, english: 6, informatics: 8, biology: 7 },
 };
 
-test("UET method 1 takes highest award only and caps at 3.0", () => {
+test("UET priority bonus caps at 1.5 and uses max award only", () => {
   assert.equal(
-    computeMethod1Bonus(
+    computePriorityBonusFromAwards(
       [
         { name: "A", level: "national", year: 2026, scoreBonus: 1.2, subject: "Toán" },
         { name: "B", level: "national", year: 2026, scoreBonus: 2.5, subject: "Vật lý" },
       ],
       "CN1",
     ),
-    2.5,
-  );
-});
-
-test("UET rejects GDTX provincial awards", () => {
-  assert.equal(
-    computeMethod1Bonus(
-      [{ name: "A", level: "provincial", year: 2026, scoreBonus: 2, subject: "Toán", isGdtx: true }],
-      "CN1",
-    ),
-    0,
+    1.5,
   );
 });
 
@@ -51,6 +41,7 @@ test("UET method 2.1 calculates THPT scores and exposes normalized details", () 
   assert.equal(result.details?.combinationCode, "A00");
   assert.equal(result.details?.baseScore, 24);
   assert.equal(result.details?.bonusScore, 0);
+  assert.equal(result.details?.thirdSubject, "Hóa");
 });
 
 test("UET certificate validation rejects online, missing skills, low scores and unsupported type", () => {
@@ -84,7 +75,7 @@ test("UET certificate validation rejects online, missing skills, low scores and 
   );
 });
 
-test("UET method 2.2 and 2.3 require score payloads", () => {
+test("UET method 2.2 converts HSA to THPT scale", () => {
   const hsa = calculateAdmissionScore({
     schoolCode: "UET",
     method: "METHOD_2_2",
@@ -94,6 +85,14 @@ test("UET method 2.2 and 2.3 require score payloads", () => {
       hsaScore: 88,
     },
   });
+
+  assert.equal(hsa.details?.scoreType, "HSA");
+  assert.equal(hsa.details?.rawHsaScore, 88);
+  assert.equal(hsa.details?.convertedThptScore, 25.03);
+  assert.equal(hsa.normalizedScore30, 25.03);
+});
+
+test("UET method 2.3 still passes SAT score through", () => {
   const sat = calculateAdmissionScore({
     schoolCode: "UET",
     method: "METHOD_2_3",
@@ -104,29 +103,8 @@ test("UET method 2.2 and 2.3 require score payloads", () => {
     },
   });
 
-  assert.equal(hsa.originalScore, 88);
-  assert.equal(hsa.details?.scoreType, "HSA");
-  assert.equal(sat.originalScore, 1320);
+  assert.equal(sat.originalScore, 27.20);
   assert.equal(sat.details?.scoreType, "SAT");
-});
-
-test("UET method 2.5 ignores awards when method 1 was used", () => {
-  const result = calculateAdmissionScore({
-    schoolCode: "UET",
-    method: "METHOD_2_5",
-    year: 2026,
-    payload: {
-      ...basePayload,
-      usedMethod1: true,
-      awards: [
-        { name: "A", level: "national", year: 2026, scoreBonus: 1.5, subject: "Toán" },
-      ],
-    },
-  });
-
-  assert.equal(result.originalScore, 0);
-  assert.equal(result.details?.usedMethod1, true);
-  assert.equal(result.details?.priorityBonus, 0);
 });
 
 test("UET rejects A02 outside CN10/CN21", () => {
@@ -147,27 +125,53 @@ test("UET rejects A02 outside CN10/CN21", () => {
   );
 });
 
-test("UET method 2.6 validates pre-university path and carries threshold config", () => {
-  const result = calculateAdmissionScore({
-    schoolCode: "UET",
-    method: "METHOD_2_6",
-    year: 2026,
-    payload: {
-      ...basePayload,
-      preUniversityCompleted: true,
-      preUniversityGraduatedYear: 2025,
-      thpt2025Score: 27.25,
-    },
-  });
-
-  assert.equal(result.details?.thresholdYear, 2025);
-  const thresholdConfig = result.details?.thresholdConfig as
-    | Record<string, string | number>
-    | undefined;
-  assert.equal(thresholdConfig?.CN10, 22);
-  assert.equal(thresholdConfig?.CN14, 24);
-});
-
 test("UET rounding half up to 2 decimals", () => {
   assert.equal(roundHalfUp(27.245, 2), 27.25);
 });
+
+test("UET method 2.2 HSA 2024 lookup works", () => {
+  const result = calculateAdmissionScore({
+    schoolCode: "UET",
+    method: "METHOD_2_2",
+    year: 2026,
+    payload: {
+      ...basePayload,
+      hsaScore: 88,
+      hsaYear: 2024,
+    },
+  });
+  assert.equal(result.normalizedScore30, 25.10);
+  assert.equal(result.details?.hsaYear, 2024);
+});
+
+test("UET method 2.3 SAT scaling works", () => {
+  const result = calculateAdmissionScore({
+    schoolCode: "UET",
+    method: "METHOD_2_3",
+    year: 2026,
+    payload: {
+      ...basePayload,
+      satScore: 1400,
+    },
+  });
+  assert.equal(result.normalizedScore30, 28.00);
+});
+
+test("UET method 2.1 THPT adds Provincial HSG priority bonus points", () => {
+  const result = calculateAdmissionScore({
+    schoolCode: "UET",
+    method: "METHOD_2_1",
+    year: 2026,
+    payload: {
+      ...basePayload,
+      scores: { math: 9, physics: 8, chemistry: 7 }, // base: 24
+      awards: [
+        { name: "Provincial Award", level: "provincial", rank: "Nhất", year: 2026, subject: "Toán", scoreBonus: 0 }
+      ]
+    },
+  });
+  // auto score bonus should be 2.5, capped at 1.5. Base = 24. Total = 25.5
+  assert.equal(result.normalizedScore30, 25.50);
+  assert.equal(result.details?.priorityBonus, 1.5);
+});
+
