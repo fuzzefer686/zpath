@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowUpRight, Calculator, ShieldCheck } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { AdmissionCalculatorSection } from "@/src/components/admission/AdmissionCalculatorSection";
+import {
+  ScoringSchoolSelector,
+  type ScoringSchoolCode,
+  type ScoringSchoolOption,
+} from "@/src/components/admission/ScoringSchoolSelector";
 import {
   getSchoolAdmissionMethods,
   getSchoolBenchmarks,
@@ -17,7 +19,63 @@ export const metadata: Metadata = {
 };
 
 const SCORING_SCHOOL_CODE = "HUST";
+const SCORING_ADMISSION_YEAR = 2026;
 const SCORING_BENCHMARK_YEAR = 2025;
+
+const SCORING_SCHOOLS: ScoringSchoolOption[] = [
+  {
+    code: "HUST",
+    shortName: "HUST",
+    name: "Đại học Bách khoa Hà Nội",
+    status: "available",
+    avatarColor: "#ef4444",
+    accentTextClassName: "text-red-500",
+    accentBorderClassName: "border-red-500",
+    accentRingClassName: "ring-red-500/25",
+    accentSoftClassName: "bg-red-50",
+  },
+  {
+    code: "FTU",
+    shortName: "FTU",
+    name: "Đại học Ngoại Thương",
+    status: "available",
+    avatarUrl: "/FTU_logo_2020.png",
+    avatarColor: "#b91c1c",
+    accentTextClassName: "text-red-700",
+    accentBorderClassName: "border-red-700",
+    accentRingClassName: "ring-red-700/25",
+    accentSoftClassName: "bg-red-700/10",
+  },
+  {
+    code: "NEU",
+    shortName: "NEU",
+    name: "Đại học Kinh tế Quốc dân",
+    status: "coming_soon",
+    avatarUrl: "/Logo-NEU.png",
+    avatarColor: "#0ea5e9",
+    accentTextClassName: "text-sky-500",
+    accentBorderClassName: "border-sky-500",
+    accentRingClassName: "ring-sky-500/25",
+    accentSoftClassName: "bg-sky-500/10",
+  },
+];
+
+type ScoringPageProps = {
+  searchParams?: Promise<{
+    school?: string | string[];
+  }>;
+};
+
+function getSelectedSchoolCode(
+  schoolParam: string | string[] | undefined,
+): ScoringSchoolCode {
+  const rawSchool = Array.isArray(schoolParam) ? schoolParam[0] : schoolParam;
+  const normalizedSchool = rawSchool?.toUpperCase();
+
+  return SCORING_SCHOOLS.some((school) => school.code === normalizedSchool)
+    ? (normalizedSchool as ScoringSchoolCode)
+    : SCORING_SCHOOL_CODE;
+}
 
 async function loadOrFallback<T>(
   load: () => Promise<T>,
@@ -32,20 +90,22 @@ async function loadOrFallback<T>(
   }
 }
 
-export default async function ScoringPage() {
+export default async function ScoringPage({ searchParams }: ScoringPageProps) {
+  const resolvedSearchParams = await searchParams;
+  const selectedSchoolCode = getSelectedSchoolCode(resolvedSearchParams?.school);
   const [programs, methods, benchmarks] = await Promise.all([
     loadOrFallback(
-      () => getSchoolPrograms(SCORING_SCHOOL_CODE, SCORING_BENCHMARK_YEAR),
+      () => getSchoolPrograms(selectedSchoolCode, SCORING_ADMISSION_YEAR),
       [],
       "programs",
     ),
     loadOrFallback(
-      () => getSchoolAdmissionMethods(SCORING_SCHOOL_CODE, SCORING_BENCHMARK_YEAR),
+      () => getSchoolAdmissionMethods(selectedSchoolCode, SCORING_ADMISSION_YEAR),
       [],
       "admission methods",
     ),
     loadOrFallback(
-      () => getSchoolBenchmarks(SCORING_SCHOOL_CODE, SCORING_BENCHMARK_YEAR),
+      () => getSchoolBenchmarks(selectedSchoolCode, SCORING_BENCHMARK_YEAR),
       [],
       "benchmarks",
     ),
@@ -53,42 +113,14 @@ export default async function ScoringPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <section className="relative overflow-hidden border-b border-border bg-gradient-to-br from-primary/10 via-background to-accent/10 py-12 md:py-16">
-        <div className="absolute inset-0 grid-dots opacity-30" />
-        <div className="container-page relative">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              <Calculator className="h-4 w-4" />
-              Scoring
-            </div>
-            <h1 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
-              Tính điểm xét tuyển
-            </h1>
-            <p className="mt-4 max-w-3xl text-base leading-7 text-muted-foreground md:text-lg">
-              Nhập điểm theo phương thức xét tuyển đang hỗ trợ, sau đó so sánh
-              nhanh với điểm chuẩn tham chiếu {SCORING_BENCHMARK_YEAR} để đánh
-              giá mức độ an toàn của nguyện vọng.
-            </p>
+      <section className="container-page space-y-6 py-6 md:py-8">
+        <ScoringSchoolSelector
+          options={SCORING_SCHOOLS}
+          selectedSchoolCode={selectedSchoolCode}
+        />
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button asChild variant="outline">
-                <Link href="/unimap/hust">
-                  Xem dữ liệu HUST
-                  <ArrowUpRight className="h-4 w-4" />
-                </Link>
-              </Button>
-              <div className="inline-flex min-h-10 items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-muted-foreground">
-                <ShieldCheck className="h-4 w-4 text-tier-high" />
-                Kết quả chỉ mang tính tham khảo
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="container-page py-10 md:py-12">
         <AdmissionCalculatorSection
-          schoolCode={SCORING_SCHOOL_CODE}
+          schoolCode={selectedSchoolCode}
           programs={programs}
           benchmarks={benchmarks}
           methods={methods}

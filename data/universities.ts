@@ -33,6 +33,9 @@ export interface University {
 const HUST_LOGO_URL =
   "https://upload.wikimedia.org/wikipedia/vi/e/ef/Logo_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%C3%A1ch_Khoa_H%C3%A0_N%E1%BB%99i.svg";
 
+const FTU_LOGO_URL = "/FTU_logo_2020.png";
+const NEU_LOGO_URL = "/Logo-NEU.png";
+
 const HUST_HERO_IMAGE_URL =
   "https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/484718587_1053901893434470_7118580338303601839_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFSgiHith2GgA0cciMCK-QY1KuwcEm-uBbUq7BwSb64Fr4ycEQxOttkBvFACdosWbWHopQp0kwi7w6YBdZGF4Br&_nc_ohc=4Z8i6yRIea4Q7kNvwF9qvsJ&_nc_oc=AdpEOc8tab0vgAk5NvFIMX3ec85xu6lKOJYy4XqDZLh-sAM8MRoIPxQo1dKqTtDG4Us&_nc_zt=23&_nc_ht=scontent.fhan14-1.fna&_nc_gid=3HVton6JrMSELWQU-A6JOQ&_nc_ss=7b2a8&oh=00_Af5pt3lN34nmV88zpmvE1A-2GwwPFxGjOkZXxwjCy0fxcg&oe=6A1A2DF4";
 
@@ -69,6 +72,8 @@ export const UNIVERSITIES: University[] = [
     city: "Hà Nội",
     website: "https://neu.edu.vn",
     heroGradient: "from-emerald-500 via-teal-500 to-cyan-500",
+    unimapImageUrl: NEU_LOGO_URL,
+    avatarUrl: NEU_LOGO_URL,
     about:
       "Đại học Kinh tế Quốc dân là trường đầu ngành về kinh tế, quản trị và tài chính tại Việt Nam.",
     highlights: [
@@ -104,6 +109,8 @@ export const UNIVERSITIES: University[] = [
       { name: "Marketing Quốc tế", majorCode: "MKT", programCode: "FTU02", admissionScore2025: 28.1, tuitionPerSemester: 12 },
       { name: "Logistics & Quản lý chuỗi cung ứng", programCode: "FTU04", admissionScore2025: 27.95, tuitionPerSemester: 12 },
     ],
+    unimapImageUrl: FTU_LOGO_URL,
+    avatarUrl: FTU_LOGO_URL,
   },
   {
     code: "VINUNI",

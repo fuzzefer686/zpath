@@ -43,6 +43,7 @@ import {
   HUST_THPT_BOLD_NOTE,
   HustThptCombinationCode as HustThptCombinationCodeLabel,
 } from "./HustThptCombinationCode";
+import { FtuAdmissionCalculatorSection } from "./FtuAdmissionCalculatorSection";
 
 type AdmissionCalculatorSectionProps = {
   schoolCode: string;
@@ -268,16 +269,12 @@ export function AdmissionCalculatorSection({
 
   if (isFtu) {
     return (
-      <FtuAdmissionCalculator
+      <FtuAdmissionCalculatorSection
         programs={programs}
         benchmarks={benchmarks}
         benchmarkYear={benchmarkYear}
       />
     );
-  }
-
-  if (schoolCode === "UET") {
-    return <UetAdmissionCalculator />;
   }
 
   if (!isHust) {

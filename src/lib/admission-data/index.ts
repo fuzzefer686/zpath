@@ -237,7 +237,7 @@ export async function getSchoolBenchmarks(
   const { data: programs, error: programsError } = await withAdmissionDataTimeout(
     supabaseServer
       .from("admission_programs")
-      .select("id, program_code, year")
+      .select("id, program_code, program_name, major_code, major_name, year")
       .in("id", programIds),
   );
 
@@ -253,6 +253,9 @@ export async function getSchoolBenchmarks(
       program.id,
       {
         program_code: program.program_code,
+        program_name: program.program_name,
+        major_code: program.major_code,
+        major_name: program.major_name,
         year: program.year,
       },
     ]),
