@@ -1,0 +1,2 @@
+﻿id,entity_type,entity_id,school_code,source_name,source_url,source_type,verified_status,last_checked_at,note,created_at
+89c69795-2cc0-4ef7-a111-6f820be5d6ad,school,b9cfa670-360f-4d1b-a506-a5ab8d8e055e,QHI,Cổng thông tin tuyển sinh chính thức Trường Đại học Công nghệ,https://tuyensinh.uet.vnu.edu.vn,official_admission_page,verified,2026-05-28 15:00:00+00,Dữ liệu được trích xuất trực tiếp từ Đề án tuyển sinh ĐHCQ ban hành năm 2025 của Hiệu trưởng nhà trường.,2026-05-28 15:00:00+00

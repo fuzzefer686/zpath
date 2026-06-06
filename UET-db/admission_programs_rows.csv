@@ -1,0 +1,20 @@
+﻿id,school_code,program_code,program_name,major_code,major_name,year,quota,degree_level,training_type,note,source_url,created_at
+a1888a08-3161-4bc6-825b-230eb122ba0e,QHI,CN1,Công nghệ thông tin,7480201,Công nghệ thông tin,2025,500,Đại học,Chính quy chuẩn,Ngành trọng điểm,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+86054f0c-5707-4a0d-891d-39464fb5e0f4,QHI,CN2,Kỹ thuật máy tính,7480106,Kỹ thuật máy tính,2025,150,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+03c3aa53-3974-4629-919d-509208330e7f,QHI,CN3,Vật lý kỹ thuật,7520401,Vật lý kỹ thuật,2025,100,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+79c818e3-a7cd-4d70-804c-b34b605e9499,QHI,CN4,Cơ kỹ thuật,7520101,Cơ kỹ thuật,2025,100,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+76b955e6-6ad4-4ed4-8fa4-53a30e59397a,QHI,CN5,Khoa học máy tính,7480101,Khoa học máy tính,2025,300,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+b3c661bc-1aaa-43a5-8e74-cebe87fd533b,QHI,CN6,Mạng máy tính và Truyền thông dữ liệu,7480102,Mạng máy tính và Truyền thông dữ liệu,2025,120,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+6745735f-cfcf-4e11-b2e1-4929b1696963,QHI,CN7,Kỹ thuật phần mềm,7480103,Kỹ thuật phần mềm,2025,200,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+c2c26497-e527-4896-aa4a-54cf87274468,QHI,CN8,Hệ thống thông tin,7480104,Hệ thống thông tin,2025,120,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+2ef6dffa-991b-4728-95ee-1748d73c89d5,QHI,CN9,Sư phạm Công nghệ,7140211,Sư phạm Công nghệ,2025,50,Đại học,Chính quy chuẩn,Miễn học phí theo quy định,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+a870896b-5f14-4f5f-be31-166a0e91729d,QHI,CN11,Công nghệ kỹ thuật cơ điện tử,7510406,Công nghệ kỹ thuật cơ điện tử,2025,180,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+0b8cea27-167b-4bb2-8bb2-1d1bfc856a01,QHI,CN12,"Công nghệ kỹ thuật điện tử, viễn thông",7510401,"Công nghệ kỹ thuật điện tử, viễn thông",2025,200,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+613c6bb4-2d60-4e83-bcff-f36325d74ddb,QHI,CN14,Kỹ thuật Điều khiển và Tự động hóa,7520216,Kỹ thuật Điều khiển và Tự động hóa,2025,150,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+b6a7e22f-0321-40df-be1b-553db9298261,QHI,CN15,Kỹ thuật Năng lượng,7520215,Kỹ thuật Năng lượng,2025,80,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+0f08fa42-e70d-443b-b58a-9e6ec2274703,QHI,CN16,Kỹ thuật Điện tử - Viễn thông,7520201,Kỹ thuật Điện tử - Viễn thông,2025,120,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+3f422361-1972-4656-a4b3-1a2468a9b361,QHI,CN17,Kỹ thuật Robot,7520218,Kỹ thuật Robot,2025,100,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+24e841ea-6d33-4e65-9834-2746dd36add1,QHI,CN18,Thiết kế công nghiệp và đồ họa,7529001,Thiết kế công nghiệp và đồ họa,2025,100,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+fe4dee7d-9bcc-493f-9d40-b97f5f1598d5,QHI,CN19,An toàn thông tin,7480202,An toàn thông tin,2025,120,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+7e90a057-eedc-41fe-896a-74cf060984fc,QHI,CN20,Khoa học dữ liệu,7480109,Khoa học dữ liệu,2025,100,Đại học,Chính quy chuẩn,,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+a57fc662-d8ba-413c-a695-1a65ca31622b,QHI,CN21,Công nghệ vi mạch bán dẫn,7510402,Công nghệ vi mạch bán dẫn,2025,100,Đại học,Chính quy chuẩn,Ngành mới đáp ứng xu thế,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00

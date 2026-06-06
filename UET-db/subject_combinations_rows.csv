@@ -1,0 +1,6 @@
+﻿id,code,subjects,description
+d87b66f3-32a6-4085-817c-c13c7681f56c,A00,"[""Toán"", ""Vật lý"", ""Hóa học""]",Khối A00 truyền thống
+e818dbab-7d8a-45d7-a195-cfea2be504cc,A01,"[""Toán"", ""Vật lý"", ""Tiếng Anh""]",Khối A01 hiện đại
+c4c39a5c-c473-45f6-8fee-75e535b8c62c,D01,"[""Toán"", ""Ngữ văn"", ""Tiếng Anh""]",Khối D01
+4e63e586-216c-46d0-9f71-c7136fd6147b,D07,"[""Toán"", ""Hóa học"", ""Tiếng Anh""]",Khối D07
+4b4ee10a-b556-4a21-b2f9-32c372f5ef92,D08,"[""Toán"", ""Sinh học"", ""Tiếng Anh""]",Khối D08

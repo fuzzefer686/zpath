@@ -33,6 +33,7 @@ function runAdmissionEngineChecks() {
     method: "THPT",
     year: 2025,
     payload: {
+      programCode: "ED2",
       combinationCode: "A00",
       scores: {
         math: 9,
@@ -51,6 +52,7 @@ function runAdmissionEngineChecks() {
         method: "THPT",
         year: 2025,
         payload: {
+          programCode: "ED2",
           combinationCode: "A00",
           scores: {
             math: 9,
@@ -58,7 +60,7 @@ function runAdmissionEngineChecks() {
           },
         },
       }),
-    'score for required subject "chemistry" is missing',
+    "Vui lòng nhập",
     "HUST THPT missing required subject",
   );
 
@@ -77,14 +79,49 @@ function runAdmissionEngineChecks() {
     method: "XTTN",
     year: 2025,
     payload: {
-      xttnScore: 90,
-      scale: 100,
+      subtype: "portfolio_interview",
+      tsaScore: 60,
+      achievementScore: 50,
+      bonusScoreManual: 10,
     },
   });
-  assertEqual(xttn.normalizedScore30, 27, "HUST XTTN normalized score");
+  assertEqual(xttn.normalizedScore30, 30, "HUST XTTN normalized score");
 
   const chance = evaluateAdmissionChance(28, 26);
   assertEqual(chance.level, "VERY_HIGH", "Admission chance level");
+
+  const ftuHocBa = calculateAdmissionScore({
+    schoolCode: "FTU",
+    method: "HOC_BA",
+    year: 2026,
+    payload: {
+      programCode: "NTH.KT.H02",
+      combinationCode: "A00",
+      scores: { math: 8, physics: 9, chemistry: 7 },
+    },
+  });
+  assertEqual(ftuHocBa.normalizedScore30, 24, "FTU HOC_BA group 1 normalized score");
+
+  const ftuGroup2 = calculateAdmissionScore({
+    schoolCode: "FTU",
+    method: "DGNL",
+    year: 2026,
+    payload: { programCode: "NTH.CN.H18", testType: "HSA", testScore: 125 },
+  });
+  assertEqual(ftuGroup2.originalScore, 38, "FTU DGNL group 2 original score (scale 40)");
+  assertEqual(ftuGroup2.normalizedScore30, 28.5, "FTU DGNL group 2 normalized score");
+
+  assertThrows(
+    () =>
+      calculateAdmissionScore({
+        schoolCode: "FTU",
+        method: "DGNL",
+        year: 2026,
+        payload: { programCode: "NTH.KT.H02", testType: "TSA", testScore: 85 },
+      }),
+    "không xét tuyển bằng",
+    "FTU TSA restricted to group 2 programs",
+  );
 }
 
 runAdmissionEngineChecks();

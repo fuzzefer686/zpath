@@ -18,7 +18,20 @@ type AdmissionCalculateRequest = {
 };
 
 const SCHOOL_CODES: readonly SchoolCode[] = ["HUST", "FTU", "NEU", "UET", "VINUNI"];
-const ADMISSION_METHODS: readonly AdmissionMethod[] = ["THPT", "TSA", "XTTN"];
+const ADMISSION_METHODS: readonly AdmissionMethod[] = [
+  "THPT",
+  "TSA",
+  "XTTN",
+  "HOC_BA",
+  "DGNL",
+  "XTT",
+  "METHOD_1",
+  "METHOD_2_1",
+  "METHOD_2_2",
+  "METHOD_2_3",
+  "METHOD_2_5",
+  "METHOD_2_6",
+];
 
 export const runtime = "nodejs";
 
@@ -46,7 +59,9 @@ function parseAdmissionCalculateRequest(
   }
 
   if (!isAdmissionMethod(body.method)) {
-    throw new Error('method must be one of: "THPT", "TSA", "XTTN".');
+    throw new Error(
+      'method must be one of: "THPT", "TSA", "XTTN", "HOC_BA", "DGNL", "XTT".',
+    );
   }
 
   if (typeof body.year !== "number" || !Number.isInteger(body.year)) {

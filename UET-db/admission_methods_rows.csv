@@ -1,0 +1,5 @@
+﻿id,school_code,method_code,method_name,year,description,is_active,source_url,created_at
+d3267192-0e78-47c0-988e-fee6393397de,QHI,THPT,Xét tuyển theo kết quả thi tốt nghiệp THPT năm 2025,2025,Phương thức xét tuyển mã THPT áp dụng cho năm tuyển sinh 2025 tại UET.,True,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+1f6bde1f-be0e-4f5f-aef4-7d07e977d57b,QHI,ĐGNL,Xét tuyển theo kết quả thi Đánh giá năng lực do ĐHQGHN tổ chức,2025,Phương thức xét tuyển mã ĐGNL áp dụng cho năm tuyển sinh 2025 tại UET.,True,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+934f800a-8ee6-4b5b-b4f0-2c03f33a4510,QHI,XTTN,"Xét tuyển thẳng, ưu tiên xét tuyển theo quy chế của Bộ GD&ĐT và ĐHQGHN",2025,Phương thức xét tuyển mã XTTN áp dụng cho năm tuyển sinh 2025 tại UET.,True,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
+8d6ed369-f777-48d4-98cc-97e61c6e96b0,QHI,CCQT,Xét tuyển kết hợp chứng chỉ ngoại ngữ quốc tế (IELTS...) với kết quả học tập hoặc điểm thi,2025,Phương thức xét tuyển mã CCQT áp dụng cho năm tuyển sinh 2025 tại UET.,True,https://tuyensinh.uet.vnu.edu.vn,2026-05-28 15:00:00+00
