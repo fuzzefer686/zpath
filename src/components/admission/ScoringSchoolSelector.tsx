@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 
-export type ScoringSchoolCode = "HUST" | "FTU" | "NEU";
+export type ScoringSchoolCode = "HUST" | "FTU" | "NEU" | "UET";
 
 export type ScoringSchoolOption = {
   code: ScoringSchoolCode;

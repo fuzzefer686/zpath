@@ -15,10 +15,8 @@ function calculate(input: AdmissionInput): AdmissionScoreResult {
       return calculateHustTsaScore(input);
     case "XTTN":
       return calculateHustXttnScore(input);
-    default: {
-      const unsupportedMethod: never = input.method;
-      throw new Error(`Unsupported HUST admission method: ${unsupportedMethod}`);
-    }
+    default:
+      throw new Error(`Unsupported HUST admission method: ${input.method}`);
   }
 }
 
