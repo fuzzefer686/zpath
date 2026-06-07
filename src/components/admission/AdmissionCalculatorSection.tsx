@@ -37,6 +37,7 @@ import {
   type CertificateConversionInputValue,
   type CertificateConversionStructuredValue,
 } from "./CertificateConversionInput";
+import { UetAdmissionCalculator } from "./UetAdmissionCalculator";
 import {
   HUST_THPT_BOLD_NOTE,
   HustThptCombinationCode as HustThptCombinationCodeLabel,
@@ -74,7 +75,7 @@ const HUST_CALCULATOR_YEAR = 2026;
 const HUST_CUTOFF_YEAR = 2025;
 const HUST_ENGLISH_CERTIFICATE_COMBINATIONS = new Set(["A01", "D01", "D07"]);
 
-const METHOD_LABELS: Record<AdmissionMethod, string> = {
+const METHOD_LABELS: Partial<Record<AdmissionMethod, string>> = {
   XTTN: "Xét tuyển tài năng",
   TSA: "Đánh giá tư duy",
   THPT: "Điểm thi THPT",
@@ -273,6 +274,10 @@ export function AdmissionCalculatorSection({
         benchmarkYear={benchmarkYear}
       />
     );
+  }
+
+  if (schoolCode === "UET") {
+    return <UetAdmissionCalculator />;
   }
 
   if (!isHust) {

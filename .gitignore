@@ -49,3 +49,7 @@ next-env.d.ts
 /supabase/migrations/20260429162009_add_personality_questions.sql
 data/raw/
 data/processed/
+
+# New
+.cursorignore
+.codegraph

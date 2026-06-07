@@ -44,8 +44,8 @@ type FtuUnimapPageProps = {
   brand?: BrandedUnimapTheme;
 };
 
-type BrandedUnimapTheme = {
-  code: "FTU" | "HUST" | "NEU";
+export type BrandedUnimapTheme = {
+  code: "FTU" | "HUST" | "NEU" | "UET";
   background: string;
   stickyBackground: string;
   heroFade: string;
@@ -139,6 +139,30 @@ export const BRANDED_UNIMAP_THEMES: Record<BrandedUnimapTheme["code"], BrandedUn
       "Thông tin tuyển sinh NEU được gom thành một trang dễ quét cho nhóm ngành kinh tế: phương thức, chương trình, điểm chuẩn và học phí.",
     emptyFallback: "UniMap đang cập nhật mô tả chi tiết cho NEU.",
   },
+  UET: {
+    code: "UET",
+    background: "bg-[#f0f4f8]",
+    stickyBackground: "bg-[#f0f4f8]/90",
+    heroFade: "from-[#f0f4f8]",
+    accentText: "text-[#1d4ed8]",
+    accentBg: "bg-[#1d4ed8]",
+    accentBorder: "border-[#1d4ed8]/20",
+    accentSoftBg: "bg-[#eff6ff]",
+    accentTintBg: "bg-[#1d4ed8]/10",
+    accentHoverBg: "hover:bg-[#1d4ed8]/[0.035]",
+    navHover: "hover:border-[#1d4ed8]/30 hover:bg-[#1d4ed8]/5 hover:text-[#1d4ed8]",
+    navActive: "border-[#1d4ed8] bg-[#1d4ed8] text-white",
+    heroOverlay:
+      "bg-[linear-gradient(115deg,rgba(15,23,42,0.98)_0%,rgba(30,58,138,0.9)_48%,rgba(29,78,216,0.72)_100%)]",
+    badge: "border-blue-200/20 bg-blue-500/15 text-blue-100",
+    eyebrow: "UET tech brief",
+    overviewTitle: "Nhìn nhanh bức tranh công nghệ trước khi chọn ngành",
+    overviewDescription:
+      "Quy mô chương trình, phương thức xét tuyển và xu hướng điểm tuyển sinh của Đại học Công nghệ.",
+    descriptionFallback:
+      "Thông tin tuyển sinh UET được tổng hợp thành một trang trực quan cho nhóm ngành kỹ thuật, công nghệ thông tin và điện tử viễn thông: phương thức, chương trình, điểm chuẩn và học phí.",
+    emptyFallback: "UniMap đang cập nhật mô tả chi tiết cho UET.",
+  },
 };
 
 function formatNumber(value: number) {
@@ -150,6 +174,7 @@ function formatNullableNumber(value: number | null | undefined) {
 }
 
 function formatScore(score: number, scale: number | null) {
+  if (score === 0) return "Đang cập nhật";
   return `${score.toFixed(2).replace(/\.00$/, "")}/${scale ?? 30}`;
 }
 
