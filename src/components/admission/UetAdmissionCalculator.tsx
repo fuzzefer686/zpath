@@ -4,7 +4,13 @@ import { useMemo, useState } from "react";
 import { Calculator } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import type { AdmissionScoreResult } from "@/src/lib/admission-engine";
 import { UET_BENCHMARKS_2025 } from "@/src/lib/admission-engine/modules/uet/uet.spec";
@@ -232,28 +238,30 @@ export function UetAdmissionCalculator() {
   }
 
   return (
-    <Card className="border border-border/60 bg-background/95 shadow-sm">
-      <CardHeader className="space-y-2">
-        <CardTitle className="flex items-center gap-2 text-xl">
-          <Calculator className="h-5 w-5 text-primary" />
-          Công cụ tính điểm xét tuyển UET
+    <Card className="overflow-hidden rounded-2xl border-foreground/10 bg-card/95 shadow-sm">
+      <CardHeader className="border-b border-border bg-teal-600/5">
+        <CardTitle className="flex items-center gap-2 text-xl font-black">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-600/10 text-teal-700">
+            <Calculator className="h-5 w-5" />
+          </span>
+          Tính điểm UET
         </CardTitle>
-        <p className="text-sm text-muted-foreground">
+        <CardDescription>
           Chọn đúng phương thức và chỉ nhập các trường liên quan để tránh nhầm
           lẫn.
-        </p>
+        </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 p-5 md:p-6">
         <div className="grid gap-3 text-sm md:grid-cols-3">
-          <div className="rounded-lg border border-border bg-muted/30 p-3">
+          <div className="rounded-xl border border-border bg-muted/30 p-3">
             <div className="text-xs font-semibold uppercase text-muted-foreground">Năm tuyển sinh</div>
             <div className="mt-1 font-medium text-foreground">2026</div>
           </div>
-          <div className="rounded-lg border border-border bg-muted/30 p-3">
+          <div className="rounded-xl border border-border bg-muted/30 p-3">
             <div className="text-xs font-semibold uppercase text-muted-foreground">Điểm chuẩn so sánh</div>
             <div className="mt-1 font-medium text-foreground">2025</div>
           </div>
-          <div className="rounded-lg border border-border bg-muted/30 p-3">
+          <div className="rounded-xl border border-border bg-muted/30 p-3">
             <div className="text-xs font-semibold uppercase text-muted-foreground">Mốc tham chiếu</div>
             <div className="mt-1 font-medium text-foreground">
               {selectedBenchmark?.toFixed(2) ?? "--"}/30
@@ -591,18 +599,18 @@ export function UetAdmissionCalculator() {
         ) : null}
 
         <div className="grid gap-4 md:grid-cols-2">
-          <div className="rounded-lg border bg-muted/20 p-4 space-y-2">
+          <div className="space-y-2 rounded-xl border bg-muted/20 p-4">
             <div className="text-sm font-semibold">Điểm chuẩn 2025</div>
-            <div className="text-2xl font-bold">
+            <div className="text-2xl font-black">
               {selectedBenchmark?.toFixed(2) ?? "--"}/30
             </div>
             <div className="text-xs text-muted-foreground">
               THPT 2025 theo ngành đang chọn
             </div>
           </div>
-          <div className="rounded-lg border bg-muted/20 p-4 space-y-2">
+          <div className="space-y-2 rounded-xl border bg-muted/20 p-4">
             <div className="text-sm font-semibold">Học phí 2025</div>
-            <div className="text-2xl font-bold">
+            <div className="text-2xl font-black">
               {selectedTuition
                 ? selectedTuition.minFee === 0 && selectedTuition.maxFee === 0
                   ? "Miễn phí"
@@ -616,11 +624,11 @@ export function UetAdmissionCalculator() {
         </div>
 
         {scoreResult ? (
-          <div className="grid gap-4 rounded-lg border p-4 md:grid-cols-2">
+          <div className="grid gap-4 rounded-2xl border border-teal-600/15 bg-teal-600/5 p-4 md:grid-cols-2">
             <div className="space-y-3">
               <div>
                 <div className="text-sm font-semibold">Kết quả</div>
-                <div className="text-3xl font-bold">
+                <div className="text-3xl font-black tracking-tight">
                   {scoreResult.normalizedScore30.toFixed(2)}/30
                 </div>
                 <div className="mt-1 text-xs text-muted-foreground">

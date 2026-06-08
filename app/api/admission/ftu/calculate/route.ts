@@ -29,8 +29,8 @@ function parseRequestBody(body: unknown): FTUCalculateRequest {
     throw new Error("payload.schoolCode must be FTU.");
   }
 
-  if (body.payload.admissionYear !== 2026) {
-    throw new Error("payload.admissionYear must be 2026.");
+  if (body.payload.admissionYear !== 2025 && body.payload.admissionYear !== 2026) {
+    throw new Error("payload.admissionYear must be 2025 or 2026.");
   }
 
   return {

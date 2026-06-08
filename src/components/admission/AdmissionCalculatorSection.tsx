@@ -4,7 +4,13 @@ import { useMemo, useState } from "react";
 import { Calculator } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import {
   HUST_ADMISSION_PROGRAMS_2026,
@@ -482,14 +488,19 @@ export function AdmissionCalculatorSection({
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-xl">
-          <Calculator className="h-5 w-5 text-primary" />
-          Công cụ tính điểm xét tuyển HUST
+    <Card className="overflow-hidden rounded-2xl border-foreground/10 bg-card/95 shadow-sm">
+      <CardHeader className="border-b border-border bg-muted/25">
+        <CardTitle className="flex items-center gap-2 text-xl font-black">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <Calculator className="h-5 w-5" />
+          </span>
+          Tính điểm HUST
         </CardTitle>
+        <CardDescription>
+          Nhập điểm theo phương thức xét tuyển, ZPATH sẽ quy đổi và so sánh với điểm chuẩn tham chiếu.
+        </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 p-5 md:p-6">
         <div className="grid gap-4 md:grid-cols-3">
           <label className="space-y-2">
             <span className="text-sm font-semibold">Phương thức xét tuyển</span>
@@ -782,7 +793,12 @@ export function AdmissionCalculatorSection({
           </div>
         ) : null}
 
-        <Button type="button" onClick={handleCalculate} disabled={isCalculating}>
+        <Button
+          type="button"
+          onClick={handleCalculate}
+          disabled={isCalculating}
+          className="w-full sm:w-auto"
+        >
           {isCalculating ? "Đang tính..." : "Tính điểm xét tuyển"}
         </Button>
 
@@ -793,8 +809,8 @@ export function AdmissionCalculatorSection({
         ) : null}
 
         {scoreResult && comparison ? (
-          <div className="space-y-5 rounded-lg border border-border bg-background p-5">
-            <div className="grid gap-4 md:grid-cols-4">
+          <div className="space-y-5 rounded-2xl border border-primary/15 bg-primary/5 p-4 md:p-5">
+            <div className="grid gap-3 md:grid-cols-4">
               <ResultStat
                 label="Điểm của bạn"
                 value={
@@ -829,7 +845,7 @@ export function AdmissionCalculatorSection({
               />
             </div>
 
-            <div className="rounded-lg border border-border bg-muted/20 p-4 text-sm">
+            <div className="rounded-xl border border-border bg-background/80 p-4 text-sm">
               <div className="font-semibold">
                 {selectedProgram?.code} - {selectedProgram?.name}
               </div>
@@ -849,7 +865,7 @@ export function AdmissionCalculatorSection({
               Công thức: {scoreResult.formulaUsed}
             </p>
 
-            <p className="rounded-lg bg-muted/40 p-3 text-xs leading-5 text-muted-foreground">
+            <p className="rounded-xl bg-background/70 p-3 text-xs leading-5 text-muted-foreground">
               {DISCLAIMER}
             </p>
           </div>
@@ -861,7 +877,7 @@ export function AdmissionCalculatorSection({
 
 function InfoPill({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-lg border border-border bg-muted/30 p-3">
+    <div className="rounded-xl border border-border bg-muted/30 p-3">
       <div className="text-xs font-semibold uppercase text-muted-foreground">{label}</div>
       <div className="mt-1 font-medium text-foreground">{value}</div>
     </div>
@@ -878,9 +894,9 @@ function ResultStat({
   className?: string;
 }) {
   return (
-    <div className="rounded-lg border border-border p-4">
+    <div className="rounded-xl border border-border bg-background/80 p-4">
       <div className="text-xs font-semibold uppercase text-muted-foreground">{label}</div>
-      <div className={`mt-1 text-xl font-bold ${className ?? ""}`}>{value}</div>
+      <div className={`mt-1 text-xl font-black tracking-tight ${className ?? ""}`}>{value}</div>
     </div>
   );
 }

@@ -1,10 +1,13 @@
 import type { ReactNode } from "react";
+import { renderToString } from "katex";
 
 type MarkdownContentProps = {
   content: string;
 };
 
 type MarkdownBlock =
+  | { type: "heading"; level: number; text: string; key: string }
+  | { type: "math"; text: string; key: string }
   | { type: "table"; rows: string[][]; key: string }
   | { type: "list"; items: string[]; key: string }
   | { type: "paragraph"; text: string; key: string };
@@ -35,6 +38,27 @@ function stripListMarker(line: string) {
   return line.replace(/^\s*(?:[-*•]|\d+[.)])\s+/, "").trim();
 }
 
+function parseHeading(line: string) {
+  const match = line.match(/^(#{1,4})\s+(.+)$/);
+  if (!match) return null;
+
+  return {
+    level: match[1].length,
+    text: match[2].trim(),
+  };
+}
+
+function isMathBlockStart(line: string) {
+  const trimmedLine = line.trim();
+  return (
+    trimmedLine === "$$" ||
+    trimmedLine === "\\[" ||
+    (trimmedLine.startsWith("$$") && !trimmedLine.endsWith("$$")) ||
+    (trimmedLine.startsWith("$$") && trimmedLine.endsWith("$$") && trimmedLine.length > 4) ||
+    (trimmedLine.startsWith("\\[") && trimmedLine.endsWith("\\]"))
+  );
+}
+
 function parseBlocks(content: string): MarkdownBlock[] {
   const lines = content.replace(/\r\n/g, "\n").split("\n");
   const blocks: MarkdownBlock[] = [];
@@ -43,6 +67,61 @@ function parseBlocks(content: string): MarkdownBlock[] {
   while (index < lines.length) {
     const line = lines[index];
     if (!line.trim()) {
+      index += 1;
+      continue;
+    }
+
+    const trimmedLine = line.trim();
+    if (
+      (trimmedLine.startsWith("$$") && !trimmedLine.endsWith("$$")) ||
+      trimmedLine === "$$" ||
+      trimmedLine === "\\["
+    ) {
+      const endMarker = trimmedLine.startsWith("$$") ? "$$" : "\\]";
+      const mathLines: string[] = [];
+      const firstLine = trimmedLine.replace(/^\$\$|^\\\[/, "").trim();
+      if (firstLine) mathLines.push(firstLine);
+      index += 1;
+
+      while (index < lines.length && lines[index].trim() !== endMarker) {
+        mathLines.push(lines[index]);
+        index += 1;
+      }
+
+      if (index < lines.length) index += 1;
+
+      blocks.push({
+        type: "math",
+        text: mathLines.join("\n").trim(),
+        key: `math-${index}`,
+      });
+      continue;
+    }
+
+    if (
+      (trimmedLine.startsWith("$$") && trimmedLine.endsWith("$$") && trimmedLine.length > 4) ||
+      (trimmedLine.startsWith("\\[") && trimmedLine.endsWith("\\]"))
+    ) {
+      blocks.push({
+        type: "math",
+        text: trimmedLine
+          .replace(/^\$\$|^\s*\\\[/, "")
+          .replace(/\$\$$|\\\]\s*$/, "")
+          .trim(),
+        key: `math-${index}`,
+      });
+      index += 1;
+      continue;
+    }
+
+    const heading = parseHeading(line.trim());
+    if (heading) {
+      blocks.push({
+        type: "heading",
+        level: heading.level,
+        text: heading.text,
+        key: `heading-${index}`,
+      });
       index += 1;
       continue;
     }
@@ -88,7 +167,9 @@ function parseBlocks(content: string): MarkdownBlock[] {
       index < lines.length &&
       lines[index].trim() &&
       !isTableLine(lines[index]) &&
-      !isListLine(lines[index])
+      !isListLine(lines[index]) &&
+      !parseHeading(lines[index].trim()) &&
+      !isMathBlockStart(lines[index])
     ) {
       paragraphLines.push(lines[index].trim());
       index += 1;
@@ -104,14 +185,53 @@ function parseBlocks(content: string): MarkdownBlock[] {
   return blocks;
 }
 
+function normalizeLatex(value: string) {
+  return value
+    .replace(/\\left/g, "")
+    .replace(/\\right/g, "")
+    .replace(/;(?=\s*[0-9-])/g, ",")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D")
+    .trim();
+}
+
+function renderMath(tex: string, displayMode: boolean) {
+  try {
+    const html = renderToString(normalizeLatex(tex), {
+      displayMode,
+      throwOnError: false,
+      strict: "ignore",
+      trust: false,
+      output: "htmlAndMathml",
+    });
+
+    return (
+      <span
+        className={displayMode ? "block overflow-x-auto py-2" : "inline-block align-middle"}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    );
+  } catch {
+    return (
+      <code className="rounded bg-muted px-1.5 py-0.5 text-[0.92em] font-semibold text-foreground">
+        {tex}
+      </code>
+    );
+  }
+}
+
 function renderInline(text: string) {
-  const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).filter(Boolean);
+  const parts = text
+    .split(/(\*\*[^*]+\*\*|`[^`]+`|\$[^$\n]+\$|\\\([^)]+\\\))/g)
+    .filter(Boolean);
 
   return parts.map((part, index) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return (
         <strong key={`${part}-${index}`} className="font-bold text-foreground">
-          {part.slice(2, -2)}
+          {renderInline(part.slice(2, -2))}
         </strong>
       );
     }
@@ -125,6 +245,14 @@ function renderInline(text: string) {
           {part.slice(1, -1)}
         </code>
       );
+    }
+
+    if (
+      (part.startsWith("$") && part.endsWith("$")) ||
+      (part.startsWith("\\(") && part.endsWith("\\)"))
+    ) {
+      const raw = part.startsWith("$") ? part.slice(1, -1) : part.slice(2, -2);
+      return <span key={`${part}-${index}`}>{renderMath(raw, false)}</span>;
     }
 
     return part;
@@ -157,6 +285,23 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
   return (
     <div className="space-y-4 text-base leading-8 text-foreground">
       {blocks.map((block): ReactNode => {
+        if (block.type === "math") {
+          return <div key={block.key}>{renderMath(block.text, true)}</div>;
+        }
+
+        if (block.type === "heading") {
+          const className =
+            block.level <= 2
+              ? "pt-1 text-xl font-black leading-8 text-foreground"
+              : "pt-1 text-lg font-black leading-7 text-foreground";
+
+          return (
+            <h3 key={block.key} className={className}>
+              {renderInline(block.text)}
+            </h3>
+          );
+        }
+
         if (block.type === "table") {
           const [header, ...rows] = block.rows;
 

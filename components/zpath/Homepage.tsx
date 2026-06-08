@@ -396,7 +396,7 @@ export function Homepage() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild variant="lime" size="xl" className="w-full sm:w-auto">
-                <Link href="/advisor">Tư vấn ngành</Link>
+                <Link href="/advisor">Zpath AI</Link>
               </Button>
               <Button
                 asChild

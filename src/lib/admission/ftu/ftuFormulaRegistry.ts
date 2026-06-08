@@ -1,18 +1,29 @@
 import type {
   FormulaDefinition,
   FTUAdmissionMethod,
+  FTUAdmissionYear,
   FTUProgramGroup,
   FTUScoringInput,
 } from "./ftuTypes";
 
-const SOURCE_NOTE =
-  "FTU 2026 admission information, Decision No. 1566/QĐ-ĐHNT dated 08/04/2026.";
+const SOURCE_NOTES: Record<FTUAdmissionYear, string> = {
+  2025: "FTU 2025 admission information, Decision No. 1646/QĐ-ĐHNT dated 08/05/2025.",
+  2026: "FTU 2026 admission information, Decision No. 1566/QĐ-ĐHNT dated 08/04/2026.",
+};
 
-function formulaCode(method: FTUAdmissionMethod, group?: FTUProgramGroup) {
-  return group ? `FTU_2026_${method}_${group}` : `FTU_2026_${method}`;
+function formulaCode(
+  year: FTUAdmissionYear,
+  method: FTUAdmissionMethod,
+  group?: FTUProgramGroup,
+) {
+  return group ? `FTU_${year}_${method}_${group}` : `FTU_${year}_${method}`;
 }
 
-function getFormulaText(method: FTUAdmissionMethod, group?: FTUProgramGroup) {
+function getFormulaText(
+  year: FTUAdmissionYear,
+  method: FTUAdmissionMethod,
+  group?: FTUProgramGroup,
+) {
   if (method === "DIRECT_ADMISSION") {
     return "Xét tuyển thẳng theo Quy chế của Bộ GD&ĐT và quy định của Trường Đại học Ngoại thương.";
   }
@@ -37,6 +48,12 @@ function getFormulaText(method: FTUAdmissionMethod, group?: FTUProgramGroup) {
     return "Nhóm tiêu chuẩn/tích hợp: điểm quy đổi đánh giá quốc tế kết hợp chứng chỉ ngoại ngữ theo công thức thang 30.";
   }
 
+  if (year === 2025 && group === "TECH_DATA_AI") {
+    return "Nhóm Công nghệ/Dữ liệu/AI: (Toán x 2 + M2 + M3 + điểm thưởng) quy đổi về thang 30, sau đó cộng điểm ưu tiên.";
+  }
+  if (year === 2025 && group === "COMMERCIAL_LANGUAGE") {
+    return "Nhóm Ngôn ngữ thương mại: (M1 + M2 + Ngoại ngữ x 2 + điểm thưởng) quy đổi về thang 30, sau đó cộng điểm ưu tiên.";
+  }
   if (group === "TECH_DATA_AI") {
     return "Nhóm Công nghệ/Dữ liệu/AI: M1 x 2 + M2 + M3 + điểm ưu tiên + điểm thưởng.";
   }
@@ -47,6 +64,7 @@ function getFormulaText(method: FTUAdmissionMethod, group?: FTUProgramGroup) {
 }
 
 export function getFTUFormula(input: FTUScoringInput): FormulaDefinition {
+  const year = input.admissionYear;
   const group = input.programGroup;
   const officialMaxScore =
     input.method === "DIRECT_ADMISSION"
@@ -56,10 +74,10 @@ export function getFTUFormula(input: FTUScoringInput): FormulaDefinition {
         : 30;
 
   return {
-    code: formulaCode(input.method, group),
+    code: formulaCode(year, input.method, group),
     officialMaxScore,
-    formulaTextVi: getFormulaText(input.method, group),
-    sourceNotes: [SOURCE_NOTE],
+    formulaTextVi: getFormulaText(year, input.method, group),
+    sourceNotes: [SOURCE_NOTES[year]],
   };
 }
 
@@ -71,5 +89,5 @@ export function normalizeFTUScoreTo30(
 }
 
 export function roundFTUScore(value: number) {
-  return Math.round((value + Number.EPSILON) * 100) / 100;
+  return Math.round((value + 1e-9) * 100) / 100;
 }

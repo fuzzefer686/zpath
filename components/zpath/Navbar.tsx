@@ -12,7 +12,7 @@ const links = [
   { href: "/", label: "Trang chủ" },
   { href: "/unimap", label: "UniMap" },
   { href: "/scoring", label: "Tính điểm" },
-  { href: "/advisor", label: "Tư vấn ngành" },
+  { href: "/advisor", label: "Zpath AI" },
 ];
 
 export function Navbar() {
@@ -128,7 +128,7 @@ export function Navbar() {
                       className="flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-medium text-foreground/80 hover:bg-primary/5 hover:text-primary transition"
                     >
                       <Sparkles className="h-4 w-4 text-primary" />
-                      Tư vấn AI Advisor
+                      Zpath AI
                     </Link>
                     {user.role === "admin" && (
                       <span className="flex items-center gap-2 rounded-xl px-3 py-2 text-[10px] font-bold text-purple-600 bg-purple-50">
@@ -157,7 +157,7 @@ export function Navbar() {
                 Đăng nhập
               </button>
               <Button asChild variant="hero" size="sm">
-                <Link href="/advisor">Dùng thử ngay</Link>
+                <Link href="/advisor">Zpath AI</Link>
               </Button>
             </>
           )}
@@ -234,7 +234,7 @@ export function Navbar() {
                   Đăng nhập
                 </button>
                 <Button asChild variant="hero" className="w-full">
-                  <Link href="/advisor" onClick={() => setOpen(false)}>Dùng thử ngay</Link>
+                  <Link href="/advisor" onClick={() => setOpen(false)}>Zpath AI</Link>
                 </Button>
               </div>
             )}

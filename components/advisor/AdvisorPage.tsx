@@ -17,6 +17,7 @@ import { QuestionTemplateGrid } from "@/components/advisor/QuestionTemplateGrid"
 import { AdvisorAnswer } from "@/components/advisor/AdvisorAnswer";
 import { AdvisorClarificationForm } from "@/components/advisor/AdvisorClarificationForm";
 import { DynamicQuestionForm } from "@/components/advisor/DynamicQuestionForm";
+import { ExamSolverWorkspace } from "@/components/advisor/ExamSolverWorkspace";
 import { Button } from "@/components/ui/button";
 import type { AdvisorAnswerRequest } from "@/lib/advisor/schemas";
 import {
@@ -114,6 +115,7 @@ function shouldAutoEnableWebSearch(question: string) {
 }
 
 export function AdvisorPage() {
+  const [activeTool, setActiveTool] = useState<"home" | "exam">("home");
   const [question, setQuestion] = useState("");
   const [activeCategory, setActiveCategory] = useState(advisorTemplateCategories[0]);
   const [submittedQuestion, setSubmittedQuestion] = useState("");
@@ -435,6 +437,15 @@ export function AdvisorPage() {
     setLastRequest(null);
   };
 
+  if (activeTool === "exam") {
+    return (
+      <ExamSolverWorkspace
+        conversationId={conversationId}
+        onClose={() => setActiveTool("home")}
+      />
+    );
+  }
+
   // If conversation has messages, render the gorgeous Messenger Chat thread split layout!
   if (isChatActive) {
     return (
@@ -447,7 +458,7 @@ export function AdvisorPage() {
                 <Sparkles className="h-5 w-5" />
               </span>
               <div>
-                <h2 className="font-display text-sm font-bold">ZPath Career AI Advisor</h2>
+                <h2 className="font-display text-sm font-bold">Zpath AI</h2>
                 <div className="flex items-center gap-1.5 mt-0.5">
                   <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span className="text-[10px] font-semibold text-muted-foreground uppercase">Trực tuyến</span>
@@ -621,10 +632,7 @@ export function AdvisorPage() {
   // Initial dashboard layout when no messages started
   return (
     <main className="min-h-screen bg-background relative overflow-hidden bg-mesh text-foreground">
-      {/* Background Dots & Glowing Blobs */}
       <div className="absolute inset-0 grid-dots opacity-20 pointer-events-none" />
-      <div className="absolute top-[40%] left-[-10%] h-96 w-96 rounded-full bg-primary/10 blur-3xl animate-float pointer-events-none" />
-      <div className="absolute bottom-10 right-[-10%] h-96 w-96 rounded-full bg-zpath-secondary/10 blur-3xl animate-float-slow pointer-events-none" />
 
       <AdvisorHero
         question={question}
@@ -632,6 +640,7 @@ export function AdvisorPage() {
         onQuestionChange={handleQuestionChange}
         onAsk={handleAsk}
         onAllowWebSearchChange={handleAllowWebSearchChange}
+        onOpenExamTool={() => setActiveTool("exam")}
       />
 
       <section className="mx-auto w-full max-w-[56rem] px-5 pb-16 pt-8 sm:px-8 sm:pb-24 sm:pt-10 lg:px-12 relative z-10 animate-fade-up">
