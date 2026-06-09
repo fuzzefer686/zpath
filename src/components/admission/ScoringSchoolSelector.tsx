@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -42,11 +43,12 @@ export function ScoringSchoolSelector({
   return (
     <nav
       aria-label="Chọn trường tính điểm xét tuyển"
-      className="rounded-lg border border-border bg-card p-2 shadow-sm"
+      className="rounded-2xl border border-foreground/10 bg-card/90 p-2 shadow-sm"
     >
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
         {options.map((option) => {
           const isSelected = option.code === selectedSchoolCode;
+          const isComingSoon = option.status === "coming_soon";
 
           return (
             <Link
@@ -56,7 +58,7 @@ export function ScoringSchoolSelector({
               aria-label={`Chọn ${option.name}`}
               title={option.name}
               className={cn(
-                "group flex min-h-16 items-center justify-center gap-2.5 rounded-md border bg-background px-3 py-2 transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.98] sm:min-h-20 sm:gap-3 sm:px-5",
+                "group relative flex min-h-20 items-center gap-3 rounded-xl border bg-background px-3 py-3 text-left transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.98] sm:px-4",
                 isSelected
                   ? cn(
                       "shadow-md ring-4",
@@ -65,21 +67,35 @@ export function ScoringSchoolSelector({
                       option.accentSoftClassName,
                     )
                   : "border-transparent hover:border-border",
+                isComingSoon && !isSelected ? "opacity-70" : "",
               )}
             >
-              <img
+              <Image
                 src={option.avatarUrl ?? createAvatarDataUri(option)}
                 alt={option.name}
-                className="h-10 w-10 shrink-0 rounded-full bg-white object-contain p-1 shadow-sm sm:h-12 sm:w-12"
+                width={44}
+                height={44}
+                unoptimized
+                className="h-11 w-11 shrink-0 rounded-full bg-white object-contain p-1 shadow-sm"
               />
-              <span
-                className={cn(
-                  "text-base font-black tracking-tight sm:text-xl",
-                  isSelected ? option.accentTextClassName : "text-foreground",
-                )}
-              >
-                {option.shortName}
+              <span className="min-w-0">
+                <span
+                  className={cn(
+                    "block text-base font-black tracking-tight",
+                    isSelected ? option.accentTextClassName : "text-foreground",
+                  )}
+                >
+                  {option.shortName}
+                </span>
+                <span className="mt-0.5 block truncate text-xs font-medium text-muted-foreground">
+                  {option.name}
+                </span>
               </span>
+              {isComingSoon ? (
+                <span className="absolute right-2 top-2 rounded-full border border-border bg-muted px-2 py-0.5 text-[10px] font-bold uppercase text-muted-foreground">
+                  Sắp có
+                </span>
+              ) : null}
             </Link>
           );
         })}

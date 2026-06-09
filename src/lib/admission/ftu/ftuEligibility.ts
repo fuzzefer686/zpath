@@ -47,8 +47,8 @@ function validateCommon(input: FTUScoringInput) {
   const warnings: string[] = [];
 
   if (input.schoolCode !== "FTU") addUnique(warnings, "schoolCode phải là FTU.");
-  if (input.admissionYear !== 2026) {
-    addUnique(warnings, "admissionYear phải là 2026.");
+  if (input.admissionYear !== 2025 && input.admissionYear !== 2026) {
+    addUnique(warnings, "admissionYear phải là 2025 hoặc 2026.");
   }
   validateNonNegative(input.priorityPoint, "priorityPoint", warnings);
   validateNonNegative(input.bonusPoint, "bonusPoint", warnings);

@@ -41,7 +41,7 @@ function createBaseResult(
 
   return {
     schoolCode: "FTU",
-    admissionYear: 2026,
+    admissionYear: input.admissionYear,
     method: input.method,
     programGroup: input.programGroup,
     officialRawScore: null,
@@ -51,7 +51,7 @@ function createBaseResult(
     bonusPoint: getBonusPoint(input),
     formulaCode: formula.code,
     formulaTextVi: formula.formulaTextVi,
-    explanationVi: "Chưa đủ dữ liệu để tính điểm xét tuyển FTU 2026.",
+    explanationVi: `Chưa đủ dữ liệu để tính điểm xét tuyển FTU ${input.admissionYear}.`,
     eligibilityStatus: eligibility.eligibilityStatus,
     warnings: eligibility.warnings,
     missingFields: eligibility.missingFields,
@@ -79,20 +79,24 @@ function finalizeScore(
   extras: Partial<FTUScoringResult> = {},
 ): FTUScoringResult {
   const officialRawScore = roundFTUScore(rawScore);
-  const normalizedScore30 = roundFTUScore(
-    normalizeFTUScoreTo30(officialRawScore, officialMaxScore),
-  );
+  const normalizedScore30 =
+    typeof extras.normalizedScore30 === "number"
+      ? extras.normalizedScore30
+      : roundFTUScore(normalizeFTUScoreTo30(officialRawScore, officialMaxScore));
+  const restExtras = { ...extras };
+  delete restExtras.normalizedScore30;
 
   return createBaseResult(input, {
     officialRawScore,
     officialMaxScore,
     normalizedScore30,
     explanationVi,
-    ...extras,
+    ...restExtras,
   });
 }
 
 function calculateThreeComponentScore(
+  input: FTUScoringInput,
   group: FTUProgramGroup,
   m1: number,
   m2: number,
@@ -100,6 +104,40 @@ function calculateThreeComponentScore(
   priorityPoint: number,
   bonusPoint: number,
 ) {
+  if (input.admissionYear === 2025) {
+    if (group === "TECH_DATA_AI") {
+      const rawScore = m1 * 2 + m2 + m3 + bonusPoint;
+      const officialRawScore = roundFTUScore(rawScore);
+      return {
+        rawScore,
+        officialMaxScore: 40 as const,
+        normalizedScore30: roundFTUScore((officialRawScore * 3) / 4 + priorityPoint),
+        explanationVi:
+          "Điểm FTU 2025 = (Toán x 2 + M2 + M3 + điểm thưởng) x 3/4 + điểm ưu tiên.",
+      };
+    }
+
+    if (group === "COMMERCIAL_LANGUAGE") {
+      const rawScore = m1 + m2 + m3 * 2 + bonusPoint;
+      const officialRawScore = roundFTUScore(rawScore);
+      return {
+        rawScore,
+        officialMaxScore: 40 as const,
+        normalizedScore30: roundFTUScore((officialRawScore * 3) / 4 + priorityPoint),
+        explanationVi:
+          "Điểm FTU 2025 = (M1 + M2 + Ngoại ngữ x 2 + điểm thưởng) x 3/4 + điểm ưu tiên.",
+      };
+    }
+
+    return {
+      rawScore: m1 + m2 + m3 + bonusPoint + priorityPoint,
+      officialMaxScore: 30 as const,
+      normalizedScore30: roundFTUScore(m1 + m2 + m3 + bonusPoint + priorityPoint),
+      explanationVi:
+        "Điểm FTU 2025 = M1 + M2 + M3 + điểm thưởng + điểm ưu tiên.",
+    };
+  }
+
   if (group === "TECH_DATA_AI") {
     return {
       rawScore: m1 * 2 + m2 + m3 + priorityPoint + bonusPoint,
@@ -132,6 +170,7 @@ async function resolveCertificateScore(input: FTUScoringInput) {
   }
 
   return resolveFTUCertificateConvertedScore({
+    effectiveYear: input.admissionYear,
     certificateType: input.certificate?.type,
     rawScore: input.certificate?.rawScore,
     skillName: input.certificate?.skillName,
@@ -144,6 +183,7 @@ async function resolveAssessmentScore(input: FTUScoringInput) {
   }
 
   return resolveFTUAssessmentConvertedScore({
+    effectiveYear: input.admissionYear,
     certificateType: input.assessment?.examType,
     rawScore: input.assessment?.examScore,
   });
@@ -311,6 +351,7 @@ export async function calculateFTUAdmissionScore(
       return createBaseResult(normalizedInput, {});
     }
     const score = calculateThreeComponentScore(
+      normalizedInput,
       programGroup,
       m1,
       m2,
@@ -323,6 +364,7 @@ export async function calculateFTUAdmissionScore(
       score.rawScore,
       score.officialMaxScore,
       score.explanationVi,
+      { normalizedScore30: score.normalizedScore30 },
     );
   }
 
@@ -337,6 +379,7 @@ export async function calculateFTUAdmissionScore(
     if (certificateScore === null) return missingConversionResult(normalizedInput);
 
     const score = calculateThreeComponentScore(
+      normalizedInput,
       programGroup,
       m1,
       m2,
@@ -349,7 +392,10 @@ export async function calculateFTUAdmissionScore(
       score.rawScore,
       score.officialMaxScore,
       score.explanationVi,
-      { certificateConvertedScore: certificateScore },
+      {
+        certificateConvertedScore: certificateScore,
+        normalizedScore30: score.normalizedScore30,
+      },
     );
   }
 

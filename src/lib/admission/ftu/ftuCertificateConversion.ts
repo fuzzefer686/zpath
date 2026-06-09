@@ -1,4 +1,7 @@
-import type { LanguageCertificateConversionRow } from "./ftuTypes";
+import type {
+  FTUAdmissionYear,
+  LanguageCertificateConversionRow,
+} from "./ftuTypes";
 
 type ConversionPurpose =
   | "LANGUAGE_SUBJECT_SCORE"
@@ -7,7 +10,7 @@ type ConversionPurpose =
 
 type FindConversionParams = {
   schoolCode: "FTU";
-  effectiveYear: 2026;
+  effectiveYear: FTUAdmissionYear;
   certificateType: string;
   rawScore?: number | string;
   skillName?: string;
@@ -100,7 +103,7 @@ function filterMatchingRows(
 
   return rows.filter((row) => {
     if (row.school_code !== "FTU") return false;
-    if (row.effective_year !== 2026) return false;
+    if (row.effective_year !== params.effectiveYear) return false;
     if (row.certificate_type !== params.certificateType) return false;
     if (params.skillName && row.skill_name !== params.skillName) return false;
 
@@ -129,7 +132,7 @@ async function loadRowsFromSupabase(params: FindConversionParams) {
     .from("language_certificate_conversions")
     .select("*")
     .eq("school_code", "FTU")
-    .eq("effective_year", 2026)
+    .eq("effective_year", params.effectiveYear)
     .eq("certificate_type", params.certificateType);
 
   if (params.skillName) {
@@ -159,6 +162,7 @@ export async function findFTULanguageCertificateConversion(
 }
 
 export async function resolveFTUCertificateConvertedScore(params: {
+  effectiveYear?: FTUAdmissionYear;
   certificateType?: string;
   rawScore?: number | string;
   skillName?: string;
@@ -167,7 +171,7 @@ export async function resolveFTUCertificateConvertedScore(params: {
 
   const row = await findFTULanguageCertificateConversion({
     schoolCode: "FTU",
-    effectiveYear: 2026,
+    effectiveYear: params.effectiveYear ?? 2026,
     certificateType: params.certificateType,
     rawScore: params.rawScore,
     skillName: params.skillName,
@@ -178,6 +182,7 @@ export async function resolveFTUCertificateConvertedScore(params: {
 }
 
 export async function resolveFTUAssessmentConvertedScore(params: {
+  effectiveYear?: FTUAdmissionYear;
   certificateType?: string;
   rawScore?: number | string;
   skillName?: string;
@@ -186,7 +191,7 @@ export async function resolveFTUAssessmentConvertedScore(params: {
 
   const row = await findFTULanguageCertificateConversion({
     schoolCode: "FTU",
-    effectiveYear: 2026,
+    effectiveYear: params.effectiveYear ?? 2026,
     certificateType: params.certificateType,
     rawScore: params.rawScore,
     skillName: params.skillName,

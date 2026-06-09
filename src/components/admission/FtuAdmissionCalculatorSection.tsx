@@ -4,11 +4,16 @@ import { useMemo, useState } from "react";
 import { Calculator } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import type {
   FTUAdmissionMethod,
-  FTUAssessmentExamType,
   FTUCertificateType,
   FTUProgramGroup,
   FTUScoringInput,
@@ -131,13 +136,6 @@ function getComparisonStatus(
   const difference = score30 - benchmark30;
   if (Math.abs(difference) < 0.005) return "equal";
   return difference > 0 ? "above" : "below";
-}
-
-function getComparisonLabel(status: ReturnType<typeof getComparisonStatus>) {
-  if (status === "above") return "Cao hơn năm ngoái";
-  if (status === "below") return "Thấp hơn năm ngoái";
-  if (status === "equal") return "Bằng năm ngoái";
-  return "Chưa có dữ liệu";
 }
 
 function getComparisonClass(status: ReturnType<typeof getComparisonStatus>) {
@@ -370,7 +368,6 @@ export function FtuAdmissionCalculatorSection({
       0,
       10,
     );
-    const parsedCertificateRaw = parseOptionalNumber(certificateRawScore);
     const internationalRawBounds =
       getInternationalExamRawBounds(internationalExamType);
     const internationalConvertedBounds =
@@ -494,14 +491,19 @@ export function FtuAdmissionCalculatorSection({
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-xl">
-          <Calculator className="h-5 w-5 text-red-700" />
-          Công cụ tính điểm xét tuyển FTU 2026
+    <Card className="overflow-hidden rounded-2xl border-foreground/10 bg-card/95 shadow-sm">
+      <CardHeader className="border-b border-border bg-red-700/5">
+        <CardTitle className="flex items-center gap-2 text-xl font-black">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-700/10 text-red-700">
+            <Calculator className="h-5 w-5" />
+          </span>
+          Tính điểm FTU 2026
         </CardTitle>
+        <CardDescription>
+          Kiểm tra công thức FTU theo nhóm chương trình, chứng chỉ ngoại ngữ và điểm chuẩn tham chiếu.
+        </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 p-5 md:p-6">
         <div className="grid gap-4 md:grid-cols-3">
           <label className="space-y-2">
             <span className="text-sm font-semibold">Phương thức xét tuyển</span>
@@ -720,7 +722,12 @@ export function FtuAdmissionCalculatorSection({
           />
         </div>
 
-        <Button type="button" onClick={handleCalculate} disabled={isCalculating}>
+        <Button
+          type="button"
+          onClick={handleCalculate}
+          disabled={isCalculating}
+          className="w-full bg-red-700 text-white hover:bg-red-800 sm:w-auto"
+        >
           {isCalculating ? "Đang tính..." : "Tính điểm FTU"}
         </Button>
 
@@ -731,8 +738,8 @@ export function FtuAdmissionCalculatorSection({
         ) : null}
 
         {scoreResult ? (
-          <div className="space-y-5 rounded-lg border border-border bg-background p-5">
-            <div className="grid gap-4 md:grid-cols-4">
+          <div className="space-y-5 rounded-2xl border border-red-700/15 bg-red-700/5 p-4 md:p-5">
+            <div className="grid gap-3 md:grid-cols-3">
               <ResultStat
                 label="Điểm chính thức"
                 value={formatNullableScore(
@@ -747,23 +754,6 @@ export function FtuAdmissionCalculatorSection({
                 value={formatNullableScore(scoreResult.normalizedScore30, "/30")}
               />
               <ResultStat
-                label="Trạng thái"
-                value={
-                  scoreResult.eligibilityStatus === "eligible"
-                    ? "Đủ điều kiện dữ liệu"
-                    : scoreResult.eligibilityStatus === "ineligible"
-                      ? "Không đủ điều kiện"
-                      : "Chưa xác định"
-                }
-                className={
-                  scoreResult.eligibilityStatus === "eligible"
-                    ? "text-tier-high"
-                    : scoreResult.eligibilityStatus === "ineligible"
-                      ? "text-tier-low"
-                      : "text-muted-foreground"
-                }
-              />
-              <ResultStat
                 label="Nhóm"
                 value={
                   scoreResult.programGroup
@@ -773,7 +763,7 @@ export function FtuAdmissionCalculatorSection({
               />
             </div>
 
-            <div className="grid gap-4 md:grid-cols-4">
+            <div className="grid gap-3 md:grid-cols-3">
               <ResultStat
                 label={`Điểm chuẩn ${benchmarkYear}`}
                 value={formatBenchmarkScore(selectedBenchmark)}
@@ -803,14 +793,9 @@ export function FtuAdmissionCalculatorSection({
                   getComparisonClass(comparisonStatus)
                 }
               />
-              <ResultStat
-                label="Trạng thái so sánh"
-                value={getComparisonLabel(comparisonStatus)}
-                className={getComparisonClass(comparisonStatus)}
-              />
             </div>
 
-            <div className="rounded-lg border border-border bg-muted/20 p-4 text-sm">
+            <div className="rounded-xl border border-border bg-background/80 p-4 text-sm">
               <p className="font-semibold">
                 {selectedProgram
                   ? `${selectedProgram.program_code ?? "FTU"} - ${
@@ -841,7 +826,7 @@ export function FtuAdmissionCalculatorSection({
             </div>
 
             {scoreResult.warnings.length ? (
-              <div className="rounded-lg border border-tier-mid/30 bg-tier-mid-soft p-4 text-sm text-tier-mid-foreground">
+              <div className="rounded-xl border border-tier-mid/30 bg-tier-mid-soft p-4 text-sm text-tier-mid-foreground">
                 <div className="font-semibold">Lưu ý</div>
                 <ul className="mt-2 list-inside list-disc space-y-1">
                   {scoreResult.warnings.map((warning) => (
@@ -904,7 +889,7 @@ function ScoreField({
 
 function InfoPill({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-lg border border-border bg-muted/30 p-3">
+    <div className="rounded-xl border border-border bg-muted/30 p-3">
       <div className="text-xs font-semibold uppercase text-muted-foreground">{label}</div>
       <div className="mt-1 font-medium text-foreground">{value}</div>
     </div>
@@ -921,9 +906,9 @@ function ResultStat({
   className?: string;
 }) {
   return (
-    <div className="rounded-lg border border-border p-4">
+    <div className="rounded-xl border border-border bg-background/80 p-4">
       <div className="text-xs font-semibold uppercase text-muted-foreground">{label}</div>
-      <div className={`mt-1 text-lg font-bold ${className ?? ""}`}>{value}</div>
+      <div className={`mt-1 text-lg font-black tracking-tight ${className ?? ""}`}>{value}</div>
     </div>
   );
 }

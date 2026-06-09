@@ -1,3 +1,5 @@
+export type FTUAdmissionYear = 2025 | 2026;
+
 export type FTUAdmissionMethod =
   | "DIRECT_ADMISSION"
   | "ACADEMIC_TRANSCRIPT_3_SUBJECTS"
@@ -35,7 +37,7 @@ export type FTUCertificateType =
 
 export type FTUScoringInput = {
   schoolCode: "FTU";
-  admissionYear: 2026;
+  admissionYear: FTUAdmissionYear;
   method: FTUAdmissionMethod;
   programId?: string;
   programCode?: string;
@@ -71,7 +73,7 @@ export type FTUScoringInput = {
 
 export type FTUScoringResult = {
   schoolCode: "FTU";
-  admissionYear: 2026;
+  admissionYear: FTUAdmissionYear;
   method: FTUAdmissionMethod;
   programGroup?: FTUProgramGroup;
   officialRawScore: number | null;

@@ -123,8 +123,36 @@ export default async function ScoringPage({ searchParams }: ScoringPageProps) {
   ]);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-[linear-gradient(180deg,hsl(var(--background))_0%,hsl(var(--muted))_100%)] text-foreground">
       <section className="container-page space-y-6 py-6 md:py-8">
+        <div className="grid gap-5 rounded-2xl border border-foreground/10 bg-card/90 p-5 shadow-sm md:grid-cols-[1fr_auto] md:items-end md:p-6">
+          <div className="max-w-3xl">
+            <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
+              ZPATH Scoring
+            </div>
+            <h1 className="mt-2 text-3xl font-black leading-tight tracking-tight md:text-4xl">
+              Tính điểm xét tuyển đại học
+            </h1>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
+              Chọn trường, nhập điểm theo phương thức xét tuyển và so sánh nhanh với điểm chuẩn tham chiếu.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-2 text-sm md:w-72">
+            <div className="rounded-xl border border-border bg-muted/40 p-3">
+              <div className="text-xs font-semibold uppercase text-muted-foreground">
+                Năm xét tuyển
+              </div>
+              <div className="mt-1 text-lg font-black">{SCORING_ADMISSION_YEAR}</div>
+            </div>
+            <div className="rounded-xl border border-border bg-muted/40 p-3">
+              <div className="text-xs font-semibold uppercase text-muted-foreground">
+                So sánh
+              </div>
+              <div className="mt-1 text-lg font-black">{SCORING_BENCHMARK_YEAR}</div>
+            </div>
+          </div>
+        </div>
+
         <ScoringSchoolSelector
           options={SCORING_SCHOOLS}
           selectedSchoolCode={selectedSchoolCode}

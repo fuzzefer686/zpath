@@ -101,7 +101,7 @@ function domesticExamScore(examType: "HSA" | "V_ACT" | "TSA") {
 function expectedDomesticScore(
   group: FTUProgramGroup,
   examType: "HSA" | "V_ACT" | "TSA",
-) {
+): ExpectedScore {
   if (examType === "TSA" && group !== "TECH_DATA_AI") {
     return {
       officialRawScore: null,

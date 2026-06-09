@@ -3,7 +3,12 @@ import "server-only";
 import { existsSync, readFileSync, writeFileSync } from "fs";
 import { tmpdir } from "os";
 import path from "path";
-import { GoogleGenAI, type GenerateContentConfig } from "@google/genai";
+import {
+  createUserContent,
+  GoogleGenAI,
+  type GenerateContentConfig,
+  type Part,
+} from "@google/genai";
 
 if (typeof window !== "undefined") {
   throw new Error("geminiVertexClient must only be imported from server-side code.");
@@ -286,6 +291,39 @@ export async function generateGeminiText({
   const response = await getGeminiClient().models.generateContent({
     model,
     contents: prompt,
+    config: requestConfig,
+  });
+
+  const text = readResponseText(response);
+  if (!text) {
+    const finishReason = readFinishReason(response);
+    throw new Error(
+      finishReason
+        ? `GEMINI_EMPTY_RESPONSE:${finishReason}`
+        : "GEMINI_EMPTY_RESPONSE",
+    );
+  }
+
+  return text;
+}
+
+export async function generateGeminiTextFromParts({
+  parts,
+  config,
+}: {
+  parts: Part[];
+  config?: GenerateContentConfig;
+}) {
+  const model = getGeminiModelName();
+  const requestConfig: GenerateContentConfig = {
+    ...config,
+    ...(config?.thinkingConfig === undefined && modelSupportsThinkingConfig(model)
+      ? { thinkingConfig: { thinkingBudget: 0 } }
+      : {}),
+  };
+  const response = await getGeminiClient().models.generateContent({
+    model,
+    contents: createUserContent(parts),
     config: requestConfig,
   });
 
