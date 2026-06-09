@@ -1,4 +1,15 @@
--- Majors table has been removed.
+-- Keep this historical migration replayable for preview branches.
+-- Later migrations may drop/restore majors, but programs needs the table
+-- to exist before adding the initial FK below.
+CREATE TABLE IF NOT EXISTS public.majors (
+    id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+    code text UNIQUE NOT NULL,
+    name text NOT NULL,
+    category text,
+    description text,
+    tags text[]
+);
+
 -- Create universities table
 CREATE TABLE IF NOT EXISTS public.universities (
     id uuid DEFAULT gen_random_uuid() PRIMARY KEY,

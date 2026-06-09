@@ -12,6 +12,7 @@ const links = [
   { href: "/", label: "Trang chủ" },
   { href: "/unimap", label: "UniMap" },
   { href: "/scoring", label: "Tính điểm" },
+  { href: "/news", label: "News" },
   { href: "/advisor", label: "Zpath AI" },
 ];
 
