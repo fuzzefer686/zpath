@@ -3,35 +3,22 @@ import { NextResponse } from "next/server";
 import {
   calculateAdmissionScore,
   evaluateAdmissionChance,
+  hasStaticAdmissionModule,
   type AdmissionInput,
   type AdmissionMethod,
   type SchoolCode,
 } from "@/src/lib/admission-engine";
+import { interpretAdmission } from "@/src/lib/admission-engine/generic";
+import { getPublishedAdmissionConfig } from "@/src/lib/admission-config/store";
 import { getAuthContext } from "@/lib/zpath-auth";
 
 type AdmissionCalculateRequest = {
-  schoolCode: SchoolCode;
-  method: AdmissionMethod;
+  schoolCode: string;
+  method: string;
   year: number;
   payload: unknown;
   benchmark30?: number;
 };
-
-const SCHOOL_CODES: readonly SchoolCode[] = ["HUST", "FTU", "NEU", "UET", "VINUNI"];
-const ADMISSION_METHODS: readonly AdmissionMethod[] = [
-  "THPT",
-  "TSA",
-  "XTTN",
-  "HOC_BA",
-  "DGNL",
-  "XTT",
-  "METHOD_1",
-  "METHOD_2_1",
-  "METHOD_2_2",
-  "METHOD_2_3",
-  "METHOD_2_5",
-  "METHOD_2_6",
-];
 
 export const runtime = "nodejs";
 
@@ -39,12 +26,8 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
 }
 
-function isSchoolCode(value: unknown): value is SchoolCode {
-  return SCHOOL_CODES.includes(value as SchoolCode);
-}
-
-function isAdmissionMethod(value: unknown): value is AdmissionMethod {
-  return ADMISSION_METHODS.includes(value as AdmissionMethod);
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === "string" && value.trim().length > 0;
 }
 
 function parseAdmissionCalculateRequest(
@@ -54,14 +37,12 @@ function parseAdmissionCalculateRequest(
     throw new Error("Request body must be a JSON object.");
   }
 
-  if (!isSchoolCode(body.schoolCode)) {
-    throw new Error('schoolCode must be one of: "HUST", "FTU", "NEU", "UET", "VINUNI".');
+  if (!isNonEmptyString(body.schoolCode)) {
+    throw new Error("schoolCode must be a non-empty string.");
   }
 
-  if (!isAdmissionMethod(body.method)) {
-    throw new Error(
-      'method must be one of: "THPT", "TSA", "XTTN", "HOC_BA", "DGNL", "XTT".',
-    );
+  if (!isNonEmptyString(body.method)) {
+    throw new Error("method must be a non-empty string.");
   }
 
   if (typeof body.year !== "number" || !Number.isInteger(body.year)) {
@@ -85,12 +66,33 @@ function parseAdmissionCalculateRequest(
   }
 
   return {
-    schoolCode: body.schoolCode,
+    schoolCode: body.schoolCode.toUpperCase(),
     method: body.method,
     year: body.year,
     payload: body.payload,
     benchmark30: body.benchmark30,
   };
+}
+
+/**
+ * Config-driven path: schools without a hardcoded module are scored by loading
+ * their published admission_configs row and running the generic interpreter.
+ * This is what makes a brand-new school (added from a PDF) work with no code.
+ */
+async function calculateFromPublishedConfig(parsed: AdmissionCalculateRequest) {
+  const config = await getPublishedAdmissionConfig(parsed.schoolCode, parsed.year);
+
+  if (!config) {
+    throw new Error(
+      `Chưa có cấu hình xét tuyển được phê duyệt cho trường "${parsed.schoolCode}" năm ${parsed.year}.`,
+    );
+  }
+
+  return interpretAdmission({
+    config,
+    methodCode: parsed.method,
+    payload: parsed.payload,
+  });
 }
 
 export async function POST(request: Request) {
@@ -142,18 +144,23 @@ export async function POST(request: Request) {
 
   try {
     const parsed = parseAdmissionCalculateRequest(body);
-    const input: AdmissionInput = {
-      schoolCode: parsed.schoolCode,
-      method: parsed.method,
-      year: parsed.year,
-      payload: parsed.payload,
-    };
 
-    const score = calculateAdmissionScore(input);
+    const score = hasStaticAdmissionModule(parsed.schoolCode)
+      ? calculateAdmissionScore({
+          schoolCode: parsed.schoolCode as SchoolCode,
+          method: parsed.method as AdmissionMethod,
+          year: parsed.year,
+          payload: parsed.payload,
+        } satisfies AdmissionInput)
+      : await calculateFromPublishedConfig(parsed);
+
+    const benchmark30 =
+      parsed.benchmark30 ??
+      ("benchmark30" in score ? (score.benchmark30 ?? undefined) : undefined);
     const chance =
-      parsed.benchmark30 === undefined
+      benchmark30 === undefined
         ? null
-        : evaluateAdmissionChance(score.normalizedScore30, parsed.benchmark30);
+        : evaluateAdmissionChance(score.normalizedScore30, benchmark30);
 
     return NextResponse.json({
       ok: true,

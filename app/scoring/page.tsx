@@ -11,6 +11,10 @@ import {
   getSchoolBenchmarks,
   getSchoolPrograms,
 } from "@/src/lib/admission-data";
+import {
+  getPublishedAdmissionConfig,
+  listPublishedConfigSchools,
+} from "@/src/lib/admission-config/store";
 
 export const metadata: Metadata = {
   title: "Tính điểm xét tuyển - ZPATH",
@@ -71,19 +75,62 @@ const SCORING_SCHOOLS: ScoringSchoolOption[] = [
   },
 ];
 
+const STATIC_DEDICATED_CODES = new Set(["HUST", "FTU", "UET"]);
+
 type ScoringPageProps = {
   searchParams?: Promise<{
     school?: string | string[];
   }>;
 };
 
+function buildConfigSchoolOption(
+  code: string,
+  name: string,
+): ScoringSchoolOption {
+  return {
+    code,
+    shortName: code,
+    name,
+    status: "available",
+    avatarColor: "#6366f1",
+    accentTextClassName: "text-indigo-500",
+    accentBorderClassName: "border-indigo-500",
+    accentRingClassName: "ring-indigo-500/25",
+    accentSoftClassName: "bg-indigo-50",
+  };
+}
+
+/**
+ * Merges the hardcoded school list with any school that has a published
+ * config-driven calculator (added via the admin PDF flow). Static options win
+ * on conflict so existing schools keep their branding.
+ */
+async function buildScoringSchools(): Promise<ScoringSchoolOption[]> {
+  const merged = [...SCORING_SCHOOLS];
+  const existingCodes = new Set(merged.map((school) => school.code));
+
+  try {
+    const publishedSchools = await listPublishedConfigSchools();
+    for (const school of publishedSchools) {
+      if (existingCodes.has(school.schoolCode)) continue;
+      merged.push(buildConfigSchoolOption(school.schoolCode, school.schoolName));
+      existingCodes.add(school.schoolCode);
+    }
+  } catch (error) {
+    console.error("Cannot load published config schools:", error);
+  }
+
+  return merged;
+}
+
 function getSelectedSchoolCode(
   schoolParam: string | string[] | undefined,
+  schools: ScoringSchoolOption[],
 ): ScoringSchoolCode {
   const rawSchool = Array.isArray(schoolParam) ? schoolParam[0] : schoolParam;
   const normalizedSchool = rawSchool?.toUpperCase();
 
-  return SCORING_SCHOOLS.some((school) => school.code === normalizedSchool)
+  return schools.some((school) => school.code === normalizedSchool)
     ? (normalizedSchool as ScoringSchoolCode)
     : SCORING_SCHOOL_CODE;
 }
@@ -103,7 +150,22 @@ async function loadOrFallback<T>(
 
 export default async function ScoringPage({ searchParams }: ScoringPageProps) {
   const resolvedSearchParams = await searchParams;
-  const selectedSchoolCode = getSelectedSchoolCode(resolvedSearchParams?.school);
+  const schools = await buildScoringSchools();
+  const selectedSchoolCode = getSelectedSchoolCode(
+    resolvedSearchParams?.school,
+    schools,
+  );
+
+  // Schools without a dedicated hardcoded calculator are config-driven: load
+  // their published config so the generic calculator can render.
+  const genericConfig = STATIC_DEDICATED_CODES.has(selectedSchoolCode)
+    ? null
+    : await loadOrFallback(
+        () => getPublishedAdmissionConfig(selectedSchoolCode),
+        null,
+        "config",
+      );
+
   const [programs, methods, benchmarks] = await Promise.all([
     loadOrFallback(
       () => getSchoolPrograms(selectedSchoolCode, SCORING_ADMISSION_YEAR),
@@ -126,7 +188,7 @@ export default async function ScoringPage({ searchParams }: ScoringPageProps) {
     <div className="min-h-screen bg-background text-foreground">
       <section className="container-page space-y-6 py-6 md:py-8">
         <ScoringSchoolSelector
-          options={SCORING_SCHOOLS}
+          options={schools}
           selectedSchoolCode={selectedSchoolCode}
         />
 
@@ -136,6 +198,7 @@ export default async function ScoringPage({ searchParams }: ScoringPageProps) {
           benchmarks={benchmarks}
           methods={methods}
           benchmarkYear={SCORING_BENCHMARK_YEAR}
+          genericConfig={genericConfig}
         />
       </section>
     </div>
