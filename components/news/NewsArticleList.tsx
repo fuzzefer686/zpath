@@ -7,6 +7,7 @@ import { Clock, FileText, Search, Tag, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { getNewsArticleHref } from "@/lib/news-links";
 import type { NewsArticle } from "@/types/news";
 
 type NewsArticleListProps = {
@@ -128,7 +129,7 @@ export function NewsArticleList({ articles }: NewsArticleListProps) {
 }
 
 function ArticleListItem({ article }: { article: NewsArticle }) {
-  const articleHref = article.articleNumber ? `/news/${article.articleNumber}` : "/news";
+  const articleHref = getNewsArticleHref(article);
 
   return (
     <Card className="overflow-hidden">

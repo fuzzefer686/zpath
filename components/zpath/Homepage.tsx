@@ -23,6 +23,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/components/zpath/AuthProvider";
+import { ExamAnswerPopup } from "@/components/zpath/ExamAnswerPopup";
 
 const concerns = [
   {
@@ -168,6 +169,10 @@ export function Homepage() {
                   <div className="mt-1 leading-5">{label}</div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-6 max-w-2xl">
+              <ExamAnswerPopup />
             </div>
           </div>
 

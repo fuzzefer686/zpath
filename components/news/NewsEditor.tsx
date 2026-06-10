@@ -8,6 +8,7 @@ import { MarkdownPreview } from "@/components/news/MarkdownPreview";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { getNewsArticleHref } from "@/lib/news-links";
 import { useNewsArticles } from "@/hooks/useNewsArticles";
 import {
   NEWS_CATEGORIES,
@@ -76,7 +77,7 @@ export function NewsEditor({ article }: NewsEditorProps) {
     try {
       const savedArticle = await saveArticle(toInput(editor), article?.id);
       setMessage("Đã lưu bài viết.");
-      router.push(savedArticle.articleNumber ? `/news/${savedArticle.articleNumber}` : "/news/manage");
+      router.push(getNewsArticleHref(savedArticle));
     } catch {
       setMessage(null);
     }

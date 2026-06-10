@@ -5,10 +5,22 @@ import { Navbar } from "@/components/zpath/Navbar";
 import { Footer } from "@/components/zpath/Footer";
 import { Providers } from "@/components/zpath/Providers";
 import { Analytics } from "@vercel/analytics/next";
+import { getMetadataBase, SITE_NAME } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "ZPATH - Định hướng tương lai",
+  metadataBase: getMetadataBase(),
+  title: {
+    default: "ZPATH - Định hướng tương lai",
+    template: `%s | ${SITE_NAME}`,
+  },
   description: "Hiểu mình, hiểu ngành, chọn đúng tương lai",
+  openGraph: {
+    title: "ZPATH - Định hướng tương lai",
+    description: "Hiểu mình, hiểu ngành, chọn đúng tương lai",
+    siteName: SITE_NAME,
+    locale: "vi_VN",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

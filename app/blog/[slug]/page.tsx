@@ -2,35 +2,24 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { NewsArticlePageView } from "@/components/news/NewsArticlePageView";
-import { getPublishedNewsArticleByNumber } from "@/lib/news-server";
+import { getPublishedNewsArticleBySlug } from "@/lib/news-server";
 import { getAbsoluteUrl } from "@/lib/seo";
 
-type NewsArticlePageProps = {
+type BlogArticlePageProps = {
   params: Promise<{
-    articleNumber: string;
+    slug: string;
   }>;
 };
 
-function parseArticleNumber(value: string) {
-  if (!/^[1-9][0-9]{0,4}$/.test(value)) return null;
-  const articleNumber = Number(value);
-  return articleNumber <= 99999 ? articleNumber : null;
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
-}: NewsArticlePageProps): Promise<Metadata> {
-  const { articleNumber: rawArticleNumber } = await params;
-  const articleNumber = parseArticleNumber(rawArticleNumber);
-
-  if (!articleNumber) {
-    return {
-      title: "Không tìm thấy bài viết - ZPATH",
-    };
-  }
+}: BlogArticlePageProps): Promise<Metadata> {
+  const { slug } = await params;
 
   try {
-    const article = await getPublishedNewsArticleByNumber(articleNumber);
+    const article = await getPublishedNewsArticleBySlug(slug);
 
     if (!article) {
       return {
@@ -65,12 +54,9 @@ export async function generateMetadata({
   }
 }
 
-export default async function NewsArticlePage({ params }: NewsArticlePageProps) {
-  const { articleNumber: rawArticleNumber } = await params;
-  const articleNumber = parseArticleNumber(rawArticleNumber);
-  if (!articleNumber) notFound();
-
-  const article = await getPublishedNewsArticleByNumber(articleNumber);
+export default async function BlogArticlePage({ params }: BlogArticlePageProps) {
+  const { slug } = await params;
+  const article = await getPublishedNewsArticleBySlug(slug);
   if (!article) notFound();
 
   return <NewsArticlePageView article={article} />;

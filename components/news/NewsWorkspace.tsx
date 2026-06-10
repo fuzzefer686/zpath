@@ -21,6 +21,7 @@ import { useAuth } from "@/components/zpath/AuthProvider";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { getNewsArticleHref } from "@/lib/news-links";
 import { useNewsArticles } from "@/hooks/useNewsArticles";
 import { NEWS_CATEGORIES, type NewsArticle, type NewsArticleInput, type NewsArticleStatus } from "@/types/news";
 import { MarkdownPreview } from "@/components/news/MarkdownPreview";
@@ -523,7 +524,7 @@ type ArticleCardProps = {
 };
 
 function ArticleCard({ article, canManage, onEdit, onDelete }: ArticleCardProps) {
-  const articleHref = article.articleNumber ? `/news/${article.articleNumber}` : "/news";
+  const articleHref = getNewsArticleHref(article);
 
   return (
     <Card className="overflow-hidden">

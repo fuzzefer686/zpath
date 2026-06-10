@@ -1,5 +1,10 @@
 import "server-only";
 
+import {
+  getFallbackNewsArticleByNumber,
+  getFallbackNewsArticleBySlug,
+  listFallbackNewsArticles,
+} from "@/lib/news-fallbacks";
 import { supabaseServer } from "@/src/lib/db/supabaseServer";
 import { NEWS_CATEGORIES, type NewsArticle, type NewsArticleInput, type NewsArticleStatus } from "@/types/news";
 import type { ZpathAuthUser } from "@/lib/zpath-auth";
@@ -77,6 +82,31 @@ export function isNewsSchemaMissingError(error: unknown) {
     message.includes("cover_image_url") ||
     message.includes("news-images")
   );
+}
+
+function isSupabaseNetworkError(error: unknown) {
+  if (!error || typeof error !== "object") return false;
+  const maybeError = error as { message?: unknown; details?: unknown; cause?: unknown };
+  const text = [
+    maybeError.message,
+    maybeError.details,
+    maybeError.cause instanceof Error ? maybeError.cause.message : undefined,
+  ]
+    .filter((value): value is string => typeof value === "string")
+    .join("\n");
+
+  return (
+    text.includes("fetch failed") ||
+    text.includes("ENOTFOUND") ||
+    text.includes("ECONNREFUSED") ||
+    text.includes("ETIMEDOUT") ||
+    text.includes("EAI_AGAIN")
+  );
+}
+
+function warnNewsFallback(operation: string, error: unknown) {
+  const message = error instanceof Error ? error.message : "unknown Supabase error";
+  console.warn(`News Supabase unavailable while ${operation}; using local fallback articles.`, message);
 }
 
 function normalizeString(value: unknown, fallback = "") {
@@ -172,9 +202,18 @@ export async function listNewsArticles(options: ListNewsArticlesOptions = {}) {
     query = query.eq("status", "published").eq("published", true);
   }
 
-  const { data, error } = await query;
-  if (error) throw error;
-  return ((data ?? []) as NewsArticleRow[]).map(mapNewsArticle);
+  try {
+    const { data, error } = await query;
+    if (error) throw error;
+    return ((data ?? []) as NewsArticleRow[]).map(mapNewsArticle);
+  } catch (error) {
+    if (scope === "published" && isSupabaseNetworkError(error)) {
+      warnNewsFallback("listing published news", error);
+      return listFallbackNewsArticles();
+    }
+
+    throw error;
+  }
 }
 
 export async function createNewsArticle(input: NewsArticleInput, user: ZpathAuthUser) {
@@ -206,21 +245,84 @@ export async function createNewsArticle(input: NewsArticleInput, user: ZpathAuth
   return mapNewsArticle(data as NewsArticleRow);
 }
 
+export async function createPublicNewsArticle(input: NewsArticleInput) {
+  const status = input.status ?? "published";
+  const slug = await getAvailableSlug(input.title);
+
+  const { data, error } = await supabaseServer
+    .from("news_articles")
+    .insert({
+      slug,
+      tag: input.tag,
+      title: input.title,
+      excerpt: input.excerpt,
+      content: input.contentMarkdown,
+      content_markdown: input.contentMarkdown,
+      author: DEFAULT_AUTHOR,
+      read_time: estimateReadTime(input.contentMarkdown),
+      featured: false,
+      image_gradient: DEFAULT_IMAGE_GRADIENT,
+      cover_image_url: input.coverImageUrl,
+      status,
+      published: status === "published",
+      owner_id: null,
+    })
+    .select(ARTICLE_SELECT)
+    .single();
+
+  if (error) throw error;
+  return mapNewsArticle(data as NewsArticleRow);
+}
+
 export async function getPublishedNewsArticleByNumber(articleNumber: number) {
   if (!Number.isInteger(articleNumber) || articleNumber < 1 || articleNumber > 99999) {
     return null;
   }
 
-  const { data, error } = await supabaseServer
-    .from("news_articles")
-    .select(ARTICLE_SELECT)
-    .eq("article_number", articleNumber)
-    .eq("status", "published")
-    .eq("published", true)
-    .maybeSingle();
+  try {
+    const { data, error } = await supabaseServer
+      .from("news_articles")
+      .select(ARTICLE_SELECT)
+      .eq("article_number", articleNumber)
+      .eq("status", "published")
+      .eq("published", true)
+      .maybeSingle();
 
-  if (error) throw error;
-  return data ? mapNewsArticle(data as NewsArticleRow) : null;
+    if (error) throw error;
+    return data ? mapNewsArticle(data as NewsArticleRow) : null;
+  } catch (error) {
+    if (isSupabaseNetworkError(error)) {
+      warnNewsFallback(`loading published news #${articleNumber}`, error);
+      return getFallbackNewsArticleByNumber(articleNumber);
+    }
+
+    throw error;
+  }
+}
+
+export async function getPublishedNewsArticleBySlug(slug: string) {
+  const normalizedSlug = normalizeSlugPart(slug);
+  if (!normalizedSlug || normalizedSlug !== slug) return null;
+
+  try {
+    const { data, error } = await supabaseServer
+      .from("news_articles")
+      .select(ARTICLE_SELECT)
+      .eq("slug", normalizedSlug)
+      .eq("status", "published")
+      .eq("published", true)
+      .maybeSingle();
+
+    if (error) throw error;
+    return data ? mapNewsArticle(data as NewsArticleRow) : null;
+  } catch (error) {
+    if (isSupabaseNetworkError(error)) {
+      warnNewsFallback(`loading published news slug "${normalizedSlug}"`, error);
+      return getFallbackNewsArticleBySlug(normalizedSlug);
+    }
+
+    throw error;
+  }
 }
 
 export async function getEditableNewsArticleById(id: string, user: ZpathAuthUser) {

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import {
+  createPublicNewsArticle,
   createNewsArticle,
   isNewsSchemaMissingError,
   listNewsArticles,
@@ -59,12 +60,13 @@ export async function GET(request: NextRequest) {
 export async function POST(request: Request) {
   try {
     const auth = await getAuthContext();
-    if (!auth) return NextResponse.json({ error: "Chưa đăng nhập." }, { status: 401 });
 
     const input = sanitizeNewsArticleInput(await request.json(), {
-      allowFeatured: auth.user.role === "admin",
+      allowFeatured: auth?.user.role === "admin",
     });
-    const article = await createNewsArticle(input, auth.user);
+    const article = auth
+      ? await createNewsArticle(input, auth.user)
+      : await createPublicNewsArticle(input);
 
     return NextResponse.json({ article }, { status: 201 });
   } catch (error) {

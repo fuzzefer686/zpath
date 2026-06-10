@@ -1,7 +1,6 @@
 import { randomUUID } from "crypto";
 import { NextResponse } from "next/server";
 
-import { getAuthContext } from "@/lib/zpath-auth";
 import { isNewsSchemaMissingError } from "@/lib/news-server";
 import { supabaseServer } from "@/src/lib/db/supabaseServer";
 
@@ -19,9 +18,6 @@ function getExtension(mimeType: string) {
 
 export async function POST(request: Request) {
   try {
-    const auth = await getAuthContext();
-    if (!auth) return NextResponse.json({ error: "Chưa đăng nhập." }, { status: 401 });
-
     const formData = await request.formData();
     const file = formData.get("image") as File | null;
 
@@ -40,7 +36,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const path = `${auth.user.id}/${randomUUID()}.${getExtension(file.type)}`;
+    const path = `public/${randomUUID()}.${getExtension(file.type)}`;
     const fileBuffer = Buffer.from(await file.arrayBuffer());
     const { error } = await supabaseServer.storage.from(NEWS_IMAGE_BUCKET).upload(path, fileBuffer, {
       contentType: file.type,
