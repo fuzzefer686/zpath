@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
-export type ScoringSchoolCode = "HUST" | "FTU" | "NEU" | "UET";
+export type ScoringSchoolCode = string;
 
 export type ScoringSchoolOption = {
   code: ScoringSchoolCode;

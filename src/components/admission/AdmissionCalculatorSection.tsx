@@ -49,6 +49,8 @@ import {
   HustThptCombinationCode as HustThptCombinationCodeLabel,
 } from "./HustThptCombinationCode";
 import { FtuAdmissionCalculatorSection } from "./FtuAdmissionCalculatorSection";
+import { GenericConfigCalculator } from "./GenericConfigCalculator";
+import type { GenericAdmissionConfig } from "@/src/lib/admission-engine/generic";
 
 type AdmissionCalculatorSectionProps = {
   schoolCode: string;
@@ -56,6 +58,11 @@ type AdmissionCalculatorSectionProps = {
   benchmarks: Benchmark[];
   methods: AdmissionMethodRecord[];
   benchmarkYear?: number;
+  /**
+   * Published config for a config-driven school (added via the admin PDF flow).
+   * When present, the generic calculator renders instead of the hardcoded ones.
+   */
+  genericConfig?: GenericAdmissionConfig | null;
 };
 
 type ApiSuccessResponse = {
@@ -222,6 +229,7 @@ export function AdmissionCalculatorSection({
   benchmarks,
   methods,
   benchmarkYear = HUST_CUTOFF_YEAR,
+  genericConfig = null,
 }: AdmissionCalculatorSectionProps) {
   const isHust = schoolCode === "HUST";
   const isFtu = schoolCode === "FTU";
@@ -271,6 +279,10 @@ export function AdmissionCalculatorSection({
     );
     return supportedMethods.length ? supportedMethods : HUST_METHODS;
   }, [methods]);
+
+  if (genericConfig && !isHust && !isFtu && schoolCode !== "UET") {
+    return <GenericConfigCalculator config={genericConfig} />;
+  }
 
   if (isFtu) {
     return (
