@@ -16,6 +16,7 @@ export type NewsArticle = {
   id: string;
   articleNumber: number | null;
   slug: string;
+  href?: string;
   tag: string;
   title: string;
   excerpt: string;

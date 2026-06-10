@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GraduationCap } from "lucide-react";
 
@@ -5,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import hustProMaxData from "@/data/hust-pro-max.json";
 import type { University } from "@/data/universities";
 import { createSchoolSlug } from "@/lib/school-slug";
+import { getAbsoluteUrl, SITE_NAME } from "@/lib/seo";
 import {
   findVisibleUnimapUniversityByRouteParam,
   getVisibleUnimapUniversities,
@@ -721,7 +723,7 @@ export async function generateStaticParams() {
   return Array.from(params).map((code) => ({ code }));
 }
 
-export async function generateMetadata({ params }: UniversityDetailPageProps) {
+export async function generateMetadata({ params }: UniversityDetailPageProps): Promise<Metadata> {
   const { code } = await params;
   const routeParam = code.toLowerCase();
   const school = await getAdmissionSchoolBySlug(routeParam);
@@ -730,19 +732,44 @@ export async function generateMetadata({ params }: UniversityDetailPageProps) {
   if (!university) {
     return {
       title: "Không tìm thấy trường",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
-  if (school) {
-    return {
-      title: `${school.name} - Tuyển sinh ZPATH`,
-      description: school.description ?? `Thông tin tuyển sinh ${school.name}`,
-    };
-  }
+  const schoolName = school?.name ?? university.name;
+  const canonicalPath = `/unimap/${school?.slug ?? university.code.toLowerCase()}`;
+  const title = `Điểm chuẩn ${schoolName} 2026`;
+  const description =
+    `Tra cứu điểm chuẩn ${schoolName} 2026, ngành tuyển sinh, tổ hợp xét tuyển, học phí và công cụ tính điểm phù hợp trên ZPATH.`;
+  const imageUrl =
+    school?.hero_image_url ??
+    university.heroImageUrl ??
+    university.unimapImageUrl ??
+    undefined;
 
   return {
-    title: `${university.name} - Tuyển sinh ZPATH`,
-    description: university.about,
+    title,
+    description,
+    alternates: {
+      canonical: canonicalPath,
+    },
+    openGraph: {
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      url: canonicalPath,
+      siteName: SITE_NAME,
+      type: "website",
+      images: imageUrl ? [{ url: getAbsoluteUrl(imageUrl) }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      images: imageUrl ? [getAbsoluteUrl(imageUrl)] : undefined,
+    },
   };
 }
 
