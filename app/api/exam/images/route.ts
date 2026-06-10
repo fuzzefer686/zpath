@@ -10,6 +10,7 @@ export const runtime = "nodejs";
 const EXAM_IMAGE_BUCKET = "exam-images";
 const MAX_FILE_SIZE = 20 * 1024 * 1024;
 const EXAM_IMAGE_SELECT = "id, route_slug, subject, document_type, storage_path, public_url, mime_type, file_size, created_at";
+const ALLOWED_MIME_TYPES = ["image/png", "image/jpeg", "image/webp", "application/pdf"];
 
 function sanitizePathPart(value: string) {
   return value
@@ -24,6 +25,8 @@ function sanitizePathPart(value: string) {
 }
 
 function getExtension(file: File) {
+  if (file.type === "application/pdf") return "pdf";
+
   const fileNameExtension = file.name.split(".").pop()?.toLowerCase();
   if (fileNameExtension && /^[a-z0-9]{2,10}$/.test(fileNameExtension)) {
     return fileNameExtension;
@@ -44,7 +47,7 @@ export async function POST(request: Request) {
     const auth = await getAuthContext();
     if (!auth || auth.user.role !== "admin") {
       return NextResponse.json(
-        { error: "Chỉ admin mới được tải ảnh đề." },
+        { error: "Chỉ admin mới được tải file đề." },
         { status: 403 },
       );
     }
@@ -58,7 +61,7 @@ export async function POST(request: Request) {
     const route = getStaticExamAnswerRoute(routeSlug);
 
     if (!file) {
-      return NextResponse.json({ error: "Không tìm thấy file ảnh đề." }, { status: 400 });
+      return NextResponse.json({ error: "Không tìm thấy file đề." }, { status: 400 });
     }
 
     if (!route) {
@@ -78,15 +81,15 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!file.type.startsWith("image/")) {
+    if (!ALLOWED_MIME_TYPES.includes(file.type)) {
       return NextResponse.json(
-        { error: "Chỉ hỗ trợ file ảnh đề. Vui lòng tải file có MIME image/*." },
+        { error: "Chỉ hỗ trợ ảnh PNG, JPEG, WebP hoặc PDF." },
         { status: 400 },
       );
     }
 
     if (file.size > MAX_FILE_SIZE) {
-      return NextResponse.json({ error: "Ảnh đề không được vượt quá 20MB." }, { status: 400 });
+      return NextResponse.json({ error: "File đề không được vượt quá 20MB." }, { status: 400 });
     }
 
     const path = `${routeSlug || "de-thi"}/${documentType}/${subject || "mon-thi"}/${randomUUID()}.${getExtension(file)}`;
@@ -122,8 +125,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ image });
   } catch (error) {
-    console.error("Không thể tải ảnh đề.", error);
-    return NextResponse.json({ error: "Không thể tải ảnh đề." }, { status: 500 });
+    console.error("Không thể tải file đề.", error);
+    return NextResponse.json({ error: "Không thể tải file đề." }, { status: 500 });
   }
 }
 
@@ -148,5 +151,53 @@ export async function GET(request: Request) {
   } catch (error) {
     console.warn("Không thể tải danh sách ảnh đề, trả về danh sách rỗng.", error);
     return NextResponse.json({ images: [] });
+  }
+}
+
+export async function DELETE(request: Request) {
+  try {
+    const auth = await getAuthContext();
+    if (!auth || auth.user.role !== "admin") {
+      return NextResponse.json(
+        { error: "Chỉ admin mới được xóa file đề." },
+        { status: 403 },
+      );
+    }
+
+    const body = (await request.json().catch(() => null)) as { id?: unknown } | null;
+    const id = typeof body?.id === "string" ? body.id.trim() : "";
+
+    if (!id) {
+      return NextResponse.json({ error: "Thiếu id file cần xóa." }, { status: 400 });
+    }
+
+    const { data: image, error: selectError } = await supabaseServer
+      .from("exam_images")
+      .select("id, storage_path")
+      .eq("id", id)
+      .maybeSingle();
+
+    if (selectError) throw selectError;
+    if (!image?.storage_path) {
+      return NextResponse.json({ error: "Không tìm thấy file đề." }, { status: 404 });
+    }
+
+    const { error: removeError } = await supabaseServer.storage
+      .from(EXAM_IMAGE_BUCKET)
+      .remove([String(image.storage_path)]);
+
+    if (removeError) throw removeError;
+
+    const { error: deleteError } = await supabaseServer
+      .from("exam_images")
+      .delete()
+      .eq("id", id);
+
+    if (deleteError) throw deleteError;
+
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error("Không thể xóa file đề.", error);
+    return NextResponse.json({ error: "Không thể xóa file đề." }, { status: 500 });
   }
 }

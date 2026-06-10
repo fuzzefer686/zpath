@@ -129,6 +129,16 @@ export function useNewsArticles({ initialArticles }: UseNewsArticlesOptions) {
     return data.publicUrl;
   }, []);
 
+  const deleteImage = useCallback(async (pathOrPublicUrl: string) => {
+    await parseJsonResponse<{ success: boolean }>(
+      await fetch("/api/news/images", {
+        method: "DELETE",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ publicUrl: pathOrPublicUrl }),
+      }),
+    );
+  }, []);
+
   return {
     publishedArticles,
     myArticles,
@@ -140,5 +150,6 @@ export function useNewsArticles({ initialArticles }: UseNewsArticlesOptions) {
     saveArticle,
     deleteArticle,
     uploadImage,
+    deleteImage,
   };
 }

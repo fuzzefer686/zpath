@@ -7,6 +7,7 @@ import {
   ArrowUp,
   CheckCircle2,
   CircleAlert,
+  FileText,
   FileQuestion,
   ImageUp,
   Loader2,
@@ -25,8 +26,8 @@ type ExamSolverWorkspaceProps = {
   onClose: () => void;
 };
 
-const MAX_EXAM_IMAGE_COUNT = 5;
-const OCR_ESTIMATED_SECONDS_PER_IMAGE = 15;
+const MAX_EXAM_FILE_COUNT = 5;
+const OCR_ESTIMATED_SECONDS_PER_FILE = 15;
 
 function formatFileSize(size: number) {
   if (size >= 1024 * 1024) return `${(size / 1024 / 1024).toFixed(1)}MB`;
@@ -66,15 +67,15 @@ export function ExamSolverWorkspace({
     exam.isVerifying;
 
   const selectedEstimatedSeconds =
-    Math.max(1, selectedExamFiles.length) * OCR_ESTIMATED_SECONDS_PER_IMAGE;
+    Math.max(1, selectedExamFiles.length) * OCR_ESTIMATED_SECONDS_PER_FILE;
 
   const handleFileChange = (files: FileList | null | undefined) => {
     const nextFiles = Array.from(files ?? []);
     if (!nextFiles.length) return;
 
-    if (nextFiles.length > MAX_EXAM_IMAGE_COUNT) {
-      setFileSelectionError(`Chỉ hỗ trợ tối đa ${MAX_EXAM_IMAGE_COUNT} ảnh cho mỗi đề.`);
-      setSelectedExamFiles(nextFiles.slice(0, MAX_EXAM_IMAGE_COUNT));
+    if (nextFiles.length > MAX_EXAM_FILE_COUNT) {
+      setFileSelectionError(`Chỉ hỗ trợ tối đa ${MAX_EXAM_FILE_COUNT} file cho mỗi đề.`);
+      setSelectedExamFiles(nextFiles.slice(0, MAX_EXAM_FILE_COUNT));
     } else {
       setFileSelectionError(null);
       setSelectedExamFiles(nextFiles);
@@ -102,7 +103,7 @@ export function ExamSolverWorkspace({
 
   const handleUploadSelectedFiles = async () => {
     if (!selectedExamFiles.length) {
-      setFileSelectionError("Hãy chọn ít nhất một ảnh đề thi.");
+      setFileSelectionError("Hãy chọn ít nhất một file đề thi.");
       return;
     }
 
@@ -277,9 +278,9 @@ export function ExamSolverWorkspace({
             </div>
             <div className="mt-5 space-y-4">
               <div>
-                <div className="text-sm font-black text-foreground">1. Tải ảnh đề</div>
+                <div className="text-sm font-black text-foreground">1. Tải đề</div>
                 <div className="mt-1 text-xs font-semibold leading-5 text-muted-foreground">
-                  PNG, JPEG hoặc WebP, tối đa 10MB.
+                  PNG, JPEG, WebP tối đa 10MB hoặc PDF tối đa 20MB.
                 </div>
               </div>
               <div>
@@ -324,7 +325,7 @@ export function ExamSolverWorkspace({
                     ref={fileInputRef}
                     type="file"
                     multiple
-                    accept="image/png,image/jpeg,image/webp"
+                    accept="image/png,image/jpeg,image/webp,application/pdf,.pdf"
                     className="sr-only"
                     disabled={exam.isUploading}
                     onChange={(event) => handleFileChange(event.target.files)}
@@ -335,7 +336,7 @@ export function ExamSolverWorkspace({
                     <ImageUp className="h-11 w-11 text-primary" />
                   )}
                   <span className="mt-4 text-xl font-black text-foreground">
-                    {exam.isUploading ? "Zpath AI đang đọc ảnh đề" : "Tải ảnh đề thi"}
+                    {exam.isUploading ? "Zpath AI đang đọc đề" : "Tải đề thi"}
                   </span>
                   {exam.isUploading && (
                     <span className="mt-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-black text-primary">
@@ -344,7 +345,7 @@ export function ExamSolverWorkspace({
                     </span>
                   )}
                   <span className="mt-2 max-w-md text-sm font-semibold leading-6 text-muted-foreground">
-                    Chọn tối đa {MAX_EXAM_IMAGE_COUNT} ảnh theo đúng thứ tự trang. AI sẽ chép lại
+                    Chọn tối đa {MAX_EXAM_FILE_COUNT} file ảnh/PDF theo đúng thứ tự. AI sẽ chép lại
                     đề bằng Markdown + LaTeX để bạn xác nhận trước khi giải.
                   </span>
 
@@ -356,8 +357,8 @@ export function ExamSolverWorkspace({
                         onClick={() => fileInputRef.current?.click()}
                         className="gap-2 rounded-full"
                       >
-                        <ImageUp className="h-4 w-4" />
-                        Chọn ảnh
+                        <FileText className="h-4 w-4" />
+                        Chọn file
                       </Button>
                       <Button
                         type="button"
@@ -382,7 +383,7 @@ export function ExamSolverWorkspace({
                     <div className="mt-5 w-full max-w-2xl rounded-2xl border border-border bg-white p-3 text-left">
                       <div className="mb-3 flex items-center justify-between gap-3 px-1">
                         <div className="text-xs font-black uppercase tracking-[0.14em] text-muted-foreground">
-                          {selectedExamFiles.length} ảnh đã chọn
+                          {selectedExamFiles.length} file đã chọn
                         </div>
                         <div className="text-xs font-bold text-muted-foreground">
                           Ước tính {selectedEstimatedSeconds}s
@@ -465,7 +466,7 @@ export function ExamSolverWorkspace({
 
                     <div className="rounded-2xl bg-primary/10 px-4 py-3 text-xs font-bold leading-5 text-muted-foreground">
                       Phần hình vẽ, ảnh hoặc biểu đồ được ẩn trong bản chép đề. Hãy đối chiếu trực tiếp
-                      với ảnh gốc nếu câu hỏi phụ thuộc vào hình.
+                      với file gốc nếu câu hỏi phụ thuộc vào hình.
                     </div>
 
                     {exam.isEditing ? (

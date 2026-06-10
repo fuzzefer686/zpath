@@ -52,6 +52,6 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     console.error("POST /api/advisor/exam/upload error:", error);
-    return errorResponse(error, "Không thể đọc ảnh đề thi.");
+    return errorResponse(error, "Không thể đọc file đề thi.");
   }
 }
