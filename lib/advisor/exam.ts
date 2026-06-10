@@ -31,8 +31,9 @@ type ExamOwner = {
 
 const EXAM_IMAGE_BUCKET = "zpath-ai-exam-images";
 const MAX_EXAM_IMAGE_SIZE = 10 * 1024 * 1024;
+const MAX_EXAM_PDF_SIZE = 20 * 1024 * 1024;
 export const MAX_EXAM_IMAGE_COUNT = 5;
-const ALLOWED_EXAM_IMAGE_MIME_TYPES = ["image/png", "image/jpeg", "image/webp"];
+const ALLOWED_EXAM_FILE_MIME_TYPES = ["image/png", "image/jpeg", "image/webp", "application/pdf"];
 const VIETNAM_HIGH_SCHOOL_SOLVING_GUIDANCE =
   "Ưu tiên phương pháp, ký hiệu và cách trình bày phù hợp chương trình THPT Việt Nam; tránh dùng kiến thức đại học hoặc mẹo nâng cao nếu có cách THPT đủ giải được.";
 const LATEX_FORMAT_GUIDANCE =
@@ -62,6 +63,7 @@ function sanitizePathSegment(value: string) {
 }
 
 function getFileExtension(mimeType: string) {
+  if (mimeType === "application/pdf") return "pdf";
   if (mimeType === "image/png") return "png";
   if (mimeType === "image/webp") return "webp";
   return "jpg";
@@ -114,14 +116,18 @@ function mapSessionRow(row: Record<string, unknown>): ZpathExamSession {
 
 export function validateExamImageFile(file: File | null) {
   if (!file) {
-    return "Không tìm thấy ảnh đề thi.";
+    return "Không tìm thấy file đề thi.";
   }
 
-  if (!ALLOWED_EXAM_IMAGE_MIME_TYPES.includes(file.type)) {
-    return "Chỉ hỗ trợ ảnh PNG, JPEG hoặc WebP.";
+  if (!ALLOWED_EXAM_FILE_MIME_TYPES.includes(file.type)) {
+    return "Chỉ hỗ trợ ảnh PNG, JPEG, WebP hoặc PDF.";
   }
 
-  if (file.size > MAX_EXAM_IMAGE_SIZE) {
+  const maxSize = file.type === "application/pdf" ? MAX_EXAM_PDF_SIZE : MAX_EXAM_IMAGE_SIZE;
+  if (file.size > maxSize) {
+    if (file.type === "application/pdf") {
+      return "File PDF đề thi không được vượt quá 20MB.";
+    }
     return "Ảnh đề thi không được vượt quá 10MB.";
   }
 
@@ -130,7 +136,7 @@ export function validateExamImageFile(file: File | null) {
 
 export function validateExamImageFiles(files: File[]) {
   if (!files.length) {
-    return "Không tìm thấy ảnh đề thi.";
+    return "Không tìm thấy file đề thi.";
   }
 
   if (files.length > MAX_EXAM_IMAGE_COUNT) {
@@ -140,7 +146,7 @@ export function validateExamImageFiles(files: File[]) {
   for (const [index, file] of files.entries()) {
     const validationError = validateExamImageFile(file);
     if (validationError) {
-      return `Ảnh ${index + 1}: ${validationError}`;
+      return `File ${index + 1}: ${validationError}`;
     }
   }
 
@@ -222,10 +228,10 @@ function createExamOcrConfig(): GenerateContentConfig {
 
 function createOcrPrompt(imageCount: number) {
   return [
-    "Bạn là OCR chuyên đọc đề thi tiếng Việt.",
+    "Bạn là OCR chuyên đọc đề thi tiếng Việt từ ảnh hoặc PDF.",
     imageCount === 1
-      ? "Hãy chép lại nội dung ảnh đề thi bằng Markdown rõ ràng."
-      : `Hãy đọc ${imageCount} ảnh đề thi theo đúng thứ tự: ảnh 1 là trang đầu, ảnh 2 là trang tiếp theo, rồi ghép thành một đề Markdown duy nhất.`,
+      ? "Hãy chép lại nội dung file đề thi bằng Markdown rõ ràng."
+      : `Hãy đọc ${imageCount} file đề thi theo đúng thứ tự: file 1 là phần đầu, file 2 là phần tiếp theo, rồi ghép thành một đề Markdown duy nhất.`,
     "Chép đầy đủ câu hỏi, đáp án lựa chọn, công thức, bảng và ký hiệu quan trọng; không diễn giải thêm.",
     "Mọi biểu thức toán học phải viết bằng LaTeX, bọc inline bằng $...$ hoặc display bằng $$...$$ để UI render bằng KaTeX.",
     "Không mô tả, chép lại hoặc tái tạo hình vẽ, ảnh minh họa, đồ thị, biểu đồ. Với phần đó chỉ ghi '[Hình ảnh/biểu đồ: xem ảnh gốc]'.",
@@ -242,7 +248,7 @@ async function extractExamMarkdownFromImagesOnce(images: ExamImageForOcr[]) {
 
   const imageParts = images.flatMap((image) => [
     {
-      text: `Ảnh ${image.pageIndex + 1}/${images.length}`,
+      text: `File ${image.pageIndex + 1}/${images.length}`,
     },
     createPartFromBase64(image.imageBuffer.toString("base64"), image.mimeType),
   ]);
@@ -409,8 +415,8 @@ export async function createExamSessionFromUpload({
     role: "user",
     content:
       uploadFiles.length === 1
-        ? `Đã tải ảnh đề thi: ${firstFile.name || "exam image"}`
-        : `Đã tải ${uploadFiles.length} ảnh đề thi.`,
+        ? `Đã tải file đề thi: ${firstFile.name || "exam file"}`
+        : `Đã tải ${uploadFiles.length} file đề thi.`,
     intent: "exam_ocr",
     metadata: {
       kind: "exam_upload",

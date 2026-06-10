@@ -2,6 +2,7 @@ import { randomUUID } from "crypto";
 import { NextResponse } from "next/server";
 
 import { isNewsSchemaMissingError } from "@/lib/news-server";
+import { getAuthContext } from "@/lib/zpath-auth";
 import { supabaseServer } from "@/src/lib/db/supabaseServer";
 
 export const runtime = "nodejs";
@@ -14,6 +15,27 @@ function getExtension(mimeType: string) {
   if (mimeType === "image/png") return "png";
   if (mimeType === "image/webp") return "webp";
   return "jpg";
+}
+
+function normalizeStoragePath(value: unknown) {
+  if (typeof value !== "string") return "";
+
+  const trimmed = value.trim();
+  if (!trimmed) return "";
+
+  try {
+    const url = new URL(trimmed);
+    const marker = `/storage/v1/object/public/${NEWS_IMAGE_BUCKET}/`;
+    const markerIndex = url.pathname.indexOf(marker);
+
+    if (markerIndex >= 0) {
+      return decodeURIComponent(url.pathname.slice(markerIndex + marker.length));
+    }
+  } catch {
+    // Value is already expected to be a storage path.
+  }
+
+  return trimmed.replace(/^\/+/, "");
 }
 
 export async function POST(request: Request) {
@@ -64,5 +86,44 @@ export async function POST(request: Request) {
 
     console.error("Không thể tải ảnh bài viết.", error);
     return NextResponse.json({ error: "Không thể tải ảnh bài viết." }, { status: 500 });
+  }
+}
+
+export async function DELETE(request: Request) {
+  try {
+    const auth = await getAuthContext();
+    if (!auth || auth.user.role !== "admin") {
+      return NextResponse.json(
+        { error: "Chỉ admin mới được xóa ảnh bài viết." },
+        { status: 403 },
+      );
+    }
+
+    const body = (await request.json().catch(() => null)) as
+      | { path?: unknown; publicUrl?: unknown }
+      | null;
+    const path = normalizeStoragePath(body?.path ?? body?.publicUrl);
+
+    if (!path) {
+      return NextResponse.json({ error: "Thiếu path ảnh cần xóa." }, { status: 400 });
+    }
+
+    const { error } = await supabaseServer.storage.from(NEWS_IMAGE_BUCKET).remove([path]);
+    if (error) throw error;
+
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    if (isNewsSchemaMissingError(error)) {
+      return NextResponse.json(
+        {
+          error:
+            "Storage bucket news-images chưa được tạo. Hãy chạy migration news_markdown_crud trước khi xóa ảnh bài viết.",
+        },
+        { status: 503 },
+      );
+    }
+
+    console.error("Không thể xóa ảnh bài viết.", error);
+    return NextResponse.json({ error: "Không thể xóa ảnh bài viết." }, { status: 500 });
   }
 }

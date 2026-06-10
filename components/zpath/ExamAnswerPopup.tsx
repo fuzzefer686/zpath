@@ -33,14 +33,14 @@ export function ExamAnswerPopup() {
               <Flame className="h-5 w-5" />
             </div>
             <div>
-              <h2 className="font-display text-lg font-bold">Đề thi - đáp án gợi ý</h2>
+              <h2 className="font-display text-lg font-bold">Xem đề & đáp án</h2>
               <p className="mt-1 text-sm leading-6 text-muted-foreground">
                 Mở nhanh lịch cập nhật ngày 11/6 và 12/6.
               </p>
             </div>
           </div>
           <Button type="button" variant="coral" onClick={() => setIsOpen(true)} className="w-full sm:w-auto">
-            Xem đề đáp án
+            Xem đề & đáp án
           </Button>
         </div>
       </div>
@@ -66,7 +66,7 @@ export function ExamAnswerPopup() {
                     Cập nhật mùa thi
                   </div>
                   <h2 id="exam-answer-popup-title" className="mt-4 font-display text-3xl font-bold leading-tight">
-                    Chọn ngày để xem đề thi và đáp án gợi ý
+                    Chọn ngày để xem đề & đáp án
                   </h2>
                   <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
                     Mỗi trang có lịch cập nhật theo môn, trạng thái đáp án và lối tắt sang Scoring.

@@ -2,7 +2,7 @@
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { FileUp, ImagePlus, Loader2 } from "lucide-react";
+import { FileUp, ImagePlus, Loader2, Trash2 } from "lucide-react";
 
 import { MarkdownPreview } from "@/components/news/MarkdownPreview";
 import { Button } from "@/components/ui/button";
@@ -63,7 +63,7 @@ function toInput(state: EditorState): NewsArticleInput {
 
 export function NewsEditor({ article }: NewsEditorProps) {
   const router = useRouter();
-  const { isLoading, error, setError, saveArticle, uploadImage } = useNewsArticles({
+  const { isLoading, error, setError, saveArticle, uploadImage, deleteImage } = useNewsArticles({
     initialArticles: [],
   });
   const [editor, setEditor] = useState<EditorState>(
@@ -115,6 +115,18 @@ export function NewsEditor({ article }: NewsEditorProps) {
       setMessage("Đã tải ảnh và chèn vào Markdown.");
     } catch (uploadError) {
       setError(uploadError instanceof Error ? uploadError.message : "Không thể tải ảnh.");
+    }
+  };
+
+  const handleDeleteCoverImage = async () => {
+    if (!editor.coverImageUrl) return;
+
+    try {
+      await deleteImage(editor.coverImageUrl);
+      setEditor((current) => ({ ...current, coverImageUrl: "" }));
+      setMessage("Đã xóa ảnh cover khỏi Storage.");
+    } catch (deleteError) {
+      setError(deleteError instanceof Error ? deleteError.message : "Không thể xóa ảnh cover.");
     }
   };
 
@@ -218,13 +230,25 @@ export function NewsEditor({ article }: NewsEditorProps) {
                   className="min-h-20 w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   required
                 />
-                <Input
-                  value={editor.coverImageUrl}
-                  onChange={(event) =>
-                    setEditor((current) => ({ ...current, coverImageUrl: event.target.value }))
-                  }
-                  placeholder="Cover image URL"
-                />
+                <div className="grid gap-2 sm:grid-cols-[minmax(0,1fr)_auto]">
+                  <Input
+                    value={editor.coverImageUrl}
+                    onChange={(event) =>
+                      setEditor((current) => ({ ...current, coverImageUrl: event.target.value }))
+                    }
+                    placeholder="Cover image URL"
+                  />
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => void handleDeleteCoverImage()}
+                    disabled={!editor.coverImageUrl || isLoading}
+                    className="gap-2 rounded-full text-destructive"
+                  >
+                    <Trash2 className="h-4 w-4" />
+                    Xóa ảnh
+                  </Button>
+                </div>
                 <div className="grid grid-cols-2 gap-2">
                   <label className="inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded-full border-2 border-foreground/15 text-xs font-bold hover:border-primary hover:text-primary">
                     <FileUp className="h-4 w-4" />
