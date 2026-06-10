@@ -48,23 +48,24 @@ export const EXAM_DAY_11_SCHEDULE_ROWS: ExamScheduleRow[] = [
 ];
 
 export const EXAM_DAY_12_SCHEDULE_ROWS: ExamScheduleRow[] = [
-  {
+  "Ngoại ngữ",
+  "Lịch sử",
+  "Vật lí",
+  "Hóa học",
+  "Sinh học",
+  "Địa lí",
+  "Giáo dục kinh tế và pháp luật (GDKT&PL)",
+  "Tin học",
+  "Công nghệ",
+  "Các đề tương đương",
+].map((subject) => ({
     date: "12.6.2026",
     session: "Sáng",
-    subject: "Bài thi tự chọn - Môn thứ 1",
+    subject,
     duration: "50 phút",
-    distributionTime: "07 giờ 30",
-    startTime: "07 giờ 35",
-  },
-  {
-    date: "12.6.2026",
-    session: "Sáng",
-    subject: "Bài thi tự chọn - Môn thứ 2",
-    duration: "50 phút",
-    distributionTime: "08 giờ 35",
-    startTime: "08 giờ 40",
-  },
-];
+    distributionTime: "07 giờ 30 hoặc 08 giờ 35",
+    startTime: "07 giờ 35 hoặc 08 giờ 40",
+  }));
 
 export const EXAM_SCHEDULE_ROWS = [
   ...EXAM_DAY_11_SCHEDULE_ROWS,
@@ -102,7 +103,7 @@ export const STATIC_EXAM_ANSWER_ROUTES: StaticExamAnswerRoute[] = [
     dateLabel: "12 tháng 6, 2026",
     title: "Đề thi và đáp án gợi ý ngày 12 tháng 6 2026",
     description:
-      "Tổng hợp đề thi, đáp án gợi ý và cách tra cứu cơ hội xét tuyển bằng dữ liệu điểm chuẩn trên ZPATH cho ngày 12/6.",
+      "Tổng hợp đề thi, đáp án gợi ý theo từng môn tự chọn và cách tra cứu cơ hội xét tuyển bằng dữ liệu điểm chuẩn trên ZPATH cho ngày 12/6.",
     updatedAt: "2026-06-12T00:00:00.000Z",
     scheduleRows: EXAM_DAY_12_SCHEDULE_ROWS,
     subjects: createExamSubjects(EXAM_DAY_12_SCHEDULE_ROWS),
@@ -142,7 +143,7 @@ export const STATIC_NEWS_ARTICLES: NewsArticle[] = [
     title: STATIC_EXAM_ANSWER_ROUTES[1].title,
     excerpt: STATIC_EXAM_ANSWER_ROUTES[1].description,
     contentMarkdown:
-      "Cập nhật đề thi và đáp án gợi ý ngày 12/6/2026, kèm hướng dẫn tra cứu cơ hội xét tuyển trên ZPATH.",
+      "Cập nhật đề thi và đáp án gợi ý ngày 12/6/2026 theo từng môn tự chọn, kèm hướng dẫn tra cứu cơ hội xét tuyển trên ZPATH.",
     author: "Ban biên tập ZPATH",
     readTime: "3 phút đọc",
     featured: true,

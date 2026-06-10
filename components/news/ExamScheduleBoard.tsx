@@ -38,6 +38,8 @@ type UploadedExamImage = {
 type ExamScheduleBoardProps = {
   routeSlug: string;
   scheduleRows: ExamScheduleRow[];
+  heading?: string;
+  dateLabel?: string;
 };
 
 const DOCUMENT_TYPE_LABELS: Record<ExamDocumentType, string> = {
@@ -66,7 +68,7 @@ function getSessionTone(session: string) {
     : "border-tier-high/30 bg-tier-high-soft text-tier-high";
 }
 
-export function ExamScheduleBoard({ routeSlug, scheduleRows }: ExamScheduleBoardProps) {
+export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng cập nhật", dateLabel }: ExamScheduleBoardProps) {
   const { user } = useAuth();
   const [images, setImages] = useState<UploadedExamImage[]>([]);
   const [selectedSubject, setSelectedSubject] = useState(
@@ -82,11 +84,12 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows }: ExamScheduleBoard
   const [deletingImageId, setDeletingImageId] = useState<string | null>(null);
   const [activePreviewImageId, setActivePreviewImageId] = useState<string | null>(null);
   const [zoomedImageId, setZoomedImageId] = useState<string | null>(null);
-  const [zoomScale, setZoomScale] = useState(1.8);
+  const [zoomScale, setZoomScale] = useState(1);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const isAdmin = user?.role === "admin";
+  const hasManySubjects = scheduleRows.length > 4;
   const examSubjects = useMemo(
     () => scheduleRows.filter((row) => !row.subject.includes("thủ tục")).map((row) => row.subject),
     [scheduleRows],
@@ -236,7 +239,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows }: ExamScheduleBoard
     const group = imageGroups.get(createImageKey(subject, documentType)) ?? [];
     setActivePreviewImageId(group[0]?.id ?? null);
     setZoomedImageId(null);
-    setZoomScale(1.8);
+    setZoomScale(1);
     setPreview({ subject, documentType, images: group });
   };
 
@@ -248,7 +251,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows }: ExamScheduleBoard
     <div
       className={`min-w-0 rounded-2xl border p-2.5 ${
         latestImage
-          ? "border-destructive/30 bg-destructive/5 shadow-[0_0_0_1px_hsl(var(--destructive)/0.08)]"
+          ? "border-destructive/60 bg-gradient-to-br from-destructive/15 via-background to-background shadow-[0_14px_34px_-24px_hsl(var(--destructive))] ring-2 ring-destructive/15"
           : "border-border bg-background"
       }`}
     >
@@ -268,7 +271,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows }: ExamScheduleBoard
       <div
         className={`mt-2 flex min-h-7 items-center justify-center gap-1.5 rounded-full border px-2 text-center text-[11px] font-bold leading-tight ${
           latestImage
-            ? "animate-pulse border-destructive/30 bg-destructive/10 text-destructive"
+            ? "animate-pulse border-destructive bg-destructive text-destructive-foreground shadow-sm"
             : "border-primary/20 bg-primary/10 text-primary"
         }`}
       >
@@ -309,7 +312,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows }: ExamScheduleBoard
   const openZoom = (imageId: string) => {
     setActivePreviewImageId(imageId);
     setZoomedImageId(imageId);
-    setZoomScale(1.8);
+    setZoomScale(1);
   };
 
   const updateZoomScale = (nextScale: number) => {
@@ -321,8 +324,26 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows }: ExamScheduleBoard
       <div className="flex flex-col gap-3 border-b border-border pb-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex min-w-0 items-center gap-3">
           <div>
-            <p className="text-xs font-bold text-primary">Bảng cập nhật</p>
-            <h2 className="font-display text-2xl font-bold leading-tight sm:text-3xl">Lịch thi, đề và đáp án</h2>
+            <div className="flex flex-wrap gap-2">
+              <p className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-bold text-primary">
+                Đề thi và đáp án
+              </p>
+              {dateLabel && (
+                <p className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs font-bold text-muted-foreground">
+                  {dateLabel}
+                </p>
+              )}
+            </div>
+            <div className="flex min-w-0 flex-wrap items-center gap-2">
+              <h1 className="mt-2 font-display text-3xl font-bold leading-tight sm:text-4xl">
+                {heading}
+              </h1>
+              {hasManySubjects && (
+                <span className="rounded-full border border-border bg-card px-2.5 py-1 text-[11px] font-black text-muted-foreground">
+                  {scheduleRows.length} mục
+                </span>
+              )}
+            </div>
           </div>
           {isLoadingImages && (
             <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-border bg-muted/40 px-2.5 py-1 text-[11px] font-bold text-muted-foreground">
@@ -393,7 +414,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows }: ExamScheduleBoard
         </div>
       )}
 
-      <div className="mt-3 grid min-h-0 gap-3 md:grid-cols-2">
+      <div className={`mt-3 grid min-h-0 gap-3 md:grid-cols-2 ${hasManySubjects ? "xl:grid-cols-3" : ""}`}>
         {scheduleRows.map((row) => {
           const examImages = imageGroups.get(createImageKey(row.subject, "de")) ?? [];
           const answerImages = imageGroups.get(createImageKey(row.subject, "dap_an")) ?? [];
@@ -405,7 +426,9 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows }: ExamScheduleBoard
             <article
               key={`${row.date}-${row.session}-${row.subject}`}
               className={`min-w-0 rounded-[1.25rem] border p-3 transition-colors ${
-                isHot ? "border-destructive/25 bg-destructive/5" : "border-border bg-card"
+                isHot
+                  ? "border-destructive/60 bg-gradient-to-br from-destructive/15 via-background to-tier-high-soft/40 shadow-[0_18px_45px_-30px_hsl(var(--destructive))] ring-2 ring-destructive/15"
+                  : "border-border bg-card"
               }`}
             >
               <div className="flex min-w-0 items-start justify-between gap-3">
@@ -416,17 +439,19 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows }: ExamScheduleBoard
                     </span>
                     <span className="text-xs font-bold text-muted-foreground">{row.date}</span>
                     {isHot && (
-                      <span className="inline-flex h-7 animate-pulse items-center gap-1 rounded-full bg-destructive px-2 text-[10px] font-black text-destructive-foreground">
+                      <span className="inline-flex h-7 animate-pulse items-center gap-1 rounded-full bg-destructive px-2.5 text-[10px] font-black text-destructive-foreground shadow-sm">
                         <Flame className="h-3 w-3" />
-                        HOT
+                        MỚI CẬP NHẬT
                       </span>
                     )}
                   </div>
-                  <h3 className="mt-1 break-words font-display text-2xl font-bold leading-tight">{row.subject}</h3>
+                  <h3 className={`mt-1 break-words font-display font-bold leading-tight ${hasManySubjects ? "text-xl" : "text-2xl"}`}>
+                    {row.subject}
+                  </h3>
                 </div>
               </div>
 
-              <div className="mt-2 grid grid-cols-3 gap-2 text-center">
+              <div className={`mt-2 grid gap-2 text-center ${hasManySubjects ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-3"}`}>
                 {[
                   ["Làm bài", row.duration],
                   ["Phát đề", row.distributionTime],
