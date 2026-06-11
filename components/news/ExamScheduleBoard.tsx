@@ -6,6 +6,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock3,
+  Download,
   FileImage,
   FileText,
   Flame,
@@ -62,8 +63,32 @@ function inferExamCodeFromStoragePath(storagePath: string) {
   return storagePath.split("/").find((pathPart) => EXAM_CODE_OPTIONS.includes(pathPart)) ?? null;
 }
 
+function sanitizeFileNamePart(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
+}
+
 function getImageExamCode(image: Pick<UploadedExamImage, "exam_code" | "storage_path">) {
   return image.exam_code ?? inferExamCodeFromStoragePath(image.storage_path);
+}
+
+function createPreviewDownloadFileName(preview: {
+  subject: string;
+  documentType: ExamDocumentType;
+  examCode: string | null;
+}) {
+  const documentType = preview.documentType === "dap_an" ? "dap-an" : "de";
+  const subject = sanitizeFileNamePart(preview.subject || "mon-thi") || "mon-thi";
+  const examCode = preview.examCode ? `-ma-${preview.examCode}` : "";
+
+  return `${documentType}-${subject}${examCode}.zip`;
 }
 
 function subjectUsesExamCode(subject: string) {
@@ -116,6 +141,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
   const [isUploading, setIsUploading] = useState(false);
   const [deletingImageId, setDeletingImageId] = useState<string | null>(null);
   const [isDeletingPreviewSet, setIsDeletingPreviewSet] = useState(false);
+  const [isDownloadingPreviewSet, setIsDownloadingPreviewSet] = useState(false);
   const [activePreviewImageId, setActivePreviewImageId] = useState<string | null>(null);
   const [zoomedImageId, setZoomedImageId] = useState<string | null>(null);
   const [zoomScale, setZoomScale] = useState(1);
@@ -313,6 +339,44 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
       setError(deleteError instanceof Error ? deleteError.message : "Không thể xóa mã đề.");
     } finally {
       setIsDeletingPreviewSet(false);
+    }
+  };
+
+  const handleDownloadPreviewSet = async () => {
+    if (!preview?.images.length) return;
+
+    const downloadIds = preview.images.map((image) => image.id);
+    const downloadFileName = createPreviewDownloadFileName(preview);
+    setIsDownloadingPreviewSet(true);
+    setMessage(null);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/exam/images/download", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ ids: downloadIds }),
+      });
+
+      if (!response.ok) {
+        const data = (await response.json().catch(() => null)) as { error?: string } | null;
+        throw new Error(data?.error || "Không thể tải file đề.");
+      }
+
+      const zipBlob = await response.blob();
+      const objectUrl = URL.createObjectURL(zipBlob);
+      const downloadLink = document.createElement("a");
+      downloadLink.href = objectUrl;
+      downloadLink.download = downloadFileName;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      downloadLink.remove();
+      window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+      setMessage(`Đã chuẩn bị file tải xuống ${downloadFileName}.`);
+    } catch (downloadError) {
+      setError(downloadError instanceof Error ? downloadError.message : "Không thể tải file đề.");
+    } finally {
+      setIsDownloadingPreviewSet(false);
     }
   };
 
@@ -655,6 +719,21 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
                 </p>
               </div>
               <div className="flex shrink-0 items-center gap-2">
+                {preview.images.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => void handleDownloadPreviewSet()}
+                    disabled={isDownloadingPreviewSet}
+                    className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 text-xs font-black text-primary transition hover:bg-primary/10 disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    {isDownloadingPreviewSet ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <Download className="h-4 w-4" />
+                    )}
+                    Tải xuống
+                  </button>
+                )}
                 {isAdmin && preview.examCode && preview.images.length > 0 && (
                   <button
                     type="button"
