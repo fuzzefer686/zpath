@@ -9,8 +9,11 @@ export const runtime = "nodejs";
 
 const EXAM_IMAGE_BUCKET = "exam-images";
 const MAX_FILE_SIZE = 20 * 1024 * 1024;
-const EXAM_IMAGE_SELECT = "id, route_slug, subject, document_type, storage_path, public_url, mime_type, file_size, created_at";
+const EXAM_IMAGE_SELECT = "id, route_slug, subject, document_type, exam_code, storage_path, public_url, mime_type, file_size, created_at";
+const EXAM_IMAGE_LEGACY_SELECT = "id, route_slug, subject, document_type, storage_path, public_url, mime_type, file_size, created_at";
 const ALLOWED_MIME_TYPES = ["image/png", "image/jpeg", "image/webp", "application/pdf"];
+const EXAM_CODE_OPTIONS = Array.from({ length: 24 }, (_, index) => String(101 + index));
+const EXAM_CODE_SET = new Set(EXAM_CODE_OPTIONS);
 
 function sanitizePathPart(value: string) {
   return value
@@ -42,6 +45,61 @@ function getDocumentType(value: FormDataEntryValue | null) {
   return value === "dap_an" ? "dap_an" : "de";
 }
 
+function subjectUsesExamCode(subject: string) {
+  const normalizedSubject = subject
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D")
+    .toLocaleLowerCase("vi-VN")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+  return !normalizedSubject.includes("ngu van");
+}
+
+function getExamCode(value: FormDataEntryValue | null) {
+  const examCode = String(value ?? "").trim();
+  return EXAM_CODE_SET.has(examCode) ? examCode : "";
+}
+
+function isMissingExamCodeColumn(error: unknown) {
+  if (!error || typeof error !== "object") return false;
+
+  const errorRecord = error as Record<string, unknown>;
+  const errorText = [
+    errorRecord.code,
+    errorRecord.message,
+    errorRecord.details,
+    errorRecord.hint,
+  ]
+    .filter((value): value is string => typeof value === "string")
+    .join(" ")
+    .toLocaleLowerCase("en-US");
+
+  return errorText.includes("exam_code") || errorText.includes("pgrst204");
+}
+
+function inferExamCodeFromStoragePath(storagePath: unknown) {
+  if (typeof storagePath !== "string") return null;
+
+  return storagePath.split("/").find((pathPart) => EXAM_CODE_SET.has(pathPart)) ?? null;
+}
+
+function withDefaultExamCode<T extends object>(images: T[] | null) {
+  return (images ?? []).map((image) => {
+    const imageWithMetadata = image as T & {
+      exam_code?: string | null;
+      storage_path?: string | null;
+    };
+
+    return {
+      ...image,
+      exam_code: imageWithMetadata.exam_code ?? inferExamCodeFromStoragePath(imageWithMetadata.storage_path),
+    };
+  });
+}
+
 export async function POST(request: Request) {
   try {
     const auth = await getAuthContext();
@@ -58,6 +116,7 @@ export async function POST(request: Request) {
     const subjectName = String(formData.get("subject") ?? "").trim();
     const subject = sanitizePathPart(subjectName || "mon-thi");
     const documentType = getDocumentType(formData.get("documentType"));
+    const examCode = getExamCode(formData.get("examCode"));
     const route = getStaticExamAnswerRoute(routeSlug);
 
     if (!file) {
@@ -81,6 +140,10 @@ export async function POST(request: Request) {
       );
     }
 
+    if (subjectUsesExamCode(subjectName) && !examCode) {
+      return NextResponse.json({ error: "Hãy chọn mã đề từ 101 đến 124." }, { status: 400 });
+    }
+
     if (!ALLOWED_MIME_TYPES.includes(file.type)) {
       return NextResponse.json(
         { error: "Chỉ hỗ trợ ảnh PNG, JPEG, WebP hoặc PDF." },
@@ -92,7 +155,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "File đề không được vượt quá 20MB." }, { status: 400 });
     }
 
-    const path = `${routeSlug || "de-thi"}/${documentType}/${subject || "mon-thi"}/${randomUUID()}.${getExtension(file)}`;
+    const codePathPart = subjectUsesExamCode(subjectName) ? `${examCode}/` : "";
+    const path = `${routeSlug || "de-thi"}/${documentType}/${subject || "mon-thi"}/${codePathPart}${randomUUID()}.${getExtension(file)}`;
     const fileBuffer = Buffer.from(await file.arrayBuffer());
     const { error } = await supabaseServer.storage.from(EXAM_IMAGE_BUCKET).upload(path, fileBuffer, {
       contentType: file.type,
@@ -106,22 +170,51 @@ export async function POST(request: Request) {
       data: { publicUrl },
     } = supabaseServer.storage.from(EXAM_IMAGE_BUCKET).getPublicUrl(path);
 
+    const insertPayload = {
+      route_slug: routeSlug || "de-thi",
+      subject: subjectName,
+      document_type: documentType,
+      exam_code: subjectUsesExamCode(subjectName) ? examCode : null,
+      storage_path: path,
+      public_url: publicUrl,
+      mime_type: file.type,
+      file_size: file.size,
+      uploaded_by: auth.user.id,
+    };
+
     const { data: image, error: insertError } = await supabaseServer
       .from("exam_images")
-      .insert({
-        route_slug: routeSlug || "de-thi",
-        subject: subjectName,
-        document_type: documentType,
-        storage_path: path,
-        public_url: publicUrl,
-        mime_type: file.type,
-        file_size: file.size,
-        uploaded_by: auth.user.id,
-      })
+      .insert(insertPayload)
       .select(EXAM_IMAGE_SELECT)
       .single();
 
-    if (insertError) throw insertError;
+    if (insertError) {
+      if (!isMissingExamCodeColumn(insertError)) throw insertError;
+
+      const legacyInsertPayload = {
+        route_slug: insertPayload.route_slug,
+        subject: insertPayload.subject,
+        document_type: insertPayload.document_type,
+        storage_path: insertPayload.storage_path,
+        public_url: insertPayload.public_url,
+        mime_type: insertPayload.mime_type,
+        file_size: insertPayload.file_size,
+        uploaded_by: insertPayload.uploaded_by,
+      };
+      const { data: legacyImage, error: legacyInsertError } = await supabaseServer
+        .from("exam_images")
+        .insert(legacyInsertPayload)
+        .select(EXAM_IMAGE_LEGACY_SELECT)
+        .single();
+
+      if (legacyInsertError) throw legacyInsertError;
+      return NextResponse.json({
+        image: {
+          ...legacyImage,
+          exam_code: inferExamCodeFromStoragePath(legacyImage?.storage_path),
+        },
+      });
+    }
 
     return NextResponse.json({ image });
   } catch (error) {
@@ -145,9 +238,20 @@ export async function GET(request: Request) {
       .eq("route_slug", routeSlug)
       .order("created_at", { ascending: false });
 
-    if (error) throw error;
+    if (error) {
+      if (!isMissingExamCodeColumn(error)) throw error;
 
-    return NextResponse.json({ images: data ?? [] });
+      const { data: legacyData, error: legacyError } = await supabaseServer
+        .from("exam_images")
+        .select(EXAM_IMAGE_LEGACY_SELECT)
+        .eq("route_slug", routeSlug)
+        .order("created_at", { ascending: false });
+
+      if (legacyError) throw legacyError;
+      return NextResponse.json({ images: withDefaultExamCode(legacyData) });
+    }
+
+    return NextResponse.json({ images: withDefaultExamCode(data) });
   } catch (error) {
     console.warn("Không thể tải danh sách ảnh đề, trả về danh sách rỗng.", error);
     return NextResponse.json({ images: [] });
@@ -164,38 +268,49 @@ export async function DELETE(request: Request) {
       );
     }
 
-    const body = (await request.json().catch(() => null)) as { id?: unknown } | null;
+    const body = (await request.json().catch(() => null)) as { id?: unknown; ids?: unknown } | null;
     const id = typeof body?.id === "string" ? body.id.trim() : "";
+    const ids = Array.isArray(body?.ids)
+      ? body.ids.filter((value): value is string => typeof value === "string" && value.trim().length > 0)
+      : [];
+    const imageIds = Array.from(new Set(id ? [id, ...ids] : ids));
 
-    if (!id) {
+    if (!imageIds.length) {
       return NextResponse.json({ error: "Thiếu id file cần xóa." }, { status: 400 });
     }
 
-    const { data: image, error: selectError } = await supabaseServer
+    const { data: images, error: selectError } = await supabaseServer
       .from("exam_images")
       .select("id, storage_path")
-      .eq("id", id)
-      .maybeSingle();
+      .in("id", imageIds);
 
     if (selectError) throw selectError;
-    if (!image?.storage_path) {
+    if (!images?.length) {
       return NextResponse.json({ error: "Không tìm thấy file đề." }, { status: 404 });
+    }
+
+    const storagePaths = images
+      .map((image) => String(image.storage_path ?? ""))
+      .filter(Boolean);
+
+    if (!storagePaths.length) {
+      return NextResponse.json({ error: "Không tìm thấy đường dẫn file đề." }, { status: 404 });
     }
 
     const { error: removeError } = await supabaseServer.storage
       .from(EXAM_IMAGE_BUCKET)
-      .remove([String(image.storage_path)]);
+      .remove(storagePaths);
 
     if (removeError) throw removeError;
 
     const { error: deleteError } = await supabaseServer
       .from("exam_images")
       .delete()
-      .eq("id", id);
+      .in("id", images.map((image) => image.id));
 
     if (deleteError) throw deleteError;
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, deletedCount: images.length });
   } catch (error) {
     console.error("Không thể xóa file đề.", error);
     return NextResponse.json({ error: "Không thể xóa file đề." }, { status: 500 });

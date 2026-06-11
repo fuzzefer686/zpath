@@ -28,6 +28,7 @@ type UploadedExamImage = {
   route_slug: string;
   subject: string;
   document_type: ExamDocumentType;
+  exam_code: string | null;
   storage_path: string;
   public_url: string;
   mime_type: string;
@@ -46,9 +47,36 @@ const DOCUMENT_TYPE_LABELS: Record<ExamDocumentType, string> = {
   de: "Đề",
   dap_an: "Đáp án",
 };
+const EXAM_CODE_OPTIONS = Array.from({ length: 24 }, (_, index) => String(101 + index));
+const NO_EXAM_CODE = "none";
 
-function createImageKey(subject: string, documentType: ExamDocumentType) {
+function createDocumentKey(subject: string, documentType: ExamDocumentType) {
   return `${subject}::${documentType}`;
+}
+
+function createCodeKey(subject: string, documentType: ExamDocumentType, examCode: string | null) {
+  return `${createDocumentKey(subject, documentType)}::${examCode ?? NO_EXAM_CODE}`;
+}
+
+function inferExamCodeFromStoragePath(storagePath: string) {
+  return storagePath.split("/").find((pathPart) => EXAM_CODE_OPTIONS.includes(pathPart)) ?? null;
+}
+
+function getImageExamCode(image: Pick<UploadedExamImage, "exam_code" | "storage_path">) {
+  return image.exam_code ?? inferExamCodeFromStoragePath(image.storage_path);
+}
+
+function subjectUsesExamCode(subject: string) {
+  const normalizedSubject = subject
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D")
+    .toLocaleLowerCase("vi-VN")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+  return !normalizedSubject.includes("ngu van");
 }
 
 function formatUpdatedAt(value?: string) {
@@ -77,14 +105,21 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
   const [preview, setPreview] = useState<{
     subject: string;
     documentType: ExamDocumentType;
+    examCode: string | null;
     images: UploadedExamImage[];
+  } | null>(null);
+  const [activeCodePicker, setActiveCodePicker] = useState<{
+    subject: string;
+    documentType: ExamDocumentType;
   } | null>(null);
   const [isLoadingImages, setIsLoadingImages] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
   const [deletingImageId, setDeletingImageId] = useState<string | null>(null);
+  const [isDeletingPreviewSet, setIsDeletingPreviewSet] = useState(false);
   const [activePreviewImageId, setActivePreviewImageId] = useState<string | null>(null);
   const [zoomedImageId, setZoomedImageId] = useState<string | null>(null);
   const [zoomScale, setZoomScale] = useState(1);
+  const [selectedExamCode, setSelectedExamCode] = useState(EXAM_CODE_OPTIONS[0]);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -95,20 +130,24 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
     [scheduleRows],
   );
   const imageGroups = useMemo(() => {
-    const groups = new Map<string, UploadedExamImage[]>();
+    const byDocument = new Map<string, UploadedExamImage[]>();
+    const byCode = new Map<string, UploadedExamImage[]>();
 
     images.forEach((image) => {
-      const key = createImageKey(image.subject, image.document_type);
-      groups.set(key, [...(groups.get(key) ?? []), image]);
+      const examCode = getImageExamCode(image);
+      const documentKey = createDocumentKey(image.subject, image.document_type);
+      const codeKey = createCodeKey(image.subject, image.document_type, examCode);
+      byDocument.set(documentKey, [...(byDocument.get(documentKey) ?? []), image]);
+      byCode.set(codeKey, [...(byCode.get(codeKey) ?? []), image]);
     });
 
-    groups.forEach((group) => {
+    [...byDocument.values(), ...byCode.values()].forEach((group) => {
       group.sort((left, right) => (
         new Date(left.created_at).getTime() - new Date(right.created_at).getTime()
       ));
     });
 
-    return groups;
+    return { byCode, byDocument };
   }, [images]);
 
   useEffect(() => {
@@ -173,6 +212,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
         formData.append("routeSlug", routeSlug);
         formData.append("subject", selectedSubject);
         formData.append("documentType", documentType);
+        formData.append("examCode", subjectUsesExamCode(selectedSubject) ? selectedExamCode : "");
 
         const response = await fetch("/api/exam/images", {
           method: "POST",
@@ -188,8 +228,9 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
       }
 
       setImages((current) => [...current, ...uploadedImages]);
+      const examCodeLabel = subjectUsesExamCode(selectedSubject) ? ` mã ${selectedExamCode}` : "";
       setMessage(
-        `Đã tải ${uploadedImages.length} file ${DOCUMENT_TYPE_LABELS[documentType].toLowerCase()} ${selectedSubject}.`,
+        `Đã tải ${uploadedImages.length} file ${DOCUMENT_TYPE_LABELS[documentType].toLowerCase()} ${selectedSubject}${examCodeLabel}.`,
       );
     } catch (uploadError) {
       setError(uploadError instanceof Error ? uploadError.message : "Không thể tải file đề.");
@@ -199,7 +240,9 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
   };
 
   const handleDeleteImage = async (image: UploadedExamImage) => {
-    const confirmed = window.confirm(`Xóa ${DOCUMENT_TYPE_LABELS[image.document_type].toLowerCase()} ${image.subject}?`);
+    const examCode = getImageExamCode(image);
+    const examCodeLabel = examCode ? ` mã ${examCode}` : "";
+    const confirmed = window.confirm(`Xóa ${DOCUMENT_TYPE_LABELS[image.document_type].toLowerCase()} ${image.subject}${examCodeLabel}?`);
     if (!confirmed) return;
 
     setDeletingImageId(image.id);
@@ -235,61 +278,151 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
     }
   };
 
-  const openPreview = (subject: string, documentType: ExamDocumentType) => {
-    const group = imageGroups.get(createImageKey(subject, documentType)) ?? [];
+  const handleDeletePreviewSet = async () => {
+    if (!preview?.images.length) return;
+
+    const examCodeLabel = preview.examCode ? ` mã ${preview.examCode}` : "";
+    const confirmed = window.confirm(
+      `Xóa toàn bộ ${preview.images.length} file ${DOCUMENT_TYPE_LABELS[preview.documentType].toLowerCase()} ${preview.subject}${examCodeLabel}?`,
+    );
+    if (!confirmed) return;
+
+    const deletingIds = preview.images.map((image) => image.id);
+    setIsDeletingPreviewSet(true);
+    setMessage(null);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/exam/images", {
+        method: "DELETE",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ ids: deletingIds }),
+      });
+      const data = (await response.json().catch(() => null)) as { error?: string; deletedCount?: number } | null;
+
+      if (!response.ok) {
+        throw new Error(data?.error || "Không thể xóa mã đề.");
+      }
+
+      setImages((current) => current.filter((item) => !deletingIds.includes(item.id)));
+      setPreview(null);
+      setActivePreviewImageId(null);
+      setZoomedImageId(null);
+      setMessage(`Đã xóa ${data?.deletedCount ?? deletingIds.length} file của mã đề.`);
+    } catch (deleteError) {
+      setError(deleteError instanceof Error ? deleteError.message : "Không thể xóa mã đề.");
+    } finally {
+      setIsDeletingPreviewSet(false);
+    }
+  };
+
+  const openPreview = (subject: string, documentType: ExamDocumentType, examCode: string | null = null) => {
+    const group = subjectUsesExamCode(subject)
+      ? imageGroups.byCode.get(createCodeKey(subject, documentType, examCode)) ?? []
+      : imageGroups.byDocument.get(createDocumentKey(subject, documentType)) ?? [];
     setActivePreviewImageId(group[0]?.id ?? null);
     setZoomedImageId(null);
     setZoomScale(1);
-    setPreview({ subject, documentType, images: group });
+    setPreview({ subject, documentType, examCode, images: group });
+  };
+
+  const toggleCodePicker = (subject: string, documentType: ExamDocumentType) => {
+    if (!subjectUsesExamCode(subject)) {
+      openPreview(subject, documentType);
+      return;
+    }
+
+    setActiveCodePicker((current) => (
+      current?.subject === subject && current.documentType === documentType
+        ? null
+        : { subject, documentType }
+    ));
   };
 
   const renderDocumentCell = (
     subject: string,
     documentType: ExamDocumentType,
-    latestImage?: UploadedExamImage,
-  ) => (
-    <div
-      className={`min-w-0 rounded-2xl border p-2.5 ${
-        latestImage
-          ? "border-destructive/60 bg-gradient-to-br from-destructive/15 via-background to-background shadow-[0_14px_34px_-24px_hsl(var(--destructive))] ring-2 ring-destructive/15"
-          : "border-border bg-background"
-      }`}
-    >
-      <button
-        type="button"
-        onClick={() => openPreview(subject, documentType)}
-        className={`flex h-9 w-full items-center justify-center gap-1.5 rounded-full px-2 text-xs font-bold transition-all hover:-translate-y-0.5 active:scale-[0.97] ${
-          latestImage
-            ? "bg-gradient-coral text-white shadow-coral"
-            : "bg-primary text-primary-foreground hover:bg-primary/90"
-        }`}
-      >
-        <FileImage className="h-3.5 w-3.5 shrink-0" />
-        <span className="break-words leading-tight">{DOCUMENT_TYPE_LABELS[documentType]}</span>
-      </button>
+  ) => {
+    const documentImages = imageGroups.byDocument.get(createDocumentKey(subject, documentType)) ?? [];
+    const latestImage = documentImages.at(-1);
+    const isExpanded =
+      activeCodePicker?.subject === subject && activeCodePicker.documentType === documentType;
+    const usesExamCode = subjectUsesExamCode(subject);
+    const uploadedCodeSet = new Set(
+      documentImages
+        .map((image) => getImageExamCode(image))
+        .filter((examCode): examCode is string => Boolean(examCode)),
+    );
 
+    return (
       <div
-        className={`mt-2 flex min-h-7 items-center justify-center gap-1.5 rounded-full border px-2 text-center text-[11px] font-bold leading-tight ${
+        className={`min-w-0 rounded-2xl border p-2.5 ${
           latestImage
-            ? "animate-pulse border-destructive bg-destructive text-destructive-foreground shadow-sm"
-            : "border-primary/20 bg-primary/10 text-primary"
+            ? "border-destructive/60 bg-gradient-to-br from-destructive/15 via-background to-background shadow-[0_14px_34px_-24px_hsl(var(--destructive))] ring-2 ring-destructive/15"
+            : "border-border bg-background"
         }`}
       >
-        {latestImage ? <Flame className="h-3 w-3 shrink-0" /> : <Clock3 className="h-3 w-3 shrink-0" />}
-        <span className="break-words">
-          {latestImage ? `HOT · ${latestImage.mime_type === "application/pdf" ? "PDF" : "Ảnh"}` : "Đang cập nhật"}
-        </span>
-      </div>
+        <button
+          type="button"
+          onClick={() => toggleCodePicker(subject, documentType)}
+          className={`flex h-9 w-full items-center justify-center gap-1.5 rounded-full px-2 text-xs font-bold transition-all hover:-translate-y-0.5 active:scale-[0.97] ${
+            latestImage
+              ? "bg-gradient-coral text-white shadow-coral"
+              : "bg-primary text-primary-foreground hover:bg-primary/90"
+          }`}
+        >
+          <FileImage className="h-3.5 w-3.5 shrink-0" />
+          <span className="break-words leading-tight">{DOCUMENT_TYPE_LABELS[documentType]}</span>
+        </button>
 
-      <button
-        type="button"
-        onClick={() => openPreview(subject, documentType)}
-        className="mt-1.5 block min-h-4 w-full text-center text-[11px] font-semibold leading-tight text-muted-foreground transition-colors hover:text-foreground"
-      >
-        Lúc: {formatUpdatedAt(latestImage?.created_at)}
-      </button>
-    </div>
-  );
+        <div
+          className={`mt-2 flex min-h-7 items-center justify-center gap-1.5 rounded-full border px-2 text-center text-[11px] font-bold leading-tight ${
+            latestImage
+              ? "animate-pulse border-destructive bg-destructive text-destructive-foreground shadow-sm"
+              : "border-primary/20 bg-primary/10 text-primary"
+          }`}
+        >
+          {latestImage ? <Flame className="h-3 w-3 shrink-0" /> : <Clock3 className="h-3 w-3 shrink-0" />}
+          <span className="break-words">
+            {latestImage ? `HOT · ${latestImage.mime_type === "application/pdf" ? "PDF" : "Ảnh"}` : "Đang cập nhật"}
+          </span>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => toggleCodePicker(subject, documentType)}
+          className="mt-1.5 block min-h-4 w-full text-center text-[11px] font-semibold leading-tight text-muted-foreground transition-colors hover:text-foreground"
+        >
+          Lúc: {formatUpdatedAt(latestImage?.created_at)}
+        </button>
+
+        {usesExamCode && isExpanded && (
+          <div className="mt-2 rounded-xl border border-border bg-background p-1.5 shadow-sm">
+            <div className="grid grid-cols-4 gap-1">
+              {EXAM_CODE_OPTIONS.map((examCode) => {
+                const hasUpload = uploadedCodeSet.has(examCode);
+                return (
+                  <button
+                    key={examCode}
+                    type="button"
+                    onClick={() => openPreview(subject, documentType, examCode)}
+                    className={`flex h-8 items-center justify-center rounded-lg border text-[11px] font-black transition active:scale-[0.97] ${
+                      hasUpload
+                        ? "border-destructive bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90"
+                        : "border-border bg-muted/35 text-muted-foreground hover:border-primary/40 hover:bg-primary/10 hover:text-primary"
+                    }`}
+                    aria-label={`Xem ${DOCUMENT_TYPE_LABELS[documentType].toLowerCase()} ${subject} mã ${examCode}`}
+                  >
+                    {examCode}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
 
   const activePreviewImage =
     preview?.images.find((image) => image.id === activePreviewImageId) ?? preview?.images[0];
@@ -359,7 +492,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
               <ShieldCheck className="h-3.5 w-3.5" />
               Admin upload
             </div>
-            <div className="grid gap-2 sm:grid-cols-[minmax(130px,180px)_1fr]">
+            <div className="grid gap-2 sm:grid-cols-[minmax(130px,180px)_minmax(92px,110px)_1fr]">
               <select
                 value={selectedSubject}
                 onChange={(event) => setSelectedSubject(event.target.value)}
@@ -368,6 +501,19 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
                 {examSubjects.map((subject) => (
                   <option key={subject} value={subject}>
                     {subject}
+                  </option>
+                ))}
+              </select>
+              <select
+                value={selectedExamCode}
+                onChange={(event) => setSelectedExamCode(event.target.value)}
+                disabled={!subjectUsesExamCode(selectedSubject)}
+                className="h-10 rounded-full border border-input bg-background px-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-50"
+                aria-label="Chọn mã đề"
+              >
+                {EXAM_CODE_OPTIONS.map((examCode) => (
+                  <option key={examCode} value={examCode}>
+                    Mã {examCode}
                   </option>
                 ))}
               </select>
@@ -416,8 +562,8 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
 
       <div className={`mt-3 grid min-h-0 gap-3 md:grid-cols-2 ${hasManySubjects ? "xl:grid-cols-3" : ""}`}>
         {scheduleRows.map((row) => {
-          const examImages = imageGroups.get(createImageKey(row.subject, "de")) ?? [];
-          const answerImages = imageGroups.get(createImageKey(row.subject, "dap_an")) ?? [];
+          const examImages = imageGroups.byDocument.get(createDocumentKey(row.subject, "de")) ?? [];
+          const answerImages = imageGroups.byDocument.get(createDocumentKey(row.subject, "dap_an")) ?? [];
           const latestExamImage = examImages.at(-1);
           const latestAnswerImage = answerImages.at(-1);
           const isHot = Boolean(latestExamImage || latestAnswerImage);
@@ -465,8 +611,8 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
               </div>
 
               <div className="mt-2 grid grid-cols-2 gap-2">
-                {renderDocumentCell(row.subject, "de", latestExamImage)}
-                {renderDocumentCell(row.subject, "dap_an", latestAnswerImage)}
+                {renderDocumentCell(row.subject, "de")}
+                {renderDocumentCell(row.subject, "dap_an")}
               </div>
             </article>
           );
@@ -490,6 +636,11 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
                   <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-black text-primary">
                     {DOCUMENT_TYPE_LABELS[preview.documentType]}
                   </span>
+                  {preview.examCode && (
+                    <span className="rounded-full border border-destructive/30 bg-destructive/10 px-3 py-1 text-xs font-black text-destructive">
+                      Mã {preview.examCode}
+                    </span>
+                  )}
                   <span className="rounded-full border border-border bg-muted/40 px-3 py-1 text-xs font-bold text-muted-foreground">
                     {preview.images.length} file
                   </span>
@@ -504,6 +655,21 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
                 </p>
               </div>
               <div className="flex shrink-0 items-center gap-2">
+                {isAdmin && preview.examCode && preview.images.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => void handleDeletePreviewSet()}
+                    disabled={isDeletingPreviewSet}
+                    className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-destructive/30 bg-destructive/5 px-3 text-xs font-black text-destructive transition hover:bg-destructive/10 disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    {isDeletingPreviewSet ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <Trash2 className="h-4 w-4" />
+                    )}
+                    Xóa mã đề này
+                  </button>
+                )}
                 <button
                   type="button"
                   aria-label="Đóng trình xem đề"
@@ -518,7 +684,8 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
             <div className="grid min-h-0 bg-muted/25">
               {preview.images.length === 0 ? (
                 <div className="m-4 grid place-items-center rounded-2xl border border-dashed border-border bg-background px-4 py-12 text-center text-sm text-muted-foreground">
-                  Chưa có file {DOCUMENT_TYPE_LABELS[preview.documentType].toLowerCase()} cho môn này.
+                  Chưa có file {DOCUMENT_TYPE_LABELS[preview.documentType].toLowerCase()}{" "}
+                  {preview.examCode ? `mã ${preview.examCode} ` : ""}cho môn này.
                 </div>
               ) : activePreviewImage ? (
                 <>
@@ -600,7 +767,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={zoomedImage.public_url}
-                          alt={`${DOCUMENT_TYPE_LABELS[zoomedImage.document_type]} ${zoomedImage.subject}`}
+                          alt={`${DOCUMENT_TYPE_LABELS[zoomedImage.document_type]} ${zoomedImage.subject}${zoomedImage.exam_code ? ` mã ${zoomedImage.exam_code}` : ""}`}
                           className="mx-auto max-w-none rounded-xl bg-white shadow-2xl"
                           style={{ width: `${zoomScale * 100}%` }}
                           onClick={() => setZoomedImageId(null)}
@@ -616,7 +783,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                               src={image.public_url}
-                              alt={`${DOCUMENT_TYPE_LABELS[image.document_type]} ${image.subject} trang ${index + 1}`}
+                              alt={`${DOCUMENT_TYPE_LABELS[image.document_type]} ${image.subject}${image.exam_code ? ` mã ${image.exam_code}` : ""} trang ${index + 1}`}
                               className="max-h-full max-w-full cursor-zoom-in rounded-xl object-contain"
                               onClick={() => openZoom(image.id)}
                             />
@@ -666,7 +833,7 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
                             src={activePreviewImage.public_url}
-                            alt={`${DOCUMENT_TYPE_LABELS[activePreviewImage.document_type]} ${activePreviewImage.subject}`}
+                            alt={`${DOCUMENT_TYPE_LABELS[activePreviewImage.document_type]} ${activePreviewImage.subject}${activePreviewImage.exam_code ? ` mã ${activePreviewImage.exam_code}` : ""}`}
                             className="max-h-full max-w-full rounded-xl bg-background object-contain shadow-sm"
                           />
                         )}
