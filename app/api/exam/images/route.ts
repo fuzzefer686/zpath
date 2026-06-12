@@ -12,7 +12,7 @@ const MAX_FILE_SIZE = 20 * 1024 * 1024;
 const EXAM_IMAGE_SELECT = "id, route_slug, subject, document_type, exam_code, storage_path, public_url, mime_type, file_size, created_at";
 const EXAM_IMAGE_LEGACY_SELECT = "id, route_slug, subject, document_type, storage_path, public_url, mime_type, file_size, created_at";
 const ALLOWED_MIME_TYPES = ["image/png", "image/jpeg", "image/webp", "application/pdf"];
-const EXAM_CODE_OPTIONS = Array.from({ length: 24 }, (_, index) => String(101 + index));
+const EXAM_CODE_OPTIONS = Array.from({ length: 48 }, (_, index) => String(101 + index));
 const EXAM_CODE_SET = new Set(EXAM_CODE_OPTIONS);
 
 function sanitizePathPart(value: string) {
@@ -141,7 +141,7 @@ export async function POST(request: Request) {
     }
 
     if (subjectUsesExamCode(subjectName) && !examCode) {
-      return NextResponse.json({ error: "Hãy chọn mã đề từ 101 đến 124." }, { status: 400 });
+      return NextResponse.json({ error: "Hãy chọn mã đề từ 101 đến 148." }, { status: 400 });
     }
 
     if (!ALLOWED_MIME_TYPES.includes(file.type)) {
