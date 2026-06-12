@@ -48,6 +48,8 @@ const DOCUMENT_TYPE_LABELS: Record<ExamDocumentType, string> = {
   de: "Đề",
   dap_an: "Đáp án",
 };
+const JUNE_12_ANSWER_SHEET_URL =
+  "https://docs.google.com/spreadsheets/d/1BN4L-j__b09GJ2uAfKT9KjxLmk8kPITf__PtfX9eE7Y/edit?usp=sharing";
 const EXAM_CODE_OPTIONS = Array.from({ length: 48 }, (_, index) => String(101 + index));
 const NO_EXAM_CODE = "none";
 
@@ -407,6 +409,10 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
     subject: string,
     documentType: ExamDocumentType,
   ) => {
+    const commonAnswerUrl =
+      routeSlug === "dap-an-de-thi-ngay-12-thang-6" && documentType === "dap_an"
+        ? JUNE_12_ANSWER_SHEET_URL
+        : null;
     const documentImages = imageGroups.byDocument.get(createDocumentKey(subject, documentType)) ?? [];
     const latestImage = documentImages.at(-1);
     const isExpanded =
@@ -423,44 +429,75 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
         className={`min-w-0 rounded-2xl border p-2.5 ${
           latestImage
             ? "border-destructive/60 bg-gradient-to-br from-destructive/15 via-background to-background shadow-[0_14px_34px_-24px_hsl(var(--destructive))] ring-2 ring-destructive/15"
+            : commonAnswerUrl
+              ? "border-tier-high/40 bg-tier-high-soft/45"
             : "border-border bg-background"
         }`}
       >
-        <button
-          type="button"
-          onClick={() => toggleCodePicker(subject, documentType)}
-          className={`flex h-9 w-full items-center justify-center gap-1.5 rounded-full px-2 text-xs font-bold transition-all hover:-translate-y-0.5 active:scale-[0.97] ${
-            latestImage
-              ? "bg-gradient-coral text-white shadow-coral"
-              : "bg-primary text-primary-foreground hover:bg-primary/90"
-          }`}
-        >
-          <FileImage className="h-3.5 w-3.5 shrink-0" />
-          <span className="break-words leading-tight">{DOCUMENT_TYPE_LABELS[documentType]}</span>
-        </button>
+        {commonAnswerUrl ? (
+          <a
+            href={commonAnswerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-9 w-full items-center justify-center gap-1.5 rounded-full bg-tier-high px-2 text-xs font-bold text-tier-high-foreground transition-all hover:-translate-y-0.5 hover:bg-tier-high/90 active:scale-[0.97]"
+          >
+            <FileImage className="h-3.5 w-3.5 shrink-0" />
+            <span className="break-words leading-tight">{DOCUMENT_TYPE_LABELS[documentType]}</span>
+          </a>
+        ) : (
+          <button
+            type="button"
+            onClick={() => toggleCodePicker(subject, documentType)}
+            className={`flex h-9 w-full items-center justify-center gap-1.5 rounded-full px-2 text-xs font-bold transition-all hover:-translate-y-0.5 active:scale-[0.97] ${
+              latestImage
+                ? "bg-gradient-coral text-white shadow-coral"
+                : "bg-primary text-primary-foreground hover:bg-primary/90"
+            }`}
+          >
+            <FileImage className="h-3.5 w-3.5 shrink-0" />
+            <span className="break-words leading-tight">{DOCUMENT_TYPE_LABELS[documentType]}</span>
+          </button>
+        )}
 
         <div
           className={`mt-2 flex min-h-7 items-center justify-center gap-1.5 rounded-full border px-2 text-center text-[11px] font-bold leading-tight ${
             latestImage
               ? "animate-pulse border-destructive bg-destructive text-destructive-foreground shadow-sm"
-              : "border-primary/20 bg-primary/10 text-primary"
+              : commonAnswerUrl
+                ? "border-tier-high/30 bg-background/80 text-tier-high"
+                : "border-primary/20 bg-primary/10 text-primary"
           }`}
         >
           {latestImage ? <Flame className="h-3 w-3 shrink-0" /> : <Clock3 className="h-3 w-3 shrink-0" />}
           <span className="break-words">
-            {latestImage ? `HOT · ${latestImage.mime_type === "application/pdf" ? "PDF" : "Ảnh"}` : "Đang cập nhật"}
+            {latestImage
+              ? `HOT · ${latestImage.mime_type === "application/pdf" ? "PDF" : "Ảnh"}`
+              : commonAnswerUrl
+                ? "Link chung"
+                : "Đang cập nhật"}
           </span>
         </div>
 
-        <button
-          type="button"
-          onClick={() => toggleCodePicker(subject, documentType)}
-          className="mt-1.5 block min-h-4 w-full text-center text-[11px] font-semibold leading-tight text-muted-foreground transition-colors hover:text-foreground"
-        >
-          Lúc: {formatUpdatedAt(latestImage?.created_at)}
-        </button>
+        {commonAnswerUrl ? (
+          <a
+            href={commonAnswerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-1.5 block min-h-4 w-full text-center text-[11px] font-semibold leading-tight text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Mở bảng đáp án
+          </a>
+        ) : (
+          <button
+            type="button"
+            onClick={() => toggleCodePicker(subject, documentType)}
+            className="mt-1.5 block min-h-4 w-full text-center text-[11px] font-semibold leading-tight text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Lúc: {formatUpdatedAt(latestImage?.created_at)}
+          </button>
+        )}
 
-        {usesExamCode && isExpanded && (
+        {usesExamCode && isExpanded && !commonAnswerUrl && (
           <div className="mt-2 rounded-xl border border-border bg-background p-1.5 shadow-sm">
             <div className="mb-1 flex items-center justify-between px-1 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">
               <span>Mã đề</span>
