@@ -48,7 +48,7 @@ const DOCUMENT_TYPE_LABELS: Record<ExamDocumentType, string> = {
   de: "Đề",
   dap_an: "Đáp án",
 };
-const EXAM_CODE_OPTIONS = Array.from({ length: 24 }, (_, index) => String(101 + index));
+const EXAM_CODE_OPTIONS = Array.from({ length: 48 }, (_, index) => String(101 + index));
 const NO_EXAM_CODE = "none";
 
 function createDocumentKey(subject: string, documentType: ExamDocumentType) {
@@ -462,25 +462,31 @@ export function ExamScheduleBoard({ routeSlug, scheduleRows, heading = "Bảng c
 
         {usesExamCode && isExpanded && (
           <div className="mt-2 rounded-xl border border-border bg-background p-1.5 shadow-sm">
-            <div className="grid grid-cols-4 gap-1">
-              {EXAM_CODE_OPTIONS.map((examCode) => {
-                const hasUpload = uploadedCodeSet.has(examCode);
-                return (
-                  <button
-                    key={examCode}
-                    type="button"
-                    onClick={() => openPreview(subject, documentType, examCode)}
-                    className={`flex h-8 items-center justify-center rounded-lg border text-[11px] font-black transition active:scale-[0.97] ${
-                      hasUpload
-                        ? "border-destructive bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90"
-                        : "border-border bg-muted/35 text-muted-foreground hover:border-primary/40 hover:bg-primary/10 hover:text-primary"
-                    }`}
-                    aria-label={`Xem ${DOCUMENT_TYPE_LABELS[documentType].toLowerCase()} ${subject} mã ${examCode}`}
-                  >
-                    {examCode}
-                  </button>
-                );
-              })}
+            <div className="mb-1 flex items-center justify-between px-1 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">
+              <span>Mã đề</span>
+              <span>101-148</span>
+            </div>
+            <div className="max-h-48 overflow-y-auto pr-1">
+              <div className="grid grid-cols-4 gap-1">
+                {EXAM_CODE_OPTIONS.map((examCode) => {
+                  const hasUpload = uploadedCodeSet.has(examCode);
+                  return (
+                    <button
+                      key={examCode}
+                      type="button"
+                      onClick={() => openPreview(subject, documentType, examCode)}
+                      className={`flex h-8 items-center justify-center rounded-lg border text-[11px] font-black transition active:scale-[0.97] ${
+                        hasUpload
+                          ? "border-destructive bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90"
+                          : "border-border bg-muted/35 text-muted-foreground hover:border-primary/40 hover:bg-primary/10 hover:text-primary"
+                      }`}
+                      aria-label={`Xem ${DOCUMENT_TYPE_LABELS[documentType].toLowerCase()} ${subject} mã ${examCode}`}
+                    >
+                      {examCode}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
         )}
