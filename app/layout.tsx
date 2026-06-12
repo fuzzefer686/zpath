@@ -6,6 +6,7 @@ import { Footer } from "@/components/zpath/Footer";
 import { Providers } from "@/components/zpath/Providers";
 import { MetaPixelPageViewTracker } from "@/components/zpath/MetaPixel";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getMetadataBase, SITE_NAME } from "@/lib/seo";
 import { Suspense } from "react";
 import Script from "next/script";
@@ -84,6 +85,7 @@ export default function RootLayout({
           <Footer />
         </Providers>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
