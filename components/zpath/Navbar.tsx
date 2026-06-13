@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Menu, X, User, LogOut, Shield, Settings, ChevronDown, Sparkles } from "lucide-react";
+import { Menu, X, User, LogOut, Settings, ChevronDown, Sparkles } from "lucide-react";
 import { Logo } from "./Logo";
 import { useAuth } from "@/components/zpath/AuthProvider";
 
@@ -131,9 +131,14 @@ export function Navbar() {
                       Tư vấn AI Advisor
                     </Link>
                     {user.role === "admin" && (
-                      <span className="flex items-center gap-2 rounded-xl px-3 py-2 text-[10px] font-bold text-purple-600 bg-purple-50">
-                        <Shield className="h-3.5 w-3.5" /> Quản trị viên
-                      </span>
+                      <Link
+                        href="/admin"
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-medium text-foreground/80 hover:bg-primary/5 hover:text-primary transition"
+                      >
+                        <Settings className="h-4 w-4 text-primary" />
+                        Bảng quản trị
+                      </Link>
                     )}
                   </div>
                   <div className="border-t border-muted/50 pt-1.5 pb-1">
@@ -213,6 +218,17 @@ export function Navbar() {
                   <User className="h-4 w-4 text-primary" />
                   Trang cá nhân
                 </Link>
+
+                {user.role === "admin" ? (
+                  <Link
+                    href="/admin"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-2 rounded-lg px-3 py-3 text-sm font-medium hover:bg-muted text-foreground/80"
+                  >
+                    <Settings className="h-4 w-4 text-primary" />
+                    Bảng quản trị
+                  </Link>
+                ) : null}
 
                 <button
                   onClick={handleLogout}

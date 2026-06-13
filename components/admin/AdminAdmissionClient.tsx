@@ -57,7 +57,7 @@ async function readApiJson(res: Response): Promise<Record<string, unknown>> {
 }
 
 export function AdminAdmissionClient() {
-  const { isAdmin, isLoading: isAuthLoading } = useUserRole();
+  const { isLoading: isAuthLoading } = useUserRole();
 
   const [configs, setConfigs] = useState<AdmissionConfigRecord[]>([]);
   const [listError, setListError] = useState<string | null>(null);
@@ -99,8 +99,8 @@ export function AdminAdmissionClient() {
   }, []);
 
   useEffect(() => {
-    if (isAdmin) void loadConfigs();
-  }, [isAdmin, loadConfigs]);
+    void loadConfigs();
+  }, [loadConfigs]);
 
   const previewResult = useMemo(() => {
     if (!draftText.trim()) return { config: null as GenericAdmissionConfig | null, error: null as string | null };
@@ -263,15 +263,7 @@ export function AdminAdmissionClient() {
   if (isAuthLoading) {
     return (
       <div className="flex items-center gap-2 text-muted-foreground">
-        <Loader2 className="h-4 w-4 animate-spin" /> Đang kiểm tra quyền truy cập...
-      </div>
-    );
-  }
-
-  if (!isAdmin) {
-    return (
-      <div className="rounded-lg border border-destructive/30 bg-destructive/5 p-4 text-sm font-medium text-destructive">
-        Bạn cần quyền quản trị viên để truy cập trang này.
+        <Loader2 className="h-4 w-4 animate-spin" /> Đang tải...
       </div>
     );
   }

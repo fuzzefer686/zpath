@@ -9,11 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function AdminAdmissionPage() {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      <section className="container-page py-6 md:py-8">
-        <AdminAdmissionClient />
-      </section>
-    </div>
-  );
+  return <AdminAdmissionClient />;
 }
