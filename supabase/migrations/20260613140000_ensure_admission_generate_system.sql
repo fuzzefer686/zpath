@@ -1,10 +1,23 @@
 -- ============================================================================
--- Migration: Config-driven admission calculators.
+-- Migration: Ensure infrastructure for PDF-driven admission config generation.
 --
--- NOTE: For production deploys, prefer applying
--- 20260613140000_ensure_admission_generate_system.sql (idempotent, includes
--- set_updated_at). This file remains for local migration history consistency.
+-- Safe to apply on production even if 20260609120000_admission_configs was
+-- never run: every step is idempotent (IF NOT EXISTS / ON CONFLICT / DROP IF).
+-- Includes set_updated_at() so this migration does not depend on earlier files
+-- having been replayed in a specific order on a partially migrated database.
 -- ============================================================================
+
+-- 0. updated_at helper (used by admission_configs trigger)
+-- ---------------------------------------------------------------------------
+CREATE OR REPLACE FUNCTION public.set_updated_at()
+RETURNS trigger
+LANGUAGE plpgsql
+AS $$
+BEGIN
+  NEW.updated_at = now();
+  RETURN NEW;
+END;
+$$;
 
 -- 1. admission_configs table
 -- ---------------------------------------------------------------------------
@@ -32,8 +45,6 @@ CREATE INDEX IF NOT EXISTS admission_configs_lookup_idx
 CREATE INDEX IF NOT EXISTS admission_configs_status_idx
   ON public.admission_configs (status, updated_at DESC);
 
--- At most one published config per (school_code, year): this is the row the
--- runtime calculator reads.
 CREATE UNIQUE INDEX IF NOT EXISTS admission_configs_one_published_per_year
   ON public.admission_configs (school_code, year)
   WHERE status = 'published';
@@ -46,8 +57,6 @@ CREATE TRIGGER set_admission_configs_updated_at
 
 ALTER TABLE public.admission_configs ENABLE ROW LEVEL SECURITY;
 
--- Published configs are publicly readable so the calculator can render for
--- anonymous visitors. Drafts/pending/archived stay server-only.
 DROP POLICY IF EXISTS "Published admission configs are publicly readable"
   ON public.admission_configs;
 CREATE POLICY "Published admission configs are publicly readable"
@@ -61,7 +70,7 @@ REVOKE ALL ON TABLE public.admission_configs FROM authenticated;
 GRANT SELECT ON public.admission_configs TO anon, authenticated;
 GRANT SELECT, INSERT, UPDATE, DELETE ON public.admission_configs TO service_role;
 
--- 2. admission-pdfs storage bucket (private; source documents)
+-- 2. admission-pdfs storage bucket (private; source PDF documents)
 -- ---------------------------------------------------------------------------
 INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
 VALUES (
@@ -73,8 +82,6 @@ VALUES (
 )
 ON CONFLICT (id) DO NOTHING;
 
--- Only service_role manages admission PDFs (upload/read happens server-side
--- behind the admin-only API).
 DROP POLICY IF EXISTS "Service role manages admission pdfs" ON storage.objects;
 CREATE POLICY "Service role manages admission pdfs"
   ON storage.objects FOR ALL

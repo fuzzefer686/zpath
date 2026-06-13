@@ -1,4 +1,15 @@
--- Majors table has been removed.
+-- Keep this historical migration replayable for preview branches.
+-- Later migrations may drop/restore majors, but programs needs the table
+-- to exist before adding the initial FK below.
+CREATE TABLE IF NOT EXISTS public.majors (
+    id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+    code text UNIQUE NOT NULL,
+    name text NOT NULL,
+    category text,
+    description text,
+    tags text[]
+);
+
 -- Create universities table
 CREATE TABLE IF NOT EXISTS public.universities (
     id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -28,9 +39,7 @@ CREATE TABLE IF NOT EXISTS public.universities (
 CREATE TABLE IF NOT EXISTS public.programs (
     id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
     university_code text NOT NULL REFERENCES public.universities(code) ON DELETE CASCADE,
-    -- major_code không đặt FK ở đây vì bảng public.majors được tạo ở migration
-    -- sau (20260507153022_restore_majors.sql), nơi sẽ thêm ràng buộc khóa ngoại.
-    major_code text, -- Có thể null nếu ngành đó chưa có trong bảng majors chung
+    major_code text REFERENCES public.majors(code) ON DELETE SET NULL, -- Có thể null nếu ngành đó chưa có trong bảng majors chung
     program_code text NOT NULL, -- VD: "IT1", "EE2"
     name text NOT NULL, -- Tên ngành tại trường đó (VD: "Khoa học Máy tính")
     
@@ -49,7 +58,7 @@ CREATE TABLE IF NOT EXISTS public.programs (
 
 -- Note: We disable RLS for now so that Admin (or anyone during MVP) can edit. 
 -- In production, you would enable RLS and only allow users with a specific role to UPDATE.
--- (RLS cho public.majors được xử lý ở migration restore_majors, nơi bảng được tạo.)
+ALTER TABLE public.majors DISABLE ROW LEVEL SECURITY;
 ALTER TABLE public.universities DISABLE ROW LEVEL SECURITY;
 ALTER TABLE public.programs DISABLE ROW LEVEL SECURITY;
 

@@ -108,19 +108,25 @@ add_note(doc, "Note",
     "You will need these values in Step 3.")
 
 # ----- Step 2 -----
-h1(doc, "Step 2 - Apply the new migration (table + storage bucket)")
+h1(doc, "Step 2 - Apply the migration (table + storage bucket)")
 doc.add_paragraph(
-    "The migration 20260609120000_admission_configs.sql is already in the repo. "
-    "Apply it to the local database:")
+    "For local dev, run all pending migrations. For production/preview on "
+    "Vercel, the project owner must run 'npx supabase db push' on the linked "
+    "Supabase project after merge. The migration that provisions generate-admission "
+    "infrastructure is 20260613140000_ensure_admission_generate_system.sql "
+    "(idempotent; safe even if an older admission_configs migration was never applied).")
 add_code(doc, "npx supabase migration up")
 doc.add_paragraph(
-    "If the migration state is out of sync, run the command below instead "
+    "If the migration state is out of sync locally, run the command below instead "
     "(WARNING: this wipes all local data and re-runs every migration + seed):")
 add_code(doc, "npx supabase db reset")
 doc.add_paragraph(
     "Then verify in Supabase Studio (the URL printed by 'supabase start'): you "
     "should see the table 'admission_configs' and the storage bucket "
     "'admission-pdfs'.")
+doc.add_paragraph(
+    "On Vercel preview/production, keep PDF uploads under ~4 MB (platform "
+    "request body limit). Compress large admission PDFs before uploading.")
 
 # ----- Step 3 -----
 h1(doc, "Step 3 - Configure .env.local")
@@ -195,6 +201,8 @@ h1(doc, "Troubleshooting")
 add_bullets(doc, [
     ("403 on /admin/admission: ", "your account is not an admin. Check ADMIN_EMAILS and sign in with that email."),
     ("\"Extract with AI\" fails: ", "Gemini key missing/invalid. Set GEMINI_API_KEY, or paste the config JSON manually."),
+    ("Bucket not found on Vercel: ", "owner must run supabase db push so 20260613140000_ensure_admission_generate_system.sql is applied on the cloud project."),
+    ("PDF too large on Vercel: ", "keep files under ~4 MB or compress the PDF."),
     ("Missing SUPABASE_SERVICE_ROLE_KEY error: ", "set it in .env.local and restart npm run dev."),
     ("School not showing on /scoring: ", "make sure the config status is 'published', not just 'draft'."),
     ("PDF is a scanned image: ", "that is fine - Gemini reads the PDF/images directly; no separate OCR needed."),

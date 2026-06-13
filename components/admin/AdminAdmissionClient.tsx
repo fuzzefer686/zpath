@@ -34,6 +34,27 @@ const STATUS_LABELS: Record<ConfigStatus, string> = {
 };
 
 const CURRENT_YEAR = 2026;
+/** Vercel serverless request body limit (~4.5 MiB). Keep uploads under this on deploy. */
+const MAX_PDF_BYTES_VERCEL = 4 * 1024 * 1024;
+
+async function readApiJson(res: Response): Promise<Record<string, unknown>> {
+  const text = await res.text();
+  try {
+    return JSON.parse(text) as Record<string, unknown>;
+  } catch {
+    const snippet = text.trim().slice(0, 120);
+    if (/request entity too large/i.test(text)) {
+      throw new Error(
+        "File PDF quá lớn cho môi trường deploy (giới hạn ~4MB). Hãy nén PDF hoặc cắt bớt trang rồi thử lại.",
+      );
+    }
+    throw new Error(
+      snippet
+        ? `Phản hồi không hợp lệ từ server: ${snippet}`
+        : `Phản hồi không hợp lệ từ server (HTTP ${res.status}).`,
+    );
+  }
+}
 
 export function AdminAdmissionClient() {
   const { isAdmin, isLoading: isAuthLoading } = useUserRole();
@@ -106,6 +127,12 @@ export function AdminAdmissionClient() {
       setErrorMessage("Vui lòng chọn file PDF.");
       return;
     }
+    if (file.size > MAX_PDF_BYTES_VERCEL) {
+      setErrorMessage(
+        `File PDF (${(file.size / (1024 * 1024)).toFixed(1)} MB) vượt giới hạn ~4 MB trên Vercel. Hãy nén hoặc cắt bớt trang.`,
+      );
+      return;
+    }
     if (!schoolCode.trim()) {
       setErrorMessage("Vui lòng nhập mã trường.");
       return;
@@ -123,19 +150,28 @@ export function AdminAdmissionClient() {
         method: "POST",
         body: formData,
       });
-      const json = await res.json();
+      const json = await readApiJson(res);
       if (!res.ok) {
-        throw new Error(json.error ?? "Không thể trích xuất.");
+        throw new Error(
+          typeof json.error === "string" ? json.error : "Không thể trích xuất.",
+        );
       }
 
       setDraftText(JSON.stringify(json.draft, null, 2));
       setCurrentId(null);
-      setSourcePdfUrl(json.sourcePdfUrl ?? null);
-      setSourcePdfPath(json.sourcePdfPath ?? null);
+      setSourcePdfUrl(
+        typeof json.sourcePdfUrl === "string" ? json.sourcePdfUrl : null,
+      );
+      setSourcePdfPath(
+        typeof json.sourcePdfPath === "string" ? json.sourcePdfPath : null,
+      );
+      const warnings = Array.isArray(json.warnings)
+        ? json.warnings.filter((w): w is string => typeof w === "string")
+        : [];
       setMessage(
-        json.valid
+        json.valid === true
           ? "AI đã trích xuất cấu hình hợp lệ. Hãy kiểm tra kỹ rồi lưu."
-          : `AI đã tạo bản nháp nhưng cần chỉnh sửa: ${(json.warnings ?? []).join(" ")}`,
+          : `AI đã tạo bản nháp nhưng cần chỉnh sửa: ${warnings.join(" ")}`,
       );
     } catch (error) {
       setErrorMessage(error instanceof Error ? error.message : "Không thể trích xuất.");
@@ -163,11 +199,14 @@ export function AdminAdmissionClient() {
           sourcePdfPath,
         }),
       });
-      const json = await res.json();
+      const json = await readApiJson(res);
       if (!res.ok) {
-        throw new Error(json.error ?? "Không thể lưu.");
+        throw new Error(
+          typeof json.error === "string" ? json.error : "Không thể lưu.",
+        );
       }
-      setCurrentId(json.config.id);
+      const config = json.config as { id?: string } | undefined;
+      setCurrentId(typeof config?.id === "string" ? config.id : null);
       setMessage("Đã lưu bản nháp.");
       await loadConfigs();
     } catch (error) {
@@ -191,9 +230,11 @@ export function AdminAdmissionClient() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, action }),
       });
-      const json = await res.json();
+      const json = await readApiJson(res);
       if (!res.ok) {
-        throw new Error(json.error ?? "Không thể publish.");
+        throw new Error(
+          typeof json.error === "string" ? json.error : "Không thể publish.",
+        );
       }
       setMessage(
         action === "publish"
