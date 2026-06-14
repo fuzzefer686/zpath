@@ -1,0 +1,59 @@
+{
+  "university_code": "HCV",
+  "university_name": "Học viện Hành chính Quốc gia",
+  "found_url": "https://apag.edu.vn/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://apag.edu.vn/phan-hieu-hoc-vien-hanh-chinh-va-quan-tri-cong-tai-tinh-dak-lak-to-chuc-hoat-dong-truyen-thong-tu-van-tuyen-sinh-dai-hoc-chinh-quy-nam-2026-tai-tinh-lam-dong-8844.htm"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://apag.edu.vn/phan-hieu-hoc-vien-hanh-chinh-va-quan-tri-cong-tai-tinh-dak-lak-to-chuc-hoat-dong-truyen-thong-tu-van-tuyen-sinh-dai-hoc-chinh-quy-nam-2026-tai-tinh-lam-dong-8844.htm"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://apag.edu.vn/phan-hieu-hoc-vien-hanh-chinh-va-quan-tri-cong-tai-tinh-dak-lak-to-chuc-hoat-dong-truyen-thong-tu-van-tuyen-sinh-dai-hoc-chinh-quy-nam-2026-tai-tinh-lam-dong-8844.htm"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://apag.edu.vn/phan-hieu-hoc-vien-hanh-chinh-va-quan-tri-cong-tai-tinh-dak-lak-to-chuc-hoat-dong-truyen-thong-tu-van-tuyen-sinh-dai-hoc-chinh-quy-nam-2026-tai-tinh-lam-dong-8844.htm"
+    }
+  ]
+}

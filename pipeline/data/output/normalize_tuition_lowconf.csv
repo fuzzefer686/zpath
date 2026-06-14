@@ -1,0 +1,20 @@
+id,university_code,major_name,year,old_min,old_max,new_min,new_max,unit_original,confidence,action
+1ed7cc2c-8ce2-41c2-b2ef-8eb7f1119407,DPT,Logistics và Quản lý chuỗi cung ứng,2026,10,10,10,10,triệu/học kỳ,low,skipped_low
+6a585517-e5b5-4ed3-8243-68438be4cca4,AOF,Kế toán căn bản cho người mới bắt đầu,2026,2.8,2.8,2.8,2.8,triệu VND/khóa,low,skipped_low
+620bd087-f583-4886-a75c-d9dfede6b695,DBS,Kinh tế phát triển,2026,1650000,1650000,1.65,1.65,VND/tín chỉ,low,skipped_low
+eaa94527-dc9c-4704-8960-64c72060b2b9,DBS,Tài chính công,2026,1650000,1650000,33.0,33.0,VND/tín chỉ (đã nhân với 20 tín chỉ/năm theo quy định đào tạo thạc sĩ UEH),low,skipped_low
+da408e2e-17f1-4861-8e07-fedbb4df5b29,DBS,Quản lý công,2026,1650000,1650000,1.65,1.65,VND/tín chỉ,low,skipped_low
+38a1c573-a519-46c5-9e46-9d6c7877e976,DBS,Quản trị Đổi mới sáng tạo và khởi nghiệp,2026,1650000,1650000,1.65,1.65,VND/tín chỉ,low,skipped_low
+33508c49-71f7-40ac-a0a4-30577c9a40cd,DBS,Kế toán,2026,1650000,1650000,1.65,1.65,VND/tín chỉ,low,skipped_low
+d4c9aebc-d51c-4cb6-b2ee-cbca453235e5,DBS,Quản trị kinh doanh (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+0f4f42b5-af98-47d5-9c2c-ea4f88a5226e,DBS,Quản trị công nghệ (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+df55d673-cd48-49ea-8844-c4789896fe24,DBS,Marketing (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+4ea185d0-b0c2-48eb-a6e3-186dd74230c5,DBS,Kinh doanh quốc tế (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+e6985f49-0010-42c3-ba38-8e3af91877b1,DBS,Ngân hàng (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+a1f6e44b-dfaf-4ffe-b790-9669c2dc1a74,DBS,Tài chính (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+3b86f8fd-0779-47f7-b36b-089e82e6fb58,DBS,Quản trị kinh doanh (Điều hành cao cấp),2026,3000000,3000000,3,3,triệu VND/tín chỉ,low,skipped_low
+45849855-5db6-48f3-92a7-91c0d5db040c,DBS,Tài chính (Điều hành cao cấp),2026,3000000,3000000,3,3,"VND (đơn vị gốc không rõ ràng, có thể là phí hồ sơ hoặc phí khác, không phải học phí năm)",low,skipped_low
+621671b4-b95c-481a-8858-c4b4b64bbf65,DBS,Ngân hàng (Điều hành cao cấp),2026,3000000,3000000,3,3,triệu VND/tín chỉ,low,skipped_low
+6913ca24-51c1-44be-bbf9-f8e8cabc15c3,DBS,Marketing (Điều hành cao cấp),2026,3000000,3000000,30,30,VND/tín chỉ (tổng 10 tín chỉ cho 1 học phần),low,skipped_low
+1c07be3b-18f6-431f-ad9b-24b88e335e28,DBS,Thống kê,2026,45,45,,,unknown,low,skipped_low
+4913708c-ff44-49c9-888d-411e0f49acc8,DQN,Quản lý giáo dục,2026,83,97,8.3,9.7,trăm nghìn VND/tín chỉ (ước tính dựa trên khung học phí công lập),low,skipped_low

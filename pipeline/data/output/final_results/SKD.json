@@ -1,0 +1,235 @@
+{
+  "university_code": "SKD",
+  "university_name": "Trường Đại học Sân khấu - Điện ảnh Hà Nội",
+  "found_url": "https://skda.edu.vn/thong-tin-tuyen-sinh-trinh-do-dai-hoc-nam-2026-du-kien/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 16,
+  "data": [
+    {
+      "school_major_code": "7210233",
+      "major_name": "Biên kịch điện ảnh, truyền hình",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210235",
+      "major_name": "Đạo diễn điện ảnh, truyền hình",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210235",
+      "major_name": "Đạo diễn, Đạo diễn sản xuất phim",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210236",
+      "major_name": "Quay phim điện ảnh, truyền hình",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210301",
+      "major_name": "Nhiếp ảnh nghệ thuật, báo chí, truyền thông đa phương tiện",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210302",
+      "major_name": "Công nghệ điện ảnh, truyền hình",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210406",
+      "major_name": "Thiết kế mỹ thuật sân khấu, điện ảnh",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210227",
+      "major_name": "Đạo diễn âm thanh, ánh sáng sân khấu",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210234",
+      "major_name": "Diễn viên kịch, điện ảnh - truyền hình",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210226",
+      "major_name": "Diễn viên sân khấu kịch hát",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210243",
+      "major_name": "Biên đạo múa",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210244",
+      "major_name": "Huấn luyện múa",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-tuyen-sinh-DH-2026-CQ-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210227",
+      "major_name": "Đạo diễn sân khấu",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-Tuyen-sinh-DH-2026-VLVH-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210227",
+      "major_name": "Đạo diễn sự kiện",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-Tuyen-sinh-DH-2026-VLVH-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210225",
+      "major_name": "Biên kịch sân khấu",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-Tuyen-sinh-DH-2026-VLVH-du-kien.pdf"
+    },
+    {
+      "school_major_code": "7210234",
+      "major_name": "Diễn viên kịch, điện ảnh - truyền hình",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "S00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://skda.edu.vn/wp-content/uploads/Thong-tin-Tuyen-sinh-DH-2026-VLVH-du-kien.pdf"
+    }
+  ]
+}

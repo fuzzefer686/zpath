@@ -1,0 +1,14 @@
+[
+  {
+    "status": "partial",
+    "data": [],
+    "note": "Nội dung cung cấp là trang chủ tuyển sinh của UEH, liệt kê danh mục các ngành và chương trình đào tạo nhưng không chứa dữ liệu cụ thể về điểm chuẩn, học phí hoặc tổ hợp môn cho từng ngành trong năm 2025.",
+    "source": "HTML: https://tuyensinh.ueh.edu.vn/cu-nhan-chinh-quy/"
+  },
+  {
+    "status": "partial",
+    "data": [],
+    "note": "Nội dung cung cấp là trang danh mục bài viết tuyển sinh, không chứa bảng dữ liệu chi tiết về mã ngành, điểm chuẩn hay học phí cụ thể cho từng ngành. Các thông tin trong văn bản chỉ là tiêu đề các thông báo tuyển sinh chung.",
+    "source": "HTML: https://tuyensinh.ueh.edu.vn/danh-muc-bai-viet/dang-tuyen-sinh/dang-tuyen-sinh-dhcq/"
+  }
+]

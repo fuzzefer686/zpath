@@ -1,0 +1,101 @@
+university_code,university_name,found_url,url_type,confidence,note,search_timestamp
+BKA,Đại học Bách khoa Hà Nội,https://hust.edu.vn/vi/tuyen-sinh/dai-hoc/,html,high,,2026-06-13T19:17:48.117903+00:00
+KHA,Đại học Kinh tế Quốc dân,https://daotao.neu.edu.vn/,pdf,high,,2026-06-13T19:17:52.400534+00:00
+QST,Đại học Quốc gia Thành phố Hồ Chí Minh,https://vnuhcm.edu.vn/,html,high,manual-fix A1: tuyensinh.vnuhcm.edu.vn chết DNS -> dùng vnuhcm.edu.vn,2026-06-13T19:17:55.282184+00:00
+QGH,Đại học Quốc gia Hà Nội,https://tuyensinh.vnu.edu.vn,html,high,,2026-06-13T19:17:59.900744+00:00
+FTU,Trường Đại học Ngoại thương,https://ftu.edu.vn/,html,high,manual-fix: tuyensinh.ftu.edu.vn là cổng login JS -> dùng ftu.edu.vn,2026-06-13T19:18:04.109766+00:00
+DDK,Trường Đại học Bách khoa - Đại học Đà Nẵng,https://tuyensinh.dut.udn.vn/,html,high,,2026-06-13T19:18:08.622158+00:00
+DCD,Trường Đại học Công nghệ Thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh,https://tuyensinh.uit.edu.vn,html,high,,2026-06-13T19:18:13.609297+00:00
+DQS,Trường Đại học Quốc tế - Đại học Quốc gia Thành phố Hồ Chí Minh,https://hcmiu.edu.vn/,html,high,,2026-06-13T19:18:17.883492+00:00
+DBS,Trường Đại học Kinh tế Thành phố Hồ Chí Minh,https://tuyensinh.ueh.edu.vn/,html,high,,2026-06-13T19:18:22.739435+00:00
+NLS,Trường Đại học Nông Lâm Thành phố Hồ Chí Minh,https://ts.hcmuaf.edu.vn,html,high,,2026-06-13T19:18:27.078608+00:00
+TMA,Trường Đại học Thương mại,https://tmu.edu.vn,html,high,,2026-06-13T19:37:11.780203+00:00
+AOF,Học viện Tài chính,https://hvtc.edu.vn/tuyensinh/thong-tin-tuyen-sinh-dai-hoc-chinh-quy-nam-2026,html,high,,2026-06-13T19:37:17.083172+00:00
+BAA,Học viện Ngân hàng,https://hvnh.edu.vn,html,high,,2026-06-13T19:37:21.015489+00:00
+DGH,Trường Đại học Sư phạm Hà Nội,https://hnue.edu.vn,html,high,,2026-06-13T19:37:25.322901+00:00
+CPS,Trường Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh,https://tuyensinh.hcmute.edu.vn,html,high,,2026-06-13T19:37:30.938081+00:00
+DGD,Trường Đại học Công nghiệp Thành phố Hồ Chí Minh,https://tuyensinh.iuh.edu.vn,html,high,,2026-06-13T19:37:35.557306+00:00
+DCN,Trường Đại học Công nghiệp Hà Nội,https://tuyensinh.haui.edu.vn/dai-hoc-chinh-quy/thong-tin-tuyen-sinh-trinh-do-dai-hoc-nam-2026/69b4e60495dfe0072a789cf6,html,high,,2026-06-13T19:37:40.548213+00:00
+MTA,Học viện Kỹ thuật Quân sự,https://mta.edu.vn,html,high,,2026-06-13T19:37:44.528477+00:00
+BVH,Học viện Công nghệ Bưu chính Viễn thông,https://tuyensinh.ptit.edu.vn,html,high,,2026-06-13T19:37:48.868531+00:00
+TLA,Trường Đại học Thủy lợi,https://tuyensinh.tlu.edu.vn/,html,high,,2026-06-13T19:37:53.617438+00:00
+GTA,Trường Đại học Giao thông Vận tải,https://tuyensinh.utc.edu.vn,html,high,,2026-06-13T19:37:58.198106+00:00
+XDA,Trường Đại học Xây dựng Hà Nội,https://tuyensinh.huce.edu.vn/,html,high,,2026-06-13T19:38:02.353807+00:00
+LDA,Trường Đại học Lao động - Xã hội,https://tuyensinh.ldxh.edu.vn/,html,high,,2026-06-13T19:38:06.780468+00:00
+DHF,Trường Đại học Hà Nội,https://tuyensinh.hanu.edu.vn,html,high,,2026-06-13T19:38:10.695636+00:00
+DPX,Trường Đại học Sư phạm Thành phố Hồ Chí Minh,http://tuyensinh.hcmue.edu.vn,html,high,,2026-06-13T19:38:15.595579+00:00
+YHB,Trường Đại học Y Hà Nội,https://hmu.edu.vn/tin-tuc/thong-tin-tuyen-sinh-trinh-do-dai-hoc-cua-truong-dai-hoc-y-ha-noi-nam-2026-1036.html,html,high,,2026-06-13T19:38:20.156599+00:00
+YDS,Trường Đại học Y Dược Thành phố Hồ Chí Minh,https://ump.edu.vn/tuyen-sinh-dao-tao/dai-hoc/thong-bao,html,high,,2026-06-13T19:38:25.815574+00:00
+TDB,Trường Đại học Thể dục Thể thao Bắc Ninh,https://upes1.edu.vn/,html,high,,2026-06-13T19:38:30.157575+00:00
+CTS,Trường Đại học Cần Thơ,https://tuyensinh.ctu.edu.vn,html,high,,2026-06-13T19:38:34.953421+00:00
+HHA,Trường Đại học Hàng hải Việt Nam,https://tuyensinh.vimaru.edu.vn/,html,high,,2026-06-13T19:38:39.510396+00:00
+VHH,Trường Đại học Văn hóa Hà Nội,https://huc.edu.vn/thong-tin-tuyen-sinh-dai-hoc-chinh-quy-nam-2026-14022026,html,high,,2026-06-13T19:38:44.616740+00:00
+VHS,Trường Đại học Văn hóa Thành phố Hồ Chí Minh,https://hcmuc.edu.vn/tuyen-sinh/thong-tin-tuyen-sinh-trinh-do-dai-hoc-chinh-quy-nam-2026.html,html,high,,2026-06-13T19:38:49.751764+00:00
+DLU,Trường Đại học Đà Lạt,https://tuyensinh.dlu.edu.vn,html,high,,2026-06-13T19:38:53.571447+00:00
+DTD,Trường Đại học Tôn Đức Thắng,https://admission.tdtu.edu.vn,html,high,,2026-06-13T19:39:23.022538+00:00
+NTT,Trường Đại học Nguyễn Tất Thành,https://tuyensinh.ntt.edu.vn,html,high,,2026-06-13T19:39:27.168778+00:00
+DVL,Trường Đại học Văn Lang,https://tuyensinh.vlu.edu.vn/,html,high,,2026-06-13T19:39:32.013863+00:00
+DTH,Trường Đại học Thăng Long,https://thanglong.edu.vn,html,high,,2026-06-13T19:39:36.332211+00:00
+HBT,Trường Đại học Công nghệ Sài Gòn,https://stu.edu.vn/,html,high,,2026-06-13T19:39:41.077976+00:00
+DPT,Trường Đại học Phan Thiết,https://upt.edu.vn,html,high,,2026-06-13T19:39:45.915670+00:00
+DCG,Trường Đại học Công nghệ Đồng Nai,https://tuyensinh.dntu.edu.vn,html,high,,2026-06-13T19:39:50.118660+00:00
+DNT,Trường Đại học Ngoại ngữ - Tin học Thành phố Hồ Chí Minh,https://tuyensinh.huflit.edu.vn/,html,high,,2026-06-13T19:39:55.507172+00:00
+HIU,Trường Đại học Quốc tế Hồng Bàng,https://hiu.vn/tuyen-sinh/,html,high,,2026-06-13T19:39:59.574850+00:00
+HUTECH,Trường Đại học Công nghệ Thành phố Hồ Chí Minh,https://tuyensinh.hutech.edu.vn,html,high,,2026-06-13T19:40:04.299108+00:00
+DUE,Trường Đại học Kinh tế - Đại học Đà Nẵng,https://due.udn.vn/vi-vn/tuyensinh/cid/3139,html,high,,2026-06-13T19:40:10.086975+00:00
+DFL,Trường Đại học Ngoại ngữ - Đại học Đà Nẵng,https://tuyensinh.ufl.udn.vn/,html,high,,2026-06-13T19:40:26.979820+00:00
+DTE,Trường Đại học Sư phạm Kỹ thuật - Đại học Đà Nẵng,https://tuyensinh.ute.udn.vn,html,high,,2026-06-13T19:40:31.589937+00:00
+DED,Trường Đại học Sư phạm - Đại học Đà Nẵng,https://tuyensinh.ued.udn.vn/,html,high,,2026-06-13T19:40:36.223077+00:00
+TTU,Trường Đại học Tân Tạo,https://tuyensinh.ttu.edu.vn/,html,high,,2026-06-13T19:40:40.287315+00:00
+VGU,Trường Đại học Việt Đức,https://vgu.edu.vn/tuyensinh,html,high,,2026-06-13T19:40:44.574563+00:00
+BUV,Trường Đại học Anh quốc Việt Nam,https://www.buv.edu.vn/admissions/,html,high,,2026-06-13T19:40:48.847999+00:00
+FPT,Trường Đại học FPT,https://daihoc.fpt.edu.vn,html,high,,2026-06-13T19:40:53.188640+00:00
+VUN,Trường Đại học VinUni,https://admission.vinuni.edu.vn/,html,high,,2026-06-13T19:40:57.400683+00:00
+DDT,Trường Đại học Duy Tân,https://duytan.edu.vn/de-an-tuyen-sinh,html,high,,2026-06-13T19:41:01.586816+00:00
+THU,Trường Đại học Thành Đô,https://tuyensinh.thanhdo.edu.vn,html,high,,2026-06-13T19:41:05.891337+00:00
+DLH,Trường Đại học Lạc Hồng,https://tuyensinh.lhu.edu.vn,html,high,,2026-06-13T19:41:09.985271+00:00
+DTC,Trường Đại học Tây Đô,https://tdu.edu.vn/,html,high,,2026-06-13T19:41:14.001409+00:00
+TDM,Trường Đại học Thủ Dầu Một,https://tuyensinh.tdmu.edu.vn/,pdf,high,,2026-06-13T19:41:18.103582+00:00
+BPU,Trường Đại học Dầu khí Việt Nam,https://pvu.edu.vn/tuyensinh2026,html,high,,2026-06-13T19:41:22.161848+00:00
+DBH,Trường Đại học Bách khoa - Đại học Quốc gia Thành phố Hồ Chí Minh,https://hcmut.edu.vn/tuyen-sinh-dh/dai-hoc-chinh-quy,html,high,,2026-06-13T19:41:26.547566+00:00
+DHK,Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia Thành phố Hồ Chí Minh,https://tuyensinh.hcmus.edu.vn/,html,high,,2026-06-13T19:41:30.905851+00:00
+XSH,Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia Thành phố Hồ Chí Minh,https://hcmussh.edu.vn/tuyensinh,html,high,,2026-06-13T19:41:35.130824+00:00
+DQL,Trường Đại học Luật Thành phố Hồ Chí Minh,https://tuyensinh.hcmulaw.edu.vn/,html,high,,2026-06-13T19:41:40.369546+00:00
+QHL,Trường Đại học Luật - Đại học Quốc gia Hà Nội,https://law.vnu.edu.vn,html,high,,2026-06-13T19:41:44.723441+00:00
+QHE,Trường Đại học Kinh tế - Đại học Quốc gia Hà Nội,https://tuyensinh.ueb.edu.vn,html,high,,2026-06-13T19:41:50.337942+00:00
+QHT,Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia Hà Nội,https://tuyensinh.hus.vnu.edu.vn,html,high,,2026-06-13T19:41:55.045971+00:00
+QHX,Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia Hà Nội,https://tuyensinh.ussh.edu.vn,html,high,,2026-06-13T19:41:59.306207+00:00
+QHI,Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội,https://tuyensinh.uet.vnu.edu.vn/ban-nen-biet/thong-tin-tuyen-sinh-dhcq-nam-2026-cap-nhat/,html,high,,2026-06-13T19:42:23.401852+00:00
+QHF,Trường Đại học Ngoại ngữ - Đại học Quốc gia Hà Nội,https://ulis.vnu.edu.vn/,html,high,,2026-06-13T19:42:27.502496+00:00
+YHD,Trường Đại học Y Dược - Đại học Quốc gia Hà Nội,https://ump.vnu.edu.vn/,html,high,,2026-06-13T19:42:31.601272+00:00
+QHD,Trường Đại học Giáo dục - Đại học Quốc gia Hà Nội,https://education.vnu.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/thong-tin-tuyen-sinh-trinh-do-dai-hoc-nam-2026/,html,high,,2026-06-13T19:42:36.050011+00:00
+DYV,Trường Đại học Y khoa Phạm Ngọc Thạch,https://www.pnt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-dai-hoc-nam-2026,html,high,,2026-06-13T19:42:40.198838+00:00
+YTB,Trường Đại học Y Dược Thái Bình,https://tbump.edu.vn/index.php/vi/news/Thong-tin-tuyen-sinh/,html,high,,2026-06-13T19:42:45.036609+00:00
+YHP,Trường Đại học Y Dược Hải Phòng,https://hpmu.edu.vn/hpmu/news/THONG-TIN-TUYEN-SINH/Truong-Dai-hoc-Y-Duoc-Hai-Phong-thong-bao-Thong-tin-tuyen-sinh-Dai-hoc-nam-2026-4533/,html,high,,2026-06-13T19:42:49.177663+00:00
+YCT,Trường Đại học Y Dược Cần Thơ,https://tuyensinh.ctump.edu.vn/index.php/thong-tin-tuyen-sinh-dai-hoc/thong-bao-tuyen-sinh-dai-hoc-he-chinh-quy-nam-2026,pdf,high,,2026-06-13T19:42:54.184152+00:00
+YDN,Trường Đại học Kỹ thuật Y Dược Đà Nẵng,https://dhktyduocdn.edu.vn/,html,high,,2026-06-13T19:42:58.450206+00:00
+DHA,Trường Đại học Luật Hà Nội,https://hlu.edu.vn,html,high,,2026-06-13T19:43:02.550643+00:00
+VKA,Học viện Ngoại giao,https://www.dav.edu.vn,html,high,,2026-06-13T19:43:06.687392+00:00
+HCV,Học viện Hành chính Quốc gia,https://apag.edu.vn/,html,high,,2026-06-13T19:43:10.599730+00:00
+BCH,Học viện Báo chí và Tuyên truyền,https://ajc.edu.vn/thong-bao-phuong-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2026-1772450163719.html,pdf,high,,2026-06-13T19:43:15.077032+00:00
+DNV,Trường Đại học Nội vụ Hà Nội,https://www.hau.edu.vn,html,high,,2026-06-13T19:43:19.216352+00:00
+MDA,Trường Đại học Mỏ - Địa chất,https://humg.edu.vn,html,high,,2026-06-13T19:43:23.240476+00:00
+MTU,Trường Đại học Kiến trúc Thành phố Hồ Chí Minh,https://tuyensinh.uah.edu.vn,html,high,,2026-06-13T19:43:27.875833+00:00
+KTA,Trường Đại học Kiến trúc Hà Nội,https://tuyensinh.hau.edu.vn/,html,high,,2026-06-13T19:43:32.114484+00:00
+MHT,Trường Đại học Mỹ thuật Việt Nam,https://mythuatvietnam.edu.vn/,html,high,,2026-06-13T19:43:36.325527+00:00
+MSH,Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh,https://hcmufa.edu.vn,html,high,,2026-06-13T19:43:40.981051+00:00
+NHA,Học viện Âm nhạc Quốc gia Việt Nam,https://vnam.edu.vn,html,high,,2026-06-13T19:43:46.855839+00:00
+NSP,Trường Đại học Sư phạm Nghệ thuật Trung ương,https://spnttw.edu.vn/tuyen-sinh/thong-bao-tuyen-sinh-dai-hoc,html,high,,2026-06-13T19:43:51.088070+00:00
+SKD,Trường Đại học Sân khấu - Điện ảnh Hà Nội,https://skda.edu.vn/thong-tin-tuyen-sinh-trinh-do-dai-hoc-nam-2026-du-kien/,html,high,,2026-06-13T19:43:55.166763+00:00
+TKG,Trường Đại học Kiên Giang,https://tuyensinh.vnkgu.edu.vn,html,high,,2026-06-13T19:43:59.431950+00:00
+DTT,Trường Đại học Tiền Giang,https://tgu.edu.vn/thong-tin-tuyensinh.html,html,high,,2026-06-13T19:44:03.657102+00:00
+DAG,Trường Đại học An Giang - Đại học Quốc gia Thành phố Hồ Chí Minh,https://tuyensinh.agu.edu.vn,html,high,,2026-06-13T19:44:07.763244+00:00
+DQN,Trường Đại học Quy Nhơn,https://tuyensinh.qnu.edu.vn,html,high,,2026-06-13T19:44:12.453506+00:00
+DHP,Trường Đại học Hải Phòng,https://tuyensinh.dhhp.edu.vn/,html,high,,2026-06-13T19:44:16.773316+00:00
+DTB,Trường Đại học Thái Bình,http://tbu.edu.vn/,html,high,,2026-06-13T19:44:21.557667+00:00
+DHD,Trường Đại học Hải Dương,https://uhd.edu.vn/uploads/news/2026_04/qd-289-ban-hanh-thong-tin-tuyen-sinh-nam-2026-1.pdf,pdf,high,,2026-06-13T19:44:25.834411+00:00
+HLU,Trường Đại học Hạ Long,https://tuyensinh.uhl.edu.vn/,html,high,,2026-06-13T19:44:30.832087+00:00
+DHV,Trường Đại học Hùng Vương,https://hvu.edu.vn/thong-tin-tuyen-sinh-nam-2026,html,high,,2026-06-13T19:44:35.369074+00:00
+TQU,Trường Đại học Tân Trào,https://daihoctantrao.edu.vn/tuyen-sinh-dao-tao/thong-tin-tuyen-sinh/thong-bao-tuyen-sinh-nam-2026-1153.html,html,high,,2026-06-13T19:44:39.910893+00:00
+DHT,Trường Đại học Hà Tĩnh,https://htu.edu.vn/index.php/tuyen-sinh/thong-tin-tuyen-sinh,html,high,,2026-06-13T19:44:44.211183+00:00
+DQC,Trường Đại học Quảng Bình,http://tuyensinh.qbu.edu.vn/,html,high,,2026-06-13T19:44:48.325981+00:00

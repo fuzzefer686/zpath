@@ -1,0 +1,95 @@
+{
+  "university_code": "DCD",
+  "university_name": "Trường Đại học Công nghệ Thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://tuyensinh.uit.edu.vn",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 7,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành (trừ Kỹ thuật Máy tính, Thiết kế Vi mạch, Truyền thông Đa phương tiện)",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uit.edu.vn/2026-thong-bao-ve-viec-tuyen-thang-theo-quy-dinh-tai-dieu-8-quy-che-tuyen-sinh-dai-hoc-cua-bo-gddt-vao-dai-hoc-chinh-quy-nam-2026"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học Dữ liệu",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uit.edu.vn/2026-thong-bao-ve-viec-tuyen-thang-theo-quy-dinh-tai-dieu-8-quy-che-tuyen-sinh-dai-hoc-cua-bo-gddt-vao-dai-hoc-chinh-quy-nam-2026"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Mạng máy tính và truyền thông dữ liệu",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uit.edu.vn/2026-thong-bao-ve-viec-tuyen-thang-theo-quy-dinh-tai-dieu-8-quy-che-tuyen-sinh-dai-hoc-cua-bo-gddt-vao-dai-hoc-chinh-quy-nam-2026"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống Thông tin",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uit.edu.vn/2026-thong-bao-ve-viec-tuyen-thang-theo-quy-dinh-tai-dieu-8-quy-che-tuyen-sinh-dai-hoc-cua-bo-gddt-vao-dai-hoc-chinh-quy-nam-2026"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống Thông tin",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "tien_tien",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uit.edu.vn/2026-thong-bao-ve-viec-tuyen-thang-theo-quy-dinh-tai-dieu-8-quy-che-tuyen-sinh-dai-hoc-cua-bo-gddt-vao-dai-hoc-chinh-quy-nam-2026"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông Đa phương tiện",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uit.edu.vn/2026-thong-bao-ve-viec-tuyen-thang-theo-quy-dinh-tai-dieu-8-quy-che-tuyen-sinh-dai-hoc-cua-bo-gddt-vao-dai-hoc-chinh-quy-nam-2026"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Thông tin Việt Nhật",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uit.edu.vn/2026-thong-bao-ve-viec-tuyen-thang-theo-quy-dinh-tai-dieu-8-quy-che-tuyen-sinh-dai-hoc-cua-bo-gddt-vao-dai-hoc-chinh-quy-nam-2026"
+    }
+  ]
+}

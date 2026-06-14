@@ -9,7 +9,7 @@ import { UniversityCard } from "@/components/zpath/UniversityCard";
 import { supabase } from "@/app/lib/supabase";
 import type { University } from "@/data/universities";
 import {
-  getVisibleUnimapUniversities,
+  getAllUnimapUniversities,
   UNIMAP_VISIBLE_CODES,
 } from "@/lib/unimap-visible-schools";
 
@@ -26,15 +26,15 @@ export default function UniMapPage() {
 
     async function fetchUniversities() {
       try {
-        const { data, error } = await supabase.from("universities").select("*").order("name");
+        const { data, error } = await supabase.from("schools").select("*").order("name");
         if (error) throw error;
         if (!isCancelled) {
-          setUniversities(getVisibleUnimapUniversities(data ?? []));
+          setUniversities(getAllUnimapUniversities(data ?? []));
         }
       } catch (err) {
-        console.error("Error fetching universities:", err);
+        console.error("Error fetching schools:", err);
         if (!isCancelled) {
-          setUniversities(getVisibleUnimapUniversities());
+          setUniversities(getAllUnimapUniversities());
           setError(false);
         }
       } finally {

@@ -1,0 +1,341 @@
+{
+  "university_code": "DBH",
+  "university_name": "Trường Đại học Bách khoa - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://hcmut.edu.vn/tuyen-sinh-dh/dai-hoc-chinh-quy",
+  "final_tier": 2,
+  "status": "success",
+  "review_status": "pending",
+  "num_records": 22,
+  "data": [
+    {
+      "school_major_code": "106",
+      "major_name": "Khoa học Máy tính",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 85.41,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "107",
+      "major_name": "Kỹ thuật Máy tính",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 82.91,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "108",
+      "major_name": "Nhóm ngành Điện - Điện tử - Viễn Thông - Tự động hoá",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 80.77,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "109",
+      "major_name": "Kỹ thuật Cơ khí",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 75.43,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "110",
+      "major_name": "Kỹ thuật Cơ Điện tử",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 81.82,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "112",
+      "major_name": "Nhóm ngành Dệt - May",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 60.75,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "114",
+      "major_name": "Nhóm ngành Hoá - Thực phẩm - Sinh học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 75.43,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "115",
+      "major_name": "Nhóm ngành Xây dựng và Quản lý Dự án Xây dựng",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 55.05,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "117",
+      "major_name": "Kiến Trúc",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 67.42,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "123",
+      "major_name": "Quản lý Công nghiệp",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 75.98,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "125",
+      "major_name": "Nhóm ngành Tài nguyên và Môi trường",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 60.93,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "128",
+      "major_name": "Nhóm ngành Logistics và Hệ thống Công nghiệp",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 80.52,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "129",
+      "major_name": "Kỹ thuật Vật liệu",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 71.1,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "137",
+      "major_name": "Vật lý Kỹ thuật",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 76.61,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "138",
+      "major_name": "Cơ Kỹ thuật",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 75.98,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "140",
+      "major_name": "Kỹ thuật Nhiệt",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 73.5,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "141",
+      "major_name": "Bảo dưỡng Công nghiệp",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 65.59,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "142",
+      "major_name": "Kỹ thuật Ô tô",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 76.34,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "145",
+      "major_name": "(Song ngành) Tàu thủy - Hàng không",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 76.63,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "146",
+      "major_name": "Khoa học Dữ liệu",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 83.85,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "147",
+      "major_name": "Địa Kỹ thuật Xây dựng",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 55.06,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    },
+    {
+      "school_major_code": "148",
+      "major_name": "Kinh tế Xây dựng",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "A00",
+        "A01"
+      ],
+      "score": 55.72,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmut.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/nganh-va-chi-tieu"
+    }
+  ]
+}

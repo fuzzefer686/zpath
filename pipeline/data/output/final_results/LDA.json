@@ -1,0 +1,249 @@
+{
+  "university_code": "LDA",
+  "university_name": "Trường Đại học Lao động - Xã hội",
+  "found_url": "https://tuyensinh.ldxh.edu.vn/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 14,
+  "data": [
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "D09",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7310101A",
+      "major_name": "Kinh tế lao động",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "D09",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7310401A",
+      "major_name": "Tâm lý học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "X74"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7340101A",
+      "major_name": "Quản trị kinh doanh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "X05",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7340101B",
+      "major_name": "Marketing",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "X05",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7340101C",
+      "major_name": "Logistics và quản trị chuỗi cung ứng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "X05",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7340201A",
+      "major_name": "Tài chính - Ngân hàng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "C01",
+        "D01",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7340207",
+      "major_name": "Bảo hiểm - Tài chính",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "X21",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7340301A",
+      "major_name": "Kế toán",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "C03",
+        "D01",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7340302",
+      "major_name": "Kiểm toán",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "X05",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7340404A",
+      "major_name": "Quản trị nhân lực",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "D09",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7340405",
+      "major_name": "Hệ thống thông tin quản lý",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "D07",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật kinh tế",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "X01",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    },
+    {
+      "school_major_code": "7760101A",
+      "major_name": "Công tác xã hội",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "X70"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ldxh.edu.vn/gt/"
+    }
+  ]
+}

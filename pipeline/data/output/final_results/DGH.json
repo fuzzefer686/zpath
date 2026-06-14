@@ -1,0 +1,131 @@
+{
+  "university_code": "DGH",
+  "university_name": "Trường Đại học Sư phạm Hà Nội",
+  "found_url": "https://hnue.edu.vn",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 10,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Mầm non",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hnue.edu.vn/tin-tuc/11143/thong-bao-tuyen-sinh-van-bang-2-theo-hinh-thuc-he-vua-lam-vua-hoc-nam-2026.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hnue.edu.vn/tin-tuc/11143/thong-bao-tuyen-sinh-van-bang-2-theo-hinh-thuc-he-vua-lam-vua-hoc-nam-2026.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lí học (Tâm lí học trường học)",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hnue.edu.vn/tin-tuc/11143/thong-bao-tuyen-sinh-van-bang-2-theo-hinh-thuc-he-vua-lam-vua-hoc-nam-2026.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hnue.edu.vn/tin-tuc/11143/thong-bao-tuyen-sinh-van-bang-2-theo-hinh-thuc-he-vua-lam-vua-hoc-nam-2026.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hnue.edu.vn/tin-tuc/11143/thong-bao-tuyen-sinh-van-bang-2-theo-hinh-thuc-he-vua-lam-vua-hoc-nam-2026.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Đặc biệt",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hnue.edu.vn/tin-tuc/11143/thong-bao-tuyen-sinh-van-bang-2-theo-hinh-thuc-he-vua-lam-vua-hoc-nam-2026.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Công nghệ",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hnue.edu.vn/tin-tuc/11143/thong-bao-tuyen-sinh-van-bang-2-theo-hinh-thuc-he-vua-lam-vua-hoc-nam-2026.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hnue.edu.vn/tin-tuc/11143/thong-bao-tuyen-sinh-van-bang-2-theo-hinh-thuc-he-vua-lam-vua-hoc-nam-2026.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hnue.edu.vn/tin-tuc/11143/thong-bao-tuyen-sinh-van-bang-2-theo-hinh-thuc-he-vua-lam-vua-hoc-nam-2026.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Quốc phòng và An ninh",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hnue.edu.vn/tin-tuc/11143/thong-bao-tuyen-sinh-van-bang-2-theo-hinh-thuc-he-vua-lam-vua-hoc-nam-2026.html"
+    }
+  ]
+}

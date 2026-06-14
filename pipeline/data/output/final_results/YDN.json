@@ -1,0 +1,130 @@
+{
+  "university_code": "YDN",
+  "university_name": "Trường Đại học Kỹ thuật Y Dược Đà Nẵng",
+  "found_url": "https://dhktyduocdn.edu.vn/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 7,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "B08",
+        "A00",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ydn.edu.vn/news-posts/news-event/hoat-dong-dao-tao-801c/truong-dai-hoc-ky-thuat-y-%E2%80%93-duoc-da-nang-tu-van-tuyen-sinh---huong-nghiep-2026-tai-dak-lak-0154"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "B08",
+        "A00",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ydn.edu.vn/news-posts/news-event/hoat-dong-dao-tao-801c/truong-dai-hoc-ky-thuat-y-%E2%80%93-duoc-da-nang-tu-van-tuyen-sinh---huong-nghiep-2026-tai-dak-lak-0154"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "B08",
+        "A00",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ydn.edu.vn/news-posts/news-event/hoat-dong-dao-tao-801c/truong-dai-hoc-ky-thuat-y-%E2%80%93-duoc-da-nang-tu-van-tuyen-sinh---huong-nghiep-2026-tai-dak-lak-0154"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "B08",
+        "A00",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ydn.edu.vn/news-posts/news-event/hoat-dong-dao-tao-801c/truong-dai-hoc-ky-thuat-y-%E2%80%93-duoc-da-nang-tu-van-tuyen-sinh---huong-nghiep-2026-tai-dak-lak-0154"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hình ảnh y học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "B08",
+        "A00",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ydn.edu.vn/news-posts/news-event/hoat-dong-dao-tao-801c/truong-dai-hoc-ky-thuat-y-%E2%80%93-duoc-da-nang-tu-van-tuyen-sinh---huong-nghiep-2026-tai-dak-lak-0154"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phục hồi chức năng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "B08",
+        "A00",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ydn.edu.vn/news-posts/news-event/hoat-dong-dao-tao-801c/truong-dai-hoc-ky-thuat-y-%E2%80%93-duoc-da-nang-tu-van-tuyen-sinh---huong-nghiep-2026-tai-dak-lak-0154"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y tế công cộng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "B08",
+        "A00",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ydn.edu.vn/news-posts/news-event/hoat-dong-dao-tao-801c/truong-dai-hoc-ky-thuat-y-%E2%80%93-duoc-da-nang-tu-van-tuyen-sinh---huong-nghiep-2026-tai-dak-lak-0154"
+    }
+  ]
+}

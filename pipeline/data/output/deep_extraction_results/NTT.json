@@ -1,0 +1,59 @@
+[
+  {
+    "status": "partial",
+    "data": [],
+    "note": "Trang web cung cấp danh sách ngành đào tạo rất chi tiết nhưng không hiển thị cụ thể điểm chuẩn, tổ hợp môn xét tuyển hoặc học phí cho từng ngành trong nội dung được cung cấp. Do đó, các trường dữ liệu định lượng (score, tuition, exam_blocks) không thể trích xuất.",
+    "source": "HTML: https://tuyensinh.ntt.edu.vn/thong-tin-tuyen-sinh-c34"
+  },
+  {
+    "status": "partial",
+    "data": [
+      {
+        "school_major_code": null,
+        "major_name": "Y khoa",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Dược học",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Công nghệ thông tin - Chuẩn quốc tế",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "quoc_te",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Quản trị kinh doanh - Chuẩn quốc tế",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "quoc_te",
+        "tuition_min": null,
+        "tuition_max": null
+      }
+    ],
+    "note": "Dữ liệu được trích xuất từ danh mục ngành đào tạo trên website. Trang web không cung cấp thông tin chi tiết về điểm chuẩn, tổ hợp môn hoặc học phí cụ thể cho từng ngành trong nội dung này.",
+    "source": "HTML: https://tuyensinh.ntt.edu.vn/bieu-mau"
+  }
+]

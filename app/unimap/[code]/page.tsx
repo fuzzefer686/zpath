@@ -11,7 +11,7 @@ import {
   findVisibleUnimapUniversityByRouteParam,
   getVisibleUnimapUniversities,
   isVisibleUnimapCode,
-  UNIMAP_VISIBLE_CODES,
+  mapRecordToUniversity,
 } from "@/lib/unimap-visible-schools";
 import {
   getProgramCombinations,
@@ -709,7 +709,7 @@ export async function generateStaticParams() {
   const params = new Set<string>();
 
   try {
-    const slugs = await getSchoolSlugs(UNIMAP_VISIBLE_CODES);
+    const slugs = await getSchoolSlugs();
     slugs.forEach((slug) => params.add(slug));
   } catch (error) {
     console.error("Cannot generate school static params:", error);
@@ -727,7 +727,9 @@ export async function generateMetadata({ params }: UniversityDetailPageProps): P
   const { code } = await params;
   const routeParam = code.toLowerCase();
   const school = await getAdmissionSchoolBySlug(routeParam);
-  const university = findVisibleUniversityForRoute(routeParam, school);
+  const university =
+    findVisibleUniversityForRoute(routeParam, school) ??
+    (school ? mapRecordToUniversity(school) : null);
 
   if (!university) {
     return {
@@ -794,16 +796,20 @@ export default async function UniversityDetailPage({
   const selectedVariant = getSelectedAdmissionVariant(resolvedSearchParams?.variant);
   const routeParam = code.toLowerCase();
   const school = await getAdmissionSchoolBySlug(routeParam);
-  const university = findVisibleUniversityForRoute(routeParam, school);
+  const university =
+    findVisibleUniversityForRoute(routeParam, school) ??
+    (school ? mapRecordToUniversity(school) : null);
 
   if (!university) {
     return <UniversityNotFound code={code} />;
   }
 
-  const visibleSchool =
-    school && isVisibleUnimapCode(school.code)
-      ? applyUniversityMediaToSchool(school, university)
-      : createFallbackSchool(university);
+  // Prefer the real DB school (curated or imported); only synthesize a school
+  // from local University data when the route resolved to a curated entry that
+  // has no DB row yet.
+  const visibleSchool = school
+    ? applyUniversityMediaToSchool(school, university)
+    : createFallbackSchool(university);
 
   return renderAdmissionSchoolDetail(
     visibleSchool,
