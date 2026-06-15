@@ -8,6 +8,10 @@ import { Input } from "@/components/ui/input";
 import type { AdmissionProgram, Benchmark } from "@/src/types/admission-data";
 import { AdmissionYearSelect } from "./AdmissionYearSelect";
 
+// Current admission cycle. Benchmarks for this year are only published ~August,
+// so earlier years are shown as last-year reference until then.
+const CURRENT_ADMISSION_YEAR = 2026;
+
 type BenchmarksSectionProps = {
   benchmarks: Benchmark[];
   programs: AdmissionProgram[];
@@ -63,9 +67,16 @@ export function BenchmarksSection({
         />
       </CardHeader>
       <CardContent className="space-y-4">
+        {selectedYear < CURRENT_ADMISSION_YEAR ? (
+          <p className="rounded-lg border border-amber-300/60 bg-amber-50 px-3 py-2 text-xs font-medium text-amber-800 dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-amber-300">
+            Điểm chuẩn {selectedYear} — dùng tham khảo, điểm chuẩn {CURRENT_ADMISSION_YEAR} thường công bố vào tháng 8.
+          </p>
+        ) : null}
         {benchmarks.length === 0 ? (
           <p className="text-sm text-muted-foreground">
-            Chưa có dữ liệu điểm chuẩn cho năm {selectedYear}.
+            {selectedYear >= CURRENT_ADMISSION_YEAR
+              ? `Điểm chuẩn ${selectedYear} chưa công bố. Bạn có thể chọn năm trước để xem điểm chuẩn tham khảo.`
+              : `Chưa có dữ liệu điểm chuẩn cho năm ${selectedYear}.`}
           </p>
         ) : (
           <>

@@ -125,7 +125,14 @@ export function useUnimapFilters(universities: University[]): UseUnimapFilters {
     const result = universities.filter((university) => {
       if (normalizedQuery) {
         const haystack = normalizeForSearch(
-          [university.code, university.name, university.city ?? "", ...(university.tags ?? [])].join(" "),
+          [
+            university.code,
+            university.name,
+            university.shortName ?? "",
+            ...(university.aliases ?? []),
+            university.city ?? "",
+            ...(university.tags ?? []),
+          ].join(" "),
         );
         if (!haystack.includes(normalizedQuery)) return false;
       }

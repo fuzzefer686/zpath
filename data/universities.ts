@@ -15,6 +15,10 @@ export interface UniChannel {
 export interface University {
   code: string;
   name: string;
+  /** Popular abbreviation students recognize (PTIT, DAV, UEH). Falls back to code. */
+  shortName?: string;
+  /** Other common names/abbreviations students may search by. */
+  aliases?: string[];
   shortDesc: string;
   tags: string[];
   city: string;

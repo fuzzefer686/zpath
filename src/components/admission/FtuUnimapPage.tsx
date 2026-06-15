@@ -9,7 +9,6 @@ import {
   ExternalLink,
   GraduationCap,
   Landmark,
-  LineChart,
   MapPin,
   Route,
   Search,
@@ -27,6 +26,37 @@ import type {
   TuitionFee,
 } from "@/src/types/admission-data";
 import { AdmissionYearSelect } from "./AdmissionYearSelect";
+import {
+  BenchmarkPanel,
+  TuitionPanel,
+  type BenchmarkRow,
+  type BenchmarkHighlight,
+  type TuitionRow,
+} from "./AdmissionTables";
+
+// Current admission cycle. Benchmarks for this year are only published ~August,
+// so earlier years are shown as last-year reference until then.
+const CURRENT_ADMISSION_YEAR = 2026;
+
+// Human labels for admission_method codes (the DB stores codes).
+const METHOD_LABELS: Record<string, string> = {
+  diem_thi_thpt: "Điểm thi THPT",
+  thpt: "Điểm thi THPT",
+  hoc_ba: "Xét học bạ",
+  hocba: "Xét học bạ",
+  dgnl_hn: "ĐGNL ĐHQG HN",
+  dgnl_hcm: "ĐGNL ĐHQG HCM",
+  dgnl: "Đánh giá năng lực",
+  hsa: "ĐGNL ĐHQG HN",
+  dg_tu_duy: "Đánh giá tư duy",
+  tsa: "Đánh giá tư duy",
+  ket_hop: "Kết hợp",
+  xt_rieng: "Xét tuyển riêng",
+  xttn: "Xét tuyển tài năng",
+};
+
+const methodLabel = (code: string) =>
+  METHOD_LABELS[(code ?? "").toLowerCase()] ?? code;
 
 type FtuUnimapPageProps = {
   school: School;
@@ -45,7 +75,7 @@ type FtuUnimapPageProps = {
 };
 
 export type BrandedUnimapTheme = {
-  code: "FTU" | "HUST" | "NEU" | "UET";
+  code: string;
   background: string;
   stickyBackground: string;
   heroFade: string;
@@ -66,7 +96,7 @@ export type BrandedUnimapTheme = {
   emptyFallback: string;
 };
 
-export const BRANDED_UNIMAP_THEMES: Record<BrandedUnimapTheme["code"], BrandedUnimapTheme> = {
+export const BRANDED_UNIMAP_THEMES: Record<string, BrandedUnimapTheme> = {
   FTU: {
     code: "FTU",
     background: "bg-[#f7f8fb]",
@@ -165,6 +195,39 @@ export const BRANDED_UNIMAP_THEMES: Record<BrandedUnimapTheme["code"], BrandedUn
   },
 };
 
+// Neutral theme for every school without a curated identity. Single indigo
+// accent, slate base — keeps the HUST layout/structure with brand-agnostic color.
+export const DEFAULT_UNIMAP_THEME: BrandedUnimapTheme = {
+  code: "DEFAULT",
+  background: "bg-[#f6f7f9]",
+  stickyBackground: "bg-[#f6f7f9]/90",
+  heroFade: "from-[#f6f7f9]",
+  accentText: "text-[#4f46e5]",
+  accentBg: "bg-[#4f46e5]",
+  accentBorder: "border-[#4f46e5]/20",
+  accentSoftBg: "bg-[#eef2ff]",
+  accentTintBg: "bg-[#4f46e5]/10",
+  accentHoverBg: "hover:bg-[#4f46e5]/[0.03]",
+  navHover: "hover:border-[#4f46e5]/30 hover:bg-[#4f46e5]/5 hover:text-[#4f46e5]",
+  navActive: "border-[#4f46e5] bg-[#4f46e5] text-white",
+  heroOverlay:
+    "bg-[linear-gradient(115deg,rgba(15,23,42,0.98)_0%,rgba(30,27,75,0.9)_48%,rgba(79,70,229,0.7)_100%)]",
+  badge: "border-indigo-200/20 bg-indigo-500/15 text-indigo-100",
+  eyebrow: "Tổng quan tuyển sinh",
+  overviewTitle: "Nhìn nhanh trước khi chọn nguyện vọng",
+  overviewDescription:
+    "Thông tin nhận diện trường và quy mô dữ liệu tuyển sinh đang có trong UniMap.",
+  descriptionFallback:
+    "Thông tin tuyển sinh được tổng hợp thành một trang dễ quét: phương thức, chương trình, điểm chuẩn và học phí.",
+  emptyFallback: "UniMap đang cập nhật mô tả chi tiết cho trường này.",
+};
+
+// Resolve the theme for any school: curated brands keep their identity, the
+// rest use the neutral default.
+export function getUnimapTheme(code: string): BrandedUnimapTheme {
+  return BRANDED_UNIMAP_THEMES[(code ?? "").toUpperCase()] ?? DEFAULT_UNIMAP_THEME;
+}
+
 function formatNumber(value: number) {
   return new Intl.NumberFormat("vi-VN").format(value);
 }
@@ -178,6 +241,28 @@ function formatScore(score: number, scale: number | null) {
   return `${score.toFixed(2).replace(/\.00$/, "")}/${scale ?? 30}`;
 }
 
+// Tuition is stored in mixed units: pipeline rows are in MILLIONS of VND with
+// unit "triệu/năm"; curated/fallback rows are raw VND. Format by the unit so we
+// never render "35₫" for a 35-million-VND fee.
+function feeIsMillions(unit: string | null | undefined) {
+  const u = (unit ?? "").toLowerCase();
+  return u.includes("triệu") || u.includes("trieu");
+}
+
+function feePeriod(unit: string | null | undefined) {
+  const u = (unit ?? "").toLowerCase();
+  if (u.includes("năm") || u.includes("nam")) return "/năm";
+  if (u.includes("kỳ") || u.includes("ky")) return "/học kỳ";
+  if (u.includes("tháng") || u.includes("thang")) return "/tháng";
+  if (u.includes("tín") || u.includes("tin")) return "/tín chỉ";
+  return "";
+}
+
+function feeValue(value: number, unit: string | null | undefined) {
+  return feeIsMillions(unit) ? `${formatNumber(value)} triệu` : formatVND(value);
+}
+
+// Money only (no period suffix) — for the summary strips.
 function formatFeeRange(fee: TuitionFee) {
   if (fee.currency && fee.currency !== "VND") {
     const min = fee.min_fee ?? 0;
@@ -187,10 +272,9 @@ function formatFeeRange(fee: TuitionFee) {
 
   if (fee.min_fee === null && fee.max_fee === null) return "Chưa công bố";
   if (fee.min_fee !== null && fee.max_fee !== null && fee.min_fee !== fee.max_fee) {
-    return `${formatVND(fee.min_fee)} - ${formatVND(fee.max_fee)}`;
+    return `${feeValue(fee.min_fee, fee.unit)} - ${feeValue(fee.max_fee, fee.unit)}`;
   }
-
-  return formatVND(fee.min_fee ?? fee.max_fee ?? 0);
+  return feeValue(fee.min_fee ?? fee.max_fee ?? 0, fee.unit);
 }
 
 function getTuitionBounds(tuitionFees: TuitionFee[]) {
@@ -204,12 +288,6 @@ function getTuitionBounds(tuitionFees: TuitionFee[]) {
     min: Math.min(...values),
     max: Math.max(...values),
   };
-}
-
-function getTopBenchmarks(benchmarks: Benchmark[], limit = 6) {
-  return [...benchmarks]
-    .sort((left, right) => right.score - left.score)
-    .slice(0, limit);
 }
 
 function createProgramMap(programs: AdmissionProgram[]) {
@@ -327,10 +405,54 @@ export function FtuUnimapPage({
   const theme = brand ?? BRANDED_UNIMAP_THEMES.FTU;
   const benchmarkProgramById = createProgramMap(benchmarkPrograms);
   const tuitionProgramById = createProgramMap(tuitionPrograms);
-  const topBenchmarks = getTopBenchmarks(benchmarks);
   const tuitionBounds = getTuitionBounds(tuitionFees);
   const totalQuota = programs.reduce((sum, program) => sum + (program.quota ?? 0), 0);
   const activeMethods = methods.filter((method) => method.is_active !== false);
+
+  // Serializable rows for the searchable client tables (formatting done here so
+  // no internal fields — notes, data_confidence — reach the user).
+  const benchmarkRows: BenchmarkRow[] = benchmarks.map((b) => {
+    const program = getProgramLabel(benchmarkProgramById, b.program_id);
+    const method = methodLabel(b.method_code);
+    const combo = b.combination_code ?? "-";
+    const scoreText = formatScore(b.score, b.scale);
+    return {
+      id: b.id,
+      program,
+      method,
+      combo,
+      scoreText,
+      searchText: `${program} ${method} ${combo} ${scoreText}`.toLowerCase(),
+    };
+  });
+
+  const topThpt = benchmarks
+    .filter((b) => b.method_code === "diem_thi_thpt" && b.score > 0)
+    .sort((a, b) => b.score - a.score)[0];
+  const benchmarkHighlight: BenchmarkHighlight | null = topThpt
+    ? {
+        scoreText: formatScore(topThpt.score, topThpt.scale),
+        program: getProgramLabel(benchmarkProgramById, topThpt.program_id),
+        combo: topThpt.combination_code,
+      }
+    : null;
+
+  const tuitionRows: TuitionRow[] = tuitionFees.map((f) => {
+    const program = getProgramLabel(tuitionProgramById, f.program_id);
+    const feeText = formatFeeRange(f);
+    return {
+      id: f.id,
+      program,
+      feeText,
+      period: feePeriod(f.unit),
+      searchText: `${program} ${feeText}`.toLowerCase(),
+    };
+  });
+
+  const benchmarkReferenceNote =
+    selectedBenchmarkYear < CURRENT_ADMISSION_YEAR
+      ? `Điểm chuẩn ${selectedBenchmarkYear} dùng để tham khảo. Điểm chuẩn ${CURRENT_ADMISSION_YEAR} thường công bố vào tháng 8.`
+      : null;
 
   return (
     <main className={`min-h-screen ${theme.background} text-slate-950`}>
@@ -357,7 +479,7 @@ export function FtuUnimapPage({
             <div>
               <div className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] ${theme.badge}`}>
                 <Landmark className="h-4 w-4" />
-                {school.code}
+                {school.short_name ?? school.code}
               </div>
               <h1 className="mt-5 max-w-4xl font-display text-4xl font-extrabold leading-[1.04] tracking-tight text-white md:text-6xl">
                 {school.name}
@@ -623,67 +745,30 @@ export function FtuUnimapPage({
             }
           >
           {benchmarks.length ? (
-            <div className="space-y-5">
-              <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-                {topBenchmarks.map((benchmark) => (
-                  <div key={benchmark.id} className="rounded-2xl border border-slate-200 bg-white p-5">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className={`rounded-full ${theme.accentTintBg} px-3 py-1 text-xs font-bold ${theme.accentText}`}>
-                        {benchmark.method_code}
-                      </div>
-                      <div className="font-display text-2xl font-extrabold text-slate-950">
-                        {formatScore(benchmark.score, benchmark.scale)}
-                      </div>
-                    </div>
-                    <p className="mt-4 line-clamp-2 text-sm font-semibold leading-6 text-slate-900">
-                      {getProgramLabel(benchmarkProgramById, benchmark.program_id)}
-                    </p>
-                    <p className="mt-2 text-xs text-slate-500">
-                      Tổ hợp {benchmark.combination_code ?? "không tách tổ hợp"} · {benchmark.year}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
-                <div className="flex items-center gap-3 border-b border-slate-200 bg-slate-50 px-5 py-4">
-                  <LineChart className="h-4 w-4 text-slate-400" />
-                  <p className="text-sm font-medium text-slate-500">
-                    {formatNumber(benchmarks.length)} bản ghi điểm chuẩn
-                  </p>
-                </div>
-                <div className="max-h-[760px] overflow-auto">
-                  <table className="w-full min-w-[980px] text-left text-sm">
-                    <thead className="sticky top-0 z-10 border-b border-slate-200 bg-white text-xs uppercase tracking-[0.14em] text-slate-400">
-                      <tr>
-                        <th className="px-5 py-4">Chương trình</th>
-                        <th className="w-28 px-5 py-4">Phương thức</th>
-                        <th className="w-28 px-5 py-4">Tổ hợp</th>
-                        <th className="w-28 px-5 py-4 text-right">Điểm</th>
-                        <th className="w-72 px-5 py-4">Ghi chú</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-100">
-                      {benchmarks.map((benchmark) => (
-                        <tr key={benchmark.id} className={`align-top transition-colors ${theme.accentHoverBg}`}>
-                          <td className="px-5 py-4 font-semibold leading-6 text-slate-950">
-                            {getProgramLabel(benchmarkProgramById, benchmark.program_id)}
-                          </td>
-                          <td className="px-5 py-4 text-slate-600">{benchmark.method_code}</td>
-                          <td className="px-5 py-4 text-slate-600">{benchmark.combination_code ?? "-"}</td>
-                          <td className="px-5 py-4 text-right font-display text-base font-extrabold tabular-nums text-slate-950">
-                            {formatScore(benchmark.score, benchmark.scale)}
-                          </td>
-                          <td className="px-5 py-4 leading-6 text-slate-500">{benchmark.note ?? "-"}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+            <BenchmarkPanel
+              highlight={benchmarkHighlight}
+              highlightLabel={`Điểm THPT cao nhất ${selectedBenchmarkYear}`}
+              rows={benchmarkRows}
+              accentText={theme.accentText}
+              accentTintBg={theme.accentTintBg}
+              accentHoverBg={theme.accentHoverBg}
+              referenceNote={benchmarkReferenceNote}
+            />
           ) : (
-            <EmptyPanel text={`Chưa có dữ liệu điểm chuẩn cho năm ${selectedBenchmarkYear}.`} />
+            <div className="space-y-4">
+              {benchmarkReferenceNote ? (
+                <p className="rounded-2xl border border-amber-300/70 bg-amber-50 px-4 py-2.5 text-xs font-semibold text-amber-800">
+                  {benchmarkReferenceNote}
+                </p>
+              ) : null}
+              <EmptyPanel
+                text={
+                  selectedBenchmarkYear >= CURRENT_ADMISSION_YEAR
+                    ? `Điểm chuẩn ${selectedBenchmarkYear} chưa công bố. Chọn năm trước để xem điểm chuẩn tham khảo.`
+                    : `Chưa có dữ liệu điểm chuẩn cho năm ${selectedBenchmarkYear}.`
+                }
+              />
+            </div>
           )}
           </SectionShell>
 
@@ -704,40 +789,27 @@ export function FtuUnimapPage({
           <div className="mb-5 grid gap-4 md:grid-cols-3">
             <InfoStrip
               icon={CircleDollarSign}
-              label="Khoảng thấp nhất"
-              value={tuitionBounds ? formatVND(tuitionBounds.min) : "Đang cập nhật"}
+              label="Thấp nhất"
+              value={tuitionBounds ? feeValue(tuitionBounds.min, tuitionFees[0]?.unit) : "Đang cập nhật"}
             />
             <InfoStrip
               icon={CircleDollarSign}
-              label="Khoảng cao nhất"
-              value={tuitionBounds ? formatVND(tuitionBounds.max) : "Đang cập nhật"}
+              label="Cao nhất"
+              value={tuitionBounds ? feeValue(tuitionBounds.max, tuitionFees[0]?.unit) : "Đang cập nhật"}
             />
             <InfoStrip
               icon={BookOpenCheck}
-              label="Dòng dữ liệu"
+              label="Số chương trình"
               value={`${formatNumber(tuitionFees.length)} chương trình`}
             />
           </div>
 
           {tuitionFees.length ? (
-            <div className="grid gap-3 md:grid-cols-2">
-              {tuitionFees.map((fee) => (
-                <div key={fee.id} className="rounded-2xl border border-slate-200 bg-white p-5">
-                  <div className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
-                    {getProgramLabel(tuitionProgramById, fee.program_id)}
-                  </div>
-                  <div className={`mt-3 font-display text-2xl font-extrabold ${theme.accentText}`}>
-                    {formatFeeRange(fee)}
-                  </div>
-                  <div className="mt-2 text-sm text-slate-500">{fee.unit ?? "Theo công bố"}</div>
-                  {fee.description || fee.note ? (
-                    <p className="mt-4 text-sm leading-6 text-slate-600">
-                      {fee.description ?? fee.note}
-                    </p>
-                  ) : null}
-                </div>
-              ))}
-            </div>
+            <TuitionPanel
+              rows={tuitionRows}
+              accentText={theme.accentText}
+              accentHoverBg={theme.accentHoverBg}
+            />
           ) : (
             <EmptyPanel text={`Chưa có dữ liệu học phí cho năm ${selectedTuitionYear}.`} />
           )}

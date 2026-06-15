@@ -115,6 +115,8 @@ export function mapRecordToUniversity(value: unknown): University | null {
   return {
     code,
     name,
+    shortName: optional(asString(record.shortName ?? record.short_name, local?.shortName ?? "")),
+    aliases: asStringArray(record.aliases, local?.aliases ?? []),
     shortDesc: asString(record.shortDesc ?? record.short_desc, local?.shortDesc ?? type),
     tags: asStringArray(record.tags, local?.tags ?? (type ? [type] : [])),
     city: asString(record.city ?? record.province, local?.city ?? ""),

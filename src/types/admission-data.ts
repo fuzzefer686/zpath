@@ -2,6 +2,8 @@ export type School = {
   id: string;
   code: string;
   name: string;
+  short_name: string | null;
+  aliases: string[];
   slug: string;
   english_name: string | null;
   type: string | null;

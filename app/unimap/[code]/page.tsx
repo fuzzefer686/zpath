@@ -3,7 +3,6 @@ import Link from "next/link";
 import { GraduationCap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import hustProMaxData from "@/data/hust-pro-max.json";
 import type { University } from "@/data/universities";
 import { createSchoolSlug } from "@/lib/school-slug";
 import { getAbsoluteUrl, SITE_NAME } from "@/lib/seo";
@@ -14,52 +13,26 @@ import {
   mapRecordToUniversity,
 } from "@/lib/unimap-visible-schools";
 import {
-  getProgramCombinations,
   getSchoolAdmissionInfo,
   getSchoolAdmissionMethods,
   getSchoolBenchmarks,
   getSchoolBySlugOrCode,
+  getSchoolDataYears,
+  type SchoolDataYears,
   getSchoolPrograms,
   getSchoolSlugs,
   getSchoolTuitionFees,
-  getSubjectCombinations,
 } from "@/src/lib/admission-data";
 import type {
   AdmissionInfo,
   AdmissionMethodRecord,
   AdmissionProgram,
   Benchmark,
-  ProgramCombination,
   School,
-  SubjectCombination,
   TuitionFee,
 } from "@/src/types/admission-data";
-import { AdmissionCalculatorSection } from "@/src/components/admission/AdmissionCalculatorSection";
-import { CollapsibleAdmissionSection } from "@/src/components/admission/CollapsibleAdmissionSection";
-import { AdmissionInfoSection } from "@/src/components/admission/AdmissionInfoSection";
-import { AdmissionProgramsSection } from "@/src/components/admission/AdmissionProgramsSection";
-import {
-  AdmissionSectionNavigator,
-  PRO_MAX_NAV_ITEMS,
-} from "@/src/components/admission/AdmissionSectionNavigator";
-import { BenchmarksSection } from "@/src/components/admission/BenchmarksSection";
-import {
-  BRANDED_UNIMAP_THEMES,
-  FtuUnimapPage,
-  type BrandedUnimapTheme,
-} from "@/src/components/admission/FtuUnimapPage";
-import { loadUetStaticData, getUetStaticProgramCombinations } from "@/src/lib/admission-data/uet-static-data";
-import {
-  ProMaxCalculatorLinkSection,
-  ProMaxContentSection,
-  ProMaxMediaGrid,
-  ProMaxPlaceholderSection,
-  type ProMaxContentBlock,
-} from "@/src/components/admission/ProMaxSections";
-import { SchoolHeader } from "@/src/components/admission/SchoolHeader";
-import { SchoolOverviewSection } from "@/src/components/admission/SchoolOverviewSection";
-import { SubjectCombinationsSection } from "@/src/components/admission/SubjectCombinationsSection";
-import { TuitionSection } from "@/src/components/admission/TuitionSection";
+import { FtuUnimapPage, getUnimapTheme } from "@/src/components/admission/FtuUnimapPage";
+import { loadUetStaticData } from "@/src/lib/admission-data/uet-static-data";
 
 interface UniversityDetailPageProps {
   params: Promise<{
@@ -76,49 +49,9 @@ interface UniversityDetailPageProps {
 
 const FALLBACK_YEAR = 2025;
 const PROGRAMS_DEFAULT_YEAR = 2026;
-const BENCHMARK_REFERENCE_YEAR = 2025;
 const BENCHMARKS_DEFAULT_YEAR = 2025;
 const TUITION_DEFAULT_YEAR = 2025;
 const ADMISSION_YEAR_OPTIONS = [2026, 2025, 2024, 2023] as const;
-const PRO_MAX_VARIANT = "pro-max";
-const PRO_MAX_PLACEHOLDER_MESSAGE =
-  "Bạn vui lòng qua page Mặc định nhé, Dev ở đây đình công rồi :D";
-
-type AdmissionPageVariant = "default" | typeof PRO_MAX_VARIANT;
-
-type ProMaxSchoolContent = {
-  overview: ProMaxContentBlock[];
-  admissionInfo: ProMaxContentBlock[];
-  combinations: ProMaxContentBlock[];
-  placeholders: {
-    programs?: string;
-    benchmarks?: string;
-    tuition?: string;
-  };
-};
-
-const PRO_MAX_CONTENT_BY_CODE = hustProMaxData as Record<string, ProMaxSchoolContent>;
-
-const FALLBACK_SUBJECT_COMBINATIONS: SubjectCombination[] = [
-  {
-    id: "fallback-a00",
-    code: "A00",
-    subjects: ["Toán", "Vật lý", "Hóa học"],
-    description: "Tổ hợp xét tuyển phổ biến cho khối kỹ thuật, kinh tế và công nghệ.",
-  },
-  {
-    id: "fallback-a01",
-    code: "A01",
-    subjects: ["Toán", "Vật lý", "Tiếng Anh"],
-    description: "Tổ hợp phù hợp với các chương trình có yêu cầu ngoại ngữ.",
-  },
-  {
-    id: "fallback-d01",
-    code: "D01",
-    subjects: ["Toán", "Ngữ văn", "Tiếng Anh"],
-    description: "Tổ hợp phổ biến cho nhóm kinh tế, kinh doanh và xã hội.",
-  },
-];
 
 async function getAdmissionSchoolBySlug(slug: string) {
   try {
@@ -143,6 +76,8 @@ function createFallbackSchool(university: University): School {
     id: `fallback-school-${university.code.toLowerCase()}`,
     code: university.code,
     name: university.name,
+    short_name: university.code,
+    aliases: [],
     slug: createSchoolSlug(university.name),
     english_name: null,
     type: university.code === "VINUNI" ? "Tư thục" : "Công lập",
@@ -176,38 +111,6 @@ function getSelectedAdmissionYear(
   return ADMISSION_YEAR_OPTIONS.includes(parsedYear as (typeof ADMISSION_YEAR_OPTIONS)[number])
     ? parsedYear
     : defaultYear;
-}
-
-function getSelectedAdmissionVariant(
-  variantParam: string | string[] | undefined,
-): AdmissionPageVariant {
-  const rawVariant = Array.isArray(variantParam) ? variantParam[0] : variantParam;
-  return rawVariant === PRO_MAX_VARIANT ? PRO_MAX_VARIANT : "default";
-}
-
-function createVariantHref(
-  routeParam: string,
-  selectedProgramYear: number,
-  selectedBenchmarkYear: number,
-  selectedTuitionYear: number,
-  variant: AdmissionPageVariant,
-) {
-  const params = new URLSearchParams();
-  if (selectedProgramYear !== PROGRAMS_DEFAULT_YEAR) {
-    params.set("programYear", String(selectedProgramYear));
-  }
-  if (selectedBenchmarkYear !== BENCHMARKS_DEFAULT_YEAR) {
-    params.set("benchmarkYear", String(selectedBenchmarkYear));
-  }
-  if (selectedTuitionYear !== TUITION_DEFAULT_YEAR) {
-    params.set("tuitionYear", String(selectedTuitionYear));
-  }
-  if (variant === PRO_MAX_VARIANT) {
-    params.set("variant", PRO_MAX_VARIANT);
-  }
-
-  const query = params.toString();
-  return query ? `/unimap/${routeParam}?${query}` : `/unimap/${routeParam}`;
 }
 
 function createFallbackPrograms(university: University, year: number): AdmissionProgram[] {
@@ -330,22 +233,6 @@ function createFallbackTuitionFees(
   });
 }
 
-function createFallbackProgramCombinations(
-  programs: AdmissionProgram[],
-  year: number,
-): ProgramCombination[] {
-  return programs.flatMap((program) =>
-    ["A00", "A01", "D01"].map((combinationCode) => ({
-      id: `fallback-combination-${program.id}-${combinationCode.toLowerCase()}`,
-      program_id: program.id,
-      combination_code: combinationCode,
-      year,
-      method_code: "THPT",
-      source_url: program.source_url,
-    })),
-  );
-}
-
 async function loadOrFallback<T>(
   load: () => Promise<T>,
   fallback: T,
@@ -365,45 +252,9 @@ async function renderAdmissionSchoolDetail(
   selectedProgramYear: number,
   selectedBenchmarkYear: number,
   selectedTuitionYear: number,
-  selectedVariant: AdmissionPageVariant,
-  routeParam: string,
 ) {
-  const proMaxContent = PRO_MAX_CONTENT_BY_CODE[school.code];
-  const canUseProMax = false;
-  const isProMax = canUseProMax && selectedVariant === PRO_MAX_VARIANT;
-  const defaultCalculatorHref = `${createVariantHref(
-    routeParam,
-    selectedProgramYear,
-    selectedBenchmarkYear,
-    selectedTuitionYear,
-    "default",
-  )}#calculator`;
-  const variantLinks = canUseProMax
-    ? [
-        {
-          label: "Mặc định",
-          href: createVariantHref(
-            routeParam,
-            selectedProgramYear,
-            selectedBenchmarkYear,
-            selectedTuitionYear,
-            "default",
-          ),
-          isActive: !isProMax,
-        },
-        {
-          label: "Pro Max :))",
-          href: createVariantHref(
-            routeParam,
-            selectedProgramYear,
-            selectedBenchmarkYear,
-            selectedTuitionYear,
-            PRO_MAX_VARIANT,
-          ),
-          isActive: isProMax,
-        },
-      ]
-    : [];
+  // Static fallback (used only when a curated school has local data but the DB
+  // returns nothing for the selected year).
   const canUseStaticFallback = Boolean(university.programs?.length);
   const fallbackPrograms = canUseStaticFallback
     ? createFallbackPrograms(university, selectedProgramYear)
@@ -417,12 +268,6 @@ async function renderAdmissionSchoolDetail(
   const fallbackMethods = canUseStaticFallback
     ? createFallbackMethods(school.code, selectedProgramYear)
     : [];
-  const fallbackCalculatorPrograms = canUseStaticFallback
-    ? createFallbackPrograms(university, BENCHMARK_REFERENCE_YEAR)
-    : [];
-  const fallbackCalculatorMethods = canUseStaticFallback
-    ? createFallbackMethods(school.code, BENCHMARK_REFERENCE_YEAR)
-    : [];
   const fallbackAdmissionInfo = canUseStaticFallback
     ? createFallbackAdmissionInfo(school, selectedProgramYear)
     : null;
@@ -432,12 +277,8 @@ async function renderAdmissionSchoolDetail(
   let loadedBenchmarks: Benchmark[];
   let loadedTuitionFees: TuitionFee[];
   let loadedAdmissionInfo: AdmissionInfo | null;
-  let loadedSubjectCombinations: SubjectCombination[];
   let loadedBenchmarkPrograms: AdmissionProgram[];
   let loadedTuitionPrograms: AdmissionProgram[];
-  let loadedCalculatorPrograms: AdmissionProgram[];
-  let loadedCalculatorMethods: AdmissionMethodRecord[];
-  let loadedCalculatorBenchmarks: Benchmark[];
 
   if (school.code === "UET") {
     const localData = loadUetStaticData(selectedProgramYear, selectedBenchmarkYear, selectedTuitionYear);
@@ -446,12 +287,8 @@ async function renderAdmissionSchoolDetail(
     loadedBenchmarks = localData.benchmarks;
     loadedTuitionFees = localData.tuitionFees;
     loadedAdmissionInfo = localData.admissionInfo;
-    loadedSubjectCombinations = await loadOrFallback(() => getSubjectCombinations(), [], "subject combinations");
     loadedBenchmarkPrograms = localData.benchmarkPrograms;
     loadedTuitionPrograms = localData.tuitionPrograms;
-    loadedCalculatorPrograms = localData.calculatorPrograms;
-    loadedCalculatorMethods = localData.calculatorMethods;
-    loadedCalculatorBenchmarks = localData.calculatorBenchmarks;
   } else {
     [
       loadedPrograms,
@@ -459,12 +296,8 @@ async function renderAdmissionSchoolDetail(
       loadedBenchmarks,
       loadedTuitionFees,
       loadedAdmissionInfo,
-      loadedSubjectCombinations,
       loadedBenchmarkPrograms,
       loadedTuitionPrograms,
-      loadedCalculatorPrograms,
-      loadedCalculatorMethods,
-      loadedCalculatorBenchmarks,
     ] = await Promise.all([
       loadOrFallback(() => getSchoolPrograms(school.code, selectedProgramYear), [], "school programs"),
       loadOrFallback(
@@ -487,7 +320,6 @@ async function renderAdmissionSchoolDetail(
         null,
         "admission info",
       ),
-      loadOrFallback(() => getSubjectCombinations(), [], "subject combinations"),
       loadOrFallback(
         () => getSchoolPrograms(school.code, selectedBenchmarkYear),
         [],
@@ -497,21 +329,6 @@ async function renderAdmissionSchoolDetail(
         () => getSchoolPrograms(school.code, selectedTuitionYear),
         [],
         "tuition programs",
-      ),
-      loadOrFallback(
-        () => getSchoolPrograms(school.code, BENCHMARK_REFERENCE_YEAR),
-        [],
-        "calculator programs",
-      ),
-      loadOrFallback(
-        () => getSchoolAdmissionMethods(school.code, BENCHMARK_REFERENCE_YEAR),
-        [],
-        "calculator admission methods",
-      ),
-      loadOrFallback(
-        () => getSchoolBenchmarks(school.code, BENCHMARK_REFERENCE_YEAR),
-        [],
-        "calculator benchmarks",
       ),
     ]);
   }
@@ -535,173 +352,23 @@ async function renderAdmissionSchoolDetail(
       ? createFallbackTuitionFees(university, tuitionPrograms, selectedTuitionYear)
       : [];
   const admissionInfo = loadedAdmissionInfo ?? fallbackAdmissionInfo;
-  const calculatorPrograms = loadedCalculatorPrograms.length
-    ? loadedCalculatorPrograms
-    : fallbackCalculatorPrograms;
-  const calculatorMethods = loadedCalculatorMethods.length
-    ? loadedCalculatorMethods
-    : fallbackCalculatorMethods;
-  const calculatorBenchmarks = loadedCalculatorBenchmarks.length
-    ? loadedCalculatorBenchmarks
-    : canUseStaticFallback
-      ? createFallbackBenchmarks(university, calculatorPrograms, BENCHMARK_REFERENCE_YEAR)
-      : [];
-  const subjectCombinations = loadedSubjectCombinations.length
-    ? loadedSubjectCombinations
-    : FALLBACK_SUBJECT_COMBINATIONS;
-  const programCombinations = school.code === "UET"
-    ? getUetStaticProgramCombinations(programs.map((program) => program.id), selectedProgramYear)
-    : loadedPrograms.length
-      ? await loadOrFallback(
-          () => getProgramCombinations(programs.map((program) => program.id), selectedProgramYear),
-          [],
-          "program combinations",
-        )
-      : canUseStaticFallback
-        ? createFallbackProgramCombinations(programs, selectedProgramYear)
-        : [];
-
-  const brandedTheme =
-    school.code === "FTU" || school.code === "HUST" || school.code === "NEU" || school.code === "UET"
-      ? BRANDED_UNIMAP_THEMES[school.code as BrandedUnimapTheme["code"]]
-      : null;
-
-  if (brandedTheme && !isProMax) {
-    return (
-      <FtuUnimapPage
-        school={school}
-        programs={programs}
-        methods={methods}
-        benchmarks={benchmarks}
-        benchmarkPrograms={benchmarkPrograms}
-        tuitionFees={tuitionFees}
-        tuitionPrograms={tuitionPrograms}
-        admissionInfo={admissionInfo}
-        selectedProgramYear={selectedProgramYear}
-        selectedBenchmarkYear={selectedBenchmarkYear}
-        selectedTuitionYear={selectedTuitionYear}
-        availableYears={ADMISSION_YEAR_OPTIONS}
-        brand={brandedTheme}
-      />
-    );
-  }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <SchoolHeader school={school} variantLinks={variantLinks} />
-
-      <div className="container-page py-10 lg:pl-16">
-        <AdmissionSectionNavigator items={isProMax ? PRO_MAX_NAV_ITEMS : undefined} />
-
-        <div className="mt-6 space-y-8 lg:mt-0">
-          {isProMax && proMaxContent ? (
-            <>
-              <CollapsibleAdmissionSection id="calculator" title="Công cụ tính điểm">
-                <ProMaxCalculatorLinkSection href={defaultCalculatorHref} />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="overview" title="Tổng quan">
-                <ProMaxContentSection title="Tổng quan" blocks={proMaxContent.overview} />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="admission-info" title="Thông tin tuyển sinh">
-                <ProMaxContentSection
-                  title="Thông tin tuyển sinh"
-                  blocks={proMaxContent.admissionInfo}
-                />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="programs" title="Chương trình tuyển sinh">
-                <ProMaxPlaceholderSection
-                  title="Chương trình tuyển sinh"
-                  message={proMaxContent.placeholders.programs ?? PRO_MAX_PLACEHOLDER_MESSAGE}
-                />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="combinations" title="Tổ hợp xét tuyển">
-                <ProMaxMediaGrid
-                  title="Tổ hợp xét tuyển"
-                  blocks={proMaxContent.combinations}
-                />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="benchmarks" title="Điểm chuẩn tham khảo">
-                <ProMaxPlaceholderSection
-                  title="Điểm chuẩn tham khảo"
-                  message={proMaxContent.placeholders.benchmarks ?? PRO_MAX_PLACEHOLDER_MESSAGE}
-                />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="tuition" title="Học phí">
-                <ProMaxPlaceholderSection
-                  title="Học phí"
-                  message={proMaxContent.placeholders.tuition ?? PRO_MAX_PLACEHOLDER_MESSAGE}
-                />
-              </CollapsibleAdmissionSection>
-            </>
-          ) : (
-            <>
-              <CollapsibleAdmissionSection id="calculator" title="Công cụ tính điểm">
-                <AdmissionCalculatorSection
-                  schoolCode={school.code}
-                  programs={calculatorPrograms}
-                  benchmarks={calculatorBenchmarks}
-                  methods={calculatorMethods}
-                  benchmarkYear={BENCHMARK_REFERENCE_YEAR}
-                />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="overview" title="Tổng quan">
-                <SchoolOverviewSection school={school} />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="admission-info" title="Thông tin tuyển sinh">
-                <AdmissionInfoSection
-                  admissionInfo={admissionInfo}
-                  methods={methods}
-                  selectedYear={selectedProgramYear}
-                  availableYears={ADMISSION_YEAR_OPTIONS}
-                />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="programs" title="Chương trình tuyển sinh">
-                <AdmissionProgramsSection
-                  schoolCode={school.code}
-                  programs={programs}
-                  selectedYear={selectedProgramYear}
-                  availableYears={ADMISSION_YEAR_OPTIONS}
-                />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="combinations" title="Tổ hợp xét tuyển">
-                <SubjectCombinationsSection
-                  subjectCombinations={subjectCombinations}
-                  programCombinations={programCombinations}
-                />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="benchmarks" title="Điểm chuẩn tham khảo">
-                <BenchmarksSection
-                  benchmarks={benchmarks}
-                  programs={benchmarkPrograms}
-                  selectedYear={selectedBenchmarkYear}
-                  availableYears={ADMISSION_YEAR_OPTIONS}
-                />
-              </CollapsibleAdmissionSection>
-
-              <CollapsibleAdmissionSection id="tuition" title="Học phí">
-                <TuitionSection
-                  tuitionFees={tuitionFees}
-                  programs={tuitionPrograms}
-                  selectedYear={selectedTuitionYear}
-                  availableYears={ADMISSION_YEAR_OPTIONS}
-                />
-              </CollapsibleAdmissionSection>
-            </>
-          )}
-        </div>
-      </div>
-    </div>
+    <FtuUnimapPage
+      school={school}
+      programs={programs}
+      methods={methods}
+      benchmarks={benchmarks}
+      benchmarkPrograms={benchmarkPrograms}
+      tuitionFees={tuitionFees}
+      tuitionPrograms={tuitionPrograms}
+      admissionInfo={admissionInfo}
+      selectedProgramYear={selectedProgramYear}
+      selectedBenchmarkYear={selectedBenchmarkYear}
+      selectedTuitionYear={selectedTuitionYear}
+      availableYears={ADMISSION_YEAR_OPTIONS}
+      brand={getUnimapTheme(school.code)}
+    />
   );
 }
 
@@ -781,21 +448,40 @@ export default async function UniversityDetailPage({
 }: UniversityDetailPageProps) {
   const { code } = await params;
   const resolvedSearchParams = searchParams ? await searchParams : undefined;
+  const routeParam = code.toLowerCase();
+  const school = await getAdmissionSchoolBySlug(routeParam);
+
+  // Default each section to the newest year that actually has data for this
+  // school (programs -> 2026, benchmarks -> 2025 reference, tuition -> 2026 for
+  // imported schools), so sections don't look empty from a year mismatch.
+  // UET serves static data, so keep its constant-based defaults.
+  const dataYears =
+    school && school.code !== "UET"
+      ? await loadOrFallback<SchoolDataYears | null>(
+          () => getSchoolDataYears(school.code),
+          null,
+          "school data years",
+        )
+      : null;
+  const latestYear = (years: number[] | undefined, fallback: number) =>
+    years && years.length ? years[0] : fallback;
+
   const selectedProgramYear = getSelectedAdmissionYear(
     resolvedSearchParams?.programYear ?? resolvedSearchParams?.year,
-    PROGRAMS_DEFAULT_YEAR,
+    latestYear(dataYears?.programs, PROGRAMS_DEFAULT_YEAR),
   );
   const selectedBenchmarkYear = getSelectedAdmissionYear(
     resolvedSearchParams?.benchmarkYear,
-    BENCHMARKS_DEFAULT_YEAR,
+    latestYear(dataYears?.benchmarks, BENCHMARKS_DEFAULT_YEAR),
   );
   const selectedTuitionYear = getSelectedAdmissionYear(
     resolvedSearchParams?.tuitionYear,
-    TUITION_DEFAULT_YEAR,
+    // Prefer 2025 when the school has it (HUST has 65 rows in 2025 vs 1 stray in
+    // 2026); otherwise fall back to the newest year that has tuition data.
+    dataYears?.tuition?.includes(2025)
+      ? 2025
+      : latestYear(dataYears?.tuition, TUITION_DEFAULT_YEAR),
   );
-  const selectedVariant = getSelectedAdmissionVariant(resolvedSearchParams?.variant);
-  const routeParam = code.toLowerCase();
-  const school = await getAdmissionSchoolBySlug(routeParam);
   const university =
     findVisibleUniversityForRoute(routeParam, school) ??
     (school ? mapRecordToUniversity(school) : null);
@@ -817,8 +503,6 @@ export default async function UniversityDetailPage({
     selectedProgramYear,
     selectedBenchmarkYear,
     selectedTuitionYear,
-    selectedVariant,
-    routeParam,
   );
 }
 

@@ -44,8 +44,8 @@ export function UniversityCard({ uni }: UniversityCardProps) {
         {shouldContainCardImage ? null : (
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.22),transparent_60%)]" />
         )}
-        <div className="absolute left-4 top-4 font-display text-3xl font-extrabold leading-tight text-white drop-shadow-md">
-          {uni.code}
+        <div className="absolute left-4 right-4 top-4 line-clamp-2 font-display text-2xl font-extrabold leading-tight text-white drop-shadow-md">
+          {uni.shortName ?? uni.code}
         </div>
         {locationLabel ? (
           <div className="absolute bottom-3 right-3 flex items-center gap-1 rounded-md bg-black/40 px-2 py-1 text-xs font-bold text-white backdrop-blur-sm">
