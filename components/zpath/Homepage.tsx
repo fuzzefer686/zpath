@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   BarChart3,
@@ -23,7 +23,6 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/components/zpath/AuthProvider";
-import { ExamAnswerPopup } from "@/components/zpath/ExamAnswerPopup";
 
 const concerns = [
   {
@@ -99,6 +98,7 @@ const productFeatures = [
 
 export function Homepage() {
   const { openAuthPrompt } = useAuth();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -172,7 +172,50 @@ export function Homepage() {
             </div>
 
             <div className="mt-6 max-w-2xl">
-              <ExamAnswerPopup />
+              <div
+                onClick={() => setIsVideoOpen(true)}
+                className="group relative cursor-pointer animate-fade-up overflow-hidden rounded-2xl border border-border bg-card/95 p-3 shadow-md backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg"
+                style={{ animationDelay: "390ms" }}
+              >
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  {/* Thumbnail image with play overlay */}
+                  <div className="relative aspect-[16/9] w-full shrink-0 overflow-hidden rounded-xl border border-border sm:w-40 bg-muted">
+                    <Image
+                      src="/video-thumbnail.png"
+                      alt="ZPATH giới thiệu"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 160px"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors group-hover:bg-black/40">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary shadow-md transition-transform duration-300 group-hover:scale-110">
+                        <svg className="h-5 w-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Text and CTA */}
+                  <div className="flex-1 min-w-0 pr-4">
+                    <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-widest text-primary">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+                      Podcast
+                    </div>
+                    <h3 className="mt-2 font-display text-lg font-bold leading-snug">
+                      Podcast chọn gì trước chọn gì sau
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                      Xem cách định hướng nghề nghiệp và tối ưu điểm xét tuyển
+                    </p>
+                  </div>
+
+                  {/* Arrow indicator */}
+                  <div className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <ArrowRight className="h-5 w-5" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -415,6 +458,44 @@ export function Homepage() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox Modal Video Facebook Reel */}
+      {isVideoOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-3 backdrop-blur-sm sm:p-6"
+          role="dialog"
+          aria-modal="true"
+          onMouseDown={() => setIsVideoOpen(false)}
+        >
+          <button
+            type="button"
+            onClick={() => setIsVideoOpen(false)}
+            className="absolute top-4 right-4 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white transition-colors hover:bg-black/60 hover:text-white"
+            aria-label="Đóng video"
+          >
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <div
+            className="relative w-full max-w-[560px] overflow-hidden rounded-[2rem] border border-border bg-card shadow-2xl animate-fade-up"
+            onMouseDown={(event) => event.stopPropagation()}
+          >
+            <div className="relative w-full" style={{ aspectRatio: "560 / 429" }}>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F989278203893051%2F&show_text=true&width=560&t=0"
+                title="ZPATH giới thiệu"
+                className="absolute inset-0 h-full w-full border-none"
+                style={{ overflow: "hidden" }}
+                scrolling="no"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
