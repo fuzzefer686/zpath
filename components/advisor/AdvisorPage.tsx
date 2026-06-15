@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 
 import { AdvisorHero } from "@/components/advisor/AdvisorHero";
+import { AdvisorFeedbackFormButton } from "@/components/advisor/AdvisorFeedbackFormButton";
 import { QuestionCategoryTabs } from "@/components/advisor/QuestionCategoryTabs";
 import { QuestionTemplateGrid } from "@/components/advisor/QuestionTemplateGrid";
 import { AdvisorAnswer } from "@/components/advisor/AdvisorAnswer";
@@ -146,6 +147,10 @@ export function AdvisorPage() {
   const [aiSuggestions, setAiSuggestions] = useState<string[]>([]);
   const [hasSuggestionsBio, setHasSuggestionsBio] = useState(false);
   const [isSuggestionsLoading, setIsSuggestionsLoading] = useState(false);
+  const visibleSuggestions = useMemo(
+    () => aiSuggestions.slice(0, 4),
+    [aiSuggestions],
+  );
 
   useEffect(() => {
     async function fetchSuggestions() {
@@ -477,30 +482,30 @@ export function AdvisorPage() {
 
         <div className="container-page py-6 grid gap-6 xl:grid-cols-[320px_1fr] xl:items-start max-w-[100rem]">
           {/* Left Column: AI suggested questions (Split Screen design) */}
-          <div className="hidden xl:block space-y-6 sticky top-22">
-            <div className="rounded-2xl border border-white/20 bg-white/55 p-5 backdrop-blur-2xl shadow-none">
-              <h3 className="font-display text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4 flex items-center gap-1.5">
-                <Sparkles className="h-4 w-4 text-primary animate-pulse" /> Gợi ý câu hỏi
+          <div className="hidden xl:block space-y-3 sticky top-22">
+            <div className="rounded-2xl border border-white/20 bg-white/55 p-4 backdrop-blur-2xl shadow-none">
+              <h3 className="font-display text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                <Sparkles className="h-4 w-4 text-primary animate-pulse" /> Gợi ý nhanh
               </h3>
               
-              <div className="text-xs text-muted-foreground mb-4 leading-relaxed">
+              <div className="text-xs text-muted-foreground mb-3 leading-relaxed">
                 {hasSuggestionsBio 
-                  ? "Được thiết kế riêng dựa trên mô tả bản thân trong hồ sơ của bạn." 
-                  : "Hãy cập nhật mô tả bản thân trong Trang cá nhân để AI gợi ý câu hỏi cá nhân hóa."}
+                  ? "Dựa trên mô tả bản thân của bạn." 
+                  : "Gợi ý phổ biến để bắt đầu nhanh."}
               </div>
 
               {isSuggestionsLoading ? (
-                <div className="flex items-center gap-2 py-4 justify-center">
+                <div className="flex items-center gap-2 py-3 justify-center">
                   <Loader2 className="h-4 w-4 animate-spin text-primary shrink-0" />
                   <span className="text-xs text-muted-foreground animate-pulse">Đang tải gợi ý...</span>
                 </div>
               ) : (
-                <div className="space-y-2 max-h-[60vh] overflow-y-auto pr-1">
-                  {aiSuggestions.map((suggestion, index) => (
+                <div className="space-y-2 overflow-y-auto pr-1">
+                  {visibleSuggestions.map((suggestion, index) => (
                     <button
                       key={index}
                       onClick={() => handleFollowUpQuestion(suggestion)}
-                      className="w-full text-left rounded-xl p-3.5 text-xs font-medium bg-white/60 border border-white/20 text-foreground hover:border-white/40 hover:bg-white/75 transition-all leading-relaxed cursor-pointer shadow-sm hover:shadow"
+                      className="w-full text-left rounded-xl border border-white/20 bg-white/60 px-3 py-2.5 text-xs font-semibold leading-snug text-foreground shadow-sm transition-all hover:border-white/40 hover:bg-white/75 hover:shadow cursor-pointer"
                     >
                       {suggestion}
                     </button>
@@ -508,6 +513,7 @@ export function AdvisorPage() {
                 </div>
               )}
             </div>
+            <AdvisorFeedbackFormButton />
           </div>
 
           {/* Right Column: Messenger chat window */}
@@ -643,17 +649,17 @@ export function AdvisorPage() {
         onOpenExamTool={() => setActiveTool("exam")}
       />
 
-      <section className="mx-auto w-full max-w-[56rem] px-5 pb-16 pt-8 sm:px-8 sm:pb-24 sm:pt-10 lg:px-12 relative z-10 animate-fade-up">
-        <div className="rounded-3xl border border-white/40 bg-white/55 p-6 sm:p-8 backdrop-blur-2xl space-y-6 shadow-glow">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/40 pb-4">
+      <section className="mx-auto w-full max-w-[48rem] px-5 pb-16 pt-6 sm:px-8 sm:pb-24 sm:pt-8 lg:px-12 relative z-10 animate-fade-up">
+        <div className="rounded-3xl border border-white/40 bg-white/55 p-4 sm:p-5 backdrop-blur-2xl space-y-4 shadow-glow">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border/40 pb-3">
             <div>
               <h2 className="font-display text-base sm:text-lg font-black flex items-center gap-2">
-                <Sparkles className="h-5 w-5 text-primary animate-pulse" /> Gợi ý câu hỏi hướng nghiệp dành cho bạn
+                <Sparkles className="h-5 w-5 text-primary animate-pulse" /> Gợi ý nhanh
               </h2>
               <p className="text-xs text-muted-foreground mt-1.5 font-semibold leading-relaxed">
                 {hasSuggestionsBio 
-                  ? "Câu hỏi được thiết kế riêng dựa trên thông tin mô tả bản thân trong hồ sơ của bạn." 
-                  : "Hãy cập nhật mô tả bản thân trong Trang cá nhân để nhận được gợi ý câu hỏi cá nhân hóa từ AI."}
+                  ? "Một vài câu hỏi dựa trên mô tả bản thân của bạn." 
+                  : "Bắt đầu bằng một câu hỏi phổ biến hoặc cập nhật hồ sơ để cá nhân hóa."}
               </p>
             </div>
             {!hasSuggestionsBio && (
@@ -667,23 +673,25 @@ export function AdvisorPage() {
           </div>
 
           {isSuggestionsLoading ? (
-            <div className="flex flex-col items-center py-12 gap-3">
-              <Loader2 className="h-8 w-8 animate-spin text-primary shrink-0" />
+            <div className="flex flex-col items-center py-8 gap-3">
+              <Loader2 className="h-6 w-6 animate-spin text-primary shrink-0" />
               <span className="text-sm text-muted-foreground font-semibold animate-pulse">ZPath AI đang chuẩn bị câu gợi ý...</span>
             </div>
           ) : (
-            <div className="grid gap-3.5 sm:grid-cols-2">
-              {aiSuggestions.map((suggestion, index) => (
+            <div className="grid gap-2.5 sm:grid-cols-2">
+              {visibleSuggestions.map((suggestion, index) => (
                 <button
                   key={index}
                   onClick={() => handleFollowUpQuestion(suggestion)}
-                  className="w-full text-left rounded-2xl p-4.5 text-xs sm:text-sm font-semibold bg-white/60 border border-white/25 text-foreground hover:border-white/50 hover:bg-white/85 transition-all duration-300 hover:shadow-glow hover:-translate-y-1 leading-relaxed cursor-pointer shadow-sm"
+                  className="w-full text-left rounded-2xl border border-white/25 bg-white/60 px-3.5 py-3 text-xs sm:text-sm font-semibold leading-snug text-foreground shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/50 hover:bg-white/85 hover:shadow-glow cursor-pointer"
                 >
                   {suggestion}
                 </button>
               ))}
             </div>
           )}
+
+          <AdvisorFeedbackFormButton />
         </div>
       </section>
     </main>
