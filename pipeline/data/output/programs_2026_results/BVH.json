@@ -1,0 +1,361 @@
+{
+  "university_code": "BVH",
+  "university_name": "Học viện Công nghệ Bưu chính Viễn thông",
+  "found_url": "https://diemthi.tuyensinh247.com/thong-tin-hoc-vien-cong-nghe-buu-chinh-vien-thong-phia-bac-BVH.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 39,
+  "data": [
+    {
+      "school_major_code": "7320101",
+      "major_name": "Báo chí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7320104_CLC",
+      "major_name": "Truyền thông đa phương tiện (CLC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 110,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7320104_LK",
+      "major_name": "Truyền thông Đa phương tiện (Liên kết)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 20,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7329001",
+      "major_name": "Công nghệ đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 260,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7329001_ĐGA",
+      "major_name": "Thiết kế đồ họa game",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7329001_GAM",
+      "major_name": "Thiết kế và phát triển Game",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7329001_LK",
+      "major_name": "Công nghệ Đa phương tiện (Liên kết)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 20,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7329001_VHO",
+      "major_name": "Công nghệ công nghiệp văn hóa số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 170,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101_ĐSK",
+      "major_name": "Quản trị Đổi mới sáng tạo và khởi nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101_LOG",
+      "major_name": "Logistics và quản trị chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101_LTT",
+      "major_name": "Logistics trong kinh tế tầm thấp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 240,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340115_CLC",
+      "major_name": "Marketing (CLC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 130,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340115_QHC",
+      "major_name": "Quan hệ công chúng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 110,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340122",
+      "major_name": "Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 180,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340201_DAT",
+      "major_name": "Phân tích dữ liệu trong tài chính, kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 110,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340205",
+      "major_name": "Công nghệ tài chính (Fintech)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 160,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340205_LK",
+      "major_name": "Công nghệ tài chính (Liên kết)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 20,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340301_CLC",
+      "major_name": "Kế toán (chuẩn quốc tế ACCA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X26",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 160,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480102",
+      "major_name": "Kỹ thuật dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 135,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480107",
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 160,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 600,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201_UDU",
+      "major_name": "Công nghệ thông tin (định hướng ứng dụng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 330,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201_CLC",
+      "major_name": "Công nghệ thông tin (CLC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 370,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201_LK",
+      "major_name": "Công nghệ thông tin (Liên kết)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 20,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201_VNH",
+      "major_name": "Công nghệ thông tin Việt - Nhật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 110,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480202",
+      "major_name": "An toàn thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480202_CLC",
+      "major_name": "An toàn thông tin (CLC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510301",
+      "major_name": "Công nghệ Kỹ thuật Điện, điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 260,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510301_MBD",
+      "major_name": "Công nghệ vi mạch bán dẫn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 175,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520207",
+      "major_name": "Kỹ thuật Điện tử viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 410,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520207_AIoT",
+      "major_name": "Trí tuệ nhân tạo vạn vật (AIoT)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520207_THV",
+      "major_name": "Kỹ thuật Truyền thông Hàng không vũ trụ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520216",
+      "major_name": "Kỹ thuật Điều khiển và tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520216_UAV",
+      "major_name": "UAV và Robot di động tự hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "university_code": "DGD",
+  "university_name": "Trường Đại học Công nghiệp Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-cong-nghiep-tphcm-IUH.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 36,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế thời trang",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; D01; X02; X03",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Ngôn ngữ gồm 02 ngành: Ngôn ngữ Anh; Ngôn ngữ Trung",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; X78",
+      "score": 23.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (Đào tạo tại Quảng Ngãi)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C03; C04; D01; X01; X02",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh gồm 03 chuyên ngành: Quản trị kinh doanh; Quản trị nguồn nhân lực; Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C03; C04; D01; X01; X02",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing gồm 02 chuyên ngành: Marketing; Digital Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C03; C04; D01; X01; X02",
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D09; D10; X25; X26",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D09; D10; X25; X26",
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm Tài chính ngân hàng gồm 02 ngành: Ngân hàng; Công nghệ tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C03; C04; D01; X01; X02",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C03; C04; D01; X01; X02",
+      "score": 22.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C03; C04; D01; X01; X02",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D09; D10; D14; X25; X70",
+      "score": 25.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D09; D10; D14; X25; X70",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02; B00; B03; B08; X13; X16",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật máy tính gồm 02 chuyên ngành: Công nghệ kỹ thuật máy tính; Kỹ thuật thiết kế vi mạch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Công nghệ thông tin gồm 04 ngành Công nghệ thông tin; Kỹ thuật phần mềm; Khoa học máy tính; Hệ thống thông tin; và 02 chuyên ngành: Trí tuệ nhân tạo; Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; D01; X02; X03",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 25.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ chế tạo máy",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 26.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô gồm 02 chuyên ngành: Công nghệ kỹ thuật ô tô; Công nghệ kỹ thuật ô tô điện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật nhiệt gồm 03 chuyên ngành: Công nghệ kỹ thuật nhiệt; Công nghệ kỹ thuật năng lượng; Quản lý năng lượng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 22.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện, điện tử gồm 03 chuyên ngành: Công nghệ kỹ thuật điện, điện tử; Năng lượng tái tạo; Điện hạt nhân",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 25.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện tử - viễn thông gồm 03 chuyên ngành: Điện tử công nghiệp; Điện tử viễn thông; IOT và Trí tuệ nhân tạo ứng dụng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 24.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tự động hóa gồm 02 chuyên ngành: Công nghệ kỹ thuật điều khiển và tự động hóa; Robot và hệ thống điều khiển thông minh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 26.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ hóa học gồm 03 chuyên ngành: Công nghệ kỹ thuật hóa học; Kỹ thuật hóa phân tích; Hóa dược.",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02; D07; X11",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02; D07; X11",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02; D07; X11",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đảm bảo chất lượng và An toàn thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02; D07; X11",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ dệt, may",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; D01; X02; X03",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng công trình giao thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05; X06; X07",
+      "score": 22.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02; D07; X11",
+      "score": 23.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dinh dưỡng và Khoa học thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02; D07; X11",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành gồm 03 chuyên ngành: Quản trị dịch vụ du lịch và lữ hành; Quản trị khách sạn; Quản trị nhà hàng và dịch vụ ăn uống",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D09; D10; X25; X26",
+      "score": 22.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A04; A07; B02; C04; D10",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý đất đai gồm 02 chuyên ngành: Quản lý đất đai; Kinh tế tài nguyên thiên nhiên.",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C02; D01; X01; X04",
+      "score": 18.0,
+      "scale": 30
+    }
+  ]
+}

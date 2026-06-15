@@ -1,0 +1,130 @@
+{
+  "university_code": "DQC",
+  "university_name": "Trường Đại học Quảng Bình",
+  "found_url": "https://navigates.vn/truong-hoc/dai-hoc-quang-binh/diem-chuan/",
+  "year": 2025,
+  "status": "success",
+  "num_records": 15,
+  "data": [
+    {
+      "school_major_code": "7140201",
+      "major_name": "ĐH. Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "ĐH. Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140209",
+      "major_name": "ĐH. Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140217",
+      "major_name": "ĐH. Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140247",
+      "major_name": "ĐH. Sư phạm Khoa học tự nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140249",
+      "major_name": "ĐH. Sư phạm Lịch sử – Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140231",
+      "major_name": "ĐH. Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.52,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "ĐH. Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "ĐH. Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "ĐH. Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "ĐH. Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "ĐH. Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7620101",
+      "major_name": "ĐH. Nông nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810103",
+      "major_name": "ĐH. Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7850101",
+      "major_name": "ĐH. Quản lý tài nguyên và môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    }
+  ]
+}

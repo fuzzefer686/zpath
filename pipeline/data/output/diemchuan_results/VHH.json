@@ -1,0 +1,498 @@
+{
+  "university_code": "VHH",
+  "university_name": "Trường Đại học Văn hóa Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-van-hoa-ha-noi-VHH.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 61,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 24.91,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D14; D15; X78",
+      "score": 25.41,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nghiên cứu văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 24.73,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nghiên cứu văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 25.23,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nghiên cứu văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 26.73,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa truyền thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 27.36,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa truyền thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 25.36,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa truyền thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 25.86,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa đối ngoại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa đối ngoại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 25.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa đối ngoại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phát triển công nghiệp văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 22.83,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phát triển công nghiệp văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 23.33,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phát triển công nghiệp văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 24.83,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý di sản văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 23.94,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý di sản văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 24.44,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý di sản văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 25.94,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tổ chức hoạt động nghệ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 25.71,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tổ chức hoạt động nghệ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 27.21,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tổ chức hoạt động nghệ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 25.21,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tổ chức sự kiện văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 27.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tổ chức sự kiện văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 25.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tổ chức sự kiện văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 26.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Báo chí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 27.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Báo chí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 25.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Báo chí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 25.77,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị thư viện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 25.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị thư viện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị thư viện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thư viện và thiết bị trường học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 25.34,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thư viện và thiết bị trường học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 23.34,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thư viện và thiết bị trường học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 23.84,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 26.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 24.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 24.77,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bảo tàng học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 23.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bảo tàng học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 23.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bảo tàng học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 25.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh xuất bản phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 23.76,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh xuất bản phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 24.26,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh xuất bản phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 25.76,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 24.81,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 25.31,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 26.81,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 24.83,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 25.33,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 26.83,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lữ hành, hướng dẫn du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 25.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lữ hành, hướng dẫn du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 25.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lữ hành, hướng dẫn du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 27.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hướng dẫn du lịch quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 22.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hướng dẫn du lịch quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D14; D15; X78",
+      "score": 23.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 27.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 25.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 25.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị du lịch cộng đồng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "score": 26.62,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị du lịch cộng đồng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D14; D15; X01; X78",
+      "score": 25.12,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị du lịch cộng đồng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 24.62,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sáng tác văn học",
+      "admission_method": "ket_hop",
+      "combination_code": "N00",
+      "score": 18.68,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tổ chức hoạt động nghệ thuật",
+      "admission_method": "ket_hop",
+      "combination_code": "N00",
+      "score": 24.71,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tổ chức sự kiện văn hóa",
+      "admission_method": "ket_hop",
+      "combination_code": "N00",
+      "score": 25.05,
+      "scale": 30
+    }
+  ]
+}

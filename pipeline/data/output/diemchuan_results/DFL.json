@@ -1,0 +1,386 @@
+{
+  "university_code": "DFL",
+  "university_name": "Trường Đại học Ngoại ngữ - Đại học Đà Nẵng",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-ngoai-ngu-da-nang-DDF.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 47,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D09; D14",
+      "score": 27.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm tiếng Pháp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D03; D09; D10; D14; D15",
+      "score": 21.45,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm tiếng Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D04; D09; D10; D14; D15",
+      "score": 27.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; D14",
+      "score": 20.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (Đào tạo 2 năm đầu tại Kon Tum)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D09; D10; D14",
+      "score": 18.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nga",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D02; D09; D10; D14; D15",
+      "score": 17.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Pháp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D03; D09; D10; D14; D15",
+      "score": 18.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D04; D14; D15; D45; D65",
+      "score": 23.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nhật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D06; D09; D10; D14; D15",
+      "score": 20.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Hàn Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D15; DD2",
+      "score": 21.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Thái Lan",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D15",
+      "score": 19.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quan hệ quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D15",
+      "score": 21.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quốc tế học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D15",
+      "score": 18.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đông phương học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D06; D09; D10; D14; D15",
+      "score": 18.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhật Bản học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D06; D09; D10; D14; D15",
+      "score": 18.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hàn Quốc học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D15",
+      "score": 20.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm tiếng Pháp",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D03; D09; D10; D14; D15",
+      "score": 26.69,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm tiếng Trung Quốc",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D04; D09; D10; D14; D15",
+      "score": 29.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01; D01; D07; D09; D10; D14",
+      "score": 25.86,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (Đào tạo 2 năm đầu tại Kon Tum)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01; D01; D09; D10; D14",
+      "score": 24.79,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nga",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D02; D09; D10; D14; D15",
+      "score": 23.28,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Pháp",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D03; D09; D10; D14; D15",
+      "score": 24.26,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D04; D14; D15; D45; D65",
+      "score": 27.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nhật",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D06; D09; D10; D14; D15",
+      "score": 25.86,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Hàn Quốc",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D09; D10; D14; D15; DD2",
+      "score": 26.82,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Thái Lan",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D09; D10; D14; D15",
+      "score": 25.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quan hệ quốc tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D09; D10; D14; D15",
+      "score": 26.56,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quốc tế học",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D09; D10; D14; D15",
+      "score": 24.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đông phương học",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D06; D09; D10; D14; D15",
+      "score": 24.22,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhật Bản học",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D06; D09; D10; D14; D15",
+      "score": 24.28,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hàn Quốc học",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D09; D10; D14; D15",
+      "score": 25.63,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm tiếng Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 27.18,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm tiếng Pháp",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 21.13,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm tiếng Trung Quốc",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 27.33,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 19.53,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (Đào tạo 2 năm đầu tại Kon Tum)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 16.95,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nga",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 14.23,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Pháp",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 16.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 23.83,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nhật",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 19.53,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Hàn Quốc",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 21.53,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Thái Lan",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 17.68,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quan hệ quốc tế",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 20.88,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quốc tế học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 16.65,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đông phương học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 15.83,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhật Bản học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 16.05,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hàn Quốc học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 1200
+    }
+  ]
+}

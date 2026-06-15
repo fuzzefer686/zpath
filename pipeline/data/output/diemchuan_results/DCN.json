@@ -1,0 +1,506 @@
+{
+  "university_code": "DCN",
+  "university_name": "Trường Đại học Công nghiệp Hà Nội",
+  "found_url": "https://giaoduc.net.vn/truong-dh-cong-nghiep-ha-noi-cong-bo-diem-chuan-trung-tuyen-nam-2025-cao-nhat-2627-diem-post253927.gd",
+  "year": 2025,
+  "status": "success",
+  "num_records": 62,
+  "data": [
+    {
+      "school_major_code": "7210404",
+      "major_name": "Thiết kế thời trang",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220204LK",
+      "major_name": "Ngôn ngữ Trung Quốc (Chương trình liên kết đào tạo 2+2 với ĐH Khoa học kỹ thuật Quảng Tây - Trung Quốc)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220209",
+      "major_name": "Ngôn ngữ Nhật",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220210",
+      "major_name": "Ngôn ngữ Hàn Quốc",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7229020",
+      "major_name": "Ngôn ngữ học",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7310612",
+      "major_name": "Trung Quốc học",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7310104",
+      "major_name": "Kinh tế đầu tư",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "73401012",
+      "major_name": "Phân tích dữ liệu kinh doanh",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340301TA",
+      "major_name": "Kế toán (CTĐT bằng Tiếng Anh)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340302",
+      "major_name": "Kiểm toán",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340404",
+      "major_name": "Quản trị nhân lực",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340406",
+      "major_name": "Quản trị văn phòng",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học máy tính",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 23.72,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480101TA",
+      "major_name": "Khoa học máy tính (CTĐT bằng Tiếng Anh)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.45,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480102",
+      "major_name": "Mạng máy tính và truyền thông dữ liệu",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480103",
+      "major_name": "Kỹ thuật phần mềm",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480104",
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480108",
+      "major_name": "Công nghệ kỹ thuật máy tính",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 23.09,
+      "scale": 30
+    },
+    {
+      "school_major_code": "74802012",
+      "major_name": "Công nghệ đa phương tiện",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "74802021",
+      "major_name": "An toàn thông tin",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 23.43,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510201",
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 23.72,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510201TA",
+      "major_name": "Công nghệ kỹ thuật cơ khí (CTĐT bằng Tiếng Anh)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.45,
+      "scale": 30
+    },
+    {
+      "school_major_code": "75102012",
+      "major_name": "Công nghệ kỹ thuật khuôn mẫu",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "75102013",
+      "major_name": "Thiết kế cơ khí và kiểu dáng công nghiệp",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510203",
+      "major_name": "Công nghệ kỹ thuật cơ điện tử",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 25.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": "75102032",
+      "major_name": "Robot và trí tuệ nhân tạo",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 24.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": "75102033",
+      "major_name": "Công nghệ kỹ thuật cơ điện tử ô tô",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 23.93,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510205",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510205TA",
+      "major_name": "Công nghệ kỹ thuật ô tô (CTĐT bằng Tiếng Anh)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510206",
+      "major_name": "Công nghệ kỹ thuật nhiệt",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510301",
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 23.93,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510301TA",
+      "major_name": "Công nghệ kỹ thuật điện, điện tử (CTĐT bằng Tiếng Anh)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "75190071",
+      "major_name": "Năng lượng tái tạo",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510302",
+      "major_name": "Công nghệ kỹ thuật điện tử - viễn thông",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510302TA",
+      "major_name": "Công nghệ kỹ thuật điện tử - viễn thông (CTĐT bằng Tiếng Anh)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "75103021",
+      "major_name": "Công nghệ kỹ thuật điện tử y sinh",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510303",
+      "major_name": "Công nghệ kỹ thuật điều khiển và tự động hóa",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 26.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": "75103031",
+      "major_name": "Kỹ thuật sản xuất thông minh",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510401",
+      "major_name": "Công nghệ kỹ thuật hoá học",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510406",
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 18.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.76,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520116",
+      "major_name": "Kỹ thuật cơ khí động lực",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520118",
+      "major_name": "Kỹ thuật hệ thống công nghiệp",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7540101",
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7540203",
+      "major_name": "Công nghệ vật liệu dệt, may",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 18.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7540204",
+      "major_name": "Công nghệ dệt, may",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7720203",
+      "major_name": "Hóa dược",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810101",
+      "major_name": "Du lịch",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810101TA",
+      "major_name": "Du lịch (CTĐT bằng Tiếng Anh)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810103",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810103TA",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành (CTĐT bằng Tiếng Anh)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 18.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810201",
+      "major_name": "Quản trị khách sạn",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 21.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810201TA",
+      "major_name": "Quản trị khách sạn (CTĐT bằng Tiếng Anh)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 18.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810202",
+      "major_name": "Quản trị nhà hàng và dịch vụ ăn uống",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 20.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810202TA",
+      "major_name": "Quản trị nhà hàng và dịch vụ ăn uống (CTĐT bằng Tiếng Anh)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 18.6,
+      "scale": 30
+    }
+  ]
+}

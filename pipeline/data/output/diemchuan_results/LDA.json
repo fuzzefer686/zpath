@@ -1,0 +1,122 @@
+{
+  "university_code": "LDA",
+  "university_name": "Trường Đại học Lao động - Xã hội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-lao-dong-xa-hoi-co-so-phia-nam-DLS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 14,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D14",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 14.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 23.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 24.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 14.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 14.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bảo hiểm - Tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 14.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 14.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 16.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 14.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công tác xã hội",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 21.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công tác xã hội",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 22.75,
+      "scale": 30
+    }
+  ]
+}

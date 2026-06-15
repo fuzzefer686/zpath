@@ -106,7 +106,18 @@ def confirm(prompt: str) -> bool:
         return False
 
 
-def scale_for(score) -> int:
+# Score scale by admission method (benchmarks.scale). Aptitude tests use their
+# own maxima; everything else is the 30-point THPT/học-bạ scale.
+METHOD_SCALE = {
+    "dgnl_hcm": 1200,   # ĐGNL ĐHQG-HCM
+    "dgnl_hn": 150,     # HSA / ĐGNL ĐHQG-HN
+    "dg_tu_duy": 100,   # TSA (Bách khoa)
+}
+
+
+def scale_for(method, score) -> int:
+    if method in METHOD_SCALE:
+        return METHOD_SCALE[method]
     s = float(score)
     if s <= 30:
         return 30
@@ -326,7 +337,7 @@ def step_benchmarks(client, admissions, prog_map, dry_run: bool) -> None:
             "method_code": a["admission_method"],
             "combination_code": None,
             "score": a["score"],
-            "scale": scale_for(a["score"]),
+            "scale": scale_for(a["admission_method"], a["score"]),
             "note": IMPORT_NOTE,
             "source_url": a["source_url"],
         })

@@ -1,0 +1,105 @@
+Phạm vi: 27 trường | đã có data: 3 | sẽ crawl: 24
+
+[1/24] Đại học Bách khoa Hà Nội...
+    -> success, records: 10 (https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-bach-khoa-ha-noi-B)
+[2/24] Trường Đại học Kiên Giang...
+  ↪ Playwright fallback cho vertexaisearch.cloud.google.com (requests trả nội dung rỗng/ngắn)
+  ⚠️  Playwright lỗi cho vertexaisearch.cloud.google.com: BrowserType.launch: Executable doesn't exist at /Users/fuzzefer/Library/Caches/ms-playwright/chromium_headless_shell-1223/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+  ↪ Playwright fallback cho vertexaisearch.cloud.google.com (requests trả nội dung rỗng/ngắn)
+  ⚠️  Playwright lỗi cho vertexaisearch.cloud.google.com: BrowserType.launch: Executable doesn't exist at /Users/fuzzefer/Library/Caches/ms-playwright/chromium_headless_shell-1223/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+    -> success, records: 75 (https://tuyensinh.vnkgu.edu.vn/bai-viet/diem-chuan-trung-tuyen-dai-hoc)
+[3/24] Trường Đại học Ngoại ngữ - Đại học Đà Nẵng...
+    -> success, records: 47 (https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-ngoai-ngu-da-nang-)
+[4/24] Trường Đại học Nội vụ Hà Nội...
+    -> success, records: 26 (https://hat360.net/blog/diem-chuan-truong-dai-hoc-noi-vu-ha-noi-2026)
+[5/24] Trường Đại học Công nghiệp Thành phố Hồ Chí Minh...
+    -> success, records: 36 (https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-cong-nghiep-tphcm-)
+[6/24] Trường Đại học Kinh tế Thành phố Hồ Chí Minh...
+  ↪ Playwright fallback cho vertexaisearch.cloud.google.com (requests trả nội dung rỗng/ngắn)
+  ⚠️  Playwright lỗi cho vertexaisearch.cloud.google.com: BrowserType.launch: Executable doesn't exist at /Users/fuzzefer/Library/Caches/ms-playwright/chromium_headless_shell-1223/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+    -> partial, records: 9 (https://giaoduc247.vn/tphcm/diem-chuan-2025-cua-dai-hoc-kinh-te-tp-hcm)
+[7/24] Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội...
+    -> success, records: 20 (https://uet.vnu.edu.vn/truong-dai-hoc-cong-nghe-cong-bo-diem-chuan-dai)
+[8/24] Trường Đại học Tân Trào...
+    -> partial, records: 5 (https://giaoducthoidai.vn/nganh-hoc-co-diem-chuan-cao-nhat-truong-dai-)
+[9/24] Trường Đại học Y Dược Thành phố Hồ Chí Minh...
+    -> success, records: 2 (https://muctim.tuoitre.vn/tong-hop-diem-chuan-cac-truong-nganh-y-nam-2)
+[10/24] Trường Đại học Quảng Bình...
+  ↪ Playwright fallback cho vertexaisearch.cloud.google.com (requests trả nội dung rỗng/ngắn)
+  ⚠️  Playwright lỗi cho vertexaisearch.cloud.google.com: BrowserType.launch: Executable doesn't exist at /Users/fuzzefer/Library/Caches/ms-playwright/chromium_headless_shell-1223/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+    -> success, records: 15 (https://navigates.vn/truong-hoc/dai-hoc-quang-binh/diem-chuan/)
+[11/24] Trường Đại học Phan Thiết...
+    -> success, records: 15 (https://navigates.vn/truong-hoc/dai-hoc-phan-thiet/diem-chuan/)
+[12/24] Trường Đại học Lao động - Xã hội...
+    -> success, records: 14 (https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-lao-dong-xa-hoi-co)
+[13/24] Trường Đại học Văn hóa Hà Nội...
+    -> success, records: 61 (https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-van-hoa-ha-noi-VHH)
+[14/24] Trường Đại học Quốc tế Hồng Bàng...
+    -> success, records: 40 (https://fptshop.com.vn/tin-tuc/danh-gia/diem-chuan-dai-hoc-quoc-te-hon)
+[15/24] Trường Đại học Sân khấu - Điện ảnh Hà Nội...
+    -> success, records: 27 (https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-san-khau-dien-anh-)
+[16/24] Học viện Ngoại giao...
+    -> partial, records: 3 (https://thi.tuyensinh247.com/hoc-vien-ngoai-giao-cong-bo-diem-chuan-na)
+[17/24] Trường Đại học Luật Thành phố Hồ Chí Minh...
+    -> partial, records: 2 (https://dantri.com.vn/giao-duc/diem-chuan-truong-dai-hoc-luat-tphcm-ca)
+[18/24] Trường Đại học Hàng hải Việt Nam...
+    -> partial, records: 6 (https://giaoduc.net.vn/truong-dai-hoc-hang-hai-viet-nam-cong-bo-diem-c)
+[19/24] Học viện Âm nhạc Quốc gia Việt Nam...
+    -> success, records: 8 (https://diemthi.tuyensinh247.com/diem-chuan/hoc-vien-am-nhac-quoc-gia-)
+[20/24] Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh...
+    -> needs_deeper_crawl, records: 0 (http://www.hcmufa.edu.vn/)
+[21/24] Trường Đại học Quy Nhơn...
+    -> partial, records: 6 (https://xaydungchinhsach.chinhphu.vn/diem-chuan-truong-dai-hoc-quy-nho)
+[22/24] Trường Đại học Công nghiệp Hà Nội...
+    -> success, records: 62 (https://giaoduc.net.vn/truong-dh-cong-nghiep-ha-noi-cong-bo-diem-chuan)
+[23/24] Trường Đại học Cần Thơ...
+    -> partial, records: 16 (https://vietnamnet.vn/diem-chuan-dai-hoc-can-tho-cao-nhat-28-61-243498)
+[24/24] Học viện Công nghệ Bưu chính Viễn thông...
+  ⚠️  SSL verify FAILED cho thisinh.thithptquocgia.edu.vn -> retry với verify=False. Dữ liệu vẫn lấy được, nhưng domain này có vấn đề chứng chỉ SSL (cần lưu ý). Chi tiết: HTTPSConnectionPool(host='thisinh.thithptquocgia.edu.vn', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))
+  ↪ Playwright fallback cho thisinh.thithptquocgia.edu.vn (requests trả nội dung rỗng/ngắn)
+  ⚠️  Playwright lỗi cho thisinh.thithptquocgia.edu.vn: BrowserType.launch: Executable doesn't exist at /Users/fuzzefer/Library/Caches/ms-playwright/chromium_headless_shell-1223/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+    -> needs_deeper_crawl, records: 0 (https://thisinh.thithptquocgia.edu.vn/)
+
+✅ Xong 24 trường. ~24 grounding calls.
+   Summary: /Users/fuzzefer/projects/zpath/pipeline/data/output/diemchuan_summary.csv
+   JSON: /Users/fuzzefer/projects/zpath/pipeline/data/output/diemchuan_results/

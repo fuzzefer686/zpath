@@ -1,0 +1,523 @@
+{
+  "university_code": "DBH",
+  "university_name": "Trường Đại học Bách khoa - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-bach-khoa-hcm-QSB.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 57,
+  "data": [
+    {
+      "school_major_code": "106",
+      "major_name": "Khoa học Máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "107",
+      "major_name": "Kỹ thuật Máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "108",
+      "major_name": "Điện - Điện tử - Viễn Thông - Tự động hoá - Thiết kế vi mạch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "109",
+      "major_name": "Kỹ Thuật Cơ khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "110",
+      "major_name": "Kỹ Thuật Cơ Điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "112",
+      "major_name": "Dệt - May",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "114",
+      "major_name": "Hoá - Thực phẩm - Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07; X10; X11",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "115",
+      "major_name": "Xây dựng và Quản lý Dự án Xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "117",
+      "major_name": "Kiến Trúc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "123",
+      "major_name": "Quản lý Công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; D01; D07; X26; X27",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "125",
+      "major_name": "Tài nguyên và Môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X07; B00; D07; X11",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "128",
+      "major_name": "Logistics và Hệ thống Công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "129",
+      "major_name": "Kỹ thuật Vật liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; B00; D07; X10; X11",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "137",
+      "major_name": "Vật lý Kỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "138",
+      "major_name": "Cơ Kỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "140",
+      "major_name": "Kỹ thuật Nhiệt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "141",
+      "major_name": "Bảo dưỡng Công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "142",
+      "major_name": "Kỹ thuật Ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "145",
+      "major_name": "(Song ngành) Tàu thủy - Hàng không",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "146",
+      "major_name": "Khoa học Dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "147",
+      "major_name": "Địa Kỹ thuật Xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "148",
+      "major_name": "Kinh tế Xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; C01; D01; X02; X03",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "150",
+      "major_name": "Kỹ thuật dầu khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "151",
+      "major_name": "Kỹ thuật Địa chất",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "152",
+      "major_name": "Kỹ thuật Đường sắt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "153",
+      "major_name": "Quản trị Kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; D01; D07; X26; X27",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "155",
+      "major_name": "Kinh tế Tuần hoàn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X07; B00; D07; X11",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "156",
+      "major_name": "Kỹ thuật Hạt nhân",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "159",
+      "major_name": "Kỹ thuật Bán dẫn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; D07; X10; X11",
+      "quota": null,
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": "208",
+      "major_name": "Kỹ thuật Điện - Điện tử (Chương trình tiên tiến)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "206",
+      "major_name": "Khoa học Máy tính (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "207",
+      "major_name": "Kỹ thuật Máy tính (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "209",
+      "major_name": "Kỹ thuật Cơ khí (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "210",
+      "major_name": "Kỹ thuật Cơ Điện tử (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "211",
+      "major_name": "Kỹ thuật Robot (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "214",
+      "major_name": "Kỹ thuật Hóa học (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07; X10; X11",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "215",
+      "major_name": "Quản lý Dự án Xây dựng và Kỹ thuật Xây dựng (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "217",
+      "major_name": "Kiến trúc Cảnh quan (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "218",
+      "major_name": "Công nghệ Sinh học (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A02; B08; X14; X15; D07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "219",
+      "major_name": "Công nghệ Thực phẩm (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07; X10; X11",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "220",
+      "major_name": "Kỹ thuật Dầu khí (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "223",
+      "major_name": "Quản lý Công nghiệp (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; D01; D07; X26; X27",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "225",
+      "major_name": "Tài nguyên và Môi trường (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X07; B00; D07; X11",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "228",
+      "major_name": "Logistics và Hệ thống Công nghiệp (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "229",
+      "major_name": "Kỹ thuật Vật liệu (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X07; B00; D07; X10; X11",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "237",
+      "major_name": "Kỹ thuật Y sinh (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "242",
+      "major_name": "Kỹ thuật Ô tô (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "245",
+      "major_name": "Kỹ thuật Hàng không (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "253",
+      "major_name": "Kinh doanh số (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; D01; D07; X26; X27",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "254",
+      "major_name": "Công nghệ Sinh học số (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A02; B08; X14; X15; D07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "255",
+      "major_name": "Kinh tế Tuần hoàn (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X07; B00; D07; X11",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "256",
+      "major_name": "Kỹ thuật Hạt nhân (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "257",
+      "major_name": "Năng lượng Tái tạo (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "258",
+      "major_name": "Thiết kế Vi mạch (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "259",
+      "major_name": "Kỹ thuật Bán dẫn (Dạy & học bằng tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; D07; X10; X11",
+      "quota": null,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "266",
+      "major_name": "Khoa học Máy tính (Định hướng Nhật Bản)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 60.0,
+      "tuition_max": 60.0
+    },
+    {
+      "school_major_code": "268",
+      "major_name": "Cơ Kỹ thuật (Định hướng Nhật Bản)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": null,
+      "tuition_min": 60.0,
+      "tuition_max": 60.0
+    }
+  ]
+}

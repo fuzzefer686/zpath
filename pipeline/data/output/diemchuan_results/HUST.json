@@ -1,0 +1,90 @@
+{
+  "university_code": "HUST",
+  "university_name": "Đại học Bách khoa Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-bach-khoa-ha-noi-BKA.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 10,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Thực phẩm (CT tiên tiến)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/B00/D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03/C01/C02/X02",
+      "score": 23.02,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Điều khiển - Tự động hoá",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01",
+      "score": 28.48,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CNTT: Khoa học Máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01",
+      "score": 29.19,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu và Trí tuệ nhân tạo (CT tiên tiến)",
+      "admission_method": "dg_tu_duy",
+      "combination_code": "K00",
+      "score": 86.97,
+      "scale": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CNTT: Khoa học Máy tính",
+      "admission_method": "dg_tu_duy",
+      "combination_code": "K00",
+      "score": 83.39,
+      "scale": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu và Trí tuệ nhân tạo (CT tiên tiến)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 95.64,
+      "scale": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CNTT: Khoa học Máy tính",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 93.92,
+      "scale": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu và Trí tuệ nhân tạo (CT tiên tiến)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 93.18,
+      "scale": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CNTT: Khoa học Máy tính",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90.61,
+      "scale": 100
+    }
+  ]
+}

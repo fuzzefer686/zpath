@@ -1,0 +1,58 @@
+{
+  "university_code": "DQN",
+  "university_name": "Trường Đại học Quy Nhơn",
+  "found_url": "https://xaydungchinhsach.chinhphu.vn/diem-chuan-truong-dai-hoc-quy-nhon-2025-1192508231044467.htm",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.21,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nông học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.74,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Chính trị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.65,
+      "scale": 30
+    }
+  ]
+}

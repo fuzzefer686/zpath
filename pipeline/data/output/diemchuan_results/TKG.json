@@ -1,0 +1,610 @@
+{
+  "university_code": "TKG",
+  "university_name": "Trường Đại học Kiên Giang",
+  "found_url": "https://tuyensinh.vnkgu.edu.vn/bai-viet/diem-chuan-trung-tuyen-dai-hoc-chinh-quy-2-nam-gan-nhat",
+  "year": 2025,
+  "status": "success",
+  "num_records": 75,
+  "data": [
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 28.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 988,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục tiểu học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 28.11,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục tiểu học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 976,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7140201",
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 26.08,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140201",
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.45,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140201",
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 892,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 27.47,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.93,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 957,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 620,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính – Ngân hàng",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 17.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính – Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính – Ngân hàng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7340120",
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340120",
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340120",
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7340122",
+      "major_name": "Thương mại điện tử",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340122",
+      "major_name": "Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340122",
+      "major_name": "Thương mại điện tử",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 22.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 760,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7420201",
+      "major_name": "Công nghệ Sinh học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7420201",
+      "major_name": "Công nghệ Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7420201",
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ Thông tin",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ Thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 680,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7510103",
+      "major_name": "Công nghệ kỹ thuật xây dựng",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510103",
+      "major_name": "Công nghệ kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510103",
+      "major_name": "Công nghệ Kỹ thuật Xây dựng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7510406",
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510406",
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510406",
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7510205",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510205",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510205",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 620,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7520216",
+      "major_name": "Kỹ thuật điều khiển và tự động hóa",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520216",
+      "major_name": "Kỹ thuật điều khiển và tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520216",
+      "major_name": "Kỹ thuật điều khiển và tự động hóa",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7540101",
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7540101",
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7540101",
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7620301",
+      "major_name": "Nuôi trồng thủy sản",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7620301",
+      "major_name": "Nuôi trồng thủy sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7620301",
+      "major_name": "Nuôi trồng thủy sản",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7620105",
+      "major_name": "Chăn nuôi",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7620105",
+      "major_name": "Chăn nuôi",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7620105",
+      "major_name": "Chăn nuôi",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7620110",
+      "major_name": "Khoa học cây trồng",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7620110",
+      "major_name": "Khoa học cây trồng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7620110",
+      "major_name": "Khoa học cây trồng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 640,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7220101",
+      "major_name": "Tiếng Việt và văn hóa Việt Nam",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 24.21,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220101",
+      "major_name": "Tiếng Việt và văn hóa Việt Nam",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7220101",
+      "major_name": "Tiếng Việt và Văn hóa Việt Nam",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 820,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 21.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 724,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7810101",
+      "major_name": "Du lịch",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 21.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810101",
+      "major_name": "Du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7810101",
+      "major_name": "Du lịch",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7850101",
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7850101",
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7850101",
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+[2026-06-15T15:41:46.923368+00:00] DBH | extract https://aao.hcmut.edu.vn/tuyen_sinh/index.html: HTTPSConnectionPool(host='aao.hcmut.edu.vn', port=443): Max retries exceeded with url: /tuyen_sinh/index.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='aao.hcmut.edu.vn', port=443) at 0x10ed44190>, 'Connection to aao.hcmut.edu.vn timed out. (connect timeout=30)'))

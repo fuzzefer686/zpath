@@ -1,0 +1,954 @@
+{
+  "university_code": "DAG",
+  "university_name": "Trường Đại học An Giang - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-an-giang-QSA.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 118,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 23.48,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 23.01,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 23.28,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Chính trị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 25.13,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Chính trị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 25.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Chính trị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 28.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 25.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 26.33,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 25.18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 25.32,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 24.92,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 24.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 23.49,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 27.68,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 24.71,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 24.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 28.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 26.28,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 25.83,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 28.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 25.91,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 25.53,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 23.08,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 24.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 24.48,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử - Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 25.01,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử - Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 27.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử - Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 24.87,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.34,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Triết học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 21.52,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Triết học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 22.04,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Triết học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 24.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 22.72,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 23.04,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Việt Nam học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 19.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Việt Nam học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 20.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Việt Nam học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 23.13,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phần mềm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phần mềm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật hoá học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật hoá học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sau thu hoạch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sau thu hoạch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đảm bảo chất lượng và an toàn thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đảm bảo chất lượng và an toàn thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chăn nuôi",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chăn nuôi",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học cây trồng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học cây trồng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bảo vệ thực vật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bảo vệ thực vật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phát triển nông thôn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phát triển nông thôn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 17.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phát triển nông thôn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ nông nghiệp số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh nông nghiệp số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh nông nghiệp số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nuôi trồng thủy sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nuôi trồng thủy sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thú y",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thú y",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X01; X06; X08; X10; A01; A03; A04; A05; A06; A07; X05; X24; X26; B00; B02; B03; B08; X04; X12; X14; X20; X65; D01; D07; D09; D10; D14; D15; X25; X27; X28; X78; X80; X81; M00; M01; M26; M27; M28; M29; M30",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03; C04; C08; X17; X70; X74",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 822.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 804.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Chính trị",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 894.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 936.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 894.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 880.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Sinh học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 824.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 870.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 931.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Địa lý",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 913.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 808.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 859.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử - Địa lý",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 884.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 513.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Triết học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 729.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 789.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Việt Nam học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 656.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 720.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phần mềm",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật hoá học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 501.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sau thu hoạch",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đảm bảo chất lượng và an toàn thực phẩm",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chăn nuôi",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học cây trồng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bảo vệ thực vật",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phát triển nông thôn",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ nông nghiệp số",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh nông nghiệp số",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nuôi trồng thủy sản",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thú y",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 595.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    }
+  ]
+}

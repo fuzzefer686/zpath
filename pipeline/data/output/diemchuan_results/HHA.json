@@ -1,0 +1,58 @@
+{
+  "university_code": "HHA",
+  "university_name": "Trường Đại học Hàng hải Việt Nam",
+  "found_url": "https://giaoduc.net.vn/truong-dai-hoc-hang-hai-viet-nam-cong-bo-diem-chuan-cao-nhat-285-diem-post253938.gd",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Tiếng Anh thương mại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 27.0,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 28.5,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế ngoại thương",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 23.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng công trình thủy",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công trình giao thông và cơ sở hạ tầng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc và nội thất",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 19.0,
+      "scale": 30
+    }
+  ]
+}

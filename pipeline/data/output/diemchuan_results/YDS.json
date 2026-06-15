@@ -1,0 +1,26 @@
+{
+  "university_code": "YDS",
+  "university_name": "Trường Đại học Y Dược Thành phố Hồ Chí Minh",
+  "found_url": "https://muctim.tuoitre.vn/tong-hop-diem-chuan-cac-truong-nganh-y-nam-2025-101250822213712647.htm",
+  "year": 2025,
+  "status": "success",
+  "num_records": 2,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y tế công cộng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+university_code,university_name,programs_2026,bench_2025,tuition,expected_majors,needed,gap,verdict,note
+BVH,Học viện Công nghệ Bưu chính Viễn thông,40,0,9,26,21,0,đủ,reused
+CTS,Trường Đại học Cần Thơ,143,16,0,127,102,0,đủ,reused
+DAG,Trường Đại học An Giang - Đại học Quốc gia Thành phố Hồ Chí Minh,43,80,0,43,35,0,đủ,reused
+DBH,Trường Đại học Bách khoa - Đại học Quốc gia Thành phố Hồ Chí Minh,57,22,57,44,36,0,đủ,reused
+DBS,Trường Đại học Kinh tế Thành phố Hồ Chí Minh,112,9,20,82,66,0,đủ,reused
+DCN,Trường Đại học Công nghiệp Hà Nội,66,62,4,71,57,0,đủ,reused
+DED,Trường Đại học Sư phạm - Đại học Đà Nẵng,33,33,0,38,31,0,đủ,reused
+DFL,Trường Đại học Ngoại ngữ - Đại học Đà Nẵng,24,47,17,17,14,0,đủ,reused
+DGD,Trường Đại học Công nghiệp Thành phố Hồ Chí Minh,58,36,0,41,33,0,đủ,reused
+DHK,Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia Thành phố Hồ Chí Minh,39,10,10,31,25,0,đủ,reused
+DHP,Trường Đại học Hải Phòng,37,8,0,29,24,0,đủ,reused
+DNV,Trường Đại học Nội vụ Hà Nội,22,19,0,,,0,unknown,
+DPT,Trường Đại học Phan Thiết,16,15,16,16,13,0,đủ,reused
+DPX,Trường Đại học Sư phạm Thành phố Hồ Chí Minh,46,9,0,30,24,0,đủ,reused
+DQC,Trường Đại học Quảng Bình,17,15,0,16,13,0,đủ,reused
+DQL,Trường Đại học Luật Thành phố Hồ Chí Minh,11,1,0,11,9,0,đủ,reused
+DQN,Trường Đại học Quy Nhơn,59,58,4,53,43,0,đủ,reused
+DTH,Trường Đại học Thăng Long,32,0,41,28,23,0,đủ,reused
+HBT,Trường Đại học Công nghệ Sài Gòn,19,0,2,18,15,0,đủ,reused
+HHA,Trường Đại học Hàng hải Việt Nam,58,6,0,55,44,0,đủ,reused
+HIU,Trường Đại học Quốc tế Hồng Bàng,50,37,0,45,36,0,đủ,reused
+LDA,Trường Đại học Lao động - Xã hội,14,11,0,15,12,0,đủ,reused
+MSH,Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh,6,0,0,10,8,2,thiếu,reused
+NHA,Học viện Âm nhạc Quốc gia Việt Nam,8,8,8,8,7,0,đủ,reused
+QHI,Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội,20,25,20,20,16,0,đủ,reused
+QHT,Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia Hà Nội,28,28,0,28,23,0,đủ,reused
+SKD,Trường Đại học Sân khấu - Điện ảnh Hà Nội,39,27,0,26,21,0,đủ,reused
+TKG,Trường Đại học Kiên Giang,28,125,0,30,24,0,đủ,reused
+TQU,Trường Đại học Tân Trào,19,5,0,21,17,0,đủ,reused
+VHH,Trường Đại học Văn hóa Hà Nội,35,23,14,21,17,0,đủ,reused
+VKA,Học viện Ngoại giao,11,3,11,11,9,0,đủ,reused
+XSH,Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia Thành phố Hồ Chí Minh,48,0,0,51,41,0,đủ,reused
+YDS,Trường Đại học Y Dược Thành phố Hồ Chí Minh,17,2,17,17,14,0,đủ,reused
