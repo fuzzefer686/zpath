@@ -46,6 +46,7 @@ export function normalizeUniversityRecord(value: unknown): University | null {
     shortDesc: asString(record.shortDesc ?? record.short_desc, fallback.shortDesc),
     tags: asStringArray(record.tags, fallback.tags),
     city: asString(record.city, fallback.city),
+    type: asString(record.type ?? record.university_type, fallback.type ?? ""),
     website: asString(record.website, fallback.website),
     heroGradient: asString(
       record.heroGradient ?? record.hero_gradient,
@@ -117,6 +118,7 @@ export function mapRecordToUniversity(value: unknown): University | null {
     shortDesc: asString(record.shortDesc ?? record.short_desc, local?.shortDesc ?? type),
     tags: asStringArray(record.tags, local?.tags ?? (type ? [type] : [])),
     city: asString(record.city ?? record.province, local?.city ?? ""),
+    type: type || local?.type || undefined,
     website: optional(asString(record.website, local?.website ?? "")),
     heroGradient: asString(
       record.heroGradient ?? record.hero_gradient,

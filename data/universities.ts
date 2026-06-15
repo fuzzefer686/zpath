@@ -18,6 +18,8 @@ export interface University {
   shortDesc: string;
   tags: string[];
   city: string;
+  /** Loại hình trường: "Công lập" | "Tư thục" | "Quốc tế". Surfaced for directory filtering. */
+  type?: string;
   website?: string;
   heroGradient: string;
   heroImageUrl?: string;
@@ -46,6 +48,7 @@ export const UNIVERSITIES: University[] = [
     shortDesc: "Kỹ thuật & Công nghệ",
     tags: ["Công nghệ", "Kỹ thuật"],
     city: "Hà Nội",
+    type: "Công lập",
     website: "https://hust.edu.vn",
     heroGradient: "from-orange-500 via-red-500 to-pink-500",
     heroImageUrl: HUST_HERO_IMAGE_URL,
@@ -70,6 +73,7 @@ export const UNIVERSITIES: University[] = [
     shortDesc: "Kinh doanh & Quản lý",
     tags: ["Kinh doanh", "Quản lý"],
     city: "Hà Nội",
+    type: "Công lập",
     website: "https://neu.edu.vn",
     heroGradient: "from-emerald-500 via-teal-500 to-cyan-500",
     unimapImageUrl: NEU_LOGO_URL,
@@ -94,6 +98,7 @@ export const UNIVERSITIES: University[] = [
     shortDesc: "Kinh doanh & Đối ngoại",
     tags: ["Kinh doanh", "Đối ngoại"],
     city: "Hà Nội",
+    type: "Công lập",
     website: "https://ftu.edu.vn",
     heroGradient: "from-indigo-500 via-purple-500 to-fuchsia-500",
     about:
@@ -118,6 +123,7 @@ export const UNIVERSITIES: University[] = [
     shortDesc: "Tinh hoa & Quốc tế",
     tags: ["Quốc tế", "Đổi mới"],
     city: "Hà Nội",
+    type: "Tư thục",
     website: "https://vinuni.edu.vn",
     heroGradient: "from-violet-500 via-rose-500 to-amber-500",
     about:
@@ -140,6 +146,7 @@ export const UNIVERSITIES: University[] = [
     shortDesc: "Công nghệ & Kỹ thuật",
     tags: ["Công nghệ", "Kỹ thuật"],
     city: "Hà Nội",
+    type: "Công lập",
     website: "https://uet.vnu.edu.vn",
     heroGradient: "from-blue-600 via-cyan-500 to-emerald-500",
     about:
@@ -200,6 +207,7 @@ export const UNIVERSITIES: University[] = [
     shortDesc: "Giáo dục & Sư phạm",
     tags: ["Giáo dục", "Sư phạm"],
     city: "Hà Nội",
+    type: "Công lập",
     website: "https://hnue.edu.vn",
     heroGradient: "from-sky-500 via-blue-500 to-indigo-500",
     about:
@@ -222,6 +230,7 @@ export const UNIVERSITIES: University[] = [
     shortDesc: "Đa ngành & Nghiên cứu",
     tags: ["Khoa học", "Nghiên cứu"],
     city: "Hà Nội",
+    type: "Công lập",
     website: "https://vnu.edu.vn",
     heroGradient: "from-amber-500 via-orange-500 to-red-500",
     about: "Đại học Quốc gia Hà Nội là hệ thống đại học đa ngành lớn nhất Việt Nam.",
@@ -239,6 +248,7 @@ export const UNIVERSITIES: University[] = [
     shortDesc: "Kinh doanh & Tài chính",
     tags: ["Kinh doanh", "Tài chính"],
     city: "TP.HCM",
+    type: "Công lập",
     website: "https://ueh.edu.vn",
     heroGradient: "from-pink-500 via-rose-500 to-red-500",
     about: "UEH là trường top đầu khối kinh tế phía Nam với phong cách đào tạo hiện đại, hội nhập quốc tế.",
@@ -256,6 +266,7 @@ export const UNIVERSITIES: University[] = [
     shortDesc: "Y khoa & Sức khỏe",
     tags: ["Y khoa", "Sức khỏe"],
     city: "Hà Nội",
+    type: "Công lập",
     website: "https://hmu.edu.vn",
     heroGradient: "from-red-500 via-rose-500 to-pink-500",
     about: "Đại học Y Hà Nội là cái nôi đào tạo bác sĩ và nhân lực y tế chất lượng cao của cả nước.",
@@ -273,6 +284,7 @@ export const UNIVERSITIES: University[] = [
     shortDesc: "Luật & Pháp lý",
     tags: ["Luật", "Pháp lý"],
     city: "Hà Nội",
+    type: "Công lập",
     website: "https://hlu.edu.vn",
     heroGradient: "from-slate-600 via-gray-700 to-zinc-800",
     about: "Đại học Luật Hà Nội là trường đầu ngành đào tạo cử nhân luật và nhân lực pháp lý.",
