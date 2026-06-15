@@ -1,0 +1,82 @@
+{
+  "university_code": "DBS",
+  "university_name": "Trường Đại học Kinh tế Thành phố Hồ Chí Minh",
+  "found_url": "https://giaoduc247.vn/tphcm/diem-chuan-2025-cua-dai-hoc-kinh-te-tp-hcm-tu-228-den-277",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 9,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông số và thiết kế đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phân tích dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.0,
+      "scale": 30
+    }
+  ]
+}

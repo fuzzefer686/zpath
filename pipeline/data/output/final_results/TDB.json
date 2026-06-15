@@ -1,0 +1,35 @@
+{
+  "university_code": "TDB",
+  "university_name": "Trường Đại học Thể dục Thể thao Bắc Ninh",
+  "found_url": "https://upes1.edu.vn/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 2,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục thể chất",
+      "year": "2026",
+      "admission_method": "hoc_ba",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://sites.google.com/view/tuyen-sinh-upes1/upes1"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục thể chất",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://sites.google.com/view/tuyen-sinh-upes1/upes1"
+    }
+  ]
+}

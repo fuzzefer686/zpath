@@ -1,0 +1,11 @@
+university_code,final_tier,status,num_records,review_status
+BKA,3,partial,76,needs_manual_review
+KHA,2,needs_manual_review,0,needs_manual_review
+QST,1,needs_manual_review,0,needs_manual_review
+QGH,2,success,17,pending
+FTU,1,needs_manual_review,0,needs_manual_review
+DDK,2,needs_manual_review,0,needs_manual_review
+DCD,2,needs_manual_review,0,needs_manual_review
+DQS,3,needs_manual_review,0,needs_manual_review
+DBS,2,needs_manual_review,0,needs_manual_review
+NLS,2,partial,36,needs_manual_review

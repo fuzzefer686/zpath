@@ -5,6 +5,11 @@ export const UNIMAP_VISIBLE_CODES = ["HUST", "FTU", "NEU", "UET", "VINUNI"] as c
 
 export type UnimapVisibleCode = (typeof UNIMAP_VISIBLE_CODES)[number];
 
+// Codes in UNIMAP_VISIBLE_CODES are "curated": they have rich local data
+// (logos, gradients, static program fallbacks, branded detail themes). Every
+// other school surfaced from the database renders with this default gradient.
+const DEFAULT_HERO_GRADIENT = "from-sky-500 via-indigo-500 to-purple-600";
+
 const VISIBLE_CODE_SET = new Set<string>(UNIMAP_VISIBLE_CODES);
 const LOCAL_UNIVERSITY_BY_CODE = new Map(
   UNIVERSITIES.map((university) => [university.code.toUpperCase(), university]),
@@ -41,6 +46,7 @@ export function normalizeUniversityRecord(value: unknown): University | null {
     shortDesc: asString(record.shortDesc ?? record.short_desc, fallback.shortDesc),
     tags: asStringArray(record.tags, fallback.tags),
     city: asString(record.city, fallback.city),
+    type: asString(record.type ?? record.university_type, fallback.type ?? ""),
     website: asString(record.website, fallback.website),
     heroGradient: asString(
       record.heroGradient ?? record.hero_gradient,
@@ -83,6 +89,86 @@ export function getVisibleUnimapUniversities(records: unknown[] = []) {
   return UNIMAP_VISIBLE_CODES.map((code) => universityByCode.get(code)).filter(
     (university): university is University => Boolean(university),
   );
+}
+
+/**
+ * Build a University from any DB record (a `schools` or `universities` row),
+ * without requiring a local entry. Curated codes are enriched with their local
+ * data (logo, gradient, static programs); every other school falls back to the
+ * record's own fields plus sensible defaults so it can still be listed and
+ * opened. Returns null only when the record has no usable code/name.
+ */
+export function mapRecordToUniversity(value: unknown): University | null {
+  if (typeof value !== "object" || value === null) return null;
+
+  const record = value as Record<string, unknown>;
+  const code = asString(record.code).toUpperCase();
+  if (!code) return null;
+
+  const local = LOCAL_UNIVERSITY_BY_CODE.get(code);
+  const name = asString(record.name, local?.name ?? code);
+  if (!name) return null;
+
+  const type = asString(record.type ?? record.university_type);
+  const optional = (value: string) => (value ? value : undefined);
+
+  return {
+    code,
+    name,
+    shortName: optional(asString(record.shortName ?? record.short_name, local?.shortName ?? "")),
+    aliases: asStringArray(record.aliases, local?.aliases ?? []),
+    shortDesc: asString(record.shortDesc ?? record.short_desc, local?.shortDesc ?? type),
+    tags: asStringArray(record.tags, local?.tags ?? (type ? [type] : [])),
+    city: asString(record.city ?? record.province, local?.city ?? ""),
+    type: type || local?.type || undefined,
+    website: optional(asString(record.website, local?.website ?? "")),
+    heroGradient: asString(
+      record.heroGradient ?? record.hero_gradient,
+      local?.heroGradient ?? DEFAULT_HERO_GRADIENT,
+    ),
+    heroImageUrl: optional(
+      asString(record.heroImageUrl ?? record.hero_image_url, local?.heroImageUrl ?? ""),
+    ),
+    unimapImageUrl: optional(
+      asString(record.unimapImageUrl ?? record.unimap_image_url, local?.unimapImageUrl ?? ""),
+    ),
+    about: asString(record.about ?? record.description, local?.about ?? ""),
+    highlights: asStringArray(record.highlights, local?.highlights ?? []),
+    majors: asStringArray(record.majors, local?.majors ?? []),
+    programs: local?.programs,
+    channels: local?.channels,
+    avatarUrl: optional(asString(record.avatarUrl ?? record.avatar_url, local?.avatarUrl ?? "")),
+  };
+}
+
+/**
+ * Map every DB record to a University (curated first, then the rest A→Z). Used
+ * by the UniMap listing so all schools with data show up, not just the curated
+ * five. Falls back to the local curated list when no records are provided.
+ */
+export function getAllUnimapUniversities(records: unknown[] = []): University[] {
+  const byCode = new Map<string, University>();
+
+  for (const record of records) {
+    const university = mapRecordToUniversity(record);
+    if (university) byCode.set(university.code, university);
+  }
+
+  if (byCode.size === 0) {
+    for (const code of UNIMAP_VISIBLE_CODES) {
+      const fallback = LOCAL_UNIVERSITY_BY_CODE.get(code);
+      if (fallback) byCode.set(code, fallback);
+    }
+  }
+
+  const curated = UNIMAP_VISIBLE_CODES.filter((code) => byCode.has(code)).map(
+    (code) => byCode.get(code) as University,
+  );
+  const rest = [...byCode.values()]
+    .filter((university) => !VISIBLE_CODE_SET.has(university.code))
+    .sort((a, b) => a.name.localeCompare(b.name, "vi"));
+
+  return [...curated, ...rest];
 }
 
 export function findVisibleUnimapUniversityByRouteParam(

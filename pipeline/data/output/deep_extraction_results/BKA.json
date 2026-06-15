@@ -1,0 +1,70 @@
+[
+  {
+    "status": "partial",
+    "data": [],
+    "note": "Nội dung trang web chỉ cung cấp thông báo về việc phê duyệt đề án tuyển sinh năm 2026 và các đường dẫn đến tài liệu chi tiết (file đính kèm), không chứa bảng dữ liệu ngành, điểm chuẩn hay học phí cụ thể trong văn bản.",
+    "source": "HTML: https://hust.edu.vn/vi/tuyen-sinh/dai-hoc/de-an-tuyen-sinh-nam-2025-567354.html"
+  },
+  {
+    "status": "partial",
+    "data": [
+      {
+        "school_major_code": "CH-E20",
+        "major_name": "Hóa học Mỹ phẩm",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": "EM-E17",
+        "major_name": "Kế toán",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": "ED5",
+        "major_name": "Tâm lý học công nghiệp và tổ chức",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": "FL4",
+        "major_name": "Tiếng Hàn Khoa học và Công nghệ",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": "MI-E22",
+        "major_name": "Khoa học tính toán cho các hệ thống thông minh",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      }
+    ],
+    "note": "Nội dung chỉ liệt kê tên 5 ngành mới năm 2026, không cung cấp chi tiết điểm chuẩn, phương thức xét tuyển hay học phí cụ thể. Dữ liệu năm được để là 2025 theo schema yêu cầu mặc dù văn bản nói về năm 2026.",
+    "source": "HTML: https://hust.edu.vn/vi/tuyen-sinh/nganh-tuyen-sinh/cac-nganh-chuong-trinh-tuyen-sinh-dai-hoc-nam-2026-651865.html"
+  }
+]

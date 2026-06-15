@@ -1,0 +1,76 @@
+{
+  "university_code": "DCN",
+  "university_name": "Trường Đại học Công nghiệp Hà Nội",
+  "found_url": "https://tuyensinh.haui.edu.vn/dai-hoc-chinh-quy/thong-tin-tuyen-sinh-trinh-do-dai-hoc-nam-2026/69b4e60495dfe0072a789cf6",
+  "final_tier": 1,
+  "status": "success",
+  "review_status": "pending",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": "7210404",
+      "major_name": "Thiết kế thời trang",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "C01",
+        "C03",
+        "C04",
+        "D01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25,
+      "tuition_max": 31,
+      "source_url": "https://tuyensinh.haui.edu.vn/dai-hoc-chinh-quy/thong-tin-tuyen-sinh-trinh-do-dai-hoc-nam-2026/69b4e60495dfe0072a789cf6"
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "D01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25,
+      "tuition_max": 31,
+      "source_url": "https://tuyensinh.haui.edu.vn/dai-hoc-chinh-quy/thong-tin-tuyen-sinh-trinh-do-dai-hoc-nam-2026/69b4e60495dfe0072a789cf6"
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06",
+        "X07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25,
+      "tuition_max": 31,
+      "source_url": "https://tuyensinh.haui.edu.vn/dai-hoc-chinh-quy/thong-tin-tuyen-sinh-trinh-do-dai-hoc-nam-2026/69b4e60495dfe0072a789cf6"
+    },
+    {
+      "school_major_code": "7480201TA",
+      "major_name": "Công nghệ thông tin (CTĐT bằng tiếng Anh)",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06",
+        "X07"
+      ],
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": 36,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.haui.edu.vn/dai-hoc-chinh-quy/thong-tin-tuyen-sinh-trinh-do-dai-hoc-nam-2026/69b4e60495dfe0072a789cf6"
+    }
+  ]
+}

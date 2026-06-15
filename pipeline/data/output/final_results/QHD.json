@@ -1,0 +1,71 @@
+{
+  "university_code": "QHD",
+  "university_name": "Trường Đại học Giáo dục - Đại học Quốc gia Hà Nội",
+  "found_url": "https://education.vnu.edu.vn/tuyen-sinh/dai-hoc-chinh-quy/thong-tin-tuyen-sinh-trinh-do-dai-hoc-nam-2026/",
+  "final_tier": 2,
+  "status": "success",
+  "review_status": "pending",
+  "num_records": 5,
+  "data": [
+    {
+      "school_major_code": "52140209",
+      "major_name": "Sư phạm Toán học",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 16.5,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://education.vnu.edu.vn/tuyen-sinh/tin-tuc/"
+    },
+    {
+      "school_major_code": "52140211",
+      "major_name": "Sư phạm Vật lý",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 16.5,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://education.vnu.edu.vn/tuyen-sinh/tin-tuc/"
+    },
+    {
+      "school_major_code": "52140212",
+      "major_name": "Sư phạm Hóa học",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 16.5,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://education.vnu.edu.vn/tuyen-sinh/tin-tuc/"
+    },
+    {
+      "school_major_code": "52140213",
+      "major_name": "Sư phạm Sinh học",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 16.0,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://education.vnu.edu.vn/tuyen-sinh/tin-tuc/"
+    },
+    {
+      "school_major_code": "52140217",
+      "major_name": "Sư phạm Ngữ văn",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 16.5,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://education.vnu.edu.vn/tuyen-sinh/tin-tuc/"
+    }
+  ]
+}

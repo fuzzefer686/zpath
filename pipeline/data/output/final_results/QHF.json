@@ -1,0 +1,131 @@
+{
+  "university_code": "QHF",
+  "university_name": "Trường Đại học Ngoại ngữ - Đại học Quốc gia Hà Nội",
+  "found_url": "https://ulis.vnu.edu.vn/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 10,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ulis.vnu.edu.vn/tuyensinh2026/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Pháp",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ulis.vnu.edu.vn/tuyensinh2026/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ulis.vnu.edu.vn/tuyensinh2026/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Đức",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ulis.vnu.edu.vn/tuyensinh2026/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nhật Bản",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ulis.vnu.edu.vn/tuyensinh2026/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Hàn Quốc",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ulis.vnu.edu.vn/tuyensinh2026/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nga",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ulis.vnu.edu.vn/tuyensinh2026/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Ả Rập",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ulis.vnu.edu.vn/tuyensinh2026/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ulis.vnu.edu.vn/tuyensinh2026/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học giáo dục liên văn hoá",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": null,
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://ulis.vnu.edu.vn/tuyensinh2026/"
+    }
+  ]
+}

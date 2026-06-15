@@ -1,0 +1,3 @@
+university_code,pdf_found,status,num_records_extracted,review_status
+BKA,yes,success,136,pending
+NLS,no,no_pdf,0,needs_manual_review

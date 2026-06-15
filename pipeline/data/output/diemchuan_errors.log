@@ -1,0 +1,12 @@
+[2026-06-15T12:00:40.198177+00:00] DAG | extract https://www.agu.edu.vn/tuyensinh: 403 Client Error: Forbidden for url: https://www.agu.edu.vn/tuyensinh
+[2026-06-15T12:06:01.850331+00:00] DAG | extract https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-an-giang-AGU.html: 404 Client Error: Not Found for url: https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-an-giang-AGU.html
+[2026-06-15T12:13:08.833888+00:00] DNV | extract https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7DTMy88f-6: BrowserType.launch: Executable doesn't exist at /Users/fuzzefer/Library/Caches/ms-playwright/chromium_headless_shell-1223/chrome-headless-shell-mac-arm64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+[2026-06-15T12:14:45.619056+00:00] DQC | extract https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpLXv79INJC: 'list' object has no attribute 'get'

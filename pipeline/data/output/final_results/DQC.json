@@ -1,0 +1,339 @@
+{
+  "university_code": "DQC",
+  "university_name": "Trường Đại học Quảng Bình",
+  "found_url": "http://tuyensinh.qbu.edu.vn/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 17,
+  "data": [
+    {
+      "school_major_code": "7140201",
+      "major_name": "Giáo dục Mầm non",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "M05",
+        "M06",
+        "M07",
+        "M11",
+        "M14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục Tiểu học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "C00",
+        "D01",
+        "A01",
+        "C04",
+        "B00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7140206",
+      "major_name": "Giáo dục Thể chất",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "T00",
+        "T01",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm Toán học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "D01",
+        "D07",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7140217",
+      "major_name": "Sư phạm Ngữ văn",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D14",
+        "D15",
+        "X70",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7140247",
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "B00",
+        "B08",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7140249",
+      "major_name": "Sư phạm Lịch sử – Địa lý",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X70",
+        "X74"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm Tiếng Anh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "D09",
+        "D10",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7140210",
+      "major_name": "Sư phạm Tin học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "D01",
+        "X06",
+        "X10",
+        "X26",
+        "X79"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "D09",
+        "D10",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D04",
+        "D14",
+        "D15",
+        "D45",
+        "D65",
+        "X78",
+        "X90"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "C02",
+        "D01",
+        "D10",
+        "X01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "A03",
+        "D01",
+        "D10",
+        "X01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "D01",
+        "X06",
+        "X10",
+        "X26",
+        "X79"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7620101",
+      "major_name": "Nông nghiệp",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A02",
+        "B08",
+        "C02",
+        "C03",
+        "D01",
+        "X01",
+        "X02",
+        "X04",
+        "X17",
+        "X21"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7810103",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "D01",
+        "D15",
+        "C04"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    },
+    {
+      "school_major_code": "7850101",
+      "major_name": "Quản lý Tài nguyên và Môi trường",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A02",
+        "B08",
+        "C02",
+        "C03",
+        "D01",
+        "X01",
+        "X02",
+        "X04",
+        "X17",
+        "X21"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "http://tuyensinh.qbu.edu.vn/thong-tin-tuyen-sinh-nam-2026-du-kien/"
+    }
+  ]
+}

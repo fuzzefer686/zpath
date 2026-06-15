@@ -1,0 +1,562 @@
+university_code,major_name,inferred_method,rule_used
+DPT,Công nghệ thông tin,diem_thi_thpt,5
+DHP,Điện tự động công nghiệp,diem_thi_thpt,6
+DHP,Điện công nghiệp và dân dụng,diem_thi_thpt,6
+DHP,Công nghệ kỹ thuật cơ điện tử,diem_thi_thpt,6
+DHP,Công nghệ chế tạo máy,diem_thi_thpt,6
+DHP,Tài chính doanh nghiệp,diem_thi_thpt,6
+DHP,Thương mại điện tử,diem_thi_thpt,6
+DHP,Marketing số,diem_thi_thpt,6
+DHP,"Công nghệ điện tử, vi mạch và bán dẫn (CLC)",diem_thi_thpt,6
+DHP,Luật,diem_thi_thpt,6
+DHP,Quản trị tài chính kế toán,diem_thi_thpt,6
+DHP,Kế toán doanh nghiệp (theo định hướng ACCA) - CLC,diem_thi_thpt,6
+DHP,Kinh doanh số và đổi mới sáng tạo (CLC),diem_thi_thpt,6
+DHP,Quản trị kinh doanh,diem_thi_thpt,6
+DHP,Xây dựng dân dụng và công nghiệp,diem_thi_thpt,6
+DHP,Trí tuệ nhân tạo và khoa học dữ liệu,diem_thi_thpt,6
+DHP,Công nghệ thông tin,diem_thi_thpt,6
+DHP,Thiết kế Game và Multimedia (CLC),diem_thi_thpt,6
+DPT,Quản trị dịch vụ du lịch và lữ hành,diem_thi_thpt,5
+DPT,Quản trị khách sạn,diem_thi_thpt,5
+DPT,Quản trị nhà hàng và dịch vụ ăn uống,diem_thi_thpt,5
+DNV,QUẢN LÝ XÂY DỰNG,diem_thi_thpt,6
+DNV,QUẢN LÝ BẤT ĐỘNG SẢN,diem_thi_thpt,6
+DNV,KINH TẾ ĐẦU TƯ,diem_thi_thpt,6
+DNV,KINH TẾ PHÁT TRIỂN,diem_thi_thpt,6
+DNV,QUẢN LÝ VẬN TẢI VÀ LOGISTICS,diem_thi_thpt,6
+DNV,CÔNG NGHỆ THÔNG TIN,diem_thi_thpt,6
+DNV,CÔNG  NGHỆ ĐA PHƯƠNG TIỆN,diem_thi_thpt,6
+DNV,KINH TẾ XÂY DỰNG,diem_thi_thpt,6
+DNV,ĐƯỜNG SẮT TỐC ĐỘ CAO VÀ ĐÔ THỊ,diem_thi_thpt,6
+DNV,CÔNG NGHỆ GAME,diem_thi_thpt,6
+DNV,KỸ THUẬT CẤP THOÁT NƯỚC,diem_thi_thpt,6
+DPT,Logistics và Quản lý chuỗi cung ứng,diem_thi_thpt,5
+VHH,Kinh doanh xuất bản phẩm,diem_thi_thpt,5
+DPT,Luật,diem_thi_thpt,5
+VHH,Văn hóa du lịch,diem_thi_thpt,5
+DHK,Công nghệ Sinh học (Chương trình tăng cường tiếng Anh),diem_thi_thpt,5
+DDT,Khoa học Máy tính,diem_thi_thpt,6
+DDT,Quản trị Kinh doanh,diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật ô tô,diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật nhiệt,diem_thi_thpt,6
+CPS,Năng lượng tái tạo,diem_thi_thpt,6
+CPS,Robot và trí tuệ nhân tạo,diem_thi_thpt,6
+CPS,Công nghệ chế tạo máy,diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật cơ điện tử,diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật cơ khí,diem_thi_thpt,6
+CPS,Kỹ thuật công nghiệp,diem_thi_thpt,6
+CPS,Kỹ nghệ gỗ và nội thất,diem_thi_thpt,6
+CPS,Cơ khí - Tự động hóa,diem_thi_thpt,6
+CPS,Công nghệ thông tin,diem_thi_thpt,6
+CPS,An toàn thông tin,diem_thi_thpt,6
+CPS,Kỹ thuật dữ liệu,diem_thi_thpt,6
+CPS,"Công nghệ Kỹ thuật điện, điện tử",diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật điện tử - viễn thông,diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật máy tính,diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật điều khiển và tự động hóa,diem_thi_thpt,6
+CPS,Kỹ thuật y sinh (Điện tử y sinh),diem_thi_thpt,6
+CPS,Hệ thống nhúng và IoT,diem_thi_thpt,6
+CPS,Kỹ thuật Thiết kế vi mạch,diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật môi trường,diem_thi_thpt,6
+CPS,Công nghệ thực phẩm,diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật hóa học,diem_thi_thpt,6
+CPS,Dinh dưỡng và Khoa học thực phẩm,diem_thi_thpt,6
+CPS,Quản lý tài nguyên và môi trường,diem_thi_thpt,6
+CPS,Quản lý công nghiệp,diem_thi_thpt,6
+CPS,Kế toán,diem_thi_thpt,6
+CPS,Thương mại điện tử,diem_thi_thpt,6
+CPS,Logistics và quản lý chuỗi cung ứng,diem_thi_thpt,6
+CPS,Kinh doanh Quốc tế,diem_thi_thpt,6
+CPS,Công nghệ tài chính,diem_thi_thpt,6
+CPS,Quản trị Kinh doanh,diem_thi_thpt,6
+CPS,Công nghệ may,diem_thi_thpt,6
+CPS,Quản trị NH và DV ăn uống,diem_thi_thpt,6
+CPS,Thiết kế thời trang,diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật công trình xây dựng,diem_thi_thpt,6
+CPS,Kỹ thuật xây dựng công trình giao thông,diem_thi_thpt,6
+CPS,Quản lý xây dựng,diem_thi_thpt,6
+CPS,Hệ thống kỹ thuật công trình xây dựng,diem_thi_thpt,6
+CPS,Quản lý và vận hành hạ tầng,diem_thi_thpt,6
+CPS,Kiến trúc,diem_thi_thpt,6
+CPS,Kiến trúc nội thất,diem_thi_thpt,6
+CPS,Công nghệ Kỹ thuật in,diem_thi_thpt,6
+CPS,Thiết kế đồ họa,diem_thi_thpt,6
+CPS,Công nghệ truyền thông,diem_thi_thpt,6
+CPS,Sư phạm tiếng Anh,diem_thi_thpt,6
+CPS,Ngôn ngữ Anh,diem_thi_thpt,6
+CPS,Công nghệ vật liệu,diem_thi_thpt,6
+CPS,Vật lý Kỹ thuật,diem_thi_thpt,6
+CPS,Luật,diem_thi_thpt,6
+CPS,Sư phạm công nghệ,diem_thi_thpt,6
+CPS,Tâm lý học giáo dục,diem_thi_thpt,6
+DAG,Bảo vệ Thực vật,diem_thi_thpt,5
+DAG,Chăn nuôi,diem_thi_thpt,5
+DAG,Chính trị học,diem_thi_thpt,5
+DAG,Công nghệ Kỹ thuật Hóa học,diem_thi_thpt,5
+DAG,Công nghệ Kỹ thuật Môi trường,diem_thi_thpt,5
+DAG,Công nghệ Nông nghiệp số,diem_thi_thpt,5
+DAG,Công nghệ sau thu hoạch,diem_thi_thpt,5
+DAG,Công nghệ Sinh học,diem_thi_thpt,5
+DAG,Công nghệ Thông tin,diem_thi_thpt,5
+DAG,Công nghệ Thực phẩm,diem_thi_thpt,5
+DAG,Đảm bảo chất lượng và An toàn thực phẩm,diem_thi_thpt,5
+DAG,Giáo dục Chính trị,diem_thi_thpt,5
+DAG,Giáo dục Mầm non,diem_thi_thpt,5
+DAG,Giáo dục Tiểu học,diem_thi_thpt,5
+DAG,Khoa học Cây trồng,diem_thi_thpt,5
+DAG,Khoa học Dữ liệu,diem_thi_thpt,5
+DAG,Kinh doanh doanh Nông nghiệp số,diem_thi_thpt,5
+DAG,Kinh tế Quốc tế,diem_thi_thpt,5
+DAG,Kế toán,diem_thi_thpt,5
+DAG,Kỹ thuật Phần mềm,diem_thi_thpt,5
+DAG,Luật,diem_thi_thpt,5
+DAG,Marketing,diem_thi_thpt,5
+DAG,Ngôn ngữ Anh,diem_thi_thpt,5
+DAG,Nuôi trồng Thủy sản,diem_thi_thpt,5
+DAG,Phát triển nông thôn,diem_thi_thpt,5
+DAG,Quản lý Tài nguyên và Môi trường,diem_thi_thpt,5
+DAG,Quản trị Kinh doanh,diem_thi_thpt,5
+DAG,Sư phạm Địa lý,diem_thi_thpt,5
+DAG,Sư phạm Hóa học,diem_thi_thpt,5
+DAG,Sư phạm Khoa học tự nhiên,diem_thi_thpt,5
+DAG,Sư phạm Lịch sử,diem_thi_thpt,5
+DAG,Sư phạm Lịch sử - Địa lý,diem_thi_thpt,5
+DAG,Sư phạm Ngữ văn,diem_thi_thpt,5
+DAG,Sư phạm Sinh học,diem_thi_thpt,5
+DAG,Sư phạm Tiếng Anh,diem_thi_thpt,5
+DAG,Sư phạm Toán học,diem_thi_thpt,5
+DAG,Sư phạm Vật lý,diem_thi_thpt,5
+DAG,Thương mại Điện tử,diem_thi_thpt,5
+DAG,Thú y,diem_thi_thpt,5
+DAG,Triết học,diem_thi_thpt,5
+DDT,Kỹ thuật Môi trường,diem_thi_thpt,6
+DAG,Tài chính - Ngân hàng,diem_thi_thpt,5
+DAG,Văn học,diem_thi_thpt,5
+DAG,Việt Nam học,diem_thi_thpt,5
+DDT,Luật kinh tế,diem_thi_thpt,6
+DDT,Quản trị Dịch vụ Du lịch và Lữ hành,diem_thi_thpt,6
+DDT,Điều dưỡng quốc tế,diem_thi_thpt,6
+DDT,Khoa học máy tính,diem_thi_thpt,6
+DDT,Quản trị Kinh doanh,diem_thi_thpt,6
+DDT,Kế toán,diem_thi_thpt,6
+DDT,Kỹ thuật Xây dựng,diem_thi_thpt,6
+DDT,Quan hệ Quốc tế,diem_thi_thpt,6
+DDT,Tài chính Ngân hàng,diem_thi_thpt,6
+DDT,Tổ chức Quản lý Dược,diem_thi_thpt,6
+DDT,Văn học,diem_thi_thpt,6
+DDT,Kỹ thuật Điện tử,diem_thi_thpt,6
+DDT,Kế toán,diem_thi_thpt,6
+DDT,Kỹ thuật Xây dựng,diem_thi_thpt,6
+DDT,Tài chính Ngân hàng,diem_thi_thpt,6
+DDT,Quan hệ Quốc tế,diem_thi_thpt,6
+DDT,Điều dưỡng Quốc tế Đại học Fooyin (Đài Loan),diem_thi_thpt,6
+DDT,Tổ chức Quản lý Dược,diem_thi_thpt,6
+DDT,Văn học,diem_thi_thpt,6
+DDT,Kỹ thuật Điện tử,diem_thi_thpt,6
+DDT,Kỹ thuật Môi trường,diem_thi_thpt,6
+DDT,Luật kinh tế,diem_thi_thpt,6
+DDT,Quản trị Dịch vụ Du lịch và Lữ hành,diem_thi_thpt,6
+DHP,Giáo dục Tiểu học,diem_thi_thpt,6
+DHP,Kế toán kiểm toán,diem_thi_thpt,6
+DHP,Giáo dục Mầm non,diem_thi_thpt,6
+DHK,Sinh học,diem_thi_thpt,5
+DHK,Sinh học (Chương trình tăng cường tiếng Anh),diem_thi_thpt,5
+DHK,Công nghệ Sinh học,diem_thi_thpt,5
+DHP,Kiến trúc,diem_thi_thpt,6
+DHK,Vật lý học (Chương trình tăng cường tiếng Anh),diem_thi_thpt,5
+DHK,Công nghệ bán dẫn,diem_thi_thpt,5
+DHK,Hoá học,diem_thi_thpt,5
+DHK,Hóa học (Chương trình tăng cường tiếng Anh),diem_thi_thpt,5
+DHK,Khoa học máy tính (Chương trình Tiên tiến),diem_thi_thpt,5
+DHK,Thiết kế vi mạch,diem_thi_thpt,5
+DHP,Kế toán doanh nghiệp,diem_thi_thpt,6
+DHP,Quản trị kinh doanh quốc tế (CLC),diem_thi_thpt,6
+DHP,Hướng dẫn du lịch,diem_thi_thpt,6
+DHP,"Quản trị Lữ hành, Khách sạn",diem_thi_thpt,6
+DHP,Quản trị Dịch vụ Du lịch và Lữ hành,diem_thi_thpt,6
+DHP,Logistics và vận tải đa phương thức,diem_thi_thpt,6
+DHP,Quản lý kinh tế,diem_thi_thpt,6
+DHP,Kinh tế ngoại thương,diem_thi_thpt,6
+DHP,Logistics và vận tải đa phương thức (CLC),diem_thi_thpt,6
+DHP,Công tác xã hội,diem_thi_thpt,6
+DHP,Sư phạm Tiếng Anh,diem_thi_thpt,6
+DHP,Sư phạm Ngữ văn,diem_thi_thpt,6
+DHP,Ngôn ngữ Trung Quốc,diem_thi_thpt,6
+DHP,Sư phạm Toán học,diem_thi_thpt,6
+DHP,Giáo dục Thể chất,diem_thi_thpt,6
+DHP,Ngôn ngữ Anh,diem_thi_thpt,6
+DNT,Ngôn ngữ Anh,diem_thi_thpt,6
+DNT,Ngôn ngữ Trung Quốc,diem_thi_thpt,6
+DNT,Ngôn ngữ Nhật,diem_thi_thpt,6
+DNT,Ngôn ngữ Hàn Quốc,diem_thi_thpt,6
+DNT,Đông phương học,diem_thi_thpt,6
+DNT,Công nghệ thông tin,diem_thi_thpt,6
+DNT,Trí tuệ nhân tạo,diem_thi_thpt,6
+DNT,Thương mại điện tử,diem_thi_thpt,6
+DNT,Kỹ thuật phần mềm,diem_thi_thpt,6
+DNT,Tài chính - Ngân hàng,diem_thi_thpt,6
+DNT,Kế toán,diem_thi_thpt,6
+DNT,Kiểm toán,diem_thi_thpt,6
+DNT,Luật,diem_thi_thpt,6
+DNT,Luật kinh tế,diem_thi_thpt,6
+DNT,Quản trị kinh doanh,diem_thi_thpt,6
+DNT,Kinh doanh quốc tế,diem_thi_thpt,6
+DNT,Marketing,diem_thi_thpt,6
+DNT,Logistics và quản lý chuỗi cung ứng,diem_thi_thpt,6
+DNT,Quản trị dịch vụ du lịch và lữ hành,diem_thi_thpt,6
+DNT,Quản trị khách sạn,diem_thi_thpt,6
+DNT,Quan hệ quốc tế,diem_thi_thpt,6
+DNT,Quan hệ công chúng,diem_thi_thpt,6
+DNT,Truyền thông đa phương tiện,diem_thi_thpt,6
+DNV,KIẾN TRÚC,diem_thi_thpt,5
+DNV,ĐIÊU KHẮC,diem_thi_thpt,6
+DNV,MỸ THUẬT ĐÔ THỊ,diem_thi_thpt,6
+DNV,THIẾT KẾ NỘI THẤT,diem_thi_thpt,6
+DNV,THIẾT KẾ ĐỒ HỌA,diem_thi_thpt,6
+DNV,THIẾT KẾ THỜI TRANG,diem_thi_thpt,6
+DNV,NGHỆ THUẬT SỐ,diem_thi_thpt,6
+DNV,XÂY DỰNG DÂN DỤNG VÀ CÔNG NGHIỆP,diem_thi_thpt,6
+DNV,XÂY DỰNG CÔNG TRÌNH NGẦM ĐÔ THỊ,diem_thi_thpt,6
+DNV,QUẢN LÝ DỰ ÁN XÂY DỰNG,diem_thi_thpt,6
+DNV,CÔNG NGHỆ KỸ THUẬT VẬT LIỆU XÂY DỰNG,diem_thi_thpt,6
+THU,Luật,diem_thi_thpt,6
+DPT,Luật kinh tế,diem_thi_thpt,5
+DPT,Ngôn ngữ Anh,diem_thi_thpt,5
+DPT,Kỹ thuật xây dựng,diem_thi_thpt,5
+DPT,Quản trị kinh doanh,diem_thi_thpt,5
+DPT,Tài chính – Ngân hàng,diem_thi_thpt,5
+DPT,Kế toán,diem_thi_thpt,5
+DPT,Kỹ thuật cơ khí,diem_thi_thpt,5
+DPT,Kỹ thuật ô tô,diem_thi_thpt,5
+DPT,Kỹ thuật xét nghiệm y học,diem_thi_thpt,5
+DPT,"Công nghệ kỹ thuật điện, điện tử",diem_thi_thpt,5
+THU,Ngôn ngữ Anh,diem_thi_thpt,6
+DQC,Giáo dục Mầm non,diem_thi_thpt,5
+DQC,Giáo dục Tiểu học,diem_thi_thpt,5
+DQC,Giáo dục Thể chất,diem_thi_thpt,5
+DQC,Sư phạm Toán học,diem_thi_thpt,5
+DQC,Sư phạm Ngữ văn,diem_thi_thpt,5
+DQC,Sư phạm Khoa học tự nhiên,diem_thi_thpt,5
+DQC,Sư phạm Lịch sử – Địa lý,diem_thi_thpt,5
+DQC,Sư phạm Tiếng Anh,diem_thi_thpt,5
+DQC,Sư phạm Tin học,diem_thi_thpt,5
+DQC,Ngôn ngữ Anh,diem_thi_thpt,5
+DQC,Ngôn ngữ Trung Quốc,diem_thi_thpt,5
+DQC,Kế toán,diem_thi_thpt,5
+DQC,Quản trị kinh doanh,diem_thi_thpt,5
+DQC,Công nghệ thông tin,diem_thi_thpt,5
+DQC,Nông nghiệp,diem_thi_thpt,5
+DQC,Quản trị dịch vụ du lịch và lữ hành,diem_thi_thpt,5
+DQC,Quản lý Tài nguyên và Môi trường,diem_thi_thpt,5
+DQL,Ngôn ngữ Anh,diem_thi_thpt,5
+DQL,Luật,diem_thi_thpt,5
+DQL,Luật thương mại quốc tế,diem_thi_thpt,5
+DQL,Quản trị - Luật,diem_thi_thpt,5
+DQL,Quản trị kinh doanh,diem_thi_thpt,5
+DQL,Kinh doanh quốc tế,diem_thi_thpt,5
+DQL,Tài chính - Ngân hàng,diem_thi_thpt,5
+DQL,Kinh tế số,diem_thi_thpt,5
+DQL,Thương mại điện tử,diem_thi_thpt,5
+DQL,Công nghệ tài chính,diem_thi_thpt,5
+DQL,Ngôn ngữ Trung Quốc,diem_thi_thpt,5
+DTC,Toán ứng dụng,diem_thi_thpt,6
+DTC,Thương mại điện tử,diem_thi_thpt,6
+DTC,Luật,diem_thi_thpt,6
+DTC,Luật Quốc tế,diem_thi_thpt,6
+DTH,Khoa học máy tính,diem_thi_thpt,6
+DTH,Hệ thống thông tin,diem_thi_thpt,6
+DTH,Mạng máy tính và truyền thông dữ liệu,diem_thi_thpt,6
+DTH,Công nghệ thông tin,diem_thi_thpt,6
+DTH,Trí tuệ nhân tạo,diem_thi_thpt,6
+DTH,Kế toán,diem_thi_thpt,6
+DTH,Tài chính ngân hàng,diem_thi_thpt,6
+DTH,Quản trị kinh doanh,diem_thi_thpt,6
+DTH,Marketing,diem_thi_thpt,6
+DTH,Logistics và Quản lý chuỗi cung ứng,diem_thi_thpt,6
+DTH,Luật kinh tế,diem_thi_thpt,6
+DTH,Kinh tế quốc tế,diem_thi_thpt,6
+DTH,Thương mại điện tử,diem_thi_thpt,6
+DTH,Điều dưỡng,diem_thi_thpt,6
+DTH,Ngôn ngữ Anh,diem_thi_thpt,6
+DTH,Ngôn ngữ Trung Quốc,diem_thi_thpt,6
+DTH,Ngôn ngữ Nhật,diem_thi_thpt,6
+DTH,Ngôn ngữ Hàn Quốc,diem_thi_thpt,6
+DTH,Việt Nam học,diem_thi_thpt,6
+DTH,Quản trị và Du lịch - Lữ hành,diem_thi_thpt,6
+DTH,Quản trị khách sạn,diem_thi_thpt,6
+DTH,Truyền thông đa phương tiện,diem_thi_thpt,6
+DTH,Thiết kế đồ hoạ,diem_thi_thpt,6
+DTH,Thanh nhạc,diem_thi_thpt,6
+FPT,Công nghệ thông tin,diem_thi_thpt,6
+FPT,Kỹ thuật phần mềm,diem_thi_thpt,6
+FPT,Trí tuệ nhân tạo,diem_thi_thpt,6
+FPT,Khoa học dữ liệu ứng dụng,diem_thi_thpt,6
+FPT,An toàn thông tin,diem_thi_thpt,6
+FPT,Vi mạch bán dẫn,diem_thi_thpt,6
+FPT,Công nghệ ô tô số,diem_thi_thpt,6
+FPT,Hệ thống thông tin,diem_thi_thpt,6
+FPT,Thiết kế đồ họa và mỹ thuật số,diem_thi_thpt,6
+FPT,Truyền thông đa phương tiện,diem_thi_thpt,6
+FPT,Quan hệ công chúng,diem_thi_thpt,6
+FPT,Truyền thông Marketing tích hợp,diem_thi_thpt,6
+FPT,Truyền thông thương hiệu,diem_thi_thpt,6
+FPT,Ngôn ngữ Anh,diem_thi_thpt,6
+FPT,Tiếng Anh thương mại,diem_thi_thpt,6
+FPT,Ngôn ngữ Hàn Quốc,diem_thi_thpt,6
+FPT,Tiếng Hàn thương mại,diem_thi_thpt,6
+FPT,Ngôn ngữ Trung Quốc,diem_thi_thpt,6
+FPT,Tiếng Trung thương mại,diem_thi_thpt,6
+FPT,Luật,diem_thi_thpt,6
+FPT,Luật kinh tế,diem_thi_thpt,6
+FPT,Marketing số,diem_thi_thpt,6
+FPT,Kinh doanh quốc tế,diem_thi_thpt,6
+FPT,Thương mại điện tử,diem_thi_thpt,6
+FPT,Quản trị kinh doanh,diem_thi_thpt,6
+FPT,Quản trị giải trí và sự kiện,diem_thi_thpt,6
+FPT,Quản trị trải nghiệm khách hàng,diem_thi_thpt,6
+FPT,Quản trị thu mua,diem_thi_thpt,6
+FPT,Quản trị khách sạn,diem_thi_thpt,6
+FPT,Quản trị Dịch vụ Du lịch và Lữ hành,diem_thi_thpt,6
+FPT,Phân tích kinh doanh (Business Analytics),diem_thi_thpt,6
+FPT,Logistics và quản lý chuỗi cung ứng toàn cầu,diem_thi_thpt,6
+FPT,Công nghệ tài chính,diem_thi_thpt,6
+FPT,Tài chính doanh nghiệp,diem_thi_thpt,6
+FPT,Tài chính thông minh,diem_thi_thpt,6
+FPT,Ngân hàng số - Tài chính,diem_thi_thpt,6
+FPT,Trí tuệ nhân tạo và Khoa học dữ liệu,diem_thi_thpt,6
+FPT,An ninh mạng và an toàn số,diem_thi_thpt,6
+HIU,Y khoa,diem_thi_thpt,5
+HIU,Y khoa (Tiếng Anh),diem_thi_thpt,6
+HIU,Y học dự phòng,diem_thi_thpt,6
+HIU,Răng - Hàm - Mặt,diem_thi_thpt,6
+HIU,Răng - Hàm - Mặt (Tiếng Anh),diem_thi_thpt,6
+HIU,Y học cổ truyền,diem_thi_thpt,6
+HIU,Dược học,diem_thi_thpt,5
+HIU,Điều dưỡng,diem_thi_thpt,5
+HIU,Kỹ thuật y sinh,diem_thi_thpt,5
+HIU,Quản trị kinh doanh,diem_thi_thpt,5
+HIU,Luật kinh tế,diem_thi_thpt,5
+HIU,Ngôn ngữ Anh,diem_thi_thpt,5
+HIU,Truyền thông đa phương tiện,diem_thi_thpt,5
+HIU,Công nghệ thông tin,diem_thi_thpt,5
+HIU,Kiến trúc,diem_thi_thpt,5
+LDA,Ngôn ngữ Anh,diem_thi_thpt,5
+LDA,Kinh tế lao động,diem_thi_thpt,5
+LDA,Tâm lý học,diem_thi_thpt,5
+LDA,Quản trị kinh doanh,diem_thi_thpt,5
+LDA,Marketing,diem_thi_thpt,5
+LDA,Logistics và quản trị chuỗi cung ứng,diem_thi_thpt,5
+LDA,Tài chính - Ngân hàng,diem_thi_thpt,5
+LDA,Bảo hiểm - Tài chính,diem_thi_thpt,5
+LDA,Kế toán,diem_thi_thpt,5
+LDA,Kiểm toán,diem_thi_thpt,5
+LDA,Quản trị nhân lực,diem_thi_thpt,5
+LDA,Hệ thống thông tin quản lý,diem_thi_thpt,5
+LDA,Luật kinh tế,diem_thi_thpt,5
+LDA,Công tác xã hội,diem_thi_thpt,5
+MDA,Công nghệ thông tin (Chất lượng cao),diem_thi_thpt,6
+MDA,Du lịch địa chất,diem_thi_thpt,6
+MDA,Địa chất học,diem_thi_thpt,6
+MDA,Kỹ thuật Cơ Điện tử,diem_thi_thpt,6
+MDA,Kỹ thuật cơ khí động lực,diem_thi_thpt,6
+MDA,Kỹ thuật Khí thiên nhiên,diem_thi_thpt,6
+MDA,Kỹ thuật Ô tô,diem_thi_thpt,6
+MDA,Kỹ thuật robot và trí tuệ nhân tạo,diem_thi_thpt,6
+MDA,Kỹ thuật tài nguyên nước,diem_thi_thpt,6
+MDA,Kỹ thuật vật liệu,diem_thi_thpt,6
+MDA,Kỹ thuật xây dựng công trình giao thông,diem_thi_thpt,6
+MDA,Khoa học Dữ liệu,diem_thi_thpt,6
+MDA,"Ngành An toàn, vệ sinh lao động",diem_thi_thpt,6
+MDA,"Ngành Công nghệ kỹ thuật điện, điện tử",diem_thi_thpt,6
+MDA,Ngành Công nghệ kỹ thuật hóa học,diem_thi_thpt,6
+MDA,Ngành công nghệ thông tin,diem_thi_thpt,6
+MDA,"Ngành Đá quý, đá mỹ nghệ",diem_thi_thpt,6
+MDA,Ngành địa chất học,diem_thi_thpt,6
+MDA,Ngành Địa kỹ thuật xây dựng,diem_thi_thpt,6
+MDA,Ngành Địa tin học,diem_thi_thpt,6
+MDA,Ngành Hóa Dược,diem_thi_thpt,6
+MDA,Ngành Kế toán,diem_thi_thpt,6
+MDA,Ngành Kỹ thuật cơ khí,diem_thi_thpt,6
+MDA,Ngành kỹ thuật Dầu khí,diem_thi_thpt,6
+MDA,Ngành Kỹ thuật địa chất,diem_thi_thpt,6
+MDA,Ngành Kỹ thuật Địa vật lý,diem_thi_thpt,6
+MDA,Ngành kỹ thuật điện,diem_thi_thpt,6
+MDA,Ngành Kỹ thuật điều khiển và tự động hóa,diem_thi_thpt,6
+MDA,Ngành Kỹ thuật hóa học - Chương trình tiên tiến,diem_thi_thpt,6
+MDA,Ngành Kỹ thuật không gian,diem_thi_thpt,6
+MDA,Ngành Kỹ thuật mỏ,diem_thi_thpt,6
+MDA,Ngành Kỹ thuật Trắc địa - Bản đồ,diem_thi_thpt,6
+MDA,Ngành Kỹ thuật xây dựng,diem_thi_thpt,6
+MDA,Ngành Ngôn ngữ Anh,diem_thi_thpt,6
+MDA,Ngành Ngôn ngữ Trung,diem_thi_thpt,6
+MDA,Ngành Quản lý đất đai,diem_thi_thpt,6
+MDA,Ngành Quản lý đô thị và công trình,diem_thi_thpt,6
+MDA,Ngành Quản lý phát triển đô thị và Bất động sản,diem_thi_thpt,6
+MDA,Ngành Quản lý tài nguyên khoáng sản,diem_thi_thpt,6
+MDA,Ngành Quản lý xây dựng,diem_thi_thpt,6
+MDA,Ngành Quản trị kinh doanh,diem_thi_thpt,6
+MDA,Ngành Tài chính - Ngân hàng,diem_thi_thpt,6
+MDA,Quản lý công nghiệp,diem_thi_thpt,6
+MDA,Quản lý tài nguyên và môi trường,diem_thi_thpt,6
+MDA,Xây dựng công trình ngầm thành phố và hệ thống tàu điện ngầm,diem_thi_thpt,6
+NLS,Sư phạm kỹ thuật nông nghiệp,diem_thi_thpt,6
+NLS,Ngôn ngữ Anh,diem_thi_thpt,6
+NLS,Kinh tế,diem_thi_thpt,6
+NLS,Quản Trị Kinh Doanh,diem_thi_thpt,6
+NLS,Bất động sản,diem_thi_thpt,6
+NLS,Kế toán,diem_thi_thpt,6
+NLS,Công nghệ sinh học,diem_thi_thpt,6
+NLS,Khoa học môi trường,diem_thi_thpt,6
+NLS,Hệ thống thông tin,diem_thi_thpt,6
+NLS,Công nghệ thông tin,diem_thi_thpt,6
+NLS,Cơ khí và Công nghệ,diem_thi_thpt,6
+NLS,Công nghệ kỹ thuật cơ – điện tử,diem_thi_thpt,6
+NLS,Công nghệ kỹ thuật ô tô,diem_thi_thpt,6
+NLS,Công nghệ kỹ thuật nhiệt,diem_thi_thpt,6
+NLS,Công nghệ kỹ thuật hoá học,diem_thi_thpt,6
+NLS,Công nghệ kỹ thuật tái tạo,diem_thi_thpt,6
+NLS,Kỹ thuật điều khiển và tự động hoá,diem_thi_thpt,6
+NLS,Kỹ thuật môi trường,diem_thi_thpt,6
+NLS,Công nghệ thực phẩm,diem_thi_thpt,6
+NLS,Công nghệ chế biến thuỷ sản,diem_thi_thpt,6
+NLS,Đảm bảo chất lượng an toàn thực phẩm,diem_thi_thpt,6
+NLS,Chế biến lâm sản,diem_thi_thpt,6
+NLS,Chăn nuôi,diem_thi_thpt,6
+NLS,Nông học,diem_thi_thpt,6
+NLS,Bảo vệ thực vật,diem_thi_thpt,6
+NLS,Kinh doanh nông nghiệp,diem_thi_thpt,6
+NLS,Phát triển nông nghiệp,diem_thi_thpt,6
+NLS,Lâm học,diem_thi_thpt,6
+NLS,Lâm nghiệp dô thị,diem_thi_thpt,6
+NLS,Quản lý tài nguyên rừng,diem_thi_thpt,6
+NLS,Nuôi trồng thuỷ sản,diem_thi_thpt,6
+NLS,Thú y,diem_thi_thpt,6
+NLS,Tài nguyên môi trường,diem_thi_thpt,6
+NLS,Quản lý đất đai,diem_thi_thpt,6
+NLS,Cảnh Quan và kỹ thuật hoa viên,diem_thi_thpt,6
+NLS,Tài nguyên và Du lịch sinh thái,diem_thi_thpt,6
+NTT,Y khoa,diem_thi_thpt,6
+NTT,Quản trị kinh doanh (Kinh doanh quốc tế),diem_thi_thpt,6
+NTT,Công nghệ thông tin,diem_thi_thpt,6
+NTT,Công nghệ thông tin,diem_thi_thpt,6
+NTT,Y khoa,diem_thi_thpt,6
+NTT,Quản trị kinh doanh (Kinh doanh quốc tế),diem_thi_thpt,6
+NTT,Công nghệ thông tin,diem_thi_thpt,6
+NTT,Công nghệ thông tin,diem_thi_thpt,6
+QHF,Ngôn ngữ Anh,diem_thi_thpt,6
+QHF,Ngôn ngữ Pháp,diem_thi_thpt,6
+QHF,Ngôn ngữ Trung Quốc,diem_thi_thpt,6
+QHF,Ngôn ngữ Đức,diem_thi_thpt,6
+QHF,Ngôn ngữ Nhật Bản,diem_thi_thpt,6
+QHF,Ngôn ngữ Hàn Quốc,diem_thi_thpt,6
+QHF,Ngôn ngữ Nga,diem_thi_thpt,6
+QHF,Ngôn ngữ Ả Rập,diem_thi_thpt,6
+QHF,Sư phạm,diem_thi_thpt,6
+QHF,Tâm lý học giáo dục liên văn hoá,diem_thi_thpt,6
+QHI,Công nghệ thông tin,diem_thi_thpt,6
+QHI,Kỹ thuật máy tính,diem_thi_thpt,6
+QHI,Vật lý kỹ thuật,diem_thi_thpt,6
+QHI,Cơ kỹ thuật,diem_thi_thpt,6
+QHI,Công nghệ kỹ thuật xây dựng,diem_thi_thpt,6
+QHI,Công nghệ kỹ thuật cơ – điện,diem_thi_thpt,6
+QST,Kinh doanh nông nghiệp số,diem_thi_thpt,6
+QST,Công nghệ nông nghiệp số,diem_thi_thpt,6
+THU,Kế toán,diem_thi_thpt,6
+THU,"Công nghệ kỹ thuật điện, Điện tử",diem_thi_thpt,6
+THU,Công nghệ kỹ thuật ô tô,diem_thi_thpt,6
+THU,Công nghệ thông tin,diem_thi_thpt,6
+THU,Điều dưỡng,diem_thi_thpt,6
+THU,Dược học,diem_thi_thpt,6
+THU,Giáo dục học,diem_thi_thpt,6
+THU,Ngôn ngữ Trung Quốc,diem_thi_thpt,6
+THU,Quản trị khách sạn,diem_thi_thpt,6
+THU,Quản trị kinh doanh,diem_thi_thpt,6
+THU,Quản trị văn phòng,diem_thi_thpt,6
+THU,Việt Nam học,diem_thi_thpt,6
+TQU,Giáo dục Mầm non,diem_thi_thpt,6
+TQU,Giáo dục Tiểu học,diem_thi_thpt,6
+TQU,Sư phạm Toán học,diem_thi_thpt,6
+TQU,Sư phạm Ngữ văn,diem_thi_thpt,6
+TQU,Quản lý văn hoá,diem_thi_thpt,6
+TQU,Chính trị học,diem_thi_thpt,6
+TQU,Tâm lý học,diem_thi_thpt,6
+TQU,Kế toán,diem_thi_thpt,6
+TQU,Công nghệ thông tin,diem_thi_thpt,6
+TQU,Khoa học dữ liệu,diem_thi_thpt,6
+TQU,Kinh tế,diem_thi_thpt,6
+TQU,Kinh tế nông nghiệp,diem_thi_thpt,6
+TQU,Kinh tế đầu tư,diem_thi_thpt,6
+TQU,Lâm sinh,diem_thi_thpt,6
+TQU,Dược học,diem_thi_thpt,6
+TQU,Điều dưỡng,diem_thi_thpt,6
+TQU,Công tác xã hội,diem_thi_thpt,6
+TQU,Quản trị Dịch vụ du lịch và lữ hành,diem_thi_thpt,6
+TQU,Huấn luyện thể thao,diem_thi_thpt,6
+VHH,"Lữ hành, hướng dẫn du lịch",diem_thi_thpt,5
+VHH,Hướng dẫn du lịch quốc tế,diem_thi_thpt,5
+VHH,Quản trị kinh doanh du lịch,diem_thi_thpt,5
+VHH,Quản trị du lịch cộng đồng,diem_thi_thpt,5
+VHH,Báo chí,diem_thi_thpt,5
+VHH,Bảo tàng học,diem_thi_thpt,5
+VHH,Quản trị thư viện,diem_thi_thpt,5
+VHH,Thư viện và thiết bị trường học,diem_thi_thpt,5
+VHH,Quản lý thông tin,diem_thi_thpt,5
+VHH,Luật,diem_thi_thpt,5
+VHH,Sáng tác văn học,diem_thi_thpt,5
+VHH,Ngôn ngữ Anh,diem_thi_thpt,5
+XSH,Giáo dục học,diem_thi_thpt,5
+XSH,Ngôn ngữ Anh,diem_thi_thpt,5
+XSH,Ngôn ngữ Anh_Chuẩn quốc tế,diem_thi_thpt,5
+XSH,Quản lý giáo dục,diem_thi_thpt,5
+XSH,Ngôn ngữ Nga,diem_thi_thpt,5
+XSH,Ngôn ngữ Pháp,diem_thi_thpt,5
+XSH,Ngôn ngữ Trung Quốc,diem_thi_thpt,5
+XSH,Ngôn ngữ Trung Quốc_Chuẩn quốc tế,diem_thi_thpt,5
+XSH,Ngôn ngữ Đức,diem_thi_thpt,5
+XSH,Ngôn ngữ Đức_Chuẩn quốc tế,diem_thi_thpt,5
+XSH,Ngôn ngữ Tây Ban Nha,diem_thi_thpt,5
+XSH,Ngôn ngữ Italia,diem_thi_thpt,5
+XSH,Triết học,diem_thi_thpt,5
+XSH,Tôn giáo học,diem_thi_thpt,5
+XSH,Lịch sử,diem_thi_thpt,5
+XSH,Ngôn ngữ học,diem_thi_thpt,5
+XSH,Văn học,diem_thi_thpt,5
+XSH,Văn hóa học,diem_thi_thpt,5
+XSH,Quan hệ quốc tế,diem_thi_thpt,5
+XSH,Quan hệ quốc tế _ Chuẩn quốc tế,diem_thi_thpt,5
+XSH,Xã hội học,diem_thi_thpt,5
+XSH,Nhân học,diem_thi_thpt,5
+XSH,Tâm lý học,diem_thi_thpt,5
+XSH,Tâm lý học giáo dục,diem_thi_thpt,5
+XSH,Địa lý học,diem_thi_thpt,5
+XSH,Đông phương học,diem_thi_thpt,5
+XSH,Nhật Bản học,diem_thi_thpt,5
+XSH,Nhật Bản học_Chuẩn quốc tế,diem_thi_thpt,5
+XSH,Hàn Quốc học,diem_thi_thpt,5
+XSH,Việt Nam học,diem_thi_thpt,5
+XSH,Báo chí,diem_thi_thpt,5
+XSH,Báo chí_Chuẩn quốc tế,diem_thi_thpt,5
+XSH,Truyền thông đa phương tiện,diem_thi_thpt,5
+XSH,Thông tin – thư viện,diem_thi_thpt,5
+XSH,Quản lý thông tin,diem_thi_thpt,5
+XSH,Lưu trữ học,diem_thi_thpt,5
+XSH,Quản trị văn phòng,diem_thi_thpt,5
+XSH,Đô thị học,diem_thi_thpt,5
+XSH,Công tác xã hội,diem_thi_thpt,5
+XSH,Quản trị dịch vụ du lịch và lữ hành,diem_thi_thpt,5
+XSH,Quản trị dịch vụ du lịch và lữ hành_Chuẩn quốc tế,diem_thi_thpt,5
+XSH,Quốc tế học,diem_thi_thpt,5
+XSH,Nghệ thuật học,diem_thi_thpt,5
+XSH,Kinh doanh thương mại Hàn Quốc,diem_thi_thpt,5
+XSH,"Truyền thông, chuyên ngành Báo chí",diem_thi_thpt,5
+XSH,Quan hệ Quốc tế,diem_thi_thpt,5
+XSH,Ngôn ngữ Anh,diem_thi_thpt,5
+XSH,Ngôn ngữ Trung Quốc,diem_thi_thpt,5
+YDN,Y khoa,diem_thi_thpt,5
+YDN,Dược học,diem_thi_thpt,5
+YDN,Điều dưỡng,diem_thi_thpt,5
+YDN,Kỹ thuật xét nghiệm y học,diem_thi_thpt,5
+YDN,Kỹ thuật hình ảnh y học,diem_thi_thpt,5
+YDN,Kỹ thuật phục hồi chức năng,diem_thi_thpt,5
+YDN,Y tế công cộng,diem_thi_thpt,5

@@ -1,0 +1,23 @@
+{
+  "university_code": "AOF",
+  "university_name": "Học viện Tài chính",
+  "found_url": "https://hvtc.edu.vn/tuyensinh/thong-tin-tuyen-sinh-dai-hoc-chinh-quy-nam-2026",
+  "final_tier": 2,
+  "status": "success",
+  "review_status": "pending",
+  "num_records": 1,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán căn bản cho người mới bắt đầu",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 2.8,
+      "tuition_max": 2.8,
+      "source_url": "https://hvtc.edu.vn/Thong-bao-Ve-viec-tuyen-sinh-khoa-hoc-Ke-toan-can-ban-cho-nguoi-moi-bat-dau--Lop-01-nam-2026-_34184.html"
+    }
+  ]
+}

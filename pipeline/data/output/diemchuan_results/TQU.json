@@ -1,0 +1,50 @@
+{
+  "university_code": "TQU",
+  "university_name": "Trường Đại học Tân Trào",
+  "found_url": "https://giaoducthoidai.vn/nganh-hoc-co-diem-chuan-cao-nhat-truong-dai-hoc-tan-trao-la-235-diem-post745292.html",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 5,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị Dịch vụ Du lịch và Lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công tác xã hội",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.6,
+      "scale": 30
+    }
+  ]
+}

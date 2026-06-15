@@ -1,0 +1,25 @@
+# Vietnamese university admission crawl pipeline — Python dependencies
+# Verified against Vertex AI / Gemini docs as of June 2026.
+
+# Google Gen AI SDK — the recommended SDK for Gemini on Vertex AI.
+# NOTE: the old `vertexai.generative_models` module is removed on 2026-06-24, do NOT use it.
+google-genai>=1.0.0
+
+# Supabase Python client (supabase-py v2).
+supabase>=2.0.0
+
+# Load configuration from the .env file.
+python-dotenv>=1.0.0
+
+# Fetch + clean HTML for the extraction step.
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# Extract text from PDF admission plans (deep_crawl). Scanned PDFs fall back
+# to Gemini multimodal.
+pdfplumber>=0.11.0
+
+# Headless-browser fallback for JS-rendered / anti-bot pages (fetcher).
+# After install run once: playwright install chromium
+playwright>=1.40.0

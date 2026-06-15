@@ -1,0 +1,246 @@
+id,university_code,major_name,year,old_min,old_max,new_min,new_max,unit_original,confidence,action
+2ae5b2fa-d83c-4fff-a1ea-946b77cbb5a5,DPT,Công nghệ thông tin,2026,10,10,10,10,triệu VND/năm,high,updated
+bcfd149a-2599-4c10-b7aa-9485a96782e0,DPT,Quản trị dịch vụ du lịch và lữ hành,2026,10,10,10,10,triệu/năm,high,updated
+e7f4e2f3-fdb8-4e81-bef8-3e62ce2d548b,DPT,Quản trị khách sạn,2026,10,10,10,10,triệu/năm,high,updated
+103b4b00-5231-40c5-93bc-7a7b49521ef4,DPT,Quản trị nhà hàng và dịch vụ ăn uống,2026,10,10,10,10,triệu/năm,high,updated
+1ed7cc2c-8ce2-41c2-b2ef-8eb7f1119407,DPT,Logistics và Quản lý chuỗi cung ứng,2026,10,10,10,10,triệu/học kỳ,low,skipped_low
+6a585517-e5b5-4ed3-8243-68438be4cca4,AOF,Kế toán căn bản cho người mới bắt đầu,2026,2.8,2.8,2.8,2.8,triệu VND/khóa,low,skipped_low
+161ce463-c1d1-4f8f-82aa-290a08f7163f,BKA,Kỹ thuật sinh học,2026,28,40,28,40,triệu VND/năm,high,updated
+67975732-3c16-43c3-87dd-07bac5ef1ea2,BKA,Kỹ thuật thực phẩm,2026,28,40,28,40,triệu VND/năm,high,updated
+047c02a6-b86a-406b-9209-f8f853dc77df,BKA,Kỹ thuật thực phẩm,2026,35,50,35,50,triệu VND/năm,high,updated
+767e1a84-4010-4216-861a-75a46c2556a8,BKA,Kỹ thuật sinh học,2026,35,50,35,50,triệu VND/năm,high,updated
+cb21bce5-3814-4fc7-afa0-6e90cedc20d1,BKA,Kỹ thuật hóa học,2026,28,40,28,40,triệu VND/năm,high,updated
+63f1c310-6344-44e8-9f18-06ee6fa2d05d,BKA,Hoá học,2026,28,40,28,40,triệu VND/năm,high,updated
+1dcf47b6-323a-4ccc-ba0e-8f37aec4c6c4,BKA,Kỹ thuật hóa học,2026,35,50,35,50,triệu VND/năm,high,updated
+9a8ba7a9-584b-487a-8b86-50f793733e33,BKA,Hoá học,2026,35,45,35,45,triệu VND/năm,high,updated
+cd41392f-c3e1-48b5-a0f0-cbd47e4d9f65,BKA,Công nghệ giáo dục,2026,28,40,28,40,triệu VND/năm,high,updated
+486228f8-5c72-4c3c-b892-00f0f4dbf84c,BKA,Quản lý giáo dục,2026,28,40,28,40,triệu VND/năm,high,updated
+97252370-425b-4c56-80b2-97e34083ad1e,BKA,Tâm lý học,2026,28,40,28,40,triệu VND/năm,high,updated
+cae61b30-a96b-46f8-8dc1-345a59aa4db6,BKA,Kỹ thuật điện,2026,28,40,28,40,triệu VND/năm,high,updated
+7e5cf274-cf49-457f-abcc-be559092472b,BKA,Kỹ thuật điều khiển và tự động hoá,2026,28,40,28,40,triệu VND/năm,high,updated
+5d1421d8-0b2f-4851-84f9-9560932a31f0,BKA,Kỹ thuật điện,2026,35,50,35,50,triệu VND/năm,high,updated
+ae2949f7-f033-49ff-81b6-2408fb5427a6,BKA,Kỹ thuật điều khiển và tự động hoá,2026,35,50,35,50,triệu VND/năm,high,updated
+6761ebc8-2ed3-4b76-baeb-d51c32410db6,BKA,Kỹ thuật điều khiển và tự động hoá,2026,40,45,40,45,triệu VND/năm,high,updated
+bf8c4ec7-ecdf-43bb-ab26-304501b41778,BKA,Kinh tế công nghiệp,2026,28,40,28,40,triệu VND/năm,high,updated
+57ddd0fc-62a4-480d-9221-e17f7f605d81,BKA,Quản lý công nghiệp,2026,28,40,28,40,triệu VND/năm,high,updated
+55350711-4e9b-403b-be46-1eebfe957a85,BKA,Quản trị kinh doanh,2026,28,40,28,40,triệu VND/năm,high,updated
+e55bf00f-c62b-4111-b9a8-fd1ae475f375,BKA,Tài chính - Ngân hàng,2026,28,40,28,40,triệu VND/năm,high,updated
+072fbd28-f3ad-4aaa-a231-6b492ed6aff5,BKA,Quản trị kinh doanh,2026,35,50,35,50,triệu VND/năm,high,updated
+9deb28cc-0da3-40bd-92a7-df8d119eeaff,BKA,Logistics và quản lý chuỗi cung ứng,2026,65,65,65,65,triệu VND/năm,high,updated
+62acc835-d189-4b2f-9380-c182cca0eb33,BKA,Kế toán,2026,35,45,35,45,triệu VND/năm,high,updated
+976d66e8-43b8-4c1a-8d3e-4061078accf3,BKA,Kỹ thuật điện tử - viễn thông,2026,28,40,28,40,triệu VND/năm,high,updated
+a63cb9b1-4b0e-4924-9859-75eae63c9d40,BKA,Kỹ thuật y sinh,2026,28,40,28,40,triệu VND/năm,high,updated
+d852b558-aa60-484a-80ac-2b10b874cd56,BKA,Kỹ thuật điện tử - viễn thông,2026,35,50,35,50,triệu VND/năm,high,updated
+532087b9-8591-4549-b7d8-8c2cace71e39,BKA,Kỹ thuật điện tử - viễn thông,2026,35,50,35,50,triệu VND/năm,high,updated
+578c7fae-4a25-43b4-9a55-1e524c70574a,BKA,Kỹ thuật y sinh,2026,35,50,35,50,triệu VND/năm,high,updated
+5fb716d7-934c-4c95-a593-8068d4e379ff,BKA,Kỹ thuật điện tử - viễn thông,2026,40,50,40,50,triệu VND/năm,high,updated
+f049b8e6-f75b-43b1-b93f-3a86da45baae,BKA,Kỹ thuật điện tử - viễn thông,2026,24,30,24,30,triệu VND/năm,high,updated
+e90e8bf3-2d36-40e6-9222-56b2a606cda2,BKA,Kỹ thuật môi trường,2026,28,40,28,40,triệu VND/năm,high,updated
+0947d84b-52f5-4944-b6df-f49ac89e0693,BKA,Quản lý tài nguyên và môi trường,2026,28,40,28,40,triệu VND/năm,high,updated
+083ab8fb-ce5a-4849-bf78-e8ea85c17c88,BKA,Ngôn ngữ Anh,2026,28,40,28,40,triệu VND/năm,high,updated
+a1ee01ec-688a-4c61-86ce-57c2b40b6c5c,BKA,Ngôn ngữ Anh,2026,55,55,55,55,triệu VND/năm,high,updated
+5d79d19d-9281-4aff-bd7a-de164ef964c3,BKA,Ngôn ngữ Trung Quốc,2026,28,40,28,40,triệu VND/năm,high,updated
+89e9c365-c7af-40bf-b2e4-f5f0151e795f,BKA,Ngôn ngữ Hàn Quốc,2026,28,40,28,40,triệu VND/năm,high,updated
+49008549-fc53-45dc-ac4e-8a9c38bb5d92,BKA,Kỹ thuật nhiệt,2026,28,40,28,40,triệu VND/năm,high,updated
+1a0adcd5-760a-4ae0-b3fb-701bdd126f0c,BKA,Khoa học máy tính,2026,28,40,28,40,triệu VND/năm,high,updated
+99a05f7b-952b-4031-8e10-80f0334b44ed,BKA,Kỹ thuật máy tính,2026,28,40,28,40,triệu VND/năm,high,updated
+80e3b874-935f-4f2b-b9fc-3783d8e93c5b,BKA,Khoa học dữ liệu,2026,35,50,35,50,triệu VND/năm,high,updated
+309ffd86-fc41-45a1-9362-e4c2f9580087,BKA,An toàn thông tin,2026,35,50,35,50,triệu VND/năm,high,updated
+c4dd15ea-03bc-4da0-90e1-1591bc13bcec,BKA,Công nghệ thông tin,2026,40,50,40,50,triệu VND/năm,high,updated
+50016d0b-eb1e-47df-ab2a-3ecc51cc8a80,BKA,Công nghệ thông tin,2026,35,50,35,50,triệu VND/năm,high,updated
+1af57aed-63b4-4567-99a0-08b09c13564b,BKA,Công nghệ thông tin,2026,40,50,40,50,triệu VND/năm,high,updated
+d1b7d60a-0ae0-4ba8-ad45-2ee7eb577e55,BKA,Kỹ thuật cơ điện tử,2026,28,40,28,40,triệu VND/năm,high,updated
+7102d446-8cbf-4c94-857d-f080d0749e81,BKA,Kỹ thuật cơ khí,2026,28,40,28,40,triệu VND/năm,high,updated
+e85ca605-3fd1-42ae-ade0-4236803f1e80,BKA,Kỹ thuật cơ điện tử,2026,35,50,35,50,triệu VND/năm,high,updated
+075e76ce-56f7-470b-a5f9-8e92d8747ab7,BKA,Kỹ thuật cơ khí,2026,24,30,24,30,triệu VND/năm,high,updated
+1f720bbf-2494-4067-89c7-58b40e43d362,BKA,Kỹ thuật cơ điện tử,2026,24,30,24,30,triệu VND/năm,high,updated
+e0152f41-afc1-4e1e-96fd-4330b4b0c678,BKA,Kỹ thuật cơ điện tử,2026,24,30,24,30,triệu VND/năm,high,updated
+61b73100-1d4b-4c39-bcc4-a836f863a6d9,BKA,Toán tin,2026,28,40,28,40,triệu VND/năm,high,updated
+729b7524-785a-40bf-9d41-d5aa36d53aaf,BKA,Hệ thống thông tin quản lý,2026,28,40,28,40,triệu VND/năm,high,updated
+a9fed559-56bd-4d8f-9e47-50ae59dc1673,BKA,Khoa học tính toán,2026,35,45,35,45,triệu VND/năm,high,updated
+b25b1c9f-8137-41de-9876-d9c4694ae4b4,BKA,Kỹ thuật vật liệu,2026,28,40,28,40,triệu VND/năm,high,updated
+d4e0b486-6681-4d0a-885f-5348f7d8635d,BKA,Khoa học vật liệu,2026,28,40,28,40,triệu VND/năm,high,updated
+cb71b179-d3c4-4b78-a748-7c9ae22d5031,BKA,Công nghệ vật liệu,2026,28,40,28,40,triệu VND/năm,high,updated
+3abc5861-13e9-498a-96ee-4aab2eaf5f35,BKA,Kỹ thuật In,2026,28,40,28,40,triệu VND/năm,high,updated
+2c3f4e2f-c5b2-4fb5-8408-ec3c4eaab748,BKA,Kỹ thuật vật liệu,2026,35,50,35,50,triệu VND/năm,high,updated
+518885bc-e518-475c-b2b6-be7074854ed3,BKA,Vật lý kỹ thuật,2026,28,40,28,40,triệu VND/năm,high,updated
+428b7736-24a5-48ab-9200-7026bbf6efab,BKA,Kỹ thuật hạt nhân,2026,28,40,28,40,triệu VND/năm,high,updated
+85256b62-b248-4a95-ac05-d1cd8d42c38c,BKA,Kỹ thuật hạt nhân,2026,28,40,28,40,triệu VND/năm,high,updated
+f621b05e-04e8-4481-b58c-0097c2f41d00,BKA,Kỹ thuật ô tô,2026,28,40,28,40,triệu VND/năm,high,updated
+15a5b21d-4caa-4bba-81ea-dafe33053e6e,BKA,Kỹ thuật cơ khí động lực,2026,28,40,28,40,triệu VND/năm,high,updated
+55e8fc6f-c315-40a3-92ad-a95671396a32,BKA,Kỹ thuật hàng không,2026,28,40,28,40,triệu VND/năm,high,updated
+8e56d5f4-ab52-4711-a744-8056f50ba035,BKA,Kỹ thuật ô tô,2026,35,50,35,50,triệu VND/năm,high,updated
+8a7ce9e1-243f-4507-ad02-482a4951bbe3,BKA,Kỹ thuật hàng không,2026,40,45,40,45,triệu VND/năm,high,updated
+eb973e67-6867-4553-bb5b-71bda96e60fb,BKA,Khoa học máy tính,2026,33,33,66,66,triệu VND/học kỳ,high,updated
+03a639d1-460e-4f4f-9489-af44c7f02064,BKA,"Công nghệ dệt, may",2026,28,40,28,40,triệu VND/năm,high,updated
+4f54cfbc-0995-4cfd-8730-0ffdbe2a3ad2,BVH,Kỹ thuật Điện tử viễn thông,2026,35.9,40.7,35.9,40.7,triệu VND/năm,high,updated
+ddf20418-255a-479d-a001-27bdf83f2862,BVH,Công nghệ thông tin,2026,35.9,40.7,35.9,40.7,triệu VND/năm,high,updated
+7429b593-f215-434d-bceb-11179febeb95,BVH,Công nghệ thông tin (chất lượng cao),2026,44.8,58.3,44.8,58.3,triệu VND/năm,high,updated
+0409877d-3100-4888-af47-3599852d0484,BVH,Kỹ thuật Điện tử viễn thông,2025,29.6,37.6,29.6,37.6,triệu VND/năm,high,updated
+d081783b-cd3d-4586-811d-a77b0f9d6d10,BVH,Công nghệ thông tin,2025,29.6,37.6,29.6,37.6,triệu VND/năm,high,updated
+e9ffef9b-4f49-40f6-8f2f-35fcdf462744,BVH,Công nghệ thông tin (Chất lượng cao),2025,49.2,55.0,49.2,55.0,triệu VND/năm,high,updated
+90a6c1d1-844f-4c77-8eec-b50cea495002,BVH,Công nghệ thông tin (Liên kết quốc tế),2025,54.0,62.5,54.0,62.5,triệu VND/năm,high,updated
+620bd087-f583-4886-a75c-d9dfede6b695,DBS,Kinh tế phát triển,2026,1650000,1650000,1.65,1.65,VND/tín chỉ,low,skipped_low
+eaa94527-dc9c-4704-8960-64c72060b2b9,DBS,Tài chính công,2026,1650000,1650000,33.0,33.0,VND/tín chỉ (đã nhân với 20 tín chỉ/năm theo quy định đào tạo thạc sĩ UEH),low,skipped_low
+da408e2e-17f1-4861-8e07-fedbb4df5b29,DBS,Quản lý công,2026,1650000,1650000,1.65,1.65,VND/tín chỉ,low,skipped_low
+87190c9b-838b-4f43-b056-d784c0b6a64f,DBS,Quản trị đô thị thông minh và sáng tạo,2026,1650000,1650000,16.5,16.5,triệu VND/học kỳ,high,updated
+38a1c573-a519-46c5-9e46-9d6c7877e976,DBS,Quản trị Đổi mới sáng tạo và khởi nghiệp,2026,1650000,1650000,1.65,1.65,VND/tín chỉ,low,skipped_low
+4886ae8d-d647-4040-b91a-96ef974cc55b,DBS,Quản lý kinh tế,2026,1650000,1650000,16.5,16.5,VND/tháng,high,updated
+33508c49-71f7-40ac-a0a4-30577c9a40cd,DBS,Kế toán,2026,1650000,1650000,1.65,1.65,VND/tín chỉ,low,skipped_low
+427f445b-5a8f-4a33-8c4f-67cf17354a87,DBS,Kinh tế chính trị,2026,1650000,1650000,16.5,16.5,VND/tháng,high,updated
+d4c9aebc-d51c-4cb6-b2ee-cbca453235e5,DBS,Quản trị kinh doanh (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+0f4f42b5-af98-47d5-9c2c-ea4f88a5226e,DBS,Quản trị công nghệ (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+df55d673-cd48-49ea-8844-c4789896fe24,DBS,Marketing (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+4ea185d0-b0c2-48eb-a6e3-186dd74230c5,DBS,Kinh doanh quốc tế (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+e6985f49-0010-42c3-ba38-8e3af91877b1,DBS,Ngân hàng (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+a1f6e44b-dfaf-4ffe-b790-9669c2dc1a74,DBS,Tài chính (Tiếng Anh),2026,2145000,2145000,2.145,2.145,VND/tín chỉ,low,skipped_low
+3b86f8fd-0779-47f7-b36b-089e82e6fb58,DBS,Quản trị kinh doanh (Điều hành cao cấp),2026,3000000,3000000,3,3,triệu VND/tín chỉ,low,skipped_low
+45849855-5db6-48f3-92a7-91c0d5db040c,DBS,Tài chính (Điều hành cao cấp),2026,3000000,3000000,3,3,"VND (đơn vị gốc không rõ ràng, có thể là phí hồ sơ hoặc phí khác, không phải học phí năm)",low,skipped_low
+621671b4-b95c-481a-8858-c4b4b64bbf65,DBS,Ngân hàng (Điều hành cao cấp),2026,3000000,3000000,3,3,triệu VND/tín chỉ,low,skipped_low
+6913ca24-51c1-44be-bbf9-f8e8cabc15c3,DBS,Marketing (Điều hành cao cấp),2026,3000000,3000000,30,30,VND/tín chỉ (tổng 10 tín chỉ cho 1 học phần),low,skipped_low
+f9cc3122-1eeb-4831-915d-9e4ac72c0657,DBS,Kinh tế chính trị,2026,45,45,45,45,triệu VND/năm,high,updated
+2dddf612-c97b-49c2-bc16-82ca99a39ec8,DBS,Kinh tế phát triển,2026,45,45,45,45,triệu VND/năm,high,updated
+130e3880-4dcf-42e8-b20b-5addedbc82b3,DBS,Quản trị nhân lực,2026,45,45,45,45,triệu VND/năm,high,updated
+eb0d66b1-5318-4cc5-9fbd-39e782eb58c3,DBS,Quản lý kinh tế,2026,45,45,45,45,triệu VND/năm,high,updated
+f6ee0d93-7646-4b32-a8a4-cf5ed908983e,DBS,Quản lý công,2026,45,45,45,45,triệu VND/năm,high,updated
+63e54047-93a2-4a97-a047-15f6aeacf7f3,DBS,Tài chính – Ngân hàng,2026,45,45,45,45,triệu VND/năm,high,updated
+17a53851-a6c0-44de-9370-4df7fede9829,DBS,Quản trị kinh doanh,2026,45,45,45,45,triệu VND/năm,high,updated
+cf49bab2-3098-4a12-a619-aaa27fb43574,DBS,Kinh doanh thương mại,2026,45,45,45,45,triệu VND/năm,high,updated
+8e38e073-9486-4a5f-adf8-19c739a8b763,DBS,Kế toán,2026,45,45,45,45,triệu VND/năm,high,updated
+1c07be3b-18f6-431f-ad9b-24b88e335e28,DBS,Thống kê,2026,45,45,,,unknown,low,skipped_low
+8a21cc0a-2c74-4723-8a78-5b872cee9616,DBS,Luật kinh tế,2026,45,45,45,45,triệu VND/năm,high,updated
+ff5acfe7-9b10-449b-9282-0633167f660f,DCN,Thiết kế thời trang,2026,25,31,25,31,triệu VND/năm,high,updated
+94a759f4-08bf-48b3-8877-9b4850f128c0,DCN,Ngôn ngữ Anh,2026,25,31,25,31,triệu VND/năm,high,updated
+4b7c9f4e-8563-46b9-b226-1cc2e29b8007,DCN,Công nghệ thông tin,2026,25,31,25,31,triệu VND/năm,high,updated
+adf72f2d-70e9-4497-bc7e-f98997889012,DCN,Công nghệ thông tin (CTĐT bằng tiếng Anh),2026,36,44,36,44,triệu VND/năm,high,updated
+84f2aa35-9d49-4ae6-acc1-2482fd4b0631,DFL,Sư phạm tiếng Anh,2026,26.7,26.7,26.7,26.7,triệu VND/năm,high,updated
+8d5af414-b53a-49ed-b45f-79dab9a85fa2,DFL,Sư phạm tiếng Pháp,2026,26.7,26.7,26.7,26.7,triệu VND/năm,high,updated
+afe827f4-edfe-4dea-a796-0a021635473c,DFL,Sư phạm tiếng Trung Quốc,2026,26.7,26.7,26.7,26.7,triệu VND/năm,high,updated
+8c09bd0c-b0a4-470d-9f85-07aedf29989e,DFL,Sư phạm tiếng Hàn Quốc,2026,26.7,26.7,26.7,26.7,triệu VND/năm,high,updated
+f6151fbc-0e0b-46d1-809c-b4b449de4ed9,DFL,Ngôn ngữ Anh,2026,26.7,26.7,26.7,26.7,triệu VND/năm,high,updated
+4c9e45a3-3cf6-4dde-9621-b845fe304ac2,DFL,Ngôn ngữ Nga,2026,24.8,24.8,24.8,24.8,triệu VND/năm,high,updated
+0dcb8d18-9fa7-4d82-b7f5-bdaed0057360,DFL,Ngôn ngữ Pháp,2026,24.8,24.8,24.8,24.8,triệu VND/năm,high,updated
+a07d14e9-679a-4ce1-a631-d3d644f064da,DFL,Ngôn ngữ Trung Quốc,2026,26.7,26.7,26.7,26.7,triệu VND/năm,high,updated
+a693aa21-1b1e-4770-895e-a15f2013e3e4,DFL,Ngôn ngữ Nhật,2026,26.7,26.7,26.7,26.7,triệu VND/năm,high,updated
+96302683-fb20-407f-97cf-4a80ce40b5db,DFL,Ngôn ngữ Hàn Quốc,2026,26.7,26.7,26.7,26.7,triệu VND/năm,high,updated
+f39ebfd0-0170-4684-95dd-d18b377c11cd,DFL,Ngôn ngữ Thái Lan,2026,24.8,24.8,24.8,24.8,triệu VND/năm,high,updated
+df22af70-5998-48e7-9d20-4a3af500e471,DFL,Quan hệ quốc tế,2026,24.8,24.8,24.8,24.8,triệu VND/năm,high,updated
+41ac0f5b-b689-4124-b742-2ca1acc75311,DFL,Quốc tế học,2026,24.8,24.8,24.8,24.8,triệu VND/năm,high,updated
+6e836422-f5bd-43f0-a175-e64db37f7da6,DFL,Đông phương học,2026,24.8,24.8,24.8,24.8,triệu VND/năm,high,updated
+2c758194-5d84-4d5b-9b77-15f9b4c3dcd4,DFL,Nhật Bản học,2026,26.7,26.7,26.7,26.7,triệu VND/năm,high,updated
+e01ace66-2ce5-45c7-998e-1cf4a1c21243,DFL,Hàn Quốc học,2026,26.7,26.7,26.7,26.7,triệu VND/năm,high,updated
+bb803966-c941-478b-83eb-72b44d1652c8,DFL,Tiếng Việt và văn hóa Việt Nam,2026,24.8,24.8,24.8,24.8,triệu VND/năm,high,updated
+15988fc2-2ab6-41cc-b503-9f121f63f7d9,DHK,Sinh học,2026,38.6,38.6,38.6,38.6,triệu VND/năm,high,updated
+20ee4a9e-989c-443b-b4fd-8ae2cf551096,DHK,Sinh học (Chương trình tăng cường tiếng Anh),2026,54.6,54.6,54.6,54.6,triệu VND/năm,high,updated
+17f0dafe-f2ca-495f-9c70-d842bb03c378,DHK,Công nghệ Sinh học,2026,38.6,38.6,38.6,38.6,triệu VND/năm,high,updated
+600088a5-fc1d-4a1e-8efd-7b52172ccb64,DHK,Công nghệ Sinh học (Chương trình tăng cường tiếng Anh),2026,54.6,54.6,54.6,54.6,triệu VND/năm,high,updated
+5dc4f9c1-0d3a-4db2-adcd-c04ad93fb572,DHK,Vật lý học (Chương trình tăng cường tiếng Anh),2026,50.8,50.8,50.8,50.8,triệu VND/năm,high,updated
+62edb9eb-e71d-4bf1-b4b4-6cfb40cf3665,DHK,Công nghệ bán dẫn,2026,38.6,38.6,38.6,38.6,triệu VND/năm,high,updated
+2aba9ef2-bd99-4eb0-b05e-40cd7b910899,DHK,Hoá học,2026,38.6,38.6,38.6,38.6,triệu VND/năm,high,updated
+f9ebb931-8b90-43ba-aec5-b11518a7078e,DHK,Hóa học (Chương trình tăng cường tiếng Anh),2026,58.9,58.9,58.9,58.9,triệu VND/năm,high,updated
+b3f0d7dd-7baa-4994-857d-1f5dfa55c681,DHK,Khoa học máy tính (Chương trình Tiên tiến),2026,70.0,70.0,70.0,70.0,triệu VND/năm,high,updated
+b43d4ada-1523-4b33-bfd6-332eb0042873,DHK,Thiết kế vi mạch,2026,40.5,40.5,40.5,40.5,triệu VND/năm,high,updated
+1b410a27-8c94-43f0-82e7-a2c96431ec24,DPT,Luật,2026,10,10,10,10,triệu VND/năm,high,updated
+0b25dcb9-4bdd-48f7-8478-d6a9b92d93d6,DPT,Luật kinh tế,2026,10,10,10,10,triệu/năm,high,updated
+2ad50de8-cf62-46c9-8f11-d909af923e69,DPT,Ngôn ngữ Anh,2026,10,10,10,10,triệu VND/năm,high,updated
+c9864da6-5d8b-4868-acfd-a6765cf305c5,DPT,Kỹ thuật xây dựng,2026,10,10,10,10,triệu/năm,high,updated
+4f658352-0a94-4ab1-b22e-09ccd26e3ce7,DPT,Quản trị kinh doanh,2026,10,10,10,10,triệu/năm,high,updated
+d2a2a91f-6181-4f0e-994f-4e1f17b47ff4,DPT,Tài chính – Ngân hàng,2026,10,10,10,10,triệu VND/năm,high,updated
+d33709ed-64ea-43ab-8453-c48dcb061d65,DPT,Kế toán,2026,10,10,10,10,triệu/năm,high,updated
+ab02c587-2f9e-462d-9cf6-fb7cff6efcf4,DPT,Kỹ thuật cơ khí,2026,10,10,10,10,triệu VND/năm,high,updated
+84363d7b-6085-4eaa-9129-4ff4419ef7e5,DPT,Kỹ thuật ô tô,2026,10,10,10,10,triệu VND/năm,high,updated
+98570d23-f370-4f4a-8a1e-e3abda09dff7,DPT,Kỹ thuật xét nghiệm y học,2026,10,10,10,10,triệu/học kỳ,high,updated
+bf482fde-8b0e-42f8-9028-fb7d94ea93d7,DPT,"Công nghệ kỹ thuật điện, điện tử",2026,10,10,10,10,triệu/năm,high,updated
+4913708c-ff44-49c9-888d-411e0f49acc8,DQN,Quản lý giáo dục,2026,83,97,8.3,9.7,trăm nghìn VND/tín chỉ (ước tính dựa trên khung học phí công lập),low,skipped_low
+42d38ebc-80f5-43f3-99c4-afde14904221,DQN,Giáo dục Mầm non,2026,83,97,8.3,9.7,triệu VND/học kỳ,high,updated
+a9d24111-fc0f-4933-b2a5-ba00f3b124fb,DQN,Giáo dục Tiểu học,2026,83,97,8.3,9.7,triệu VND/học kỳ,high,updated
+f782541a-20ef-4194-ad26-e96836951cfe,DQN,Kế toán (Định hướng ACCA),2026,124.5,145.5,124.5,145.5,triệu VND/năm,high,updated
+1e093393-f8b8-4fe9-be97-61397549eb35,DTH,Quản trị kinh doanh,2025,70,85,70,85,triệu VND/năm,high,updated
+b2b61c7d-5b3f-4595-99d5-e5330b157994,DTH,Tài chính - Ngân hàng,2025,70,85,70,85,triệu VND/năm,high,updated
+961074cd-2d68-4489-9ce1-6183f381f29d,DTH,Logistics và Quản lý chuỗi cung ứng,2025,70,85,70,85,triệu VND/năm,high,updated
+a6e3a87d-de8e-4485-8949-bf679919a973,DTH,Điều dưỡng,2025,70,85,70,85,triệu VND/năm,high,updated
+a7d670e6-1bab-43c3-b74e-70e559bcd772,DTH,Y tế công cộng,2025,70,85,70,85,triệu VND/năm,high,updated
+7db14865-a490-4776-bb27-35c5a96dbb4d,DTH,Quản lý bệnh viện,2025,70,85,70,85,triệu VND/năm,high,updated
+f040e97c-50d8-49cb-b06e-2d4af67ac571,DTH,Nghệ thuật âm nhạc,2025,70,85,70,85,triệu VND/năm,high,updated
+9b476dac-9638-4b1c-b313-b2c49316f531,DTH,Toán ứng dụng,2025,110,110,110,110,triệu VND/năm,high,updated
+296f8f67-ce6c-4512-a603-68b89da77662,DTH,Quản trị kinh doanh,2025,120,120,120,120,triệu/năm,high,updated
+ba696f8c-5a1c-404d-bb77-2541d7a19dd4,HBT,Công nghệ Thực phẩm,2025,20,20,20,20,triệu/năm,high,updated
+76205766-b0d5-47c2-9dad-eccd261e16aa,NHA,Âm nhạc học,2026,1.71,1.71,17.1,17.1,triệu VND/năm,high,updated
+815b9993-ead0-45fd-8eca-6c482a121074,NHA,Sáng tác âm nhạc,2026,1.71,1.71,17.1,17.1,triệu đồng/năm,high,updated
+89c41cc4-7909-44e9-9199-5a7582da860c,NHA,Chỉ huy,2026,1.71,1.71,17.1,17.1,triệu đồng/năm,high,updated
+03c05379-ee1d-4779-8fac-897d69d71971,NHA,Thanh nhạc,2026,1.71,1.71,17.1,17.1,triệu đồng/năm,high,updated
+7b48bd95-af79-48de-a88a-bbd28085e4ff,NHA,Biểu diễn nhạc cụ phương Tây,2026,1.71,1.71,17.1,17.1,triệu đồng/năm,high,updated
+d6f38112-eb45-4dc5-9f1c-2496dda2ea06,NHA,Piano,2026,1.71,1.71,17.1,17.1,triệu đồng/năm,high,updated
+a2b36d7b-304d-4928-b695-c1267c478c8e,NHA,Nhạc Jazz,2026,1.71,1.71,17.1,17.1,triệu VND/năm,high,updated
+eb82b642-4c0f-44f1-b04c-8074fcad5e11,NHA,Biểu diễn nhạc cụ truyền thống,2026,1.71,1.71,17.1,17.1,triệu đồng/năm,high,updated
+71196098-d7e7-4723-8af2-d2460beaf3f8,QHI,Công nghệ thông tin,2026,44,44,44,44,triệu đồng/năm,high,updated
+a12aaaab-2e3f-466b-b677-a4023690a232,QHI,Kỹ thuật máy tính,2026,44,44,44,44,triệu VND/năm,high,updated
+b38e2d9e-b0ba-4acd-903e-cdf3fb29a004,QHI,Vật lý kỹ thuật,2026,44,44,44,44,triệu VND/năm,high,updated
+8dea9d30-b871-4fea-9ac3-004d35328259,QHI,Cơ kỹ thuật,2026,44,44,44,44,triệu VND/năm,high,updated
+78af7b69-cea9-44c0-832d-fa538e3acb2e,QHI,Công nghệ kỹ thuật xây dựng,2026,44,44,44,44,triệu VND/năm,high,updated
+a3069a90-8406-4dfc-8797-0e676383b62d,QHI,Công nghệ kỹ thuật cơ - điện tử,2026,44,44,44,44,triệu VND/năm,high,updated
+14cd53f7-b4bb-4662-b142-277d49709ff2,QHI,Công nghệ hàng không vũ trụ,2026,44,44,44,44,triệu VND/năm,high,updated
+110170ef-9e4d-42dc-ae05-9aefd84c0337,QHI,Khoa học máy tính,2026,44,44,44,44,triệu đồng/năm,high,updated
+19397d3a-f0d3-4136-a9b2-fa43980ed441,QHI,Công nghệ kỹ thuật điện tử – viễn thông,2026,44,44,44,44,triệu VND/năm,high,updated
+1b7b02bf-9576-4444-a547-9ccf204f34ba,QHI,Công nghệ nông nghiệp,2026,44,44,44,44,triệu VND/năm,high,updated
+acca026f-5f2c-4099-98e6-2d73a1fca180,QHI,Kỹ thuật điều khiển và tự động hoá,2026,44,44,44,44,triệu VND/năm,high,updated
+7d059687-7571-4a3d-a31b-b1fe29363b73,QHI,Trí tuệ nhân tạo,2026,44,44,44,44,triệu VND/năm,high,updated
+f1d3bf91-2911-402f-ba86-923bddd5b910,QHI,Kỹ thuật năng lượng,2026,44,44,44,44,triệu VND/năm,high,updated
+0229d09e-1bb9-483c-937c-2a446d2f59ec,QHI,Hệ thống thông tin,2026,44,44,44,44,triệu VND/năm,high,updated
+8339e5fa-652e-4199-8aaa-35402e5ae3a1,QHI,Mạng máy tính và truyền thông dữ liệu,2026,44,44,44,44,triệu đồng/năm,high,updated
+75e964cd-37d7-416e-b57e-067f0a70070e,QHI,Kỹ thuật Robot,2026,44,44,44,44,triệu VND/năm,high,updated
+a13c8209-9e7c-4b58-b64c-10f2151f1753,QHI,Thiết kế công nghiệp và Đồ họa,2026,44,44,44,44,triệu VND/năm,high,updated
+74c36108-8ddb-4cc1-aece-93ee8d8cb8c6,QHI,Công nghệ vật liệu và Vi điện tử,2026,38,38,38,38,triệu VND/năm,high,updated
+6019ce6e-7754-4cd3-bbff-b00c2786594a,QHI,Khoa học và Kỹ thuật dữ liệu,2026,38,38,38,38,triệu VND/năm,high,updated
+df9a01f8-dcff-4cce-afa5-b161165e4be3,QHI,Công nghệ kỹ thuật sinh học,2026,38,38,38,38,triệu VND/năm,high,updated
+9d248bf9-618a-47e0-878a-c76024ade3f3,QHL,Luật,2025,104.4,104.4,104.4,104.4,triệu VND/năm,high,updated
+3efac039-9420-48d0-8654-b679f3879660,QHL,Luật chất lượng cao,2025,166.1,166.1,166.1,166.1,triệu VND/năm,high,updated
+0fc13f51-e2bb-421c-bd74-ea068de9d2f1,QHL,Luật kinh doanh,2025,149.5,149.5,149.5,149.5,triệu VND/năm,high,updated
+d5e79b8e-38fc-4d1b-8799-bb15afebbe36,QHL,Luật thương mại quốc tế,2025,141.2,141.2,141.2,141.2,triệu VND/năm,high,updated
+b4c3e40a-37c6-429f-ae29-6533b2adfef7,QHL,Luật,2025,104.4,104.4,104.4,104.4,triệu VND/năm,high,updated
+c083498f-754d-410a-9c22-bf35e06c8a8b,QHL,Luật chất lượng cao,2025,166.1,166.1,166.1,166.1,triệu VND/năm,high,updated
+badeb37a-85db-44ff-83e1-c5e9615ffc33,QHL,Luật kinh doanh,2025,149.5,149.5,149.5,149.5,triệu VND/năm,high,updated
+22aa5d3c-4c2e-4e4f-8cbc-bed590def01b,QHL,Luật thương mại quốc tế,2025,141.2,141.2,141.2,141.2,triệu VND/năm,high,updated
+36ee932f-45b6-4a35-83a0-5464ec2f4cdd,VHH,Văn hóa du lịch,2026,25.5,25.5,25.5,25.5,triệu đồng/năm,high,updated
+a4955650-f3cb-4ca8-9e2d-5a42478a8ee5,VHH,"Lữ hành, hướng dẫn du lịch",2026,25.5,25.5,25.5,25.5,triệu đồng/năm,high,updated
+11034d9d-c167-4931-8717-b8718ce85966,VHH,Hướng dẫn du lịch quốc tế,2026,25.5,25.5,25.5,25.5,triệu đồng/năm,high,updated
+0a347804-c80d-4661-a8cf-79b8444ce4af,VHH,Quản trị kinh doanh du lịch,2026,25.5,25.5,25.5,25.5,triệu đồng/năm,high,updated
+16d55c6b-5cba-4425-8988-e1fb3342f91a,VHH,Quản trị du lịch cộng đồng,2026,25.5,25.5,25.5,25.5,triệu đồng/năm,high,updated
+876b9b9e-ebec-45f9-9ebd-e01d861d5ffd,VHH,Báo chí,2026,25.5,25.5,25.5,25.5,triệu đồng/năm,high,updated
+192334de-fe96-4855-9f5e-2868c63335a2,VHH,Bảo tàng học,2026,24.0,24.0,24.0,24.0,triệu đồng/năm,high,updated
+d2693a4d-1988-4971-b87a-b4e492da0947,VHH,Kinh doanh xuất bản phẩm,2026,24.0,24.0,24.0,24.0,triệu đồng/năm,high,updated
+0591aacd-41ad-4e83-a7ef-e9621de67ea8,VHH,Quản trị thư viện,2026,24.0,24.0,24.0,24.0,triệu VND/năm,high,updated
+2a2a8a41-dbf8-4ad7-ad94-58a1958dee59,VHH,Thư viện và thiết bị trường học,2026,24.0,24.0,24.0,24.0,triệu đồng/năm,high,updated
+41fa0434-bf06-4aa1-a59c-15fdcbf39679,VHH,Quản lý thông tin,2026,25.5,25.5,25.5,25.5,triệu đồng/năm,high,updated
+2e29028e-71e5-4ed2-99e4-ed0d30476257,VHH,Luật,2026,25.5,25.5,25.5,25.5,triệu VND/năm,high,updated
+dbbd3dd7-472e-4128-8e39-3baf4586dfee,VHH,Sáng tác văn học,2026,19.1,19.1,19.1,19.1,triệu đồng/năm,high,updated
+a611b480-5b60-4aa6-94f6-9d8810f46631,VHH,Ngôn ngữ Anh,2026,19.1,19.1,19.1,19.1,triệu đồng/năm,high,updated
+3dd3ebfc-f1a1-401d-b899-f967bec0c051,VKA,Quan hệ quốc tế,2026,5.2,5.2,52,52,triệu/học kỳ,high,updated
+33a724e8-7894-4067-b083-cdd82ae130ad,VKA,Ngôn ngữ Anh,2026,5.0,5.0,50.0,50.0,triệu VND/năm,high,updated
+3e9a0ad0-43ad-458e-8512-304ca60d82b3,VKA,Kinh tế quốc tế,2026,5.2,5.2,52.0,52.0,triệu VND/năm,high,updated
+0df677c2-fb71-4b3d-95e2-f97798fe92f1,VKA,Luật quốc tế,2026,5.1,5.1,51.0,51.0,triệu VND/năm,high,updated
+6c491c55-da45-44b9-82b5-94fb4c443f69,VKA,Truyền thông quốc tế,2026,5.1,5.1,51.0,51.0,triệu VND/năm,high,updated
+a9d713da-4261-4a20-81c2-13cb8b63d519,VKA,Kinh doanh quốc tế,2026,5.2,5.2,52,52,triệu/học kỳ,high,updated
+cee32a16-920c-4047-aede-dd5d438a2698,VKA,Luật thương mại quốc tế,2026,5.1,5.1,51.0,51.0,triệu VND/năm,high,updated
+b0dafe4d-8399-48d3-aad6-2d319dfb2d2e,VKA,Hàn Quốc học,2026,4.775,4.775,47.75,47.75,triệu VND/học kỳ,high,updated
+41ff23c4-216f-4e87-9eaf-9374e81ca7de,VKA,Hoa Kỳ học,2026,4.775,4.775,9.55,9.55,triệu VND/học kỳ,high,updated
+b7187d9f-c184-4715-8bc9-fc8b7303451b,VKA,Nhật Bản học,2026,4.775,4.775,47.75,47.75,triệu VND/học kỳ,high,updated
+250e6c9d-780b-4339-8622-f734fdb1b582,VKA,Trung Quốc học,2026,4.775,4.775,47.75,47.75,triệu VND/học kỳ,high,updated
+4b99a4d8-97d5-41cb-9566-bd69628a9717,YDS,Tâm lý học,2026,30,30,30,30,triệu VND/năm,high,updated
+75f68ee1-0411-4c7d-a4da-61f5ea5278ea,YDS,Y khoa,2026,88,88,88,88,triệu VND/năm,high,updated
+514623d4-6208-463d-988a-3ff3fd733570,YDS,Y học dự phòng,2026,55,55,55,55,triệu đồng/năm,high,updated
+ff053ff7-a2da-4e93-8359-12a63c1a3748,YDS,Y học cổ truyền,2026,55,55,55,55,triệu đồng/năm,high,updated
+56486238-94f8-49c5-a730-139a65ed35c0,YDS,Dược học,2026,63.5,63.5,63.5,63.5,triệu VND/năm,high,updated
+aeee1a9e-0aa8-4e5c-aebe-692dd4fbe774,YDS,Công nghệ dược phẩm,2026,53.5,53.5,53.5,53.5,triệu VND/năm,high,updated
+3da21798-6749-4c13-99ab-44af47d5c9ae,YDS,Hóa dược,2026,52.5,52.5,52.5,52.5,triệu VND/năm,high,updated
+09eb5ada-73aa-42d6-bdc1-82add27ced73,YDS,Điều dưỡng,2026,48,48,48,48,triệu VND/năm,high,updated
+57543e4a-5d1e-4bd9-93e4-b1ecf952a876,YDS,Điều dưỡng chuyên ngành Gây mê hồi sức,2026,48,48,48,48,triệu VND/năm,high,updated
+42b0a7e4-b044-4ab0-98f1-40353671abb8,YDS,Hộ sinh,2026,48,48,48,48,triệu VND/năm,high,updated
+dfff2e9c-9fc5-46d5-8a37-5fe07814d4b6,YDS,Dinh dưỡng,2026,48,48,48,48,triệu VND/năm,high,updated
+0dcb7db3-8d52-4992-b9bb-5914b921ec54,YDS,Răng - Hàm - Mặt,2026,90,90,90,90,triệu VND/năm,high,updated
+aa35935f-f87c-440c-9cd5-4a6ef618cb13,YDS,Kỹ thuật phục hình răng,2026,50,50,50,50,triệu VND/năm,high,updated
+15fab670-e63c-4948-a15b-09e3de369a73,YDS,Kỹ thuật xét nghiệm y học,2026,48,48,48,48,triệu VND/năm,high,updated
+c97cf773-0882-4e35-94e0-56c0cbf7ffba,YDS,Kỹ thuật hình ảnh y học,2026,48,48,48,48,triệu VND/năm,high,updated
+488991e9-f9b0-482b-91a1-94577055d16d,YDS,Kỹ thuật phục hồi chức năng,2026,48,48,48,48,triệu VND/năm,high,updated
+47515612-840e-411d-8c07-b8b09e9ecc95,YDS,Y tế công cộng,2026,46,46,46,46,triệu VND/năm,high,updated
+c1070d69-b317-4f6b-beb5-543faa97881b,YDS,Công tác xã hội,2026,30,30,30,30,triệu VND/năm,high,updated

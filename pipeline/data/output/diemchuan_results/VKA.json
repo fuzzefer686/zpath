@@ -1,0 +1,34 @@
+{
+  "university_code": "VKA",
+  "university_name": "Học viện Ngoại giao",
+  "found_url": "https://thi.tuyensinh247.com/hoc-vien-ngoai-giao-cong-bo-diem-chuan-nam-2025-c24a86988.html",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 3,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Trung Quốc học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.09,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trung Quốc học",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 27.89,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hoa kỳ học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.17,
+      "scale": 30
+    }
+  ]
+}

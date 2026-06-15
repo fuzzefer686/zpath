@@ -1,0 +1,23 @@
+{
+  "university_code": "YHP",
+  "university_name": "Trường Đại học Y Dược Hải Phòng",
+  "found_url": "https://hpmu.edu.vn/hpmu/news/THONG-TIN-TUYEN-SINH/Truong-Dai-hoc-Y-Duoc-Hai-Phong-thong-bao-Thong-tin-tuyen-sinh-Dai-hoc-nam-2026-4533/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 1,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Thạc sĩ Sức khỏe nhiệt đới và Y tế công cộng",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hpmu.edu.vn/hpmu/news/THONG-TIN-TUYEN-SINH/Thong-bao-hoc-bong-toan-phan-chuong-trinh-Thac-si-Suc-khoe-nhiet-doi-va-Y-te-cong-cong-khoa-27-tai-Lao-2026-2028-4565/"
+    }
+  ]
+}

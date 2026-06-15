@@ -1,0 +1,26 @@
+{
+  "university_code": "DQL",
+  "university_name": "Trường Đại học Luật Thành phố Hồ Chí Minh",
+  "found_url": "https://dantri.com.vn/giao-duc/diem-chuan-truong-dai-hoc-luat-tphcm-cao-nhat-o-to-hop-hiem-20250822151519029.htm",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 2,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Luật thương mại quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X78",
+      "score": 25.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật thương mại quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X01",
+      "score": 25.35,
+      "scale": 30
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "university_code": "DDK",
+  "university_name": "Trường Đại học Bách khoa - Đại học Đà Nẵng",
+  "found_url": "https://tuyensinh.dut.udn.vn/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 2,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo đại học",
+      "year": "2026",
+      "admission_method": "dg_tu_duy",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.dut.udn.vn/bai-viet-tuyen-sinh"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo đại học",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.dut.udn.vn/bai-viet-tuyen-sinh"
+    }
+  ]
+}

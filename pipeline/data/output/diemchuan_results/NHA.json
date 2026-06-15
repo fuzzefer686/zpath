@@ -1,0 +1,74 @@
+{
+  "university_code": "NHA",
+  "university_name": "Học viện Âm nhạc Quốc gia Việt Nam",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/hoc-vien-am-nhac-quoc-gia-viet-nam-NVH.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 8,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Âm nhạc học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sáng tác âm nhạc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chỉ huy âm nhạc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thanh nhạc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Biểu diễn nhạc cụ phương tây",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Piano",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhạc Jazz",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Biểu diễn nhạc cụ truyền thống",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    }
+  ]
+}

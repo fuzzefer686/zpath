@@ -1,0 +1,170 @@
+{
+  "university_code": "QHI",
+  "university_name": "Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+  "found_url": "https://uet.vnu.edu.vn/truong-dai-hoc-cong-nghe-cong-bo-diem-chuan-dai-hoc-chinh-quy-nam-2025/",
+  "year": 2025,
+  "status": "success",
+  "num_records": 20,
+  "data": [
+    {
+      "school_major_code": "CN1",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 28.19,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN2",
+      "major_name": "Kỹ thuật máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN3",
+      "major_name": "Vật lý kỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN4",
+      "major_name": "Cơ kỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN5",
+      "major_name": "Công nghệ kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN6",
+      "major_name": "Công nghệ kỹ thuật cơ – điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.73,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN7",
+      "major_name": "Công nghệ hàng không vũ trụ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.96,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN8",
+      "major_name": "Khoa học máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.86,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN9",
+      "major_name": "Công nghệ kỹ thuật điện tử – viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.63,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN10",
+      "major_name": "Công nghệ nông nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN11",
+      "major_name": "Kỹ thuật điều khiển và tự động hoá",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN12",
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN13",
+      "major_name": "Kỹ thuật năng lượng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.87,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN14",
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.38,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN15",
+      "major_name": "Mạng máy tính và truyền thông dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.73,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN17",
+      "major_name": "Kỹ thuật Robot",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN18",
+      "major_name": "Thiết kế công nghiệp và Đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN19",
+      "major_name": "Công nghệ vật liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN20",
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.38,
+      "scale": 30
+    },
+    {
+      "school_major_code": "CN21",
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.13,
+      "scale": 30
+    }
+  ]
+}

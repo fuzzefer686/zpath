@@ -1,0 +1,322 @@
+{
+  "university_code": "DPT",
+  "university_name": "Trường Đại học Phan Thiết",
+  "found_url": "https://upt.edu.vn",
+  "final_tier": 2,
+  "status": "success",
+  "review_status": "pending",
+  "num_records": 16,
+  "data": [
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C01",
+        "D01",
+        "D07",
+        "D90",
+        "D10",
+        "X25"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7810103",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C04",
+        "D01",
+        "D08",
+        "D10",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7810201",
+      "major_name": "Quản trị khách sạn",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C04",
+        "D01",
+        "D10",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7810202",
+      "major_name": "Quản trị nhà hàng và dịch vụ ăn uống",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C04",
+        "D01",
+        "D10",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C01",
+        "D07",
+        "C04",
+        "D01",
+        "X25",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15",
+        "X01",
+        "X25",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật kinh tế",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15",
+        "X01",
+        "X25",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D14",
+        "D15",
+        "D90",
+        "X25",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7580201",
+      "major_name": "Kỹ thuật xây dựng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C01",
+        "D01",
+        "D07",
+        "A04"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "C00",
+        "C04",
+        "D01",
+        "D07",
+        "A04"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính – Ngân hàng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C01",
+        "C04",
+        "D01",
+        "D07",
+        "D10",
+        "X01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C01",
+        "D01",
+        "D07",
+        "X01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7520103",
+      "major_name": "Kỹ thuật cơ khí",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "A04",
+        "C01",
+        "D01",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7520130",
+      "major_name": "Kỹ thuật ô tô",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "A04",
+        "C01",
+        "D01",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "D07",
+        "D08"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    },
+    {
+      "school_major_code": "7510301",
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "A04",
+        "C01",
+        "D90"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 10,
+      "tuition_max": 10,
+      "source_url": "https://upt.edu.vn/tuyen-sinh-dai-hoc/thong-tin-tuyen-sinh-nam-2026/"
+    }
+  ]
+}

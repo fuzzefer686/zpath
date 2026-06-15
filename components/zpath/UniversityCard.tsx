@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Coins } from "lucide-react";
+import { Building2, MapPin } from "lucide-react";
 
 import type { University } from "@/data/universities";
+import { cityToRegion } from "@/lib/vn-regions";
 
 interface UniversityCardProps {
   uni: University;
@@ -11,14 +12,16 @@ export function UniversityCard({ uni }: UniversityCardProps) {
   const cardImageUrl = uni.unimapImageUrl ?? uni.heroImageUrl;
   const hasCardImage = Boolean(cardImageUrl);
   const shouldContainCardImage = Boolean(uni.unimapImageUrl);
+  const region = cityToRegion(uni.city);
+  const locationLabel = uni.city || region || "";
 
   return (
     <Link
       href={`/unimap/${uni.code.toLowerCase()}`}
       prefetch={false}
-      className="group relative block overflow-hidden rounded-2xl border-2 border-border bg-card shadow-md transition-all hover:-translate-y-1 hover:border-primary hover:shadow-xl"
+      className="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-border bg-card shadow-md transition-all hover:-translate-y-1 hover:border-primary hover:shadow-xl"
     >
-      <div className={`relative h-44 bg-gradient-to-br ${uni.heroGradient}`}>
+      <div className={`relative h-40 bg-gradient-to-br ${uni.heroGradient}`}>
         {hasCardImage ? (
           <div
             className={`absolute inset-0 bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105 ${
@@ -41,33 +44,49 @@ export function UniversityCard({ uni }: UniversityCardProps) {
         {shouldContainCardImage ? null : (
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.22),transparent_60%)]" />
         )}
-        <div className="absolute left-4 top-4 flex items-start gap-3 text-white drop-shadow-md">
-          <div>
-            <div className="font-display text-3xl font-extrabold leading-tight">{uni.code}</div>
+        <div className="absolute left-4 right-4 top-4 line-clamp-2 font-display text-2xl font-extrabold leading-tight text-white drop-shadow-md">
+          {uni.shortName ?? uni.code}
+        </div>
+        {locationLabel ? (
+          <div className="absolute bottom-3 right-3 flex items-center gap-1 rounded-md bg-black/40 px-2 py-1 text-xs font-bold text-white backdrop-blur-sm">
+            <MapPin className="h-3.5 w-3.5" />
+            {locationLabel}
           </div>
-        </div>
-        <div className="absolute bottom-3 right-3 flex items-center gap-1 rounded-md bg-black/40 px-2 py-1 text-xs font-bold text-white backdrop-blur-sm">
-          <Coins className="h-3.5 w-3.5" />
-          {uni.city}
-        </div>
+        ) : null}
       </div>
 
-      <div className="space-y-2 px-4 py-3">
-        <div className="line-clamp-1 text-xs font-medium text-muted-foreground">{uni.name}</div>
-        <div className="space-y-1.5">
-          {uni.tags.map((tag, index) => (
-            <div key={tag} className="flex items-center gap-2 text-sm font-semibold text-foreground">
-              <span
-                className={`flex h-5 w-5 items-center justify-center rounded ${
-                  index === 0 ? "bg-primary/15 text-primary" : "bg-secondary/20 text-secondary-foreground"
-                }`}
-              >
-                ◆
-              </span>
-              {tag}
-            </div>
-          ))}
+      <div className="flex flex-1 flex-col gap-3 px-4 py-3.5">
+        <h3 className="line-clamp-2 font-display text-base font-bold leading-snug text-foreground">
+          {uni.name}
+        </h3>
+
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+          {uni.type ? (
+            <span className="inline-flex items-center gap-1 font-medium">
+              <Building2 className="h-3.5 w-3.5" />
+              {uni.type}
+            </span>
+          ) : null}
+          {region ? (
+            <span className="inline-flex items-center gap-1 font-medium">
+              <MapPin className="h-3.5 w-3.5" />
+              {region}
+            </span>
+          ) : null}
         </div>
+
+        {uni.tags.length ? (
+          <div className="mt-auto flex flex-wrap gap-1.5 pt-1">
+            {uni.tags.slice(0, 3).map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        ) : null}
       </div>
     </Link>
   );

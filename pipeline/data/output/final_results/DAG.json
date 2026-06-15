@@ -1,0 +1,854 @@
+{
+  "university_code": "DAG",
+  "university_name": "Trường Đại học An Giang - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://tuyensinh.agu.edu.vn",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 43,
+  "data": [
+    {
+      "school_major_code": "7620112",
+      "major_name": "Bảo vệ Thực vật",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "B00",
+        "C02",
+        "C03",
+        "C04",
+        "D01",
+        "D07",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7620105",
+      "major_name": "Chăn nuôi",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "B00",
+        "B03",
+        "B08",
+        "C02",
+        "X12",
+        "X28",
+        "X65"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7310201",
+      "major_name": "Chính trị học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C19",
+        "D01",
+        "D14",
+        "D15",
+        "X70"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7510401",
+      "major_name": "Công nghệ Kỹ thuật Hóa học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A05",
+        "A06",
+        "B00",
+        "C02",
+        "D07",
+        "X10",
+        "X12"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7510406",
+      "major_name": "Công nghệ Kỹ thuật Môi trường",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "B03",
+        "C01",
+        "C04",
+        "D01",
+        "X06",
+        "X08",
+        "X10"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7620190",
+      "major_name": "Công nghệ Nông nghiệp số",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "B00",
+        "B08",
+        "D01",
+        "D07",
+        "X24",
+        "X26"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7540104",
+      "major_name": "Công nghệ sau thu hoạch",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "B00",
+        "B04",
+        "C02",
+        "D07",
+        "X01",
+        "X11"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7420201",
+      "major_name": "Công nghệ Sinh học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "B00",
+        "B01",
+        "B02",
+        "B04",
+        "C02",
+        "D07",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ Thông tin",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C01",
+        "D01",
+        "D07",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7540101",
+      "major_name": "Công nghệ Thực phẩm",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "B00",
+        "B04",
+        "C02",
+        "D07",
+        "X01",
+        "X11"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7540106",
+      "major_name": "Đảm bảo chất lượng và An toàn thực phẩm",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "B00",
+        "B04",
+        "C02",
+        "D07",
+        "X01",
+        "X11"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140205",
+      "major_name": "Giáo dục Chính trị",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "X01",
+        "X70",
+        "X74"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140201",
+      "major_name": "Giáo dục Mầm non",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "M00",
+        "M01",
+        "M26",
+        "M27",
+        "M30"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục Tiểu học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "B03",
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "D01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7620110",
+      "major_name": "Khoa học Cây trồng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "B00",
+        "C02",
+        "C03",
+        "C04",
+        "D01",
+        "D07",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7460108",
+      "major_name": "Khoa học Dữ liệu",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "D01",
+        "X02",
+        "X26"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7620191",
+      "major_name": "Kinh doanh doanh Nông nghiệp số",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A07",
+        "C02",
+        "C04",
+        "D01",
+        "D07",
+        "X17",
+        "X26",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7310106",
+      "major_name": "Kinh tế Quốc tế",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "D01",
+        "X01",
+        "X27",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "D01",
+        "X01",
+        "X27",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7480103",
+      "major_name": "Kỹ thuật Phần mềm",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C01",
+        "D01",
+        "X06",
+        "X26"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "D07",
+        "X01",
+        "X25",
+        "X26"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "D01",
+        "X01",
+        "X27",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "D09",
+        "D10",
+        "D14",
+        "X26",
+        "X27",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7620301",
+      "major_name": "Nuôi trồng Thủy sản",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "B00",
+        "C03",
+        "C04",
+        "D01",
+        "D09",
+        "D10",
+        "X04"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7620116",
+      "major_name": "Phát triển nông thôn",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A07",
+        "B02",
+        "C04",
+        "D01",
+        "D07",
+        "X17",
+        "X24",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7850101",
+      "major_name": "Quản lý Tài nguyên và Môi trường",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A06",
+        "B00",
+        "B02",
+        "B03",
+        "C02",
+        "C04",
+        "D01",
+        "X01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị Kinh doanh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "D01",
+        "X01",
+        "X27",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140219",
+      "major_name": "Sư phạm Địa lý",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A07",
+        "C00",
+        "C04",
+        "D10",
+        "D15",
+        "X74"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140212",
+      "major_name": "Sư phạm Hóa học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A06",
+        "B00",
+        "C02",
+        "D07",
+        "X10"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140247",
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "B03",
+        "B08",
+        "C01",
+        "C02",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140218",
+      "major_name": "Sư phạm Lịch sử",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A07",
+        "C00",
+        "C03",
+        "D14",
+        "X17",
+        "X70"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140249",
+      "major_name": "Sư phạm Lịch sử - Địa lý",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "D14",
+        "D15",
+        "X70",
+        "X74"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140217",
+      "major_name": "Sư phạm Ngữ văn",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "D14",
+        "D15",
+        "X70",
+        "X74"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140213",
+      "major_name": "Sư phạm Sinh học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A02",
+        "B00",
+        "B02",
+        "B03",
+        "B08",
+        "X14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm Tiếng Anh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "D09",
+        "D10",
+        "D14",
+        "X26",
+        "X27",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm Toán học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C01",
+        "D01",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7140211",
+      "major_name": "Sư phạm Vật lý",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "A03",
+        "A04",
+        "C01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7340122",
+      "major_name": "Thương mại Điện tử",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "D01",
+        "X01",
+        "X27",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7640101",
+      "major_name": "Thú y",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "B00",
+        "B03",
+        "B08",
+        "D07",
+        "X12",
+        "X28",
+        "X65"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7229001",
+      "major_name": "Triết học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D15",
+        "X70"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính - Ngân hàng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "D01",
+        "X01",
+        "X27",
+        "X28"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7229030",
+      "major_name": "Văn học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "D14",
+        "D15",
+        "X70",
+        "X74"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    },
+    {
+      "school_major_code": "7310630",
+      "major_name": "Việt Nam học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.agu.edu.vn/nganh-dao-tao"
+    }
+  ]
+}

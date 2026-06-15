@@ -1,0 +1,411 @@
+[
+  {
+    "status": "partial",
+    "data": [],
+    "note": "Trang web cung cấp thông tin chung về tuyển sinh năm 2025 nhưng không liệt kê danh sách chi tiết các ngành, mã ngành, điểm chuẩn hoặc học phí cụ thể trong nội dung văn bản được cung cấp.",
+    "source": "HTML: https://ts.hcmuaf.edu.vn/ts-24449-1/vn/dai-hoc-chinh-quy.html"
+  },
+  {
+    "status": "partial",
+    "data": [
+      {
+        "school_major_code": null,
+        "major_name": "Sư phạm kỹ thuật nông nghiệp",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Ngôn ngữ Anh",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Kinh tế",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Quản Trị Kinh Doanh",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Bất động sản",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Kế toán",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Công nghệ sinh học",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Khoa học môi trường",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Hệ thống thông tin",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Công nghệ thông tin",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Cơ khí và Công nghệ",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Công nghệ kỹ thuật cơ – điện tử",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Công nghệ kỹ thuật ô tô",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Công nghệ kỹ thuật nhiệt",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Công nghệ kỹ thuật hoá học",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Công nghệ kỹ thuật tái tạo",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Kỹ thuật điều khiển và tự động hoá",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Kỹ thuật môi trường",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Công nghệ thực phẩm",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Công nghệ chế biến thuỷ sản",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Đảm bảo chất lượng an toàn thực phẩm",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Chế biến lâm sản",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Chăn nuôi",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Nông học",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Bảo vệ thực vật",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Kinh doanh nông nghiệp",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Phát triển nông nghiệp",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Lâm học",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Lâm nghiệp dô thị",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Quản lý tài nguyên rừng",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Nuôi trồng thuỷ sản",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Thú y",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Tài nguyên môi trường",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Quản lý đất đai",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Cảnh Quan và kỹ thuật hoa viên",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      },
+      {
+        "school_major_code": null,
+        "major_name": "Tài nguyên và Du lịch sinh thái",
+        "year": 2025,
+        "admission_method": null,
+        "exam_blocks": null,
+        "score": null,
+        "program_type": "chuan",
+        "tuition_min": null,
+        "tuition_max": null
+      }
+    ],
+    "note": "Danh sách ngành được trích xuất từ infographic năm 2025. Thiếu thông tin về mã ngành, phương thức xét tuyển, tổ hợp môn, điểm chuẩn và học phí.",
+    "source": "HTML: https://ts.hcmuaf.edu.vn/ts-43546-1/vn/infographic-cac-nganh-tuyen-sinh-nam-2025.html"
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "university_code": "XDA",
+  "university_name": "Trường Đại học Xây dựng Hà Nội",
+  "found_url": "https://tuyensinh.huce.edu.vn/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 3,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc và quy hoạch",
+      "year": 2026,
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "H00",
+        "H07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.huce.edu.vn/huong-dan-thi-mon-nang-khieu-ky-tuyen-sinh-dai-hoc-nam-2026-2"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Mỹ thuật",
+      "year": 2026,
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "H00",
+        "H07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.huce.edu.vn/huong-dan-thi-mon-nang-khieu-ky-tuyen-sinh-dai-hoc-nam-2026-2"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nghệ thuật và thiết kế (Mỹ thuật ứng dụng)",
+      "year": 2026,
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "H00",
+        "H07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.huce.edu.vn/huong-dan-thi-mon-nang-khieu-ky-tuyen-sinh-dai-hoc-nam-2026-2"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "university_code": "FTU",
+  "university_name": "Trường Đại học Ngoại thương",
+  "found_url": "https://ftu.edu.vn/",
+  "final_tier": 3,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Các chương trình CTTT, CLC, ĐHNN&PTQT và Chương trình tích hợp Luật dân sự và tố tụng dân sự",
+      "year": "2026",
+      "admission_method": "dgnl_hn",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "tien_tien",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://drive.google.com/file/d/1lsHSNP8_LVsXVFCHknsuOPdOakyZmRd9/view"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các chương trình CTTT, CLC, ĐHNN&PTQT và Chương trình tích hợp Luật dân sự và tố tụng dân sự",
+      "year": "2026",
+      "admission_method": "dgnl_hcm",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "tien_tien",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://drive.google.com/file/d/1lsHSNP8_LVsXVFCHknsuOPdOakyZmRd9/view"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các chương trình tích hợp các ngành: Khoa học máy tính, Trí tuệ nhân tạo, Khoa học dữ liệu",
+      "year": "2026",
+      "admission_method": "dgnl_hn",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://drive.google.com/file/d/1lsHSNP8_LVsXVFCHknsuOPdOakyZmRd9/view"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các chương trình tích hợp các ngành: Khoa học máy tính, Trí tuệ nhân tạo, Khoa học dữ liệu",
+      "year": "2026",
+      "admission_method": "dgnl_hcm",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://drive.google.com/file/d/1lsHSNP8_LVsXVFCHknsuOPdOakyZmRd9/view"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các chương trình tích hợp Ngôn ngữ thương mại",
+      "year": "2026",
+      "admission_method": "dgnl_hn",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://drive.google.com/file/d/1lsHSNP8_LVsXVFCHknsuOPdOakyZmRd9/view"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các chương trình tích hợp Ngôn ngữ thương mại",
+      "year": "2026",
+      "admission_method": "dgnl_hcm",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://drive.google.com/file/d/1lsHSNP8_LVsXVFCHknsuOPdOakyZmRd9/view"
+    }
+  ]
+}

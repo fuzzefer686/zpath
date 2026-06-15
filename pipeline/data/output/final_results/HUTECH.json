@@ -1,0 +1,260 @@
+{
+  "university_code": "HUTECH",
+  "university_name": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh",
+  "found_url": "https://tuyensinh.hutech.edu.vn",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 17,
+  "data": [
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "year": "2019",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "B00",
+        "C08",
+        "D07"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech"
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "year": "2019",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech"
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "year": "2019",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech"
+    },
+    {
+      "school_major_code": "7540101",
+      "major_name": "Công nghệ thực phẩm",
+      "year": "2019",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech"
+    },
+    {
+      "school_major_code": "7520320",
+      "major_name": "Kỹ thuật môi trường",
+      "year": "2019",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech"
+    },
+    {
+      "school_major_code": "7420201",
+      "major_name": "Công nghệ sinh học",
+      "year": "2019",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech"
+    },
+    {
+      "school_major_code": "7640101",
+      "major_name": "Thú y",
+      "year": "2019",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech"
+    },
+    {
+      "school_major_code": "7520212",
+      "major_name": "Kỹ thuật y sinh",
+      "year": "2019",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C01",
+        "D01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech"
+    },
+    {
+      "school_major_code": "7310401",
+      "major_name": "Tâm lý học",
+      "year": "2019",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C00",
+        "D01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech"
+    },
+    {
+      "school_major_code": "7580101",
+      "major_name": "Kiến trúc",
+      "year": "2019",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "D01",
+        "H01",
+        "V00"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech"
+    },
+    {
+      "school_major_code": "52720401",
+      "major_name": "Dược học",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "B00",
+        "D07",
+        "C08"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuc-su-kien/14560222-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2017-cua-hutech"
+    },
+    {
+      "school_major_code": "52510205",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuc-su-kien/14560222-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2017-cua-hutech"
+    },
+    {
+      "school_major_code": "52210405",
+      "major_name": "Thiết kế nội thất",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "V00",
+        "H01",
+        "V02",
+        "H02"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuc-su-kien/14560222-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2017-cua-hutech"
+    },
+    {
+      "school_major_code": "52720401",
+      "major_name": "Dược học",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "B00",
+        "D07",
+        "C08"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuc-su-kien/14560222-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2017-cua-hutech"
+    },
+    {
+      "school_major_code": "52510205",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuc-su-kien/14560222-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2017-cua-hutech"
+    },
+    {
+      "school_major_code": "52340101",
+      "major_name": "Quản trị kinh doanh",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "C00",
+        "D01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuc-su-kien/14560222-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2017-cua-hutech"
+    },
+    {
+      "school_major_code": "52210405",
+      "major_name": "Thiết kế nội thất",
+      "year": "2017",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "V00",
+        "H01",
+        "V02",
+        "H02"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuc-su-kien/14560222-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2017-cua-hutech"
+    }
+  ]
+}

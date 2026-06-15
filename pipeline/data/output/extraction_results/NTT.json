@@ -1,0 +1,10 @@
+{
+  "status": "needs_deeper_crawl",
+  "data": [],
+  "suggested_links": [
+    "https://tuyensinh.ntt.edu.vn/thong-tin-tuyen-sinh-c34",
+    "https://tuyensinh.ntt.edu.vn/bieu-mau",
+    "https://tuyensinh.ntt.edu.vn/tra-cuu"
+  ],
+  "note": "Trang web hiện tại là trang chủ/landing page của hệ thống tuyển sinh, liệt kê danh mục ngành học nhưng không hiển thị trực tiếp bảng điểm chuẩn, học phí chi tiết hay phương thức xét tuyển cụ thể cho từng ngành. Cần truy cập vào các trang thông tin tuyển sinh hoặc công cụ tra cứu để lấy dữ liệu."
+}

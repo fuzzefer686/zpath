@@ -2,10 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { createSchoolSlug } from "@/lib/school-slug";
 import { getAbsoluteUrl } from "@/lib/seo";
-import {
-  getVisibleUnimapUniversities,
-  UNIMAP_VISIBLE_CODES,
-} from "@/lib/unimap-visible-schools";
+import { getVisibleUnimapUniversities } from "@/lib/unimap-visible-schools";
 import { listNewsArticles } from "@/lib/news-server";
 import { STATIC_NEWS_ARTICLES } from "@/lib/static-news-routes";
 import { getSchoolSlugs } from "@/src/lib/admission-data";
@@ -50,7 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   });
 
   try {
-    const schoolSlugs = await getSchoolSlugs(UNIMAP_VISIBLE_CODES);
+    const schoolSlugs = await getSchoolSlugs();
     schoolSlugs.forEach((slug) => unimapRouteParams.add(slug));
   } catch (error) {
     console.error("Cannot load school slugs for sitemap:", error);

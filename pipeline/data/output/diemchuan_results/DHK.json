@@ -1,0 +1,130 @@
+{
+  "university_code": "DHK",
+  "university_name": "Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-khoa-hoc-tu-nhien-tphcm-QST.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 15,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/X02/X06/X10",
+      "score": 24.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/X26",
+      "score": 22.88,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01/D07",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03/B08/X14",
+      "score": 23.13,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02",
+      "score": 22.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00/B03/B08/X15/X16",
+      "score": 20.96,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02",
+      "score": 24.72,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00/B03/B08/X15/X16",
+      "score": 23.72,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A02/X07/X08/X12",
+      "score": 26.18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học máy tính (CTTiên tiến)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/X06",
+      "score": 29.92,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D07",
+      "score": 28.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ giáo dục",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 797,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Sinh học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 817,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học máy tính (CTTiên tiến)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 1136,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học máy tính (CT Tiên tiến)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 29.98,
+      "scale": 30
+    }
+  ]
+}

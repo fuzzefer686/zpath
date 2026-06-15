@@ -1,0 +1,83 @@
+{
+  "university_code": "DHA",
+  "university_name": "Trường Đại học Luật Hà Nội",
+  "found_url": "https://hlu.edu.vn",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "year": null,
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hlu.edu.vn/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật chất lượng cao",
+      "year": null,
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hlu.edu.vn/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "year": null,
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hlu.edu.vn/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế chất lượng cao",
+      "year": null,
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hlu.edu.vn/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Thương mại quốc tế",
+      "year": null,
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hlu.edu.vn/"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "year": null,
+      "admission_method": null,
+      "exam_blocks": [],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hlu.edu.vn/"
+    }
+  ]
+}

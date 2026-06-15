@@ -1,0 +1,1029 @@
+{
+  "university_code": "XSH",
+  "university_name": "Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://hcmussh.edu.vn/tuyensinh",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 67,
+  "data": [
+    {
+      "school_major_code": "7140101",
+      "major_name": "Giáo dục học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "C00",
+        "C01",
+        "D01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220201_CLC",
+      "major_name": "Ngôn ngữ Anh_Chuẩn quốc tế",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01"
+      ],
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7140114",
+      "major_name": "Quản lý giáo dục",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220202",
+      "major_name": "Ngôn ngữ Nga",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D02",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220203",
+      "major_name": "Ngôn ngữ Pháp",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D03",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D04",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220204_CLC",
+      "major_name": "Ngôn ngữ Trung Quốc_Chuẩn quốc tế",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D04",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220205",
+      "major_name": "Ngôn ngữ Đức",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D05",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220205_CLC",
+      "major_name": "Ngôn ngữ Đức_Chuẩn quốc tế",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D05",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220206",
+      "major_name": "Ngôn ngữ Tây Ban Nha",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D03",
+        "D05",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220208",
+      "major_name": "Ngôn ngữ Italia",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D03",
+        "D05",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7229001",
+      "major_name": "Triết học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7229009",
+      "major_name": "Tôn giáo học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7229010",
+      "major_name": "Lịch sử",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7229020",
+      "major_name": "Ngôn ngữ học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7229030",
+      "major_name": "Văn học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7229040",
+      "major_name": "Văn hóa học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310206",
+      "major_name": "Quan hệ quốc tế",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310206_CLC",
+      "major_name": "Quan hệ quốc tế _ Chuẩn quốc tế",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310301",
+      "major_name": "Xã hội học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "A00",
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310302",
+      "major_name": "Nhân học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310401",
+      "major_name": "Tâm lý học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310403",
+      "major_name": "Tâm lý học giáo dục",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "B00",
+        "B08",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310501",
+      "major_name": "Địa lý học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "C00",
+        "D01",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310608",
+      "major_name": "Đông phương học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D04",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310613",
+      "major_name": "Nhật Bản học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D06",
+        "D14",
+        "D63"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310613_CLC",
+      "major_name": "Nhật Bản học_Chuẩn quốc tế",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D06",
+        "D14",
+        "D63"
+      ],
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310614",
+      "major_name": "Hàn Quốc học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D14",
+        "DD2",
+        "DH5"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310630",
+      "major_name": "Việt Nam học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7320101",
+      "major_name": "Báo chí",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7320101_CLC",
+      "major_name": "Báo chí_Chuẩn quốc tế",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7320201",
+      "major_name": "Thông tin – thư viện",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7320205",
+      "major_name": "Quản lý thông tin",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7320303",
+      "major_name": "Lưu trữ học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7340406",
+      "major_name": "Quản trị văn phòng",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7580112",
+      "major_name": "Đô thị học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7760101",
+      "major_name": "Công tác xã hội",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7810103",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7810103_CLC",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành_Chuẩn quốc tế",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310601",
+      "major_name": "Quốc tế học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D09",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7210213",
+      "major_name": "Nghệ thuật học",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "73106a1",
+      "major_name": "Kinh doanh thương mại Hàn Quốc",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D14",
+        "DD2",
+        "DH5"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7320101_LKD",
+      "major_name": "Truyền thông, chuyên ngành Báo chí",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "A01",
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7310206_LKD",
+      "major_name": "Quan hệ Quốc tế",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D14"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220201_LKH",
+      "major_name": "Ngôn ngữ Anh",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": "7220204_LKT",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D04",
+        "D14",
+        "D15"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/thong-tin-tuyen-sinh-chinh-thuc-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Châu Á học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công tác xã hội",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dân tộc học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Địa lý học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đô thị học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hán Nôm",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học thư viện",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lịch sử thế giới",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lịch sử Việt Nam",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lưu trữ học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhân học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quan hệ quốc tế",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý giáo dục",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Triết học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hoá học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xã hội học",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://hcmussh.edu.vn/tin-tuc/tuyen-sinh-thac-si-dot-2-2025"
+    }
+  ]
+}

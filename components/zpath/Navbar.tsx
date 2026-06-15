@@ -7,12 +7,15 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, User, LogOut, Shield, Settings, ChevronDown, Sparkles } from "lucide-react";
 import { Logo } from "./Logo";
 import { useAuth } from "@/components/zpath/AuthProvider";
+import { FEATURES } from "@/config/features";
 
 const links = [
   { href: "/", label: "Trang chủ" },
   { href: "/unimap", label: "UniMap" },
   { href: "/scoring", label: "Tính điểm" },
-  { href: "/news", label: "News" },
+  // Hidden while the news feature is gated off (config/features.ts).
+  ...(FEATURES.news.enabled ? [{ href: "/news", label: "News" }] : []),
+  ...(FEATURES.mentor.enabled ? [{ href: "/mentor", label: "Tư vấn" }] : []),
   { href: "/advisor", label: "Zpath AI" },
 ];
 

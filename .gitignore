@@ -53,3 +53,10 @@ data/processed/
 # New
 .cursorignore
 .codegraph
+
+pipeline/.venv/
+pipeline/.env
+**/__pycache__/
+*.pyc
+# Manually-supplied source PDFs for the admission pipeline (large; not source)
+pipeline/data/input/pdfs/*.pdf

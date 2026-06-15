@@ -1,0 +1,64 @@
+{
+  "university_code": "MSH",
+  "university_name": "Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-my-thuat-tphcm-MTS.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": "7140222",
+      "major_name": "Sư phạm Mỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 25,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210101",
+      "major_name": "Lý luận, lịch sử và phê bình mỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 10,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210103",
+      "major_name": "Hội hoạ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210104",
+      "major_name": "Đồ hoạ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 45,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210105",
+      "major_name": "Điêu khắc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 10,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210403",
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 140,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "university_code": "DHP",
+  "university_name": "Trường Đại học Hải Phòng",
+  "found_url": "https://giaoduc.net.vn/truong-dh-hai-phong-cong-bo-diem-chuan-nam-2025-nhom-nganh-dao-tao-gv-cao-top-dau-post253934.gd",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 8,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục thể chất",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 33.25,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 32.0,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng dân dụng và công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    }
+  ]
+}

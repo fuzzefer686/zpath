@@ -1,0 +1,405 @@
+{
+  "university_code": "QHI",
+  "university_name": "Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+  "found_url": "https://tuyensinh.uet.vnu.edu.vn/ban-nen-biet/thong-tin-tuyen-sinh-dhcq-nam-2026-cap-nhat/",
+  "final_tier": 2,
+  "status": "success",
+  "review_status": "pending",
+  "num_records": 26,
+  "data": [
+    {
+      "school_major_code": "CN1",
+      "major_name": "Công nghệ thông tin",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN2",
+      "major_name": "Kỹ thuật máy tính",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN3",
+      "major_name": "Vật lý kỹ thuật",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN4",
+      "major_name": "Cơ kỹ thuật",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN5",
+      "major_name": "Công nghệ kỹ thuật xây dựng",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN6",
+      "major_name": "Công nghệ kỹ thuật cơ - điện tử",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN7",
+      "major_name": "Công nghệ hàng không vũ trụ",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN8",
+      "major_name": "Khoa học máy tính",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN9",
+      "major_name": "Công nghệ kỹ thuật điện tử – viễn thông",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN10",
+      "major_name": "Công nghệ nông nghiệp",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06",
+        "A02"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN11",
+      "major_name": "Kỹ thuật điều khiển và tự động hoá",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN12",
+      "major_name": "Trí tuệ nhân tạo",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN13",
+      "major_name": "Kỹ thuật năng lượng",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN14",
+      "major_name": "Hệ thống thông tin",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN15",
+      "major_name": "Mạng máy tính và truyền thông dữ liệu",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN17",
+      "major_name": "Kỹ thuật Robot",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN18",
+      "major_name": "Thiết kế công nghiệp và Đồ họa",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 44,
+      "tuition_max": 44,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN19",
+      "major_name": "Công nghệ vật liệu và Vi điện tử",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 38,
+      "tuition_max": 38,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN20",
+      "major_name": "Khoa học và Kỹ thuật dữ liệu",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 38,
+      "tuition_max": 38,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN21",
+      "major_name": "Công nghệ kỹ thuật sinh học",
+      "year": "2026",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": [
+        "A00",
+        "A01",
+        "X06",
+        "A02"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 38,
+      "tuition_max": 38,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/wp-content/images/Thong-tin-tuyen-sinh-DHCQ-nam-2026-cap-nhat.pdf"
+    },
+    {
+      "school_major_code": "CN1",
+      "major_name": "Công nghệ thông tin",
+      "year": 2025,
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": 28.19,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/category/tin-tuyen-sinh/"
+    },
+    {
+      "school_major_code": "CN2",
+      "major_name": "Kỹ thuật máy tính",
+      "year": 2025,
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": 27.0,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/category/tin-tuyen-sinh/"
+    },
+    {
+      "school_major_code": "CN3",
+      "major_name": "Vật lý kỹ thuật",
+      "year": 2025,
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": 25.2,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/category/tin-tuyen-sinh/"
+    },
+    {
+      "school_major_code": "CN4",
+      "major_name": "Cơ kỹ thuật",
+      "year": 2025,
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": 26.15,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/category/tin-tuyen-sinh/"
+    },
+    {
+      "school_major_code": "CN5",
+      "major_name": "Công nghệ kỹ thuật xây dựng",
+      "year": 2025,
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": 22.25,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/category/tin-tuyen-sinh/"
+    },
+    {
+      "school_major_code": "CN6",
+      "major_name": "Công nghệ kỹ thuật cơ – điện",
+      "year": 2025,
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.uet.vnu.edu.vn/category/tin-tuyen-sinh/"
+    }
+  ]
+}

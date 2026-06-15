@@ -1,0 +1,107 @@
+{
+  "university_code": "NTT",
+  "university_name": "Trường Đại học Nguyễn Tất Thành",
+  "found_url": "https://tuyensinh.ntt.edu.vn",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 8,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ntt.edu.vn/thong-tin-tuyen-sinh-nam2026-tai-truong-dai-hoc-nguyen-tat-thanh-p792.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (Kinh doanh quốc tế)",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ntt.edu.vn/thong-tin-tuyen-sinh-nam2026-tai-truong-dai-hoc-nguyen-tat-thanh-p792.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ntt.edu.vn/thong-tin-tuyen-sinh-nam2026-tai-truong-dai-hoc-nguyen-tat-thanh-p792.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ntt.edu.vn/thong-tin-tuyen-sinh-nam2026-tai-truong-dai-hoc-nguyen-tat-thanh-p792.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ntt.edu.vn/thong-tin-tuyen-sinh-nam2026-tai-truong-dai-hoc-nguyen-tat-thanh-p792.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (Kinh doanh quốc tế)",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ntt.edu.vn/thong-tin-tuyen-sinh-nam2026-tai-truong-dai-hoc-nguyen-tat-thanh-p792.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ntt.edu.vn/thong-tin-tuyen-sinh-nam2026-tai-truong-dai-hoc-nguyen-tat-thanh-p792.html"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ntt.edu.vn/thong-tin-tuyen-sinh-nam2026-tai-truong-dai-hoc-nguyen-tat-thanh-p792.html"
+    }
+  ]
+}

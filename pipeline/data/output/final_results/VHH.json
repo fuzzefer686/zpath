@@ -1,0 +1,310 @@
+{
+  "university_code": "VHH",
+  "university_name": "Trường Đại học Văn hóa Hà Nội",
+  "found_url": "https://huc.edu.vn/thong-tin-tuyen-sinh-dai-hoc-chinh-quy-nam-2026-14022026",
+  "final_tier": 2,
+  "status": "success",
+  "review_status": "pending",
+  "num_records": 14,
+  "data": [
+    {
+      "school_major_code": "7810101A",
+      "major_name": "Văn hóa du lịch",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25.5,
+      "tuition_max": 25.5,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7810101B",
+      "major_name": "Lữ hành, hướng dẫn du lịch",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25.5,
+      "tuition_max": 25.5,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7810101C",
+      "major_name": "Hướng dẫn du lịch quốc tế",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25.5,
+      "tuition_max": 25.5,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7810103A",
+      "major_name": "Quản trị kinh doanh du lịch",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25.5,
+      "tuition_max": 25.5,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7810103B",
+      "major_name": "Quản trị du lịch cộng đồng",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25.5,
+      "tuition_max": 25.5,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7320101",
+      "major_name": "Báo chí",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25.5,
+      "tuition_max": 25.5,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7320305",
+      "major_name": "Bảo tàng học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 24.0,
+      "tuition_max": 24.0,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7320402",
+      "major_name": "Kinh doanh xuất bản phẩm",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 24.0,
+      "tuition_max": 24.0,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7320201A",
+      "major_name": "Quản trị thư viện",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 24.0,
+      "tuition_max": 24.0,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7320201B",
+      "major_name": "Thư viện và thiết bị trường học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 24.0,
+      "tuition_max": 24.0,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7320205",
+      "major_name": "Quản lý thông tin",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25.5,
+      "tuition_max": 25.5,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 25.5,
+      "tuition_max": 25.5,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7220110",
+      "major_name": "Sáng tác văn học",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "C00",
+        "C03",
+        "C04",
+        "X01",
+        "X70",
+        "D01",
+        "D14",
+        "D15",
+        "X78",
+        "N06"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 19.1,
+      "tuition_max": 19.1,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "year": "2026",
+      "admission_method": null,
+      "exam_blocks": [
+        "D01",
+        "D14",
+        "D15",
+        "X78"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 19.1,
+      "tuition_max": 19.1,
+      "source_url": "https://huc.edu.vn/a/269351/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026?c=5373"
+    }
+  ]
+}

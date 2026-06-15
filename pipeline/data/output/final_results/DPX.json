@@ -1,0 +1,131 @@
+{
+  "university_code": "DPX",
+  "university_name": "Trường Đại học Sư phạm Thành phố Hồ Chí Minh",
+  "found_url": "http://tuyensinh.hcmue.edu.vn",
+  "final_tier": 2,
+  "status": "success",
+  "review_status": "pending",
+  "num_records": 10,
+  "data": [
+    {
+      "school_major_code": "51140201",
+      "major_name": "Giáo dục mầm non (Cao đẳng - đào tạo tại phân hiệu Gia Lai)",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": 23.61,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hcmue.edu.vn/index.php?option=com_content&view=article&id=27810%3Aim-trung-tuyn-ca-2-nm-gn-nht&catid=4069%3Atin-tc&Itemid=9677&lang=vi&site=183"
+    },
+    {
+      "school_major_code": "51140201",
+      "major_name": "Giáo dục mầm non (Cao đẳng - đào tạo tại phân hiệu Long An)",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": null,
+      "score": 24.2,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hcmue.edu.vn/index.php?option=com_content&view=article&id=27810%3Aim-trung-tuyn-ca-2-nm-gn-nht&catid=4069%3Atin-tc&Itemid=9677&lang=vi&site=183"
+    },
+    {
+      "school_major_code": "7140101",
+      "major_name": "Giáo dục học",
+      "year": "2025",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 22.35,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hcmue.edu.vn/index.php?option=com_content&view=article&id=27810%3Aim-trung-tuyn-ca-2-nm-gn-nht&catid=4069%3Atin-tc&Itemid=9677&lang=vi&site=183"
+    },
+    {
+      "school_major_code": "7140103",
+      "major_name": "Công nghệ giáo dục",
+      "year": "2025",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 19.25,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hcmue.edu.vn/index.php?option=com_content&view=article&id=27810%3Aim-trung-tuyn-ca-2-nm-gn-nht&catid=4069%3Atin-tc&Itemid=9677&lang=vi&site=183"
+    },
+    {
+      "school_major_code": "7140114",
+      "major_name": "Quản lý giáo dục",
+      "year": "2025",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 23.44,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hcmue.edu.vn/index.php?option=com_content&view=article&id=27810%3Aim-trung-tuyn-ca-2-nm-gn-nht&catid=4069%3Atin-tc&Itemid=9677&lang=vi&site=183"
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục Tiểu học (đào tạo tại cơ sở chính)",
+      "year": "2025",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 26.0,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hcmue.edu.vn/index.php?option=com_content&view=article&id=27810%3Aim-trung-tuyn-ca-2-nm-gn-nht&catid=4069%3Atin-tc&Itemid=9677&lang=vi&site=183"
+    },
+    {
+      "school_major_code": "7140203",
+      "major_name": "Giáo dục Đặc biệt",
+      "year": "2025",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 27.2,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hcmue.edu.vn/index.php?option=com_content&view=article&id=27810%3Aim-trung-tuyn-ca-2-nm-gn-nht&catid=4069%3Atin-tc&Itemid=9677&lang=vi&site=183"
+    },
+    {
+      "school_major_code": "7140204",
+      "major_name": "Giáo dục Công dân",
+      "year": "2025",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 26.83,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hcmue.edu.vn/index.php?option=com_content&view=article&id=27810%3Aim-trung-tuyn-ca-2-nm-gn-nht&catid=4069%3Atin-tc&Itemid=9677&lang=vi&site=183"
+    },
+    {
+      "school_major_code": "7140205",
+      "major_name": "Giáo dục Chính trị",
+      "year": "2025",
+      "admission_method": "diem_thi_thpt",
+      "exam_blocks": null,
+      "score": 27.15,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hcmue.edu.vn/index.php?option=com_content&view=article&id=27810%3Aim-trung-tuyn-ca-2-nm-gn-nht&catid=4069%3Atin-tc&Itemid=9677&lang=vi&site=183"
+    },
+    {
+      "school_major_code": "7140206",
+      "major_name": "Giáo dục Thể chất (đào tạo tại cơ sở chính)",
+      "year": "2025",
+      "admission_method": "ket_hop",
+      "exam_blocks": null,
+      "score": 30.0,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.hcmue.edu.vn/index.php?option=com_content&view=article&id=27810%3Aim-trung-tuyn-ca-2-nm-gn-nht&catid=4069%3Atin-tc&Itemid=9677&lang=vi&site=183"
+    }
+  ]
+}

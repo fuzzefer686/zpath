@@ -298,6 +298,51 @@ export async function getSchoolTuitionFees(
   return (data ?? []) as TuitionFee[];
 }
 
+export type SchoolDataYears = {
+  programs: number[];
+  benchmarks: number[];
+  tuition: number[];
+};
+
+/**
+ * Distinct years (newest first) that actually have data for a school, per
+ * section. Used to default each UniMap section to the most recent year it has
+ * data for, instead of a hardcoded year that may be empty (e.g. tuition is
+ * 2026 for imported schools while benchmarks only exist for 2025).
+ */
+export async function getSchoolDataYears(
+  schoolCode: string,
+): Promise<SchoolDataYears> {
+  assertNonEmptyString(schoolCode, "schoolCode");
+
+  const yearsFrom = async (table: string): Promise<number[]> => {
+    const { data, error } = await withAdmissionDataTimeout(
+      supabaseServer.from(table).select("year").eq("school_code", schoolCode),
+    );
+    if (error) {
+      throwAdmissionDataError(
+        `loading available years from "${table}" for school "${schoolCode}"`,
+        error,
+      );
+    }
+    return Array.from(
+      new Set(
+        (data ?? [])
+          .map((row) => row.year as number)
+          .filter((year): year is number => typeof year === "number"),
+      ),
+    ).sort((a, b) => b - a);
+  };
+
+  const [programs, benchmarks, tuition] = await Promise.all([
+    yearsFrom("admission_programs"),
+    yearsFrom("benchmarks"),
+    yearsFrom("tuition_fees"),
+  ]);
+
+  return { programs, benchmarks, tuition };
+}
+
 export async function getSchoolAdmissionInfo(
   schoolCode: string,
   year?: number,

@@ -1,0 +1,71 @@
+{
+  "university_code": "DTD",
+  "university_name": "Trường Đại học Tôn Đức Thắng",
+  "found_url": "https://admission.tdtu.edu.vn",
+  "final_tier": 1,
+  "status": "success",
+  "review_status": "pending",
+  "num_records": 5,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiêu chuẩn",
+      "year": "2024",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 27.06,
+      "tuition_max": 31.68,
+      "source_url": "https://admission.tdtu.edu.vn"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình chất lượng cao",
+      "year": "2024",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 50.0,
+      "tuition_max": 64.0,
+      "source_url": "https://admission.tdtu.edu.vn"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đại học bằng tiếng Anh",
+      "year": "2024",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": 76.0,
+      "tuition_max": 84.0,
+      "source_url": "https://admission.tdtu.edu.vn"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình liên kết quốc tế",
+      "year": "2024",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "quoc_te",
+      "tuition_min": 75.0,
+      "tuition_max": 83.0,
+      "source_url": "https://admission.tdtu.edu.vn"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Học tại Phân hiệu Khánh Hòa",
+      "year": "2024",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": 20.5,
+      "tuition_max": 24.0,
+      "source_url": "https://admission.tdtu.edu.vn"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "university_code": "DNV",
+  "university_name": "Trường Đại học Nội vụ Hà Nội",
+  "found_url": "https://hat360.net/blog/diem-chuan-truong-dai-hoc-noi-vu-ha-noi-2026",
+  "year": 2025,
+  "status": "success",
+  "num_records": 26,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản Trị Nhân Lực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Trị Văn Phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C20",
+      "score": 26.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Chuyên Ngành Thanh Tra)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 26.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Trị Văn Phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 25.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Trị Dịch Vụ Du Lịch Và Lữ Hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 25.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Chuyên Ngành Thanh Tra) - Cơ sở TPHCM",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/D01/C00",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Chuyên Ngành Thanh Tra)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 24.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Trị Nhân Lực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Lý Nhà Nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C20",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Trị Văn Phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01",
+      "score": 23.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn Ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01/D14/D15",
+      "score": 23.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh Tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/A07/D01",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Trị Dịch Vụ Du Lịch Và Lữ Hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01/D14/D15",
+      "score": 23.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Lý Nhà Nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Trị Văn Phòng - Cơ sở TPHCM",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D15/C00",
+      "score": 22.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn Hóa Học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 22.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Lý Nhà Nước - Cơ sở TPHCM",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/C00/D01/D15",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn Hóa Học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01/D14/D15",
+      "score": 20.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ Thống Thông Tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/D10",
+      "score": 19.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Lý Nhà Nước - Cơ sở Quảng Nam",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C20",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lưu Trữ Học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chính Trị Học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản Trị Nhân Lực - Cơ sở Quảng Nam",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/D01/C00",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thông Tin - Thư Viện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lưu Trữ Học - Cơ sở TPHCM",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D14/C00/C03",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Chuyên Ngành Thanh Tra) - Cơ sở Quảng Nam",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/D01/C00",
+      "score": 15.0,
+      "scale": 30
+    }
+  ]
+}

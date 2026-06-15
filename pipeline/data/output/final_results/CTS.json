@@ -1,0 +1,113 @@
+{
+  "university_code": "CTS",
+  "university_name": "Trường Đại học Cần Thơ",
+  "found_url": "https://tuyensinh.ctu.edu.vn",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": "7140206",
+      "major_name": "Giáo dục Thể chất",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "T00",
+        "T01",
+        "T06",
+        "T10"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ctu.edu.vn/images/upload/TT_TS/2026/DA728DHCT__De-an-To-chuc-thi-Nang-khieu-2026.signed.signed.signed.pdf"
+    },
+    {
+      "school_major_code": "7140201",
+      "major_name": "Giáo dục Mầm non",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "M01",
+        "M05",
+        "M06",
+        "M11"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ctu.edu.vn/images/upload/TT_TS/2026/DA728DHCT__De-an-To-chuc-thi-Nang-khieu-2026.signed.signed.signed.pdf"
+    },
+    {
+      "school_major_code": "7580101",
+      "major_name": "Kiến trúc",
+      "year": "2026",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "V00",
+        "V01",
+        "V02",
+        "V03"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ctu.edu.vn/images/upload/TT_TS/2026/DA728DHCT__De-an-To-chuc-thi-Nang-khieu-2026.signed.signed.signed.pdf"
+    },
+    {
+      "school_major_code": "7140206",
+      "major_name": "Giáo dục Thể chất",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "T00",
+        "T01",
+        "T06",
+        "T10"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ctu.edu.vn/images/upload/TT_TS/2025/1863_DA863_DeanTochucthiNangkhieu2025.pdf"
+    },
+    {
+      "school_major_code": "7140201",
+      "major_name": "Giáo dục Mầm non",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "M01",
+        "M05",
+        "M06",
+        "M11"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ctu.edu.vn/images/upload/TT_TS/2025/1863_DA863_DeanTochucthiNangkhieu2025.pdf"
+    },
+    {
+      "school_major_code": "7580101",
+      "major_name": "Kiến trúc",
+      "year": "2025",
+      "admission_method": "xt_rieng",
+      "exam_blocks": [
+        "V00",
+        "V01",
+        "V02",
+        "V03"
+      ],
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://tuyensinh.ctu.edu.vn/images/upload/TT_TS/2025/1863_DA863_DeanTochucthiNangkhieu2025.pdf"
+    }
+  ]
+}

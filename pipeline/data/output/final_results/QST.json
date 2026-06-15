@@ -1,0 +1,35 @@
+{
+  "university_code": "QST",
+  "university_name": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://vnuhcm.edu.vn/",
+  "final_tier": 2,
+  "status": "partial",
+  "review_status": "needs_manual_review",
+  "num_records": 2,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ nông nghiệp số",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://vnuhcm.edu.vn/dao-tao-tuyen-sinh?t=tin-tuc"
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh nông nghiệp số",
+      "year": "2025",
+      "admission_method": null,
+      "exam_blocks": null,
+      "score": null,
+      "program_type": "chuan",
+      "tuition_min": null,
+      "tuition_max": null,
+      "source_url": "https://vnuhcm.edu.vn/dao-tao-tuyen-sinh?t=tin-tuc"
+    }
+  ]
+}
