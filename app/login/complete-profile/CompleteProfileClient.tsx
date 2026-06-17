@@ -87,7 +87,7 @@ export function CompleteProfileClient() {
           Hoàn tất hồ sơ
         </h1>
         <p className="mb-8 text-sm font-medium leading-6 text-gray-600">
-          Nhập số điện thoại để sử dụng UniMap và Advisor.
+          Nhập số điện thoại để sử dụng Advisor.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5 text-left">
