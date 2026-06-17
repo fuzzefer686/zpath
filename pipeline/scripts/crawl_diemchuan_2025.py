@@ -238,10 +238,13 @@ def crawl_one(client, code: str, name: str) -> dict:
     return best
 
 
-def read_rows() -> list[dict]:
-    if not INPUT_CSV.is_file():
-        config.fail(f"Input file not found: {INPUT_CSV}")
-    with INPUT_CSV.open(encoding="utf-8-sig", newline="") as f:
+def read_rows(csv_path: str | None = None) -> list[dict]:
+    from pathlib import Path
+
+    path = Path(csv_path) if csv_path else INPUT_CSV
+    if not path.is_file():
+        config.fail(f"Input file not found: {path}")
+    with path.open(encoding="utf-8-sig", newline="") as f:
         return list(csv.DictReader(f))
 
 
@@ -259,12 +262,21 @@ def load_done() -> set[str]:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Crawl 2025 điểm chuẩn for priority schools.")
     parser.add_argument("--limit", type=int, default=None, help="chỉ N trường đầu (test)")
+    parser.add_argument("--csv", type=str, default=None,
+                        help="file CSV (university_code,university_name) thay cho priority_schools.csv")
+    parser.add_argument("--codes", type=str, default=None,
+                        help="chỉ crawl các mã trường này (vd SGD,VLU)")
+    parser.add_argument("--force", action="store_true",
+                        help="crawl lại cả trường đã có data (bỏ qua resume)")
     args = parser.parse_args()
 
-    rows = read_rows()
+    rows = read_rows(args.csv)
+    if args.codes:
+        wanted = {c.strip() for c in args.codes.split(",") if c.strip()}
+        rows = [r for r in rows if (r.get("university_code") or "").strip() in wanted]
     if args.limit is not None:
         rows = rows[: args.limit]
-    done = load_done()
+    done = set() if args.force else load_done()
     todo = [r for r in rows if (r.get("university_code") or "").strip() not in done]
     print(f"Phạm vi: {len(rows)} trường | đã có data: {len(rows) - len(todo)} | "
           f"sẽ crawl: {len(todo)}\n")
