@@ -9,9 +9,7 @@ export function proxy(request: NextRequest) {
     pathname.startsWith("/profile") ||
     pathname.startsWith("/dashboard") ||
     pathname === "/advisor" ||
-    pathname.startsWith("/advisor/") ||
-    pathname === "/unimap" ||
-    pathname.startsWith("/unimap/");
+    pathname.startsWith("/advisor/");
 
   if (isProtectedRoute) {
     if (!token) {
