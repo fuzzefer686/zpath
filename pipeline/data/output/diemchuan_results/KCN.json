@@ -1,0 +1,170 @@
+{
+  "university_code": "KCN",
+  "university_name": "Trường Đại học Khoa học và Công nghệ Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-khoa-hoc-va-cong-nghe-ha-noi-KCN.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 20,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học - Phát triển thuốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00; D07; D20; D90; D91; D08; D15; D32; D96",
+      "score": 19.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học - Phát triển thuốc (Song bằng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00; D07; D20; D90; D91; D08; D15; D32; D96",
+      "score": 24.82,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07; D20; D90; D91",
+      "score": 18.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hóa học (Song bằng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07; D20; D90; D91",
+      "score": 23.53,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học vật liệu tiên tiến và Công nghệ Nano",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A19; A09; A02; A04; B00; D07; D20; D90; D91",
+      "score": 21.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học Môi trường Ứng dụng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07; D20; D90; D91; D08; D15; D32; D96",
+      "score": 19.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A09; A19; A02; D90; D91; D32; D96; D08; D97; D84",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Toán ứng dụng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A19; A09; A04; B00; D07; D90; D20; D91; D08; D32; D96; D97; D84; D33; D98; D01",
+      "score": 19.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin - Truyền thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A09; A19; A02; D90; D91; D32; D96; D08; D97; D84",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin - Truyền thông (Song bằng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A09; A19; A02; D90; D91; D32; D96; D08; D97; D84",
+      "score": 24.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "An toàn thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A09; A19; A02; D90; D91; D32; D96; D08; D97; D84",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Kỹ thuật Cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A19; A09; A02; A04; B00; D07; D20; D90; D91",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Hàng không",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A09; A19",
+      "score": 23.22,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học Vũ trụ và Công nghệ Vệ tinh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A19; A09; A04; A02; D90; D91; D07; D20; D15; D32; D96; D33; D98; D10; D08; D84; D97",
+      "score": 18.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A09; A02; A19",
+      "score": 18.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điện và Năng lượng tái tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A09; A02; A19",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ vi mạch bán dẫn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A09; A02; A19; A04",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học và Công nghệ thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A09; A02; B00; D07; D90; D91; D20; D08; D32; D96; D15",
+      "score": 18.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; A09; A19; B00; D07; D90; D91; D08; D32; D96",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học và Công nghệ y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A09; A02; B00; D07; D90; D91; D20; D08; D32; D96; D15",
+      "score": 19.25,
+      "scale": 30
+    }
+  ]
+}

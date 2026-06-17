@@ -1,0 +1,91 @@
+{
+  "university_code": "TDU",
+  "university_name": "Trường Đại học Tây Nguyên",
+  "found_url": "https://tuyensinh.huflis.edu.vn/tin-tuc/thong-tin-tuyen-sinh-dai-hoc-chinh-quy-nam-2026_20251231114356",
+  "status": "success",
+  "num_records": 13,
+  "school_wide": {
+    "tuition_min": 17.9,
+    "tuition_max": 26.03
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "tuition_min": 17.9,
+      "tuition_max": 23.29
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Pháp",
+      "tuition_min": 17.9,
+      "tuition_max": 23.29
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Trung Quốc",
+      "tuition_min": 17.9,
+      "tuition_max": 23.29
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "tuition_min": 19.1,
+      "tuition_max": 26.03
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Pháp",
+      "tuition_min": 19.1,
+      "tuition_max": 26.03
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nga",
+      "tuition_min": 19.1,
+      "tuition_max": 26.03
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "tuition_min": 19.1,
+      "tuition_max": 26.03
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nhật",
+      "tuition_min": 19.1,
+      "tuition_max": 26.03
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Hàn Quốc",
+      "tuition_min": 19.1,
+      "tuition_max": 26.03
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Việt Nam học",
+      "tuition_min": 19.1,
+      "tuition_max": 26.03
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quốc tế học",
+      "tuition_min": 19.1,
+      "tuition_max": 26.03
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hoa Kỳ học",
+      "tuition_min": 19.1,
+      "tuition_max": 26.03
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông quốc tế",
+      "tuition_min": 19.1,
+      "tuition_max": 26.03
+    }
+  ]
+}

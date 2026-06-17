@@ -1,0 +1,31 @@
+{
+  "university_code": "YDH",
+  "university_name": "Trường Đại học Y Dược - Đại học Huế",
+  "found_url": "https://laodong.vn/tuyen-sinh/du-kien-hoc-phi-truong-dai-hoc-y-duoc-hue-2025-cao-nhat-la-611-trieu-dongnam-1556831.ldo",
+  "status": "success",
+  "num_records": 3,
+  "school_wide": {
+    "tuition_min": 36.6,
+    "tuition_max": 61.1
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "tuition_min": 61.1,
+      "tuition_max": 61.1
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Răng Hàm Mặt",
+      "tuition_min": 61.1,
+      "tuition_max": 61.1
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "tuition_min": 61.1,
+      "tuition_max": 61.1
+    }
+  ]
+}

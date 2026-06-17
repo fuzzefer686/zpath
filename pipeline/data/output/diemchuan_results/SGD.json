@@ -1,0 +1,106 @@
+{
+  "university_code": "SGD",
+  "university_name": "Trường Đại học Sài Gòn",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-sai-gon-SGD.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 12,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C02; C03; C04; D01; X01; X02; X03; X04",
+      "score": 22.59,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "M01; M02",
+      "score": 24.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "score": 25.12,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01",
+      "score": 28.84,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01",
+      "score": 29.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Hoá học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A05; A06; C02; X09; X10; X11; X12",
+      "score": 28.98,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C07; C10; C12; D14; X70; X71; X72; X73",
+      "score": 28.39,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C04; C09; C11; C13; D15; X74; X75; X76; X77",
+      "score": 28.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B08; D01; D09; D10; D11; D12; D13; D14; D15; X25; X26; X27; X28; X78; X79; X80; X81",
+      "score": 24.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 20.93,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý giáo dục",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "NL1",
+      "score": 22.59,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "NL1",
+      "score": 21.0,
+      "scale": 1200
+    }
+  ]
+}

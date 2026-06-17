@@ -1,0 +1,253 @@
+{
+  "university_code": "TBD",
+  "university_name": "Trường Đại học Thái Bình Dương",
+  "found_url": "https://tuyensinh.tbd.edu.vn/",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 27,
+  "data": [
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7210403",
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ bán dẫn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7480103",
+      "major_name": "Kỹ thuật phần mềm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị Kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị Khởi nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7810101",
+      "major_name": "Du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7480207",
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7810201",
+      "major_name": "Quản trị khách sạn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7310608",
+      "major_name": "Tiếng Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7310608",
+      "major_name": "Tiếng Hàn Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính – Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 103.6,
+      "tuition_max": 103.6
+    },
+    {
+      "school_major_code": "7310205",
+      "major_name": "Quản lý Nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7229042",
+      "major_name": "Quản lý văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7420204",
+      "major_name": "Khoa học y sinh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+Sinh+1 môn tự chọn; Toán+Hóa+1 môn tự chọn; Toán+Lý+1 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 103.6,
+      "tuition_max": 103.6
+    },
+    {
+      "school_major_code": "7520114",
+      "major_name": "Kỹ thuật cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 118.4,
+      "tuition_max": 118.4
+    },
+    {
+      "school_major_code": "7310401",
+      "major_name": "Tâm lý học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Giảng dạy tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+2 môn tự chọn; Văn+2 môn tự chọn",
+      "quota": null,
+      "tuition_min": 96.2,
+      "tuition_max": 96.2
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Toán+Sinh+1 môn tự chọn; Toán+Hóa+1 môn tự chọn; Toán+Lý+1 môn tự chọn",
+      "quota": null,
+      "tuition_min": 175.0,
+      "tuition_max": 175.0
+    }
+  ]
+}

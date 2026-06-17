@@ -1,0 +1,234 @@
+{
+  "university_code": "QHQ",
+  "university_name": "Trường Quốc tế - Đại học Quốc gia Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/truong-quoc-te-dai-hoc-quoc-gia-ha-noi-QHQ.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 28,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; C01; C02; X02; X26",
+      "score": 22,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán, Phân tích và Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; C01; C02; X02; X26",
+      "score": 20,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; D01; D07; C01; C02; X02; X26",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tin học và Kỹ thuật máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; D07; C01; C02; X02; X06; X26",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phân tích dữ liệu kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; D01; D07; C01; C02; X02; X26",
+      "score": 20,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing (song bằng do ĐHQGHN và Đại học HELP, Malaysia cùng cấp bằng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; D09; C01; C02; X02; X26",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý (song bằng do ĐHQGHN và Đại học Keuka, Hoa Kỳ cùng cấp bằng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; D09; C01; C02; X02; X26",
+      "score": 19,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tự động hóa và Tin học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; D07; C01; C02; X02; X06; X26",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (chuyên sâu Kinh doanh – Công nghệ thông tin)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D09; D10; X26",
+      "score": 21,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin ứng dụng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; D07; C01; C02; X02; X06; X26",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính và Kinh doanh số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; D01; D07; C01; C02; X02; X26",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hệ thống công nghiệp và Logistics",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; D07; C01; C02; X02; X06; X26",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D03; D07; D29; C01; C02; X02; X26",
+      "score": 21,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D03; D07; D29; C01; C02; X02; X26",
+      "score": 22,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 76,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán, Phân tích và Kiểm toán",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 69,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 67,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tin học và Kỹ thuật máy tính",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 72,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phân tích dữ liệu kinh doanh",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 69,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing (song bằng do ĐHQGHN và Đại học HELP, Malaysia cùng cấp bằng)",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 67,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý (song bằng do ĐHQGHN và Đại học Keuka, Hoa Kỳ cùng cấp bằng)",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 66,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tự động hóa và Tin học",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 67,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (chuyên sâu Kinh doanh – Công nghệ thông tin)",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 79,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin ứng dụng",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 67,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính và Kinh doanh số",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 67,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hệ thống công nghiệp và Logistics",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 67,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh số",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 72,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông số",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 76,
+      "scale": 150
+    }
+  ]
+}

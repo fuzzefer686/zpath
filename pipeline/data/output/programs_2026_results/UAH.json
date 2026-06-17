@@ -1,0 +1,208 @@
+{
+  "university_code": "UAH",
+  "university_name": "Trường Đại học Kiến trúc Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-kien-truc-tphcm-KTS.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 22,
+  "data": [
+    {
+      "school_major_code": "7210110",
+      "major_name": "Mỹ thuật đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210402",
+      "major_name": "Thiết kế công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "H01; H02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210403",
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "H01; H06",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210403QT",
+      "major_name": "Thiết kế đồ họa (Chương trình định hướng Quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "H01; H06",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210404",
+      "major_name": "Thiết kế thời trang",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "H01; H06",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580101",
+      "major_name": "Kiến trúc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580101QT",
+      "major_name": "Kiến trúc (Chương trình định hướng Quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580102",
+      "major_name": "Kiến trúc cảnh quan",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580105",
+      "major_name": "Quy hoạch vùng và đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580105QT",
+      "major_name": "Quy hoạch vùng và đô thị (Chương trình định hướng Quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580108",
+      "major_name": "Thiết kế nội thất",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580108QT",
+      "major_name": "Thiết kế nội thất (Chương trình định hướng Quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580110",
+      "major_name": "Thiết kế đô thị (Chương trình tiên tiến)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580201",
+      "major_name": "Kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580201QT",
+      "major_name": "Kỹ thuật xây dựng (Chương trình Định hướng Quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580210",
+      "major_name": "Kỹ thuật cơ sở hạ tầng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580210QT",
+      "major_name": "Kỹ thuật cơ sở hạ tầng (Chương trình Định hướng Quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580302",
+      "major_name": "Quản lý xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580101CT",
+      "major_name": "Kiến trúc (Cơ sở Cần Thơ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580201CT",
+      "major_name": "Kỹ thuật xây dựng (Cơ sở Cần Thơ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580101DL",
+      "major_name": "Kiến trúc (Cơ sở Đà Lạt)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580201DL",
+      "major_name": "Kỹ thuật xây dựng (Cơ sở Đà Lạt)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

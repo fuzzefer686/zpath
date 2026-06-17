@@ -1,0 +1,46 @@
+{
+  "university_code": "KMA",
+  "university_name": "Học viện Kỹ thuật Mật mã",
+  "found_url": "https://tuyensinh.actvn.edu.vn/thong-bao-tuyen-sinh-dai-hoc-chinh-quy-nam-2026/",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": "7480202KMA",
+      "major_name": "Ngành An toàn thông tin (Cơ sở Hà Nội)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X26; X06; C01",
+      "quota": 240,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201KMA",
+      "major_name": "Ngành Công nghệ thông tin (Cơ sở Hà Nội)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X26; X06; C01",
+      "quota": 140,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520207",
+      "major_name": "Ngành Kỹ thuật Điện tử, Viễn thông (Cơ sở Hà Nội)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": 140,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480202KMP",
+      "major_name": "Ngành An toàn thông tin (Cơ sở TP. Hồ Chí Minh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X26; X06; C01",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

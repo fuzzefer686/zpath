@@ -1,0 +1,26 @@
+{
+  "university_code": "CSH",
+  "university_name": "Học viện Cảnh sát Nhân dân",
+  "found_url": "https://tuoitre.vn/7-truong-cong-an-nhan-dan-cong-bo-diem-chuan-nam-2025-20250820104254685.htm",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 2,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Học viện Cảnh sát nhân dân",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 18.67,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Học viện Cảnh sát nhân dân",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 26.01,
+      "scale": 30
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "university_code": "YQD",
+  "university_name": "Học viện Quân y",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/hoc-vien-quan-y-he-quan-su-YQH.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 24,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nam, miền Bắc)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "score": 27.94,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nam, miền Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "score": 27.71,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nữ, miền Bắc)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "score": 30.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nữ, miền Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "score": 29.03,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nam, miền Bắc)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; D07",
+      "score": 25.41,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nam, miền Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; D07",
+      "score": 24.81,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nữ, miền Bắc)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; D07",
+      "score": 28.31,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nữ, miền Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; D07",
+      "score": 28.12,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nam, miền Bắc)",
+      "admission_method": "dgnl_hn",
+      "combination_code": "Q00",
+      "score": 110.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nam, miền Nam)",
+      "admission_method": "dgnl_hn",
+      "combination_code": "Q00",
+      "score": 108.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nữ, miền Bắc)",
+      "admission_method": "dgnl_hn",
+      "combination_code": "Q00",
+      "score": 130.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nữ, miền Nam)",
+      "admission_method": "dgnl_hn",
+      "combination_code": "Q00",
+      "score": 120.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nam, miền Bắc)",
+      "admission_method": "dgnl_hn",
+      "combination_code": "Q00",
+      "score": 98.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nam, miền Nam)",
+      "admission_method": "dgnl_hn",
+      "combination_code": "Q00",
+      "score": 96.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nữ, miền Bắc)",
+      "admission_method": "dgnl_hn",
+      "combination_code": "Q00",
+      "score": 113.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nữ, miền Nam)",
+      "admission_method": "dgnl_hn",
+      "combination_code": "Q00",
+      "score": 111.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nam, miền Bắc)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 985.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nam, miền Nam)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 975.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nữ, miền Bắc)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 1121.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Y khoa (Bác sỹ đa khoa) (Thí sinh Nữ, miền Nam)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 1060.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nam, miền Bắc)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 885.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nam, miền Nam)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 870.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nữ, miền Bắc)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 1010.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Thí sinh Nữ, miền Nam)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 995.0,
+      "scale": 1200
+    }
+  ]
+}

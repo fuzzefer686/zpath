@@ -1,0 +1,271 @@
+{
+  "university_code": "HAU",
+  "university_name": "Trường Đại học Kiến trúc Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-kien-truc-ha-noi-KTA.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 29,
+  "data": [
+    {
+      "school_major_code": "7310104",
+      "major_name": "Kinh tế đầu tư",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7310105",
+      "major_name": "Kinh tế phát triển",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; D01; X02; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201_1",
+      "major_name": "Công nghệ đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; D01; X02; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201_2",
+      "major_name": "Công nghệ game",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; D01; X02; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510105",
+      "major_name": "Công nghệ kỹ thuật vật liệu xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580201",
+      "major_name": "Xây dựng dân dụng và công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580201_1",
+      "major_name": "Xây dựng công trình ngầm đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580201_2",
+      "major_name": "Quản lý dự án xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580205",
+      "major_name": "Kỹ thuật xây dựng công trình giao thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580210",
+      "major_name": "Kỹ thuật hạ tầng đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580210_1",
+      "major_name": "Kỹ thuật môi trường đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580210_2",
+      "major_name": "Công nghệ cơ điện công trình",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580213",
+      "major_name": "Kỹ thuật cấp thoát nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580301",
+      "major_name": "Kinh tế Xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580302",
+      "major_name": "Quản lý xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580302_1",
+      "major_name": "Quản lý bất động sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580302_2",
+      "major_name": "Quản lý vận tải và Logistics",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; D01; X03; X04",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210105",
+      "major_name": "Điêu khắc",
+      "admission_method": "ket_hop",
+      "combination_code": "H00; H02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210105_1",
+      "major_name": "Mỹ thuật đô thị",
+      "admission_method": "ket_hop",
+      "combination_code": "H00; H02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210403",
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "ket_hop",
+      "combination_code": "H00; H02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210403_1",
+      "major_name": "Nghệ thuật số",
+      "admission_method": "ket_hop",
+      "combination_code": "H00; H02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210404",
+      "major_name": "Thiết kế thời trang",
+      "admission_method": "ket_hop",
+      "combination_code": "H00; H02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580101",
+      "major_name": "Kiến trúc",
+      "admission_method": "ket_hop",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580101_1",
+      "major_name": "Chương trình tiên tiến ngành Kiến trúc",
+      "admission_method": "ket_hop",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580102",
+      "major_name": "Kiến trúc cảnh quan",
+      "admission_method": "ket_hop",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580105",
+      "major_name": "Quy hoạch vùng và đô thị",
+      "admission_method": "ket_hop",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580105_1",
+      "major_name": "Thiết kế đô thị",
+      "admission_method": "ket_hop",
+      "combination_code": "V00; V01; V02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580108",
+      "major_name": "Thiết kế nội thất",
+      "admission_method": "ket_hop",
+      "combination_code": "H00; H02",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

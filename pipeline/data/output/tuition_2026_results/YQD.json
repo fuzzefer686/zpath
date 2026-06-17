@@ -1,0 +1,19 @@
+{
+  "university_code": "YQD",
+  "university_name": "Học viện Quân y",
+  "found_url": "https://huongnghiep.hocmai.vn/tuyen-sinh-2026-hoc-vien-quan-y-nam-2026-mien-hoc-phi-phu-cap-len-toi-25-trieu-thang-va-5-chi-tieu-du-hoc-quoc-te",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": 0,
+    "tuition_max": 0
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Hệ quân sự",
+      "tuition_min": 0,
+      "tuition_max": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+Phạm vi: 6 | đã có logo: 0 | sẽ crawl: 6
+
+[1/6] DBH Trường Đại học Bách khoa - Đại học Quốc gia Thành phố Hồ Chí Minh...
+  ↪ Playwright fallback cho vertexaisearch.cloud.google.com (requests trả nội dung rỗng/ngắn)
+    -> grounding (high) https://rxhcmmggzodoapyjxcug.supabase.co/storage/v1/object/public/scho
+[2/6] DBS Trường Đại học Kinh tế Thành phố Hồ Chí Minh...
+    -> grounding (high) https://rxhcmmggzodoapyjxcug.supabase.co/storage/v1/object/public/scho
+[3/6] DHF Trường Đại học Ngoại ngữ - Đại học Huế...
+    -> grounding (high) https://rxhcmmggzodoapyjxcug.supabase.co/storage/v1/object/public/scho
+[4/6] DHP Trường Đại học Hải Phòng...
+    -> grounding (high) https://rxhcmmggzodoapyjxcug.supabase.co/storage/v1/object/public/scho
+[5/6] QSC Trường Đại học Công nghệ Thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh...
+    -> grounding (high) https://rxhcmmggzodoapyjxcug.supabase.co/storage/v1/object/public/scho
+[6/6] RMIT Trường Đại học RMIT Việt Nam...
+    -> grounding (high) https://rxhcmmggzodoapyjxcug.supabase.co/storage/v1/object/public/scho
+
+✅ Xong 6 trường.
+   Summary: /Users/fuzzefer/projects/zpath/pipeline/data/output/logo_summary.csv
+   Files: /Users/fuzzefer/projects/zpath/pipeline/data/output/logo_files/

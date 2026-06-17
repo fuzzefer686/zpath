@@ -1,9 +1,50 @@
 {
   "university_code": "MSH",
   "university_name": "Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh",
-  "found_url": "http://www.hcmufa.edu.vn/",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-my-thuat-tphcm-MTS.html",
   "year": 2025,
-  "status": "needs_deeper_crawl",
-  "num_records": 0,
-  "data": []
+  "status": "success",
+  "num_records": 5,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Lý luận lịch sử và phê bình mỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hội họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điêu khắc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.5,
+      "scale": 30
+    }
+  ]
 }

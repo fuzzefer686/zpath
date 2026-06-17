@@ -1,0 +1,114 @@
+{
+  "university_code": "ANH",
+  "university_name": "Học viện An ninh Nhân dân",
+  "found_url": "https://laodong.vn/tuyen-sinh/hoc-vien-an-ninh-nhan-dan-cong-bo-diem-chuan-nam-2025-cao-nhat-2627-diem-1562172.ldo",
+  "year": 2025,
+  "status": "success",
+  "num_records": 13,
+  "data": [
+    {
+      "school_major_code": "7860100",
+      "major_name": "Nghiệp vụ an ninh (Vùng 1 - Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860100",
+      "major_name": "Nghiệp vụ an ninh (Vùng 1 - Nữ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860100",
+      "major_name": "Nghiệp vụ an ninh (Vùng 2 - Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.63,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860100",
+      "major_name": "Nghiệp vụ an ninh (Vùng 2 - Nữ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.09,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860100",
+      "major_name": "Nghiệp vụ an ninh (Vùng 3 - Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.03,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860100",
+      "major_name": "Nghiệp vụ an ninh (Vùng 3 - Nữ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860100",
+      "major_name": "Nghiệp vụ an ninh (Vùng 8 - Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.78,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860100",
+      "major_name": "Nghiệp vụ an ninh (Vùng 8 - Nữ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.63,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860114",
+      "major_name": "An ninh mạng và phòng chống tội phạm sử dụng công nghệ cao (Phía Bắc - Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.48,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860114",
+      "major_name": "An ninh mạng và phòng chống tội phạm sử dụng công nghệ cao (Phía Bắc - Nữ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.69,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860114",
+      "major_name": "An ninh mạng và phòng chống tội phạm sử dụng công nghệ cao (Phía Nam - Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.63,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7860114",
+      "major_name": "An ninh mạng và phòng chống tội phạm sử dụng công nghệ cao (Phía Nam - Nữ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin (Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.98,
+      "scale": 30
+    }
+  ]
+}

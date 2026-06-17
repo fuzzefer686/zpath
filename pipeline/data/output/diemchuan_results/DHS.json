@@ -1,0 +1,202 @@
+{
+  "university_code": "DHS",
+  "university_name": "Trường Đại học Sư phạm - Đại học Huế",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-su-pham-hue-DHS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 24,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "M01; M09",
+      "score": 23.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C00; C03; C04; C14; D01; X01",
+      "score": 27.82,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học (Đào tạo bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C00; C03; C04; C14; D01; X01",
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Công dân",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C19; C20; D66; X01; X25; X70; X74; X78",
+      "score": 26.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Chính trị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C19; C20; D66; X01; X25; X70; X74; X78",
+      "score": 27.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Quốc phòng - An ninh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C19; C20; D66; X01; X25; X70; X74; X78",
+      "score": 26.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01",
+      "score": 26.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học (Đào tạo bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01",
+      "score": 26.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tin học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; D01; X02; X26",
+      "score": 22.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; X07",
+      "score": 26.08,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "score": 26.88,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02; B00; B01; B02; B03; B08",
+      "score": 23.08,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D01; X70; X78",
+      "score": 28.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A07; A08; C00; C03; C19; D14; X17; X70",
+      "score": 27.63,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C20; D15; X21; X74; X75; X77",
+      "score": 27.71,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Âm nhạc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "N00; N01",
+      "score": 21.72,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm công nghệ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; X07; X08; X11; X12; X27; X28",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm khoa học tự nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; B00; B08; D07",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục pháp luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C19; C20; D66; X01; X25; X70; X74; X78",
+      "score": 26.52,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử - Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A07; C00; C19; C20; D14; D15; X70; X74",
+      "score": 27.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; C00; C14; C19; C20; D01; X01; X70; X74",
+      "score": 25.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; D01; X02; X26",
+      "score": 17.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học giáo dục",
+      "admission_method": "hoc_ba",
+      "combination_code": "B00; C00; C14; C19; C20; D01; X01; X70; X74",
+      "score": 26.31,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; C01; D01; X02; X26",
+      "score": 19.69,
+      "scale": 30
+    }
+  ]
+}

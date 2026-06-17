@@ -1,0 +1,37 @@
+{
+  "university_code": "SKD",
+  "university_name": "Trường Đại học Sân khấu - Điện ảnh Hà Nội",
+  "found_url": "https://jobsgo.vn/blog/dai-hoc-san-khau-dien-anh/",
+  "status": "success",
+  "num_records": 4,
+  "school_wide": {
+    "tuition_min": 15.2,
+    "tuition_max": 15.2
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Hệ đào tạo Đại học chính quy",
+      "tuition_min": 15.2,
+      "tuition_max": 15.2
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ đào tạo vừa học vừa làm",
+      "tuition_min": 22.8,
+      "tuition_max": 22.8
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ đào tạo thạc sĩ",
+      "tuition_min": 22.8,
+      "tuition_max": 22.8
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ đào tạo tiến sĩ",
+      "tuition_min": 38.0,
+      "tuition_max": 38.0
+    }
+  ]
+}

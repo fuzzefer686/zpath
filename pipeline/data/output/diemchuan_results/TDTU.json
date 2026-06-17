@@ -1,0 +1,90 @@
+{
+  "university_code": "TDTU",
+  "university_name": "Trường Đại học Tôn Đức Thắng",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-ton-duc-thang-DTT.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 10,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "H01; H02; H03; H04; H05",
+      "score": 30.28,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "H00",
+      "score": 30.78,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 30.84,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 31.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 30.52,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "hoc_ba",
+      "combination_code": "H05; H06",
+      "score": 34.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01",
+      "score": 36.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 865,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 890,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (song bằng 2+2)",
+      "admission_method": "chung_chi_quoc_te",
+      "combination_code": null,
+      "score": 1119,
+      "scale": 1600
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "university_code": "DHF",
+  "university_name": "Trường Đại học Ngoại ngữ - Đại học Huế",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/1229/hoc-phi-dai-hoc-ngoai-ngu-dai-hoc-hue-2025-2026-chinh-xac-nhat",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 15.9,
+    "tuition_max": 21.8
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành Sư phạm",
+      "tuition_min": 15.9,
+      "tuition_max": 21.8
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành còn lại",
+      "tuition_min": 16.9,
+      "tuition_max": 21.8
+    }
+  ]
+}

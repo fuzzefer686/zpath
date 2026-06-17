@@ -1,0 +1,97 @@
+{
+  "university_code": "UAH",
+  "university_name": "Trường Đại học Kiến trúc Thành phố Hồ Chí Minh",
+  "found_url": "https://timviec365.vn/blog/hoc-phi-truong-dai-hoc-kien-truc-tp-hcm-new13310.html",
+  "status": "partial",
+  "num_records": 14,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc (Đại trà)",
+      "tuition_min": 12.312,
+      "tuition_max": 12.312
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quy hoạch vùng và đô thị (Đại trà)",
+      "tuition_min": 12.996,
+      "tuition_max": 12.996
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc cảnh quan (Đại trà)",
+      "tuition_min": 12.996,
+      "tuition_max": 12.996
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Mỹ thuật đô thị (Đại trà)",
+      "tuition_min": 12.312,
+      "tuition_max": 12.312
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (Đại trà)",
+      "tuition_min": 11.628,
+      "tuition_max": 11.628
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ sở hạ tầng (Đại trà)",
+      "tuition_min": 10.944,
+      "tuition_max": 10.944
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý xây dựng (Đại trà)",
+      "tuition_min": 10.944,
+      "tuition_max": 10.944
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế công nghiệp (Đại trà)",
+      "tuition_min": 10.944,
+      "tuition_max": 10.944
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế nội thất (Đại trà)",
+      "tuition_min": 10.944,
+      "tuition_max": 10.944
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa (Đại trà)",
+      "tuition_min": 11.628,
+      "tuition_max": 11.628
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế thời trang (Đại trà)",
+      "tuition_min": 11.628,
+      "tuition_max": 11.628
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc (Chất lượng cao)",
+      "tuition_min": 53.424,
+      "tuition_max": 53.424
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quy hoạch vùng và đô thị (Chất lượng cao)",
+      "tuition_min": 52.128,
+      "tuition_max": 52.128
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (Chất lượng cao)",
+      "tuition_min": 39.888,
+      "tuition_max": 39.888
+    }
+  ]
+}

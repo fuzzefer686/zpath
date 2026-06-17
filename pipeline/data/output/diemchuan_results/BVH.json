@@ -1,9 +1,234 @@
 {
   "university_code": "BVH",
   "university_name": "Học viện Công nghệ Bưu chính Viễn thông",
-  "found_url": "https://thisinh.thithptquocgia.edu.vn/",
+  "found_url": "https://diemthi.giaphugroup.com/diem-chuan/truong-hoc-vien-cong-nghe-buu-chinh-vien-thong-phia-bac-bvh/2025/",
   "year": 2025,
-  "status": "needs_deeper_crawl",
-  "num_records": 0,
-  "data": []
+  "status": "success",
+  "num_records": 28,
+  "data": [
+    {
+      "school_major_code": "7320101",
+      "major_name": "Báo chí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X06, X26",
+      "score": 22.67,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01, C00, D01, D15",
+      "score": 25.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7320104_CLC",
+      "major_name": "Truyền thông đa phương tiện CLC",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X06, X26",
+      "score": 22.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7329001",
+      "major_name": "Công nghệ đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X06, X26",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7329001_GAM",
+      "major_name": "Thiết kế và phát triển Game (Công nghệ Đa phương tiện)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X06, X26",
+      "score": 23.48,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị Kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01, C04, D01, X01",
+      "score": 22.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340101_LOG",
+      "major_name": "Logistics và quản trị chuỗi cung ứng (ngành Quản trị kinh doanh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X06, X26",
+      "score": 24.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01, C04, D01, X01",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340115_CLC",
+      "major_name": "Marketing CLC",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X06, X26",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340115_QHC",
+      "major_name": "Quan hệ công chúng ngành Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X06, X26",
+      "score": 23.47,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340122",
+      "major_name": "Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01, C04, D01, X01",
+      "score": 25.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340205",
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X06, X26",
+      "score": 23.63,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, D07",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340301_CLC",
+      "major_name": "Kế toán chất lượng cao",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X06, X26",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 26.21,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480102",
+      "major_name": "Mạng máy tính và truyền thông dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 24.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480107",
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X02",
+      "score": 25.67,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X02",
+      "score": 25.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201_CLC",
+      "major_name": "Công nghệ thông tin (Chất lượng cao)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 23.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201_UDU",
+      "major_name": "Cử nhân công nghệ thông tin (định hướng ứng dụng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 22.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201_VNH",
+      "major_name": "Công nghệ thông tin Việt - Nhật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 23.48,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480202",
+      "major_name": "An toàn thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 25.21,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480202_CLC",
+      "major_name": "An toàn thông tin CLC",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 23.14,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510301",
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 24.61,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510301_MBD",
+      "major_name": "Công nghệ vi mạch bán dẫn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 25.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520207",
+      "major_name": "Ngành Kỹ thuật điện tử truyền thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 25.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520207_AIoT",
+      "major_name": "Trí tuệ nhân tạo vạn vật (AIoT)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 24.87,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520216",
+      "major_name": "Ngành Kỹ thuật điều khiển & Tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, X06, X26",
+      "score": 26.19,
+      "scale": 30
+    }
+  ]
 }

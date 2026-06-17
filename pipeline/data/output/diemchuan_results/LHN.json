@@ -1,0 +1,266 @@
+{
+  "university_code": "LHN",
+  "university_name": "Trường Đại học Luật Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-luat-ha-noi-LPH.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 32,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 23.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01",
+      "score": 23.49,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D02; D03; D04; D05; D06",
+      "score": 24.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 25.54,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01",
+      "score": 24.44,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 27.39,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Đào tạo tại Phân hiệu Đắk Lắk)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D02; D03; D04; D05; D06",
+      "score": 19.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Đào tạo tại Phân hiệu Đắk Lắk)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 21.14,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Đào tạo tại Phân hiệu Đắk Lắk)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01",
+      "score": 20.04,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Đào tạo tại Phân hiệu Đắk Lắk)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 22.99,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 26.94,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01",
+      "score": 25.84,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 28.79,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D02; D03; D04; D05; D06",
+      "score": 25.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Thương mại quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 24.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Thương mại quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01",
+      "score": 24.44,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01",
+      "score": 26.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01",
+      "score": 26.99,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00",
+      "score": 30.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D02; D03; D04; D05; D06",
+      "score": 27.56,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00",
+      "score": 28.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01",
+      "score": 27.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Đào tạo tại Phân hiệu Đắk Lắk)",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D02; D03; D04; D05; D06",
+      "score": 23.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Đào tạo tại Phân hiệu Đắk Lắk)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00",
+      "score": 24.64,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Đào tạo tại Phân hiệu Đắk Lắk)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01",
+      "score": 23.54,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Đào tạo tại Phân hiệu Đắk Lắk)",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00",
+      "score": 26.49,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D02; D03; D04; D05; D06",
+      "score": 28.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00",
+      "score": 29.54,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01",
+      "score": 28.44,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00",
+      "score": 30.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Thương mại quốc tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01",
+      "score": 27.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Thương mại quốc tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01",
+      "score": 27.56,
+      "scale": 30
+    }
+  ]
+}

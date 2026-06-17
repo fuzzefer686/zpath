@@ -1,0 +1,199 @@
+{
+  "university_code": "DHS",
+  "university_name": "Trường Đại học Sư phạm - Đại học Huế",
+  "found_url": "https://tuyensinh.dhsphue.edu.vn/",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 21,
+  "data": [
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01",
+      "quota": 299,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140210",
+      "major_name": "Sư phạm Tin học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; D01; X02",
+      "quota": 164,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140211",
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": 66,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140212",
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "quota": 230,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140213",
+      "major_name": "Sư phạm Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02; B00; B03; B08",
+      "quota": 180,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140217",
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D14; X70",
+      "quota": 198,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140218",
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D14; X70",
+      "quota": 126,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140219",
+      "major_name": "Sư phạm Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C04; D15; X74",
+      "quota": 164,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140201",
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "M01; M09",
+      "quota": 411,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C03; C04; D01",
+      "quota": 410,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140205",
+      "major_name": "Giáo dục Chính trị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X01; X70; X74; X78",
+      "quota": 110,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140204",
+      "major_name": "Giáo dục Công dân",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X01; X70; X74; X78",
+      "quota": 147,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140208",
+      "major_name": "Giáo dục Quốc phòng - An ninh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X01; X70; X74; X78",
+      "quota": 142,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140248",
+      "major_name": "Giáo dục pháp luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X01; X70; X74; X78",
+      "quota": 135,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140221",
+      "major_name": "Sư phạm Âm nhạc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "N00; N01",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140246",
+      "major_name": "Sư phạm Công nghệ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": 161,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140247",
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02; D07",
+      "quota": 216,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140249",
+      "major_name": "Sư phạm Lịch sử - Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D14; X70",
+      "quota": 181,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480104",
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; D01; X02",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7310403",
+      "major_name": "Tâm lý học giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; C00; C20; D01; X01; X70; X74",
+      "quota": 164,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520401",
+      "major_name": "Vật lý kỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

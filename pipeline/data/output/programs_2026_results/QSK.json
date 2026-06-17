@@ -1,0 +1,370 @@
+{
+  "university_code": "QSK",
+  "university_name": "Trường Đại học Kinh tế - Luật - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-kinh-te-luat-tphcm-QSK.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 40,
+  "data": [
+    {
+      "school_major_code": "401",
+      "major_name": "Kinh tế (Chuyên ngành Kinh tế học)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 130,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "402",
+      "major_name": "Kinh tế quốc tế (Chuyên ngành Kinh tế đối ngoại)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 180,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "403",
+      "major_name": "Kinh tế (Chuyên ngành Kinh tế và Quản lý công)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 130,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "404",
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 110,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "404E",
+      "major_name": "Tài chính - Ngân hàng (Tiếng Anh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "405",
+      "major_name": "Kế toán",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 55,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "405E",
+      "major_name": "Kế toán (Tích hợp chứng chỉ quốc tế ICAEW - Tiếng Anh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "406",
+      "major_name": "Hệ thống thông tin quản lý (Chuyên ngành Hệ thống thông tin quản lý)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 65,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "406H",
+      "major_name": "Hệ thống thông tin quản lý (Chuyên ngành Hệ thống thông tin quản lý) (Chương trình Co-operative Education)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "407",
+      "major_name": "Quản trị kinh doanh (Chuyên ngành Quản trị kinh doanh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "407E",
+      "major_name": "Quản trị kinh doanh (Chuyên ngành Quản trị kinh doanh) (Tiếng Anh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "408",
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "408_I",
+      "major_name": "Kinh doanh quốc tế (Chương trình liên kết quốc tế)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "408E",
+      "major_name": "Kinh doanh quốc tế (Tiếng Anh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "409",
+      "major_name": "Kiểm toán",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "410",
+      "major_name": "Marketing (Chuyên ngành Marketing)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "410_I",
+      "major_name": "Quản trị kinh doanh (chuyên ngành Marketing) (Chương trình liên kết quốc tế)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "410E",
+      "major_name": "Marketing (Chuyên ngành Marketing) (Tiếng Anh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "411",
+      "major_name": "Thương mại điện tử",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 65,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "411E",
+      "major_name": "Thương mại điện tử (Tiếng Anh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "413",
+      "major_name": "Toán kinh tế (Chuyên ngành Toán ứng dụng trong Kinh tế, Quản trị và Tài chính)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 65,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "413E",
+      "major_name": "Toán kinh tế (Chuyên ngành Toán ứng dụng trong Kinh tế, Quản trị và Tài chính) (Tiếng Anh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "414",
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "414H",
+      "major_name": "Công nghệ tài chính (Chương trình Co-operative Education)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "415",
+      "major_name": "Quản trị kinh doanh (Chuyên ngành Quản trị du lịch và lữ hành)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "416",
+      "major_name": "Hệ thống thông tin quản lý (Chuyên ngành Kinh doanh số và Trí tuệ nhân tạo)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 65,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "417",
+      "major_name": "Marketing (Chuyên ngành Digital Marketing)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "418",
+      "major_name": "Quản lý công",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 65,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "419",
+      "major_name": "Toán kinh tế (Chuyên ngành Phân tích dữ liệu)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 65,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "420",
+      "major_name": "Kinh doanh quốc tế (Chuyên ngành Quản lý chuỗi cung ứng và Logistics quốc tế)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "421",
+      "major_name": "Kinh tế (Chuyên ngành Kinh tế số)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "422",
+      "major_name": "Kế toán (Chuyên ngành Kế toán và Phân tích dữ liệu)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 55,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "501",
+      "major_name": "Luật kinh tế (Chuyên ngành Luật Kinh doanh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 130,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "502",
+      "major_name": "Luật kinh tế (Chuyên ngành Luật Thương mại quốc tế)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 130,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "502E",
+      "major_name": "Luật kinh tế (Chuyên ngành Luật thương mại quốc tế) (Tiếng Anh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 85,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "503",
+      "major_name": "Luật (Chuyên ngành Luật Dân sự)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 125,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "503E",
+      "major_name": "Luật (Chuyên ngành Luật Dân sự) (Tiếng Anh)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "504",
+      "major_name": "Luật (Chuyên ngành Luật Tài chính - Ngân hàng)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 125,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "505",
+      "major_name": "Luật (Chuyên ngành Luật và Chính sách công)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "506",
+      "major_name": "Luật (Chuyên ngành Luật và Công nghệ)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

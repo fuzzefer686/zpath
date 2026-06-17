@@ -1,0 +1,97 @@
+{
+  "university_code": "DPH",
+  "university_name": "Trường Đại học Phạm Văn Đồng",
+  "found_url": "https://trangedu.com/truong/dai-hoc-pham-van-dong/",
+  "status": "success",
+  "num_records": 14,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": "51140201",
+      "major_name": "Giáo dục Mầm non (Cao đẳng)",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140210",
+      "major_name": "Sư phạm Tin học",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140211",
+      "major_name": "Sư phạm Vật lý",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140217",
+      "major_name": "Sư phạm Ngữ văn",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm Tiếng Anh",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục Tiểu học",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm Toán học",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140247",
+      "major_name": "Sư phạm Khoa học Tự nhiên",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140212",
+      "major_name": "Sư phạm Hóa học",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510201",
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520114",
+      "major_name": "Kỹ thuật cơ điện tử",
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "university_code": "DQL",
+  "university_name": "Trường Đại học Luật Thành phố Hồ Chí Minh",
+  "found_url": "https://plo.vn/hoc-phi-va-chi-tieu-tuyen-sinh-5-truong-dai-hoc-luat-lon-nhat-ca-nuoc-nam-2026-post903821.html",
+  "status": "success",
+  "num_records": 3,
+  "school_wide": {
+    "tuition_min": 44,
+    "tuition_max": 220
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo tiêu chuẩn",
+      "tuition_min": 44,
+      "tuition_max": 53
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình chất lượng cao",
+      "tuition_min": 90,
+      "tuition_max": 90
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình chất lượng cao giảng dạy bằng tiếng Anh",
+      "tuition_min": 220,
+      "tuition_max": 220
+    }
+  ]
+}

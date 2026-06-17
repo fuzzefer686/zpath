@@ -1,0 +1,14 @@
+Phạm vi: 4 trường | đã có data: 0 | sẽ crawl: 4
+
+[1/4] QSK Trường Đại học Kinh tế - Luật - Đại học Quốc gia Thành phố Hồ Chí Minh...
+    -> success, records: 40 (year 2026) (https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-kinh-te-luat)
+[2/4] DDL Trường Đại học Điện lực...
+    -> success, records: 34 (year 2026) (https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-dien-luc-DDL)
+[3/4] YDH Trường Đại học Y Dược - Đại học Huế...
+    -> needs_deeper_crawl, records: 0 (year 2026) (https://huemed-univ.edu.vn/)
+[4/4] DHA Trường Đại học Luật - Đại học Huế...
+    -> needs_deeper_crawl, records: 0 (year 2026) (http://dkxt.hueuni.edu.vn/)
+
+✅ Xong 4 trường. ~4 grounding calls.
+   Summary: /Users/fuzzefer/projects/zpath/pipeline/data/output/programs_2026_summary.csv
+   JSON: /Users/fuzzefer/projects/zpath/pipeline/data/output/programs_2026_results/

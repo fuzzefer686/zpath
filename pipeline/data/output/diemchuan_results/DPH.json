@@ -1,0 +1,234 @@
+{
+  "university_code": "DPH",
+  "university_name": "Trường Đại học Phạm Văn Đồng",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-pham-van-dong-DPQ.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 28,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; D01",
+      "score": 26.87,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X05; D01",
+      "score": 27.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tin học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; X05; X06; D01",
+      "score": 25.92,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; X05; A01; C01",
+      "score": 26.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C02; B00; D07",
+      "score": 26.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X74; X70; X01",
+      "score": 27.02,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X25; X78; D15",
+      "score": 26.02,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm KHTN",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C02; B00; C01",
+      "score": 26.08,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế phát triển",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; X74; X01; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; X74; X01; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; X74; X01; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; X05; X06; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X05; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X05; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C00; D01",
+      "score": 27.46,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; X05; D01",
+      "score": 27.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tin học",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; X05; X06; D01",
+      "score": 26.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; X05; A01; C01",
+      "score": 27.34,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; C02; B00; D07",
+      "score": 27.04,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; X74; X70; X01",
+      "score": 27.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; X25; X78; D15",
+      "score": 26.83,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm KHTN",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; C02; B00; C01",
+      "score": 26.87,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế phát triển",
+      "admission_method": "hoc_ba",
+      "combination_code": "C03; X74; X01; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "hoc_ba",
+      "combination_code": "C03; X74; X01; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "hoc_ba",
+      "combination_code": "C03; X74; X01; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; X05; X06; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; X05; D01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ điện tử",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; X05; D01",
+      "score": 15.0,
+      "scale": 30
+    }
+  ]
+}

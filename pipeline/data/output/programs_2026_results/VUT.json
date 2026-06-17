@@ -1,0 +1,73 @@
+{
+  "university_code": "VUT",
+  "university_name": "Trường Đại học Công nghệ Vạn Xuân",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/2402/ma-nganh-ma-xet-tuyen-dai-hoc-cong-nghe-van-xuan-2026",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 7,
+  "data": [
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A16; D90",
+      "quota": null,
+      "tuition_min": 8.5,
+      "tuition_max": 8.5
+    },
+    {
+      "school_major_code": "7420201",
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00; D90",
+      "quota": null,
+      "tuition_min": 8.5,
+      "tuition_max": 8.5
+    },
+    {
+      "school_major_code": "7580201",
+      "major_name": "Kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D07; C01",
+      "quota": null,
+      "tuition_min": 8.5,
+      "tuition_max": 8.5
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D90",
+      "quota": null,
+      "tuition_min": 8.5,
+      "tuition_max": 8.5
+    },
+    {
+      "school_major_code": "7819201",
+      "major_name": "Quản trị du lịch khách sạn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; D01; A04; C00",
+      "quota": null,
+      "tuition_min": 8.5,
+      "tuition_max": 8.5
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D90",
+      "quota": null,
+      "tuition_min": 8.5,
+      "tuition_max": 8.5
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D90",
+      "quota": null,
+      "tuition_min": 8.5,
+      "tuition_max": 8.5
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "university_code": "HAU",
+  "university_name": "Trường Đại học Kiến trúc Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-kien-truc-ha-noi-KTA.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 38,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế đầu tư",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 20.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế phát triển",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 19.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/D01/X02/X03/X04",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/D01/X02/X03/X04",
+      "score": 21.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ game",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/D01/X02/X03/X04",
+      "score": 21.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật vật liệu xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng dân dụng và công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 20.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng công trình ngầm đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 18.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý dự án xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 19.98,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng công trình giao thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hạ tầng đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật môi trường đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ cơ điện công trình",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cấp thoát nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế Xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 20.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý bất động sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 18.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý vận tải và Logistics",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật vật liệu xây dựng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng dân dụng và công nghiệp",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 20.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng công trình ngầm đô thị",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 18.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý dự án xây dựng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 19.98,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng công trình giao thông",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hạ tầng đô thị",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật môi trường đô thị",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ cơ điện công trình",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cấp thoát nước",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/C01/C02/D01/X03/X04",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điêu khắc",
+      "admission_method": "ket_hop",
+      "combination_code": "H00/H02",
+      "score": 22.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Mỹ thuật đô thị",
+      "admission_method": "ket_hop",
+      "combination_code": "H00/H02",
+      "score": 22.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "ket_hop",
+      "combination_code": "H00/H02",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nghệ thuật số",
+      "admission_method": "ket_hop",
+      "combination_code": "H00/H02",
+      "score": 24.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế thời trang",
+      "admission_method": "ket_hop",
+      "combination_code": "H00/H02",
+      "score": 22.99,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc",
+      "admission_method": "ket_hop",
+      "combination_code": "V00/V01/V02",
+      "score": 27.77,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiên tiến ngành Kiến trúc",
+      "admission_method": "ket_hop",
+      "combination_code": "V00/V01/V02",
+      "score": 24.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc cảnh quan",
+      "admission_method": "ket_hop",
+      "combination_code": "V00/V01/V02",
+      "score": 25.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quy hoạch vùng và đô thị",
+      "admission_method": "ket_hop",
+      "combination_code": "V00/V01/V02",
+      "score": 26.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đô thị",
+      "admission_method": "ket_hop",
+      "combination_code": "V00/V01/V02",
+      "score": 26.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế nội thất",
+      "admission_method": "ket_hop",
+      "combination_code": "H00/H02",
+      "score": 23.0,
+      "scale": 30
+    }
+  ]
+}

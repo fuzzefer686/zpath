@@ -1,0 +1,37 @@
+{
+  "university_code": "DDT",
+  "university_name": "Trường Đại học Duy Tân",
+  "found_url": "https://edu2review.com/reviews/hoc-phi-dai-hoc-duy-tan-co-cao-khong-3404.html",
+  "status": "success",
+  "num_records": 4,
+  "school_wide": {
+    "tuition_min": 16,
+    "tuition_max": 99
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình phổ thông (đại trà)",
+      "tuition_min": 16,
+      "tuition_max": 99
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình Tiên tiến (CMU, PSU, CSU, PNU)",
+      "tuition_min": 26,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình Tài năng (HP)",
+      "tuition_min": 30,
+      "tuition_max": 37
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình Việt – Nhật",
+      "tuition_min": 20,
+      "tuition_max": 39
+    }
+  ]
+}

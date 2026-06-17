@@ -1,0 +1,136 @@
+{
+  "university_code": "DPH",
+  "university_name": "Trường Đại học Phạm Văn Đồng",
+  "found_url": "https://diemthi.tuyensinh247.com/thong-tin-dai-hoc-pham-van-dong-DPQ.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 14,
+  "data": [
+    {
+      "school_major_code": "51140201",
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "ket_hop",
+      "combination_code": "M01; M09",
+      "quota": 130,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; D01; X01",
+      "quota": 180,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X05; D01; D07",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140210",
+      "major_name": "Sư phạm Tin học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X05; X06",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140211",
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X05",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140212",
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02; D07; X09",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140217",
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; X74; X70; X01; D14",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; X25; X78",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140247",
+      "major_name": "Sư phạm Khoa học Tự nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; C02; B00; B03",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; X74; X01; D01",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; X74; X01; D01",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; X05; X06; D01",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510201",
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X05; D01",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520114",
+      "major_name": "Kỹ thuật cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X05; D01",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

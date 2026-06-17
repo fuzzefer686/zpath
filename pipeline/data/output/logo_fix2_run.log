@@ -1,0 +1,10 @@
+Phạm vi: 2 | đã có logo: 0 | sẽ crawl: 2
+
+[1/2] DAG Trường Đại học An Giang - Đại học Quốc gia Thành phố Hồ Chí Minh...
+    -> grounding (high) https://rxhcmmggzodoapyjxcug.supabase.co/storage/v1/object/public/scho
+[2/2] DCT Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh...
+    -> grounding (high) https://rxhcmmggzodoapyjxcug.supabase.co/storage/v1/object/public/scho
+
+✅ Xong 2 trường.
+   Summary: /Users/fuzzefer/projects/zpath/pipeline/data/output/logo_summary.csv
+   Files: /Users/fuzzefer/projects/zpath/pipeline/data/output/logo_files/

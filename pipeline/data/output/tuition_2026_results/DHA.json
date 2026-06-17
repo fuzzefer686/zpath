@@ -1,0 +1,25 @@
+{
+  "university_code": "DHA",
+  "university_name": "Trường Đại học Luật - Đại học Huế",
+  "found_url": "https://thi.tuyensinh247.com/thong-tin-tuyen-sinh-dai-hoc-luat-dai-hoc-hue-2026-c24a89261.html",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 18,
+    "tuition_max": 18
+  },
+  "data": [
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật Kinh tế",
+      "tuition_min": 18,
+      "tuition_max": 18
+    }
+  ]
+}

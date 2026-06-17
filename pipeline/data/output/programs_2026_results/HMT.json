@@ -1,0 +1,64 @@
+{
+  "university_code": "HMT",
+  "university_name": "Trường Đại học Y tế Công cộng",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-y-te-cong-cong-YTC.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": "7460108",
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; D01; D07; X26",
+      "quota": 70,
+      "tuition_min": 29.26,
+      "tuition_max": 29.26
+    },
+    {
+      "school_major_code": "7720401",
+      "major_name": "Dinh dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08; C02; D01; D07",
+      "quota": 160,
+      "tuition_min": 30.59,
+      "tuition_max": 30.59
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B08; C01; D01",
+      "quota": 230,
+      "tuition_min": 38.57,
+      "tuition_max": 38.57
+    },
+    {
+      "school_major_code": "7720603",
+      "major_name": "Kỹ thuật phục hồi chức năng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B03; C01; D01",
+      "quota": 165,
+      "tuition_min": 38.57,
+      "tuition_max": 38.57
+    },
+    {
+      "school_major_code": "7720701",
+      "major_name": "Y tế công cộng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08; C02; D01; D13",
+      "quota": 220,
+      "tuition_min": 30.59,
+      "tuition_max": 30.59
+    },
+    {
+      "school_major_code": "7760101",
+      "major_name": "Công tác xã hội",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C20; D01; D14; D15; D66; X74; X78",
+      "quota": 105,
+      "tuition_min": 21.01,
+      "tuition_max": 21.01
+    }
+  ]
+}

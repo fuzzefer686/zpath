@@ -1,0 +1,31 @@
+{
+  "university_code": "DGD",
+  "university_name": "Trường Đại học Công nghiệp Thành phố Hồ Chí Minh",
+  "found_url": "https://fptshop.com.vn/tin-tuc/danh-gia/hoc-phi-dai-hoc-cong-nghiep-hcm-2025-176587",
+  "status": "partial",
+  "num_records": 3,
+  "school_wide": {
+    "tuition_min": 32.85,
+    "tuition_max": 53.58
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế",
+      "tuition_min": 32.85,
+      "tuition_max": 32.85
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật",
+      "tuition_min": 33.5,
+      "tuition_max": 33.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "tuition_min": 53.58,
+      "tuition_max": 53.58
+    }
+  ]
+}

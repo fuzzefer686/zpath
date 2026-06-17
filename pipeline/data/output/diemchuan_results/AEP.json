@@ -1,0 +1,146 @@
+{
+  "university_code": "AEP",
+  "university_name": "Học viện Chính sách và Phát triển",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/hoc-vien-chinh-sach-va-phat-trien-HCP.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 17,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D09",
+      "score": 30.02,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D84",
+      "score": 22.02,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế phát triển",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/D84",
+      "score": 22.36,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/D84",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế (Chuyên ngành Kinh tế đối ngoại chất lượng cao giảng dạy bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D84",
+      "score": 28.61,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế (Chuyên ngành Kinh doanh toàn cầu)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D84",
+      "score": 27.14,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/D84",
+      "score": 23.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D84",
+      "score": 24.39,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 26.39,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D84",
+      "score": 22.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (Chuyên ngành Quản trị kinh doanh chất lượng cao giảng dạy bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D84",
+      "score": 28.91,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D84",
+      "score": 28.66,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng (Chuyên ngành Tài chính chất lượng cao giảng dạy bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D84",
+      "score": 29.9,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D84",
+      "score": 26.54,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/D84",
+      "score": 23.23,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D09/D84",
+      "score": 24.73,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 26.73,
+      "scale": 30
+    }
+  ]
+}

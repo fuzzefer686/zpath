@@ -1,0 +1,121 @@
+{
+  "university_code": "BTU",
+  "university_name": "Trường Đại học Bình Dương",
+  "found_url": "https://vietjack.com/thong-tin-tuyen-sinh/hoc-phi-truong-dai-hoc-binh-duong.jsp",
+  "status": "success",
+  "num_records": 18,
+  "school_wide": {
+    "tuition_min": 23.236,
+    "tuition_max": 29.706
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "tuition_min": 23.236,
+      "tuition_max": 23.236
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "tuition_min": 23.86,
+      "tuition_max": 23.86
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm",
+      "tuition_min": 23.982,
+      "tuition_max": 23.982
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật công trình xây dựng",
+      "tuition_min": 24.388,
+      "tuition_max": 24.388
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hàn Quốc học",
+      "tuition_min": 24.454,
+      "tuition_max": 24.454
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhật Bản học",
+      "tuition_min": 24.454,
+      "tuition_max": 24.454
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "tuition_min": 25.008,
+      "tuition_max": 25.008
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "tuition_min": 25.008,
+      "tuition_max": 25.008
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "tuition_min": 25.008,
+      "tuition_max": 25.008
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "tuition_min": 25.288,
+      "tuition_max": 25.288
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xã hội học",
+      "tuition_min": 25.504,
+      "tuition_max": 25.504
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "tuition_min": 25.632,
+      "tuition_max": 25.632
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hóa dược",
+      "tuition_min": 26.492,
+      "tuition_max": 26.492
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "tuition_min": 26.732,
+      "tuition_max": 26.732
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "tuition_min": 25.226,
+      "tuition_max": 25.226
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "tuition_min": 27.37,
+      "tuition_max": 27.37
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc",
+      "tuition_min": 25.084,
+      "tuition_max": 25.084
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "tuition_min": 29.706,
+      "tuition_max": 29.706
+    }
+  ]
+}

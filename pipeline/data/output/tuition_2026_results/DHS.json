@@ -1,0 +1,19 @@
+{
+  "university_code": "DHS",
+  "university_name": "Trường Đại học Sư phạm - Đại học Huế",
+  "found_url": "https://thieunien.vn/hoc-phi-cua-cac-truong-dai-hoc-nam-hoc-2025-2026-tbd64489.html",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": 15.9,
+    "tuition_max": 18.5
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đại học Sư phạm Đại học Huế",
+      "tuition_min": 15.9,
+      "tuition_max": 18.5
+    }
+  ]
+}
