@@ -55,10 +55,7 @@ const isPhoneCompletionRoute = (pathname: string) =>
   pathname === "/login/complete-profile";
 
 const isPhoneRequiredRoute = (pathname: string) =>
-  pathname === "/advisor" ||
-  pathname.startsWith("/advisor/") ||
-  pathname === "/unimap" ||
-  pathname.startsWith("/unimap/");
+  pathname === "/advisor" || pathname.startsWith("/advisor/");
 
 const sanitizeNextPath = (value: string | null | undefined) => {
   if (!value) return "/";
