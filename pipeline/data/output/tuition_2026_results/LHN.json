@@ -1,0 +1,43 @@
+{
+  "university_code": "LHN",
+  "university_name": "Trường Đại học Luật Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-luat-ha-noi-LPH.html",
+  "status": "success",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "tuition_min": 23.52,
+      "tuition_max": 23.52
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "tuition_min": 23.52,
+      "tuition_max": 23.52
+    },
+    {
+      "school_major_code": "7380101PH",
+      "major_name": "Luật (Đào tạo tại Phân hiệu Đắk Lắk)",
+      "tuition_min": 23.52,
+      "tuition_max": 23.52
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật Kinh tế",
+      "tuition_min": 23.52,
+      "tuition_max": 23.52
+    },
+    {
+      "school_major_code": "7380109",
+      "major_name": "Luật Thương mại quốc tế",
+      "tuition_min": 23.52,
+      "tuition_max": 23.52
+    }
+  ]
+}

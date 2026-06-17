@@ -1,0 +1,91 @@
+{
+  "university_code": "UMT",
+  "university_name": "Trường Đại học Quản lý và Công nghệ Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-quan-ly-va-cong-nghe-tphcm-UMT.html",
+  "data_year": 2025,
+  "status": "success",
+  "num_records": 9,
+  "data": [
+    {
+      "school_major_code": "7210403",
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; C02; C03; C04; D01; D03; H01; H04; H06; H08; V03; V05; V06",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; C01; C02; C03; C04; D01; D03",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340116",
+      "major_name": "Bất động sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340120",
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A03; A04; C01; D01; D03; D07; X06",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7810301",
+      "major_name": "Quản lý thể dục thể thao",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

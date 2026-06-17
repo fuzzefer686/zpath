@@ -1,0 +1,31 @@
+{
+  "university_code": "KMA",
+  "university_name": "Học viện Kỹ thuật Mật mã",
+  "found_url": "https://www.tuyensinh-daihoc.com/truong/hoc-vien-ky-thuat-mat-ma-kma-369.html",
+  "status": "success",
+  "num_records": 3,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": "7480202",
+      "major_name": "An toàn thông tin",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520207",
+      "major_name": "Kỹ thuật điện tử - viễn thông",
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "university_code": "DAG",
+  "university_name": "Trường Đại học An Giang - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/1283/hoc-phi-chinh-thuc-dai-hoc-an-giang-nam-2023-2024",
+  "status": "success",
+  "num_records": 11,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học giáo dục và đào tạo giáo viên",
+      "tuition_min": 3.55,
+      "tuition_max": 3.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh và Marketing",
+      "tuition_min": 4.0,
+      "tuition_max": 4.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "tuition_min": 3.97,
+      "tuition_max": 3.97
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin, Kỹ thuật phần mềm",
+      "tuition_min": 4.71,
+      "tuition_max": 4.71
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật hóa học",
+      "tuition_min": 4.08,
+      "tuition_max": 4.08
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhân văn, khoa học xã hội và hành vi, báo chí",
+      "tuition_min": 3.81,
+      "tuition_max": 4.53
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học (AUN-QA)",
+      "tuition_min": 8.55,
+      "tuition_max": 8.55
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm (AUN-QA)",
+      "tuition_min": 9.25,
+      "tuition_max": 9.25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (AUN-QA)",
+      "tuition_min": 9.25,
+      "tuition_max": 9.25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phần mềm (AUN-QA)",
+      "tuition_min": 6.51,
+      "tuition_max": 6.51
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (AUN-QA)",
+      "tuition_min": 5.6,
+      "tuition_max": 5.6
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "university_code": "QHQ",
+  "university_name": "Trường Quốc tế - Đại học Quốc gia Hà Nội",
+  "found_url": "https://unizone.edu.vn/hoc-phi-khoa-quoc-te-dhqghn/",
+  "status": "success",
+  "num_records": 14,
+  "school_wide": {
+    "tuition_min": 39.75,
+    "tuition_max": 112.7
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "tuition_min": 50.6,
+      "tuition_max": 50.6
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán, Phân tích và Kiểm toán",
+      "tuition_min": 50.6,
+      "tuition_max": 50.6
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý",
+      "tuition_min": 48.0,
+      "tuition_max": 48.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tin học và Kỹ thuật máy tính",
+      "tuition_min": 48.0,
+      "tuition_max": 48.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phân tích dữ liệu kinh doanh",
+      "tuition_min": 39.75,
+      "tuition_max": 49.75
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (chuyên sâu Kinh doanh – Công nghệ thông tin)",
+      "tuition_min": 42.25,
+      "tuition_max": 60.43
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tự động hóa và Tin học",
+      "tuition_min": 46.25,
+      "tuition_max": 66.13
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính và Kinh doanh số",
+      "tuition_min": 46.25,
+      "tuition_max": 66.13
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin ứng dụng",
+      "tuition_min": 46.25,
+      "tuition_max": 66.13
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hệ thống công nghiệp và Logistics",
+      "tuition_min": 46.25,
+      "tuition_max": 66.13
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh số",
+      "tuition_min": 39.75,
+      "tuition_max": 54.15
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông số",
+      "tuition_min": 42.25,
+      "tuition_max": 57.78
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing (Chương trình song bằng)",
+      "tuition_min": 80.5,
+      "tuition_max": 80.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý (Chương trình song bằng)",
+      "tuition_min": 112.7,
+      "tuition_max": 112.7
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "university_code": "BTU",
+  "university_name": "Trường Đại học Bình Dương",
+  "found_url": "https://xaydungchinhsach.chinhphu.vn/diem-chuan-truong-dai-hoc-binh-duong-bdu-2025-119250823103823416.htm",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo khác",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600.0,
+      "scale": 1200
+    }
+  ]
+}

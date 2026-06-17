@@ -1,0 +1,34 @@
+{
+  "university_code": "HBT",
+  "university_name": "Trường Đại học Công nghệ Sài Gòn",
+  "found_url": "http://stu.edu.vn/vi/1/21004/diem-chuan-truong-dai-hoc-cong-nghe-sai-gon-stu-2025.html",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 3,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 720.0,
+      "scale": 1200
+    }
+  ]
+}

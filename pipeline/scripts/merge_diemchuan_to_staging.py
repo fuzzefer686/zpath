@@ -87,7 +87,7 @@ def map_record(code: str, name: str, rec: dict) -> dict | None:
     }
 
 
-def load_rows() -> tuple[list[dict], Counter]:
+def load_rows(only_codes: set[str] | None = None) -> tuple[list[dict], Counter]:
     if not RESULTS_DIR.is_dir():
         config.fail(f"Results not found: {RESULTS_DIR}")
     rows: list[dict] = []
@@ -95,7 +95,7 @@ def load_rows() -> tuple[list[dict], Counter]:
     for jf in sorted(RESULTS_DIR.glob("*.json")):
         fj = json.loads(jf.read_text(encoding="utf-8"))
         code = fj["university_code"]
-        if code in CURATED_SKIP:
+        if code in CURATED_SKIP or (only_codes and code not in only_codes):
             continue
         name = fj.get("university_name", code)
         src = fj.get("found_url")
@@ -118,7 +118,15 @@ def confirm(prompt: str) -> bool:
 
 
 def main() -> None:
-    rows, per_school = load_rows()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--codes", type=str, default=None,
+                        help="chỉ merge các mã trường này (vd AEP,DCT)")
+    parser.add_argument("--yes", action="store_true")
+    args = parser.parse_args()
+    only = ({c.strip() for c in args.codes.split(",") if c.strip()} if args.codes else None)
+
+    rows, per_school = load_rows(only)
     print("=== PREVIEW: điểm chuẩn 2025 -> admissions_staging ===")
     print(f"Tổng record: {len(rows)} | trường: {len(per_school)}")
     for code, n in sorted(per_school.items(), key=lambda x: -x[1]):

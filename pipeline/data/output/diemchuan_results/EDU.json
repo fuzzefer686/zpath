@@ -1,0 +1,186 @@
+{
+  "university_code": "EDU",
+  "university_name": "Trường Đại học Giáo dục - Đại học Quốc gia Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-giao-duc-ha-noi-QHS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 22,
+  "data": [
+    {
+      "school_major_code": "QHS01",
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B03; C01; C02; D01",
+      "score": 28.57,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS02",
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; C01",
+      "score": 28.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS03",
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02; D07",
+      "score": 27.74,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS04",
+      "major_name": "Sư phạm Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02; B00; B03; B08",
+      "score": 25.37,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS05",
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00",
+      "score": 25.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS06",
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C04; D01; D14; D15",
+      "score": 28.45,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS07",
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A07; C00; C03; D09; D14",
+      "score": 28.99,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS08",
+      "major_name": "Sư phạm Lịch sử và Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A07; C00",
+      "score": 29.84,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS09",
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C00; D01; C14",
+      "score": 27.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS10",
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C00; D01; C14",
+      "score": 28.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS11",
+      "major_name": "Giáo dục Công dân",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C00; D01; C14",
+      "score": 25.57,
+      "scale": 30
+    },
+    {
+      "school_major_code": "QHS01",
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 112.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": "QHS10",
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 112.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": "QHS11",
+      "major_name": "Giáo dục Công dân",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 82.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": "QHS02",
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 106.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": "QHS03",
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 104.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": "QHS04",
+      "major_name": "Sư phạm Sinh học",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 94.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": "QHS05",
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 91.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": "QHS06",
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 108.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": "QHS07",
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 115.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": "QHS08",
+      "major_name": "Sư phạm Lịch sử và Địa lý",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 130.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": "QHS09",
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 102.0,
+      "scale": 150
+    }
+  ]
+}

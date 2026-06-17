@@ -1,0 +1,42 @@
+{
+  "university_code": "DHA",
+  "university_name": "Trường Đại học Luật - Đại học Huế",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-luat-dai-hoc-hue-DHA.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C00; C19; C20; D01; D66",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C00; C19; C20; D01; D66",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; C00; C19; C20; D01; D66",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; C00; C19; C20; D01; D66",
+      "score": 23.5,
+      "scale": 30
+    }
+  ]
+}

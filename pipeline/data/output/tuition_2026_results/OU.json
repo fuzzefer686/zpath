@@ -1,0 +1,55 @@
+{
+  "university_code": "OU",
+  "university_name": "Trường Đại học Mở Thành phố Hồ Chí Minh",
+  "found_url": "https://dienthoaivui.com.vn/back-to-school-hoc-phi-dai-hoc-mo",
+  "status": "success",
+  "num_records": 7,
+  "school_wide": {
+    "tuition_min": 26.5,
+    "tuition_max": 50.0
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học, Công nghệ thực phẩm",
+      "tuition_min": 31.0,
+      "tuition_max": 31.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Kỹ thuật công trình xây dựng, Quản lý xây dựng, Kiến trúc, Kỹ thuật xây dựng",
+      "tuition_min": 31.0,
+      "tuition_max": 31.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin, Khoa học máy tính, Khoa học dữ liệu, Hệ thống thông tin quản lý, Trí tuệ nhân tạo, Kỹ thuật phần mềm, An toàn thông tin, Toán ứng dụng",
+      "tuition_min": 32.0,
+      "tuition_max": 32.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán, Kiểm toán, Tài chính - Ngân hàng, Quản trị kinh doanh, Marketing, Kinh doanh quốc tế, Quản trị nhân lực, Luật, Luật kinh tế, Logistics và Quản lý chuỗi cung ứng, Du lịch, Công nghệ tài chính, Bảo hiểm",
+      "tuition_min": 30.0,
+      "tuition_max": 30.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế, Quản lý công, Xã hội học, Công tác xã hội, Đông nam á học, Tâm lý học",
+      "tuition_min": 26.5,
+      "tuition_max": 26.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nhật, Ngôn ngữ Trung Quốc, Ngôn ngữ Anh, Ngôn ngữ Hàn Quốc",
+      "tuition_min": 32.0,
+      "tuition_max": 32.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình Tiên tiến/Chất lượng cao (Tất cả các ngành)",
+      "tuition_min": 50.0,
+      "tuition_max": 50.0
+    }
+  ]
+}

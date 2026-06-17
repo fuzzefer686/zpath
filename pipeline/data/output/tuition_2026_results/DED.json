@@ -1,0 +1,49 @@
+{
+  "university_code": "DED",
+  "university_name": "Trường Đại học Sư phạm - Đại học Đà Nẵng",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/1272/hoc-phi-dai-hoc-su-pham-dai-hoc-da-nang-2025-2026-chinh-xac-nhat",
+  "status": "partial",
+  "num_records": 6,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành Sư phạm (khối I)",
+      "tuition_min": 4.62,
+      "tuition_max": 4.62
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học và Hóa học (khối IV)",
+      "tuition_min": 5.77,
+      "tuition_max": 5.77
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu, Năng lượng tái tạo, Kỹ thuật hạt nhân (khối V)",
+      "tuition_min": 5.4,
+      "tuition_max": 5.4
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Công nghệ thông tin (khối V)",
+      "tuition_min": 6.25,
+      "tuition_max": 6.25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn học, Quan hệ công chúng, Lịch sử (khối VII)",
+      "tuition_min": 4.92,
+      "tuition_max": 4.92
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên môi trường, Địa lý học, Công tác xã hội, Văn hóa học, Báo chí, Việt Nam học, Tâm lý học (khối VII)",
+      "tuition_min": 5.7,
+      "tuition_max": 5.7
+    }
+  ]
+}

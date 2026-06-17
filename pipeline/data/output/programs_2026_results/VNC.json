@@ -1,0 +1,73 @@
+{
+  "university_code": "VNC",
+  "university_name": "Nhạc viện Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/thong-tin-nhac-vien-tphcm-NVS.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 7,
+  "data": [
+    {
+      "school_major_code": "7210201",
+      "major_name": "Âm nhạc học",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "quota": 6,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210203",
+      "major_name": "Sáng tác âm nhạc",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "quota": 9,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210204",
+      "major_name": "Chỉ huy âm nhạc",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "quota": 7,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210205",
+      "major_name": "Thanh nhạc",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "quota": 35,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210207",
+      "major_name": "Biểu diễn nhạc cụ Phương tây",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "quota": 28,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210208",
+      "major_name": "Piano",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "quota": 10,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210210",
+      "major_name": "Biểu diễn nhạc cụ truyền thống",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "quota": 12,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "university_code": "VHH",
+  "university_name": "Trường Đại học Văn hóa Hà Nội",
+  "found_url": "https://huc.edu.vn/a/241136/THONG-TIN-TUYEN-SINH-DAI-HOC-CHINH-QUY-NAM-2026-Du-kien",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đại học Chính quy",
+      "tuition_min": 4.97,
+      "tuition_max": 4.97
+    }
+  ]
+}

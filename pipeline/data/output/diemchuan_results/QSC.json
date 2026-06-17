@@ -1,0 +1,234 @@
+{
+  "university_code": "QSC",
+  "university_name": "Trường Đại học Công nghệ Thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-cong-nghe-thong-tin-dhqg-tphcm-QSC.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 28,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông Đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; X26; D09; D10; D07",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07",
+      "score": 24.57,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07; A02",
+      "score": 27.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07",
+      "score": 27.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Mạng máy tính và truyền thông dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07; X14",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phần mềm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07",
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07; D08",
+      "score": 24.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin (tiên tiến)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; X26; D07; D08",
+      "score": 24.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "score": 25.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07",
+      "score": 29.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07",
+      "score": 26.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin Việt Nhật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07; D06",
+      "score": 24.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "An toàn thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07",
+      "score": 26.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế Vi mạch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông Đa phương tiện",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 911.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 889.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 1010.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học máy tính",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 993.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Mạng máy tính và truyền thông dữ liệu",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 854.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phần mềm",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 946.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 891.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin (tiên tiến)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 867.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật máy tính",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 923.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 1098.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 969.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin Việt Nhật",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 867.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "An toàn thông tin",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 956.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế Vi mạch",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 984.0,
+      "scale": 1200
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "university_code": "VUT",
+  "university_name": "Trường Đại học Công nghệ Vạn Xuân",
+  "found_url": "https://diendantuyensinh24h.com/diem-chuan-dai-hoc-cong-nghe-van-xuan/",
+  "year": 2025,
+  "status": "success",
+  "num_records": 7,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị du lịch khách sạn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15,
+      "scale": 30
+    }
+  ]
+}

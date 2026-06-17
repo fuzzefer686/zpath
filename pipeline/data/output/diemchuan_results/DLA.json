@@ -1,0 +1,226 @@
+{
+  "university_code": "DLA",
+  "university_name": "Trường Đại học Kinh tế Công nghiệp Long An",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-kinh-te-cong-nghiep-long-an-DLA.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 27,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D07; X78; D15",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị Kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D13; X74; B03",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D13; X74; B03",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; D07; X17; C08",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; X21; C02; D10",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C00; C04; C05",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; X01; B08",
+      "score": 18.56,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Kỹ thuật Xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; X25; C01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X25; X78; D15",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D07; X78; D15",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị Kinh doanh",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01; D13; X74; B03",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01; D13; X74; B03",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "hoc_ba",
+      "combination_code": "B00; D07; X17; C08",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; X21; C02; D10",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; C00; C04; C05",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; C01; X01; B08",
+      "score": 20.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Kỹ thuật Xây dựng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A02; X25; C01",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; X25; X78; D15",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "D01; D07; X78; D15",
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị Kinh doanh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "A01; D13; X74; B03",
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "A01; D13; X74; B03",
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "B00; D07; X17; C08",
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "A00; X21; C02; D10",
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "A00; C00; C04; C05",
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "A00; C01; X01; B08",
+      "score": 666.25,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Kỹ thuật Xây dựng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "A00; A02; X25; C01",
+      "score": 500.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "dgnl_hcm",
+      "combination_code": "D01; X25; X78; D15",
+      "score": 500.0,
+      "scale": 1200
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "university_code": "LHN",
+  "university_name": "Trường Đại học Luật Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/thong-tin-dai-hoc-luat-ha-noi-LPH.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 5,
+  "data": [
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; D01; D02; D03; D04; D05; D06",
+      "quota": 1600,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7380101PH",
+      "major_name": "Luật (Đào tạo tại Phân hiệu Đắk Lắk)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; D01; D02; D03; D04; D05; D06",
+      "quota": 300,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; D01; D02; D03; D04; D05; D06",
+      "quota": 550,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7380109",
+      "major_name": "Luật Thương mại quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

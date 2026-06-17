@@ -1,0 +1,25 @@
+{
+  "university_code": "TQU",
+  "university_name": "Trường Đại học Tân Trào",
+  "found_url": "http://thongtintuyensinh247.com/hoc-phi-dai-hoc-tan-trao/",
+  "status": "partial",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 9.5,
+    "tuition_max": 11.7
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành Khoa học xã hội, nông, lâm, thủy sản, kinh tế luật",
+      "tuition_min": 8.7,
+      "tuition_max": 8.7
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành Khoa học tự nhiên, công nghệ, kỹ thuật, thể chất, nghệ thuật, khách sạn, du lịch",
+      "tuition_min": 10.35,
+      "tuition_max": 10.35
+    }
+  ]
+}

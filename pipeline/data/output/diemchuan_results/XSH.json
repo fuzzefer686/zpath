@@ -1,0 +1,42 @@
+{
+  "university_code": "XSH",
+  "university_name": "Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://vietnamnet.vn/diem-chuan-truong-dai-hoc-khoa-hoc-xa-hoi-va-nhan-van-tphcm-nam-2025-2434678.html",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Báo chí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 28.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Nga",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 972.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Italia",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 650.0,
+      "scale": 1200
+    }
+  ]
+}

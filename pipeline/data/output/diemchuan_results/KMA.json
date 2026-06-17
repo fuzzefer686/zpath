@@ -1,0 +1,42 @@
+{
+  "university_code": "KMA",
+  "university_name": "Học viện Kỹ thuật Mật mã",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/hoc-vien-ky-thuat-mat-ma-KMA.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X26; X06",
+      "score": 24.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "An toàn thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X26; X06",
+      "score": 24.42,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "An toàn thông tin (Đào tạo tại TPHCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X26; X06",
+      "score": 23.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điện tử - viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "score": 23.48,
+      "scale": 30
+    }
+  ]
+}

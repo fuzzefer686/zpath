@@ -1,0 +1,223 @@
+{
+  "university_code": "DPX",
+  "university_name": "Trường Đại học Sư phạm Thành phố Hồ Chí Minh",
+  "found_url": "http://thcstanhoidong.dongthap.edu.vn/tin-tuc-su-kien/hoc-phi-dai-hoc-su-pham-thanh-pho-ho-chi-minh-nam-2025-2026.html",
+  "status": "success",
+  "num_records": 35,
+  "school_wide": {
+    "tuition_min": 14.1,
+    "tuition_max": 16.4
+  },
+  "data": [
+    {
+      "school_major_code": "740201",
+      "major_name": "Giáo dục Mầm non",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140101",
+      "major_name": "Giáo dục học",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục Tiểu học",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140203",
+      "major_name": "Giáo dục Đặc biệt",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140204",
+      "major_name": "Giáo dục Công dân",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140206",
+      "major_name": "Giáo dục Thể chất",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140208",
+      "major_name": "Giáo dục Quốc phòng - An ninh",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm Toán học",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140210",
+      "major_name": "Sư phạm Tin học",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140211",
+      "major_name": "Sư phạm Vật lý",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140212",
+      "major_name": "Sư phạm Hóa học",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140213",
+      "major_name": "Sư phạm Sinh học",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140217",
+      "major_name": "Sư phạm Ngữ văn",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140218",
+      "major_name": "Sư phạm Lịch sử",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140219",
+      "major_name": "Sư phạm Địa lý",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140234",
+      "major_name": "Sư phạm Tiếng Trung Quốc",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm Tiếng Anh",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140246",
+      "major_name": "Sư phạm Công nghệ",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140247",
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7140249",
+      "major_name": "Sư phạm Lịch sử - Địa Lí",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": "7220101",
+      "major_name": "Ngôn ngữ Anh",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7220202",
+      "major_name": "Ngôn ngữ Nga",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7220203",
+      "major_name": "Ngôn ngữ Pháp",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7220209",
+      "major_name": "Ngôn ngữ Nhật",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7220210",
+      "major_name": "Ngôn ngữ Hàn Quốc",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7229030",
+      "major_name": "Văn học",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7310401",
+      "major_name": "Tâm lý học",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7310403",
+      "major_name": "Tâm lý học giáo dục",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7310601",
+      "major_name": "Quốc tế học",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7310630",
+      "major_name": "Việt Nam học",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": "7440102",
+      "major_name": "Vật lý học",
+      "tuition_min": 15.2,
+      "tuition_max": 15.2
+    },
+    {
+      "school_major_code": "7440112",
+      "major_name": "Hóa học",
+      "tuition_min": 15.2,
+      "tuition_max": 15.2
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "tuition_min": 16.4,
+      "tuition_max": 16.4
+    },
+    {
+      "school_major_code": "7760101",
+      "major_name": "Công tác xã hội",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    }
+  ]
+}

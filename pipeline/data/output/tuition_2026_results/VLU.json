@@ -1,0 +1,37 @@
+{
+  "university_code": "VLU",
+  "university_name": "Trường Đại học Văn Lang",
+  "found_url": "https://edu2review.com/reviews/sinh-vien-nghi-gi-ve-dai-hoc-van-lang-tphcm-2256.html",
+  "status": "success",
+  "num_records": 4,
+  "school_wide": {
+    "tuition_min": 40,
+    "tuition_max": 60
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Hệ tiêu chuẩn (đa số ngành)",
+      "tuition_min": 40,
+      "tuition_max": 60
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "tuition_min": 33,
+      "tuition_max": 66
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chuẩn quốc tế / liên kết quốc tế",
+      "tuition_min": 40,
+      "tuition_max": 120
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Răng-Hàm-Mặt",
+      "tuition_min": 160,
+      "tuition_max": 180
+    }
+  ]
+}

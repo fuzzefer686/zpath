@@ -216,8 +216,28 @@ def crawl_one(client, code: str, name: str) -> dict:
     return best
 
 
-def read_scope(codes_arg: str | None) -> list[tuple[str, str]]:
-    """(code, name) pairs to crawl: explicit --codes, or audit verdict == thiếu."""
+def read_scope(codes_arg: str | None, csv_path: str | None = None) -> list[tuple[str, str]]:
+    """(code, name) pairs to crawl.
+
+    Priority: an explicit --csv file (columns university_code,university_name —
+    e.g. a brand-new batch of schools not yet in the audit/DB), else the audit
+    CSV filtered by --codes / verdict == thiếu.
+    """
+    from pathlib import Path
+
+    if csv_path:
+        path = Path(csv_path)
+        if not path.is_file():
+            config.fail(f"--csv not found: {path}")
+        with path.open(encoding="utf-8-sig", newline="") as f:
+            rows = list(csv.DictReader(f))
+        scope = [(r["university_code"].strip(), r["university_name"].strip())
+                 for r in rows if (r.get("university_code") or "").strip()]
+        if codes_arg:
+            wanted = {c.strip() for c in codes_arg.split(",") if c.strip()}
+            scope = [(c, n) for c, n in scope if c in wanted]
+        return scope
+
     if not AUDIT_CSV.is_file():
         config.fail(f"Audit not found: {AUDIT_CSV} — chạy audit_coverage.py trước.")
     with AUDIT_CSV.open(encoding="utf-8-sig", newline="") as f:
@@ -245,11 +265,13 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=None, help="chỉ N trường đầu (test)")
     parser.add_argument("--codes", type=str, default=None,
                         help="danh sách mã trường, vd BVH,CTS (bỏ qua verdict)")
+    parser.add_argument("--csv", type=str, default=None,
+                        help="file CSV (university_code,university_name) cho batch trường mới chưa có trong audit")
     parser.add_argument("--force", action="store_true",
                         help="crawl lại cả trường đã có data (bỏ qua resume)")
     args = parser.parse_args()
 
-    scope = read_scope(args.codes)
+    scope = read_scope(args.codes, args.csv)
     if args.limit is not None:
         scope = scope[: args.limit]
     done = set() if args.force else load_done()

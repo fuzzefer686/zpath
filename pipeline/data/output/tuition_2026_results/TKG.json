@@ -1,0 +1,37 @@
+{
+  "university_code": "TKG",
+  "university_name": "Trường Đại học Kiên Giang",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/1263/hoc-phi-truong-dai-hoc-kien-giang-nam-2025-2026",
+  "status": "success",
+  "num_records": 4,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành I & III (Khoa học giáo dục, Kinh doanh và quản lý, Luật)",
+      "tuition_min": 4.75,
+      "tuition_max": 4.75
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành IV (Khoa học sự sống, Khoa học tự nhiên)",
+      "tuition_min": 5.4,
+      "tuition_max": 5.4
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành V (Toán, CNTT, Kỹ thuật, Xây dựng, Nông lâm nghiệp, Thủy sản, Thú y)",
+      "tuition_min": 5.9,
+      "tuition_max": 5.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành VII (Nhân văn, Khoa học xã hội, Du lịch, Môi trường)",
+      "tuition_min": 5.2,
+      "tuition_max": 5.2
+    }
+  ]
+}

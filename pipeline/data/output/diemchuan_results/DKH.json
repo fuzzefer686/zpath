@@ -1,0 +1,122 @@
+{
+  "university_code": "DKH",
+  "university_name": "Trường Đại học Dược Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-duoc-ha-noi-DKH.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 14,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 20.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hóa dược",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 23.56,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "hoc_ba",
+      "combination_code": "B00",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hóa học",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00",
+      "score": 24.53,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; B00",
+      "score": 27.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hóa dược",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00",
+      "score": 26.31,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "dg_tu_duy",
+      "combination_code": "K00",
+      "score": 18.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "ket_hop",
+      "combination_code": "B00",
+      "score": 25.18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hóa học",
+      "admission_method": "ket_hop",
+      "combination_code": "A00",
+      "score": 25.18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "ket_hop",
+      "combination_code": "A00",
+      "score": 26.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hóa dược",
+      "admission_method": "ket_hop",
+      "combination_code": "A00",
+      "score": 25.42,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 25.0,
+      "scale": 30
+    }
+  ]
+}

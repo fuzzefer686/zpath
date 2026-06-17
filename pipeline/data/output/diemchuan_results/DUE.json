@@ -1,0 +1,570 @@
+{
+  "university_code": "DUE",
+  "university_name": "Trường Đại học Kinh tế - Đại học Đà Nẵng",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-kinh-te-dai-hoc-da-nang-DDQ.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 70,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế - Chương trình Kinh tế (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thống kê kinh tế - Chương trình Thống kê kinh tế (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước - Chương trình Quản lý nhà nước (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh - Chương trình Quản trị kinh doanh (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing - Chương trình Marketing (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế - Chương trình Kinh doanh quốc tế (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh thương mại - Chương trình Kinh doanh thương mại (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử - Chương trình Thương mại điện tử (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng - Chương trình Tài chính - Ngân hàng (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính - Chương trình Công nghệ tài chính (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán - Chương trình Kế toán (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán - Chương trình Kiểm toán (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực - Chương trình Quản trị nguồn nhân lực (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý - Chương trình Hệ thống thông tin quản lý (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật - Chương trình Luật (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế - Chương trình Luật Kinh tế (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu - Chương trình Khoa học dữ liệu (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành - Chương trình Quản trị dịch vụ du lịch và lữ hành (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị khách sạn - Chương trình Quản trị khách sạn (S - Tiêu chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế - Chương trình Kinh tế quốc tế (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh - Chương trình Quản trị kinh doanh (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing - Chương trình Marketing số (E - Toàn phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing - Chương trình Marketing (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế - Chương trình Ngoại thương (E - Toàn phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế - Chương trình Kinh doanh giao nhận và vận tải quốc tế (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử - Chương trình Thương mại điện tử (E - Toàn phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng - Chương trình Tài chính - Ngân hàng (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính - Chương trình Công nghệ tài chính (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán - Chương trình Kế toán tích hợp chương trình quốc tế ICAEW (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán - Chương trình Kiểm toán tích hợp chương trình quốc tế ACCA (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực - Chương trình Quản trị nguồn nhân lực (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý - Chương trình Trí tuệ nhân tạo trong kinh doanh (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế - Chương trình Luật thương mại quốc tế (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành - Chương trình Quản trị kinh doanh du lịch (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị khách sạn - Chương trình Quản trị khách sạn (P - Bán phần tiếng Anh)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; D01; D07; X25; X26",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế - Chương trình Kinh tế quốc tế (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 659.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế - Chương trình Kinh tế (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 751.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thống kê kinh tế - Chương trình Thống kê kinh tế (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 751.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước - Chương trình Quản lý nhà nước (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 751.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh - Chương trình Quản trị kinh doanh (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 699.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh - Chương trình Quản trị kinh doanh (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 818.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing - Chương trình Marketing số (E - Toàn phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 820.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing - Chương trình Marketing (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 719.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing - Chương trình Marketing (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 902.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế - Chương trình Ngoại thương (E - Toàn phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 820.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế - Chương trình Kinh doanh giao nhận và vận tải quốc tế (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 780.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế - Chương trình Kinh doanh quốc tế (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 968.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh thương mại - Chương trình Kinh doanh thương mại (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 818.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử - Chương trình Thương mại điện tử (E - Toàn phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 780.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử - Chương trình Thương mại điện tử (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 876.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng - Chương trình Tài chính - Ngân hàng (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 659.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng - Chương trình Tài chính - Ngân hàng (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 771.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính - Chương trình Công nghệ tài chính (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 699.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính - Chương trình Công nghệ tài chính (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 846.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán - Chương trình Kế toán tích hợp chương trình quốc tế ICAEW (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 659.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán - Chương trình Kế toán (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 771.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán - Chương trình Kiểm toán tích hợp chương trình quốc tế ACCA (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 739.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán - Chương trình Kiểm toán (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 771.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực - Chương trình Quản trị nguồn nhân lực (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 679.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực - Chương trình Quản trị nguồn nhân lực (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 786.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý - Chương trình Trí tuệ nhân tạo trong kinh doanh (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 659.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý - Chương trình Hệ thống thông tin quản lý (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 751.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật - Chương trình Luật (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 751.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế - Chương trình Luật thương mại quốc tế (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 739.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế - Chương trình Luật Kinh tế (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 751.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu - Chương trình Khoa học dữ liệu (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 818.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành - Chương trình Quản trị kinh doanh du lịch (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 659.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành - Chương trình Quản trị dịch vụ du lịch và lữ hành (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 751.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị khách sạn - Chương trình Quản trị khách sạn (P - Bán phần tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 659.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị khách sạn - Chương trình Quản trị khách sạn (S - Tiêu chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 751.0,
+      "scale": 1200
+    }
+  ]
+}

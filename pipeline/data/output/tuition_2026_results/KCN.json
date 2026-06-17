@@ -1,0 +1,55 @@
+{
+  "university_code": "KCN",
+  "university_name": "Trường Đại học Khoa học và Công nghệ Hà Nội",
+  "found_url": "https://usth.edu.vn/thong-bao-quy-dinh-muc-hoc-phi-chinh-thuc-ap-dung-cho-nam-hoc-2025-2026-26120/",
+  "status": "success",
+  "num_records": 7,
+  "school_wide": {
+    "tuition_min": 22,
+    "tuition_max": 125
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Hàng không (3 năm tại Trường và 1 năm tại VAECO)",
+      "tuition_min": 125,
+      "tuition_max": 125
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Hàng không (3 năm tại Trường)",
+      "tuition_min": 100,
+      "tuition_max": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành song bằng",
+      "tuition_min": 79,
+      "tuition_max": 79
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "tuition_min": 73.5,
+      "tuition_max": 73.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đơn bằng khác",
+      "tuition_min": 56,
+      "tuition_max": 56
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thạc sĩ",
+      "tuition_min": 56,
+      "tuition_max": 56
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tiến sĩ",
+      "tuition_min": 22,
+      "tuition_max": 22
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "university_code": "QSK",
+  "university_name": "Trường Đại học Kinh tế - Luật - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-kinh-te-luat-tphcm-QSK.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 10,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế (Chuyên ngành Kinh tế học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01/D07/X25/X26",
+      "score": 24.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế (Chuyên ngành Kinh tế học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01",
+      "score": 25.42,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế (Chuyên ngành Kinh tế đối ngoại)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01/D07/X25/X26",
+      "score": 26.33,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế (Chuyên ngành Kinh tế đối ngoại)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01",
+      "score": 27.28,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing (Chuyên ngành Digital Marketing)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01",
+      "score": 27.54,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế (Chuyên ngành Quản lý chuỗi cung ứng và Logistics quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01",
+      "score": 28.08,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 984,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing (Chuyên ngành Digital Marketing)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 973,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế (Chuyên ngành Kinh tế đối ngoại)",
+      "admission_method": "ket_hop",
+      "combination_code": "SAT",
+      "score": 1200,
+      "scale": 1600
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật (Chuyên ngành Luật Dân sự) (Tiếng Anh)",
+      "admission_method": "ket_hop",
+      "combination_code": "SAT",
+      "score": 1410,
+      "scale": 1600
+    }
+  ]
+}

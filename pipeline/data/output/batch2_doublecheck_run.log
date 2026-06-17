@@ -1,0 +1,105 @@
+Double-check 48 trường
+
+[1/48] QSB    crawled= 59 exp=  44 -> đủ
+[2/48] QSC    crawled= 20 exp=  14 -> đủ
+[3/48] QSK    crawled=  0 exp=  15 -> thiếu
+[4/48] QSX    crawled= 51 exp=  51 -> đủ
+[5/48] QHQ    crawled= 17 exp=  15 -> đủ
+[6/48] DKH    crawled=  5 exp=   4 -> đủ
+[7/48] KMA    crawled=  4 exp=   3 -> đủ
+[8/48] KCN    crawled= 20 exp=  20 -> đủ
+[9/48] SGD    crawled= 48 exp=  50 -> đủ
+[10/48] SPS    crawled= 46 exp=  45 -> đủ
+[11/48] IUH    crawled= 37 exp=  41 -> đủ
+[12/48] DCT    crawled= 39 exp=   ? -> unknown
+[13/48] UNETI  crawled= 49 exp=  27 -> đủ
+[14/48] DDL    crawled=  9 exp=  38 -> thiếu
+[15/48] AEP    crawled= 19 exp=  13 -> đủ
+[16/48] HMT    crawled=  6 exp=   6 -> đủ
+[17/48] YDH    crawled=  0 exp=  11 -> thiếu
+[18/48] KTH    crawled= 21 exp=  22 -> đủ
+[19/48] DHF    crawled= 13 exp=  13 -> đủ
+[20/48] DHS    crawled= 21 exp=  35 -> thiếu
+[21/48] DHA    crawled=  1 exp=   2 -> thiếu
+[22/48] YQD    crawled=  0 exp=   3 -> thiếu
+[23/48] ANH    crawled=  2 exp=   ? -> unknown
+[24/48] CSH    crawled= 10 exp=   6 -> đủ
+[25/48] RMIT   crawled= 17 exp=  24 -> thiếu
+[26/48] VLU    crawled= 54 exp=  64 -> đủ
+[27/48] OU     crawled= 64 exp=  33 -> đủ
+[28/48] MHN    crawled= 22 exp=  22 -> đủ
+[29/48] TBD    crawled= 27 exp=  23 -> đủ
+[30/48] DUE    crawled= 37 exp=   ? -> unknown
+[31/48] LHN    crawled=  5 exp=   4 -> đủ
+[32/48] TBU    crawled= 31 exp=  25 -> đủ
+[33/48] TDU    crawled= 37 exp=  37 -> đủ
+[34/48] HAU    crawled= 29 exp=  30 -> đủ
+[35/48] UAH    crawled= 22 exp=   ? -> unknown
+[36/48] DPH    crawled= 14 exp=  14 -> đủ
+[37/48] DQN    crawled=  0 exp=  53 -> thiếu
+[38/48] TDTU   crawled= 51 exp= 138 -> thiếu
+[39/48] KTC    crawled= 42 exp=  38 -> đủ
+[40/48] UMT    crawled=  9 exp=   ? -> unknown
+[41/48] VJD    crawled=  9 exp=   9 -> đủ
+[42/48] EDU    crawled= 16 exp=  16 -> đủ
+[43/48] VHH    crawled= 12 exp=  12 -> đủ
+[44/48] VNC    crawled=  7 exp=   7 -> đủ
+[45/48] DLA    crawled=  9 exp=   9 -> đủ
+[46/48] DDT    crawled= 85 exp=  52 -> đủ
+[47/48] BTU    crawled= 18 exp=  18 -> đủ
+[48/48] VUT    crawled=  7 exp=   8 -> đủ
+
+=== DOUBLE-CHECK (48 trường) ===
+CODE   crawl   yr   exp  need  gap  verdict
+TDTU      51 2026   138   111   60  thiếu
+DQN        0 2026    53    43   43  thiếu
+DDL        9 2026    38    31   22  thiếu
+QSK        0 2026    15    12   12  thiếu
+YDH        0 2026    11     9    9  thiếu
+DHS       21 2026    35    28    7  thiếu
+RMIT      17 2026    24    20    3  thiếu
+YQD        0 2026     3     3    3  thiếu
+DHA        1 2026     2     2    1  thiếu
+AEP       19 2026    13    11    0  đủ
+ANH        2 2026     ?     ?    0  unknown
+BTU       18 2026    18    15    0  đủ
+CSH       10 2026     6     5    0  đủ
+DCT       39 2026     ?     ?    0  unknown
+DDT       85 2026    52    42    0  đủ
+DHF       13 2026    13    11    0  đủ
+DKH        5 2025     4     4    0  đủ
+DLA        9 2026     9     8    0  đủ
+DPH       14 2026    14    12    0  đủ
+DUE       37 2026     ?     ?    0  unknown
+EDU       16 2025    16    13    0  đủ
+HAU       29 2026    30    24    0  đủ
+HMT        6 2026     6     5    0  đủ
+IUH       37 2026    41    33    0  đủ
+KCN       20 2026    20    16    0  đủ
+KMA        4 2026     3     3    0  đủ
+KTC       42 2026    38    31    0  đủ
+KTH       21 2026    22    18    0  đủ
+LHN        5 2026     4     4    0  đủ
+MHN       22 2026    22    18    0  đủ
+OU        64 2026    33    27    0  đủ
+QHQ       17 2026    15    12    0  đủ
+QSB       59 2026    44    36    0  đủ
+QSC       20 2026    14    12    0  đủ
+QSX       51 2026    51    41    0  đủ
+SGD       48 2026    50    40    0  đủ
+SPS       46 2026    45    36    0  đủ
+TBD       27 2026    23    19    0  đủ
+TBU       31 2026    25    20    0  đủ
+TDU       37 2026    37    30    0  đủ
+UAH       22 2026     ?     ?    0  unknown
+UMT        9 2025     ?     ?    0  unknown
+UNETI     49 2026    27    22    0  đủ
+VHH       12 2026    12    10    0  đủ
+VJD        9 2026     9     8    0  đủ
+VLU       54 2026    64    52    0  đủ
+VNC        7 2026     7     6    0  đủ
+VUT        7 2026     8     7    0  đủ
+
+Đủ: 34 | Thiếu: 9 | Unknown: 5
+Thiếu -> ['QSK', 'DDL', 'YDH', 'DHS', 'DHA', 'YQD', 'RMIT', 'DQN', 'TDTU']
+CSV: /Users/fuzzefer/projects/zpath/pipeline/data/output/batch2_coverage.csv

@@ -1,0 +1,23 @@
+Phạm vi: 7 trường | đã có data: 0 | sẽ crawl: 7
+
+[1/7] QSK Trường Đại học Kinh tế - Luật - Đại học Quốc gia Thành phố Hồ Chí Minh...
+  ↪ Playwright fallback cho vnuhcm.edu.vn (requests trả nội dung rỗng/ngắn)
+    -> needs_deeper_crawl, records: 0 (year 2026) (https://vnuhcm.edu.vn/)
+[2/7] DDL Trường Đại học Điện lực...
+    -> partial, records: 2 (year 2026) (https://giaoduc.net.vn/nam-2026-truong-dai-hoc-dien-luc-ap-dung-4-phuo)
+[3/7] YDH Trường Đại học Y Dược - Đại học Huế...
+    -> needs_deeper_crawl, records: 0 (year 2026) (https://huemed-univ.edu.vn/)
+[4/7] DHA Trường Đại học Luật - Đại học Huế...
+    -> partial, records: 1 (year 2026) (https://tuyensinh.hul.edu.vn/News/Detail/thong-tin-tuyen-sinh-dai-hoc-)
+[5/7] YQD Học viện Quân y...
+  ↪ Playwright fallback cho hocvienquany.vn (requests trả nội dung rỗng/ngắn)
+  ↪ Playwright fallback cho hocvienquany.vn (requests trả nội dung rỗng/ngắn)
+    -> needs_deeper_crawl, records: 0 (year 2026) (https://hocvienquany.vn/)
+[6/7] ANH Học viện An ninh Nhân dân...
+    -> success, records: 3 (year 2025) (https://thi.tuyensinh247.com/de-an-tuyen-sinh-hoc-vien-an-ninh-nhan-da)
+[7/7] DQN Trường Đại học Quy Nhơn...
+    -> success, records: 53 (year 2026) (https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-quy-nhon-DQN)
+
+✅ Xong 7 trường. ~7 grounding calls.
+   Summary: /Users/fuzzefer/projects/zpath/pipeline/data/output/programs_2026_summary.csv
+   JSON: /Users/fuzzefer/projects/zpath/pipeline/data/output/programs_2026_results/

@@ -1,0 +1,82 @@
+{
+  "university_code": "VJD",
+  "university_name": "Trường Đại học Việt Nhật - Đại học Quốc gia Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-viet-nhat-ha-noi-VJU.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 9,
+  "data": [
+    {
+      "school_major_code": "BGDI",
+      "major_name": "Đổi mới và Phát triển toàn cầu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D09; D10; D14; D15; X78; X25",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "BJS",
+      "major_name": "Nhật Bản học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D28; D01; D06; D14; D63; D15; D43; C00; X70; X74; X78; X98",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "BCSE",
+      "major_name": "Khoa học & Kỹ thuật máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D28; D01; D06; C01; X06; X02; D07; D23; C02; X26; X46",
+      "score": 20.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "ESCT",
+      "major_name": "Công nghệ kỹ thuật Chip bán dẫn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D28; C01; X06; X02; D07; D23; C02; X26; X46; A02",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "EMJM",
+      "major_name": "Cơ điện tử thông minh và sản xuất theo phương thức Nhật Bản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D28; D01; D06; C01; X06; X02; D07; D23; C02; X26; X46",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "BICA",
+      "major_name": "Điều khiển thông minh và Tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D28; D01; D06; C01; X06; X02; D07; D23; C02; X26; X46",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "EFTH",
+      "major_name": "Công nghệ Thực phẩm và sức khỏe",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D28; D01; D06; B00; D07; D23; X12; X16; C02; X04; D33; D08",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "ECE",
+      "major_name": "Kỹ thuật Xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D28; D01; D06; C01; X06; X02; D07; D23; C02; X26; X46",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "ESAS",
+      "major_name": "Nông nghiệp thông minh và bền vững",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D28; D01; D06; C02; D07; D23; D10; D18; B00; D08; D33",
+      "score": 20.0,
+      "scale": 30
+    }
+  ]
+}

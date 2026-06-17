@@ -1,0 +1,49 @@
+university_code,university_name,given_code,recon_note
+QSB,Trường Đại học Bách khoa - Đại học Quốc gia Thành phố Hồ Chí Minh,QSB,exists_as_DBH
+QSC,Trường Đại học Công nghệ Thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh,QSC,new
+QSK,Trường Đại học Kinh tế - Luật - Đại học Quốc gia Thành phố Hồ Chí Minh,QSK,new
+QSX,Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia Thành phố Hồ Chí Minh,QSX,exists_as_XSH
+QHQ,Trường Quốc tế - Đại học Quốc gia Hà Nội,QHQ,new
+DKH,Trường Đại học Dược Hà Nội,DKH,new
+KMA,Học viện Kỹ thuật Mật mã,KMA,new
+KCN,Trường Đại học Khoa học và Công nghệ Hà Nội,KCN,new
+SGD,Trường Đại học Sài Gòn,SGD,new_dedup_SGU
+SPS,Trường Đại học Sư phạm Thành phố Hồ Chí Minh,SPS,exists_as_DPX
+IUH,Trường Đại học Công nghiệp Thành phố Hồ Chí Minh,IUH,exists_as_DGD
+DCT,Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh,DCT,new
+UNETI,Trường Đại học Kinh tế - Kỹ thuật Công nghiệp,UNETI,new_dedup_DQK
+DDL,Trường Đại học Điện lực,DLĐ,new_ascii_relabel
+AEP,Học viện Chính sách và Phát triển,AEP,new
+HMT,Trường Đại học Y tế Công cộng,HMT,new
+YDH,Trường Đại học Y Dược - Đại học Huế,YDH,new
+KTH,Trường Đại học Kinh tế - Đại học Huế,DHK,new_relabel_DHK_collision
+DHF,Trường Đại học Ngoại ngữ - Đại học Huế,DHF,new
+DHS,Trường Đại học Sư phạm - Đại học Huế,DHS,new
+DHA,Trường Đại học Luật - Đại học Huế,DHA,new
+YQD,Học viện Quân y,YQD,new
+ANH,Học viện An ninh Nhân dân,ANH,new
+CSH,Học viện Cảnh sát Nhân dân,CSH,new
+RMIT,Trường Đại học RMIT Việt Nam,RMIT,new_international
+VLU,Trường Đại học Văn Lang,VLU,new
+OU,Trường Đại học Mở Thành phố Hồ Chí Minh,OU,new
+MHN,Trường Đại học Mở Hà Nội,MHN,new
+TBD,Trường Đại học Thái Bình Dương,TBD,new
+DUE,Trường Đại học Kinh tế - Đại học Đà Nẵng,DUE,new
+LHN,Trường Đại học Luật Hà Nội,DHA,new_relabel_DHA_collision
+TBU,Trường Đại học Tây Bắc,TBU,new
+TDU,Trường Đại học Tây Nguyên,TDU,new
+HAU,Trường Đại học Kiến trúc Hà Nội,HAU,new
+UAH,Trường Đại học Kiến trúc Thành phố Hồ Chí Minh,UAH,new
+DPH,Trường Đại học Phạm Văn Đồng,DPH,new
+DQN,Trường Đại học Quy Nhơn,DQN,exists_recrawl
+TDTU,Trường Đại học Tôn Đức Thắng,TDTU,new
+KTC,Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh,KTC,new
+UMT,Trường Đại học Quản lý và Công nghệ Thành phố Hồ Chí Minh,UMT,new
+VJD,Trường Đại học Việt Nhật - Đại học Quốc gia Hà Nội,VJD,new
+EDU,Trường Đại học Giáo dục - Đại học Quốc gia Hà Nội,EDU,new
+VHH,Trường Đại học Văn hóa Hà Nội,VHH,exists_recrawl
+VNC,Nhạc viện Thành phố Hồ Chí Minh,VNC,new
+DLA,Trường Đại học Kinh tế Công nghiệp Long An,DLA,new
+DDT,Trường Đại học Duy Tân,DDT,new
+BTU,Trường Đại học Bình Dương,BTU,new
+VUT,Trường Đại học Công nghệ Vạn Xuân,VUT,new

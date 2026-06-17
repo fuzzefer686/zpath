@@ -58,5 +58,7 @@ pipeline/.venv/
 pipeline/.env
 **/__pycache__/
 *.pyc
+# Temp keep-best backups from re-crawl rounds (not source data)
+pipeline/data/output/_*_bak/
 # Manually-supplied source PDFs for the admission pipeline (large; not source)
 pipeline/data/input/pdfs/*.pdf

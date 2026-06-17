@@ -1,0 +1,79 @@
+{
+  "university_code": "HAU",
+  "university_name": "Trường Đại học Kiến trúc Hà Nội",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/1270/hoc-phi-truong-dai-hoc-kien-truc-ha-noi-nam-2025-2026",
+  "status": "success",
+  "num_records": 11,
+  "school_wide": {
+    "tuition_min": 15.2,
+    "tuition_max": 82.5
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đồ họa, Điêu khắc, Thời trang",
+      "tuition_min": 15.2,
+      "tuition_max": 15.2
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế phát triển, Kinh tế đầu tư",
+      "tuition_min": 16.9,
+      "tuition_max": 16.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo đại trà còn lại",
+      "tuition_min": 18.5,
+      "tuition_max": 18.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đào tạo hệ liên thông",
+      "tuition_min": 18.5,
+      "tuition_max": 18.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thạc sĩ",
+      "tuition_min": 22.8,
+      "tuition_max": 27.7
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tiến sĩ",
+      "tuition_min": 46.2,
+      "tuition_max": 46.2
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thạc sĩ Kiến trúc Pháp (DEA)",
+      "tuition_min": 60.0,
+      "tuition_max": 60.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đào tạo chương trình tiên tiến",
+      "tuition_min": 40.0,
+      "tuition_max": 40.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cử nhân Kiến trúc DEEA (khóa 2023, 2024)",
+      "tuition_min": 60.0,
+      "tuition_max": 60.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cử nhân Kiến trúc DEEA (khóa 2022 trở về trước)",
+      "tuition_min": 55.0,
+      "tuition_max": 55.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đào tạo quốc tế Kiến trúc Nội thất – IAHC",
+      "tuition_min": 82.5,
+      "tuition_max": 82.5
+    }
+  ]
+}

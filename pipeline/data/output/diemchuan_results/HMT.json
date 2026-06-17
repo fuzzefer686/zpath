@@ -1,0 +1,98 @@
+{
+  "university_code": "HMT",
+  "university_name": "Trường Đại học Y tế Công cộng",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-y-te-cong-cong-YTC.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 11,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; D01; D07; X26",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dinh dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08; C02; D01; D07",
+      "score": 22.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B08; D01; D07",
+      "score": 18.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phục hồi chức năng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B08; C01; D01",
+      "score": 20.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y tế công cộng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08; C02; D01; D13",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công tác xã hội",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C20; D01; D14; D15; D66; X74; X78",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00 ; A01 ; B00 ; D01 ; D07 ; X26",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dinh dưỡng",
+      "admission_method": "hoc_ba",
+      "combination_code": "B00; B03; B08; C02; D01; D07",
+      "score": 22.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y tế công cộng",
+      "admission_method": "hoc_ba",
+      "combination_code": "B00 ; B03 ; B08 ; C02 ; D01 ; D13",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công tác xã hội",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00 ; C20 ; D01 ; D14 ; D15 ; D66 ; X74 ; X78",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 150
+    }
+  ]
+}

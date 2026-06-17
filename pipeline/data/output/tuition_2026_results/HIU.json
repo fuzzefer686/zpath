@@ -1,0 +1,67 @@
+{
+  "university_code": "HIU",
+  "university_name": "Trường Đại học Quốc tế Hồng Bàng",
+  "found_url": "https://jobtest.vn/hrblog/hoc-phi-dai-hoc-hong-bang",
+  "status": "partial",
+  "num_records": 9,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y Khoa / Răng Hàm Mặt (Tiếng Việt)",
+      "tuition_min": 145,
+      "tuition_max": 145
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y học Cổ truyền (Tiếng Việt)",
+      "tuition_min": 72,
+      "tuition_max": 72
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học (Tiếng Việt)",
+      "tuition_min": 46,
+      "tuition_max": 46
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Y sinh (Tiếng Việt)",
+      "tuition_min": 44,
+      "tuition_max": 44
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành Kinh tế – Quản trị (Tiếng Việt)",
+      "tuition_min": 36,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành Xã hội & Ngôn ngữ (Tiếng Việt)",
+      "tuition_min": 36,
+      "tuition_max": 36
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa, Răng Hàm Mặt (Tiếng Anh)",
+      "tuition_min": 200,
+      "tuition_max": 220
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành khác (Tiếng Anh)",
+      "tuition_min": 85,
+      "tuition_max": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình Liên kết Quốc tế",
+      "tuition_min": 99,
+      "tuition_max": 99
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Phạm vi: 2 trường | đã có data: 0 | sẽ crawl: 2
+
+[1/2] YDH Trường Đại học Y Dược - Đại học Huế...
+    -> needs_deeper_crawl, records: 0 (year 2026) (https://huemed-univ.edu.vn/)
+[2/2] DHA Trường Đại học Luật - Đại học Huế...
+    -> partial, records: 1 (year 2025) (https://tuyensinh.hul.edu.vn/News/Detail/thong-tin-tuyen-sinh-dai-hoc-)
+
+✅ Xong 2 trường. ~2 grounding calls.
+   Summary: /Users/fuzzefer/projects/zpath/pipeline/data/output/programs_2026_summary.csv
+   JSON: /Users/fuzzefer/projects/zpath/pipeline/data/output/programs_2026_results/

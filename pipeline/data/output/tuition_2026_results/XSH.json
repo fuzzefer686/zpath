@@ -1,0 +1,43 @@
+{
+  "university_code": "XSH",
+  "university_name": "Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://ussh.vnu.edu.vn/vi/news/thong-bao/thong-bao-ke-hoach-thu-hoc-phi-doi-voi-sinh-vien-dai-hoc-chinh-quy-ky-1-nam-hoc-2025-2026-23755.html",
+  "status": "success",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": 16.9,
+    "tuition_max": 45.0
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành chuẩn (khóa cũ và khóa mới không thuộc nhóm kiểm định)",
+      "tuition_min": 16.9,
+      "tuition_max": 16.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đã kiểm định (Tâm lý học, Báo chí, QHCC, Quốc tế, QTKD, QTDV DL&LH, Nhật Bản học)",
+      "tuition_min": 33.0,
+      "tuition_max": 33.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đã kiểm định (QLTT, QTVP, KHQL, Đông phương học, Văn học, Lịch sử, Chính trị học, ĐNA học, TT-TV, Ngôn ngữ học, VN học, Xã hội học)",
+      "tuition_min": 27.5,
+      "tuition_max": 27.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ chất lượng cao theo thông tư 23",
+      "tuition_min": 35.0,
+      "tuition_max": 35.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sinh viên quốc tế",
+      "tuition_min": 45.0,
+      "tuition_max": 45.0
+    }
+  ]
+}

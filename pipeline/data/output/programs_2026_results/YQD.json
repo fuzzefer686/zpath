@@ -1,0 +1,37 @@
+{
+  "university_code": "YQD",
+  "university_name": "Học viện Quân y",
+  "found_url": "https://hocvienquany.vn/ts/thong-bao-ve-viec-tuyen-sinh-dai-hoc-tai-hoc-vien-quan-y-nam-2026",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 3,
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa (Hệ Quân sự)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 140,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa (Hệ Dân sự)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học (Hệ Dân sự)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

@@ -57,7 +57,7 @@ export function normalizeUniversityRecord(value: unknown): University | null {
       fallback.heroImageUrl,
     ),
     unimapImageUrl: asString(
-      record.unimapImageUrl ?? record.unimap_image_url,
+      record.unimapImageUrl ?? record.unimap_image_url ?? record.logo_url,
       fallback.unimapImageUrl,
     ),
     about: asString(record.about, fallback.about),
@@ -65,7 +65,10 @@ export function normalizeUniversityRecord(value: unknown): University | null {
     majors: asStringArray(record.majors, fallback.majors),
     channels: fallback.channels,
     programs: fallback.programs,
-    avatarUrl: asString(record.avatarUrl ?? record.avatar_url, fallback.avatarUrl),
+    avatarUrl: asString(
+      record.avatarUrl ?? record.avatar_url ?? record.logo_url,
+      fallback.avatarUrl,
+    ),
   };
 }
 
@@ -130,14 +133,19 @@ export function mapRecordToUniversity(value: unknown): University | null {
       asString(record.heroImageUrl ?? record.hero_image_url, local?.heroImageUrl ?? ""),
     ),
     unimapImageUrl: optional(
-      asString(record.unimapImageUrl ?? record.unimap_image_url, local?.unimapImageUrl ?? ""),
+      asString(
+        record.unimapImageUrl ?? record.unimap_image_url ?? record.logo_url,
+        local?.unimapImageUrl ?? "",
+      ),
     ),
     about: asString(record.about ?? record.description, local?.about ?? ""),
     highlights: asStringArray(record.highlights, local?.highlights ?? []),
     majors: asStringArray(record.majors, local?.majors ?? []),
     programs: local?.programs,
     channels: local?.channels,
-    avatarUrl: optional(asString(record.avatarUrl ?? record.avatar_url, local?.avatarUrl ?? "")),
+    avatarUrl: optional(
+      asString(record.avatarUrl ?? record.avatar_url ?? record.logo_url, local?.avatarUrl ?? ""),
+    ),
   };
 }
 

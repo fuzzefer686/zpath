@@ -114,13 +114,17 @@ def _qualifies(r: dict, include_partial: bool) -> bool:
             or r["tuition_min"] is not None)
 
 
-def step_admissions(client, include_partial: bool = False) -> None:
+def step_admissions(client, include_partial: bool = False,
+                    only_codes: set[str] | None = None) -> None:
     umap = {u["code"]: u["id"] for u in fetch_all(client, "universities", "id,code")}
     staging = fetch_all(
         client, "admissions_staging",
         "university_code,school_major_code,major_name,year,admission_method,"
         "exam_blocks,score,program_type,tuition_min,tuition_max,source_url",
     )
+    if only_codes:
+        staging = [r for r in staging
+                   if (r.get("university_code") or "").strip() in only_codes]
     qualifying = [r for r in staging if _qualifies(r, include_partial)]
     mergeable = [r for r in qualifying
                  if r["school_major_code"] and r["major_name"] and r["admission_method"]
@@ -184,13 +188,16 @@ def main() -> None:
     parser.add_argument("--step", choices=["universities", "admissions"], required=True)
     parser.add_argument("--include-partial", action="store_true",
                         help="merge cả rows name-only (year hợp lệ, không cần score/tuition)")
+    parser.add_argument("--codes", type=str, default=None,
+                        help="chỉ promote các mã trường này (vd batch2), bỏ qua phần còn lại của staging")
     parser.add_argument("--yes", action="store_true")
     args = parser.parse_args()
+    only = ({c.strip() for c in args.codes.split(",") if c.strip()} if args.codes else None)
     client = get_client()
     if args.step == "universities":
         step_universities(client)
     else:
-        step_admissions(client, include_partial=args.include_partial)
+        step_admissions(client, include_partial=args.include_partial, only_codes=only)
 
 
 if __name__ == "__main__":

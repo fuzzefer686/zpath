@@ -1,0 +1,31 @@
+{
+  "university_code": "CSH",
+  "university_name": "Học viện Cảnh sát Nhân dân",
+  "found_url": "https://hvcsnd.edu.vn/de-an-tuyen-sinh-he-dao-tao-sau-dai-hoc-nam-2026-cua-hoc-vien-csnd-13898",
+  "status": "success",
+  "num_records": 3,
+  "school_wide": {
+    "tuition_min": 0,
+    "tuition_max": 0
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Tội phạm học và phòng ngừa tội phạm",
+      "tuition_min": 0,
+      "tuition_max": 0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý Nhà nước về an ninh trật tự",
+      "tuition_min": 0,
+      "tuition_max": 0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trinh sát Cảnh sát",
+      "tuition_min": 0,
+      "tuition_max": 0
+    }
+  ]
+}

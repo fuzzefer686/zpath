@@ -1,0 +1,25 @@
+{
+  "university_code": "DFL",
+  "university_name": "Trường Đại học Ngoại ngữ - Đại học Đà Nẵng",
+  "found_url": "https://vietjack.com/thong-tin-tuyen-sinh/truong-dai-hoc-ngoai-ngu-dai-hoc-da-nang.jsp",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 16.9,
+    "tuition_max": 19.5
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Tiếng Việt & Văn hóa Việt Nam; Ngôn ngữ Thái Lan; Hàn Quốc học; Nhật Bản học; Quan hệ quốc tế",
+      "tuition_min": 16.9,
+      "tuition_max": 16.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo còn lại (chương trình truyền thống đã kiểm định)",
+      "tuition_min": 19.5,
+      "tuition_max": 19.5
+    }
+  ]
+}

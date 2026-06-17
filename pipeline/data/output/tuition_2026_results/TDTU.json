@@ -1,0 +1,49 @@
+{
+  "university_code": "TDTU",
+  "university_name": "Trường Đại học Tôn Đức Thắng",
+  "found_url": "https://thanhnien.vn/hoc-phi-thap-nhat-truong-dh-ton-duc-thang-nam-2026-o-muc-205-trieu-dong-nam-185260315190810367.htm",
+  "status": "success",
+  "num_records": 6,
+  "school_wide": {
+    "tuition_min": 20.5,
+    "tuition_max": 88
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiêu chuẩn",
+      "tuition_min": 31.26,
+      "tuition_max": 36.59
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngành Dược học (Chương trình tiêu chuẩn)",
+      "tuition_min": 68.46,
+      "tuition_max": 68.46
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiên tiến",
+      "tuition_min": 55.6,
+      "tuition_max": 64
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình ĐH bằng tiếng Anh",
+      "tuition_min": 78,
+      "tuition_max": 88
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình học tại Phân hiệu Khánh Hòa",
+      "tuition_min": 20.5,
+      "tuition_max": 24
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình liên kết đào tạo quốc tế (giai đoạn 1)",
+      "tuition_min": 75,
+      "tuition_max": 83
+    }
+  ]
+}

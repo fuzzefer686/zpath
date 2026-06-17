@@ -86,6 +86,7 @@ function createFallbackSchool(university: University): School {
     website: university.website ?? null,
     fanpage: null,
     hero_image_url: university.heroImageUrl ?? null,
+    logo_url: university.unimapImageUrl ?? null,
     description: university.about,
     source_url: university.website ?? null,
     last_checked_at: null,
@@ -98,6 +99,7 @@ function applyUniversityMediaToSchool(school: School, university: University): S
   return {
     ...school,
     hero_image_url: university.heroImageUrl ?? school.hero_image_url ?? null,
+    logo_url: university.unimapImageUrl ?? school.logo_url ?? null,
   };
 }
 

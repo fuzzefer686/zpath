@@ -1,0 +1,49 @@
+{
+  "university_code": "VJD",
+  "university_name": "Trường Đại học Việt Nhật - Đại học Quốc gia Hà Nội",
+  "found_url": "https://tuyensinh.vnu.edu.vn/index.php/Home/viewpage/154",
+  "status": "success",
+  "num_records": 6,
+  "school_wide": {
+    "tuition_min": 25,
+    "tuition_max": 58
+  },
+  "data": [
+    {
+      "school_major_code": "7310613",
+      "major_name": "Nhật Bản học",
+      "tuition_min": 58,
+      "tuition_max": 58
+    },
+    {
+      "school_major_code": "7480204",
+      "major_name": "Khoa học và Kỹ thuật máy tính",
+      "tuition_min": 58,
+      "tuition_max": 58
+    },
+    {
+      "school_major_code": "7520114",
+      "major_name": "Kỹ thuật cơ điện tử (Cơ điện tử thông minh và sản xuất theo phương thức Nhật Bản)",
+      "tuition_min": 58,
+      "tuition_max": 58
+    },
+    {
+      "school_major_code": "7540118QTD",
+      "major_name": "Công nghệ thực phẩm và sức khỏe",
+      "tuition_min": 58,
+      "tuition_max": 58
+    },
+    {
+      "school_major_code": "7620122QTD",
+      "major_name": "Nông nghiệp thông minh và bền vững",
+      "tuition_min": 58,
+      "tuition_max": 58
+    },
+    {
+      "school_major_code": "7580201",
+      "major_name": "Kỹ thuật xây dựng",
+      "tuition_min": 25,
+      "tuition_max": 25
+    }
+  ]
+}

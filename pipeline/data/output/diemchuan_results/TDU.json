@@ -1,0 +1,306 @@
+{
+  "university_code": "TDU",
+  "university_name": "Trường Đại học Tây Nguyên",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-tay-nguyen-TTN.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 37,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "M01; M09",
+      "score": 23.26,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C00; C03; D01",
+      "score": 27.04,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học – Tiếng Jrai",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C00; C03; D01",
+      "score": 25.89,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Chính trị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14; X70",
+      "score": 26.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Thể chất",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "T01; T20",
+      "score": 25.89,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; C01",
+      "score": 27.91,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; C01",
+      "score": 27.52,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02; D07",
+      "score": 26.86,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02; B00; B03; B08",
+      "score": 26.64,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D14; X70; X74",
+      "score": 27.13,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; X78",
+      "score": 26.71,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00; C05",
+      "score": 26.23,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; X78",
+      "score": 22.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Triết học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14; X70",
+      "score": 21.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D14; D15; X70; X74",
+      "score": 25.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01; D07; X78",
+      "score": 20.36,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế phát triển",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01; D07; X78",
+      "score": 19.31,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "score": 25.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01; D07; X78",
+      "score": 20.96,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh thương mại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01; D07; X78",
+      "score": 21.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính – Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01; D07; X78",
+      "score": 21.76,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01; D07; X78",
+      "score": 20.47,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01; D07; X78",
+      "score": 20.44,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02; B00; B03; B08",
+      "score": 19.06,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học Y Dược",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02; B00; B03; B08",
+      "score": 18.01,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "score": 20.96,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00; D07; X08",
+      "score": 16.7,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chăn nuôi",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08; D07; X08",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học cây trồng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B08; X08; X12; X16",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bảo vệ thực vật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B08; X08; X12; X16",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế nông nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01; D07; X78",
+      "score": 19.06,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lâm sinh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02; B00; B08; D07; X08",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thú y",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08; D07; X08",
+      "score": 20.11,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08; D07",
+      "score": 21.76,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08; D07",
+      "score": 24.13,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08; D07",
+      "score": 24.01,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý đất đai",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; B00; X08",
+      "score": 15.0,
+      "scale": 30
+    }
+  ]
+}

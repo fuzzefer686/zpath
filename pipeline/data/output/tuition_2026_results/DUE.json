@@ -1,0 +1,43 @@
+{
+  "university_code": "DUE",
+  "university_name": "Trường Đại học Kinh tế - Đại học Đà Nẵng",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/1280/hoc-phi-dai-hoc-kinh-te-dai-hoc-da-nang-2022-2023-chinh-xac-nhat",
+  "status": "success",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": 27.5,
+    "tuition_max": 42.0
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm 1 (Kinh tế phát triển, Kinh tế và quản lý công, Kinh tế đầu tư, Kinh tế quốc tế, Luật kinh doanh, Luật học, Kinh tế chính trị, Hành chính công, Tài chính công, Quản trị nguồn nhân lực, Thống kê Kinh tế - Xã hội, Khoa học dữ liệu và Phân tích kinh doanh, Công nghệ tài chính, Quản trị kinh doanh du lịch, Quản trị sự kiện)",
+      "tuition_min": 27.5,
+      "tuition_max": 27.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm 2 (Quản trị khách sạn, Kế toán, Kiểm toán, Ngoại thương, Quản trị Marketing, Truyền thông Marketing, Marketing số, Ngân hàng, Quản trị kinh doanh tổng quát, Quản trị chuỗi cung ứng và logistics, Kinh doanh số, Tài chính doanh nghiệp, Quản trị tài chính, Tin học quản lý, Quản trị hệ thống thông tin, Quản trị kinh doanh thương mại, Thương mại điện tử)",
+      "tuition_min": 27.5,
+      "tuition_max": 27.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình Giảng dạy bằng tiếng Anh (Kinh doanh quốc tế, Marketing số)",
+      "tuition_min": 42.0,
+      "tuition_max": 42.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình chính quy đại trà giảng dạy 50% bằng tiếng Anh",
+      "tuition_min": 36.5,
+      "tuition_max": 36.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình cử nhân chính quy liên kết quốc tế (học tại Việt Nam)",
+      "tuition_min": 50.0,
+      "tuition_max": 50.0
+    }
+  ]
+}

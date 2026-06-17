@@ -1,0 +1,49 @@
+university_code,university_name,crawled,data_year,expected_majors,needed,gap,verdict
+QSB,Trường Đại học Bách khoa - Đại học Quốc gia Thành phố Hồ Chí Minh,59,2026,44,36,0,đủ
+QSC,Trường Đại học Công nghệ Thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh,20,2026,14,12,0,đủ
+QSK,Trường Đại học Kinh tế - Luật - Đại học Quốc gia Thành phố Hồ Chí Minh,40,2026,15,12,0,đủ
+QSX,Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia Thành phố Hồ Chí Minh,51,2026,51,41,0,đủ
+QHQ,Trường Quốc tế - Đại học Quốc gia Hà Nội,17,2026,15,12,0,đủ
+DKH,Trường Đại học Dược Hà Nội,5,2025,4,4,0,đủ
+KMA,Học viện Kỹ thuật Mật mã,4,2026,3,3,0,đủ
+KCN,Trường Đại học Khoa học và Công nghệ Hà Nội,20,2026,20,16,0,đủ
+SGD,Trường Đại học Sài Gòn,48,2026,50,40,0,đủ
+SPS,Trường Đại học Sư phạm Thành phố Hồ Chí Minh,46,2026,45,36,0,đủ
+IUH,Trường Đại học Công nghiệp Thành phố Hồ Chí Minh,37,2026,41,33,0,đủ
+DCT,Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh,39,2026,?,,0,unknown
+UNETI,Trường Đại học Kinh tế - Kỹ thuật Công nghiệp,49,2026,27,22,0,đủ
+DDL,Trường Đại học Điện lực,34,2026,38,31,0,đủ
+AEP,Học viện Chính sách và Phát triển,19,2026,13,11,0,đủ
+HMT,Trường Đại học Y tế Công cộng,6,2026,6,5,0,đủ
+YDH,Trường Đại học Y Dược - Đại học Huế,0,2026,11,9,9,thiếu
+KTH,Trường Đại học Kinh tế - Đại học Huế,21,2026,22,18,0,đủ
+DHF,Trường Đại học Ngoại ngữ - Đại học Huế,13,2026,13,11,0,đủ
+DHS,Trường Đại học Sư phạm - Đại học Huế,21,2026,35,28,7,thiếu
+DHA,Trường Đại học Luật - Đại học Huế,1,2025,2,2,1,thiếu
+YQD,Học viện Quân y,0,2026,3,3,3,thiếu
+ANH,Học viện An ninh Nhân dân,3,2025,?,,0,unknown
+CSH,Học viện Cảnh sát Nhân dân,10,2026,6,5,0,đủ
+RMIT,Trường Đại học RMIT Việt Nam,17,2026,24,20,3,thiếu
+VLU,Trường Đại học Văn Lang,54,2026,64,52,0,đủ
+OU,Trường Đại học Mở Thành phố Hồ Chí Minh,64,2026,33,27,0,đủ
+MHN,Trường Đại học Mở Hà Nội,22,2026,22,18,0,đủ
+TBD,Trường Đại học Thái Bình Dương,27,2026,23,19,0,đủ
+DUE,Trường Đại học Kinh tế - Đại học Đà Nẵng,37,2026,?,,0,unknown
+LHN,Trường Đại học Luật Hà Nội,5,2026,4,4,0,đủ
+TBU,Trường Đại học Tây Bắc,31,2026,25,20,0,đủ
+TDU,Trường Đại học Tây Nguyên,37,2026,37,30,0,đủ
+HAU,Trường Đại học Kiến trúc Hà Nội,29,2026,30,24,0,đủ
+UAH,Trường Đại học Kiến trúc Thành phố Hồ Chí Minh,22,2026,?,,0,unknown
+DPH,Trường Đại học Phạm Văn Đồng,14,2026,14,12,0,đủ
+DQN,Trường Đại học Quy Nhơn,53,2026,53,43,0,đủ
+TDTU,Trường Đại học Tôn Đức Thắng,51,2026,138,111,60,thiếu
+KTC,Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh,42,2026,38,31,0,đủ
+UMT,Trường Đại học Quản lý và Công nghệ Thành phố Hồ Chí Minh,9,2025,?,,0,unknown
+VJD,Trường Đại học Việt Nhật - Đại học Quốc gia Hà Nội,9,2026,9,8,0,đủ
+EDU,Trường Đại học Giáo dục - Đại học Quốc gia Hà Nội,16,2025,16,13,0,đủ
+VHH,Trường Đại học Văn hóa Hà Nội,12,2026,12,10,0,đủ
+VNC,Nhạc viện Thành phố Hồ Chí Minh,7,2026,7,6,0,đủ
+DLA,Trường Đại học Kinh tế Công nghiệp Long An,9,2026,9,8,0,đủ
+DDT,Trường Đại học Duy Tân,85,2026,52,42,0,đủ
+BTU,Trường Đại học Bình Dương,18,2026,18,15,0,đủ
+VUT,Trường Đại học Công nghệ Vạn Xuân,7,2026,8,7,0,đủ

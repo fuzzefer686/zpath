@@ -1,0 +1,81 @@
+code,name,curated,prog_2026,prog_2025,prog_total,bench_2025,bench_2024,bench_total,tuit_total
+AEP,Học viện Chính sách và Phát triển,,19,0,19,0,0,0,19
+ANH,Học viện An ninh Nhân dân,,3,0,3,0,0,0,0
+BTU,Trường Đại học Bình Dương,,18,0,18,0,0,0,0
+BVH,Học viện Công nghệ Bưu chính Viễn thông,,40,4,44,0,0,0,9
+CSH,Học viện Cảnh sát Nhân dân,,10,0,10,0,0,0,0
+CTS,Trường Đại học Cần Thơ,,143,19,162,16,0,16,0
+DAG,Trường Đại học An Giang - Đại học Quốc gia Thành phố Hồ Chí Minh,,43,40,83,80,0,80,0
+DBH,Trường Đại học Bách khoa - Đại học Quốc gia Thành phố Hồ Chí Minh,,59,22,81,22,0,22,57
+DBS,Trường Đại học Kinh tế Thành phố Hồ Chí Minh,,112,9,121,9,0,9,20
+DCN,Trường Đại học Công nghiệp Hà Nội,,66,62,128,62,0,62,4
+DCT,Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh,,39,0,39,0,0,0,33
+DDL,Trường Đại học Điện lực,,34,0,34,0,0,0,0
+DDT,Trường Đại học Duy Tân,,58,0,58,0,0,0,0
+DED,Trường Đại học Sư phạm - Đại học Đà Nẵng,,33,33,66,33,0,33,0
+DFL,Trường Đại học Ngoại ngữ - Đại học Đà Nẵng,,24,16,40,47,0,47,17
+DGD,Trường Đại học Công nghiệp Thành phố Hồ Chí Minh,,74,38,112,36,0,36,0
+DHA,Trường Đại học Luật - Đại học Huế,,2,0,2,0,0,0,0
+DHF,Trường Đại học Ngoại ngữ - Đại học Huế,,13,0,13,0,0,0,0
+DHK,Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia Thành phố Hồ Chí Minh,,39,7,46,10,0,10,10
+DHP,Trường Đại học Hải Phòng,,37,8,45,8,0,8,0
+DHS,Trường Đại học Sư phạm - Đại học Huế,,21,0,21,0,0,0,0
+DKH,Trường Đại học Dược Hà Nội,,5,0,5,0,0,0,0
+DLA,Trường Đại học Kinh tế Công nghiệp Long An,,9,0,9,0,0,0,0
+DNV,Trường Đại học Nội vụ Hà Nội,,22,19,41,19,0,19,0
+DPH,Trường Đại học Phạm Văn Đồng,,14,0,14,0,0,0,0
+DPT,Trường Đại học Phan Thiết,,16,15,31,15,0,15,16
+DPX,Trường Đại học Sư phạm Thành phố Hồ Chí Minh,,47,9,56,9,0,9,0
+DQC,Trường Đại học Quảng Bình,,17,15,32,15,0,15,0
+DQL,Trường Đại học Luật Thành phố Hồ Chí Minh,,11,1,12,1,0,1,0
+DQN,Trường Đại học Quy Nhơn,,62,58,120,58,0,58,4
+DTH,Trường Đại học Thăng Long,,32,9,41,0,0,0,41
+DUE,Trường Đại học Kinh tế - Đại học Đà Nẵng,,37,0,37,0,0,0,0
+EDU,Trường Đại học Giáo dục - Đại học Quốc gia Hà Nội,,16,0,16,0,0,0,0
+FTU,Trường Đại học Ngoại thương,Y,79,47,126,491,0,491,98
+HAU,Trường Đại học Kiến trúc Hà Nội,,29,0,29,0,0,0,0
+HBT,Trường Đại học Công nghệ Sài Gòn,,19,1,20,0,0,0,2
+HHA,Trường Đại học Hàng hải Việt Nam,,58,6,64,6,0,6,0
+HIU,Trường Đại học Quốc tế Hồng Bàng,,50,37,87,37,0,37,0
+HMT,Trường Đại học Y tế Công cộng,,6,0,6,0,0,0,6
+HUST,Đại học Bách khoa Hà Nội,Y,97,65,289,195,192,574,95
+KCN,Trường Đại học Khoa học và Công nghệ Hà Nội,,20,0,20,0,0,0,0
+KMA,Học viện Kỹ thuật Mật mã,,4,0,4,0,0,0,0
+KTC,Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh,,42,0,42,0,0,0,0
+KTH,Trường Đại học Kinh tế - Đại học Huế,,21,0,21,0,0,0,0
+LDA,Trường Đại học Lao động - Xã hội,,14,11,25,11,0,11,0
+LHN,Trường Đại học Luật Hà Nội,,5,0,5,0,0,0,0
+MHN,Trường Đại học Mở Hà Nội,,22,0,22,0,0,0,0
+MSH,Trường Đại học Mỹ thuật Thành phố Hồ Chí Minh,,6,0,6,0,0,0,0
+NEU,Đại học Kinh tế Quốc dân,Y,104,89,319,528,66,654,193
+NHA,Học viện Âm nhạc Quốc gia Việt Nam,,8,8,16,8,0,16,8
+OU,Trường Đại học Mở Thành phố Hồ Chí Minh,,64,0,64,0,0,0,0
+QHI,Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội,,20,26,46,25,0,25,20
+QHQ,Trường Quốc tế - Đại học Quốc gia Hà Nội,,17,0,17,0,0,0,0
+QHT,Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia Hà Nội,,28,28,56,28,0,28,0
+QSC,Trường Đại học Công nghệ Thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh,,20,0,20,0,0,0,19
+QSK,Trường Đại học Kinh tế - Luật - Đại học Quốc gia Thành phố Hồ Chí Minh,,40,0,40,0,0,0,0
+RMIT,Trường Đại học RMIT Việt Nam,,17,0,17,0,0,0,17
+SGD,Trường Đại học Sài Gòn,,48,0,48,0,0,0,0
+SKD,Trường Đại học Sân khấu - Điện ảnh Hà Nội,,39,27,66,27,0,27,0
+TBD,Trường Đại học Thái Bình Dương,,22,0,22,0,0,0,22
+TBU,Trường Đại học Tây Bắc,,31,0,31,0,0,0,0
+TDTU,Trường Đại học Tôn Đức Thắng,,51,0,51,0,0,0,0
+TDU,Trường Đại học Tây Nguyên,,35,0,35,0,0,0,0
+TKG,Trường Đại học Kiên Giang,,28,50,78,125,0,125,0
+TQU,Trường Đại học Tân Trào,,19,5,24,5,0,5,0
+UAH,Trường Đại học Kiến trúc Thành phố Hồ Chí Minh,,22,0,22,0,0,0,0
+UET,"Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội",Y,0,19,38,19,12,31,19
+UMT,Trường Đại học Quản lý và Công nghệ Thành phố Hồ Chí Minh,,9,0,9,0,0,0,0
+UNETI,Trường Đại học Kinh tế - Kỹ thuật Công nghiệp,,49,0,49,0,0,0,0
+VHH,Trường Đại học Văn hóa Hà Nội,,47,21,68,23,0,23,14
+VINUNI,Đại học VinUni,Y,0,0,0,0,0,0,0
+VJD,Trường Đại học Việt Nhật - Đại học Quốc gia Hà Nội,,9,0,9,0,0,0,0
+VKA,Học viện Ngoại giao,,11,2,13,3,0,3,11
+VLU,Trường Đại học Văn Lang,,54,0,54,0,0,0,0
+VNC,Nhạc viện Thành phố Hồ Chí Minh,,7,0,7,0,0,0,0
+VUT,Trường Đại học Công nghệ Vạn Xuân,,7,0,7,0,0,0,7
+XSH,Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia Thành phố Hồ Chí Minh,,62,48,110,0,0,0,0
+YDH,Trường Đại học Y Dược - Đại học Huế,,11,0,11,0,0,0,0
+YDS,Trường Đại học Y Dược Thành phố Hồ Chí Minh,,17,2,19,2,0,2,17
+YQD,Học viện Quân y,,2,0,2,0,0,0,0

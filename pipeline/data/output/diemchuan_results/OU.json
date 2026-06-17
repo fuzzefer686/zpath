@@ -1,0 +1,90 @@
+{
+  "university_code": "OU",
+  "university_name": "Trường Đại học Mở Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-mo-tphcm-MBS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 10,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D14/D15/D66/X78",
+      "score": 23.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07",
+      "score": 22.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D14/D15/D41/D42/D43/D44/D45/D61/D62/D63/D64/D65/D66/D67/D68/D69/D70/D71/DH1/DH5/DH6/X78/X82/X86/X90/X94/X98/Y03",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00/C14/C19/C20/D14/D15/D41/D42/D43/D44/D45/D61/D62/D63/D64/D65/D66/D67/D68/D69/D70/D71/DH1/DH5/DH6/X70/X74/X78/X82/X86/X90/X94/X98/Y03",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X79",
+      "score": 24.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00/C14/C19/D14/D61/D63/D64/X70",
+      "score": 24.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 870.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 845.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 22.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 24.0,
+      "scale": 30
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "university_code": "RMIT",
+  "university_name": "Trường Đại học RMIT Việt Nam",
+  "found_url": "https://tuoitre.vn/rmit-viet-nam-khoi-dong-tuyen-sinh-2026-nhung-diem-moi-dang-chu-y-2025120112354805.htm",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 17,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Digital Marketing",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị du lịch và khách sạn",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông chuyên nghiệp",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 390
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị doanh nghiệp thời trang",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 390
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế - truyền thông số",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 390
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế ứng dụng sáng tạo",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 390
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sản xuất phim kỹ thuật số",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 390
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế game",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 390
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điện tử và hệ thống máy tính",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ sư phần mềm",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Robot và cơ điện tử",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hàng không",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm và dinh dưỡng",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 375,
+      "tuition_max": 375
+    }
+  ]
+}

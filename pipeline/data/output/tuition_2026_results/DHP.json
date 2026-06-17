@@ -1,0 +1,19 @@
+{
+  "university_code": "DHP",
+  "university_name": "Trường Đại học Hải Phòng",
+  "found_url": "https://hpu.edu.vn/blogs/trai-nghiem-hpu/hoc-phi-dai-hoc-hai-phong",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đại học Quản lý và Công nghệ Hải Phòng (HPU)",
+      "tuition_min": 21.3,
+      "tuition_max": 22.1
+    }
+  ]
+}

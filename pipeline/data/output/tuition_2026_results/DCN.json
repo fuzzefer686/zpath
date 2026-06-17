@@ -1,0 +1,25 @@
+{
+  "university_code": "DCN",
+  "university_name": "Trường Đại học Công nghiệp Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-cong-nghiep-ha-noi-DCN.html",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 25,
+    "tuition_max": 44
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đào tạo chuẩn",
+      "tuition_min": 25,
+      "tuition_max": 31
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đào tạo bằng tiếng Anh",
+      "tuition_min": 36,
+      "tuition_max": 44
+    }
+  ]
+}

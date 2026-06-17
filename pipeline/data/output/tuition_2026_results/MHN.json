@@ -1,0 +1,61 @@
+{
+  "university_code": "MHN",
+  "university_name": "Trường Đại học Mở Hà Nội",
+  "found_url": "https://baodanang.vn/hoc-phi-truong-dai-hoc-mo-ha-noi-nam-2025-2026-3152979.html",
+  "status": "success",
+  "num_records": 8,
+  "school_wide": {
+    "tuition_min": 18.038,
+    "tuition_max": 63.223
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (Tiến sĩ)",
+      "tuition_min": 63.223,
+      "tuition_max": 63.223
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật viễn thông, Công nghệ thông tin, Công nghệ sinh học (Thạc sĩ)",
+      "tuition_min": 37.014,
+      "tuition_max": 37.014
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (Thạc sĩ)",
+      "tuition_min": 37.934,
+      "tuition_max": 37.934
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán, Quản trị kinh doanh, Luật kinh tế (Thạc sĩ)",
+      "tuition_min": 35.78,
+      "tuition_max": 35.78
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán, Quản trị kinh doanh, Thương mại điện tử, Tài chính – Ngân hàng, Luật, Luật Kinh tế, Luật quốc tế, Bảo hiểm (Đại học)",
+      "tuition_min": 18.038,
+      "tuition_max": 28.619
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành, Quản trị khách sạn, Ngôn ngữ Anh, Ngôn ngữ Trung Quốc (Đại học)",
+      "tuition_min": 18.038,
+      "tuition_max": 30.347
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin, Công nghệ kỹ thuật điện tử – viễn thông, Công nghệ kỹ thuật điều khiển & tự động hóa, Công nghệ sinh học, Công nghệ thực phẩm, Thiết kế đồ họa, Thiết kế thời trang (Đại học)",
+      "tuition_min": 18.038,
+      "tuition_max": 29.607
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc, Thiết kế nội thất (Đại học)",
+      "tuition_min": 23.692,
+      "tuition_max": 23.692
+    }
+  ]
+}

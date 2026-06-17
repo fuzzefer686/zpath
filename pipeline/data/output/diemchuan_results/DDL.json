@@ -1,0 +1,266 @@
+{
+  "university_code": "DDL",
+  "university_name": "Trường Đại học Điện lực",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-dien-luc-DDL.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 32,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D66; D84; X25; X78",
+      "score": 22.67,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.92,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại Điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.92,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 21.83,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 16.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 21.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 20.23,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D66; D84; X25; X78",
+      "score": 21.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 16.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Toán tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 16.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 20.83,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 21.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật công trình xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 19.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 23.13,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.92,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện tử - viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 21.83,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điều khiển và tự động hoá",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 23.33,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ vật liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; B00; D07",
+      "score": 21.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật năng lượng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 18.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật hạt nhân",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 16.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 19.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý năng lượng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 18.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.92,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Robot",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 18.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật nhiệt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 19.97,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ Du lịch và Lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 19.83,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị khách sạn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 19.83,
+      "scale": 30
+    }
+  ]
+}

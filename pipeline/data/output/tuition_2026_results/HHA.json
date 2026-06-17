@@ -1,0 +1,43 @@
+{
+  "university_code": "HHA",
+  "university_name": "Trường Đại học Hàng hải Việt Nam",
+  "found_url": "https://muaban.net/blog/hoc-phi-dai-hoc-hang-hai-360397/",
+  "status": "partial",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đại trà",
+      "tuition_min": 5.66,
+      "tuition_max": 5.66
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình lớp chọn",
+      "tuition_min": 5.66,
+      "tuition_max": 5.66
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình chất lượng cao, nâng cao",
+      "tuition_min": 8.31,
+      "tuition_max": 8.31
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiên tiến (học phần tiếng Việt)",
+      "tuition_min": 10.55,
+      "tuition_max": 10.55
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiên tiến (học phần tiếng Anh)",
+      "tuition_min": 15.83,
+      "tuition_max": 15.83
+    }
+  ]
+}

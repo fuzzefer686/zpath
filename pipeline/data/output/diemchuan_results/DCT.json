@@ -1,0 +1,362 @@
+{
+  "university_code": "DCT",
+  "university_name": "Trường Đại học Công nghiệp Thực phẩm Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-cong-thuong-tphcm-DCT.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 44,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D09; D10",
+      "score": 23.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D09; D14",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 24.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 23.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh thời trang và dệt may",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; C02; D01; D07",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 22.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C14; D01",
+      "score": 24.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C14; D01",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; D01; X26",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; D01; X26",
+      "score": 23.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "An toàn thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C01; D01; X26",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ chế tạo máy",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 21.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện - điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điều khiển và tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 22.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B08; A00; D07",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ vật liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; D07",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật nhiệt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ chế biến thủy sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đảm bảo chất lượng và an toàn thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ dệt, may",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D15",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D15",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị khách sạn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D15",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhà hàng và dịch vụ ăn uống",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C03; D15; C00",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dinh dưỡng và ẩm thực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; B00; C02; D07",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học chế biến món ăn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; B00; C02; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; D07",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 764.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 776.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 732.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 788.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 752.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 764.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistic và quản lý chuỗi cung ứng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 800.0,
+      "scale": 1200
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "university_code": "DLA",
+  "university_name": "Trường Đại học Kinh tế Công nghiệp Long An",
+  "found_url": "https://tuyensinh.daihoclongan.edu.vn/dao-tao-tai-dla/hoc-phi.html",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": 29.8,
+    "tuition_max": 29.8
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đại học chính quy",
+      "tuition_min": 29.8,
+      "tuition_max": 29.8
+    }
+  ]
+}

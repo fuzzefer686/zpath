@@ -1,0 +1,190 @@
+{
+  "university_code": "QSC",
+  "university_name": "Trường Đại học Công nghệ Thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-cong-nghe-thong-tin-dhqg-tphcm-QSC.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 20,
+  "data": [
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; X26; D09; D10; X02",
+      "quota": 60,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7340122",
+      "major_name": "Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X06; X26",
+      "quota": 140,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7460108",
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26; X06; D07; A02",
+      "quota": 55,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7460108TA",
+      "major_name": "Khoa học dữ liệu (Chương trình đào tạo bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; X26; D07",
+      "quota": 30,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học Máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X06; X26",
+      "quota": 280,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7480101TA",
+      "major_name": "Khoa học Máy tính (Chương trình đào tạo bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; X26; D07",
+      "quota": 50,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "7480102",
+      "major_name": "Mạng máy tính và truyền thông dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X06; X14; X26",
+      "quota": 200,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7480103",
+      "major_name": "Kỹ thuật phần mềm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X06; X26",
+      "quota": 240,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7480103QT",
+      "major_name": "Kỹ thuật phần mềm (Quốc tế)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "quota": 20,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480103TA",
+      "major_name": "Kỹ thuật phần mềm (Chương trình đào tạo bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; X26; D07",
+      "quota": 50,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "7480104",
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; D08; X06; X26",
+      "quota": 180,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7480104TT",
+      "major_name": "Hệ thống thông tin (Tiên tiến)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; X26",
+      "quota": 80,
+      "tuition_min": 60.0,
+      "tuition_max": 60.0
+    },
+    {
+      "school_major_code": "7480106",
+      "major_name": "Kỹ thuật máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 220,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7480107",
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X06; X26",
+      "quota": 40,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ Thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X06; X26",
+      "quota": 120,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7480201VN",
+      "major_name": "Công nghệ Thông tin (Việt Nhật)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D06; D07; X06; X26",
+      "quota": 130,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7480202",
+      "major_name": "An toàn thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X06; X26",
+      "quota": 170,
+      "tuition_min": 41.8,
+      "tuition_max": 41.8
+    },
+    {
+      "school_major_code": "7480202TA",
+      "major_name": "An toàn thông tin (Chương trình đào tạo bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; X26; D07",
+      "quota": 50,
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": "75202a1",
+      "major_name": "Thiết kế vi mạch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "quota": 70,
+      "tuition_min": 52.0,
+      "tuition_max": 52.0
+    },
+    {
+      "school_major_code": "75202a1TA",
+      "major_name": "Thiết kế vi mạch (Chương trình đào tạo bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; X26",
+      "quota": 40,
+      "tuition_min": 85.0,
+      "tuition_max": 85.0
+    }
+  ]
+}

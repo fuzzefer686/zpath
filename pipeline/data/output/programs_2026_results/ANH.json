@@ -1,0 +1,37 @@
+{
+  "university_code": "ANH",
+  "university_name": "Học viện An ninh Nhân dân",
+  "found_url": "https://thi.tuyensinh247.com/de-an-tuyen-sinh-hoc-vien-an-ninh-nhan-dan-nam-2025-c24a84402.html",
+  "data_year": 2025,
+  "status": "success",
+  "num_records": 3,
+  "data": [
+    {
+      "school_major_code": "7860100",
+      "major_name": "Nhóm ngành Nghiệp vụ an ninh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C03; D01; K21; K22",
+      "quota": 290,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7860114",
+      "major_name": "An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; K01; K20",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; K01; K20",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

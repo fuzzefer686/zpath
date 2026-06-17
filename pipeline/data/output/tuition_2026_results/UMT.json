@@ -1,0 +1,73 @@
+{
+  "university_code": "UMT",
+  "university_name": "Trường Đại học Quản lý và Công nghệ Thành phố Hồ Chí Minh",
+  "found_url": "https://muctim.tuoitre.vn/nam-2026-truong-dai-hoc-quan-ly-va-cong-nghe-tphcm-tuyen-sinh-nhung-nganh-nao-101251211154251082.htm",
+  "status": "partial",
+  "num_records": 10,
+  "school_wide": {
+    "tuition_min": 34,
+    "tuition_max": 34
+  },
+  "data": [
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "tuition_min": 34,
+      "tuition_max": 34
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học máy tính",
+      "tuition_min": 34,
+      "tuition_max": 34
+    },
+    {
+      "school_major_code": "7480202",
+      "major_name": "An toàn thông tin",
+      "tuition_min": 34,
+      "tuition_max": 34
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "tuition_min": 34,
+      "tuition_max": 34
+    },
+    {
+      "school_major_code": "7210403",
+      "major_name": "Thiết kế đồ họa",
+      "tuition_min": 34,
+      "tuition_max": 34
+    },
+    {
+      "school_major_code": "7810301",
+      "major_name": "Quản lý thể dục thể thao",
+      "tuition_min": 34,
+      "tuition_max": 34
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "tuition_min": 34,
+      "tuition_max": 34
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "tuition_min": 34,
+      "tuition_max": 34
+    },
+    {
+      "school_major_code": "7340120",
+      "major_name": "Kinh doanh quốc tế",
+      "tuition_min": 34,
+      "tuition_max": 34
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "tuition_min": 34,
+      "tuition_max": 34
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "university_code": "EDU",
+  "university_name": "Trường Đại học Giáo dục - Đại học Quốc gia Hà Nội",
+  "found_url": "https://thi.tuyensinh247.com/hoc-phi-12-truong-thuoc-dai-hoc-quoc-gia-ha-noi-nam-2026-c24a89879.html",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": 17.9,
+    "tuition_max": 19.1
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Trường Đại học Giáo dục",
+      "tuition_min": 17.9,
+      "tuition_max": 19.1
+    }
+  ]
+}

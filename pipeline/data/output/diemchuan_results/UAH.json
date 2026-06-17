@@ -1,0 +1,322 @@
+{
+  "university_code": "UAH",
+  "university_name": "Trường Đại học Kiến trúc Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-kien-truc-tphcm-KTS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 39,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Mỹ thuật đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 20.57,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "H01; H02",
+      "score": 23.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "H01; H06",
+      "score": 24.43,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 22.18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc (Chất lượng cao)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 22.11,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc (CT)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 22.18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc (DL)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 22.18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc cảnh quan",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 21.04,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quy hoạch vùng và đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 20.64,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quy hoạch vùng và đô thị (Chất lượng cao)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 20.18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế nội thất",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 21.77,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế nội thất (CT)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 21.77,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đô thị (Chương trình tiên tiến)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 17.01,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "score": 19.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (Chất lượng cao)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "score": 20.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (CT)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "score": 19.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (DL)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "score": 19.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ sở hạ tầng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "score": 18.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế nội thất (CT)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 850,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc (DL)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 859,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (CT)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 739,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc (CT)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 859,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (DL)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 739,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Mỹ thuật đô thị",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 792,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế công nghiệp",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 901,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 945,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế thời trang",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 918,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 859,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc (Chất lượng cao)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 859,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc cảnh quan",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 811,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quy hoạch vùng và đô thị",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 792,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quy hoạch vùng và đô thị (Chất lượng cao)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 768,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế nội thất",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 850,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đô thị (Chương trình tiên tiến)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 599,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 739,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (Chất lượng cao)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 764,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ sở hạ tầng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 695,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý xây dựng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 782,
+      "scale": 1200
+    }
+  ]
+}

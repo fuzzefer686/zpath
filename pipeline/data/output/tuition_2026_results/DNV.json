@@ -1,0 +1,31 @@
+{
+  "university_code": "DNV",
+  "university_name": "Trường Đại học Nội vụ Hà Nội",
+  "found_url": "https://jobsgo.vn/blog/dai-hoc-noi-vu-ra-truong-lam-gi/",
+  "status": "success",
+  "num_records": 3,
+  "school_wide": {
+    "tuition_min": 17,
+    "tuition_max": 20
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước, Văn hóa học, Lưu trữ học, Chính trị học, Xây dựng Đảng và chính quyền nhà nước, Ngôn ngữ Anh, Kinh tế",
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực, Quản trị văn phòng, Luật",
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin",
+      "tuition_min": 20,
+      "tuition_max": 20
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "university_code": "KTC",
+  "university_name": "Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh",
+  "found_url": "https://www.uef.edu.vn/tin-tuyen-sinh/uef-cong-bo-diem-chuan-trung-tuyen-dai-hoc-chinh-quy-nam-2025-32076",
+  "year": 2025,
+  "status": "success",
+  "num_records": 7,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01",
+      "score": 16,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "Khác",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "hoc_ba",
+      "combination_code": "C01",
+      "score": 19,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "hoc_ba",
+      "combination_code": "Khác",
+      "score": 18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "xt_rieng",
+      "combination_code": "V-SAT",
+      "score": 225,
+      "scale": 450
+    }
+  ]
+}

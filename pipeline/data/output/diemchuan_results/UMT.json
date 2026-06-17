@@ -1,0 +1,226 @@
+{
+  "university_code": "UMT",
+  "university_name": "Trường Đại học Quản lý và Công nghệ Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-quan-ly-va-cong-nghe-tphcm-UMT.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 27,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D03; B04; B08; C02; C03; C04; H04; H06; H08; V03; V05; V06",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D03; B04; B08; C02; C03; C04; C02; H01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D03; B04; B08; C02; C03; C04; C00; D14; X01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D03; B04; B08; C02; C03; C04; C00; D14; X01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bất động sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D03; B04; B08; C02; C03; C04; C00; D14; X01",
+      "score": 25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D03; B04; B08; C02; C03; C04; C00; D14; X01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D03; A03; A04; D07; X06",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D03; B04; B08; C02; C03; C04; C00; D14; X01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý thể dục thể thao",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D03; B04; B08; C02; C03; C04; C00; D14; X01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C01; C02; C03; C04; D01; D03",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C00; C01; C02; C03; C04; D01; D03; H01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C00; C01; C02; C03; C04; D01; D03; X01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bất động sản",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "score": 25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; A03; A04; D01; D03; D07; X06",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý thể dục thể thao",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B04; B08; C00; C01; C02; C03; C04; D01; D03; D14; X01",
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 15,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 15,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 15,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 15,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bất động sản",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 25,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 15,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 15,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 15,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý thể dục thể thao",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 15,
+      "scale": 1200
+    }
+  ]
+}

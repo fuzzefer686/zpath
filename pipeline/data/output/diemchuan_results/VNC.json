@@ -1,0 +1,546 @@
+{
+  "university_code": "VNC",
+  "university_name": "Nhạc viện Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.giaphugroup.com/diem-chuan/truong-nhac-vien-tp-hcm-nvs/2025/",
+  "year": 2025,
+  "status": "success",
+  "num_records": 67,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Sáo trúc (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sáo trúc (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sáo trúc (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Gõ dân tộc (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Gõ dân tộc (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tranh (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tranh (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tranh (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bầu (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bầu (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bầu (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nguyệt (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nguyệt (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tỳ bà (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Guitar phím lõm (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhị (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhị (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tam thập lục (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Âm nhạc học (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Âm nhạc học (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sáng tác âm nhạc (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sáng tác âm nhạc (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chỉ huy Hợp xướng (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chỉ huy Dàn nhạc (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Piano (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Piano (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Piano (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Violin (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Violin (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Violin (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Viola (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Viola (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cello (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cello (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cello (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Double bass (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Flute (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Clarinet (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bassoon (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trumpet (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trombone (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trombone (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Gõ Giao hưởng (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Gõ Giao hưởng (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Guitar (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Guitar (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Guitar (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thanh nhạc (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thanh nhạc (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Saxophone (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Saxophone (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Saxophone (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Gõ nhạc nhẹ (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Gõ nhạc nhẹ (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Gõ nhạc nhẹ (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Organ điện tử (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Organ điện tử (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Piano Jazz (nhạc nhẹ) (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Piano Jazz (nhạc nhẹ) (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Piano Jazz (nhạc nhẹ) (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Guitar nhạc nhẹ (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Guitar nhạc nhẹ (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Guitar nhạc nhẹ (Trung cấp dài hạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thanh nhạc nhạc nhẹ (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thanh nhạc nhạc nhẹ (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bass nhạc nhẹ (Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bass nhạc nhẹ (Trung cấp 4 năm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    }
+  ]
+}
