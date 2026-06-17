@@ -12,6 +12,7 @@ export type School = {
   website: string | null;
   fanpage: string | null;
   hero_image_url: string | null;
+  logo_url: string | null;
   description: string | null;
   source_url: string | null;
   last_checked_at: string | null;

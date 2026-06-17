@@ -477,6 +477,16 @@ export function FtuUnimapPage({
 
           <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-end">
             <div>
+              {school.logo_url ? (
+                <div className="mb-5 inline-flex h-20 w-20 items-center justify-center overflow-hidden rounded-2xl bg-white p-2.5 shadow-lg ring-1 ring-white/20">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={school.logo_url}
+                    alt={`Logo ${school.short_name ?? school.name}`}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              ) : null}
               <div className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] ${theme.badge}`}>
                 <Landmark className="h-4 w-4" />
                 {school.short_name ?? school.code}
