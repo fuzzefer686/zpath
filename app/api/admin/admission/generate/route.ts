@@ -30,24 +30,29 @@ function parseSources(rawSources: unknown): AdmissionSourceInput[] {
     throw new Error("sources phải là mảng.");
   }
 
-  const normalized = rawSources
-    .map((item) => {
-      if (typeof item !== "object" || item === null) return null;
-      const source = item as Record<string, unknown>;
-      const type = source.type;
-      if (type !== "url" && type !== "file_url" && type !== "text") return null;
-      return {
-        type,
-        value: String(source.value ?? "").trim(),
-        label:
-          typeof source.label === "string" && source.label.trim()
-            ? source.label.trim()
-            : undefined,
-        role: source.role === "primary" ? "primary" : "supplement",
-      } satisfies AdmissionSourceInput;
-    })
-    .filter((item): item is AdmissionSourceInput => item !== null)
-    .filter((item) => item.value.length > 0);
+  const normalized: AdmissionSourceInput[] = [];
+
+  for (const item of rawSources) {
+    if (typeof item !== "object" || item === null) continue;
+    const source = item as Record<string, unknown>;
+    const type = source.type;
+    if (type !== "url" && type !== "file_url" && type !== "text") continue;
+
+    const value = String(source.value ?? "").trim();
+    if (!value) continue;
+
+    const normalizedItem: AdmissionSourceInput = {
+      type,
+      value,
+      role: source.role === "primary" ? "primary" : "supplement",
+    };
+
+    if (typeof source.label === "string" && source.label.trim()) {
+      normalizedItem.label = source.label.trim();
+    }
+
+    normalized.push(normalizedItem);
+  }
 
   if (!normalized.length) {
     throw new Error("Cần ít nhất một nguồn dữ liệu hợp lệ.");
