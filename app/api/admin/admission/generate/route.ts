@@ -8,7 +8,7 @@ import { synthesizeAdmissionConfig } from "@/src/lib/admission-config/sources/sy
 import type { AdmissionSourceInput } from "@/src/lib/admission-config/sources/types";
 
 export const runtime = "nodejs";
-export const maxDuration = 120;
+export const maxDuration = 300;
 
 type GenerateRequestBody = {
   schoolCode?: unknown;

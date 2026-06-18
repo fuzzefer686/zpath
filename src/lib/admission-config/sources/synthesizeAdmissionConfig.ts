@@ -13,6 +13,10 @@ type SynthesizeAdmissionConfigInput = {
   sourceBundle: AdmissionSourceBundle;
 };
 
+const IS_VERCEL = process.env.VERCEL === "1";
+const FORCE_FAST_MODE = process.env.ADMISSION_FAST_MODE === "1";
+const FAST_MODE = IS_VERCEL || FORCE_FAST_MODE;
+
 const EXTRACTION_PROMPT = `Bạn là trợ lý trích xuất dữ liệu tuyển sinh từ nguồn do admin cung cấp.
 
 Nhiệm vụ:
@@ -204,7 +208,8 @@ async function callGeminiJson(
     });
   }
 
-  for (const extraPdf of input.sourceBundle.additionalPdfs.slice(0, 2)) {
+  const extraPdfLimit = FAST_MODE ? 0 : 2;
+  for (const extraPdf of input.sourceBundle.additionalPdfs.slice(0, extraPdfLimit)) {
     parts.push({
       inlineData: {
         mimeType: "application/pdf",
@@ -216,10 +221,12 @@ async function callGeminiJson(
   parts.push({ text: prompt });
 
   let lastError: Error | null = null;
-  const prompts = [
-    prompt,
-    `${prompt}\n\nYêu cầu dự phòng: nếu nội dung quá dài, hãy trả JSON tối thiểu nhưng hợp lệ schema và methods không được rỗng.`,
-  ];
+  const prompts = FAST_MODE
+    ? [prompt]
+    : [
+        prompt,
+        `${prompt}\n\nYêu cầu dự phòng: nếu nội dung quá dài, hãy trả JSON tối thiểu nhưng hợp lệ schema và methods không được rỗng.`,
+      ];
 
   for (let i = 0; i < prompts.length; i += 1) {
     const response = await getGeminiClient().models.generateContent({
@@ -261,18 +268,24 @@ export async function synthesizeAdmissionConfig(
   const pass1 = await callGeminiJson(input, buildPromptWithHints(input));
   let draft = backfillHints(pass1, input);
 
-  try {
-    const pass2 = await callGeminiJson(
-      input,
-      `${PROGRAMS_EXTRACTION_PROMPT}\n\nDữ liệu nguồn:\n${input.sourceBundle.promptContext}`,
-    );
-    draft = mergePass2IntoDraft(draft, pass2);
-    warnings.push("Pass 2: đã merge chương trình/tổ hợp từ nguồn admin cung cấp.");
-  } catch (error) {
+  if (!FAST_MODE) {
+    try {
+      const pass2 = await callGeminiJson(
+        input,
+        `${PROGRAMS_EXTRACTION_PROMPT}\n\nDữ liệu nguồn:\n${input.sourceBundle.promptContext}`,
+      );
+      draft = mergePass2IntoDraft(draft, pass2);
+      warnings.push("Pass 2: đã merge chương trình/tổ hợp từ nguồn admin cung cấp.");
+    } catch (error) {
+      warnings.push(
+        `Pass 2 (programs/combinations) thất bại: ${
+          error instanceof Error ? error.message : "unknown"
+        }. Admin có thể import CSV hoặc sửa JSON thủ công.`,
+      );
+    }
+  } else {
     warnings.push(
-      `Pass 2 (programs/combinations) thất bại: ${
-        error instanceof Error ? error.message : "unknown"
-      }. Admin có thể import CSV hoặc sửa JSON thủ công.`,
+      "Fast mode: tạm bỏ Pass 2 để tránh timeout trên môi trường deploy. Nếu thiếu tổ hợp/chương trình, admin kiểm tra và bổ sung trước khi publish.",
     );
   }
 

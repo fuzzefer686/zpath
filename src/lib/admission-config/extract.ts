@@ -20,6 +20,10 @@ export type ExtractAdmissionConfigResult = {
   warnings: string[];
 };
 
+const IS_VERCEL = process.env.VERCEL === "1";
+const FORCE_FAST_MODE = process.env.ADMISSION_FAST_MODE === "1";
+const FAST_MODE = IS_VERCEL || FORCE_FAST_MODE;
+
 const EXTRACTION_PROMPT = `Bạn là trợ lý trích xuất dữ liệu tuyển sinh. Đọc file PDF đề án tuyển sinh đính kèm và trích xuất ra một CẤU HÌNH TÍNH ĐIỂM dạng JSON đúng theo schema v2 dưới đây.
 
 QUAN TRỌNG:
@@ -152,10 +156,12 @@ async function callGeminiJson(
 ): Promise<unknown> {
   const model = getGeminiModelName();
   let lastError: Error | null = null;
-  const prompts = [
-    prompt,
-    `${prompt}\n\nYêu cầu dự phòng: nếu nội dung dài, hãy trả JSON tối thiểu nhưng hợp lệ theo schema và KHÔNG để methods rỗng.`,
-  ];
+  const prompts = FAST_MODE
+    ? [prompt]
+    : [
+        prompt,
+        `${prompt}\n\nYêu cầu dự phòng: nếu nội dung dài, hãy trả JSON tối thiểu nhưng hợp lệ theo schema và KHÔNG để methods rỗng.`,
+      ];
 
   for (let i = 0; i < prompts.length; i += 1) {
     const response = await getGeminiClient().models.generateContent({
@@ -251,18 +257,24 @@ export async function extractAdmissionConfigFromPdf(
 
   let draft = backfillHints(pass1, input);
 
-  try {
-    const pass2 = (await callGeminiJson(
-      input.pdfBase64,
-      PROGRAMS_EXTRACTION_PROMPT,
-    )) as Record<string, unknown>;
-    draft = mergePass2IntoDraft(draft, pass2);
-    warnings.push("Pass 2: đã merge chương trình/tổ hợp từ PDF (cần admin kiểm tra).");
-  } catch (error) {
+  if (!FAST_MODE) {
+    try {
+      const pass2 = (await callGeminiJson(
+        input.pdfBase64,
+        PROGRAMS_EXTRACTION_PROMPT,
+      )) as Record<string, unknown>;
+      draft = mergePass2IntoDraft(draft, pass2);
+      warnings.push("Pass 2: đã merge chương trình/tổ hợp từ PDF (cần admin kiểm tra).");
+    } catch (error) {
+      warnings.push(
+        `Pass 2 (programs/combinations) thất bại: ${
+          error instanceof Error ? error.message : "unknown"
+        }. Admin có thể import CSV hoặc sửa JSON thủ công.`,
+      );
+    }
+  } else {
     warnings.push(
-      `Pass 2 (programs/combinations) thất bại: ${
-        error instanceof Error ? error.message : "unknown"
-      }. Admin có thể import CSV hoặc sửa JSON thủ công.`,
+      "Fast mode: tạm bỏ Pass 2 để tránh timeout trên môi trường deploy. Nếu thiếu tổ hợp/chương trình, admin kiểm tra và bổ sung trước khi publish.",
     );
   }
 

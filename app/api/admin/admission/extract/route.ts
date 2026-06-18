@@ -5,7 +5,7 @@ import { extractAdmissionConfigFromPdf } from "@/src/lib/admission-config/extrac
 import { uploadAdmissionPdf } from "@/src/lib/admission-config/pdf-storage";
 
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 const MAX_PDF_BYTES = 20 * 1024 * 1024; // 20 MiB
 
