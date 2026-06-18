@@ -36,6 +36,12 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7783540122858073"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         {metaPixelId ? (
           <Script
             id="meta-pixel"
