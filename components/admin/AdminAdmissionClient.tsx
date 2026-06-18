@@ -162,6 +162,19 @@ export function AdminAdmissionClient() {
       formData.append("schoolCode", schoolCode.trim());
       formData.append("schoolName", schoolName.trim());
       formData.append("year", String(year));
+      const supplementalSources = sourceForm.buildPayload();
+      if (supplementalSources.length) {
+        const extraContext = supplementalSources
+          .map((item, index) => {
+            const label = item.label?.trim() || `Nguồn ${index + 1}`;
+            return `- [${item.type}] ${label}: ${item.value}`;
+          })
+          .join("\n")
+          .slice(0, 8_000);
+        if (extraContext) {
+          formData.append("extraContext", extraContext);
+        }
+      }
 
       const res = await fetch("/api/admin/admission/extract", {
         method: "POST",

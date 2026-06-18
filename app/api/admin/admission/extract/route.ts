@@ -54,6 +54,7 @@ export async function POST(req: NextRequest) {
 
   const schoolCode = String(formData.get("schoolCode") ?? "").trim();
   const schoolName = String(formData.get("schoolName") ?? "").trim();
+  const extraContext = String(formData.get("extraContext") ?? "").trim();
   if (!schoolCode) {
     return NextResponse.json(
       { error: "Vui lòng nhập mã trường (schoolCode)." },
@@ -87,6 +88,7 @@ export async function POST(req: NextRequest) {
       schoolCode,
       schoolName: schoolName || undefined,
       year,
+      extraContext: extraContext || undefined,
     });
 
     return NextResponse.json({

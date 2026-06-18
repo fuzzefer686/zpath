@@ -12,6 +12,7 @@ export type ExtractAdmissionConfigInput = {
   schoolCode: string;
   schoolName?: string;
   year: number;
+  extraContext?: string;
 };
 
 export type ExtractAdmissionConfigResult = {
@@ -23,6 +24,7 @@ export type ExtractAdmissionConfigResult = {
 const IS_VERCEL = process.env.VERCEL === "1";
 const FORCE_FAST_MODE = process.env.ADMISSION_FAST_MODE === "1";
 const FAST_MODE = IS_VERCEL || FORCE_FAST_MODE;
+const MAX_EXTRA_CONTEXT_CHARS = 8_000;
 
 const EXTRACTION_PROMPT = `Bạn là trợ lý trích xuất dữ liệu tuyển sinh. Đọc file PDF đề án tuyển sinh đính kèm và trích xuất ra một CẤU HÌNH TÍNH ĐIỂM dạng JSON đúng theo schema v2 dưới đây.
 
@@ -111,6 +113,11 @@ function buildPromptWithHints(input: ExtractAdmissionConfigInput): string {
     `Mã trường gợi ý: ${input.schoolCode}.`,
     input.schoolName ? `Tên trường gợi ý: ${input.schoolName}.` : "",
     `Năm tuyển sinh gợi ý: ${input.year}.`,
+    input.extraContext?.trim()
+      ? `Ngữ cảnh admin bổ sung (ưu tiên bám sát, không tự suy diễn):\n${input.extraContext
+          .trim()
+          .slice(0, MAX_EXTRA_CONTEXT_CHARS)}`
+      : "",
   ]
     .filter(Boolean)
     .join(" ");
@@ -157,7 +164,10 @@ async function callGeminiJson(
   const model = getGeminiModelName();
   let lastError: Error | null = null;
   const prompts = FAST_MODE
-    ? [prompt]
+    ? [
+        prompt,
+        `${prompt}\n\nYêu cầu dự phòng (ngắn gọn): trả JSON tối thiểu nhưng hợp lệ schema, methods không rỗng, không giải thích thêm.`,
+      ]
     : [
         prompt,
         `${prompt}\n\nYêu cầu dự phòng: nếu nội dung dài, hãy trả JSON tối thiểu nhưng hợp lệ theo schema và KHÔNG để methods rỗng.`,
