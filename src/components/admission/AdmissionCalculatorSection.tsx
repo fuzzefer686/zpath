@@ -275,7 +275,14 @@ export function AdmissionCalculatorSection({
   }, [methods]);
 
   if (genericConfig && !isHust && !isFtu && schoolCode !== "UET") {
-    return <GenericConfigCalculator config={genericConfig} />;
+    return (
+      <GenericConfigCalculator
+        config={genericConfig}
+        programs={programs}
+        benchmarks={benchmarks}
+        benchmarkYear={benchmarkYear}
+      />
+    );
   }
 
   if (isFtu) {

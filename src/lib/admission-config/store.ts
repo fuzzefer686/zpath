@@ -5,6 +5,7 @@ import {
   validateAdmissionConfig,
   type GenericAdmissionConfig,
 } from "@/src/lib/admission-engine/generic";
+import { migrateAdmissionConfig } from "@/src/lib/admission-engine/generic/migrate-config";
 
 export type AdmissionConfigStatus =
   | "draft"
@@ -76,7 +77,7 @@ export async function getPublishedAdmissionConfig(
   if (!data?.config) return null;
 
   const validated = validateAdmissionConfig(data.config);
-  return validated.ok ? validated.config : null;
+  return validated.ok ? migrateAdmissionConfig(validated.config) : null;
 }
 
 /** Lightweight list of schools that currently have a published calculator. */

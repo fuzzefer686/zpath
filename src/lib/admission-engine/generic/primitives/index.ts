@@ -14,3 +14,10 @@ export {
 export { convertScale, tsaScale, satScale } from "./scaleConversion";
 export { convertCertificate } from "./certConversion";
 export { applyPriorityAndBonus, type PriorityBonusResult } from "./priorityBonus";
+export { applyMaxOfInputs } from "./maxOfInputs";
+export { clampScore } from "./clampScore";
+export {
+  applyFormulaGroupEntry,
+  normalizeGroupScoreTo30,
+  type FormulaGroupScaleResult,
+} from "./formulaGroupScale";

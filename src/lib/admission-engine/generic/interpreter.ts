@@ -3,18 +3,18 @@ import type {
   GenericInputField,
   GenericMethodConfig,
 } from "./config-schema";
+import { evaluateGenericEligibility } from "./eligibility";
+import { migrateAdmissionConfig } from "./migrate-config";
 import {
   applyPriorityAndBonus,
   applyWeightedCombination,
+  clampScore,
   convertCertificate,
   convertScale,
+  applyFormulaGroupEntry,
+  normalizeGroupScoreTo30,
 } from "./primitives";
 
-/**
- * Runtime result of interpreting a config. Mirrors the static engine's
- * AdmissionScoreResult but keeps schoolCode/method as plain strings because a
- * config-driven school is not part of the hardcoded SchoolCode union.
- */
 export type GenericAdmissionScoreResult = {
   schoolCode: string;
   method: string;
@@ -25,14 +25,21 @@ export type GenericAdmissionScoreResult = {
   targetScale: 30;
   formulaUsed: string;
   benchmark30: number | null;
+  programCode?: string;
+  combinationCode?: string;
+  eligible: boolean;
+  missingFields: string[];
   details: Record<string, unknown>;
   warnings: string[];
 };
 
-/** A raw certificate payload value: { band: 7.0 }. */
 export type GenericCertificateValue = { band: number };
 
-export type GenericPayloadValue = number | string | GenericCertificateValue;
+export type GenericPayloadValue =
+  | number
+  | string
+  | GenericCertificateValue
+  | Record<string, number | GenericCertificateValue>;
 export type GenericPayload = Record<string, GenericPayloadValue>;
 
 export type PayloadValidationResult =
@@ -55,11 +62,47 @@ function getMethodConfig(
   return config.methods.find((method) => method.methodCode === methodCode);
 }
 
-/**
- * Validates a payload against a method's declared inputs and resolves every
- * numeric/certificate input to a single number. Select inputs are validated but
- * not added to the score map (they steer UI, not arithmetic).
- */
+function resolveCertificateScore(
+  input: GenericInputField,
+  band: number,
+  warnings: string[],
+): number {
+  const levels =
+    input.certificateLevels ??
+    input.certificateConfig?.levels ??
+    [];
+  const converted = convertCertificate(levels, band);
+  if (converted === null) {
+    warnings.push(
+      `${input.label}: chứng chỉ chưa đạt mức quy đổi tối thiểu, tính 0 điểm.`,
+    );
+    return 0;
+  }
+  return converted;
+}
+
+function validateNumericInput(
+  input: GenericInputField,
+  raw: unknown,
+  errors: string[],
+  scores: Map<string, number>,
+) {
+  const numericValue = typeof raw === "number" ? raw : Number(raw);
+  if (!Number.isFinite(numericValue)) {
+    errors.push(`${input.label} phải là một số hợp lệ.`);
+    return;
+  }
+  if (input.min !== undefined && numericValue < input.min) {
+    errors.push(`${input.label} không được nhỏ hơn ${input.min}.`);
+    return;
+  }
+  if (input.max !== undefined && numericValue > input.max) {
+    errors.push(`${input.label} không được lớn hơn ${input.max}.`);
+    return;
+  }
+  scores.set(input.key, numericValue);
+}
+
 export function validateGenericPayload(
   method: GenericMethodConfig,
   payload: unknown,
@@ -78,6 +121,37 @@ export function validateGenericPayload(
     const raw = record[input.key];
     const isEmpty = raw === undefined || raw === null || raw === "";
 
+    if (input.type === "subject_group") {
+      if (typeof raw === "object" && raw !== null && !Array.isArray(raw)) {
+        const subjectRecord = raw as Record<string, unknown>;
+        for (const [subjectKey, subjectValue] of Object.entries(subjectRecord)) {
+          if (subjectValue === undefined || subjectValue === "") continue;
+          if (
+            typeof subjectValue === "object" &&
+            subjectValue !== null &&
+            "band" in subjectValue
+          ) {
+            const band = (subjectValue as { band: unknown }).band;
+            if (typeof band === "number" && Number.isFinite(band)) {
+              scores.set(subjectKey, band);
+            }
+          } else {
+            const numericValue =
+              typeof subjectValue === "number" ? subjectValue : Number(subjectValue);
+            if (Number.isFinite(numericValue)) {
+              if (numericValue < 0 || numericValue > 10) {
+                warnings.push(`${subjectKey} nên nằm trong khoảng 0-10.`);
+              }
+              scores.set(subjectKey, numericValue);
+            }
+          }
+        }
+      } else if (input.required) {
+        errors.push(`Thiếu trường bắt buộc: ${input.label}.`);
+      }
+      continue;
+    }
+
     if (isEmpty) {
       if (input.required) {
         errors.push(`Thiếu trường bắt buộc: ${input.label}.`);
@@ -93,7 +167,7 @@ export function validateGenericPayload(
       continue;
     }
 
-    if (input.type === "certificate") {
+    if (input.type === "certificate" || input.type === "certificate_rich") {
       const band = isCertificateValue(raw)
         ? raw.band
         : typeof raw === "number"
@@ -105,34 +179,11 @@ export function validateGenericPayload(
         continue;
       }
 
-      const converted = convertCertificate(input.certificateLevels ?? [], band);
-      if (converted === null) {
-        warnings.push(
-          `${input.label}: chứng chỉ chưa đạt mức quy đổi tối thiểu, tính 0 điểm.`,
-        );
-        scores.set(input.key, 0);
-      } else {
-        scores.set(input.key, converted);
-      }
+      scores.set(input.key, resolveCertificateScore(input, band, warnings));
       continue;
     }
 
-    const numericValue = typeof raw === "number" ? raw : Number(raw);
-    if (!Number.isFinite(numericValue)) {
-      errors.push(`${input.label} phải là một số hợp lệ.`);
-      continue;
-    }
-
-    if (input.min !== undefined && numericValue < input.min) {
-      errors.push(`${input.label} không được nhỏ hơn ${input.min}.`);
-      continue;
-    }
-    if (input.max !== undefined && numericValue > input.max) {
-      errors.push(`${input.label} không được lớn hơn ${input.max}.`);
-      continue;
-    }
-
-    scores.set(input.key, numericValue);
+    validateNumericInput(input, raw, errors, scores);
   }
 
   if (errors.length) {
@@ -153,20 +204,114 @@ function getInputLabel(
 function describeFormula(method: GenericMethodConfig): string {
   if (method.formula.type === "weighted_combination") {
     const terms = method.formula.terms
-      .map((term) => `${getInputLabel(method, term.inputKey)} × ${term.weight}`)
+      .map((term) => {
+        if (term.maxOfInputKeys?.length) {
+          return `max(${term.maxOfInputKeys.join(", ")}) × ${term.weight}`;
+        }
+        return `${getInputLabel(method, term.inputKey)} × ${term.weight}`;
+      })
       .join(" + ");
     return `${terms} (thang ${method.formula.targetScale})`;
+  }
+
+  if (method.formula.type === "formula_group_scale") {
+    return `Công thức theo nhóm chương trình (${method.formula.groups.map((g) => g.groupKey).join(", ")})`;
   }
 
   return `${getInputLabel(method, method.formula.inputKey)} quy đổi từ thang ${method.formula.fromScale} về thang 30`;
 }
 
-/**
- * Core config-driven scoring. Pure function: no DB, no network, safe to run on
- * both the server (API) and the client (admin preview + published page).
- */
+function computeWeightedScore(
+  method: GenericMethodConfig,
+  scores: Map<string, number>,
+  details: Record<string, unknown>,
+) {
+  if (method.formula.type !== "weighted_combination") {
+    throw new Error("Expected weighted_combination formula.");
+  }
+
+  const combination = applyWeightedCombination(method.formula.terms, scores);
+  const originalScale = method.formula.targetScale;
+  details.breakdown = combination.breakdown;
+
+  const priority = method.priorityInputKey
+    ? scores.get(method.priorityInputKey) ?? 0
+    : 0;
+  const bonuses = (method.bonusInputKeys ?? []).map(
+    (key) => scores.get(key) ?? 0,
+  );
+
+  const withBonus = applyPriorityAndBonus(
+    combination.score,
+    priority,
+    bonuses,
+    originalScale,
+  );
+
+  let originalScore = withBonus.score;
+  if (method.scoreClamp) {
+    originalScore = clampScore(
+      originalScore,
+      method.scoreClamp.min,
+      method.scoreClamp.max,
+    );
+  }
+
+  details.priority = withBonus.priority;
+  details.bonus = withBonus.bonus;
+
+  return { originalScore, originalScale };
+}
+
+function computeFormulaGroupScore(
+  method: GenericMethodConfig,
+  payload: GenericPayload,
+  scores: Map<string, number>,
+  details: Record<string, unknown>,
+) {
+  if (method.formula.type !== "formula_group_scale") {
+    throw new Error("Expected formula_group_scale formula.");
+  }
+
+  const groupKey = String(payload[method.formula.programGroupInputKey] ?? "");
+  const entry = method.formula.groups.find((group) => group.groupKey === groupKey);
+
+  if (!entry) {
+    throw new Error(`Nhóm công thức "${groupKey}" không được hỗ trợ.`);
+  }
+
+  const groupResult = applyFormulaGroupEntry(entry, scores);
+  details.breakdown = groupResult.breakdown;
+  details.formulaGroup = groupResult.groupKey;
+
+  const priority = method.priorityInputKey
+    ? scores.get(method.priorityInputKey) ?? 0
+    : 0;
+  const bonuses = (method.bonusInputKeys ?? []).map(
+    (key) => scores.get(key) ?? 0,
+  );
+
+  const withBonus = applyPriorityAndBonus(
+    groupResult.score,
+    priority,
+    bonuses,
+    groupResult.scale,
+  );
+
+  let originalScore = withBonus.score;
+  if (method.scoreClamp) {
+    originalScore = clampScore(
+      originalScore,
+      method.scoreClamp.min,
+      method.scoreClamp.max,
+    );
+  }
+
+  return { originalScore, originalScale: groupResult.scale };
+}
+
 export function interpretAdmission({
-  config,
+  config: rawConfig,
   methodCode,
   payload,
 }: {
@@ -174,6 +319,7 @@ export function interpretAdmission({
   methodCode: string;
   payload: unknown;
 }): GenericAdmissionScoreResult {
+  const config = migrateAdmissionConfig(rawConfig);
   const method = getMethodConfig(config, methodCode);
   if (!method) {
     throw new Error(
@@ -181,48 +327,57 @@ export function interpretAdmission({
     );
   }
 
+  const payloadRecord =
+    typeof payload === "object" && payload !== null
+      ? (payload as GenericPayload)
+      : {};
+
   const validation = validateGenericPayload(method, payload);
   if (!validation.ok) {
     throw new Error(validation.errors.join(" "));
   }
 
   const { scores, warnings } = validation;
-  const details: Record<string, unknown> = {};
+  const eligibility = evaluateGenericEligibility(method, payloadRecord);
+  warnings.push(...eligibility.warnings);
 
+  const details: Record<string, unknown> = {};
   let originalScore: number;
   let originalScale: number;
 
   if (method.formula.type === "weighted_combination") {
-    const combination = applyWeightedCombination(method.formula.terms, scores);
-    originalScale = method.formula.targetScale;
-    details.breakdown = combination.breakdown;
-
-    const priority = method.priorityInputKey
-      ? scores.get(method.priorityInputKey) ?? 0
-      : 0;
-    const bonuses = (method.bonusInputKeys ?? []).map(
-      (key) => scores.get(key) ?? 0,
-    );
-
-    const withBonus = applyPriorityAndBonus(
-      combination.score,
-      priority,
-      bonuses,
-      originalScale,
-    );
-    originalScore = withBonus.score;
-    details.priority = withBonus.priority;
-    details.bonus = withBonus.bonus;
+    ({ originalScore, originalScale } = computeWeightedScore(method, scores, details));
+  } else if (method.formula.type === "formula_group_scale") {
+    ({ originalScore, originalScale } = computeFormulaGroupScore(
+      method,
+      payloadRecord,
+      scores,
+      details,
+    ));
   } else {
     const value = scores.get(method.formula.inputKey) ?? 0;
     originalScale = method.formula.fromScale;
     originalScore = Math.min(value, originalScale);
+    if (method.scoreClamp) {
+      originalScore = clampScore(
+        originalScore,
+        method.scoreClamp.min,
+        method.scoreClamp.max,
+      );
+    }
   }
 
   const normalizedScore30 = Math.min(
     convertScale(originalScore, originalScale, 30),
     30,
   );
+
+  const programCode = method.programInputKey
+    ? String(payloadRecord[method.programInputKey] ?? "")
+    : undefined;
+  const combinationCode = method.combinationInputKey
+    ? String(payloadRecord[method.combinationInputKey] ?? "")
+    : undefined;
 
   return {
     schoolCode: config.schoolCode,
@@ -234,6 +389,10 @@ export function interpretAdmission({
     targetScale: 30,
     formulaUsed: describeFormula(method),
     benchmark30: method.benchmark30 ?? null,
+    programCode: programCode || undefined,
+    combinationCode: combinationCode || undefined,
+    eligible: eligibility.eligible,
+    missingFields: eligibility.missingFields,
     details,
     warnings,
   };

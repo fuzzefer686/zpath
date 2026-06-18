@@ -22,6 +22,16 @@ import {
   getSchoolTuitionFees,
   getSubjectCombinations,
 } from "@/src/lib/admission-data";
+import {
+  buildGenericUnimapRecords,
+  isStaticDedicatedSchool,
+  matchesGenericUnimapRoute,
+} from "@/src/lib/admission-config/generic-unimap";
+import {
+  getPublishedAdmissionConfig,
+  listPublishedConfigSchools,
+} from "@/src/lib/admission-config/store";
+import type { GenericAdmissionConfig } from "@/src/lib/admission-engine/generic";
 import type {
   AdmissionInfo,
   AdmissionMethodRecord,
@@ -344,6 +354,33 @@ function createFallbackProgramCombinations(
   );
 }
 
+async function findPublishedConfigByRoute(
+  routeParam: string,
+): Promise<GenericAdmissionConfig | null> {
+  try {
+    const direct = await getPublishedAdmissionConfig(routeParam.toUpperCase());
+    if (direct && matchesGenericUnimapRoute(routeParam, direct)) {
+      return direct;
+    }
+
+    const publishedSchools = await listPublishedConfigSchools();
+    for (const school of publishedSchools) {
+      if (isStaticDedicatedSchool(school.schoolCode)) continue;
+      const config = await getPublishedAdmissionConfig(
+        school.schoolCode,
+        school.year,
+      );
+      if (config && matchesGenericUnimapRoute(routeParam, config)) {
+        return config;
+      }
+    }
+  } catch (error) {
+    console.error("Cannot resolve published config route:", error);
+  }
+
+  return null;
+}
+
 async function loadOrFallback<T>(
   load: () => Promise<T>,
   fallback: T,
@@ -365,6 +402,7 @@ async function renderAdmissionSchoolDetail(
   selectedTuitionYear: number,
   selectedVariant: AdmissionPageVariant,
   routeParam: string,
+  genericConfig: GenericAdmissionConfig | null = null,
 ) {
   const proMaxContent = PRO_MAX_CONTENT_BY_CODE[school.code];
   const canUseProMax = false;
@@ -646,6 +684,7 @@ async function renderAdmissionSchoolDetail(
                   benchmarks={calculatorBenchmarks}
                   methods={calculatorMethods}
                   benchmarkYear={BENCHMARK_REFERENCE_YEAR}
+                  genericConfig={genericConfig}
                 />
               </CollapsibleAdmissionSection>
 
@@ -718,6 +757,17 @@ export async function generateStaticParams() {
     params.add(createSchoolSlug(university.name));
   });
 
+  try {
+    const publishedSchools = await listPublishedConfigSchools();
+    for (const school of publishedSchools) {
+      if (isStaticDedicatedSchool(school.schoolCode)) continue;
+      params.add(school.schoolCode.toLowerCase());
+      params.add(createSchoolSlug(school.schoolName));
+    }
+  } catch (error) {
+    console.error("Cannot add published school static params:", error);
+  }
+
   return Array.from(params).map((code) => ({ code }));
 }
 
@@ -767,7 +817,23 @@ export default async function UniversityDetailPage({
   const selectedVariant = getSelectedAdmissionVariant(resolvedSearchParams?.variant);
   const routeParam = code.toLowerCase();
   const school = await getAdmissionSchoolBySlug(routeParam);
-  const university = findVisibleUniversityForRoute(routeParam, school);
+  let university = findVisibleUniversityForRoute(routeParam, school);
+
+  let genericConfig: GenericAdmissionConfig | null = null;
+
+  if (!university) {
+    genericConfig = await findPublishedConfigByRoute(routeParam);
+    if (genericConfig) {
+      const records = buildGenericUnimapRecords(genericConfig);
+      university = records.university;
+    }
+  } else if (!isStaticDedicatedSchool(university.code)) {
+    genericConfig = await loadOrFallback(
+      () => getPublishedAdmissionConfig(university!.code),
+      null,
+      "generic config",
+    );
+  }
 
   if (!university) {
     return <UniversityNotFound code={code} />;
@@ -776,7 +842,9 @@ export default async function UniversityDetailPage({
   const visibleSchool =
     school && isVisibleUnimapCode(school.code)
       ? applyUniversityMediaToSchool(school, university)
-      : createFallbackSchool(university);
+      : genericConfig
+        ? buildGenericUnimapRecords(genericConfig).school
+        : createFallbackSchool(university);
 
   return renderAdmissionSchoolDetail(
     visibleSchool,
@@ -786,6 +854,7 @@ export default async function UniversityDetailPage({
     selectedTuitionYear,
     selectedVariant,
     routeParam,
+    genericConfig,
   );
 }
 
