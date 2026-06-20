@@ -339,6 +339,42 @@ function mapGeminiErrorMessage(error: unknown): string {
   return message;
 }
 
+function createEmergencyDraft(input: SynthesizeAdmissionConfigInput): Record<string, unknown> {
+  return backfillHints(
+    {
+      disclaimer:
+        "Bản nháp khẩn cấp do AI không thể xử lý hết nguồn ở lần chạy này. Admin cần rà soát/chỉnh sửa trước khi lưu.",
+      methods: [
+        {
+          methodCode: "DRAFT_TBD",
+          methodName: "Phương thức tạm (cần admin chỉnh sửa)",
+          description:
+            "Khung tối thiểu được tạo để tránh fail cứng khi AI vượt token hoặc trả rỗng.",
+          uiTemplate: "direct_admission",
+          inputs: [
+            {
+              key: "synthetic_score",
+              label: "Điểm tạm",
+              type: "number",
+              required: false,
+              min: 0,
+              max: 30,
+            },
+          ],
+          formula: {
+            type: "scale_conversion",
+            inputKey: "synthetic_score",
+            fromScale: 30,
+          },
+          note: "Hãy thay bằng phương thức thực tế từ nguồn tuyển sinh.",
+        },
+      ],
+      sourceUrl: input.sourceBundle.sourceUrl,
+    },
+    input,
+  );
+}
+
 export async function synthesizeAdmissionConfig(
   input: SynthesizeAdmissionConfigInput,
 ): Promise<GenerateAdmissionConfigResult> {
@@ -352,7 +388,14 @@ export async function synthesizeAdmissionConfig(
       buildCompactPromptWithHints(input),
     );
   } catch (error) {
-    throw new Error(mapGeminiErrorMessage(error));
+    return {
+      draft: createEmergencyDraft(input),
+      valid: false,
+      warnings: [
+        mapGeminiErrorMessage(error),
+        "Hệ thống đã trả khung draft tối thiểu để bạn chỉnh sửa thủ công thay vì dừng lỗi.",
+      ],
+    };
   }
   let draft = backfillHints(pass1, input);
 

@@ -291,6 +291,41 @@ function mapGeminiErrorMessage(error: unknown): string {
   return message;
 }
 
+function createEmergencyDraft(input: ExtractAdmissionConfigInput): Record<string, unknown> {
+  return backfillHints(
+    {
+      disclaimer:
+        "Bản nháp khẩn cấp do AI không thể đọc đầy đủ PDF ở lần chạy này. Admin cần rà soát/chỉnh sửa trước khi lưu.",
+      methods: [
+        {
+          methodCode: "DRAFT_TBD",
+          methodName: "Phương thức tạm (cần admin chỉnh sửa)",
+          description:
+            "Khung tối thiểu được tạo tự động để tránh fail cứng khi AI vượt token hoặc trả rỗng.",
+          uiTemplate: "direct_admission",
+          inputs: [
+            {
+              key: "synthetic_score",
+              label: "Điểm tạm",
+              type: "number",
+              required: false,
+              min: 0,
+              max: 30,
+            },
+          ],
+          formula: {
+            type: "scale_conversion",
+            inputKey: "synthetic_score",
+            fromScale: 30,
+          },
+          note: "Hãy thay bằng phương thức thực tế từ đề án tuyển sinh.",
+        },
+      ],
+    },
+    input,
+  );
+}
+
 function mergePass2IntoDraft(
   draft: Record<string, unknown>,
   pass2: Record<string, unknown>,
@@ -334,7 +369,14 @@ export async function extractAdmissionConfigFromPdf(
       Boolean(input.extraContext?.trim());
 
     if (!shouldTryTextOnlyFallback) {
-      throw new Error(mapGeminiErrorMessage(error));
+      return {
+        draft: createEmergencyDraft(input),
+        valid: false,
+        warnings: [
+          mapGeminiErrorMessage(error),
+          "Hệ thống đã trả khung draft tối thiểu để bạn tiếp tục chỉnh sửa thủ công thay vì dừng lỗi.",
+        ],
+      };
     }
 
     try {
@@ -348,7 +390,14 @@ export async function extractAdmissionConfigFromPdf(
         "Fallback text-only: PDF quá dài nên hệ thống đã sinh draft từ ngữ cảnh admin bổ sung. Cần rà soát kỹ trước khi lưu.",
       );
     } catch (fallbackError) {
-      throw new Error(mapGeminiErrorMessage(fallbackError));
+      return {
+        draft: createEmergencyDraft(input),
+        valid: false,
+        warnings: [
+          mapGeminiErrorMessage(fallbackError),
+          "Fallback text-only vẫn thất bại, hệ thống đã trả khung draft tối thiểu để bạn chỉnh thủ công.",
+        ],
+      };
     }
   }
 
