@@ -304,6 +304,27 @@ async function callGeminiJson(
     }
   }
 
+  if (FAST_MODE && compactPrompt && lastError?.message.startsWith("GEMINI_EMPTY_RESPONSE:MAX_TOKENS")) {
+    const textOnlyResponse = await getGeminiClient().models.generateContent({
+      model,
+      contents: [{ role: "user", parts: [{ text: compactPrompt }] }],
+      config: {
+        responseMimeType: "application/json",
+        temperature: 0,
+        maxOutputTokens: 4096,
+      },
+    });
+
+    const text = readResponseText(textOnlyResponse);
+    if (text) {
+      try {
+        return JSON.parse(stripJsonFences(text)) as Record<string, unknown>;
+      } catch {
+        // Keep original MAX_TOKENS error below.
+      }
+    }
+  }
+
   throw lastError ?? new Error("GEMINI_EMPTY_RESPONSE");
 }
 

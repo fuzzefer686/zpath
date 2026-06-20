@@ -255,6 +255,31 @@ async function callGeminiJson(
   throw lastError ?? new Error("GEMINI_EMPTY_RESPONSE");
 }
 
+async function callGeminiJsonFromTextOnly(prompt: string): Promise<unknown> {
+  const model = getGeminiModelName();
+  const response = await getGeminiClient().models.generateContent({
+    model,
+    contents: [{ role: "user", parts: [{ text: prompt }] }],
+    config: {
+      responseMimeType: "application/json",
+      temperature: 0,
+      maxOutputTokens: 4096,
+    },
+  });
+
+  const text = readResponseText(response);
+  if (!text) {
+    const finishReason = readFinishReason(response);
+    throw new Error(
+      finishReason
+        ? `GEMINI_EMPTY_RESPONSE:${finishReason}`
+        : "GEMINI_EMPTY_RESPONSE",
+    );
+  }
+
+  return JSON.parse(stripJsonFences(text));
+}
+
 function mapGeminiErrorMessage(error: unknown): string {
   const message = error instanceof Error ? error.message : "UNKNOWN_ERROR";
   if (message.startsWith("GEMINI_EMPTY_RESPONSE:MAX_TOKENS")) {
@@ -303,7 +328,28 @@ export async function extractAdmissionConfigFromPdf(
       buildCompactPromptWithHints(input),
     )) as Record<string, unknown>;
   } catch (error) {
-    throw new Error(mapGeminiErrorMessage(error));
+    const errorMessage = error instanceof Error ? error.message : "UNKNOWN_ERROR";
+    const shouldTryTextOnlyFallback =
+      errorMessage.startsWith("GEMINI_EMPTY_RESPONSE:MAX_TOKENS") &&
+      Boolean(input.extraContext?.trim());
+
+    if (!shouldTryTextOnlyFallback) {
+      throw new Error(mapGeminiErrorMessage(error));
+    }
+
+    try {
+      pass1 = (await callGeminiJsonFromTextOnly(
+        buildCompactPromptWithHints({
+          ...input,
+          extraContext: input.extraContext,
+        }),
+      )) as Record<string, unknown>;
+      warnings.push(
+        "Fallback text-only: PDF quá dài nên hệ thống đã sinh draft từ ngữ cảnh admin bổ sung. Cần rà soát kỹ trước khi lưu.",
+      );
+    } catch (fallbackError) {
+      throw new Error(mapGeminiErrorMessage(fallbackError));
+    }
   }
 
   let draft = backfillHints(pass1, input);
