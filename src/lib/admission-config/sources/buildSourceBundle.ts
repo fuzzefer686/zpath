@@ -4,7 +4,7 @@ import type {
   AdmissionSourceBundle,
 } from "./types";
 
-const MAX_PROMPT_CHARS = process.env.VERCEL === "1" ? 40_000 : 120_000;
+const MAX_PROMPT_CHARS = process.env.VERCEL === "1" ? 15_000 : 120_000;
 
 function priorityOf(source: AdmissionFetchedSource): number {
   if (source.role === "primary" && source.kind === "pdf") return 0;

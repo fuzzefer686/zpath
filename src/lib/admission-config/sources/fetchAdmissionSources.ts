@@ -9,7 +9,7 @@ import {
 
 const SOURCE_TIMEOUT_MS = 15_000;
 const MAX_REMOTE_BYTES = 20 * 1024 * 1024;
-const MAX_TEXT_CHARS = 120_000;
+const MAX_TEXT_CHARS = process.env.VERCEL === "1" ? 25_000 : 120_000;
 
 function normalizeSourceRole(role: unknown): AdmissionSourceRole {
   return role === "primary" ? "primary" : "supplement";

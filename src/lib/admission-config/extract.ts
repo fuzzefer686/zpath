@@ -95,6 +95,17 @@ Schema v2 (rút gọn):
 
 Gợi ý: mọi inputKey trong terms/priority/bonus phải có trong inputs. Với THPT, dùng uiTemplate "thpt_combination" và subject_group input.`;
 
+const COMPACT_EXTRACTION_PROMPT = `Bạn là trợ lý trích xuất tuyển sinh từ PDF.
+Chỉ trả JSON hợp lệ theo schema v2, không markdown.
+
+Ưu tiên trong trường hợp dữ liệu dài:
+- Trả methods đầy đủ cấu trúc tối thiểu hợp lệ: methodCode, methodName, inputs (không rỗng), formula.
+- Nếu thiếu dữ liệu chương trình/tổ hợp, được phép để programs/combinations rỗng để admin bổ sung sau.
+- Nếu phương thức có nhiều nhóm (Nhóm 1/2/3) thì tách method riêng, không gộp nhóm.
+- Với direct_admission phải có synthetic_score + scale_conversion.
+- Mọi công thức quy về thang 30.
+`;
+
 const PROGRAMS_EXTRACTION_PROMPT = `Đọc PDF đề án tuyển sinh và trích xuất DANH SÁCH CHƯƠNG TRÌNH + TỔ HỢP MÔN.
 
 Chỉ trả về JSON:
@@ -123,6 +134,21 @@ function buildPromptWithHints(input: ExtractAdmissionConfigInput): string {
     .join(" ");
 
   return `${EXTRACTION_PROMPT}\n\nGợi ý từ người dùng (dùng nếu PDF không nêu rõ): ${hints}`;
+}
+
+function buildCompactPromptWithHints(input: ExtractAdmissionConfigInput): string {
+  const hints = [
+    `Mã trường: ${input.schoolCode}.`,
+    input.schoolName ? `Tên trường: ${input.schoolName}.` : "",
+    `Năm: ${input.year}.`,
+    input.extraContext?.trim()
+      ? `Gợi ý admin:\n${input.extraContext.trim().slice(0, 3_000)}`
+      : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  return `${COMPACT_EXTRACTION_PROMPT}\n\n${hints}`;
 }
 
 function stripJsonFences(text: string): string {
@@ -160,20 +186,31 @@ function readFinishReason(response: unknown): string | undefined {
 async function callGeminiJson(
   pdfBase64: string,
   prompt: string,
+  compactPrompt?: string,
 ): Promise<unknown> {
   const model = getGeminiModelName();
   let lastError: Error | null = null;
-  const prompts = FAST_MODE
-    ? [
-        prompt,
-        `${prompt}\n\nYêu cầu dự phòng (ngắn gọn): trả JSON tối thiểu nhưng hợp lệ schema, methods không rỗng, không giải thích thêm.`,
-      ]
-    : [
-        prompt,
-        `${prompt}\n\nYêu cầu dự phòng: nếu nội dung dài, hãy trả JSON tối thiểu nhưng hợp lệ theo schema và KHÔNG để methods rỗng.`,
-      ];
+  const attempts: Array<{
+    prompt: string;
+    temperature: number;
+    maxOutputTokens: number;
+  }> = [];
 
-  for (let i = 0; i < prompts.length; i += 1) {
+  attempts.push({ prompt, temperature: 0.1, maxOutputTokens: 8192 });
+  attempts.push({
+    prompt: `${prompt}\n\nYêu cầu dự phòng: nếu nội dung dài, hãy trả JSON tối thiểu nhưng hợp lệ theo schema và KHÔNG để methods rỗng.`,
+    temperature: 0,
+    maxOutputTokens: FAST_MODE ? 6144 : 8192,
+  });
+  if (compactPrompt) {
+    attempts.push({
+      prompt: compactPrompt,
+      temperature: 0,
+      maxOutputTokens: 4096,
+    });
+  }
+
+  for (const attempt of attempts) {
     const response = await getGeminiClient().models.generateContent({
       model,
       contents: [
@@ -186,14 +223,14 @@ async function callGeminiJson(
                 data: pdfBase64,
               },
             },
-            { text: prompts[i] },
+            { text: attempt.prompt },
           ],
         },
       ],
       config: {
         responseMimeType: "application/json",
-        temperature: i === 0 ? 0.1 : 0,
-        maxOutputTokens: 8192,
+        temperature: attempt.temperature,
+        maxOutputTokens: attempt.maxOutputTokens,
       },
     });
 
@@ -220,6 +257,9 @@ async function callGeminiJson(
 
 function mapGeminiErrorMessage(error: unknown): string {
   const message = error instanceof Error ? error.message : "UNKNOWN_ERROR";
+  if (message.startsWith("GEMINI_EMPTY_RESPONSE:MAX_TOKENS")) {
+    return "AI vượt giới hạn token khi đọc PDF ở lần chạy này. Hãy thử lại hoặc thêm URL/text ngắn gọn để hệ thống trích xuất theo chế độ rút gọn.";
+  }
   if (message.startsWith("GEMINI_EMPTY_RESPONSE")) {
     return "AI chưa trả về nội dung từ PDF ở lần chạy này. Vui lòng thử lại, hoặc dùng thêm nguồn URL/text để ổn định hơn.";
   }
@@ -260,6 +300,7 @@ export async function extractAdmissionConfigFromPdf(
     pass1 = (await callGeminiJson(
       input.pdfBase64,
       buildPromptWithHints(input),
+      buildCompactPromptWithHints(input),
     )) as Record<string, unknown>;
   } catch (error) {
     throw new Error(mapGeminiErrorMessage(error));

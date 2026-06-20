@@ -16,6 +16,8 @@ type SynthesizeAdmissionConfigInput = {
 const IS_VERCEL = process.env.VERCEL === "1";
 const FORCE_FAST_MODE = process.env.ADMISSION_FAST_MODE === "1";
 const FAST_MODE = IS_VERCEL || FORCE_FAST_MODE;
+const MAX_CONTEXT_CHARS = FAST_MODE ? 12_000 : 120_000;
+const MAX_COMPACT_CONTEXT_CHARS = 4_000;
 
 const EXTRACTION_PROMPT = `Bạn là trợ lý trích xuất dữ liệu tuyển sinh từ nguồn do admin cung cấp.
 
@@ -87,6 +89,14 @@ Chỉ trả về JSON:
   "certificateLevels": [{ "band": number, "convertedScore": number, "certificateType": string }]
 }`;
 
+const COMPACT_EXTRACTION_PROMPT = `Bạn là trợ lý trích xuất tuyển sinh từ nguồn admin.
+Chỉ trả JSON hợp lệ schema v2, không markdown.
+- Ưu tiên methods có cấu trúc tối thiểu hợp lệ: methodCode, methodName, inputs không rỗng, formula.
+- Nếu dữ liệu quá dài, được phép để programs/combinations rỗng để admin bổ sung sau.
+- Nếu có Nhóm 1/2/3 phải tách method riêng.
+- Mọi công thức quy về thang 30.
+`;
+
 function stripJsonFences(text: string): string {
   const trimmed = text.trim();
   const fenceMatch = trimmed.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/i);
@@ -119,18 +129,42 @@ function readFinishReason(response: unknown): string | undefined {
   return record.candidates?.[0]?.finishReason;
 }
 
+function limitContext(value: string, maxChars: number): string {
+  if (value.length <= maxChars) return value;
+  return `${value.slice(0, maxChars)}\n\n[TRUNCATED_FOR_TOKEN_BUDGET]`;
+}
+
 function buildPromptWithHints(input: SynthesizeAdmissionConfigInput): string {
+  const boundedContext = limitContext(input.sourceBundle.promptContext, MAX_CONTEXT_CHARS);
   const hints = [
     `Mã trường: ${input.schoolCode}.`,
     `Tên trường: ${input.schoolName}.`,
     `Năm tuyển sinh: ${input.year}.`,
     input.sourceBundle.sourceUrl ? `Nguồn URL chính: ${input.sourceBundle.sourceUrl}.` : "",
-    `Nội dung nguồn đã tổng hợp:\n${input.sourceBundle.promptContext}`,
+    `Nội dung nguồn đã tổng hợp:\n${boundedContext}`,
   ]
     .filter(Boolean)
     .join("\n\n");
 
   return `${EXTRACTION_PROMPT}\n\n${hints}`;
+}
+
+function buildCompactPromptWithHints(input: SynthesizeAdmissionConfigInput): string {
+  const compactContext = limitContext(
+    input.sourceBundle.promptContext,
+    MAX_COMPACT_CONTEXT_CHARS,
+  );
+  const hints = [
+    `Mã trường: ${input.schoolCode}.`,
+    `Tên trường: ${input.schoolName}.`,
+    `Năm tuyển sinh: ${input.year}.`,
+    input.sourceBundle.sourceUrl ? `Nguồn chính: ${input.sourceBundle.sourceUrl}.` : "",
+    `Tóm tắt nguồn:\n${compactContext}`,
+  ]
+    .filter(Boolean)
+    .join("\n\n");
+
+  return `${COMPACT_EXTRACTION_PROMPT}\n\n${hints}`;
 }
 
 function backfillHints(
@@ -195,6 +229,7 @@ function mergePass2IntoDraft(
 async function callGeminiJson(
   input: SynthesizeAdmissionConfigInput,
   prompt: string,
+  compactPrompt?: string,
 ): Promise<Record<string, unknown>> {
   const model = getGeminiModelName();
   const parts: Array<{ text?: string; inlineData?: { mimeType: string; data: string } }> = [];
@@ -221,21 +256,33 @@ async function callGeminiJson(
   parts.push({ text: prompt });
 
   let lastError: Error | null = null;
-  const prompts = FAST_MODE
-    ? [prompt]
-    : [
-        prompt,
-        `${prompt}\n\nYêu cầu dự phòng: nếu nội dung quá dài, hãy trả JSON tối thiểu nhưng hợp lệ schema và methods không được rỗng.`,
-      ];
+  const attempts: Array<{
+    prompt: string;
+    temperature: number;
+    maxOutputTokens: number;
+  }> = [];
+  attempts.push({ prompt, temperature: 0.1, maxOutputTokens: 8192 });
+  attempts.push({
+    prompt: `${prompt}\n\nYêu cầu dự phòng: nếu nội dung quá dài, hãy trả JSON tối thiểu nhưng hợp lệ schema và methods không được rỗng.`,
+    temperature: 0,
+    maxOutputTokens: FAST_MODE ? 6144 : 8192,
+  });
+  if (compactPrompt) {
+    attempts.push({
+      prompt: compactPrompt,
+      temperature: 0,
+      maxOutputTokens: 4096,
+    });
+  }
 
-  for (let i = 0; i < prompts.length; i += 1) {
+  for (const attempt of attempts) {
     const response = await getGeminiClient().models.generateContent({
       model,
-      contents: [{ role: "user", parts: [...parts.slice(0, -1), { text: prompts[i] }] }],
+      contents: [{ role: "user", parts: [...parts.slice(0, -1), { text: attempt.prompt }] }],
       config: {
         responseMimeType: "application/json",
-        temperature: i === 0 ? 0.1 : 0,
-        maxOutputTokens: 8192,
+        temperature: attempt.temperature,
+        maxOutputTokens: attempt.maxOutputTokens,
       },
     });
 
@@ -260,19 +307,42 @@ async function callGeminiJson(
   throw lastError ?? new Error("GEMINI_EMPTY_RESPONSE");
 }
 
+function mapGeminiErrorMessage(error: unknown): string {
+  const message = error instanceof Error ? error.message : "UNKNOWN_ERROR";
+  if (message.startsWith("GEMINI_EMPTY_RESPONSE:MAX_TOKENS")) {
+    return "AI vượt giới hạn token khi phân tích nguồn ở lần chạy này. Hãy rút gọn nguồn hoặc thử lại để hệ thống chạy chế độ rút gọn.";
+  }
+  if (message.startsWith("GEMINI_EMPTY_RESPONSE")) {
+    return "AI chưa trả về nội dung từ nguồn ở lần chạy này. Vui lòng thử lại hoặc giảm bớt nội dung dán tay.";
+  }
+  return message;
+}
+
 export async function synthesizeAdmissionConfig(
   input: SynthesizeAdmissionConfigInput,
 ): Promise<GenerateAdmissionConfigResult> {
   const warnings: string[] = [];
 
-  const pass1 = await callGeminiJson(input, buildPromptWithHints(input));
+  let pass1: Record<string, unknown>;
+  try {
+    pass1 = await callGeminiJson(
+      input,
+      buildPromptWithHints(input),
+      buildCompactPromptWithHints(input),
+    );
+  } catch (error) {
+    throw new Error(mapGeminiErrorMessage(error));
+  }
   let draft = backfillHints(pass1, input);
 
   if (!FAST_MODE) {
     try {
       const pass2 = await callGeminiJson(
         input,
-        `${PROGRAMS_EXTRACTION_PROMPT}\n\nDữ liệu nguồn:\n${input.sourceBundle.promptContext}`,
+        `${PROGRAMS_EXTRACTION_PROMPT}\n\nDữ liệu nguồn:\n${limitContext(
+          input.sourceBundle.promptContext,
+          MAX_CONTEXT_CHARS,
+        )}`,
       );
       draft = mergePass2IntoDraft(draft, pass2);
       warnings.push("Pass 2: đã merge chương trình/tổ hợp từ nguồn admin cung cấp.");
