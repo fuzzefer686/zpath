@@ -12,6 +12,7 @@ const links = [
   { href: "/", label: "Trang chủ" },
   { href: "/unimap", label: "UniMap" },
   { href: "/scoring", label: "Tính điểm" },
+  { href: "/certificate-converter", label: "Quy đổi chứng chỉ" },
   { href: "/advisor", label: "Tư vấn ngành" },
 ];
 
