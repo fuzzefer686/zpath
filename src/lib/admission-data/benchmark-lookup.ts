@@ -1,7 +1,7 @@
 import type { AdmissionMethod, SchoolCode } from "@/src/lib/admission-engine";
 import type { AdmissionProgram, Benchmark } from "@/src/types/admission-data";
 
-export type BenchmarkMethodCode = AdmissionMethod | "XTTN13";
+export type BenchmarkMethodCode = AdmissionMethod | "XTTN13" | string;
 
 export function findBenchmarkForProgram({
   schoolCode,
@@ -12,7 +12,7 @@ export function findBenchmarkForProgram({
   combinationCode,
   benchmarkYear,
 }: {
-  schoolCode: SchoolCode;
+  schoolCode: SchoolCode | string;
   programs: AdmissionProgram[];
   benchmarks: Benchmark[];
   programCode: string;

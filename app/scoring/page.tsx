@@ -11,6 +11,11 @@ import {
   getSchoolBenchmarks,
   getSchoolPrograms,
 } from "@/src/lib/admission-data";
+import {
+  getPublishedAdmissionConfig,
+  listPublishedConfigSchools,
+} from "@/src/lib/admission-config/store";
+import { getAofStaticConfig } from "@/src/lib/admission-engine/modules/aof/config";
 
 export const metadata: Metadata = {
   title: "Tính điểm xét tuyển - ZPATH",
@@ -21,6 +26,7 @@ export const metadata: Metadata = {
 const SCORING_SCHOOL_CODE = "HUST";
 const SCORING_ADMISSION_YEAR = 2026;
 const SCORING_BENCHMARK_YEAR = 2025;
+const HIDDEN_SCORING_SCHOOL_CODES = new Set(["HMU"]);
 
 const SCORING_SCHOOLS: ScoringSchoolOption[] = [
   {
@@ -47,6 +53,17 @@ const SCORING_SCHOOLS: ScoringSchoolOption[] = [
     accentSoftClassName: "bg-red-700/10",
   },
   {
+    code: "AOF",
+    shortName: "AOF",
+    name: "Học viện Tài chính",
+    status: "available",
+    avatarColor: "#0369a1",
+    accentTextClassName: "text-sky-700",
+    accentBorderClassName: "border-sky-700",
+    accentRingClassName: "ring-sky-700/25",
+    accentSoftClassName: "bg-sky-700/10",
+  },
+  {
     code: "NEU",
     shortName: "NEU",
     name: "Đại học Kinh tế Quốc dân",
@@ -71,19 +88,62 @@ const SCORING_SCHOOLS: ScoringSchoolOption[] = [
   },
 ];
 
+const STATIC_DEDICATED_CODES = new Set(["HUST", "FTU", "UET"]);
+
 type ScoringPageProps = {
   searchParams?: Promise<{
     school?: string | string[];
   }>;
 };
 
+function buildConfigSchoolOption(
+  code: string,
+  name: string,
+): ScoringSchoolOption {
+  return {
+    code,
+    shortName: code,
+    name,
+    status: "available",
+    avatarColor: "#6366f1",
+    accentTextClassName: "text-indigo-500",
+    accentBorderClassName: "border-indigo-500",
+    accentRingClassName: "ring-indigo-500/25",
+    accentSoftClassName: "bg-indigo-50",
+  };
+}
+
+/**
+ * Merges the hardcoded school list with any school that has a published
+ * config-driven calculator (added via the admin PDF flow). Static options win
+ * on conflict so existing schools keep their branding.
+ */
+async function buildScoringSchools(): Promise<ScoringSchoolOption[]> {
+  const merged = [...SCORING_SCHOOLS];
+  const existingCodes = new Set(merged.map((school) => school.code));
+
+  try {
+    const publishedSchools = await listPublishedConfigSchools();
+    for (const school of publishedSchools) {
+      if (existingCodes.has(school.schoolCode)) continue;
+      merged.push(buildConfigSchoolOption(school.schoolCode, school.schoolName));
+      existingCodes.add(school.schoolCode);
+    }
+  } catch (error) {
+    console.error("Cannot load published config schools:", error);
+  }
+
+  return merged.filter((school) => !HIDDEN_SCORING_SCHOOL_CODES.has(school.code));
+}
+
 function getSelectedSchoolCode(
   schoolParam: string | string[] | undefined,
+  schools: ScoringSchoolOption[],
 ): ScoringSchoolCode {
   const rawSchool = Array.isArray(schoolParam) ? schoolParam[0] : schoolParam;
   const normalizedSchool = rawSchool?.toUpperCase();
 
-  return SCORING_SCHOOLS.some((school) => school.code === normalizedSchool)
+  return schools.some((school) => school.code === normalizedSchool)
     ? (normalizedSchool as ScoringSchoolCode)
     : SCORING_SCHOOL_CODE;
 }
@@ -103,7 +163,24 @@ async function loadOrFallback<T>(
 
 export default async function ScoringPage({ searchParams }: ScoringPageProps) {
   const resolvedSearchParams = await searchParams;
-  const selectedSchoolCode = getSelectedSchoolCode(resolvedSearchParams?.school);
+  const schools = await buildScoringSchools();
+  const selectedSchoolCode = getSelectedSchoolCode(
+    resolvedSearchParams?.school,
+    schools,
+  );
+
+  // Schools without a dedicated hardcoded calculator are config-driven. AOF
+  // uses a static config bundled in code; other schools load from Supabase.
+  const genericConfig = STATIC_DEDICATED_CODES.has(selectedSchoolCode)
+    ? null
+    : selectedSchoolCode === "AOF"
+      ? getAofStaticConfig()
+      : await loadOrFallback(
+          () => getPublishedAdmissionConfig(selectedSchoolCode),
+          null,
+          "config",
+        );
+
   const [programs, methods, benchmarks] = await Promise.all([
     loadOrFallback(
       () => getSchoolPrograms(selectedSchoolCode, SCORING_ADMISSION_YEAR),
@@ -126,9 +203,30 @@ export default async function ScoringPage({ searchParams }: ScoringPageProps) {
     <div className="min-h-screen bg-background text-foreground">
       <section className="container-page space-y-6 py-6 md:py-8">
         <ScoringSchoolSelector
-          options={SCORING_SCHOOLS}
+          options={schools}
           selectedSchoolCode={selectedSchoolCode}
         />
+
+        <p className="text-center text-sm text-muted-foreground">
+          Cần quy đổi chứng chỉ trước khi tính điểm?{" "}
+          <a
+            href="/certificate-converter"
+            className="font-semibold text-primary underline-offset-4 hover:underline"
+          >
+            Mở trang Quy đổi chứng chỉ
+          </a>
+        </p>
+
+        {genericConfig && !STATIC_DEDICATED_CODES.has(selectedSchoolCode) ? (
+          <p className="text-center text-sm text-muted-foreground">
+            <a
+              href={`/unimap/${selectedSchoolCode.toLowerCase()}#calculator`}
+              className="font-semibold text-primary underline-offset-4 hover:underline"
+            >
+              Xem trang UniMap đầy đủ cho {selectedSchoolCode}
+            </a>
+          </p>
+        ) : null}
 
         <AdmissionCalculatorSection
           schoolCode={selectedSchoolCode}
@@ -136,6 +234,7 @@ export default async function ScoringPage({ searchParams }: ScoringPageProps) {
           benchmarks={benchmarks}
           methods={methods}
           benchmarkYear={SCORING_BENCHMARK_YEAR}
+          genericConfig={genericConfig}
         />
       </section>
     </div>

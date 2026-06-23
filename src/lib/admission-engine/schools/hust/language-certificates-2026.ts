@@ -1,5 +1,7 @@
 export type LanguageCertificateType =
   | "IELTS_ACADEMIC"
+  | "SAT"
+  | "ACT"
   | "VSTEP"
   | "APTIS_ESOL"
   | "PEIC"
@@ -66,6 +68,8 @@ export const HUST_LANGUAGE_CERTIFICATE_SOURCE_LABEL =
 
 export const LANGUAGE_CERTIFICATE_TYPE_LABELS: Record<LanguageCertificateType, string> = {
   IELTS_ACADEMIC: "IELTS Academic",
+  SAT: "SAT",
+  ACT: "ACT",
   VSTEP: "VSTEP",
   APTIS_ESOL: "Aptis ESOL",
   PEIC: "PEIC",
@@ -281,6 +285,7 @@ export function getLanguageCertificateInputMode(
   certificateType: LanguageCertificateType,
 ): "numeric" | "level" | "toeic" {
   if (certificateType === "TOEIC") return "toeic";
+  if (certificateType === "SAT" || certificateType === "ACT") return "numeric";
 
   return getLanguageCertificateBands(certificateType).some(
     (bandItem) => bandItem.minScore !== undefined || bandItem.maxScore !== undefined,
@@ -306,6 +311,13 @@ export function getLanguageCertificateLevelOptions(
 export function getLanguageCertificateScoreRange(
   certificateType: LanguageCertificateType,
 ) {
+  if (certificateType === "SAT") {
+    return { minScore: 400, maxScore: 1600 };
+  }
+  if (certificateType === "ACT") {
+    return { minScore: 1, maxScore: 36 };
+  }
+
   const numericBands = getLanguageCertificateBands(certificateType).filter(
     (bandItem) => bandItem.minScore !== undefined && bandItem.maxScore !== undefined,
   );
