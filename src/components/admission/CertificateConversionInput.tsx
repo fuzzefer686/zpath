@@ -36,6 +36,7 @@ export type CertificateConversionStructuredValue = {
 
 type CertificateConversionInputProps = {
   value: CertificateConversionInputValue;
+  allowRawSubmit?: boolean;
   onChange: (
     value: CertificateConversionInputValue,
     structuredValue: CertificateConversionStructuredValue,
@@ -125,6 +126,7 @@ function formatScore(value: number) {
 
 export function CertificateConversionInput({
   value,
+  allowRawSubmit = false,
   onChange,
 }: CertificateConversionInputProps) {
   const inputMode = getLanguageCertificateInputMode(value.certificateType);
@@ -273,7 +275,7 @@ export function CertificateConversionInput({
         </p>
       ) : null}
 
-      {!structuredValue && hasUserInput && !showToeicMissingMessage ? (
+      {!structuredValue && hasUserInput && !showToeicMissingMessage && !allowRawSubmit ? (
         <p className="text-sm font-medium text-destructive">
           Không tìm thấy mức quy đổi phù hợp
         </p>

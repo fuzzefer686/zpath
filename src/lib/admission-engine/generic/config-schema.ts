@@ -15,7 +15,8 @@ export type GenericInputType =
   | "certificate"
   | "certificate_rich"
   | "select"
-  | "subject_group";
+  | "subject_group"
+  | "section";
 
 export type GenericSelectOption = {
   value: string;
@@ -54,8 +55,14 @@ export type GenericBonusRule = {
 };
 
 export type GenericEligibilityRule = {
-  type: "min_score" | "max_bonus" | "required_input" | "min_subject";
+  type:
+    | "min_score"
+    | "max_bonus"
+    | "required_input"
+    | "required_any"
+    | "min_subject";
   inputKey?: string;
+  inputKeys?: string[];
   min?: number;
   max?: number;
   message: string;
@@ -216,6 +223,7 @@ const INPUT_TYPES: GenericInputType[] = [
   "certificate_rich",
   "select",
   "subject_group",
+  "section",
 ];
 
 function isRecord(value: unknown): value is Record<string, unknown> {

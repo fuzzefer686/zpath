@@ -25,6 +25,10 @@ function isEmptyPayloadValue(value: unknown): boolean {
   return value === undefined || value === null || value === "";
 }
 
+function hasAnyNonEmpty(payload: PayloadRecord, keys: string[]): boolean {
+  return keys.some((key) => !isEmptyPayloadValue(payload[key]));
+}
+
 /**
  * Evaluates config-declared eligibility rules against a payload.
  */
@@ -67,6 +71,18 @@ function applyRule(
     case "required_input": {
       if (!rule.inputKey) break;
       if (isEmptyPayloadValue(payload[rule.inputKey])) {
+        if (!missingFields.includes(rule.message)) {
+          missingFields.push(rule.message);
+        }
+      }
+      break;
+    }
+    case "required_any": {
+      const keys = (rule.inputKeys ?? []).filter(
+        (key): key is string => typeof key === "string" && key.trim().length > 0,
+      );
+      if (!keys.length) break;
+      if (!hasAnyNonEmpty(payload, keys)) {
         if (!missingFields.includes(rule.message)) {
           missingFields.push(rule.message);
         }
