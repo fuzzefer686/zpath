@@ -206,6 +206,16 @@ export default async function ScoringPage({ searchParams }: ScoringPageProps) {
           selectedSchoolCode={selectedSchoolCode}
         />
 
+        <p className="text-center text-sm text-muted-foreground">
+          Cần quy đổi chứng chỉ trước khi tính điểm?{" "}
+          <a
+            href="/certificate-converter"
+            className="font-semibold text-primary underline-offset-4 hover:underline"
+          >
+            Mở trang Quy đổi chứng chỉ
+          </a>
+        </p>
+
         {genericConfig && !STATIC_DEDICATED_CODES.has(selectedSchoolCode) ? (
           <p className="text-center text-sm text-muted-foreground">
             <a

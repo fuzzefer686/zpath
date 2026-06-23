@@ -150,6 +150,8 @@ export function GenericConfigCalculator({
         config.programs?.length ||
         selectedMethod?.programInputKey),
   );
+  const hideProgramSelector = config.schoolCode === "AOF";
+  const requiresProgramSelection = requiresProgram && !hideProgramSelector;
 
   const changeMethod = useCallback(
     (nextMethodCode: string) => {
@@ -179,7 +181,7 @@ export function GenericConfigCalculator({
     (method: GenericMethodConfig): GenericPayload => {
       const payload: GenericPayload = {};
 
-      if (requiresProgram && programCode) {
+      if (requiresProgramSelection && programCode) {
         const programKey = method.programInputKey ?? "programCode";
         payload[programKey] = programCode;
       }
@@ -229,7 +231,7 @@ export function GenericConfigCalculator({
       return payload;
     },
     [
-      requiresProgram,
+      requiresProgramSelection,
       programCode,
       combinationForm,
       values,
@@ -238,7 +240,7 @@ export function GenericConfigCalculator({
 
   const resolveBenchmark30 = useCallback(
     (method: GenericMethodConfig): number | null => {
-      if (!programCode || !requiresProgram) {
+      if (!programCode || !requiresProgramSelection) {
         return null;
       }
 
@@ -258,7 +260,7 @@ export function GenericConfigCalculator({
       config.schoolCode,
       benchmarks,
       programCode,
-      requiresProgram,
+      requiresProgramSelection,
       dbPrograms,
       combinationForm.combinationCode,
       resolvedBenchmarkYear,
@@ -271,6 +273,11 @@ export function GenericConfigCalculator({
       score: GenericAdmissionScoreResult,
       benchmark30: number | null,
     ) => {
+      if (hideProgramSelector) {
+        setComparison(null);
+        return;
+      }
+
       if (!programCode) {
         setComparison(null);
         return;
@@ -295,6 +302,7 @@ export function GenericConfigCalculator({
       resolvedBenchmarkYear,
       programCode,
       combinationForm.combinationCode,
+      hideProgramSelector,
     ],
   );
 
@@ -304,7 +312,7 @@ export function GenericConfigCalculator({
       return;
     }
 
-    if (requiresProgram && !programCode) {
+    if (requiresProgramSelection && !programCode) {
       setError("Vui lòng chọn chương trình đào tạo.");
       return;
     }
@@ -375,7 +383,7 @@ export function GenericConfigCalculator({
     }
   }, [
     selectedMethod,
-    requiresProgram,
+    requiresProgramSelection,
     programCode,
     buildPayload,
     previewMode,
@@ -427,11 +435,11 @@ export function GenericConfigCalculator({
           </div>
         ) : null}
 
-        {programOptions.length ? (
+        {programOptions.length && !hideProgramSelector ? (
           <label className="block max-w-xl space-y-2">
             <span className="text-sm font-semibold">
               Chương trình đào tạo
-              {requiresProgram ? <span className="text-destructive"> *</span> : null}
+              {requiresProgramSelection ? <span className="text-destructive"> *</span> : null}
             </span>
             <select
               value={programCode}
