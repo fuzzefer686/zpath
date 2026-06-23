@@ -12,7 +12,6 @@ import {
   convertCertificate,
   convertScale,
   applyFormulaGroupEntry,
-  normalizeGroupScoreTo30,
 } from "./primitives";
 
 export type GenericAdmissionScoreResult = {
@@ -201,24 +200,56 @@ function getInputLabel(
   return method.inputs.find((input) => input.key === key)?.label ?? key;
 }
 
-function describeFormula(method: GenericMethodConfig): string {
+function formatWeight(weight: number): string {
+  const EPSILON = 1e-6;
+  if (Math.abs(weight - 1) < EPSILON) return "";
+  if (Math.abs(weight - 1 / 3) < EPSILON) return " × 1/3";
+  if (Math.abs(weight - 1 / 9) < EPSILON) return " × 1/9";
+  if (Math.abs(weight - 1 / 2) < EPSILON) return " × 1/2";
+  if (Math.abs(weight - 1 / 4) < EPSILON) return " × 1/4";
+  if (Math.abs(weight - 2 / 3) < EPSILON) return " × 2/3";
+  if (Math.abs(weight - Math.round(weight)) < EPSILON) {
+    return ` × ${Math.round(weight)}`;
+  }
+  return ` × ${weight.toFixed(2)}`;
+}
+
+function renderWeightedTerm(method: GenericMethodConfig, term: { inputKey: string; weight: number; maxOfInputKeys?: string[] }): string {
+  if (term.maxOfInputKeys?.length) {
+    const labels = term.maxOfInputKeys.map((key) => getInputLabel(method, key));
+    return `max(${labels.join(", ")})${formatWeight(term.weight)}`;
+  }
+  return `${getInputLabel(method, term.inputKey)}${formatWeight(term.weight)}`;
+}
+
+function describeFormula(
+  method: GenericMethodConfig,
+  details: Record<string, unknown>,
+): string {
   if (method.formula.type === "weighted_combination") {
     const terms = method.formula.terms
-      .map((term) => {
-        if (term.maxOfInputKeys?.length) {
-          return `max(${term.maxOfInputKeys.join(", ")}) × ${term.weight}`;
-        }
-        return `${getInputLabel(method, term.inputKey)} × ${term.weight}`;
-      })
+      .map((term) => renderWeightedTerm(method, term))
       .join(" + ");
-    return `${terms} (thang ${method.formula.targetScale})`;
+    return `Điểm gốc = ${terms}. Thang điểm: ${method.formula.targetScale}.`;
   }
 
   if (method.formula.type === "formula_group_scale") {
-    return `Công thức theo nhóm chương trình (${method.formula.groups.map((g) => g.groupKey).join(", ")})`;
+    const selectedGroup =
+      typeof details.formulaGroup === "string" ? details.formulaGroup : "";
+    if (selectedGroup) {
+      const group = method.formula.groups.find((item) => item.groupKey === selectedGroup);
+      if (group) {
+        const groupFormula = group.terms
+          .map((term) => renderWeightedTerm(method, term))
+          .join(" + ");
+        return `Điểm gốc (${selectedGroup}) = ${groupFormula}. Thang điểm: ${group.scale}.`;
+      }
+      return `Công thức theo tổ hợp đã chọn (${selectedGroup}).`;
+    }
+    return `Công thức theo tổ hợp: ${method.formula.groups.map((g) => g.groupKey).join(", ")}.`;
   }
 
-  return `${getInputLabel(method, method.formula.inputKey)} quy đổi từ thang ${method.formula.fromScale} về thang 30`;
+  return `Điểm gốc = ${getInputLabel(method, method.formula.inputKey)}. Quy đổi từ thang ${method.formula.fromScale} về thang 30.`;
 }
 
 function computeWeightedScore(
@@ -387,7 +418,7 @@ export function interpretAdmission({
     originalScale,
     normalizedScore30: Math.round(normalizedScore30 * 100) / 100,
     targetScale: 30,
-    formulaUsed: describeFormula(method),
+    formulaUsed: describeFormula(method, details),
     benchmark30: method.benchmark30 ?? null,
     programCode: programCode || undefined,
     combinationCode: combinationCode || undefined,

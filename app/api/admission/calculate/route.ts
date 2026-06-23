@@ -10,6 +10,7 @@ import {
 } from "@/src/lib/admission-engine";
 import { interpretAdmission } from "@/src/lib/admission-engine/generic";
 import { getPublishedAdmissionConfig } from "@/src/lib/admission-config/store";
+import { getAofStaticConfig } from "@/src/lib/admission-engine/modules/aof/config";
 import { getAuthContext } from "@/lib/zpath-auth";
 
 type AdmissionCalculateRequest = {
@@ -74,13 +75,22 @@ function parseAdmissionCalculateRequest(
   };
 }
 
+/** Static config registry — schools whose configs live in code, not the DB. */
+const STATIC_GENERIC_CONFIGS: Record<string, () => ReturnType<typeof getAofStaticConfig>> = {
+  AOF: getAofStaticConfig,
+};
+
 /**
  * Config-driven path: schools without a hardcoded module are scored by loading
  * their published admission_configs row and running the generic interpreter.
- * This is what makes a brand-new school (added from a PDF) work with no code.
+ * In-code static configs (e.g. AOF) take priority over DB records to prevent
+ * a stale published config from shadowing a newer code-bundled one.
  */
 async function calculateFromPublishedConfig(parsed: AdmissionCalculateRequest) {
-  const config = await getPublishedAdmissionConfig(parsed.schoolCode, parsed.year);
+  const config =
+    STATIC_GENERIC_CONFIGS[parsed.schoolCode]?.() ??
+    (await getPublishedAdmissionConfig(parsed.schoolCode, parsed.year)) ??
+    null;
 
   if (!config) {
     throw new Error(

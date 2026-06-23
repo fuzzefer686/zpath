@@ -10,6 +10,11 @@ import { Input } from "@/components/ui/input";
 import { evaluateAdmissionChance } from "@/src/lib/admission-engine";
 import { findBenchmarkForProgram } from "@/src/lib/admission-data/benchmark-lookup";
 import {
+  getPassablePrograms,
+  suggestEligibleProgramsForAof,
+  type AofProgramSuggestion,
+} from "@/src/lib/admission-engine/generic/suggestEligiblePrograms";
+import {
   compareScoreWithCutoff,
   interpretAdmission,
   migrateAdmissionConfig,
@@ -22,6 +27,7 @@ import {
   type ScoreComparisonResult,
 } from "@/src/lib/admission-engine/generic";
 import type { AdmissionProgram, Benchmark } from "@/src/types/admission-data";
+import { EligibleProgramsPanel } from "./EligibleProgramsPanel";
 import { GenericSubjectCombinationPicker } from "./GenericSubjectCombinationPicker";
 import { ScoreComparisonPanel } from "./ScoreComparisonPanel";
 
@@ -38,6 +44,7 @@ type GenericConfigCalculatorProps = {
 
 function buildEmptyValues(method: GenericMethodConfig): Record<string, string> {
   return method.inputs.reduce<Record<string, string>>((acc, input) => {
+    if (input.type === "section") return acc;
     if (input.type === "select") {
       acc[input.key] = input.options?.[0]?.value ?? "";
     } else if (input.type === "subject_group") {
@@ -125,6 +132,7 @@ export function GenericConfigCalculator({
   );
   const [result, setResult] = useState<GenericAdmissionScoreResult | null>(null);
   const [comparison, setComparison] = useState<ScoreComparisonResult | null>(null);
+  const [eligiblePrograms, setEligiblePrograms] = useState<AofProgramSuggestion[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
 
@@ -153,6 +161,7 @@ export function GenericConfigCalculator({
       combinationForm.resetCombinationForm();
       setResult(null);
       setComparison(null);
+      setEligiblePrograms([]);
       setError(null);
     },
     [config.methods, combinationForm],
@@ -162,6 +171,7 @@ export function GenericConfigCalculator({
     setValues((current) => ({ ...current, [key]: value }));
     setResult(null);
     setComparison(null);
+    setEligiblePrograms([]);
     setError(null);
   }, []);
 
@@ -343,9 +353,20 @@ export function GenericConfigCalculator({
 
       setResult(score);
       runComparison(selectedMethod, score, benchmark30);
+      if (config.schoolCode === "AOF") {
+        const suggestions = suggestEligibleProgramsForAof({
+          score30: score.normalizedScore30,
+          methodCode: selectedMethod.methodCode,
+          combinationCode: combinationForm.combinationCode || undefined,
+        });
+        setEligiblePrograms(getPassablePrograms(suggestions));
+      } else {
+        setEligiblePrograms([]);
+      }
     } catch (calcError) {
       setResult(null);
       setComparison(null);
+      setEligiblePrograms([]);
       setError(
         calcError instanceof Error ? calcError.message : "Không thể tính điểm.",
       );
@@ -359,6 +380,7 @@ export function GenericConfigCalculator({
     buildPayload,
     previewMode,
     config,
+    combinationForm.combinationCode,
     resolveBenchmark30,
     runComparison,
   ]);
@@ -381,6 +403,11 @@ export function GenericConfigCalculator({
           isInputVisible(input, values),
       ),
     [selectedMethod, values],
+  );
+
+  const hasNonSectionInputs = useMemo(
+    () => visibleInputs.some((input) => input.type !== "section"),
+    [visibleInputs],
   );
   const methodRequirements = selectedMethod?.requirements ?? [];
   const methodSources = selectedMethod?.sources ?? [];
@@ -556,56 +583,71 @@ export function GenericConfigCalculator({
           </div>
         ) : null}
 
-        {visibleInputs.length ? (
-          <div className="grid gap-4 md:grid-cols-3">
-            {visibleInputs.map((input) => (
-              <label key={input.key} className="space-y-2">
-                <span className="text-sm font-semibold">
-                  {input.label}
-                  {input.required ? <span className="text-destructive"> *</span> : null}
-                  {input.unit ? (
-                    <span className="text-muted-foreground"> ({input.unit})</span>
-                  ) : null}
-                </span>
-                {input.type === "select" ? (
-                  <select
-                    value={values[input.key] ?? ""}
-                    onChange={(event) => updateValue(input.key, event.target.value)}
-                    className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
+        {hasNonSectionInputs ? (
+          <div className="grid gap-x-4 gap-y-5 md:grid-cols-3">
+            {visibleInputs.map((input) => {
+              if (input.type === "section") {
+                return (
+                  <div
+                    key={input.key}
+                    className="col-span-full mt-1 border-t pt-3 first:mt-0 first:border-t-0 first:pt-0"
                   >
-                    {(input.options ?? []).map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                ) : (
-                  <Input
-                    type="number"
-                    inputMode="decimal"
-                    min={input.min}
-                    max={input.max}
-                    step={input.step ?? "0.01"}
-                    value={values[input.key] ?? ""}
-                    onChange={(event) => updateValue(input.key, event.target.value)}
-                    placeholder={
-                      input.type === "certificate" || input.type === "certificate_rich"
-                        ? "Nhập band/điểm chứng chỉ"
-                        : input.min !== undefined && input.max !== undefined
-                          ? `${input.min} - ${input.max}`
-                          : ""
-                    }
-                  />
-                )}
-                {input.note ? (
-                  <span className="block text-xs text-muted-foreground">{input.note}</span>
-                ) : input.type === "certificate" || input.type === "certificate_rich" ? (
-                  <span className="block text-xs text-muted-foreground">
-                    Hệ thống tự quy đổi theo bảng chứng chỉ của phương thức đang chọn.
+                    <p className="text-sm font-semibold text-foreground">{input.label}</p>
+                    {input.note ? (
+                      <p className="mt-0.5 text-xs text-muted-foreground">{input.note}</p>
+                    ) : null}
+                  </div>
+                );
+              }
+              return (
+                <label key={input.key} className="space-y-2">
+                  <span className="text-sm font-semibold">
+                    {input.label}
+                    {input.required ? <span className="text-destructive"> *</span> : null}
+                    {input.unit ? (
+                      <span className="text-muted-foreground"> ({input.unit})</span>
+                    ) : null}
                   </span>
-                ) : null}
-              </label>
-            ))}
+                  {input.type === "select" ? (
+                    <select
+                      value={values[input.key] ?? ""}
+                      onChange={(event) => updateValue(input.key, event.target.value)}
+                      className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
+                    >
+                      {(input.options ?? []).map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
+                    </select>
+                  ) : (
+                    <Input
+                      type="number"
+                      inputMode="decimal"
+                      min={input.min}
+                      max={input.max}
+                      step={input.step ?? "0.01"}
+                      value={values[input.key] ?? ""}
+                      onChange={(event) => updateValue(input.key, event.target.value)}
+                      placeholder={
+                        input.type === "certificate" || input.type === "certificate_rich"
+                          ? "Nhập band/điểm chứng chỉ"
+                          : input.min !== undefined && input.max !== undefined
+                            ? `${input.min} - ${input.max}`
+                            : ""
+                      }
+                    />
+                  )}
+                  {input.note ? (
+                    <span className="block text-xs text-muted-foreground">{input.note}</span>
+                  ) : input.type === "certificate" || input.type === "certificate_rich" ? (
+                    <span className="block text-xs text-muted-foreground">
+                      Hệ thống tự quy đổi theo bảng chứng chỉ của phương thức đang chọn.
+                    </span>
+                  ) : null}
+                </label>
+              );
+            })}
           </div>
         ) : null}
 
@@ -705,6 +747,13 @@ export function GenericConfigCalculator({
 
             {comparison ? <ScoreComparisonPanel comparison={comparison} /> : null}
 
+            {config.schoolCode === "AOF" ? (
+              <EligibleProgramsPanel
+                suggestions={eligiblePrograms}
+                benchmarkYear={resolvedBenchmarkYear}
+              />
+            ) : null}
+
             {chance ? (
               <div className="rounded-lg border border-border bg-muted/20 p-4 text-sm">
                 <div className={`font-semibold ${getChanceClass(chance.level)}`}>
@@ -721,9 +770,12 @@ export function GenericConfigCalculator({
               </div>
             ) : null}
 
-            <p className="text-xs text-muted-foreground">
-              Công thức: {result.formulaUsed}
-            </p>
+            <div className="rounded-lg border border-border bg-muted/20 p-3">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                Công thức áp dụng
+              </p>
+              <p className="mt-1 text-sm leading-6 text-foreground">{result.formulaUsed}</p>
+            </div>
 
             {result.warnings.length ? (
               <ul className="space-y-1 text-xs text-amber-700">

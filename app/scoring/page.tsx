@@ -15,6 +15,7 @@ import {
   getPublishedAdmissionConfig,
   listPublishedConfigSchools,
 } from "@/src/lib/admission-config/store";
+import { getAofStaticConfig } from "@/src/lib/admission-engine/modules/aof/config";
 
 export const metadata: Metadata = {
   title: "Tính điểm xét tuyển - ZPATH",
@@ -49,6 +50,17 @@ const SCORING_SCHOOLS: ScoringSchoolOption[] = [
     accentBorderClassName: "border-red-700",
     accentRingClassName: "ring-red-700/25",
     accentSoftClassName: "bg-red-700/10",
+  },
+  {
+    code: "AOF",
+    shortName: "AOF",
+    name: "Học viện Tài chính",
+    status: "available",
+    avatarColor: "#0369a1",
+    accentTextClassName: "text-sky-700",
+    accentBorderClassName: "border-sky-700",
+    accentRingClassName: "ring-sky-700/25",
+    accentSoftClassName: "bg-sky-700/10",
   },
   {
     code: "NEU",
@@ -156,15 +168,17 @@ export default async function ScoringPage({ searchParams }: ScoringPageProps) {
     schools,
   );
 
-  // Schools without a dedicated hardcoded calculator are config-driven: load
-  // their published config so the generic calculator can render.
+  // Schools without a dedicated hardcoded calculator are config-driven. AOF
+  // uses a static config bundled in code; other schools load from Supabase.
   const genericConfig = STATIC_DEDICATED_CODES.has(selectedSchoolCode)
     ? null
-    : await loadOrFallback(
-        () => getPublishedAdmissionConfig(selectedSchoolCode),
-        null,
-        "config",
-      );
+    : selectedSchoolCode === "AOF"
+      ? getAofStaticConfig()
+      : await loadOrFallback(
+          () => getPublishedAdmissionConfig(selectedSchoolCode),
+          null,
+          "config",
+        );
 
   const [programs, methods, benchmarks] = await Promise.all([
     loadOrFallback(
