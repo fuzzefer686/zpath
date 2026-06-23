@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 const SCORING_SCHOOL_CODE = "HUST";
 const SCORING_ADMISSION_YEAR = 2026;
 const SCORING_BENCHMARK_YEAR = 2025;
+const HIDDEN_SCORING_SCHOOL_CODES = new Set(["HMU"]);
 
 const SCORING_SCHOOLS: ScoringSchoolOption[] = [
   {
@@ -132,7 +133,7 @@ async function buildScoringSchools(): Promise<ScoringSchoolOption[]> {
     console.error("Cannot load published config schools:", error);
   }
 
-  return merged;
+  return merged.filter((school) => !HIDDEN_SCORING_SCHOOL_CODES.has(school.code));
 }
 
 function getSelectedSchoolCode(
