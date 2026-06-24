@@ -1,0 +1,159 @@
+{
+    "majorId": "se-general-001",
+    "canonicalName": "Software Engineering",
+    "aliases": [
+      "Kỹ thuật phần mềm",
+      "KTPM"
+    ],
+    "category": "Technology & Computing",
+    "tags": [
+      "software",
+      "engineering",
+      "development",
+      "systems",
+      "agile",
+      "architecture"
+    ],
+    "searchKeywords": [
+      "kỹ thuật phần mềm",
+      "software engineering",
+      "KTPM",
+      "lập trình phần mềm",
+      "developer",
+      "backend",
+      "frontend"
+    ],
+    "scope": "general",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "An engineering discipline focused on designing, building, testing, and maintaining large-scale software systems in a systematic, reliable way.",
+    "overview": "Software Engineering applies engineering principles to software development. Unlike CNTT which is broad, SE focuses specifically on building production-quality software: system design, software architecture, testing, version control, and team collaboration. Students learn the full software development lifecycle and how to work in teams using methodologies like Agile and Scrum. Math requirements are lower than AI or CS, but logical thinking and coding precision are high.",
+    "difficultyLevel": 4,
+    "mathIntensity": 3,
+    "codingIntensity": 5,
+    "englishIntensity": 4,
+    "foundationSubjects": [
+      "Object-Oriented Programming",
+      "Data Structures & Algorithms",
+      "Databases & SQL",
+      "Software Requirements Engineering",
+      "Operating Systems",
+      "Computer Networks"
+    ],
+    "advancedSubjects": [
+      "Software Architecture & Design Patterns",
+      "Software Testing & QA",
+      "DevOps & CI/CD",
+      "Mobile/Web Application Development",
+      "Microservices & Distributed Systems",
+      "Agile Project Management"
+    ],
+    "toolsAndTechnologies": [
+      "Java / Python / JavaScript (Node.js)",
+      "React / Angular / Vue",
+      "Spring Boot / Django / Express",
+      "Git / GitHub",
+      "Docker / Kubernetes",
+      "PostgreSQL / MongoDB",
+      "Jenkins / GitHub Actions",
+      "Jira / Trello"
+    ],
+    "typicalProjects": [
+      "Build a full-stack e-commerce web application",
+      "Design and implement a RESTful API for a mobile app",
+      "Refactor a legacy codebase using design patterns",
+      "Build and deploy a microservices system with CI/CD pipeline",
+      "Lead a team project through full Agile sprint cycles"
+    ],
+    "requiredSkills": [
+      "Strong programming fundamentals in at least one language",
+      "Ability to read and write clean, maintainable code",
+      "Understanding of how systems fail and how to prevent it",
+      "Collaboration with teammates via Git and code review",
+      "Translating requirements into working software"
+    ],
+    "suitableFor": [
+      "Students who enjoy building things and seeing software work end-to-end",
+      "Those who like problem decomposition and system thinking",
+      "Students who want a clear, high-demand career path as a developer",
+      "People who enjoy working in teams on long-term projects"
+    ],
+    "notSuitableFor": [
+      "Students who dislike coding or debugging for extended periods",
+      "Those who want to focus on data analysis or research (Data Science or AI may be better)",
+      "Students who expect variety in daily work — software development can be repetitive"
+    ],
+    "keyTakeaways": [
+      "SE is the most direct path to becoming a professional software developer",
+      "Coding volume is high — students should expect to write a lot of code, not just study theory",
+      "Portfolio projects matter enormously for getting hired — degrees alone are not enough",
+      "The field rewards continuous learners; technologies change but engineering principles do not"
+    ],
+    "cautionNotes": [
+      "Not all 'Software Engineering' programs are equally rigorous — check if they cover system design and architecture, not just introductory coding",
+      "Job market for entry-level developers is competitive — side projects, internships, and open source contributions differentiate candidates",
+      "AI tools (GitHub Copilot, etc.) are changing what software engineers do, but they are not replacing the need for strong engineering fundamentals"
+    ],
+    "careerPaths": [
+      "Frontend Developer",
+      "Backend Developer",
+      "Full-stack Developer",
+      "Mobile Developer (iOS/Android)",
+      "DevOps / Site Reliability Engineer",
+      "Software Architect",
+      "Engineering Manager",
+      "QA Engineer",
+      "Technical Lead"
+    ],
+    "marketDemand": "Very high and stable. Software developers are consistently among the most in-demand roles in Vietnam's tech market, particularly those with backend and cloud skills.",
+    "salaryOutlook": "Entry-level developers in Vietnam earn 12–20M VND/month. Mid-level (3–5 years) can earn 25–45M. Senior engineers at product companies or working for international clients earn 50–100M+.",
+    "futureTrend": "AI tools are automating boilerplate code generation, raising expectations for developers. Engineers who understand system design, security, and scalability will continue to command high salaries.",
+    "commonMisconceptions": [
+    "Good programmers automatically become good software engineers",
+    "Software Engineering is only about writing code",
+      "Software Engineering is the same as Computer Science — CS is more theoretical and mathematical; SE is more applied and product-focused",
+      "You need to know many programming languages — depth in one or two is more valuable than surface knowledge of many",
+      "AI will eliminate software engineering jobs — demand for engineers who can work with and integrate AI tools is actually growing"
+    ],
+    "relatedMajors": [
+        {
+          "major": "Information Technology",
+          "relationship": "similar"
+        },
+        {
+          "major": "Computer Science",
+          "relationship": "similar"
+        },
+        {
+          "major": "Information Systems",
+          "relationship": "alternative"
+        },
+        {
+          "major": "Cybersecurity",
+          "relationship": "specialization"
+        },
+        {
+          "major": "Artificial Intelligence",
+          "relationship": "specialization"
+        }
+      ],
+    "faq": [
+      {
+        "question": "Is Software Engineering or Computer Science better?",
+        "answer": "SE is better if you want to build software products and work as a developer. CS is better if you want to go deep into algorithms, theory, or research. Both lead to similar software development jobs, but CS provides a stronger theoretical foundation."
+      },
+      {
+        "question": "How important is math in Software Engineering?",
+        "answer": "Much less than in AI or CS. Discrete math and logic are useful, but most SE work does not require calculus or linear algebra. Strong logical thinking matters more than formal mathematics."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-07"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-07-23"
+  }

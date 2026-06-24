@@ -1,0 +1,148 @@
+{
+    "majorId": "hrm-general-001",
+    "canonicalName": "Human Resource Management",
+    "aliases": [
+      "Quản trị nhân lực",
+      "QTNL",
+      "HR Management",
+      "People Management",
+      "HRM"
+    ],
+    "category": "Business & Management",
+    "tags": [
+      "HR",
+      "people",
+      "recruitment",
+      "training",
+      "organizational development",
+      "labor law",
+      "culture"
+    ],
+    "searchKeywords": [
+      "quản trị nhân lực",
+      "QTNL",
+      "HR",
+      "nhân sự",
+      "human resource",
+      "tuyển dụng",
+      "đào tạo",
+      "quản lý nhân sự"
+    ],
+    "scope": "country_specific",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A discipline focused on attracting, developing, retaining, and managing people in organizations — aligning human capital with business strategy.",
+    "overview": "Human Resource Management covers the full employee lifecycle: recruitment, onboarding, training, performance management, compensation, and off-boarding. It also addresses organizational design, labor law compliance, and increasingly people analytics. HRM is not purely administrative — strategic HR involves aligning talent decisions with business goals. In Vietnam, the field is growing in professionalization, with increased demand for HR business partners rather than purely administrative HR staff.",
+    "difficultyLevel": 3,
+    "mathIntensity": 2,
+    "codingIntensity": 1,
+    "englishIntensity": 4,
+    "foundationSubjects": [
+      "Organizational Behavior",
+      "Vietnamese Labor Law",
+      "Recruitment & Selection",
+      "Training & Development",
+      "Compensation & Benefits"
+    ],
+    "advancedSubjects": [
+      "HR Strategy & Business Partnering",
+      "Performance Management Systems",
+      "Organizational Development & Change Management",
+      "People Analytics & HR Metrics",
+      "Employee Relations & Labor Disputes",
+      "HR Technology (HRIS)"
+    ],
+    "toolsAndTechnologies": [
+      "HRIS systems (SAP SuccessFactors, Workday overview)",
+      "Excel (HR analytics, headcount tracking)",
+      "ATS (Applicant Tracking Systems — Greenhouse, Lever overview)",
+      "LinkedIn Recruiter",
+      "Survey tools (Google Forms, SurveyMonkey for engagement surveys)"
+    ],
+    "typicalProjects": [
+      "Design a competency framework for a specific job family",
+      "Audit a company's compensation structure against market benchmarks",
+      "Develop a training needs analysis and propose a learning program",
+      "Analyze employee engagement survey data and present recommendations",
+      "Draft an HR policy manual for a SME"
+    ],
+    "requiredSkills": [
+      "Interpersonal skills — HRM is fundamentally about working with people",
+      "Discretion and trustworthiness — HR handles sensitive employee information",
+      "Understanding of Vietnamese labor law and employment regulations",
+      "Organizational awareness — understanding political dynamics within companies",
+      "Data literacy for people analytics (attrition rates, performance metrics, headcount planning)"
+    ],
+    "suitableFor": [
+      "Students who genuinely enjoy understanding people and organizational dynamics",
+      "Those who are empathetic, discreet, and good at navigating interpersonal complexity",
+      "Students who want a business career that centers on human behavior rather than financial analysis",
+      "Those interested in organizational culture, learning, and development"
+    ],
+    "notSuitableFor": [
+      "Students who prefer working with data or systems rather than with people",
+      "Those who find interpersonal complexity draining rather than energizing",
+      "Students who want a purely quantitative or technical career"
+    ],
+    "keyTakeaways": [
+      "Modern HR is moving from administrative support to strategic business partnering — the role is evolving significantly",
+      "People analytics skills (data, metrics, HRIS) are becoming essential for career progression in HR",
+      "Labor law knowledge is mandatory in Vietnam — the legal landscape for employment is complex",
+      "HR roles at multinational companies are more developed and offer better growth than at many SMEs"
+    ],
+    "cautionNotes": [
+      "Entry-level HR roles in Vietnam are often administrative and process-heavy — strategic work comes later in career",
+      "HR is sometimes undervalued in Vietnamese organizations compared to revenue-generating functions",
+      "The QTNL degree overlaps significantly with QTKD — check whether the curriculum is genuinely HR-specialized"
+    ],
+    "careerPaths": [
+      "HR Generalist / HR Officer",
+      "Recruiter / Talent Acquisition Specialist",
+      "Training & Development Specialist (L&D)",
+      "Compensation & Benefits Analyst",
+      "HR Business Partner",
+      "Organizational Development Consultant",
+      "HR Director / Chief People Officer (senior path)"
+    ],
+    "marketDemand": "Stable and growing, especially at multinational companies and larger Vietnamese enterprises that are professionalizing their HR functions. Demand for strategic HR (HRBPs, L&D, people analytics) is increasing.",
+    "salaryOutlook": "Entry-level HR roles earn 8–13M VND/month in Vietnam. HR Business Partners and L&D Managers earn 20–40M. HR Directors at MNCs earn significantly more. Compensation specialists with analytics skills command premiums.",
+    "futureTrend": "HR technology and people analytics are reshaping the function. AI tools are automating CV screening and scheduling. HR professionals who combine people skills with data literacy and HRIS expertise are most competitive.",
+    "commonMisconceptions": [
+      "HR is just about hiring and firing people — the function covers compensation, culture, learning, organizational design, and strategy",
+      "HR is an easy major for people who do not like numbers — people analytics, payroll, and compensation all require significant numerical work",
+      "HR professionals are always nice and avoid conflict — effective HR requires making and enforcing difficult decisions"
+    ],
+    "relatedMajors": [
+      {
+        "major": "Business Administration",
+        "relationship": "foundation"
+      },
+      {
+        "major": "Psychology",
+        "relationship": "similar"
+      },
+      {
+        "major": "Law",
+        "relationship": "similar"
+      },
+      {
+        "major": "Education",
+        "relationship": "similar"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is HR a good career choice in Vietnam?",
+        "answer": "Yes, particularly at multinational companies or fast-growing Vietnamese tech and consumer companies where HR is genuinely strategic. At many traditional SMEs, HR remains administrative and may not offer strong development. Company type matters more than industry for HR career quality."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-06-23"
+  }

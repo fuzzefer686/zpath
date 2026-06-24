@@ -1,0 +1,149 @@
+{
+    "majorId": "econ-general-001",
+    "canonicalName": "Economics",
+    "aliases": [
+      "Kinh tế học",
+      "Kinh tế",
+      "Applied Economics"
+    ],
+    "category": "Business & Economics",
+    "tags": [
+      "economics",
+      "theory",
+      "policy",
+      "quantitative",
+      "research",
+      "macro",
+      "micro"
+    ],
+    "searchKeywords": [
+      "kinh tế học",
+      "economics",
+      "kinh tế",
+      "kinh tế vĩ mô",
+      "kinh tế vi mô",
+      "chính sách kinh tế",
+      "nghiên cứu kinh tế"
+    ],
+    "scope": "general",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "The study of how individuals, firms, and governments allocate scarce resources, and how these decisions shape markets, prices, and economic outcomes.",
+    "overview": "Economics studies decision-making under scarcity at every level — from individual consumer choices to national monetary policy. It has two main branches: microeconomics (individual agents, markets, prices) and macroeconomics (GDP, inflation, employment, trade). Modern economics is increasingly quantitative — using statistics, econometrics, and data to test theories. In Vietnam, Economics graduates work in government agencies, banks, research institutes, and increasingly in data-driven private sector roles.",
+    "difficultyLevel": 4,
+    "mathIntensity": 4,
+    "codingIntensity": 2,
+    "englishIntensity": 4,
+    "foundationSubjects": [
+      "Microeconomics",
+      "Macroeconomics",
+      "Mathematics for Economics (calculus, optimization)",
+      "Statistics & Probability",
+      "Economic History",
+      "Game Theory",
+      "Industrial Organization",
+      "Labor Economics",
+      "Causal Inference"
+    ],
+    "advancedSubjects": [
+      "Econometrics",
+      "Development Economics",
+      "International Trade Theory",
+      "Public Economics & Policy",
+      "Monetary Economics",
+      "Behavioral Economics"
+    ],
+    "toolsAndTechnologies": [
+      "Stata / R (econometrics and statistical modeling)",
+      "Excel (data analysis)",
+      "Python (increasingly used in applied economics)",
+      "SPSS",
+      "EViews (time series analysis)"
+    ],
+    "typicalProjects": [
+      "Run a regression analysis on household income and consumption data",
+      "Write a policy brief on the impact of minimum wage changes",
+      "Analyze Vietnam's trade data and identify structural patterns",
+      "Model the effect of a tax change on market equilibrium",
+      "Conduct a cost-benefit analysis of a public infrastructure investment"
+    ],
+    "requiredSkills": [
+      "Mathematical reasoning — especially optimization and statistical thinking",
+      "Ability to construct and test hypotheses with data",
+      "Clear academic writing and argumentation",
+      "Reading and synthesizing economic research (largely in English)",
+      "Comfort with abstract model-building before applying to real data"
+    ],
+    "suitableFor": [
+      "Students who enjoy understanding why markets and policies work the way they do",
+      "Those with mathematical aptitude who also want to engage with social and political questions",
+      "Students interested in research, policy, or data-driven advisory roles",
+      "Those considering graduate school or research careers"
+    ],
+    "notSuitableFor": [
+      "Students who dislike abstract mathematical modeling",
+      "Those who want a practical, immediately job-ready curriculum",
+      "Students who are not interested in reading dense English-language research"
+    ],
+    "keyTakeaways": [
+      "Modern economics requires quantitative skills — econometrics and data analysis are not optional",
+      "The degree is highly transferable: economists work in finance, government, tech, consulting, and research",
+      "Graduate school (Master's or PhD) significantly expands career options in research and policy",
+      "Econometrics skills (Stata, R, Python) make economics graduates competitive in data-heavy roles"
+    ],
+    "cautionNotes": [
+      "Economics theory can feel disconnected from immediate practical application — patience with abstraction is required",
+      "Programs in Vietnam vary significantly in rigor — some are more theory-heavy, others more applied",
+      "Graduates competing for finance or banking roles face strong competition from Finance & Banking majors"
+    ],
+    "careerPaths": [
+      "Economic Analyst (government / research)",
+      "Policy Analyst",
+      "Financial Analyst",
+      "Data Analyst (with quantitative economics skills)",
+      "Economist at central bank or ministry",
+      "Consultant (strategy / public policy)",
+      "Academic Researcher / PhD student"
+    ],
+    "marketDemand": "Moderate in Vietnam for pure economics roles. Higher demand for graduates who combine economics with quantitative or digital skills. Government and financial sector are the largest hirers.",
+    "salaryOutlook": "Entry-level government or research roles earn 8–15M VND/month. Private sector roles (banking, consulting, data) earn 15–30M. Senior economists and policy advisors at top institutions earn significantly more.",
+    "futureTrend": "Computational economics and data-driven policy analysis are growing. Economists with Python/R and causal inference skills are increasingly valued in tech companies and financial institutions.",
+    "commonMisconceptions": [
+      "Economics is about the stock market — most economics is about broader resource allocation, policy, and market theory, not just financial markets",
+      "Economics is purely theoretical — applied and behavioral economics are highly data-driven fields",
+      "You need to study economics to understand business — business decisions draw on economics but the two degrees have different emphases"
+    ],
+    "relatedMajors": [
+      {
+        "major": "Finance & Banking",
+        "relationship": "similar"
+      },
+      {
+        "major": "Business Administration",
+        "relationship": "similar"
+      },
+      {
+        "major": "Data Science",
+        "relationship": "similar"
+      },
+      {
+        "major": "Mathematics & Statistics",
+        "relationship": "foundation"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Economics better than Finance & Banking for a career in banking?",
+        "answer": "Finance & Banking is more directly job-ready for commercial banking roles. Economics provides a stronger theoretical and quantitative foundation, which is better for research, central banking, or roles requiring macroeconomic analysis. For corporate banking and credit roles, Finance is more practical; for policy or research roles, Economics is stronger."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2025-01"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2025-01-01"
+  }

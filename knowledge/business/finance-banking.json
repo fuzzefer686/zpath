@@ -1,0 +1,157 @@
+{
+    "majorId": "finance-general-001",
+    "canonicalName": "Finance & Banking",
+    "aliases": [
+      "Tài chính ngân hàng",
+      "TCNH",
+      "Finance",
+      "Banking & Finance"
+    ],
+    "category": "Business & Economics",
+    "tags": [
+      "finance",
+      "banking",
+      "investment",
+      "risk",
+      "capital markets",
+      "quantitative"
+    ],
+    "searchKeywords": [
+      "tài chính ngân hàng",
+      "TCNH",
+      "finance",
+      "ngân hàng",
+      "đầu tư",
+      "chứng khoán",
+      "tín dụng",
+      "fintech"
+    ],
+    "scope": "general",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A discipline focused on managing money, credit, investments, and financial risk for individuals, businesses, and institutions.",
+    "overview": "Finance & Banking covers how money flows through the economy — from personal financial planning to corporate finance, credit analysis, investment, and banking operations. In Vietnam, this major leads to careers in commercial banks, securities companies, insurance, and increasingly fintech. The program is more quantitative than general Business Administration but less mathematically intense than Economics or Statistics. Excel proficiency and analytical skills are essential. The major has two common tracks: banking operations and financial markets/investment.",
+    "difficultyLevel": 3,
+    "mathIntensity": 4,
+    "codingIntensity": 1,
+    "englishIntensity": 3,
+    "foundationSubjects": [
+      "Principles of Finance",
+      "Macroeconomics & Microeconomics",
+      "Financial Accounting",
+      "Money & Banking",
+      "Business Mathematics & Statistics"
+    ],
+    "advancedSubjects": [
+      "Corporate Finance",
+      "Investment Analysis & Portfolio Management",
+      "Commercial Banking Operations",
+      "Credit Analysis & Lending",
+      "Derivatives & Risk Management",
+      "Financial Modeling"
+    ],
+    "toolsAndTechnologies": [
+      "Excel (financial modeling, DCF, scenario analysis)",
+      "Bloomberg Terminal (at universities with access)",
+      "Power BI / Tableau (for financial analytics)",
+      "Python (increasingly for financial data analysis)",
+      "Banking core systems (familiarity required for bank roles)"
+    ],
+    "typicalProjects": [
+      "Build a DCF valuation model for a listed company",
+      "Analyze the credit risk of a corporate borrower",
+      "Construct and backtest a basic stock portfolio",
+      "Write a credit appraisal report for a loan application",
+      "Analyze a company's financial statements and write an investment thesis"
+    ],
+    "requiredSkills": [
+      "Quantitative reasoning and financial numeracy",
+      "Excel proficiency for financial modeling",
+      "Ability to read and interpret financial statements",
+      "Risk-awareness and attention to accuracy — errors in finance have consequences",
+      "Communication skills for presenting analysis and recommendations"
+    ],
+    "suitableFor": [
+      "Students who enjoy working with numbers in a business context",
+      "Those interested in banking, investment, or the financial sector",
+      "Students who are detail-oriented and careful with data accuracy",
+      "Those who want a structured career with clear progression paths"
+    ],
+    "notSuitableFor": [
+      "Students who dislike numerical work and spreadsheets",
+      "Those who want a creative or highly independent work environment",
+      "Students who are uncomfortable with risk and uncertainty (financial markets involve both)"
+    ],
+    "keyTakeaways": [
+      "Excel and financial modeling skills are non-negotiable for most finance roles",
+      "The investment/securities track (stocks, bonds, analysis) is very different from the commercial banking track",
+      "CFA certification is a significant career differentiator for those in investment-related roles",
+      "Fintech is creating new hybrid roles that combine finance knowledge with technology"
+    ],
+    "cautionNotes": [
+      "Banking entry-level roles in Vietnam can be target-heavy and high-pressure",
+      "Not all Finance & Banking programs are equally rigorous — look for programs with strong quantitative and modeling components",
+      "The career path in commercial banking can feel slow-moving compared to investment or fintech roles"
+    ],
+    "careerPaths": [
+      "Credit Analyst",
+      "Relationship Manager (Banking)",
+      "Financial Analyst",
+      "Investment Analyst",
+      "Risk Analyst",
+      "Fintech Product Specialist",
+      "Fund Manager (senior path)",
+      "Financial Controller",
+      "Corporate Finance Analyst",
+"Treasury Analyst",
+"Investment Banking Analyst",
+"Financial Planning & Analysis (FP&A) Analyst",
+"Wealth Manager"
+    ],
+    "marketDemand": "Steady in Vietnam. Commercial banking hires large numbers each year. Investment and fintech roles are growing but more selective. Insurance and securities sectors also hire finance graduates.",
+    "salaryOutlook": "Generally above average compared to many business majors, especially in investment, corporate finance, and risk management roles.",    "futureTrend": "Fintech, digital banking, and AI-powered credit assessment are changing traditional banking roles. Finance graduates with data skills (Python, SQL) and knowledge of digital financial products will be more competitive.",
+    "commonMisconceptions": [
+        "Finance & Banking is only about working at banks",
+        "Finance graduates mainly buy and sell stocks",
+      "Finance & Banking means you will work as a bank teller — most graduates work in credit, analysis, or business banking, not retail counter service",
+      "You need to love the stock market to study finance — the most common roles are in credit and commercial banking, not investment",
+      "Finance is only about money management — it covers risk, regulation, and increasingly technology"
+    ],
+    "relatedMajors": [
+      {
+        "major": "Accounting",
+        "relationship": "similar"
+      },
+      {
+        "major": "Economics",
+        "relationship": "foundation"
+      },
+      {
+        "major": "Business Administration",
+        "relationship": "similar"
+      },
+      {
+        "major": "Data Science",
+        "relationship": "similar"
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the difference between Finance and Accounting?",
+        "answer": "Accounting focuses on recording, classifying, and reporting financial transactions. Finance focuses on analyzing, planning, and managing money to create value. Accountants look backward (what happened); finance analysts look forward (what should we do). Both require numerical aptitude but finance is more forward-looking and investment-oriented."
+      },
+      {
+        "question": "Do I need to be good at math to study Finance?",
+        "answer": "You need to be comfortable with numbers, statistics, and financial calculations, but the mathematical rigor is generally lower than in Economics, Data Science, or AI."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-06-23"
+  }

@@ -1,0 +1,154 @@
+{
+    "majorId": "ba-general-001",
+    "canonicalName": "Business Administration",
+    "aliases": [
+      "Quản trị kinh doanh",
+      "QTKD",
+      "Business Management",
+      "BBA"
+    ],
+    "category": "Business & Management",
+    "tags": [
+      "management",
+      "strategy",
+      "operations",
+      "leadership",
+      "generalist",
+      "entrepreneurship"
+    ],
+    "searchKeywords": [
+      "quản trị kinh doanh",
+      "QTKD",
+      "business administration",
+      "quản lý doanh nghiệp",
+      "kinh doanh",
+      "MBA",
+      "quản trị"
+    ],
+    "scope": "general",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A broad management degree covering strategy, operations, human resources, marketing, and finance — designed to prepare graduates for leadership roles across all types of organizations.",
+    "overview": "Business Administration is the widest-scope business major, touching every core function of a company: strategy, marketing, operations, HR, accounting, and finance. It does not go as deep as specialized majors (Finance, Marketing, HR) but provides a comprehensive view of how businesses work holistically. In Vietnam, QTKD is one of the most common degrees and produces graduates who go into roles across virtually every industry. Its breadth makes it flexible but also means self-directed specialization is important after graduation.",
+    "difficultyLevel": 2,
+    "mathIntensity": 2,
+    "codingIntensity": 1,
+    "englishIntensity": 3,
+    "foundationSubjects": [
+      "Principles of Management",
+      "Microeconomics & Macroeconomics",
+      "Financial Accounting",
+      "Marketing Fundamentals",
+      "Organizational Behavior",
+      "Business Analytics"
+    ],
+    "advancedSubjects": [
+      "Strategic Management",
+      "Operations Management",
+      "Corporate Finance",
+      "Business Law",
+      "Entrepreneurship & Innovation",
+      "International Business"
+    ],
+    "toolsAndTechnologies": [
+      "Excel (business modeling, reporting)",
+      "PowerPoint (strategy presentations)",
+      "Basic CRM tools (Salesforce overview)",
+      "Project management tools (Trello, Asana)",
+      "ERP systems (introductory level)"
+    ],
+    "typicalProjects": [
+      "Write a business plan for a startup concept",
+      "Conduct a SWOT and competitive analysis for a real company",
+      "Develop a go-to-market strategy for a new product",
+      "Analyze an operations bottleneck and recommend improvements",
+      "Present a strategic recommendation to a simulated board"
+    ],
+    "requiredSkills": [
+      "Leadership and team coordination",
+      "Structured problem-solving and business reasoning",
+      "Communication — written reports and verbal presentations",
+      "Comfort with ambiguity and incomplete information",
+      "Ability to learn quickly across multiple functional areas"
+    ],
+    "suitableFor": [
+      "Students who want to run or manage businesses, not just one functional area",
+      "Those who are interested in entrepreneurship or family business succession",
+      "Students who prefer variety across marketing, operations, finance, and people management",
+      "Those who want maximum flexibility in career options after graduation"
+    ],
+    "notSuitableFor": [
+      "Students who want deep technical or specialized expertise from day one",
+      "Those who dislike ambiguous, people-heavy work environments",
+      "Students who need a clear, defined skill output from their degree"
+    ],
+    "keyTakeaways": [
+      "QTKD is a generalist degree — value comes from how you specialize afterward, not from the degree name alone",
+      "The most successful QTKD graduates combine the degree with real internship experience and a chosen specialization",
+      "The degree is widely available and very common in Vietnam — standing out requires more than just the diploma",
+      "An MBA later in career significantly amplifies a QTKD foundation"
+    ],
+    "cautionNotes": [
+      "QTKD is one of the most common majors in Vietnam — job market competition at entry level is high",
+      "Without a specialization or strong internship record, graduates often struggle to differentiate themselves",
+      "The broad curriculum means some programs cover many topics superficially"
+    ],
+    "careerPaths": [
+      "Business Development Executive",
+      "Sales Manager",
+      "Operations Coordinator",
+      "Project Manager",
+      "Entrepreneur / Business Owner",
+      "General Manager (senior path)",
+      "Management Consultant"
+    ],
+    "marketDemand": "High volume, high competition. QTKD graduates are hired everywhere but the sheer number of graduates means employers increasingly look for specialization, English proficiency, and internship experience.",
+    "salaryOutlook": "Entry-level roles earn 8–15M VND/month. Management positions with 3–5 years of experience earn 20–40M. Senior managers and directors at large companies earn significantly more. Salary varies more by industry and company than by major.",
+    "futureTrend": "Business generalists are being supplemented by AI tools for analysis and reporting. QTKD graduates who combine management skills with digital literacy (data analytics, digital marketing, automation) are more competitive than pure generalists.",
+    "commonMisconceptions": [
+      "QTKD is an easy backup major — strong programs are genuinely demanding in strategy, finance, and operations",
+      "QTKD leads directly to a management role — most graduates start in junior individual contributor positions before progressing to management",
+      "A QTKD degree alone is enough to start a successful business — entrepreneurship requires skills the degree introduces but does not fully develop"
+    ],
+    "relatedMajors": [
+      {
+        "major": "Marketing",
+        "relationship": "specialization"
+      },
+      {
+        "major": "Finance & Banking",
+        "relationship": "specialization"
+      },
+      {
+        "major": "Human Resource Management",
+        "relationship": "specialization"
+      },
+      {
+        "major": "Economics",
+        "relationship": "foundation"
+      },
+      {
+        "major": "International Business",
+        "relationship": "similar"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is QTKD a good major for starting a business?",
+        "answer": "It provides useful foundational knowledge — business planning, marketing, operations, basic finance. However, entrepreneurship is mostly learned by doing. QTKD gives you a map, not the territory. Real experience, mentorship, and industry knowledge matter more than the degree for startup success."
+      },
+      {
+        "question": "Should I choose QTKD or a specialized business major?",
+        "answer": "If you already know which function interests you (marketing, finance, HR), study that directly — you will go deeper faster. Choose QTKD if you are genuinely undecided or want to run a business holistically. The caveat: specialize quickly after year two regardless of which path you choose."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-06-23"
+  }

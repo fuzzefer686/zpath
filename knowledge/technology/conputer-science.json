@@ -1,0 +1,157 @@
+{
+    "majorId": "cs-general-001",
+    "canonicalName": "Computer Science",
+    "aliases": [
+      "Khoa học máy tính",
+      "KHMT",
+      "CS"
+    ],
+    "category": "Technology & Computing",
+    "tags": [
+      "theory",
+      "algorithms",
+      "mathematics",
+      "computing",
+      "research",
+      "foundation"
+    ],
+    "searchKeywords": [
+      "khoa học máy tính",
+      "computer science",
+      "KHMT",
+      "CS",
+      "giải thuật",
+      "lý thuyết tính toán"
+    ],
+    "scope": "general",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "The theoretical and mathematical foundation of computing, covering algorithms, data structures, computation theory, and the science behind how software and hardware work.",
+    "overview": "Computer Science is the most academically rigorous technology major. It covers the mathematical and theoretical underpinnings of computing: algorithm design and analysis, computational complexity, operating systems, compiler design, and formal methods. It is the closest to a pure science degree in the technology field. Graduates have the strongest foundation for roles in research, systems programming, or fields requiring deep algorithmic thinking like AI and cryptography.",
+    "difficultyLevel": 5,
+    "mathIntensity": 5,
+    "codingIntensity": 5,
+    "englishIntensity": 4,
+    "foundationSubjects": [
+      "Discrete Mathematics",
+      "Algorithms & Data Structures",
+      "Computer Architecture",
+      "Operating Systems",
+      "Theory of Computation"
+    ],
+    "advancedSubjects": [
+      "Compiler Design",
+      "Distributed Systems",
+      "Cryptography",
+      "Parallel Computing",
+      "Advanced Algorithms",
+      "Computer Graphics",
+      "Machine Learning",
+      "Database Systems"
+    ],
+    "toolsAndTechnologies": [
+      "C / C++",
+      "Python",
+      "Assembly (basic)",
+      "Git",
+      "Linux / Unix",
+      "LaTeX (for research writing)"
+    ],
+    "typicalProjects": [
+      "Implement a sorting algorithm library with complexity analysis",
+      "Build a simple interpreter or compiler for a toy language",
+      "Implement core OS components (scheduler, memory allocator)",
+      "Solve competitive programming problems (Codeforces, LeetCode hard)",
+      "Research and implement a paper on a specific algorithm"
+    ],
+    "requiredSkills": [
+      "Mathematical proof writing and abstract thinking",
+      "Deep algorithmic intuition",
+      "Ability to analyze time and space complexity rigorously",
+      "Strong English for reading research papers and documentation",
+      "Patience with abstract, non-immediately-practical coursework"
+    ],
+    "suitableFor": [
+      "Students who enjoy abstract problem-solving and mathematical reasoning",
+      "Those interested in research, academia, or deep technical work",
+      "Students who want the strongest possible foundation for AI, systems, or cryptography",
+      "Competitive programmers who want to formalize their skills"
+    ],
+    "notSuitableFor": [
+      "Students who want to build products quickly and see immediate results",
+      "Those who dislike formal mathematics and proof-based thinking",
+      "Students who want a curriculum closely tied to current industry tools and frameworks"
+    ],
+    "keyTakeaways": [
+      "CS provides the most transferable foundation — graduates can enter almost any technical field",
+      "The curriculum is often disconnected from day-to-day industry work, requiring additional self-study",
+      "CS graduates are highly competitive at top tech companies (FAANG-style interviews heavily test CS fundamentals)",
+      "Strong CS knowledge significantly accelerates learning in AI and systems engineering"
+    ],
+    "cautionNotes": [
+      "CS programs vary widely — some are very theory-heavy with minimal industry preparation",
+      "Graduates often need to supplement with practical projects and internships",
+      "The 'best major for FAANG' reputation attracts students who may not enjoy the actual curriculum"
+    ],
+    "careerPaths": [
+      "Software Engineer (all tracks)",
+      "Research Scientist",
+      "Systems Engineer",
+      "Algorithm Engineer",
+      "Cryptography Engineer",
+      "Academic / Researcher",
+      "Machine Learning Engineer",
+      "Backend Engineer",
+        "Distributed Systems Engineer"
+    ],
+    "marketDemand": "Very high for graduates with strong fundamentals. CS graduates are preferred by top-tier tech companies for their rigorous training.",
+    "salaryOutlook": "Similar to Software Engineering at entry level. CS graduates with strong algorithmic skills can command premium salaries at top tech firms. Research roles are more varied.",
+    "futureTrend": "Strong fundamentals remain invaluable as AI tools automate surface-level coding. CS graduates are well-positioned for emerging areas like quantum computing, cryptography, and AI research.",
+    "commonMisconceptions": [
+    "Computer Science is only about programming",
+      "CS is the same as Software Engineering — CS is more theoretical and academic",
+      "CS graduates mainly become programmers — many go into research, data science, or non-traditional tech roles",
+      "You need to be a genius to study CS — strong work ethic and mathematical curiosity matter more than innate talent"
+    ],
+    "relatedMajors": [
+        {
+          "major": "Software Engineering",
+          "relationship": "similar"
+        },
+        {
+          "major": "Information Technology",
+          "relationship": "similar"
+        },
+        {
+          "major": "Mathematics",
+          "relationship": "foundation"
+        },
+        {
+          "major": "Artificial Intelligence",
+          "relationship": "specialization"
+        },
+        {
+          "major": "Data Science",
+          "relationship": "specialization"
+        },
+        {
+          "major": "Cybersecurity",
+          "relationship": "specialization"
+        }
+      ],
+    "faq": [
+      {
+        "question": "Is Computer Science harder than Software Engineering?",
+        "answer": "Generally yes, especially in terms of mathematical rigor and theoretical content. SE focuses on building software; CS focuses on understanding how computing fundamentally works."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-06-23"
+  }

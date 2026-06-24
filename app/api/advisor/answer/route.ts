@@ -15,6 +15,11 @@ import {
 } from "@/lib/advisor/gemini";
 import { AdvisorIntent } from "@/lib/advisor/intents";
 import {
+  classifyMajorKnowledgeIntentWithGemini,
+  mapMajorKnowledgeIntentToAdvisorIntent,
+} from "@/lib/advisor/majorKnowledgeClassifier";
+import { buildMajorKnowledgeContext } from "@/lib/advisor/majorKnowledge";
+import {
   buildAdvisorPromptSources,
   type AdvisorPromptSource,
 } from "@/lib/advisor/prompts";
@@ -158,6 +163,7 @@ function getPersonalFitSignalIds(
   classification: AdvisorClassification,
 ) {
   const signals = new Set<string>();
+  const pref = classification.extracted.preferenceSignals;
 
   if (classification.extracted.interests?.length || classification.interests?.length) {
     signals.add("interests");
@@ -176,8 +182,14 @@ function getPersonalFitSignalIds(
     matchesAnyPattern(question, [
       /\b(mạnh|manh|giỏi|gioi|học tốt|hoc tot|khá|kha|kỹ năng|ky nang)\b/iu,
       /\b(toán|toan|văn|van|anh|tiếng anh|tieng anh|lý|ly|hóa|hoa|sinh)\b/iu,
+      /\b(giao tiếp|giao tiep|viết lách|viet lach|thuyết trình|thuyet trinh|sáng tạo|sang tao)\b/iu,
     ])
   ) {
+    signals.add("strengths");
+  }
+
+  // If preferenceSignals already encode high communication/writing preference, treat as strengths provided
+  if (pref?.communicationPreference === "high" || pref?.writingPreference === "high") {
     signals.add("strengths");
   }
 
@@ -199,6 +211,18 @@ function getPersonalFitSignalIds(
     ])
   ) {
     signals.add("priority");
+  }
+
+  // Detect explicit dislikes/aversions as the "dislikes" clarification field
+  if (
+    matchesAnyPattern(question, [
+      /\b(không thích|khong thich|không muốn|khong muon|không thể|khong the)\b/iu,
+      /\b(ngại|ngai|sợ|so)\s+\S/iu,
+    ]) ||
+    pref?.codingTolerance === "low" ||
+    pref?.mathTolerance === "low"
+  ) {
+    signals.add("dislikes");
   }
 
   return signals;
@@ -424,10 +448,12 @@ async function getInternalContextForAdvisor({
   intent,
   extracted,
   message,
+  majorKnowledgeMatchedMajors = [],
 }: {
   intent: AdvisorIntent;
   extracted: ExtractedAdvisorEntities;
   message: string;
+  majorKnowledgeMatchedMajors?: string[];
 }) {
   const schoolName = extracted.schoolName;
   const schoolCode = extracted.schoolCode;
@@ -437,7 +463,29 @@ async function getInternalContextForAdvisor({
   const verifiedProgram = getVerifiedProgramContext(extracted);
 
   switch (intent) {
-    case AdvisorIntent.REVIEW_MAJOR:
+    case AdvisorIntent.REVIEW_MAJOR: {
+      const matchedMajors = [
+        ...majorKnowledgeMatchedMajors,
+        majorName,
+        programCode,
+      ].filter((value): value is string => Boolean(value));
+      return {
+        verifiedProgram,
+        advisorMajorKnowledge: buildMajorKnowledgeContext({
+          intent,
+          matchedMajors: matchedMajors.length ? matchedMajors : [message],
+          secondaryIntent: AdvisorIntent.PERSONAL_FIT,
+          decisionQuestion: message,
+          studentPreferenceSignals: extracted.preferenceSignals,
+        }),
+        majorProfile: majorName
+          ? await getMajorProfile({ majorName, programCode, schoolName, schoolCode })
+          : programCode
+            ? await getMajorProfile({ programCode, schoolName, schoolCode })
+          : await searchMajors(message),
+      };
+    }
+
     case AdvisorIntent.CAREER_PATH:
     case AdvisorIntent.STUDY_PLAN:
       return {
@@ -449,9 +497,21 @@ async function getInternalContextForAdvisor({
           : await searchMajors(message),
       };
 
-    case AdvisorIntent.COMPARE_MAJORS:
+    case AdvisorIntent.COMPARE_MAJORS: {
+      const matchedMajors = [
+        ...majorKnowledgeMatchedMajors,
+        extracted.majorA,
+        extracted.majorB,
+      ].filter((value): value is string => Boolean(value));
       return {
         verifiedProgram,
+        advisorMajorKnowledge: buildMajorKnowledgeContext({
+          intent,
+          matchedMajors: matchedMajors.length ? matchedMajors : [message],
+          secondaryIntent: AdvisorIntent.PERSONAL_FIT,
+          decisionQuestion: message,
+          studentPreferenceSignals: extracted.preferenceSignals,
+        }),
         majorA: extracted.majorA
           ? await getMajorProfile({
               majorName: extracted.majorA,
@@ -489,6 +549,7 @@ async function getInternalContextForAdvisor({
               })
             : undefined,
       };
+    }
 
     case AdvisorIntent.COMPARE_SCHOOLS:
       return {
@@ -562,6 +623,18 @@ async function getInternalContextForAdvisor({
       };
 
     case AdvisorIntent.PERSONAL_FIT:
+      return {
+        verifiedProgram,
+        advisorMajorKnowledge: buildMajorKnowledgeContext({
+          intent,
+          matchedMajors: majorKnowledgeMatchedMajors,
+          decisionQuestion: message,
+          studentPreferenceSignals: extracted.preferenceSignals,
+          categoryKeywords: extracted.interests,
+        }),
+        majors: await searchMajors(message),
+      };
+
     case AdvisorIntent.GENERAL_ADVICE:
     case AdvisorIntent.UNKNOWN:
     default:
@@ -987,6 +1060,7 @@ export async function POST(request: Request) {
     let fields: AdvisorTemplateValues | undefined;
     let intent: AdvisorIntent;
     let classification: AdvisorClassification | undefined;
+    let majorKnowledgeClassification: Awaited<ReturnType<typeof classifyMajorKnowledgeIntentWithGemini>> | undefined;
     let extracted: ExtractedAdvisorEntities;
 
     if (requestData.mode === "template") {
@@ -1028,8 +1102,27 @@ export async function POST(request: Request) {
     } else if (requestData.mode === "free_text") {
       question = requestData.message;
       classification = classifyAdvisorQuestion(question);
-      intent = classification.intent;
+      try {
+        majorKnowledgeClassification = await classifyMajorKnowledgeIntentWithGemini(question);
+      } catch (error) {
+        console.warn("Advisor major knowledge intent classification failed:", error);
+      }
+      intent = majorKnowledgeClassification
+        ? mapMajorKnowledgeIntentToAdvisorIntent(
+            majorKnowledgeClassification.intent,
+            classification.intent,
+          )
+        : classification.intent;
       extracted = classification.extracted;
+      if (majorKnowledgeClassification?.matchedMajors.length) {
+        if (intent === AdvisorIntent.REVIEW_MAJOR && !extracted.majorName) {
+          extracted.majorName = majorKnowledgeClassification.matchedMajors[0];
+        }
+        if (intent === AdvisorIntent.COMPARE_MAJORS) {
+          extracted.majorA ??= majorKnowledgeClassification.matchedMajors[0];
+          extracted.majorB ??= majorKnowledgeClassification.matchedMajors[1];
+        }
+      }
     } else {
       question = buildClarifiedQuestion({
         originalQuestion: requestData.originalQuestion,
@@ -1090,6 +1183,7 @@ export async function POST(request: Request) {
                 usedWebSearch: false,
                 intent: AdvisorIntent.PERSONAL_FIT,
                 extracted,
+                majorKnowledgeClassification,
                 webSearchProvider: getAdvisorWebSearchProvider(),
                 webSearchResultCount: 0,
                 internalResultCount: 0,
@@ -1117,6 +1211,7 @@ export async function POST(request: Request) {
                 usedWebSearch: false,
                 intent,
                 extracted,
+                majorKnowledgeClassification,
                 webSearchProvider: getAdvisorWebSearchProvider(),
                 webSearchResultCount: 0,
                 internalResultCount: 0,
@@ -1137,6 +1232,7 @@ export async function POST(request: Request) {
         intent,
         extracted,
         message: question,
+        majorKnowledgeMatchedMajors: majorKnowledgeClassification?.matchedMajors,
       });
     } catch (error) {
       console.warn("Advisor internal retrieval failed:", error);
@@ -1284,6 +1380,7 @@ export async function POST(request: Request) {
               usedWebSearch: webSearch.searchAttempted,
               intent,
               extracted,
+              majorKnowledgeClassification,
               webSearchProvider: webSearch.provider,
               webSearchResultCount: webSearch.results.length,
               internalResultCount: countInternalResults(internalContext),

@@ -1,0 +1,149 @@
+{
+    "majorId": "accounting-general-001",
+    "canonicalName": "Accounting",
+    "aliases": [
+      "Kế toán",
+      "Kế toán kiểm toán",
+      "Accounting & Auditing"
+    ],
+    "category": "Business & Economics",
+    "tags": [
+      "accounting",
+      "auditing",
+      "tax",
+      "financial reporting",
+      "compliance",
+      "detail-oriented"
+    ],
+    "searchKeywords": [
+      "kế toán",
+      "accounting",
+      "kiểm toán",
+      "auditing",
+      "thuế",
+      "báo cáo tài chính",
+      "ACCA",
+      "kế toán doanh nghiệp"
+    ],
+    "scope": "country_specific",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A discipline focused on recording, classifying, summarizing, and reporting financial transactions to support decision-making and legal compliance.",
+    "overview": "Accounting covers the systematic recording and reporting of a business's financial activities. Students learn Vietnamese and international accounting standards (VAS, IFRS), tax law, auditing, and financial statement preparation. It is a highly structured discipline with clear rules and standards. The work requires precision, attention to detail, and comfort with regulatory frameworks. In Vietnam, every business must comply with accounting and tax laws, creating stable demand for accounting professionals.",
+    "difficultyLevel": 3,
+    "mathIntensity": 2,
+    "codingIntensity": 1,
+    "englishIntensity": 4,
+    "foundationSubjects": [
+      "Financial Accounting (principles & VAS)",
+      "Managerial Accounting",
+      "Vietnamese Tax Law",
+      "Business Law",
+      "Economics"
+    ],
+    "advancedSubjects": [
+      "Advanced Financial Accounting (IFRS)",
+      "Auditing & Assurance",
+      "Corporate Taxation",
+      "Cost Accounting",
+      "Accounting Information Systems",
+      "Forensic Accounting"
+    ],
+    "toolsAndTechnologies": [
+      "MISA (Vietnam's most common accounting software)",
+      "SAP / Oracle (for large enterprises)",
+      "Excel (pivot tables, VLOOKUP, basic macros)",
+      "Fast Accounting",
+      "BRAVO ERP"
+    ],
+    "typicalProjects": [
+      "Prepare a full set of financial statements (balance sheet, P&L, cash flow)",
+      "Conduct a tax finalization report for a company",
+      "Perform an internal audit of purchasing and payables",
+      "Reconcile accounts and identify discrepancies in a trial balance",
+      "Analyze cost structures for a manufacturing company"
+    ],
+    "requiredSkills": [
+      "Extreme attention to detail and accuracy",
+      "Understanding and application of accounting standards and tax regulations",
+      "Excel proficiency for data reconciliation and reporting",
+      "Patience with repetitive, rule-bound work",
+      "Integrity — accountants handle sensitive financial information"
+    ],
+    "suitableFor": [
+      "Students who are detail-oriented and systematic",
+      "Those who prefer clearly defined rules and standards over ambiguity",
+      "Students who want a stable career with consistent demand",
+      "People who can handle repetitive but precise work without becoming careless"
+    ],
+    "notSuitableFor": [
+      "Students who need frequent variety and creative challenges",
+      "Those who are careless with details or dislike checking their work",
+      "Students who want to avoid regulatory and compliance work"
+    ],
+    "keyTakeaways": [
+      "Demand for accountants is stable and consistent regardless of economic conditions",
+      "Professional certifications (ACCA, CPA Vietnam) significantly increase earning potential",
+      "Accounting software skills (MISA, SAP) matter as much as theoretical knowledge for employers",
+      "The move from junior accountant to chief accountant is the standard career ladder — it takes years"
+    ],
+    "cautionNotes": [
+      "Accounting is not the same as finance — accountants focus on compliance and reporting, not investment analysis",
+      "Tax law in Vietnam changes frequently — continuous learning is required throughout a career",
+      "Entry-level salaries are relatively low; significant earnings come with experience and certification"
+    ],
+    "careerPaths": [
+      "Staff Accountant / Junior Accountant",
+      "Tax Accountant",
+      "Internal Auditor",
+      "External Auditor (Big 4 or mid-tier firms)",
+      "Chief Accountant (Kế toán trưởng)",
+      "Financial Controller",
+      "CFO (senior leadership path)"
+    ],
+    "marketDemand": "Consistently high in Vietnam. Every company with more than a certain revenue threshold is legally required to have a qualified accountant. Big 4 audit firms (Deloitte, PwC, EY, KPMG) hire accounting graduates at scale.",
+    "salaryOutlook": "Entry-level accountants earn 8–12M VND/month. Chief accountants at SMEs earn 20–40M. Audit seniors at Big 4 firms progress faster. Certified accountants (ACCA, CPA) command premiums.",
+    "futureTrend": "Automation is replacing routine data entry and reconciliation. The role is shifting toward analysis, advisory, and compliance interpretation. Accountants who combine regulatory knowledge with data skills (Excel, ERP, basic SQL) are better positioned.",
+    "commonMisconceptions": [
+      "Accounting and finance are the same — accounting focuses on compliance and recording; finance focuses on planning and value creation",
+      "Accounting is easy because it is just adding and subtracting — it involves complex regulatory interpretation and professional judgment",
+      "AI will fully replace accountants — automation handles routine tasks but complex judgment, advisory, and compliance interpretation still require humans"
+    ],
+    "relatedMajors": [
+      {
+        "major": "Finance & Banking",
+        "relationship": "similar"
+      },
+      {
+        "major": "Business Administration",
+        "relationship": "foundation"
+      },
+      {
+        "major": "Economics",
+        "relationship": "foundation"
+      },
+      {
+        "major": "Law",
+        "relationship": "similar"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Should I study Accounting or Finance & Banking?",
+        "answer": "Choose Accounting if you prefer structured, rule-based work involving financial recording, tax, and compliance. Choose Finance & Banking if you prefer analysis, investment, and working with financial markets. Accounting offers more stable and predictable career paths; Finance offers higher upside in investment-related roles."
+      },
+      {
+        "question": "Is Accounting mostly about math?",
+        "answer": "Not really. Accounting requires accuracy and logical consistency more than advanced mathematics. Understanding accounting standards and regulations is often more important than solving complex equations."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-06-23"
+  }

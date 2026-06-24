@@ -1,0 +1,159 @@
+{
+    "majorId": "it-general-001",
+    "canonicalName": "Information Technology",
+    "aliases": [
+      "CNTT",
+      "Công nghệ thông tin",
+      "IT"
+    ],
+    "category": "Technology & Computing",
+    "tags": [
+      "broad",
+      "systems",
+      "networking",
+      "software",
+      "infrastructure",
+      "generalist"
+    ],
+    "searchKeywords": [
+      "CNTT",
+      "công nghệ thông tin",
+      "IT",
+      "information technology",
+      "hệ thống thông tin",
+      "lập trình"
+    ],
+    "scope": "country_specific",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A broad technology major covering software development, networking, systems administration, databases, and IT management.",
+    "overview": "Information Technology in Vietnam is typically the broadest technology major, covering a range of areas without deep specialization. Students touch on programming, networking, databases, web development, and sometimes project management. The program is designed to produce versatile graduates who can adapt to various IT roles. It is generally considered less mathematically intensive than Computer Science or AI, making it accessible to a wider range of students.",
+    "difficultyLevel": 3,
+    "mathIntensity": 3,
+    "codingIntensity": 4,
+    "englishIntensity": 3,
+    "foundationSubjects": [
+      "Introduction to Programming (C/C++ or Python)",
+      "Computer Networks",
+      "Databases (SQL)",
+      "Operating Systems",
+      "Web Development Basics",
+      "Data Structures & Algorithms"
+    ],
+    "advancedSubjects": [
+      "Software Development (varies by track)",
+      "Network Administration",
+      "Information Security Basics",
+      "Systems Analysis & Design",
+      "Cloud Computing Fundamentals"
+    ],
+    "toolsAndTechnologies": [
+      "HTML/CSS/JavaScript",
+      "Python or Java",
+      "MySQL/PostgreSQL",
+      "Linux",
+      "Cisco networking tools",
+      "Microsoft Office Suite",
+      "Git",
+      "Basic cloud (AWS/GCP)"
+    ],
+    "typicalProjects": [
+      "Build a basic web application (e.g., student management system)",
+      "Configure a local area network for a small office",
+      "Design a database schema for a business use case",
+      "Develop a simple mobile app",
+      "Set up a basic server and deploy a web service"
+    ],
+    "requiredSkills": [
+      "Basic logical thinking and problem-solving",
+      "Ability to learn new tools and frameworks independently",
+      "Basic English reading for technical documentation",
+      "Patience with debugging and troubleshooting"
+    ],
+    "suitableFor": [
+      "Students who want a broad technology education before specializing",
+      "Those who are not yet sure which specific tech field to enter",
+      "Students who want a practical, job-ready degree without heavy theoretical math",
+      "Those interested in IT support, system administration, or web development"
+    ],
+    "notSuitableFor": [
+      "Students who want deep specialization in AI, security, or software architecture from day one",
+      "Those who expect a rigorous computer science foundation (algorithms, theory)"
+    ],
+    "keyTakeaways": [
+      "CNTT is a starting point, not a destination — most graduates specialize further on the job",
+      "The quality of CNTT programs varies significantly across schools",
+      "Self-study and side projects matter more than the degree itself in the job market",
+      "Graduates compete with Software Engineering and Computer Science graduates for the same roles"
+    ],
+    "cautionNotes": [
+      "CNTT programs at different schools can be very different in content and rigor",
+      "The broad curriculum means students may not go deep enough in any one area without extra effort",
+      "Some employers prefer Computer Science or Software Engineering graduates for technical roles"
+    ],
+    "careerPaths": [
+      "Web Developer (Frontend/Backend)",
+      "IT Support Specialist",
+      "System Administrator",
+      "Database Administrator",
+      "Network Engineer",
+      "Business Analyst (IT)",
+      "Junior Software Developer",
+      "Software Developer",
+        "Backend Developer",
+        "Frontend Developer",
+        "QA Engineer",
+        "DevOps Engineer",
+        "Cloud Engineer"
+    ],
+    "marketDemand": "Steady demand across all industries. IT generalists are hired everywhere, though competition is high due to large graduate numbers each year.",
+    "salaryOutlook": "Entry-level IT roles in Vietnam earn 8-15M VND/month. Specialized roles (web dev, DevOps) can earn 15-25M+ at entry level. Salary grows significantly with specialization and experience.",
+    "futureTrend": "CNTT as a generic label is less differentiated in the job market. Graduates who specialize in cloud, DevOps, cybersecurity, or AI integration have stronger prospects than pure generalists.",
+    "commonMisconceptions": [
+      "CNTT and Software Engineering are the same — Software Engineering has a more rigorous engineering curriculum",
+      "CNTT guarantees a good-paying job immediately — entry-level salaries depend heavily on skills, not the degree name",
+      "All CNTT graduates can do AI work — most programs provide only introductory exposure to AI/ML",
+      "CNTT chỉ là sửa máy tính"
+    ],
+    "relatedMajors": [
+    {
+        "major": "Software Engineering",
+        "relationship": "similar"
+    },
+    {
+        "major": "Computer Science",
+        "relationship": "similar"
+    },
+    {
+        "major": "Information Systems",
+        "relationship": "similar"
+    },
+    {
+        "major": "Cybersecurity",
+        "relationship": "specialization"
+    },
+    {
+        "major": "Artificial Intelligence",
+        "relationship": "specialization"
+    },
+    {
+        "major": "Data Science",
+        "relationship": "specialization"
+    }
+    ],
+    "faq": [
+      {
+        "question": "Should I choose CNTT or Software Engineering?",
+        "answer": "If your school offers Software Engineering, it typically provides a more structured and rigorous curriculum for building software products. CNTT is broader and more flexible. If you know you want to be a software developer, Software Engineering is often the better choice."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-06-23"
+  }

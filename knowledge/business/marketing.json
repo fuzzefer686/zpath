@@ -1,0 +1,162 @@
+{
+    "majorId": "marketing-general-001",
+    "canonicalName": "Marketing",
+    "aliases": [
+      "Tiếp thị",
+      "Digital Marketing",
+      "Marketing & Truyền thông"
+    ],
+    "category": "Business & Management",
+    "tags": [
+      "marketing",
+      "branding",
+      "consumer behavior",
+      "communication",
+      "digital",
+      "creative"
+    ],
+    "searchKeywords": [
+      "marketing",
+      "tiếp thị",
+      "digital marketing",
+      "quảng cáo",
+      "brand",
+      "truyền thông",
+      "content",
+      "SEO",
+      "ads"
+    ],
+    "scope": "general",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A discipline focused on understanding customers, creating value propositions, and communicating them through channels that drive business growth.",
+    "overview": "Marketing covers the full cycle of bringing products and services to customers: market research, consumer psychology, brand building, advertising, digital channels, and performance measurement. Modern marketing is increasingly data-driven — students need both creative and analytical skills. It is less technical than IT fields but requires strong communication, creativity, and comfort with data and metrics. The line between marketing and product management is increasingly blurred in tech companies.",
+    "difficultyLevel": 3,
+    "mathIntensity": 2,
+    "codingIntensity": 1,
+    "englishIntensity": 4,
+    "foundationSubjects": [
+      "Principles of Marketing",
+      "Consumer Behavior",
+      "Market Research & Analytics",
+      "Communication & Copywriting",
+      "Business Statistics"
+    ],
+    "advancedSubjects": [
+      "Digital Marketing (SEO, SEM, Social Media)",
+      "Performance Marketing & Analytics",
+      "Brand Strategy",
+      "Content Marketing",
+      "Marketing Automation & CRM",
+      "E-commerce Marketing"
+    ],
+    "toolsAndTechnologies": [
+      "Google Analytics / GA4",
+      "Meta Ads Manager",
+      "Google Ads",
+      "Canva / Adobe Creative Suite",
+      "HubSpot / Mailchimp",
+      "Excel / Google Sheets (pivot tables, VLOOKUP)",
+      "SEMrush / Ahrefs",
+      "TikTok Ads Manager"
+    ],
+    "typicalProjects": [
+      "Design and run a Facebook/Google ad campaign with a real budget",
+      "Conduct consumer research and present insights for a product launch",
+      "Build a content calendar and execute a 3-month social media strategy",
+      "Perform an SEO audit and implement on-page optimizations",
+      "Analyze campaign performance data and optimize based on metrics"
+    ],
+    "requiredSkills": [
+      "Written and verbal communication — clear, persuasive, adapted to audience",
+      "Analytical thinking — ability to read data and make decisions from it",
+      "Creativity for content and campaign concepts",
+      "Understanding of customer psychology and buying behavior",
+      "Comfort with rapid changes in digital platforms and algorithms"
+    ],
+    "suitableFor": [
+      "Students who enjoy both creative work and analysis",
+      "Those who are naturally curious about why people buy things",
+      "People with strong communication skills who also like working with data",
+      "Students who want a business-oriented career with creative elements"
+    ],
+    "notSuitableFor": [
+      "Those who want purely creative work with no data or analysis component",
+      "Students who dislike public communication, writing, or presenting ideas",
+      "Those who expect stable, predictable day-to-day work — digital marketing changes constantly"
+    ],
+    "keyTakeaways": [
+      "Marketing is increasingly data-driven — avoiding analytics is not possible in modern roles",
+      "Digital marketing skills (paid ads, SEO, analytics) are more immediately employable than traditional marketing theory",
+      "Personal branding and a portfolio of real campaigns matter in job applications",
+      "The best marketers understand both the customer and the business model"
+    ],
+    "cautionNotes": [
+      "Many marketing graduates compete for the same entry-level roles — practical digital skills differentiate candidates",
+      "Creative roles (brand, content) are more competitive and often lower-paying than performance/data roles",
+      "The field changes rapidly — skills that matter today may be different in 3 years"
+    ],
+    "careerPaths": [
+      "Digital Marketing Specialist",
+      "Performance Marketing Manager",
+      "Content Marketing Specialist",
+      "Brand Manager",
+      "SEO/SEM Specialist",
+      "Marketing Analytics Manager",
+      "Product Marketing Manager",
+      "E-commerce Manager",
+      "CRM Specialist",
+        "Growth Marketer",
+        "Marketing Operations Specialist"
+    ],
+    "marketDemand": "High, especially for performance marketing and digital analytics roles. Brand and traditional marketing roles are more competitive with lower compensation at entry level.",
+    "salaryOutlook": "Entry-level marketing roles in Vietnam earn 8–15M VND/month. Performance marketing specialists with strong results can earn 20–35M. Senior brand managers or heads of marketing earn significantly more.",
+    "futureTrend": "AI tools are automating content creation and ad optimization, raising the bar for marketers. Those who combine data literacy with strategic thinking will have stronger long-term prospects than pure content creators.",
+    "commonMisconceptions": [
+        "Marketing is only for extroverts",
+      "Marketing is just making content and posting on social media — modern marketing is heavily data-driven",
+      "You need to be an extrovert to work in marketing — many roles like SEO, analytics, and CRM are independent and analytical",
+      "Marketing is easy compared to technical fields — performance marketing requires real analytical and statistical skills"
+    ],
+    "relatedMajors": [
+    {
+        "major": "Business Administration",
+        "relationship": "similar"
+    },
+    {
+        "major": "Communications & Media",
+        "relationship": "similar"
+    },
+    {
+        "major": "Economics",
+        "relationship": "foundation"
+    },
+    {
+        "major": "E-commerce",
+        "relationship": "specialization"
+    }
+    ],
+    "faq": [
+      {
+        "question": "Is a marketing degree necessary to work in digital marketing?",
+        "answer": "Not strictly — many digital marketing practitioners are self-taught or come from other fields. However, a degree provides foundational knowledge in consumer behavior, strategy, and business that pure self-study often misses."
+      },
+      {
+        "question": "Is Marketing mostly creative or analytical?",
+        "answer": "Modern marketing requires both. Creative ideas attract attention, but data determines whether campaigns actually work."
+      },
+      {
+        "question": "Do marketers need to be good at public speaking?",
+        "answer": "Not necessarily. Some roles involve presentations and client communication, while others such as SEO, CRM, or analytics are more independent and data-focused."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-07"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-07-23"
+  }
