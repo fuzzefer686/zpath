@@ -16,6 +16,12 @@ export type FeatureFlags = {
   mentor: {
     enabled: boolean;
   };
+  /** CV Builder — profile page, PDF export, AI tools. */
+  cvBuilder: {
+    enabled: boolean;
+    /** External CV API adapter. Keep false until DPA + cross-border consent done (§13). */
+    externalRenderer: boolean;
+  };
 };
 
 export const FEATURES: FeatureFlags = {
@@ -26,5 +32,9 @@ export const FEATURES: FeatureFlags = {
   },
   mentor: {
     enabled: true,
+  },
+  cvBuilder: {
+    enabled: true,
+    externalRenderer: false, // MUST stay false — §13.7 DPA gate not yet cleared
   },
 };

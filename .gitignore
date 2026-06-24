@@ -62,3 +62,9 @@ pipeline/.env
 pipeline/data/output/_*_bak/
 # Manually-supplied source PDFs for the admission pipeline (large; not source)
 pipeline/data/input/pdfs/*.pdf
+
+# Playwright E2E artifacts (T23)
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
