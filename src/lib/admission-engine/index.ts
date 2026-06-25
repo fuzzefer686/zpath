@@ -6,6 +6,7 @@ export {
 } from "./core/evaluate";
 export {
   getSchoolAdmissionModule,
+  hasStaticAdmissionModule,
   listRegisteredSchoolAdmissionModules,
   registerSchoolAdmissionModule,
 } from "./core/registry";

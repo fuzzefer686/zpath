@@ -1,0 +1,164 @@
+{
+    "majorId": "cybersec-general-001",
+    "canonicalName": "Cybersecurity",
+    "aliases": [
+      "An toàn thông tin",
+      "ATTT",
+      "Information Security",
+      "InfoSec"
+    ],
+    "category": "Technology & Computing",
+    "tags": [
+      "security",
+      "hacking",
+      "networking",
+      "cryptography",
+      "defense",
+      "risk"
+    ],
+    "searchKeywords": [
+      "an toàn thông tin",
+      "cybersecurity",
+      "ATTT",
+      "bảo mật",
+      "hacking",
+      "ethical hacking",
+      "network security",
+      "InfoSec"
+    ],
+    "scope": "general",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A field focused on protecting digital systems, networks, and data from unauthorized access, attacks, and damage.",
+    "overview": "Cybersecurity focuses on understanding how attacks work in order to defend against them. Students study networking, operating systems, cryptography, penetration testing, and incident response. It requires a strong foundation in how computers and networks actually work at a low level. Unlike Software Engineering which focuses on building, Cybersecurity focuses on breaking, analyzing, and defending. It is not purely about coding — much of the work involves analysis, investigation, and policy.",
+    "difficultyLevel": 4,
+    "mathIntensity": 4,
+    "codingIntensity": 4,
+    "englishIntensity": 5,
+    "foundationSubjects": [
+      "Computer Networks (TCP/IP deep dive)",
+      "Operating Systems (Linux focus)",
+      "Cryptography Fundamentals",
+      "Introduction to Programming (Python/Bash)",
+      "Database Security",
+      "Computer Architecture",
+      "Systems Programming"
+    ],
+    "advancedSubjects": [
+      "Penetration Testing & Ethical Hacking",
+      "Malware Analysis & Reverse Engineering",
+      "Web Application Security (OWASP)",
+      "Digital Forensics & Incident Response",
+      "Cloud Security",
+      "Security Operations (SOC)"
+    ],
+    "toolsAndTechnologies": [
+      "Kali Linux",
+      "Wireshark",
+      "Metasploit",
+      "Burp Suite",
+      "Nmap",
+      "Python / Bash scripting",
+      "IDA Pro / Ghidra (reverse engineering)",
+      "Splunk / ELK Stack (SIEM)",
+      "OpenSSL"
+    ],
+    "typicalProjects": [
+      "Conduct a CTF (Capture The Flag) challenge",
+      "Perform a web application penetration test on a test environment",
+      "Analyze a malware sample and document its behavior",
+      "Set up a network monitoring system with alert rules",
+      "Audit a system configuration for security vulnerabilities"
+    ],
+    "requiredSkills": [
+      "Deep understanding of how networks and protocols work",
+      "Linux command line fluency",
+      "Mindset to think like an attacker — curiosity about how things break",
+      "Strong English reading for CVE reports, security advisories, and research",
+      "Persistence — finding vulnerabilities requires methodical, patient effort"
+    ],
+    "suitableFor": [
+      "Students who are genuinely curious about how systems can be exploited",
+      "Those who enjoy puzzle-solving and investigative thinking",
+      "Students with a strong interest in networking and low-level systems",
+      "People who want a career that combines technical depth with law, policy, or forensics"
+    ],
+    "notSuitableFor": [
+      "Students who want to build consumer products or apps",
+      "Those who expect mostly coding work — cybersecurity involves a lot of analysis and documentation",
+      "Students who are not interested in how networks and operating systems work at a low level"
+    ],
+    "keyTakeaways": [
+      "You must understand how to attack systems before you can properly defend them",
+      "Certifications (CEH, OSCP, CompTIA Security+) matter significantly in this field alongside the degree",
+      "CTF competitions are the best way to build real skills during school",
+      "The field has very strong international job prospects compared to most other tech fields"
+    ],
+    "cautionNotes": [
+      "Cybersecurity knowledge used without authorization is illegal — ethical and legal boundaries are non-negotiable",
+      "Many university programs are still catching up to real-world industry practices — self-study and CTFs are essential",
+      "The 'hacker' image attracts students who are not prepared for the significant networking and systems theory required"
+    ],
+    "careerPaths": [
+      "Penetration Tester / Ethical Hacker",
+      "Security Analyst (SOC)",
+      "Incident Response Specialist",
+      "Digital Forensics Analyst",
+      "Security Engineer",
+      "Cloud Security Specialist",
+      "Chief Information Security Officer (CISO) — senior path",
+      "Threat Intelligence Analyst",
+    "Application Security Engineer",
+    "Security Consultant"
+    ],
+    "marketDemand": "Very high globally. Vietnam's cybersecurity workforce has a significant shortage. Government, banking, and technology sectors are the main hirers.",
+    "salaryOutlook": "Entry-level security analysts in Vietnam earn 12–20M VND/month. Penetration testers and security engineers can earn 25–50M. International remote roles pay significantly more.",
+    "futureTrend": "Demand is accelerating as cyber attacks increase in frequency and sophistication. AI-powered attacks are creating urgency for skilled defenders. Very strong long-term outlook.",
+    "commonMisconceptions": [
+        "Cybersecurity is mostly hacking",
+      "Cybersecurity means hacking — the majority of roles involve defense, monitoring, and compliance, not offensive hacking",
+      "You can learn cybersecurity by watching YouTube videos — hands-on lab work and certifications are essential",
+      "You need to be an expert programmer — networking and systems knowledge matters more than coding in most security roles"
+    ],
+    "relatedMajors": [
+        {
+          "major": "Computer Science",
+          "relationship": "foundation"
+        },
+        {
+          "major": "Information Technology",
+          "relationship": "similar"
+        },
+        {
+          "major": "Software Engineering",
+          "relationship": "similar"
+        },
+        {
+          "major": "Computer Networks",
+          "relationship": "specialization"
+        },
+        {
+          "major": "Artificial Intelligence",
+          "relationship": "alternative"
+        }
+      ],
+    "faq": [
+      {
+        "question": "Is cybersecurity mostly about coding?",
+        "answer": "No. Scripting (Python, Bash) is useful, but the core requirements are deep knowledge of networking, operating systems, and security concepts. Many roles involve more analysis and investigation than coding."
+      },
+      {
+        "question": "Do I need a degree to work in cybersecurity?",
+        "answer": "Industry certifications (OSCP, Security+, CEH) carry significant weight in hiring. A degree is beneficial but graduates who combine a degree with strong certifications and CTF experience are most competitive."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2025-06-23"
+  }

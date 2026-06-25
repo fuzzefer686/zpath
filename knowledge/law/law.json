@@ -1,0 +1,162 @@
+{
+    "majorId": "law-general-001",
+    "canonicalName": "Law",
+    "aliases": [
+      "Luật",
+      "Luật học",
+      "Legal Studies",
+      "Luật kinh tế",
+      "Luật thương mại"
+    ],
+    "category": "Social Sciences & Humanities",
+    "tags": [
+      "law",
+      "legal",
+      "rights",
+      "regulation",
+      "contracts",
+      "justice",
+      "reading-intensive"
+    ],
+    "searchKeywords": [
+      "luật",
+      "law",
+      "luật học",
+      "luật kinh tế",
+      "luật dân sự",
+      "luật hình sự",
+      "hành nghề luật",
+      "luật sư"
+    ],
+    "scope": "country_specific",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A discipline focused on the systematic study of laws, legal systems, rights, and the application of legal principles to resolve disputes and guide behavior.",
+    "overview": "Law in Vietnam involves mastering the Vietnamese legal system — civil law, criminal law, commercial law, administrative law, and increasingly international law. It is one of the most reading-intensive majors: students must memorize legal codes, analyze cases, and construct precise legal arguments. Unlike in some countries, Law graduates who wish to become licensed lawyers must complete additional professional training and satisfy legal practice requirements under current regulations.",
+    "difficultyLevel": 4,
+    "mathIntensity": 1,
+    "codingIntensity": 1,
+    "englishIntensity": 4,
+    "foundationSubjects": [
+      "Introduction to Vietnamese Law",
+      "Civil Law",
+      "Criminal Law",
+      "Constitutional & Administrative Law",
+      "Legal Logic & Argumentation"
+    ],
+    "advancedSubjects": [
+      "Commercial & Business Law",
+      "International Law & Treaties",
+      "Labor Law",
+      "Intellectual Property Law",
+      "Dispute Resolution & Litigation",
+      "Criminal Procedure"
+    ],
+    "toolsAndTechnologies": [
+      "Legal databases (LuatVietnam, ThuvienPhapluat)",
+      "Word processing for legal drafting",
+      "Basic Excel (for contract data management)",
+      "Research databases (for academic and international law)"
+    ],
+    "typicalProjects": [
+      "Draft a commercial contract for a business transaction",
+      "Analyze a civil dispute case and write a legal opinion",
+      "Research a legal issue and produce a memorandum",
+      "Moot court: argue a case before a simulated tribunal",
+      "Review and advise on an employment contract for compliance"
+    ],
+    "requiredSkills": [
+      "Reading stamina — law involves reading enormous volumes of legislation and cases",
+      "Logical and precise argumentation",
+      "Memory for legal codes, articles, and precedents",
+      "Written clarity — legal documents must be unambiguous",
+      "Patience with slow, process-driven work"
+    ],
+    "suitableFor": [
+      "Students who enjoy reading, argumentation, and logical reasoning",
+      "Those interested in justice, rights, and governance",
+      "Students who are methodical, precise, and comfortable with rule-based systems",
+      "Those who want a respected profession with long-term career stability"
+    ],
+    "notSuitableFor": [
+      "Students who dislike reading long documents and memorizing detailed rules",
+      "Those who want fast-paced, results-driven work environments",
+      "Students who struggle with writing clear, structured arguments"
+    ],
+    "keyTakeaways": [
+      "Law is a profession, not just a degree — the practical training period after graduation is essential",
+      "Specialization matters — generalist lawyers are common but specialists (M&A, IP, labor) command higher fees",
+      "English is increasingly important for international commercial law and foreign-invested enterprise work",
+      "Career progression is slower than in tech — seniority and trust take time to build"
+    ],
+    "cautionNotes": [
+      "The Vietnamese legal market is crowded at the junior level — internships at reputable firms during school are critical",
+      "Working hours in large law firms or corporate legal departments can be very demanding",
+      "Law graduates who do not pursue practical training and bar qualification often end up in non-legal roles"
+    ],
+    "careerPaths": [
+      "Lawyer / Attorney (after training and bar qualification)",
+      "Legal Counsel / In-house Lawyer (corporate)",
+      "Judge / Prosecutor (public sector track)",
+      "Legal Compliance Specialist",
+      "Contract Manager",
+      "Paralegal / Legal Executive",
+      "Policy Analyst (government)",
+      "Corporate Secretary",
+"Compliance Officer",
+"Legal Consultant",
+"Intellectual Property Specialist",
+"Regulatory Affairs Specialist"
+    ],
+    "marketDemand": "Stable. Corporate legal, M&A, and compliance roles at foreign-invested enterprises are in consistent demand. Public sector legal roles are competitive. General practice is crowded.",
+    "salaryOutlook": "Junior lawyers at small firms in Vietnam earn 8–15M VND/month. Corporate lawyers at MNC legal departments or large law firms earn 20–50M. Senior lawyers, partners, and in-house counsel at top companies earn significantly more.",
+    "futureTrend": "Legal tech and AI are automating document review and contract analysis. Lawyers who understand technology and work in high-value areas (M&A, IP, fintech regulation) are better positioned. Demand for compliance specialists is growing with increasing regulatory complexity.",
+    "commonMisconceptions": [
+        "Studying law means becoming a lawyer",
+        "Law is mostly memorization",
+      "Studying law means you will argue cases in court — most lawyers never see a courtroom; they work on contracts, compliance, and advisory",
+      "Law graduates automatically become lawyers — you must complete a mandatory training program and pass qualification requirements",
+      "Law is only for students who want to defend criminals — criminal law is a small part of a very large field"
+    ],
+    "relatedMajors": [
+        {
+          "major": "Political Science / Public Administration",
+          "relationship": "similar"
+        },
+        {
+          "major": "Business Administration",
+          "relationship": "alternative"
+        },
+        {
+          "major": "Accounting",
+          "relationship": "similar"
+        },
+        {
+          "major": "International Business",
+          "relationship": "alternative"
+        }
+      ],
+    "faq": [
+      {
+        "question": "Is law a good choice in Vietnam for career prospects?",
+        "answer": "Yes, especially for those willing to specialize and intern early. Corporate law, M&A, and compliance at foreign-invested companies offer good pay and growth. The crowded general practice market is harder to break into without a strong network and firm reputation."
+      },
+      {
+        "question": "Do I need to be good at math to study law?",
+        "answer": "No. Law is primarily reading, argumentation, and writing. Mathematics beyond basic numeracy is not required. The main demands are reading stamina, precision in language, and logical reasoning."
+      },
+      {
+        "question": "Is law mostly memorization?",
+        "answer": "No. Memorizing legal provisions is important, but the core skill is interpreting and applying laws to specific situations through logical reasoning and argumentation."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-06-23"
+  }

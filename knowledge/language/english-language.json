@@ -1,0 +1,155 @@
+{
+    "majorId": "english-general-001",
+    "canonicalName": "English Language",
+    "aliases": [
+      "Ngôn ngữ Anh",
+      "NNA",
+      "English Studies",
+      "English Linguistics",
+      "Anh văn"
+    ],
+    "category": "Social Sciences & Humanities",
+    "tags": [
+      "English",
+      "linguistics",
+      "translation",
+      "communication",
+      "teaching",
+      "language",
+      "literature"
+    ],
+    "searchKeywords": [
+      "ngôn ngữ Anh",
+      "NNA",
+      "tiếng Anh",
+      "English language",
+      "phiên dịch",
+      "biên dịch",
+      "sư phạm Anh",
+      "linguistics"
+    ],
+    "scope": "country_specific",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A degree focused on advanced English language proficiency, linguistics, translation, interpretation, and communication — equipping graduates to use English professionally across a range of contexts.",
+    "overview": "English Language (Ngôn ngữ Anh) is a language-focused degree that develops advanced English skills alongside linguistic theory, translation, interpretation, and cultural knowledge. In Vietnam, it is distinct from Sư phạm Anh (English Teaching Education) — NNA focuses on language use across professional contexts, while Sư phạm Anh focuses on pedagogy. Graduates work in translation, interpretation, communication, journalism, corporate roles requiring high English, international relations, and English teaching (though without pedagogical certification, private teaching is more accessible than public school teaching).",
+    "difficultyLevel": 4,
+    "mathIntensity": 1,
+    "codingIntensity": 1,
+    "englishIntensity": 5,
+    "foundationSubjects": [
+      "Advanced English Grammar & Usage",
+      "English Linguistics & Phonetics",
+      "English Literature",
+      "Introduction to Translation",
+      "Cross-Cultural Communication"
+    ],
+    "advancedSubjects": [
+      "Translation Theory & Practice (written)",
+      "Interpretation (consecutive & simultaneous)",
+      "Business English & Professional Communication",
+      "ESP (English for Specific Purposes: legal, medical, technical)",
+      "Applied Linguistics",
+      "Discourse Analysis"
+    ],
+    "toolsAndTechnologies": [
+      "CAT tools for translation (SDL Trados, MemoQ)",
+      "Subtitling software (Aegisub)",
+      "Corpus linguistics tools",
+      "Microsoft Office / Google Docs (professional writing)",
+      "Recording and self-review tools for interpretation practice"
+    ],
+    "typicalProjects": [
+      "Translate a legal document or technical manual from Vietnamese to English (or vice versa)",
+      "Perform a consecutive interpretation exercise in a simulated business meeting",
+      "Write a professional English business report on a given topic",
+      "Analyze a corpus of English texts for linguistic patterns",
+      "Produce a subtitled translation for a short Vietnamese video"
+    ],
+    "requiredSkills": [
+      "Near-native English proficiency — this is the baseline, not the goal",
+      "Precision in language — small word choices carry large meaning differences",
+      "Strong Vietnamese — translation quality depends equally on mother tongue mastery",
+      "Cultural literacy across English-speaking countries",
+      "Research and referencing skills for technical or specialized translation"
+    ],
+    "suitableFor": [
+      "Students who have genuine passion for language and how it works",
+      "Those with already-strong English who want to develop it professionally",
+      "Students interested in translation, interpretation, journalism, or international communication",
+      "Those who want to work in international environments without a technical or business specialization"
+    ],
+    "notSuitableFor": [
+      "Students who choose this major thinking it will make their English 'good enough' — it assumes near-advanced English already",
+      "Those who dislike reading and writing at length in both English and Vietnamese",
+      "Students who want a highly technical or quantitative career"
+    ],
+    "keyTakeaways": [
+      "The degree develops professional-grade language skills — but proficiency alone is not a career differentiator; a domain specialization (legal, medical, finance) is",
+      "Translation and interpretation are skilled professions, not just bilingual tasks — training and certification matter",
+      "Combining NNA with a second language (Chinese, Japanese, Korean) significantly multiplies career options in Vietnam",
+      "Freelance translation and interpretation is a viable and increasingly well-paid career path"
+    ],
+    "cautionNotes": [
+      "Many employers in Vietnam now assume strong English from any graduate — NNA needs to offer more than fluency to stand out",
+      "Pure language graduates without domain specialization face salary compression at entry level",
+      "AI translation tools (DeepL, ChatGPT) are commoditizing basic translation — specialized and high-stakes translation (legal, medical, conference interpretation) remain human domains"
+    ],
+    "careerPaths": [
+      "Professional Translator (written)",
+      "Conference / Court Interpreter",
+      "English Teacher (private sector / tutoring centers)",
+      "Corporate Communications Specialist",
+      "Journalist / Editor (English media)",
+      "International Relations Officer",
+      "Subtitler / Localization Specialist",
+      "Content Writer / Copywriter (English)",
+        "Localization Specialist",
+  "Localization Project Manager"
+    ],
+    "marketDemand": "Moderate to high. English remains a core skill across most industries, but language proficiency alone is no longer a strong differentiator. Demand is strongest for graduates who combine English with a professional domain such as business, law, technology, healthcare, or localization. Specialized translation, interpretation, and international-facing corporate roles continue to offer solid opportunities.",
+    "salaryOutlook": "Entry-level translation and communication roles earn 10–18M VND/month. Experienced interpreters at international conferences and MNCs earn 25–60M+. Freelance court and legal interpreters can earn significantly by session. Salaries vary widely by specialization.",
+    "futureTrend": "AI is disrupting commodity translation. Demand is shifting toward specialized, high-stakes, and culturally nuanced translation and interpretation that requires human judgment. NNA graduates who develop domain expertise (legal, medical, technical) and interpretation skills are more AI-resilient.",
+    "commonMisconceptions": [
+      "Being fluent in English means you can work as a translator or interpreter — professional translation and interpretation require specific training beyond general fluency",
+      "NNA graduates can easily become English teachers — teaching in public schools requires a Sư phạm qualification; NNA graduates can teach privately or in tutoring centers",
+      "AI translation makes NNA obsolete — AI handles routine text but cannot replace human judgment in specialized, legal, medical, or culturally nuanced contexts"
+    ],
+    "relatedMajors": [
+      {
+        "major": "Education",
+        "relationship": "similar"
+      },
+      {
+        "major": "International Business",
+        "relationship": "similar"
+      },
+      {
+        "major": "Journalism & Communications",
+        "relationship": "similar"
+      },
+      {
+        "major": "Law",
+        "relationship": "similar"
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the difference between Ngôn ngữ Anh and Sư phạm Anh?",
+        "answer": "Ngôn ngữ Anh focuses on professional English language use — translation, interpretation, linguistics, and communication. Sư phạm Anh trains you specifically to teach English in schools, with heavy emphasis on pedagogy and classroom methodology. If you want to work as a teacher in the public school system, Sư phạm Anh provides the required qualification. If you want a broader range of English-language professional roles, NNA is more flexible."
+      },
+      {
+        "question": "Will AI replace translators who study NNA?",
+        "answer": "AI is replacing low-skill, high-volume translation — basic documents, e-commerce product descriptions, simple web content. It is not replacing specialized translators who work in legal, medical, technical, or literary domains, or professional conference interpreters. Graduates who specialize in a domain and develop interpretation skills are the least exposed to AI displacement."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-06-23"
+  }

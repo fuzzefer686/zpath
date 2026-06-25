@@ -177,12 +177,12 @@ function buildFallbackSections(
         {
           heading: `Thông tin về ${majorName || "ngành học"}`,
           content: majorName
-            ? `Hiện tại ZPath chưa thể phân tích chi tiết ngành ${majorName}${schoolName ? ` tại ${schoolName}` : ""} do lỗi kết nối AI. Tuy nhiên, bạn có thể tìm hiểu thêm trực tiếp trên website chính thức của trường hoặc trang tuyển sinh của Bộ GD&ĐT.`
-            : "Bạn chưa cung cấp tên ngành cụ thể. Hãy cho ZPath biết ngành bạn quan tâm để nhận được tư vấn chính xác hơn.",
+            ? `Hiện tại ZPath chưa thể phân tích chi tiết ngành ${majorName}${schoolName ? ` tại ${schoolName}` : ""} do lỗi kết nối AI. Tuy nhiên, em có thể tìm hiểu thêm trực tiếp trên website chính thức của trường hoặc trang tuyển sinh của Bộ GD&ĐT.`
+            : "Em chưa cung cấp tên ngành cụ thể. Hãy cho ZPath biết ngành em quan tâm để nhận được tư vấn chính xác hơn.",
         },
         {
           heading: "Gợi ý bước tiếp theo",
-          content: "Bạn nên kiểm tra: (1) Chương trình đào tạo chi tiết trên website trường, (2) Điểm chuẩn các năm gần nhất, (3) Cơ hội việc làm thực tế của cựu sinh viên, (4) Học phí và chính sách hỗ trợ tài chính.",
+          content: "Em nên kiểm tra: (1) Chương trình đào tạo chi tiết trên website trường, (2) Điểm chuẩn các năm gần nhất, (3) Cơ hội việc làm thực tế của cựu sinh viên, (4) Học phí và chính sách hỗ trợ tài chính.",
         },
       ];
 
@@ -191,12 +191,12 @@ function buildFallbackSections(
         {
           heading: "Đánh giá cơ hội",
           content: score
-            ? `Với ${score} điểm${combination ? ` tổ hợp ${combination}` : ""}${schoolName ? ` vào ${schoolName}` : ""}${majorName ? ` ngành ${majorName}` : ""}, ZPath chưa thể tính toán chi tiết do lỗi kết nối. Bạn nên so sánh điểm này với điểm chuẩn các năm gần nhất trên trang tuyển sinh chính thức của trường.`
-            : "Bạn cần cung cấp điểm số, tổ hợp xét tuyển, và trường/ngành quan tâm để ZPath ước tính cơ hội.",
+            ? `Với ${score} điểm${combination ? ` tổ hợp ${combination}` : ""}${schoolName ? ` vào ${schoolName}` : ""}${majorName ? ` ngành ${majorName}` : ""}, ZPath chưa thể tính toán chi tiết do lỗi kết nối. Em nên so sánh điểm này với điểm chuẩn các năm gần nhất trên trang tuyển sinh chính thức của trường.`
+            : "Em cần cung cấp điểm số, tổ hợp xét tuyển, và trường/ngành quan tâm để ZPath ước tính cơ hội.",
         },
         {
           heading: "Lưu ý quan trọng",
-          content: "Điểm chuẩn thay đổi hàng năm tùy thuộc vào độ khó đề thi, số lượng thí sinh và chỉ tiêu tuyển sinh. Hãy luôn chuẩn bị danh sách gồm trường an toàn, vừa tầm và thử sức.",
+          content: "Điểm chuẩn thay đổi hàng năm tùy thuộc vào độ khó đề thi, số lượng thí sinh và chỉ tiêu tuyển sinh. Em hãy luôn chuẩn bị danh sách gồm trường an toàn, vừa tầm và thử sức.",
         },
       ];
 
@@ -205,12 +205,12 @@ function buildFallbackSections(
         {
           heading: "Gợi ý lựa chọn",
           content: score
-            ? `Với ${score} điểm${combination ? ` ${combination}` : ""}, có nhiều lựa chọn trường và ngành phù hợp. ZPath chưa thể phân tích chi tiết do lỗi kết nối AI, nhưng bạn nên tham khảo bảng điểm chuẩn tổng hợp trên các trang tuyển sinh uy tín.`
-            : "Hãy cho ZPath biết điểm số và tổ hợp xét tuyển của bạn để nhận gợi ý trường/ngành cụ thể.",
+            ? `Với ${score} điểm${combination ? ` ${combination}` : ""}, có nhiều lựa chọn trường và ngành phù hợp. ZPath chưa thể phân tích chi tiết do lỗi kết nối AI, nhưng em nên tham khảo bảng điểm chuẩn tổng hợp trên các trang tuyển sinh uy tín.`
+            : "Hãy cho ZPath biết điểm số và tổ hợp xét tuyển của em để nhận gợi ý trường/ngành cụ thể.",
         },
         {
           heading: "Cách chọn trường phù hợp",
-          content: "Nên chia danh sách nguyện vọng thành 3 nhóm: (1) Nhóm an toàn — điểm chuẩn thấp hơn điểm bạn 1-2 điểm, (2) Nhóm vừa tầm — điểm chuẩn xấp xỉ, (3) Nhóm thử sức — điểm chuẩn cao hơn nhưng bạn vẫn muốn thử.",
+          content: "Em nên chia danh sách nguyện vọng thành 3 nhóm: (1) Nhóm an toàn — điểm chuẩn thấp hơn điểm của em 1-2 điểm, (2) Nhóm vừa tầm — điểm chuẩn xấp xỉ, (3) Nhóm thử sức — điểm chuẩn cao hơn nhưng em vẫn muốn thử.",
         },
       ];
 
@@ -218,7 +218,7 @@ function buildFallbackSections(
       return [
         {
           heading: "So sánh ngành học",
-          content: `ZPath chưa thể thực hiện so sánh chi tiết${(extracted.majorA || extracted.majorB) ? ` giữa ${extracted.majorA ?? ""} và ${extracted.majorB ?? ""}` : ""} do lỗi kết nối AI. Khi so sánh ngành, bạn nên xem xét: nội dung đào tạo, điểm chuẩn, cơ hội việc làm, mức lương khởi điểm, và khả năng chuyển ngành.`,
+          content: `ZPath chưa thể thực hiện so sánh chi tiết${(extracted.majorA || extracted.majorB) ? ` giữa ${extracted.majorA ?? ""} và ${extracted.majorB ?? ""}` : ""} do lỗi kết nối AI. Khi so sánh ngành, em nên xem xét: nội dung đào tạo, điểm chuẩn, cơ hội việc làm, mức lương khởi điểm, và khả năng chuyển ngành.`,
         },
       ];
 
@@ -226,7 +226,7 @@ function buildFallbackSections(
       return [
         {
           heading: "So sánh trường",
-          content: `ZPath chưa thể thực hiện so sánh chi tiết${(extracted.schoolA || extracted.schoolB) ? ` giữa ${extracted.schoolA ?? ""} và ${extracted.schoolB ?? ""}` : ""} do lỗi kết nối AI. Khi so sánh trường, bạn nên xem xét: uy tín chương trình đào tạo, cơ sở vật chất, học phí, vị trí địa lý, mạng lưới cựu sinh viên, và cơ hội thực tập.`,
+          content: `ZPath chưa thể thực hiện so sánh chi tiết${(extracted.schoolA || extracted.schoolB) ? ` giữa ${extracted.schoolA ?? ""} và ${extracted.schoolB ?? ""}` : ""} do lỗi kết nối AI. Khi so sánh trường, em nên xem xét: uy tín chương trình đào tạo, cơ sở vật chất, học phí, vị trí địa lý, mạng lưới cựu sinh viên, và cơ hội thực tập.`,
         },
       ];
 
@@ -234,11 +234,11 @@ function buildFallbackSections(
       return [
         {
           heading: "Thông tin học phí",
-          content: `ZPath chưa thể tra cứu chi tiết học phí${majorName ? ` ngành ${majorName}` : ""}${schoolName ? ` tại ${schoolName}` : ""} do lỗi kết nối. Bạn nên kiểm tra trực tiếp trên website chính thức của trường hoặc liên hệ phòng tuyển sinh để có thông tin chính xác nhất.`,
+          content: `ZPath chưa thể tra cứu chi tiết học phí${majorName ? ` ngành ${majorName}` : ""}${schoolName ? ` tại ${schoolName}` : ""} do lỗi kết nối. Em nên kiểm tra trực tiếp trên website chính thức của trường hoặc liên hệ phòng tuyển sinh để có thông tin chính xác nhất.`,
         },
         {
           heading: "Lưu ý về học phí",
-          content: "Học phí có thể thay đổi theo từng năm, hình thức đào tạo (chính quy/chất lượng cao/quốc tế), và chính sách miễn giảm. Đừng quên tìm hiểu về học bổng và chính sách hỗ trợ tài chính của trường.",
+          content: "Học phí có thể thay đổi theo từng năm, hình thức đào tạo (chính quy/chất lượng cao/quốc tế), và chính sách miễn giảm. Em đừng quên tìm hiểu về học bổng và chính sách hỗ trợ tài chính của trường.",
         },
       ];
 
@@ -247,8 +247,8 @@ function buildFallbackSections(
         {
           heading: "Cơ hội nghề nghiệp",
           content: majorName
-            ? `ZPath chưa thể phân tích chi tiết cơ hội nghề nghiệp ngành ${majorName} do lỗi kết nối AI. Bạn nên tham khảo các nguồn: báo cáo thị trường lao động, trang việc làm, và ý kiến cựu sinh viên ngành này.`
-            : "Hãy cho ZPath biết ngành bạn quan tâm để nhận phân tích cơ hội nghề nghiệp cụ thể.",
+            ? `ZPath chưa thể phân tích chi tiết cơ hội nghề nghiệp ngành ${majorName} do lỗi kết nối AI. Em nên tham khảo các nguồn: báo cáo thị trường lao động, trang việc làm, và ý kiến cựu sinh viên ngành này.`
+            : "Hãy cho ZPath biết ngành em quan tâm để nhận phân tích cơ hội nghề nghiệp cụ thể.",
         },
       ];
 
@@ -256,7 +256,7 @@ function buildFallbackSections(
       return [
         {
           heading: "Thông tin tuyển sinh",
-          content: `ZPath chưa thể cập nhật thông tin tuyển sinh mới nhất${schoolName ? ` của ${schoolName}` : ""} do lỗi kết nối AI. Bạn nên truy cập trực tiếp website tuyển sinh chính thức của trường hoặc cổng thông tin tuyển sinh của Bộ GD&ĐT để xem đề án tuyển sinh, phương thức xét tuyển và lịch đăng ký.`,
+          content: `ZPath chưa thể cập nhật thông tin tuyển sinh mới nhất${schoolName ? ` của ${schoolName}` : ""} do lỗi kết nối AI. Em nên truy cập trực tiếp website tuyển sinh chính thức của trường hoặc cổng thông tin tuyển sinh của Bộ GD&ĐT để xem đề án tuyển sinh, phương thức xét tuyển và lịch đăng ký.`,
         },
       ];
 
@@ -264,7 +264,7 @@ function buildFallbackSections(
       return [
         {
           heading: "Đánh giá phù hợp",
-          content: "ZPath chưa thể đánh giá mức độ phù hợp ngành học với bạn do lỗi kết nối AI. Để tự đánh giá sơ bộ, hãy xem xét: (1) Sở thích — bạn thích làm gì trong thời gian rảnh? (2) Điểm mạnh — môn nào bạn học tốt nhất? (3) Giá trị — bạn ưu tiên thu nhập, đam mê hay cân bằng cuộc sống?",
+          content: "ZPath chưa thể đánh giá mức độ phù hợp ngành học với em do lỗi kết nối AI. Để tự đánh giá sơ bộ, em hãy xem xét: (1) Sở thích — em thích làm gì trong thời gian rảnh? (2) Điểm mạnh — môn nào em học tốt nhất? (3) Giá trị — em ưu tiên thu nhập, đam mê hay cân bằng cuộc sống?",
         },
       ];
 
@@ -273,20 +273,20 @@ function buildFallbackSections(
         {
           heading: "Kế hoạch học tập",
           content: majorName
-            ? `ZPath chưa thể xây dựng kế hoạch học tập chi tiết cho ngành ${majorName} do lỗi kết nối AI. Bạn nên tham khảo chương trình đào tạo chi tiết trên website trường để hiểu rõ các học phần cần hoàn thành.`
-            : "Hãy cho ZPath biết ngành và trường bạn quan tâm để nhận kế hoạch học tập phù hợp.",
+            ? `ZPath chưa thể xây dựng kế hoạch học tập chi tiết cho ngành ${majorName} do lỗi kết nối AI. Em nên tham khảo chương trình đào tạo chi tiết trên website trường để hiểu rõ các học phần cần hoàn thành.`
+            : "Hãy cho ZPath biết ngành và trường em quan tâm để nhận kế hoạch học tập phù hợp.",
         },
       ];
 
     default:
       return [
         {
-          heading: "Trả lời câu hỏi của bạn",
-          content: `ZPath đã nhận câu hỏi: "${question.slice(0, 120)}${question.length > 120 ? "..." : ""}". Hiện tại hệ thống AI đang gặp sự cố kết nối nên chưa thể phân tích đầy đủ. Bạn có thể thử lại sau ít phút hoặc đặt câu hỏi cụ thể hơn.`,
+          heading: "Trả lời câu hỏi của em",
+          content: `ZPath đã nhận câu hỏi: "${question.slice(0, 120)}${question.length > 120 ? "..." : ""}". Hiện tại hệ thống AI đang gặp sự cố kết nối nên chưa thể phân tích đầy đủ. Em có thể thử lại sau ít phút hoặc đặt câu hỏi cụ thể hơn.`,
         },
         {
           heading: "Gợi ý trong khi chờ",
-          content: "Bạn có thể tham khảo: (1) Website chính thức các trường đại học, (2) Cổng thông tin tuyển sinh Bộ GD&ĐT, (3) Các trang tổng hợp điểm chuẩn và thông tin tuyển sinh uy tín.",
+          content: "Em có thể tham khảo: (1) Website chính thức các trường đại học, (2) Cổng thông tin tuyển sinh Bộ GD&ĐT, (3) Các trang tổng hợp điểm chuẩn và thông tin tuyển sinh uy tín.",
         },
       ];
   }
@@ -301,14 +301,14 @@ function buildFallbackFollowUpQuestions(
   const schoolName = (extracted.schoolName as string) ?? "";
 
   const generic = [
-    "Em nên cung cấp thêm thông tin gì để ZPath tư vấn tốt hơn?",
-    "Có thể giúp em tìm hiểu về trường/ngành nào khác?",
+    "Em cần cung cấp thêm thông tin gì để ZPath tư vấn tốt hơn?",
+    "Có thể giúp em tìm hiểu về trường/ngành nào khác không?",
   ];
 
   switch (intent) {
     case AdvisorIntent.REVIEW_MAJOR:
       return [
-        majorName ? `Ngành ${majorName} phù hợp với kiểu học sinh nào?` : "Em quan tâm ngành nào?",
+        majorName ? `Ngành ${majorName} phù hợp với kiểu học sinh nào?` : "Em đang quan tâm ngành nào?",
         schoolName ? `Điểm chuẩn ${majorName || "ngành này"} tại ${schoolName}?` : `Trường nào mạnh về ${majorName || "ngành này"}?`,
         ...generic.slice(0, 1),
       ];
@@ -375,7 +375,7 @@ export function createSafeFallbackAdvisorAnswer({
 }): AdvisorAnswer {
   return {
     title: buildFallbackTitle(intent, extracted, question),
-    summary: "ZPath tạm thời không thể kết nối AI để phân tích chi tiết. Dưới đây là hướng dẫn sơ bộ dựa trên câu hỏi của bạn. Hãy thử lại sau ít phút để nhận tư vấn đầy đủ hơn.",
+    summary: "ZPath tạm thời không thể kết nối AI để phân tích chi tiết. Dưới đây là hướng dẫn sơ bộ dựa trên câu hỏi của em. Hãy thử lại sau ít phút để nhận tư vấn đầy đủ hơn.",
     answerType: intent,
     confidence: "low",
     dataStatus: sources.length ? "limited_data" : "general_advice",

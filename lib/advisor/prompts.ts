@@ -1,5 +1,6 @@
 import type { AdvisorClassification } from "@/lib/advisor/classifier";
 import { AdvisorIntent } from "@/lib/advisor/intents";
+import { buildMajorKnowledgeIntentGuidance } from "@/lib/advisor/majorKnowledgePrompts";
 import type { AdvisorInternalSource } from "@/lib/advisor/retrieval/types";
 import type { WebSearchResult } from "@/lib/advisor/retrieval/webSearch";
 import type { AdvisorAnswer } from "@/lib/advisor/types";
@@ -60,12 +61,13 @@ Core rules:
 25. For any question involving scores, admission scores, benchmarks, admission chances, score-based recommendations, or score calculation, always use 2025 as the benchmark/reference year. If the user asks for another year, explain that ZPath currently answers score-related questions using 2025 reference data unless verified context for that requested year is explicitly provided.
 26. If internalContext.verifiedFacts exists, treat it as authoritative for the exact fact it covers, even when the main intent is PERSONAL_FIT, GENERAL_ADVICE, or a follow-up conversation. Do not override verifiedFacts with generic knowledge or another school's rule.
 27. For FTU IELTS conversion: IELTS Academic 6.5 converts to 8.5/10, and IELTS Academic from 8.0 upward is needed for 10/10. Do not say IELTS 6.5 converts to 9.0, 9.5, or 10 for FTU.
+28. Always address the student as "em", never "bạn". The advisor's voice is "anh/chị" or neutral. For example: "Em nên...", "Với hồ sơ của em...", "Em có thể tham khảo...". Never write "Bạn nên..." or "của bạn".
 
 Tone:
 - Friendly
 - Practical
 - Clear
-- Like a senior student/admission advisor
+- Like a senior student/admission advisor talking to a younger student (xưng hô anh/chị - em)
 - Not robotic
 - Not overconfident
 - Not cringe
@@ -170,9 +172,9 @@ export function buildAdvisorPromptSources({
 function buildCompactIntentGuidance(intent: AdvisorIntent): string {
   switch (intent) {
     case AdvisorIntent.REVIEW_MAJOR:
-      return 'Return 2-3 detailed sections focusing heavily on bullet points: "Căn cứ khoa học", "Trọng tâm kiến thức & kỹ năng", "Mức độ phù hợp thực tế". Focus on the exact major/program code if provided. Every bullet point must have a rich, comprehensive explanation.';
+      return buildMajorKnowledgeIntentGuidance(intent);
     case AdvisorIntent.COMPARE_MAJORS:
-      return 'Return exactly 3 detailed sections: (1) "Bảng so sánh tổng quan" (YOU MUST GENERATE A DETAILED, COMPREHENSIVE MARKDOWN COMPARISON TABLE with columns: | Tiêu chí | [Tên ngành A] | [Tên ngành B] | and at least 4 rows comparing key criteria with rich, complete explanations in each cell), (2) "Khác biệt cốt lõi" (3-4 highly detailed, rich bullet points explaining academic differences), (3) "Lời khuyên lựa chọn" (detailed bullet points on who should choose which based on strengths).';
+      return buildMajorKnowledgeIntentGuidance(intent);
     case AdvisorIntent.COMPARE_SCHOOLS:
       return 'Return exactly 3 detailed sections: (1) "Bảng so sánh tổng quan" (YOU MUST GENERATE A DETAILED, COMPREHENSIVE MARKDOWN COMPARISON TABLE with columns: | Tiêu chí | [Tên trường A] | [Tên trường B] | and at least 4 rows comparing key criteria with rich, complete explanations in each cell), (2) "Điểm mạnh từng trường" (3-4 detailed bullet points), (3) "Khuyến nghị theo mục tiêu" (detailed bullet points).';
     case AdvisorIntent.ADMISSION_CHANCE:

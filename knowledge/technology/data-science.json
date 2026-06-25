@@ -1,0 +1,158 @@
+{
+    "majorId": "ds-general-001",
+    "canonicalName": "Data Science",
+    "aliases": [
+      "Khoa học dữ liệu",
+      "Data Analytics",
+      "Data Analysis"
+    ],
+    "category": "Technology & Computing",
+    "tags": [
+      "data",
+      "statistics",
+      "analytics",
+      "visualization",
+      "business intelligence",
+      "SQL"
+    ],
+    "searchKeywords": [
+      "data science",
+      "khoa học dữ liệu",
+      "phân tích dữ liệu",
+      "data analyst",
+      "BI",
+      "visualization",
+      "tableau",
+      "SQL"
+    ],
+    "scope": "general",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A field that extracts actionable insights from data using statistics, programming, and domain knowledge to support business decisions.",
+    "overview": "Data Science sits at the intersection of statistics, programming, and business understanding. Unlike AI which emphasizes model building, Data Science emphasizes understanding data patterns, communicating findings, and supporting decisions. Students learn SQL, Python, statistics, and data visualization. Roles vary widely — from purely analytical (dashboards, reports) to more technical (building ML pipelines). It is generally less mathematically intense than AI but requires strong statistical intuition.",
+    "difficultyLevel": 4,
+    "mathIntensity": 4,
+    "codingIntensity": 4,
+    "englishIntensity": 4,
+    "foundationSubjects": [
+      "Statistics & Probability",
+      "SQL & Databases",
+      "Python Programming",
+      "Data Visualization",
+      "Business Analytics",
+        "Data Modeling",
+        "Data Collection & Data Quality"
+    ],
+    "advancedSubjects": [
+      "Machine Learning (applied)",
+      "Big Data Processing (Spark, Hadoop)",
+      "A/B Testing & Experimentation",
+      "Time Series Analysis",
+      "Data Engineering Basics",
+      "Customer Analytics",
+        "Product Analytics",
+        "Causal Inference"
+    ],
+    "toolsAndTechnologies": [
+      "Python (pandas, numpy, matplotlib, seaborn)",
+      "SQL",
+      "Tableau",
+      "Power BI",
+      "R",
+      "Excel",
+      "Google BigQuery",
+      "Apache Spark",
+      "dbt"
+    ],
+    "typicalProjects": [
+      "Build a sales performance dashboard for a retail company",
+      "Analyze user churn patterns and identify at-risk segments",
+      "Design and analyze an A/B test for a product feature",
+      "Build a demand forecasting model using historical data",
+      "Clean and merge data from multiple inconsistent sources"
+    ],
+    "requiredSkills": [
+      "Statistical thinking — understanding what a number actually means",
+      "SQL fluency for data extraction and transformation",
+      "Data storytelling — presenting findings to non-technical stakeholders",
+      "Critical thinking about data quality and sampling bias",
+      "Python for data manipulation and basic modeling"
+    ],
+    "suitableFor": [
+      "Students who like finding patterns and explaining 'why' behind numbers",
+      "Those who enjoy combining technical work with communication",
+      "People interested in business, product, or policy — not just pure engineering",
+      "Students who are good at statistics but prefer applied over theoretical math"
+    ],
+    "notSuitableFor": [
+      "Those who want to avoid statistics entirely",
+      "Students who only want to build software products",
+      "People who dislike presenting or explaining findings to others"
+    ],
+    "keyTakeaways": [
+      "Most of the job is cleaning and questioning data, not running models",
+      "SQL is often more useful day-to-day than Python in analyst roles",
+      "Communication skills matter as much as technical skills",
+      "Data Science roles vary enormously across companies — always check the actual job description"
+    ],
+    "cautionNotes": [
+      "'Data Scientist' titles at different companies can mean very different things — from BI analyst to ML engineer",
+      "Many 'Data Science' programs in Vietnam focus heavily on AI/ML and may underemphasize SQL and business analytics",
+      "Entry-level roles often involve more reporting than modeling"
+    ],
+    "careerPaths": [
+      "Data Analyst",
+      "Business Intelligence Analyst",
+      "Data Scientist",
+      "Product Analyst",
+      "Data Engineer",
+      "Machine Learning Engineer (with additional ML depth)",
+      "Analytics Engineer",
+      "Decision Scientist"
+    ],
+    "marketDemand": "Consistently high across industries — finance, e-commerce, logistics, healthcare, and government all hire data roles. Analyst roles are more abundant than scientist roles.",
+    "salaryOutlook": "Data Analysts in Vietnam earn 12–20M VND/month at entry level. Data Scientists with ML skills can earn 20–40M+. Senior roles at product companies or international firms pay significantly more.",
+    "futureTrend": "Growth in demand for data roles that combine technical skill with business acumen. SQL and data engineering skills are increasingly valued. AI tools are automating some basic analysis, raising the bar for analyst roles.",
+    "commonMisconceptions": [
+      "Data Science is the same as AI — Data Science is broader and more business-oriented",
+      "You need to know machine learning to be a data analyst — many analyst roles primarily use SQL and Excel",
+      "Data Science is just about building dashboards — senior roles involve experimental design, modeling, and strategy"
+    ],
+    "relatedMajors": [
+      {
+        "major": "Artificial Intelligence",
+        "relationship": "similar"
+      },
+      {
+        "major": "Statistics",
+        "relationship": "foundation"
+      },
+      {
+        "major": "Information Technology",
+        "relationship": "alternative"
+      },
+      {
+        "major": "Business Analytics",
+        "relationship": "similar"
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the difference between Data Science and AI?",
+        "answer": "Data Science focuses on extracting insights from data and communicating them to support decisions. AI focuses on building systems that learn and make predictions autonomously. They overlap in machine learning but have different emphases and career paths."
+      },
+      {
+        "question": "Do I need to be good at math to study Data Science?",
+        "answer": "You need solid statistics and some calculus, but it is less mathematically intensive than AI. Strong statistical intuition and SQL fluency matter more than advanced calculus."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-06-23"
+  }

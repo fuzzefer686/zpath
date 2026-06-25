@@ -1,0 +1,168 @@
+[
+    {
+      "majorId": "ai-general-001",
+      "canonicalName": "Artificial Intelligence",
+      "aliases": [
+        "AI",
+        "Trí tuệ nhân tạo",
+        "Công nghệ AI",
+        "AI Engineering"
+      ],
+      "category": "Technology & Computing",
+      "tags": [
+        "machine learning",
+        "deep learning",
+        "neural networks",
+        "data",
+        "math-heavy",
+        "research"
+      ],
+      "searchKeywords": [
+        "AI",
+        "trí tuệ nhân tạo",
+        "học máy",
+        "machine learning",
+        "deep learning",
+        "mô hình AI",
+        "ChatGPT",
+        "computer vision",
+        "NLP"
+      ],
+      "scope": "general",
+      "status": "approved",
+      "version": 1,
+      "oneLineDefinition": "A field that builds systems capable of performing tasks that normally require human intelligence, such as recognizing images, understanding language, and making decisions.",
+      "overview": "AI focuses on creating algorithms and models that allow machines to learn from data and make predictions or decisions. Students study mathematics (linear algebra, calculus, probability), programming, and core ML/DL frameworks. It is more research-oriented and mathematically intensive than Software Engineering or general IT. Graduates can work in both applied engineering and research roles.",
+      "difficultyLevel": 5,
+      "mathIntensity": 5,
+      "codingIntensity": 5,
+      "englishIntensity": 5,
+      "foundationSubjects": [
+        "Linear Algebra",
+        "Calculus & Multivariable Calculus",
+        "Probability & Statistics",
+        "Introduction to Programming (Python)",
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "Computer Networks",
+        "Database Systems"
+      ],
+      "advancedSubjects": [
+        "Machine Learning",
+        "Deep Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Reinforcement Learning",
+        "Model Optimization & Deployment",
+        "MLOps"
+      ],
+      "toolsAndTechnologies": [
+        "Python",
+        "PyTorch",
+        "TensorFlow",
+        "scikit-learn",
+        "HuggingFace",
+        "Jupyter Notebook",
+        "CUDA",
+        "Docker",
+        "Weights & Biases",
+        "LangChain"
+      ],
+      "typicalProjects": [
+        "Train an image classifier on a custom dataset",
+        "Build a text sentiment analysis model",
+        "Fine-tune a pre-trained LLM for a specific task",
+        "Implement a recommendation system",
+        "Build a real-time object detection system"
+      ],
+      "requiredSkills": [
+        "Strong mathematical reasoning (not just formula memorization)",
+        "Ability to read and implement papers in English",
+        "Debugging statistical models (not just code bugs)",
+        "Data cleaning and preprocessing",
+        "Patience with iterative experimentation and failed runs"
+      ],
+      "suitableFor": [
+        "Students who genuinely enjoy applied mathematics and statistics",
+        "People who are curious about how systems 'learn' from data",
+        "Those who can tolerate ambiguity — models often fail before they work",
+        "People comfortable reading dense English-language documentation and papers",
+        "Those interested in research or building cutting-edge products"
+      ],
+      "notSuitableFor": [
+        "Students who want to avoid math beyond basic calculus",
+        "Those who expect quick, tangible results — AI projects require many iterations",
+        "Students who dislike reading English research papers",
+        "Those who only want to build web/mobile apps (Software Engineering is better suited)"
+      ],
+      "keyTakeaways": [
+        "AI is fundamentally applied mathematics — you cannot avoid it",
+        "Most real AI work is 80% data preparation, 20% modeling",
+        "English proficiency is non-negotiable — nearly all top resources are in English",
+        "The field evolves fast; self-learning ability matters more than memorizing current tools"
+      ],
+      "cautionNotes": [
+        "Many programs branded 'AI' are actually Software Engineering with a few ML electives — check the curriculum carefully",
+        "Knowing how to use ChatGPT or call an API is not the same as studying AI",
+        "Starting salaries can be lower than Software Engineering; senior AI roles pay significantly more"
+      ],
+      "careerPaths": [
+        "Machine Learning Engineer",
+        "AI Research Scientist",
+        "Data Scientist",
+        "NLP Engineer",
+        "Computer Vision Engineer",
+        "MLOps Engineer",
+        "AI Product Manager"
+      ],
+      "marketDemand": "High and growing, especially for engineers who can deploy and maintain models in production. Pure research roles are more competitive and typically require graduate degrees.",
+      "salaryOutlook": "Entry-level AI engineers in Vietnam earn 15-25M VND/month at product companies. Above average among technology majors; strongly dependent on practical experience, specialization, and company type",
+      "futureTrend": "Demand is shifting from model training to model application and optimization (RAG, fine-tuning, agents). Engineers who can bridge research and production will have strong long-term prospects.",
+      "commonMisconceptions": [
+        "You need a PhD to work in AI — most industry roles require a bachelor's degree with strong practical skills",
+        "AI will replace all programmers — in reality, AI increases demand for engineers who can work alongside AI tools",
+        "Studying AI means you will build products like ChatGPT — most graduates work on narrower applied problems"
+      ],
+      "relatedMajors": [
+        {
+          "major": "Data Science",
+          "relationship": "similar"
+        },
+        {
+          "major": "Software Engineering",
+          "relationship": "alternative"
+        },
+        {
+          "major": "Mathematics & Statistics",
+          "relationship": "foundation"
+        },
+        {
+          "major": "Computer Science",
+          "relationship": "foundation"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does studying AI require very strong math?",
+          "answer": "Yes. Linear algebra, calculus, and probability are core — not elective. Students who struggle with these subjects will find the program very difficult."
+        },
+        {
+          "question": "Is AI the same as Data Science?",
+          "answer": "They overlap significantly. Data Science focuses more on data analysis, statistics, and business insight. AI/ML focuses more on building and training predictive models. Many job titles mix both."
+        },
+        {
+          "question": "Can I work in AI if I am not good at coding?",
+          "answer": "Coding is essential — primarily Python. However, AI roles require less software architecture knowledge than Software Engineering roles. The harder requirement is mathematical fluency."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Internal ZPath major profile",
+          "type": "internal",
+          "retrievedAt": "2026-06"
+        }
+      ],
+      "confidenceLevel": "high",
+      "lastUpdated": "2026-06-23"
+    }
+]

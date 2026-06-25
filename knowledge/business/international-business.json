@@ -1,0 +1,145 @@
+{
+    "majorId": "ib-general-001",
+    "canonicalName": "International Business",
+    "aliases": [
+      "Kinh doanh quốc tế",
+      "KDQT",
+      "Global Business"
+    ],
+    "category": "Business & Management",
+    "tags": [
+      "international",
+      "trade",
+      "globalization",
+      "cross-cultural",
+      "FDI",
+      "export-import",
+      "English-heavy"
+    ],
+    "searchKeywords": [
+      "kinh doanh quốc tế",
+      "KDQT",
+      "international business",
+      "xuất nhập khẩu",
+      "thương mại quốc tế",
+      "FDI",
+      "ngoại thương"
+    ],
+    "scope": "country_specific",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A business degree focused on conducting commerce across national borders, covering international trade theory, cross-cultural management, global marketing, and foreign investment.",
+    "overview": "International Business examines how companies operate across different countries, legal systems, currencies, and cultures. In Vietnam, this major is closely tied to the country's export-oriented economy, with strong emphasis on trade policy, FDI, customs, international contracts, and cross-cultural negotiation. It combines elements of Business Administration with economics, law, and foreign languages. English proficiency is a near-mandatory requirement — many programs integrate it throughout the curriculum.",
+    "difficultyLevel": 3,
+    "mathIntensity": 2,
+    "codingIntensity": 1,
+    "englishIntensity": 5,
+    "foundationSubjects": [
+      "International Trade Theory",
+      "Macroeconomics & Global Economy",
+      "Cross-Cultural Communication",
+      "International Business Law & Contracts",
+      "Foreign Language (English, Chinese, or Japanese typically)"
+    ],
+    "advancedSubjects": [
+      "International Marketing",
+      "Global Supply Chain Management",
+      "Foreign Direct Investment (FDI) Analysis",
+      "International Financial Management",
+      "WTO Law & Trade Policy",
+      "Export-Import Documentation & Customs"
+    ],
+    "toolsAndTechnologies": [
+      "Excel (trade data analysis)",
+      "ERP systems (introductory)",
+      "Trade documentation software",
+      "CRM tools (for international sales)",
+      "Bloomberg / Reuters (global market data overview)"
+    ],
+    "typicalProjects": [
+      "Analyze Vietnam's trade data with a specific partner country and identify trends",
+      "Develop a market entry strategy for a Vietnamese company entering a foreign market",
+      "Negotiate a simulated international commercial contract",
+      "Evaluate FDI opportunities in a target country",
+      "Write an export plan including logistics, customs, and pricing"
+    ],
+    "requiredSkills": [
+      "Strong English communication — this is not optional in international roles",
+      "Cross-cultural sensitivity and adaptability",
+      "Understanding of international trade regulations, Incoterms, and customs",
+      "Analytical skills for market research and financial data",
+      "Negotiation and relationship-building across cultural boundaries"
+    ],
+    "suitableFor": [
+      "Students with strong English skills who want to work in global or foreign-invested environments",
+      "Those interested in Vietnam's role in global trade and manufacturing networks",
+      "Students who enjoy cross-cultural environments and want to work with international teams",
+      "Those interested in trading companies, FDI advisory, or multinational corporations"
+    ],
+    "notSuitableFor": [
+      "Students with weak English — the major requires high English proficiency to be useful",
+      "Those who prefer purely domestic business operations",
+      "Students who want deep technical specialization in one functional area"
+    ],
+    "keyTakeaways": [
+      "English is the actual differentiating factor — KDQT graduates with weak English cannot access most of the roles the major targets",
+      "A second foreign language (Chinese, Japanese, Korean) significantly expands opportunities in Vietnam's FDI landscape",
+      "The overlap with Logistics and International Law means that specializing early adds more value",
+      "Vietnam's position as a manufacturing hub and export economy makes this degree locally relevant"
+    ],
+    "cautionNotes": [
+      "KDQT and QTKD curricula overlap significantly in many Vietnamese universities — check the actual course list before choosing",
+      "Without strong English, this degree is essentially a less specialized version of QTKD",
+      "The major does not deeply cover any single function — it is a generalist international business degree"
+    ],
+    "careerPaths": [
+      "International Sales / Business Development",
+      "Export-Import Specialist",
+      "FDI Advisory / Investment Promotion",
+      "International Procurement",
+      "Trade Compliance Specialist",
+      "International Marketing Manager",
+      "Supply Chain Coordinator (global)"
+    ],
+    "marketDemand": "Strong in Vietnam, particularly at foreign-invested enterprises (FIEs), trading companies, and multinational corporations. Demand correlates with FDI inflows and export activity.",
+    "salaryOutlook": "Entry-level roles at FIEs earn 10–18M VND/month with English proficiency. International sales and business development roles can earn 20–40M+ with performance bonuses. Roles at MNCs generally pay more than domestic companies.",
+    "futureTrend": "Vietnam's deepening integration into global trade (CPTPP, EVFTA) and FDI growth create sustained demand. Graduates with strong English, a second Asian language, and digital commerce knowledge are best positioned.",
+    "commonMisconceptions": [
+      "KDQT is about traveling internationally for work — most roles are domestic coordination with international partners, not frequent overseas travel",
+      "KDQT is the same as QTKD but with English — international business has distinct content around trade law, FDI, and cross-cultural management",
+      "You need to speak many languages — strong English plus one Asian language is the practical standard"
+    ],
+    "relatedMajors": [
+      {
+        "major": "Business Administration",
+        "relationship": "similar"
+      },
+      {
+        "major": "Logistics & Supply Chain Management",
+        "relationship": "similar"
+      },
+      {
+        "major": "Economics",
+        "relationship": "foundation"
+      },
+      {
+        "major": "Law",
+        "relationship": "similar"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is International Business better than Business Administration?",
+        "answer": "It depends on career intent. If you want to work at foreign companies, in export-import, or in FDI-related roles in Vietnam, KDQT is more relevant. If you want flexibility across any industry or plan to work primarily in domestic business, QTKD is broader. The key differentiator is English — KDQT only delivers its value premium if your English is strong."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2025-06-23"
+  }

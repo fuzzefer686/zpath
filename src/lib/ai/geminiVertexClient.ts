@@ -1,5 +1,3 @@
-import "server-only";
-
 import { existsSync, readFileSync, writeFileSync } from "fs";
 import { tmpdir } from "os";
 import path from "path";

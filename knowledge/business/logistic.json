@@ -1,0 +1,160 @@
+{
+    "majorId": "logistics-general-001",
+    "canonicalName": "Logistics & Supply Chain Management",
+    "aliases": [
+      "Logistics",
+      "Quản trị chuỗi cung ứng",
+      "Supply Chain",
+      "Quản lý logistics"
+    ],
+    "category": "Business & Management",
+    "tags": [
+      "supply chain",
+      "operations",
+      "procurement",
+      "distribution",
+      "inventory",
+      "trade"
+    ],
+    "searchKeywords": [
+      "logistics",
+      "chuỗi cung ứng",
+      "supply chain",
+      "vận tải",
+      "kho bãi",
+      "xuất nhập khẩu",
+      "procurement",
+      "quản lý kho"
+    ],
+    "scope": "general",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "A field focused on planning, implementing, and controlling the flow of goods, services, information, and resources from origin to final customer.",
+    "overview": "Logistics & Supply Chain Management deals with how products move from manufacturers to consumers — covering procurement, warehousing, transportation, customs, inventory management, and supply chain optimization. It is a field that combines business management, operations research, and practical industry knowledge. Vietnam's strong position in manufacturing and export makes this a high-demand field domestically. It requires both analytical thinking (for optimization) and practical knowledge of trade operations.",
+    "difficultyLevel": 3,
+    "mathIntensity": 3,
+    "codingIntensity": 1,
+    "englishIntensity": 4,
+    "foundationSubjects": [
+      "Principles of Logistics & Supply Chain",
+      "International Trade & Customs",
+      "Inventory Management",
+      "Transportation & Distribution",
+      "Operations Research (basic optimization)"
+    ],
+    "advancedSubjects": [
+      "Procurement & Supplier Management",
+      "Warehouse Management Systems (WMS)",
+      "Supply Chain Analytics",
+      "Cold Chain Management",
+      "Global Logistics & Freight Forwarding",
+      "E-commerce Fulfillment"
+    ],
+    "toolsAndTechnologies": [
+      "ERP Systems (SAP, Oracle)",
+      "Excel (advanced — scenario planning, solver)",
+      "WMS Software",
+      "TMS (Transportation Management Systems)",
+      "Power BI for supply chain analytics",
+      "Customs documentation software"
+    ],
+    "typicalProjects": [
+      "Design a distribution network for a FMCG company",
+      "Optimize warehouse layout and slotting for a 3PL provider",
+      "Analyze supply chain disruption risk for a manufacturing client",
+      "Model inventory replenishment policies using demand data",
+      "Prepare export documentation for an international shipment"
+    ],
+    "requiredSkills": [
+      "Analytical thinking for cost and process optimization",
+      "English for international trade documentation and communication",
+      "Understanding of import/export regulations and Incoterms",
+      "Attention to detail — errors in logistics have real financial consequences",
+      "Negotiation skills for procurement and carrier relationships"
+    ],
+    "suitableFor": [
+      "Students who enjoy operations, process improvement, and problem-solving in physical systems",
+      "Those interested in international trade and Vietnam's role in global supply chains",
+      "Students who want a business degree with strong real-world application",
+      "People who are organized, detail-oriented, and like working with data"
+    ],
+    "notSuitableFor": [
+      "Students who want primarily creative or people-facing work",
+      "Those who want to avoid operational detail and paperwork",
+      "Students who have no interest in manufacturing, trade, or physical product flows"
+    ],
+    "keyTakeaways": [
+      "Vietnam's manufacturing and export growth makes logistics a high-demand field domestically",
+      "ERP and data skills are increasingly required — basic Excel is not enough",
+      "The field involves significant English communication, especially in international trade roles",
+      "Certifications (FIATA, CILT, APICS CSCP) are valued by employers"
+    ],
+    "cautionNotes": [
+      "Entry-level logistics roles can involve demanding hours, especially in freight and customs",
+      "Salary at entry level is not high — significant growth comes with experience and specialization",
+      "The field is being disrupted by automation and AI — graduates with data skills have stronger long-term prospects"
+    ],
+    "careerPaths": [
+      "Logistics Coordinator",
+      "Supply Chain Analyst",
+      "Procurement Specialist",
+      "Freight Forwarder",
+      "Warehouse / Operations Manager",
+      "Supply Chain Manager",
+      "Trade Compliance Specialist",
+      "Demand Planner",
+      "Supply Planner",
+      "Procurement Manager",
+      "Operations Excellence Manager"
+    ],
+    "marketDemand": "High in Vietnam, driven by manufacturing, e-commerce, and Vietnam's growing role in global supply chains. Demand is especially strong in industrial zones and export-oriented industries.",
+    "salaryOutlook": "Entry-level logistics roles earn 8–14M VND/month. Supply chain analysts and procurement specialists earn 15–25M. Senior supply chain managers at multinational companies can earn 40–80M+.",
+    "futureTrend": "Automation, AI-driven demand forecasting, and e-commerce growth are reshaping the field. Graduates with data analysis and digital supply chain skills are significantly more competitive.",
+    "commonMisconceptions": [
+        "Logistics and Supply Chain Management are the same thing",
+      "Logistics is just about driving trucks and moving boxes — at the management level it is a data-driven, strategic function",
+      "Logistics has limited career growth — supply chain management is one of the most senior operations functions in large companies",
+      "You do not need English in logistics — international trade and most ERP systems require strong English"
+    ],
+    "relatedMajors": [
+        {
+          "major": "International Business",
+          "relationship": "similar"
+        },
+        {
+          "major": "Business Administration",
+          "relationship": "similar"
+        },
+        {
+          "major": "Industrial Engineering",
+          "relationship": "similar"
+        },
+        {
+          "major": "Economics",
+          "relationship": "foundation"
+        }
+      ],
+    "faq": [
+      {
+        "question": "Is Logistics a good major for job placement in Vietnam?",
+        "answer": "Yes. Vietnam's manufacturing base and growing e-commerce sector create consistent demand for logistics professionals. Job placement rates are generally good, especially in industrial provinces and for students with English proficiency."
+      },
+      {
+        "question": "Is Logistics mostly office work or field work?",
+        "answer": "It depends on the role. Operations, warehousing, and freight roles involve more field work, while planning, procurement, and analytics roles are primarily office-based."
+      },
+      {
+        "question": "Do I need strong English for Logistics?",
+        "answer": "Yes. International trade documents, suppliers, freight partners, and multinational companies often require strong English communication."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-07"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-07-23"
+  }

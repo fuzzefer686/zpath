@@ -1,6 +1,17 @@
 import { AdvisorIntent } from "@/lib/advisor/intents";
 import { canonicalizeAdvisorProgramCode } from "@/lib/advisor/programCodes";
 
+export type PreferenceLevel = "low" | "medium" | "high" | "unknown";
+
+export type AdvisorPreferenceSignals = {
+  mathTolerance: PreferenceLevel;
+  codingTolerance: PreferenceLevel;
+  englishPreference: PreferenceLevel;
+  communicationPreference: PreferenceLevel;
+  writingPreference: PreferenceLevel;
+  stabilityPreference: PreferenceLevel;
+};
+
 export type AdvisorClassification = {
   intent: AdvisorIntent;
   confidence: number;
@@ -18,6 +29,7 @@ export type AdvisorClassification = {
     region?: string;
     year?: number;
     interests?: string[];
+    preferenceSignals?: AdvisorPreferenceSignals;
   };
   secondaryIntents?: AdvisorIntent[];
   interests?: string[];
@@ -150,6 +162,83 @@ const BROAD_SUGGESTION_PATTERNS = [
   w("phu hop voi muc diem"),
 ];
 
+const PREFERENCE_SIGNAL_PATTERNS = {
+  mathTolerance: {
+    low: [
+      /không\s+(?:thích|ưa|muốn|hứng\s+thú|khoái)\s+(?:(?:học|làm|gặp|đụng|với)\s+)?(?:môn\s+)?toán/iu,
+      /khong\s+(?:thich|ua|muon|hung\s+thu|khoai)\s+(?:(?:hoc|lam|gap|dung|voi)\s+)?(?:mon\s+)?toan/iu,
+      /(?:ngại|sợ|dốt|yếu|kém)\s+(?:(?:học|môn)\s+)?toán/iu,
+      /(?:ngai|so|dot|yeu|kem)\s+(?:(?:hoc|mon)\s+)?toan/iu,
+    ],
+    high: [
+      /(?:thích|yêu|mê|đam\s+mê|giỏi|mạnh)\s+(?:(?:học|làm|môn)\s+)?toán/iu,
+      /(?:thich|yeu|me|dam\s+me|gioi|manh)\s+(?:(?:hoc|lam|mon)\s+)?toan/iu,
+    ],
+  },
+  codingTolerance: {
+    low: [
+      /không\s+(?:thích|ưa|muốn)\s+(?:(?:học|viết|làm)\s+)?(?:môn\s+)?(?:code|coding|lập\s+trình)/iu,
+      /khong\s+(?:thich|ua|muon)\s+(?:(?:hoc|viet|lam)\s+)?(?:mon\s+)?(?:code|coding|lap\s+trinh)/iu,
+      /(?:ngại|sợ|yếu)\s+(?:code|lập\s+trình)/iu,
+      /(?:ngai|so|yeu)\s+(?:code|lap\s+trinh)/iu,
+      /không\s+muốn\s+(?:\S+\s+){0,4}(?:code|coding|lập\s+trình)/iu,
+      /khong\s+muon\s+(?:\S+\s+){0,4}(?:code|coding|lap\s+trinh)/iu,
+      /(?:quá|qua|nhiều|nhieu|nặng|nang)\s+(?:code|coding|lập\s+trình)/iu,
+    ],
+    high: [
+      /(?:thích|yêu|mê|giỏi|mạnh)\s+(?:(?:học|môn)\s+)?(?:code|coding|lập\s+trình)/iu,
+      /(?:thich|yeu|me|gioi|manh)\s+(?:(?:hoc|mon)\s+)?(?:code|coding|lap\s+trinh)/iu,
+    ],
+  },
+  englishPreference: {
+    high: [
+      /(?:thích|yêu|mê|giỏi|mạnh)\s+(?:(?:môn|học)\s+)?tiếng\s+anh/iu,
+      /(?:thich|yeu|me|gioi|manh)\s+(?:(?:mon|hoc)\s+)?tieng\s+anh/iu,
+    ],
+    low: [
+      /không\s+(?:thích|giỏi)\s+(?:(?:môn|học)\s+)?tiếng\s+anh/iu,
+      /khong\s+(?:thich|gioi)\s+(?:(?:mon|hoc)\s+)?tieng\s+anh/iu,
+      /(?:yếu|kém|dốt)\s+tiếng\s+anh/iu,
+      /(?:yeu|kem|dot)\s+tieng\s+anh/iu,
+    ],
+  },
+  communicationPreference: {
+    high: [
+      /(?:thích|giỏi)\s+(?:giao\s+tiếp|nói\s+chuyện|thuyết\s+trình)/iu,
+      /(?:thich|gioi)\s+(?:giao\s+tiep|noi\s+chuyen|thuyet\s+trinh)/iu,
+      /giao\s+tiếp\s+tốt/iu,
+      /giao\s+tiep\s+tot/iu,
+    ],
+    low: [
+      /(?:ngại|sợ|kém)\s+giao\s+tiếp/iu,
+      /(?:ngai|so|kem)\s+giao\s+tiep/iu,
+      /(?:ít|khó)\s+nói/iu,
+      /(?:it|kho)\s+noi/iu,
+      /hướng\s+nội/iu,
+      /huong\s+noi/iu,
+    ],
+  },
+  writingPreference: {
+    high: [
+      /(?:thích|giỏi|mạnh)\s+(?:việc\s+)?viết(?:\s+lách)?/iu,
+      /(?:thich|gioi|manh)\s+(?:viec\s+)?viet(?:\s+lach)?/iu,
+    ],
+    low: [
+      /(?:ngại|không\s+thích|kém)\s+viết/iu,
+      /(?:ngai|khong\s+thich|kem)\s+viet/iu,
+    ],
+  },
+  stabilityPreference: {
+    high: [
+      /(?:thích|ưu\s+tiên|muốn)\s+(?:sự\s+)?ổn\s+định/iu,
+      /(?:thich|uu\s+tien|muon)\s+(?:su\s+)?on\s+dinh/iu,
+    ],
+    low: [
+      /thích\s+(?:mạo\s+hiểm|thử\s+thách|phiêu\s+lưu)/iu,
+      /thich\s+(?:mao\s+hiem|thu\s+thach|phieu\s+luu)/iu,
+    ],
+  },
+} as const;
 const INTENT_RULES: PatternRule[] = [
   {
     intent: AdvisorIntent.SCORE_SUGGESTION,
@@ -225,9 +314,11 @@ const INTENT_RULES: PatternRule[] = [
       w("so sanh nganh"),
       /(?:^|[^\p{L}\p{N}])ngành\s+.+?\s+và\s+.+?\s+khác gì(?:$|[^\p{L}\p{N}])/iu,
       /(?:^|[^\p{L}\p{N}])nganh\s+.+?\s+va\s+.+?\s+khac gi(?:$|[^\p{L}\p{N}])/iu,
+      /(?:^|[^\p{L}\p{N}]).+?\s+(?:khác|khac)\s+.+?\s+(?:ở điểm nào|o diem nao|thế nào|the nao|nên chọn|nen chon|không|khong)(?:$|[^\p{L}\p{N}])/iu,
       w("nên chọn ngành\\s+.+?\\s+hay\\s+.+"),
       w("nen chon nganh\\s+.+?\\s+hay\\s+.+"),
       w("compare\\s+.+?\\s+(?:and|vs|versus)\\s+.+"),
+      /(?:^|[^\p{L}\p{N}])(?:ngành\s+)?[\p{L}\s\-]{2,40}\s+(?:khác|khac)\s+(?:gì\s+(?:so\s+với\s+)?)?(?:ngành\s+)?[\p{L}\s\-]{2,40}(?:\?|$)/iu,
     ],
   },
   {
@@ -380,6 +471,23 @@ function extractInterests(text: string): string[] {
   return extracted;
 }
 
+function extractPreferenceSignals(text: string): AdvisorPreferenceSignals {
+  const normalize = (low: readonly RegExp[], high: readonly RegExp[]): PreferenceLevel => {
+    if (low.some((pattern) => pattern.test(text))) return "low";
+    if (high.some((pattern) => pattern.test(text))) return "high";
+    return "unknown";
+  };
+
+  return {
+    mathTolerance: normalize(PREFERENCE_SIGNAL_PATTERNS.mathTolerance.low, PREFERENCE_SIGNAL_PATTERNS.mathTolerance.high),
+    codingTolerance: normalize(PREFERENCE_SIGNAL_PATTERNS.codingTolerance.low, PREFERENCE_SIGNAL_PATTERNS.codingTolerance.high),
+    englishPreference: normalize(PREFERENCE_SIGNAL_PATTERNS.englishPreference.low, PREFERENCE_SIGNAL_PATTERNS.englishPreference.high),
+    communicationPreference: normalize(PREFERENCE_SIGNAL_PATTERNS.communicationPreference.low, PREFERENCE_SIGNAL_PATTERNS.communicationPreference.high),
+    writingPreference: normalize(PREFERENCE_SIGNAL_PATTERNS.writingPreference.low, PREFERENCE_SIGNAL_PATTERNS.writingPreference.high),
+    stabilityPreference: normalize(PREFERENCE_SIGNAL_PATTERNS.stabilityPreference.low, PREFERENCE_SIGNAL_PATTERNS.stabilityPreference.high),
+  };
+}
+
 function extractSchoolCode(text: string) {
   const normalized = text.toLowerCase();
   const alias = Object.entries(SCHOOL_CODE_ALIASES).find(([key]) =>
@@ -462,6 +570,8 @@ function extractComparedMajors(text: string) {
     extractTwoItems(text, /(?:^|[^\p{L}\p{N}])so sanh\s+(.+?)\s+va\s+(.+?)(?:\s+(?:o|tai|neu|ftu|hust|nganh|nam)|$)/iu) ??
     extractTwoItems(text, /(?:^|[^\p{L}\p{N}])nên chọn ngành\s+(.+?)\s+hay\s+(.+?)(?:\?|$)/iu) ??
     extractTwoItems(text, /(?:^|[^\p{L}\p{N}])nen chon nganh\s+(.+?)\s+hay\s+(.+?)(?:\?|$)/iu) ??
+    extractTwoItems(text, /(?:^|[^\p{L}\p{N}])(.+?)\s+(?:khác|khac)\s+(.+?)(?:\s+(?:ở điểm nào|o diem nao|thế nào|the nao|nên chọn|nen chon|không|khong)|\?|$)/iu) ??
+    extractTwoItems(text, /(?:^|[^\p{L}\p{N}])(?:ngành\s+)?([\p{L}\s\-]{2,40}?)\s+(?:khác|khac)\s+(?:gì\s+(?:so\s+với\s+)?)?(?:ngành\s+)?([\p{L}\s\-]{2,40}?)(?:\?|$)/iu) ??
     extractTwoItems(text, /(?:^|[^\p{L}\p{N}])compare\s+(?:the\s+)?(?:benchmark(?:s)?\s+)?(?:of\s+|between\s+)?(.+?)\s+(?:and|vs|versus)\s+(.+?)(?:\?|$)/iu)
   );
 }
@@ -572,6 +682,7 @@ export function classifyAdvisorQuestion(question: string): AdvisorClassification
   const combination = extractCombination(text);
   const region = extractRegion(text);
   const interests = extractInterests(text);
+  const preferenceSignals = extractPreferenceSignals(text);
 
   // If score + combination are present, prioritize admission recommendation (SCORE_SUGGESTION)
   if (score !== undefined && combination !== undefined) {
@@ -608,6 +719,7 @@ export function classifyAdvisorQuestion(question: string): AdvisorClassification
     region,
     year: extractYear(text),
     interests: interests.length > 0 ? interests : undefined,
+    preferenceSignals,
   };
 
   const schoolCode = extractSchoolCode(text);
@@ -633,8 +745,17 @@ export function classifyAdvisorQuestion(question: string): AdvisorClassification
   if (intent === AdvisorIntent.COMPARE_MAJORS) {
     const majors = extractComparedMajors(text);
     if (majors) {
-      extracted.majorA = majors[0];
-      extracted.majorB = majors[1];
+      const PERSON_WORDS = /(?:^|[^\p{L}\p{N}])(em|bạn|mọi người|moi nguoi|tôi|toi|mình|minh|anh|chị|chi|con|cô|co|chú|chu|bác|bac)(?:$|[^\p{L}\p{N}])/iu;
+      const looksLikePerson =
+        PERSON_WORDS.test(majors[0]) || PERSON_WORDS.test(majors[1]);
+      if (!looksLikePerson) {
+        extracted.majorA = majors[0];
+        extracted.majorB = majors[1];
+      } else {
+        // Rollback intent về kết quả gốc của scoreIntent
+        intent = baseClassification.intent;
+        confidence = baseClassification.confidence;
+      }
     }
   }
 

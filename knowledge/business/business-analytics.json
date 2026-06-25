@@ -1,0 +1,145 @@
+{
+    "majorId": "banalytics-general-001",
+    "canonicalName": "Business Analytics",
+    "aliases": [
+      "Phân tích kinh doanh",
+      "BA"
+    ],
+    "category": "Business & Management",
+    "tags": [
+      "analytics",
+      "data",
+      "business intelligence",
+      "decision support",
+      "SQL",
+      "visualization",
+      "applied"
+    ],
+    "searchKeywords": [
+      "business analytics",
+      "phân tích kinh doanh",
+      "BI",
+      "business intelligence",
+      "phân tích dữ liệu kinh doanh",
+      "data analyst",
+      "dashboard"
+    ],
+    "scope": "general",
+    "status": "approved",
+    "version": 1,
+    "oneLineDefinition": "An applied discipline combining business knowledge with data analysis tools and methods to support evidence-based decision-making in organizations.",
+    "overview": "Business Analytics is a hybrid major sitting between Business Administration and Data Science. It trains students to extract insights from business data using statistical tools, SQL, and visualization platforms, then translate those insights into strategic recommendations. Unlike pure Data Science, it emphasizes business context and communication. Unlike QTKD, it is significantly more quantitative. In Vietnam, this is a newer major but is growing rapidly as companies invest in data infrastructure and need people who can bridge technical and business sides.",
+    "difficultyLevel": 4,
+    "mathIntensity": 4,
+    "codingIntensity": 3,
+    "englishIntensity": 4,
+    "foundationSubjects": [
+      "Statistics & Probability",
+      "SQL & Database Fundamentals",
+      "Business Processes & Strategy",
+      "Data Visualization",
+      "Excel for Business Analytics"
+    ],
+    "advancedSubjects": [
+      "Predictive Analytics & Machine Learning (applied)",
+      "Marketing Analytics",
+      "Financial Analytics",
+      "Supply Chain Analytics",
+      "A/B Testing & Experimentation",
+      "Dashboarding & BI Tools"
+    ],
+    "toolsAndTechnologies": [
+      "SQL (PostgreSQL / MySQL)",
+      "Python (pandas, matplotlib) or R",
+      "Power BI / Tableau",
+      "Excel (advanced — pivot tables, Power Query, macros)",
+      "Google Analytics / GA4",
+      "Looker / Metabase"
+    ],
+    "typicalProjects": [
+      "Build a sales performance dashboard for a retail chain",
+      "Identify customer churn drivers from transactional data",
+      "Design an A/B test to optimize a checkout conversion rate",
+      "Build a demand forecasting model using historical sales data",
+      "Present a data-driven market sizing analysis for a new product"
+    ],
+    "requiredSkills": [
+      "SQL fluency — the primary language of business data",
+      "Statistical reasoning — understanding what results mean, not just how to generate them",
+      "Data storytelling — translating numbers into business recommendations",
+      "Tool proficiency in at least one BI platform (Power BI or Tableau)",
+      "Business domain knowledge — analytics without context produces meaningless output"
+    ],
+    "suitableFor": [
+      "Students who want to work with data but prefer business application over deep ML research",
+      "Those who enjoy both numbers and communication — the job requires both",
+      "Students who like solving specific business problems with data evidence",
+      "Those who want a technical edge within a business career without going full software engineering"
+    ],
+    "notSuitableFor": [
+      "Students who want to avoid quantitative work and statistics",
+      "Those who want to build software products or go deep into AI/ML modeling",
+      "Students who prefer creative or interpersonal work over data analysis"
+    ],
+    "keyTakeaways": [
+      "SQL is the single most important technical skill in this major — master it early",
+      "Business Analytics roles often have more impact than pure analyst roles because graduates speak both data and business language",
+      "This major is newer in Vietnam — being an early graduate gives a meaningful advantage in a less saturated market",
+      "The best Business Analytics graduates can run an analysis AND present to a non-technical executive audience"
+    ],
+    "cautionNotes": [
+      "Programs vary in how technical they actually are — some are closer to QTKD with a data veneer; check the curriculum for SQL, statistics, and Python",
+      "The title 'Business Analyst' in Vietnam sometimes means requirements analyst (IT/BA) rather than data analyst — clarify role scope in job applications",
+      "Without genuine quantitative skills, graduates are competing against both QTKD and Data Science graduates in a middle ground"
+    ],
+    "careerPaths": [
+      "Business Analyst / Data Analyst",
+      "BI Analyst / BI Developer",
+      "Product Analyst",
+      "Marketing Analyst",
+      "Financial Analyst (with data focus)",
+      "Operations Analyst",
+      "Analytics Manager (senior path)"
+    ],
+    "marketDemand": "Growing fast. E-commerce, fintech, retail, and logistics companies in Vietnam are actively hiring data-literate business analysts. The market is less saturated than pure Data Science roles.",
+    "salaryOutlook": "Entry-level Business Analysts earn 12–20M VND/month in Vietnam. BI Analysts with strong SQL and dashboarding skills earn 18–30M. Senior analytics roles at product companies or MNCs earn 35–60M.",
+    "futureTrend": "Demand is accelerating as Vietnamese companies mature their data infrastructure. AI tools are automating basic reporting, raising the bar — future roles require insight generation and decision support, not just dashboard building.",
+    "commonMisconceptions": [
+      "Business Analytics is just making dashboards — senior roles involve experimental design, causal analysis, and strategic decision support",
+      "Business Analytics is the same as Data Science — BA is more applied and business-focused; DS goes deeper into modeling and ML",
+      "You need to be a coder to work in Business Analytics — SQL and Excel fluency matter more than programming for most BA roles"
+    ],
+    "relatedMajors": [
+      {
+        "major": "Data Science",
+        "relationship": "similar"
+      },
+      {
+        "major": "Business Administration",
+        "relationship": "foundation"
+      },
+      {
+        "major": "Economics",
+        "relationship": "similar"
+      },
+      {
+        "major": "Information Technology",
+        "relationship": "similar"
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the difference between Business Analytics and Data Science?",
+        "answer": "Business Analytics focuses on applying data to solve specific business problems, with emphasis on communication and business context. Data Science goes deeper into statistical modeling, machine learning, and algorithmic methods. BA roles tend to be more common and accessible; DS roles require stronger mathematical and programming foundations."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Internal ZPath major profile",
+        "type": "internal",
+        "retrievedAt": "2026-06"
+      }
+    ],
+    "confidenceLevel": "high",
+    "lastUpdated": "2026-06-23"
+  }
