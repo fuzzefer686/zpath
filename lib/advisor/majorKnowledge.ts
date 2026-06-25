@@ -1,8 +1,6 @@
-import { existsSync, readdirSync, readFileSync } from "fs";
-import path from "path";
-
 import { AdvisorIntent } from "@/lib/advisor/intents";
 import type { AdvisorPreferenceSignals } from "@/lib/advisor/classifier";
+import { supabaseServer } from "@/src/lib/db/supabaseServer";
 
 export type MajorProfile = {
   majorId: string;
@@ -90,12 +88,7 @@ export type MajorKnowledgeContext = {
   reason?: string;
 };
 
-const KNOWLEDGE_ROOT = path.join(process.cwd(), "knowledge");
 let cachedMajorIndex: MajorIndexEntry[] | null = null;
-
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return typeof value === "object" && value !== null && !Array.isArray(value);
-}
 
 function normalizeText(value: string) {
   return value
@@ -107,36 +100,25 @@ function normalizeText(value: string) {
     .replace(/\s+/g, " ");
 }
 
-function readJsonFiles(dir: string): string[] {
-  if (!existsSync(dir)) return [];
-
-  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) return readJsonFiles(fullPath);
-    return entry.isFile() && entry.name.endsWith(".json") ? [fullPath] : [];
-  });
-}
-
-function parseMajorProfile(filePath: string): MajorProfile | null {
-  try {
-    const parsed = JSON.parse(readFileSync(filePath, "utf8")) as unknown;
-    if (!isRecord(parsed)) return null;
-    if (typeof parsed.majorId !== "string" || typeof parsed.canonicalName !== "string") {
-      return null;
-    }
-    return parsed as MajorProfile;
-  } catch {
-    return null;
-  }
-}
-
-export function loadMajorProfiles() {
+export async function loadMajorProfiles(): Promise<MajorIndexEntry[]> {
   if (cachedMajorIndex) return cachedMajorIndex;
 
-  cachedMajorIndex = readJsonFiles(KNOWLEDGE_ROOT)
-    .map((filePath) => {
-      const profile = parseMajorProfile(filePath);
-      return profile ? { filePath, profile } : null;
+  const { data, error } = await supabaseServer
+    .from("major_profiles")
+    .select("profile_data")
+    .eq("status", "approved");
+
+  if (error || !data) {
+    console.error("[majorKnowledge] Failed to load profiles from DB:", error?.message);
+    cachedMajorIndex = [];
+    return [];
+  }
+
+  cachedMajorIndex = data
+    .map((row) => {
+      const profile = row.profile_data as unknown as MajorProfile;
+      if (!profile?.majorId || !profile?.canonicalName) return null;
+      return { filePath: profile.majorId, profile };
     })
     .filter((entry): entry is MajorIndexEntry => Boolean(entry));
 
@@ -206,9 +188,9 @@ function scoreProfileMatch(query: string, profile: MajorProfile): ResolvedMajorP
   return null;
 }
 
-export function resolveMajorProfiles(queries: string[], maxResults = 2): ResolvedMajorProfile[] {
+export async function resolveMajorProfiles(queries: string[], maxResults = 2): Promise<ResolvedMajorProfile[]> {
   const results = new Map<string, ResolvedMajorProfile>();
-  const profiles = loadMajorProfiles();
+  const profiles = await loadMajorProfiles();
 
   for (const query of queries.filter(Boolean)) {
     const matches = profiles
@@ -361,12 +343,12 @@ function scoreProfileBySignals(
   return score;
 }
 
-function resolveMajorProfilesByCategory(
+async function resolveMajorProfilesByCategory(
   categoryKeywords: string[],
   maxResults = 6,
   signals?: AdvisorPreferenceSignals,
-): { profiles: ResolvedMajorProfile[]; requestedClusters: string[] } {
-  const allProfiles = loadMajorProfiles();
+): Promise<{ profiles: ResolvedMajorProfile[]; requestedClusters: string[] }> {
+  const allProfiles = await loadMajorProfiles();
 
   // Step 1: try cluster-based resolution first (prevents alias confusion)
   const targetCategories = resolveTargetCategories(categoryKeywords);
@@ -467,7 +449,7 @@ function resolveMajorProfilesByCategory(
   };
 }
 
-export function buildMajorKnowledgeContext({
+export async function buildMajorKnowledgeContext({
   intent,
   matchedMajors,
   secondaryIntent,
@@ -481,11 +463,11 @@ export function buildMajorKnowledgeContext({
   decisionQuestion?: string;
   studentPreferenceSignals?: AdvisorPreferenceSignals;
   categoryKeywords?: string[];
-}): MajorKnowledgeContext {
+}): Promise<MajorKnowledgeContext> {
   // PERSONAL_FIT (CHOOSE_MAJOR): cluster-based retrieval — load ALL profiles
   // from the matching category cluster, not by alias/name match.
   if (intent === AdvisorIntent.PERSONAL_FIT) {
-    const { profiles: resolved, requestedClusters } = resolveMajorProfilesByCategory(
+    const { profiles: resolved, requestedClusters } = await resolveMajorProfilesByCategory(
       [...(categoryKeywords ?? []), ...(matchedMajors ?? [])],
       6,
       studentPreferenceSignals,
@@ -536,7 +518,7 @@ export function buildMajorKnowledgeContext({
   }
 
   const maxResults = intent === AdvisorIntent.COMPARE_MAJORS ? 2 : 1;
-  const resolved = resolveMajorProfiles(matchedMajors, maxResults);
+  const resolved = await resolveMajorProfiles(matchedMajors, maxResults);
   const decisionHints =
     intent === AdvisorIntent.COMPARE_MAJORS && studentPreferenceSignals
       ? buildDecisionHints({

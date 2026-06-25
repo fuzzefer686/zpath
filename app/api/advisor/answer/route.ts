@@ -471,7 +471,7 @@ async function getInternalContextForAdvisor({
       ].filter((value): value is string => Boolean(value));
       return {
         verifiedProgram,
-        advisorMajorKnowledge: buildMajorKnowledgeContext({
+        advisorMajorKnowledge: await buildMajorKnowledgeContext({
           intent,
           matchedMajors: matchedMajors.length ? matchedMajors : [message],
           secondaryIntent: AdvisorIntent.PERSONAL_FIT,
@@ -505,7 +505,7 @@ async function getInternalContextForAdvisor({
       ].filter((value): value is string => Boolean(value));
       return {
         verifiedProgram,
-        advisorMajorKnowledge: buildMajorKnowledgeContext({
+        advisorMajorKnowledge: await buildMajorKnowledgeContext({
           intent,
           matchedMajors: matchedMajors.length ? matchedMajors : [message],
           secondaryIntent: AdvisorIntent.PERSONAL_FIT,
@@ -625,7 +625,7 @@ async function getInternalContextForAdvisor({
     case AdvisorIntent.PERSONAL_FIT:
       return {
         verifiedProgram,
-        advisorMajorKnowledge: buildMajorKnowledgeContext({
+        advisorMajorKnowledge: await buildMajorKnowledgeContext({
           intent,
           matchedMajors: majorKnowledgeMatchedMajors,
           decisionQuestion: message,

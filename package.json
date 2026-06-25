@@ -9,7 +9,8 @@
     "dev": "next dev --webpack -p 3001",
     "build": "next build",
     "start": "next start -p 3001",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:seed:knowledge": "npx tsx scripts/seed-major-knowledge.ts"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
