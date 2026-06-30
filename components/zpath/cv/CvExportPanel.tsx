@@ -18,13 +18,17 @@ function formatMmSs(ms: number): string {
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
 
+interface CvExportPanelProps {
+  templateId?: string | null;
+}
+
 /**
  * Ephemeral CV export (§13.8). Publishing a CV (PDF) bundles the user's PII, so
  * it is gated behind an explicit consent acknowledgement (§13.3) before render.
  * The file lives 30 minutes then a background job hard-deletes it. The countdown
  * is UX only — purge happens server-side regardless of this tab.
  */
-export function CvExportPanel() {
+export function CvExportPanel({ templateId }: CvExportPanelProps = {}) {
   const [consent, setConsent] = useState(false);
   const [isRendering, setIsRendering] = useState(false);
   const [isPurging, setIsPurging] = useState(false);
@@ -64,7 +68,11 @@ export function CvExportPanel() {
     setError(null);
     setExpired(false);
     try {
-      const res = await fetch("/api/cv/render", { method: "POST" });
+      const res = await fetch("/api/cv/render", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ templateId: templateId ?? null }),
+      });
       const json = await res.json();
       if (!res.ok || json.error) throw new Error(json.error || "Xuất bản CV thất bại.");
       setResult({ url: json.url, cvId: json.cvId, purgeAt: json.purgeAt });

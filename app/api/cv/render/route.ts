@@ -17,7 +17,23 @@ const EXPORT_BUCKET = "cv-exports";
 // URL at 30 minutes too — it expires no later than the file is hard-deleted.
 const SIGNED_URL_TTL_SECONDS = 30 * 60;
 
-export async function POST() {
+// Resolve the concrete, active template the user asked for. Falls back to the
+// 'basic' default (or the first active template) so a render always has a real
+// template_id — never the hardcoded "default" placeholder.
+async function resolveTemplateId(requested: string | null): Promise<string | null> {
+  const { data, error } = await supabaseServer
+    .from("cv_templates")
+    .select("id, slug")
+    .eq("is_active", true);
+  if (error || !data?.length) return null;
+  if (requested) {
+    const match = data.find((t) => t.id === requested || t.slug === requested);
+    if (match) return match.id;
+  }
+  return (data.find((t) => t.slug === "basic") ?? data[0]).id;
+}
+
+export async function POST(req: Request) {
   try {
     if (!FEATURES.cvBuilder.enabled) {
       return NextResponse.json({ error: "Tính năng CV chưa được bật." }, { status: 403 });
@@ -28,6 +44,11 @@ export async function POST() {
       return NextResponse.json({ error: "Chưa đăng nhập." }, { status: 401 });
     }
     const userId = auth.user.id;
+
+    // Optional template selection from the request body (id or slug).
+    const body = await req.json().catch(() => ({}));
+    const requestedTemplate =
+      body && typeof body.templateId === "string" ? body.templateId.trim() : null;
 
     // 0) Rate limit check: 10 renders / hour
     const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString();
@@ -60,9 +81,11 @@ export async function POST() {
     }
     const cvDocument = doc as CVDocument;
 
-    // 2) Render server-side via the default deterministic engine.
+    // 2) Render server-side via the default deterministic engine, using the
+    //    template the user selected (drives colours/font/spacing via layout_config).
+    const templateId = await resolveTemplateId(requestedTemplate);
     const renderer = new ReactPdfRenderer();
-    const pdfBytes = await renderer.render(cvDocument, "default");
+    const pdfBytes = await renderer.render(cvDocument, templateId ?? "default");
 
     // 3) Build the owner-scoped storage path. First segment is the trusted
     //    userId, so it satisfies public.cv_storage_owns_path() by construction
@@ -96,6 +119,7 @@ export async function POST() {
       .insert({
         id: cvId,
         user_id: userId,
+        template_id: templateId,
         storage_path: storagePath,
         format: "pdf",
         data_snapshot: cvDocument,

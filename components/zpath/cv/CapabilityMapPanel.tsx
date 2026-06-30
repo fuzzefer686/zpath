@@ -10,7 +10,6 @@ import {
   ChevronDown,
   ChevronUp,
   Info,
-  PauseCircle,
   ExternalLink,
   AlertTriangle,
   BookOpen,
@@ -49,16 +48,6 @@ type T16T17Action =
   | "run_recommend_courses"
   | "run_suggest_career_direction";
 
-interface SponsoredPlacement {
-  id: string;
-  sponsor_name: string;
-  title: string;
-  poster_url: string | null;
-  target_url: string;
-  discount_label: string | null;
-  context_tags: string[] | null;
-}
-
 const IMPORTANCE_LABEL: Record<string, string> = {
   high: "Cao",
   medium: "Vừa",
@@ -95,8 +84,6 @@ export function CapabilityMapPanel() {
   // Which result category is open in the popup (null = closed).
   const [activeCat, setActiveCat] = useState<CatKey | null>(null);
 
-  const [sponsoredPlacements, setSponsoredPlacements] = useState<SponsoredPlacement[]>([]);
-
   const fetchRecos = useCallback(async () => {
     setLoadingFetch(true);
     try {
@@ -128,51 +115,6 @@ export function CapabilityMapPanel() {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchRecos();
   }, [fetchRecos]);
-
-  // Extract unique tags from current recommendations
-  const getContextTags = useCallback(() => {
-    const tags = new Set<string>();
-    recos.forEach((r) => {
-      if (r.type === "skill_gap") {
-        const name = (r.payload as { name?: string })?.name;
-        if (name) tags.add(name.toLowerCase());
-        const category = (r.payload as { category?: string })?.category;
-        if (category) tags.add(category.toLowerCase());
-      }
-      if (r.type === "cert_gap") {
-        const certName = (r.payload as { certName?: string })?.certName;
-        if (certName) tags.add(certName.toLowerCase());
-        const certTypeCode = (r.payload as { certTypeCode?: string })?.certTypeCode;
-        if (certTypeCode) tags.add(certTypeCode.toLowerCase());
-      }
-      if (r.type === "course") {
-        const courseTags = (r.payload as { tags?: string[] })?.tags;
-        if (Array.isArray(courseTags)) {
-          courseTags.forEach((t) => tags.add(t.toLowerCase()));
-        }
-      }
-    });
-    return Array.from(tags);
-  }, [recos]);
-
-  // Fetch sponsored placements matching context tags
-  useEffect(() => {
-    const fetchSponsored = async () => {
-      const tags = getContextTags();
-      try {
-        const url = `/api/sponsored?tags=${encodeURIComponent(tags.join(","))}`;
-        const res = await fetch(url);
-        if (res.ok) {
-          const json = (await res.json()) as { placements?: SponsoredPlacement[] };
-          setSponsoredPlacements(json.placements ?? []);
-        }
-      } catch (err) {
-        console.error("Failed to fetch sponsored placements:", err);
-      }
-    };
-
-    fetchSponsored();
-  }, [recos, getContextTags]);
 
   const runTask = async (action: T16T17Action) => {
     setLoadingAction(action);
@@ -331,6 +273,9 @@ export function CapabilityMapPanel() {
     </Button>
   );
 
+  // AI unavailable → hide the whole panel (caller may also gate this).
+  if (aiEnabled === false) return null;
+
   return (
     <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-white/60 p-6 shadow-glow backdrop-blur-xl transition hover:shadow-lg space-y-4 dark:border-white/10 dark:bg-zinc-900/60">
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
@@ -364,36 +309,29 @@ export function CapabilityMapPanel() {
 
       {expanded && (
         <>
-          {/* Trigger buttons or kill-switch banner */}
-          {aiEnabled === false ? (
-            <div className="flex items-center gap-2 rounded-xl bg-muted/60 border border-border px-3 py-2.5 text-xs text-muted-foreground">
-              <PauseCircle className="h-3.5 w-3.5 shrink-0" />
-              Tính năng phân tích AI đang tạm dừng.
-            </div>
-          ) : (
-            <div className="flex flex-wrap gap-2">
-              {btn(
-                "run_analyze_skill_gap",
-                <Sparkles className="h-3.5 w-3.5 text-primary" />,
-                "Thiếu kỹ năng",
-              )}
-              {btn(
-                "run_analyze_cert_gap",
-                <AlertTriangle className="h-3.5 w-3.5 text-primary" />,
-                "Thiếu chứng chỉ",
-              )}
-              {btn(
-                "run_recommend_courses",
-                <BookOpen className="h-3.5 w-3.5 text-primary" />,
-                "Gợi ý khoá học",
-              )}
-              {btn(
-                "run_suggest_career_direction",
-                <Compass className="h-3.5 w-3.5 text-primary" />,
-                "Định hướng nghề",
-              )}
-            </div>
-          )}
+          {/* Trigger buttons (panel is hidden entirely when AI is unavailable) */}
+          <div className="flex flex-wrap gap-2">
+            {btn(
+              "run_analyze_skill_gap",
+              <Sparkles className="h-3.5 w-3.5 text-primary" />,
+              "Thiếu kỹ năng",
+            )}
+            {btn(
+              "run_analyze_cert_gap",
+              <AlertTriangle className="h-3.5 w-3.5 text-primary" />,
+              "Thiếu chứng chỉ",
+            )}
+            {btn(
+              "run_recommend_courses",
+              <BookOpen className="h-3.5 w-3.5 text-primary" />,
+              "Gợi ý khoá học",
+            )}
+            {btn(
+              "run_suggest_career_direction",
+              <Compass className="h-3.5 w-3.5 text-primary" />,
+              "Định hướng nghề",
+            )}
+          </div>
 
           {/* Error */}
           {error && (
@@ -440,58 +378,6 @@ export function CapabilityMapPanel() {
             </p>
           )}
 
-          {/* Sponsored Placements Section */}
-          {sponsoredPlacements.length > 0 && (
-            <div className="border-t border-primary/10 pt-4 mt-4 space-y-3">
-              <div className="flex items-center gap-1.5">
-                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                  Nội dung tài trợ
-                </span>
-                <span className="bg-primary/15 text-primary text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-primary/20 uppercase tracking-wide">
-                  Tài trợ
-                </span>
-              </div>
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {sponsoredPlacements.map((ad) => (
-                  <a
-                    key={ad.id}
-                    href={`/api/sponsored/click?id=${ad.id}&context=capability_map`}
-                    className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary"
-                  >
-                    {ad.poster_url && (
-                      <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={ad.poster_url}
-                          alt={ad.title}
-                          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                        />
-                        {ad.discount_label && (
-                          <span className="absolute left-2 top-2 rounded-full bg-red-500/90 px-2 py-0.5 text-[9px] font-bold text-white uppercase">
-                            {ad.discount_label}
-                          </span>
-                        )}
-                      </div>
-                    )}
-                    <div className="flex flex-1 flex-col p-3">
-                      <div className="flex-1">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-primary">
-                          {ad.sponsor_name}
-                        </span>
-                        <h5 className="mt-0.5 font-display text-sm font-semibold text-foreground line-clamp-2 group-hover:text-primary transition-colors">
-                          {ad.title}
-                        </h5>
-                      </div>
-                      <div className="mt-3 flex items-center justify-between text-xs font-semibold text-primary">
-                        <span>Tìm hiểu thêm</span>
-                        <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-                      </div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
         </>
       )}
 

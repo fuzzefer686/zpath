@@ -39,10 +39,23 @@ import { SummaryForm } from "./cv/SummaryForm";
 import { ItemDialog } from "./cv/ItemDialog";
 import { LayoutManager } from "./cv/LayoutManager";
 import { CvExportPanel } from "./cv/CvExportPanel";
+import { TemplatePicker } from "./cv/TemplatePicker";
 // CvSharePanel (public share link) tạm ẩn theo yêu cầu — consent chuyển vào CvExportPanel.
 // Backend share routes/RPC vẫn giữ nguyên để bật lại sau.
 import { AiSuggestionPanel } from "./cv/AiSuggestionPanel";
 import { CapabilityMapPanel } from "./cv/CapabilityMapPanel";
+import { CvSectionWizard, type WizardStep } from "./cv/CvSectionWizard";
+
+// Short, friendly labels for the wizard progress rail (one per CV block).
+const SECTION_TITLES: Record<string, string> = {
+  basic: "Thông tin cơ bản",
+  summary: "Tóm tắt & Mục tiêu",
+  education: "Học vấn & Học bạ",
+  experience_skills: "Kinh nghiệm & Kỹ năng",
+  certs_awards: "Chứng chỉ & Giải thưởng",
+  activities: "Hoạt động ngoại khóa",
+  personality: "Trắc nghiệm tính cách",
+};
 
 interface PersonalityQuestion {
   id: string;
@@ -97,6 +110,10 @@ export function ProfilePage() {
   // Load CV Builder data
   const { data: cvData, isLoading: cvLoading, error: cvError, mutate: mutateCv, refresh } = useCvData();
 
+  // AI availability — single source of truth for whether the AI input panels
+  // (gợi ý AI + bản đồ năng lực) render at all. null = unknown/loading.
+  const [aiAvailable, setAiAvailable] = useState<boolean | null>(null);
+
   // Personality test state
   const [personalityResult, setPersonalityResult] = useState<PersonalityResult | null>(null);
   const [isTestingPersonality, setIsTestingPersonality] = useState(false);
@@ -121,6 +138,25 @@ export function ProfilePage() {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchPersonality();
+  }, []);
+
+  // Probe AI availability once so we can hide the AI input panels when the
+  // feature is disabled (kill-switch / not configured / under-16).
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      try {
+        const res = await fetch("/api/cv/ai");
+        if (!res.ok) return;
+        const json = (await res.json()) as { aiEnabled?: boolean };
+        if (active && typeof json.aiEnabled === "boolean") setAiAvailable(json.aiEnabled);
+      } catch {
+        // Leave as null (unknown) — panels stay hidden until we know it's on.
+      }
+    })();
+    return () => {
+      active = false;
+    };
   }, []);
 
   const startTest = async () => {
@@ -211,6 +247,7 @@ export function ProfilePage() {
 
   // Tabs: 'general' (legacy Profile) or 'cv' (CV Builder)
   const [activeTab, setActiveTab] = useState<"general" | "cv">("cv");
+  const [selectedTemplateId, setSelectedTemplateId] = useState<string | null>(null);
 
   // Modal control states
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -247,6 +284,22 @@ export function ProfilePage() {
     } finally {
       setIsUploading(false);
     }
+  };
+
+  // Avatar upload from inside the CV builder (BasicInfoForm). The CV photo lives
+  // in cv_profiles.avatar_url (a different column than the account avatar in
+  // profiles), so it has its own endpoint. Refresh CV data afterwards so the new
+  // photo appears in the preview/export.
+  const handleCvAvatarUpload = async (file: File) => {
+    const form = new FormData();
+    form.append("avatar", file);
+    const res = await fetch("/api/profile/cv/avatar", { method: "POST", body: form });
+    const json = await res.json().catch(() => ({}));
+    if (!res.ok || json.error) {
+      throw new Error(json.error || "Không thể tải lên ảnh đại diện CV.");
+    }
+    await refresh();
+    showToast("Ảnh đại diện CV đã được cập nhật!");
   };
 
   const handleSave = async (event: React.FormEvent) => {
@@ -727,17 +780,28 @@ export function ProfilePage() {
                 const cvProfile = cvData.profile;
                 return (
                   <div className="space-y-6">
-                    {/* Ephemeral PDF export (§13.8): consent gate + render + 30-min countdown + purge now */}
-                    <CvExportPanel />
-
-                    {/* AI Suggestions and Capability Map Panels */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <AiSuggestionPanel
-                        onSummaryAccepted={refresh}
-                        onSkillAccepted={refresh}
+                    {/* Template picker — choose archetype + colour scheme */}
+                    <div className="relative">
+                      <TemplatePicker
+                        selectedTemplateId={selectedTemplateId}
+                        onSelect={setSelectedTemplateId}
                       />
-                      <CapabilityMapPanel />
                     </div>
+
+                    {/* Ephemeral PDF export (§13.8): consent gate + render + 30-min countdown + purge now */}
+                    <CvExportPanel templateId={selectedTemplateId} />
+
+                    {/* AI Suggestions and Capability Map Panels — hidden entirely
+                        when AI is unavailable (kill-switch / not configured / <16). */}
+                    {aiAvailable === true && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <AiSuggestionPanel
+                          onSummaryAccepted={refresh}
+                          onSkillAccepted={refresh}
+                        />
+                        <CapabilityMapPanel />
+                      </div>
+                    )}
 
                     {/* Personality (MBTI) — surfaced in the CV tab (§5.5) */}
                     <motion.div
@@ -813,16 +877,19 @@ export function ProfilePage() {
                       }}
                     />
 
-                    {/* Render CV sections dynamically based on layout settings */}
-                    {(cvProfile.sections_config?.order || ["basic", "summary", "education", "experience_skills", "certs_awards", "activities"]).map((sectionKey) => {
-                      const isVisible = cvProfile.sections_config?.visibility?.[sectionKey] !== false;
-                      if (!isVisible) return null;
-
-                      switch (sectionKey) {
+                    {/* CV blocks shown one at a time as a step-by-step wizard
+                        (full width, never side-by-side columns). */}
+                    {(() => {
+                      const order = cvProfile.sections_config?.order || ["basic", "summary", "education", "experience_skills", "certs_awards", "activities"];
+                      const steps: WizardStep[] = order
+                        .filter((sectionKey) => cvProfile.sections_config?.visibility?.[sectionKey] !== false)
+                        .map((sectionKey): WizardStep | null => {
+                          const content = (() => {
+                            switch (sectionKey) {
                         case "basic":
                           return (
                             <SectionWrapper key="basic" title="1. Thông tin cơ bản" icon={<User className="h-5 w-5" />}>
-                              <BasicInfoForm profile={cvProfile} onSave={handleSaveBasic} />
+                              <BasicInfoForm profile={cvProfile} onSave={handleSaveBasic} onUploadAvatar={handleCvAvatarUpload} />
                             </SectionWrapper>
                           );
                         case "summary":
@@ -900,7 +967,7 @@ export function ProfilePage() {
                         );
                       case "experience_skills":
                         return (
-                          <div key="experience_skills" className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                          <div key="experience_skills" className="space-y-6">
                             {/* Experiences */}
                             <SectionWrapper
                               title="4a. Kinh nghiệm & Dự án"
@@ -1020,7 +1087,7 @@ export function ProfilePage() {
                         );
                       case "certs_awards":
                         return (
-                          <div key="certs_awards" className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                          <div key="certs_awards" className="space-y-6">
                             {/* Certificates */}
                             <SectionWrapper
                               title="5a. Chứng chỉ"
@@ -1256,10 +1323,17 @@ export function ProfilePage() {
                               )}
                             </SectionWrapper>
                           );
-                      default:
-                        return null;
-                    }
-                  })}
+                              default:
+                                return null;
+                            }
+                          })();
+                          return content
+                            ? { key: sectionKey, title: SECTION_TITLES[sectionKey] ?? sectionKey, content }
+                            : null;
+                        })
+                        .filter((s): s is WizardStep => s !== null);
+                      return <CvSectionWizard steps={steps} />;
+                    })()}
                 </div>
               )})()}
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { Sparkles, Check, X, Loader2, ChevronDown, ChevronUp, Info, PauseCircle } from "lucide-react";
+import { Sparkles, Check, X, Loader2, ChevronDown, ChevronUp, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CvResultsModal } from "./CvResultsModal";
 
@@ -163,6 +163,9 @@ export function AiSuggestionPanel({ onSummaryAccepted, onSkillAccepted }: AiSugg
   );
   const hasRecos = summaryRecos.length > 0 || skillRecos.length > 0;
 
+  // AI unavailable → hide the whole panel (caller may also gate this).
+  if (aiEnabled === false) return null;
+
   return (
     <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-white/60 p-6 shadow-glow backdrop-blur-xl transition hover:shadow-lg space-y-4 dark:border-white/10 dark:bg-zinc-900/60">
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
@@ -196,45 +199,38 @@ export function AiSuggestionPanel({ onSummaryAccepted, onSkillAccepted }: AiSugg
 
       {expanded && (
         <>
-          {/* Trigger buttons or kill-switch banner */}
-          {aiEnabled === false ? (
-            <div className="flex items-center gap-2 rounded-xl bg-muted/60 border border-border px-3 py-2.5 text-xs text-muted-foreground">
-              <PauseCircle className="h-3.5 w-3.5 shrink-0" />
-              Tính năng gợi ý AI đang tạm dừng.
-            </div>
-          ) : (
-            <div className="flex flex-wrap gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                disabled={loadingSummary}
-                onClick={() => runTask("run_enrich_summary")}
-                className="rounded-xl text-xs h-8 gap-1.5 border-primary/30 hover:bg-primary/5 hover:text-primary"
-              >
-                {loadingSummary ? (
-                  <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                ) : (
-                  <Sparkles className="h-3.5 w-3.5 text-primary" />
-                )}
-                {loadingSummary ? "Đang tạo..." : "Gợi ý tóm tắt"}
-              </Button>
+          {/* Trigger buttons (panel is hidden entirely when AI is unavailable) */}
+          <div className="flex flex-wrap gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={loadingSummary}
+              onClick={() => runTask("run_enrich_summary")}
+              className="rounded-xl text-xs h-8 gap-1.5 border-primary/30 hover:bg-primary/5 hover:text-primary"
+            >
+              {loadingSummary ? (
+                <Loader2 className="h-3.5 w-3.5 animate-spin" />
+              ) : (
+                <Sparkles className="h-3.5 w-3.5 text-primary" />
+              )}
+              {loadingSummary ? "Đang tạo..." : "Gợi ý tóm tắt"}
+            </Button>
 
-              <Button
-                variant="outline"
-                size="sm"
-                disabled={loadingSkills}
-                onClick={() => runTask("run_suggest_skills")}
-                className="rounded-xl text-xs h-8 gap-1.5 border-primary/30 hover:bg-primary/5 hover:text-primary"
-              >
-                {loadingSkills ? (
-                  <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                ) : (
-                  <Sparkles className="h-3.5 w-3.5 text-primary" />
-                )}
-                {loadingSkills ? "Đang tạo..." : "Gợi ý kỹ năng"}
-              </Button>
-            </div>
-          )}
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={loadingSkills}
+              onClick={() => runTask("run_suggest_skills")}
+              className="rounded-xl text-xs h-8 gap-1.5 border-primary/30 hover:bg-primary/5 hover:text-primary"
+            >
+              {loadingSkills ? (
+                <Loader2 className="h-3.5 w-3.5 animate-spin" />
+              ) : (
+                <Sparkles className="h-3.5 w-3.5 text-primary" />
+              )}
+              {loadingSkills ? "Đang tạo..." : "Gợi ý kỹ năng"}
+            </Button>
+          </div>
 
           {/* Error */}
           {error && (
