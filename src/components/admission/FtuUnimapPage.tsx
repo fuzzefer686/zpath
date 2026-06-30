@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import { formatVND } from "@/lib/utils";
+import { Ad } from "@/components/zpath/Ad";
 import { BrandedAdmissionSectionNav } from "./BrandedAdmissionSectionNav";
 import type {
   AdmissionInfo,
@@ -543,6 +544,10 @@ export function FtuUnimapPage({
           </div>
         </div>
       </section>
+
+      <div className="container-page pt-6">
+        <Ad placement="unimapDetail" className="mx-auto max-w-3xl" />
+      </div>
 
       <div className="container-page grid gap-8 pb-16 lg:grid-cols-[220px_minmax(0,1fr)] lg:items-start">
         <aside className="sticky top-4 z-20 pt-6 lg:pt-10">
