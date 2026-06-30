@@ -1,0 +1,217 @@
+{
+  "university_code": "HVN",
+  "university_name": "Học viện Nông nghiệp Việt Nam",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/hoc-vien-nong-nghiep-viet-nam-HVN.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 23,
+  "data": [
+    {
+      "school_major_code": "HVN01",
+      "major_name": "Thú y",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B08; C03; C04; D01; D07; X01; X07; X08",
+      "quota": 659,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN02",
+      "major_name": "Chăn nuôi thú y - Thuỷ sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B08; C03; C04; D01; D07; X01; X07; X08",
+      "quota": 240,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN03",
+      "major_name": "Nông nghiệp và cảnh quan",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B08; C03; C04; D01; D07; X01; X07; X08",
+      "quota": 135,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN04",
+      "major_name": "Công nghệ kỹ thuật ô tô và Cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A03; B08; C01; C02; C03; D01; X02; X07; X08",
+      "quota": 540,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN05",
+      "major_name": "Kỹ thuật cơ khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A03; B08; C01; C02; C03; D01; X02; X07; X08",
+      "quota": 130,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN06",
+      "major_name": "Kỹ thuật điện, Điện từ và Tự động hoá",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A03; B08; C01; C02; C03; D01; X02; X07; X08",
+      "quota": 280,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN07",
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; B08; C02; C03; C04; D01; X01; X03; X04",
+      "quota": 960,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN08",
+      "major_name": "Kế toán, Quản trị kinh doanh và Thương mại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; B08; C02; C03; C04; D01; X01; X03; X04",
+      "quota": 2065,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN09",
+      "major_name": "Công nghệ sinh học và Công nghệ dược liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B01; B03; B08; C02; D01; D07; X07; X08",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN10",
+      "major_name": "Công nghệ thực phẩm và Chế biến",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B01; B03; B08; C03; D01; D07; X07; X08",
+      "quota": 415,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN11",
+      "major_name": "Kinh tế và Quản lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; B08; C02; C03; C04; D01; X01; X03; X04",
+      "quota": 565,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN12",
+      "major_name": "Xã hội học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C00; C03; C04; D01; D14; D15; X03; X04; X70; X74",
+      "quota": 220,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN13",
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C00; C03; C04; D01; D14; D15; X03; X04; X70; X74",
+      "quota": 265,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN14",
+      "major_name": "Công nghệ thông tin và Kỹ thuật số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A03; B08; C01; C02; C03; D01; X02; X07; X08",
+      "quota": 500,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN15",
+      "major_name": "Quản lý đất đai, Bất động sản và Môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B08; C01; C02; C03; C04; D01; X03; X04",
+      "quota": 265,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN16",
+      "major_name": "Khoa học môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B08; C01; C02; C03; C04; D01; X03; X04",
+      "quota": 20,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN17",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D09; D10; D11; D14; D15; X25; X27; X28; X78",
+      "quota": 395,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN18",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D04; D11; D12; D13; D14; D15; D45; D55; D65",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN19",
+      "major_name": "Sư phạm công nghệ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B08; C01; C02; C03; D01; X03; X04; X07; X08",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN20",
+      "major_name": "Du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; B08; C02; C03; C04; D01; X01; X03; X04",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN21",
+      "major_name": "Quản lý và phát triển du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; B08; C02; C03; C04; D01; X01; X03; X04",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN22",
+      "major_name": "Quy hoạch vùng vả Đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B08; C01; C02; C03; C04; D01; X03; X04",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "HVN23",
+      "major_name": "Di sản học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C00; C03; C04; D01; D14; D15; X03; X04; X70; X74",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

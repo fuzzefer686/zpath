@@ -1,0 +1,79 @@
+{
+  "university_code": "HVN",
+  "university_name": "Học viện Nông nghiệp Việt Nam",
+  "found_url": "https://dienthoaivui.com.vn/back-to-school-hoc-phi-hoc-vien-nong-nghiep",
+  "status": "success",
+  "num_records": 11,
+  "school_wide": {
+    "tuition_min": 18.3,
+    "tuition_max": 41.58
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành nông nghiệp, thủy sản",
+      "tuition_min": 19.14,
+      "tuition_max": 19.14
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Thú y",
+      "tuition_min": 19.8,
+      "tuition_max": 19.8
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành kỹ thuật, công nghệ",
+      "tuition_min": 20.328,
+      "tuition_max": 21.56
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Sư phạm, Ngôn ngữ",
+      "tuition_min": 18.3,
+      "tuition_max": 18.3
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Kinh doanh, quản lý, pháp luật, khoa học xã hội và nhân văn",
+      "tuition_min": 18.3,
+      "tuition_max": 18.3
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo kết hợp",
+      "tuition_min": 19.47,
+      "tuition_max": 19.93
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiên tiến - Khoa học cây trồng",
+      "tuition_min": 38.28,
+      "tuition_max": 38.28
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiên tiến - Quản trị kinh doanh nông nghiệp",
+      "tuition_min": 36.6,
+      "tuition_max": 36.6
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình dạy bằng tiếng nước ngoài - Kinh tế nông nghiệp",
+      "tuition_min": 38.28,
+      "tuition_max": 38.28
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình dạy bằng tiếng nước ngoài - Kinh tế tài chính",
+      "tuition_min": 36.6,
+      "tuition_max": 36.6
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình dạy bằng tiếng nước ngoài - Công nghệ sinh học",
+      "tuition_min": 41.58,
+      "tuition_max": 41.58
+    }
+  ]
+}

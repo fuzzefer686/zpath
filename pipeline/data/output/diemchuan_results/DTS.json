@@ -1,0 +1,154 @@
+{
+  "university_code": "DTS",
+  "university_name": "Trường Đại học Sư phạm - Đại học Thái Nguyên",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-su-pham-thai-nguyen-DTS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 18,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C19; X70",
+      "score": 25.73,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X17",
+      "score": 22.29,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 23.98,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Công dân",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C20",
+      "score": 27.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Chính trị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C20",
+      "score": 26.98,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 26.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tin học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; X06",
+      "score": 22.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; X07",
+      "score": 26.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Hoá học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 25.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C20; X74",
+      "score": 28.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C19; X70",
+      "score": 27.94,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C20; X74",
+      "score": 28.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D15",
+      "score": 25.06,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Khoa học tự nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 23.93,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử - Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C20; X74",
+      "score": 28.03,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C20; X74",
+      "score": 26.36,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sinh học ứng dụng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A02",
+      "score": 24.25,
+      "scale": 30
+    }
+  ]
+}

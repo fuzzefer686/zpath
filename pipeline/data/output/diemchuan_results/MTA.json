@@ -1,0 +1,26 @@
+{
+  "university_code": "MTA",
+  "university_name": "Học viện Kỹ thuật Quân sự",
+  "found_url": "https://laodong.vn/giao-duc/diem-chuan-hoc-vien-ky-thuat-quan-su-nam-2025-cao-nhat-tren-29-1561762.ldo",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 2,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Học viện Kỹ thuật Quân sự (Nữ - Miền Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 29.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Học viện Kỹ thuật Quân sự (Nữ - Miền Bắc)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 28.83,
+      "scale": 30
+    }
+  ]
+}

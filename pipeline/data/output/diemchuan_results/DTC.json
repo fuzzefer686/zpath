@@ -1,0 +1,50 @@
+{
+  "university_code": "DTC",
+  "university_name": "Trường Đại học Tây Đô",
+  "found_url": "https://tuyensinhhuongnghiep.vn/truong-dh-tay-do-diem-chuan-nam-2025-tu-15-den-21.htm",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 5,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành còn lại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    }
+  ]
+}

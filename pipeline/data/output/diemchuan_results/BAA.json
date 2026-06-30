@@ -1,0 +1,18 @@
+{
+  "university_code": "BAA",
+  "university_name": "Học viện Ngân hàng",
+  "found_url": "https://phongvu.vn/cong-nghe/diem-chuan-hoc-vien-ngan-hang-2025/",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 1,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.97,
+      "scale": 30
+    }
+  ]
+}

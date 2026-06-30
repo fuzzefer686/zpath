@@ -1,0 +1,64 @@
+{
+  "university_code": "MHT",
+  "university_name": "Trường Đại học Mỹ thuật Việt Nam",
+  "found_url": "https://diemthi.tuyensinh247.com/thong-tin-dai-hoc-my-thuat-viet-nam-MTH.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": "7140222",
+      "major_name": "Sư phạm Mỹ thuật",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 15,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210101",
+      "major_name": "Lý luận, lịch sử và phê bình nghệ thuật",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 7,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210103",
+      "major_name": "Hội họa",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 45,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210104",
+      "major_name": "Đồ họa",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 11,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210105",
+      "major_name": "Điêu khắc",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 7,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210403",
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 45,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

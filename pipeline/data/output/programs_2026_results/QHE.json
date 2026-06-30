@@ -1,0 +1,82 @@
+{
+  "university_code": "QHE",
+  "university_name": "Trường Đại học Kinh tế - Đại học Quốc gia Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-kinh-te-ha-noi-QHE.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 8,
+  "data": [
+    {
+      "school_major_code": "7310101",
+      "major_name": "Ngành Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; A01; D09; D10; C01; C03; C04; X01",
+      "quota": 2,
+      "tuition_min": 48,
+      "tuition_max": 54
+    },
+    {
+      "school_major_code": "7310105",
+      "major_name": "Ngành Kinh tế phát triển",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; A01; D09; D10; C01; C03; C04; X01",
+      "quota": 2,
+      "tuition_min": 48,
+      "tuition_max": 54
+    },
+    {
+      "school_major_code": "7310106",
+      "major_name": "Ngành Kinh tế quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; A01; D09; D10; C01; C03; C04; X01",
+      "quota": 2,
+      "tuition_min": 48,
+      "tuition_max": 54
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Ngành Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; A01; D09; D10; C01; C03; C04; X01",
+      "quota": 2,
+      "tuition_min": 48,
+      "tuition_max": 54
+    },
+    {
+      "school_major_code": "7340101.68",
+      "major_name": "Ngành Quản trị kinh doanh (do Đại học Troy cấp bằng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; A01; D09; D10; C01; C03; C04; X01",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101.98",
+      "major_name": "Ngành Quản trị kinh doanh (do Đại học St.Francis cấp bằng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; A01; D09; D10; C01; C03; C04; X01",
+      "quota": 350,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Ngành Tài chính – Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; A01; D09; D10; C01; C03; C04; X01",
+      "quota": 2,
+      "tuition_min": 48,
+      "tuition_max": 54
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Ngành Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; A01; D09; D10; C01; C03; C04; X01",
+      "quota": 2,
+      "tuition_min": 48,
+      "tuition_max": 54
+    }
+  ]
+}

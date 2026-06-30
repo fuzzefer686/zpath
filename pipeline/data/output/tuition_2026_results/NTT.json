@@ -1,0 +1,12 @@
+{
+  "university_code": "NTT",
+  "university_name": "Trường Đại học Nguyễn Tất Thành",
+  "found_url": "https://ntt.edu.vn/",
+  "status": "needs_deeper_crawl",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": []
+}

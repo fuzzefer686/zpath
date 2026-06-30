@@ -1,0 +1,12 @@
+{
+  "university_code": "VGU",
+  "university_name": "Trường Đại học Việt Đức",
+  "found_url": "https://vgu.edu.vn/study-programs/bachelor/cs/tuition-and-financing",
+  "status": "needs_deeper_crawl",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": []
+}

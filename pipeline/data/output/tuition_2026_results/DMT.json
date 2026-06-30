@@ -1,0 +1,151 @@
+{
+  "university_code": "DMT",
+  "university_name": "Trường Đại học Tài nguyên và Môi trường Hà Nội",
+  "found_url": "https://baodanang.vn/hoc-phi-dai-hoc-tai-nguyen-va-moi-truong-ha-noi-nam-2025-2026-3152980.html",
+  "status": "partial",
+  "num_records": 23,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý biển",
+      "tuition_min": 11.4933,
+      "tuition_max": 11.4933
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bất động sản",
+      "tuition_min": 12.0827,
+      "tuition_max": 12.0827
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Biến đổi khí hậu và phát triển bền vững",
+      "tuition_min": 14.072,
+      "tuition_max": 14.072
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "tuition_min": 14.4238,
+      "tuition_max": 14.4238
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đảm bảo chất lượng và an toàn thực phẩm",
+      "tuition_min": 14.4279,
+      "tuition_max": 14.4279
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khí tượng và khí hậu học",
+      "tuition_min": 14.4238,
+      "tuition_max": 14.4238
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "tuition_min": 13.2615,
+      "tuition_max": 13.2615
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "tuition_min": 14.735,
+      "tuition_max": 14.735
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật địa chất",
+      "tuition_min": 14.4238,
+      "tuition_max": 14.4238
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế tài nguyên thiên nhiên",
+      "tuition_min": 11.788,
+      "tuition_max": 11.788
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "tuition_min": 11.4933,
+      "tuition_max": 11.4933
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistic và quản lý chuỗi cung ứng",
+      "tuition_min": 15.8355,
+      "tuition_max": 15.8355
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "tuition_min": 12.0827,
+      "tuition_max": 12.0827
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "tuition_min": 14.4238,
+      "tuition_max": 14.4238
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "tuition_min": 12.0827,
+      "tuition_max": 12.0827
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý đất đai",
+      "tuition_min": 12.0827,
+      "tuition_max": 12.0827
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "tuition_min": 12.3774,
+      "tuition_max": 12.3774
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "tuition_min": 11.788,
+      "tuition_max": 11.788
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị khách sạn",
+      "tuition_min": 14.4403,
+      "tuition_max": 14.4403
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sinh học ứng dụng",
+      "tuition_min": 14.4279,
+      "tuition_max": 14.4279
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thủy văn học",
+      "tuition_min": 14.7756,
+      "tuition_max": 14.7756
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Trắc địa - bản đồ",
+      "tuition_min": 14.072,
+      "tuition_max": 14.072
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài nguyên nước",
+      "tuition_min": 12.0827,
+      "tuition_max": 12.0827
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "university_code": "TDM",
+  "university_name": "Trường Đại học Thủ Dầu Một",
+  "found_url": "https://tuyensinh.tdmu.edu.vn/",
+  "status": "needs_deeper_crawl",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": []
+}

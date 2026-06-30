@@ -1,0 +1,19 @@
+{
+  "university_code": "FBU",
+  "university_name": "Trường Đại học Tài chính - Ngân hàng Hà Nội",
+  "found_url": "https://dsdaihoc.com/truong/truong-dai-hoc-tai-chinh-ngan-hang-ha-noi-fbu",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đại học chính quy tiêu chuẩn",
+      "tuition_min": 10,
+      "tuition_max": 10
+    }
+  ]
+}

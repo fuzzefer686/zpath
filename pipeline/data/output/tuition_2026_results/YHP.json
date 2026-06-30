@@ -1,0 +1,25 @@
+{
+  "university_code": "YHP",
+  "university_name": "Trường Đại học Y Dược Hải Phòng",
+  "found_url": "https://tuoitre.vn/14-truong-dao-tao-y-duoc-phia-bac-du-kien-hoc-phi-cao-nhat-530-trieu-nam-2025070314055938.htm",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 45,
+    "tuition_max": 58
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa, Răng hàm mặt, Dược học",
+      "tuition_min": 58,
+      "tuition_max": 58
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng, Kỹ thuật xét nghiệm",
+      "tuition_min": 35,
+      "tuition_max": 35
+    }
+  ]
+}

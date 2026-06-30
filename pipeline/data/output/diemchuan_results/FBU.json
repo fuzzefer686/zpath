@@ -1,0 +1,250 @@
+{
+  "university_code": "FBU",
+  "university_name": "Trường Đại học Tài chính - Ngân hàng Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-tai-chinh-ngan-hang-ha-noi-FBU.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 30,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D10; X25",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Tiếng Trung",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C04; D01; D04",
+      "score": 24.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh thương mại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01; D01; D10; X25",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Tiếng Trung",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C04; D01; D04",
+      "score": 24.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01; D01; D07; D09; D10; X25",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh thương mại",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 18.5,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Tiếng Trung",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 24.25,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 23.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 18.5,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh thương mại",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 23.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 23.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 21.5,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 150
+    }
+  ]
+}

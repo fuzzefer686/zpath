@@ -1,0 +1,25 @@
+{
+  "university_code": "NTU",
+  "university_name": "Trường Đại học Nguyễn Trãi",
+  "found_url": "https://cellphones.com.vn/sforum/dai-hoc-nguyen-trai-hoc-phi",
+  "status": "partial",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Khối kinh tế, ngôn ngữ",
+      "tuition_min": 21.34,
+      "tuition_max": 21.34
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối kỹ thuật, kiến trúc, thiết kế",
+      "tuition_min": 30.73,
+      "tuition_max": 30.73
+    }
+  ]
+}

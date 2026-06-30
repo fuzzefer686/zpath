@@ -1,0 +1,34 @@
+{
+  "university_code": "QHF",
+  "university_name": "Trường Đại học Ngoại ngữ - Đại học Quốc gia Hà Nội",
+  "found_url": "https://vietnamnet.vn/diem-chuan-truong-dai-hoc-ngoai-ngu-dai-hoc-quoc-gia-ha-noi-nam-2025-2434651.html",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 3,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 30.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm tiếng Trung",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 30.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế - Tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.06,
+      "scale": 30
+    }
+  ]
+}

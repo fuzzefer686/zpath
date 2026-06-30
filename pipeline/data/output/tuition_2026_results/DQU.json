@@ -1,0 +1,43 @@
+{
+  "university_code": "DQU",
+  "university_name": "Trường Đại học Quảng Nam",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/1157/hoc-phi-dai-hoc-quang-nam-nam-2023-2024",
+  "status": "success",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": 15.9,
+    "tuition_max": 20.9
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành I: Khoa học Giáo dục và đào tạo giáo viên",
+      "tuition_min": 17.9,
+      "tuition_max": 17.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành III: Kinh doanh và quản lý, pháp luật",
+      "tuition_min": 17.9,
+      "tuition_max": 17.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành IV: Khoa học sự sống, khoa học tự nhiên",
+      "tuition_min": 19.3,
+      "tuition_max": 19.3
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành V: Toán và thống kê, máy tính và công nghệ thông tin, công nghệ kỹ thuật, kỹ thuật, sản xuất và chế biến, kiến trúc và xây dựng, nông lâm nghiệp và thủy sản, thú Y",
+      "tuition_min": 20.9,
+      "tuition_max": 20.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành VII: Nhân văn, khoa học xã hội và hành vi, báo chí và thông tin, dịch vụ xã hội, du lịch, khách sạn, thể dục thể thao, dịch vụ vận tải, môi trường và bảo vệ môi trường",
+      "tuition_min": 19.1,
+      "tuition_max": 19.1
+    }
+  ]
+}

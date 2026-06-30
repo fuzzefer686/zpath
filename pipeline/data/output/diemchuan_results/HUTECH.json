@@ -1,0 +1,90 @@
+{
+  "university_code": "HUTECH",
+  "university_name": "Trường Đại học Công nghệ Thành phố Hồ Chí Minh",
+  "found_url": "https://muctim.tuoitre.vn/diem-chuan-truong-dai-hoc-cong-nghe-tphcm-nam-2025-cao-nhat-la-21-diem-101250822163604971.htm",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 10,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành còn lại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 21,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành còn lại",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 700,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 275,
+      "scale": 300
+    }
+  ]
+}

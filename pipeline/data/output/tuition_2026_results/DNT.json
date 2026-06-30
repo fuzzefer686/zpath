@@ -1,0 +1,25 @@
+{
+  "university_code": "DNT",
+  "university_name": "Trường Đại học Ngoại ngữ - Tin học Thành phố Hồ Chí Minh",
+  "found_url": "https://huflit.edu.vn/vi/tin-tuc/thong-bao-ve-viec-dong-hoc-phi-nam-hoc-2025-2026/",
+  "status": "partial",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đại học hệ chính quy (Khóa 2023, 2024)",
+      "tuition_min": 1.23,
+      "tuition_max": 1.23
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đại học hệ chính quy (Khóa 2022 trở về trước)",
+      "tuition_min": 1.2,
+      "tuition_max": 1.2
+    }
+  ]
+}

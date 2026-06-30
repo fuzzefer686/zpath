@@ -1,0 +1,163 @@
+{
+  "university_code": "VCO",
+  "university_name": "Trường Đại học Công nghệ và Quản lý Hữu Nghị",
+  "found_url": "https://thi.tuyensinh247.com/dai-hoc-cong-nghe-va-quan-ly-huu-nghi-tuyen-sinh-nam-2026-c24a88957.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 17,
+  "data": [
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D10; D14; D15; D09; X25",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D10; D14; D15; D09; X25",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7310106",
+      "major_name": "Kinh tế quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X25; X02; D01; C00; X22; X18",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7340116",
+      "major_name": "Bất động sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X25; X02; D01; C00; X22; X18",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7310205",
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D01; D14; D15; X18; X22",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7810103",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D01; D14; D15; X18; X22",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X25; X02; D01; X53; X18; X22",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X25; X02; D01; X53; X18; X22",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X25; X02; D01; X53; X18; X22",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7340205",
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X25; X02; D01; X53; X18; X22",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X25; X02; D01; X53; X18; X22",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X25; C00; D01; D14; X18; X22",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X25; C00; D01; D14; X18; X22",
+      "quota": null,
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": "7480103",
+      "major_name": "Kỹ thuật phần mềm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; X02; X26; X18; X53; X56",
+      "quota": null,
+      "tuition_min": 27.375,
+      "tuition_max": 27.375
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; X02; X26; X18; X53; X56",
+      "quota": null,
+      "tuition_min": 27.375,
+      "tuition_max": 27.375
+    },
+    {
+      "school_major_code": "7510205",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X04; X07; X53; X56",
+      "quota": null,
+      "tuition_min": 27.375,
+      "tuition_max": 27.375
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X22; X18; X56",
+      "quota": null,
+      "tuition_min": 27.375,
+      "tuition_max": 27.375
+    }
+  ]
+}

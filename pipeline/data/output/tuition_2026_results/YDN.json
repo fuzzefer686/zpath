@@ -1,0 +1,25 @@
+{
+  "university_code": "YDN",
+  "university_name": "Trường Đại học Kỹ thuật Y Dược Đà Nẵng",
+  "found_url": "https://laodong.vn/tuyen-sinh/hoc-phi-du-kien-truong-dai-hoc-ky-thuat-y-duoc-da-nang-nam-2025-1560921.ldo",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 30,
+    "tuition_max": 40
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa và Dược học",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo còn lại",
+      "tuition_min": 30,
+      "tuition_max": 30
+    }
+  ]
+}

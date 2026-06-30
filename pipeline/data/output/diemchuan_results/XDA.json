@@ -1,0 +1,354 @@
+{
+  "university_code": "XDA",
+  "university_name": "Trường Đại học Xây dựng Hà Nội",
+  "found_url": "https://tuyensinh.huce.edu.vn/diem-trung-tuyen-dai-hoc-chinh-quy-cac-nam-3",
+  "year": 2025,
+  "status": "success",
+  "num_records": 43,
+  "data": [
+    {
+      "school_major_code": "7580101",
+      "major_name": "Kiến trúc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580101_02",
+      "major_name": "Kiến trúc công nghệ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580103",
+      "major_name": "Kiến trúc nội thất",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580102",
+      "major_name": "Kiến trúc cảnh quan",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580105",
+      "major_name": "Quy hoạch vùng và đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7210110",
+      "major_name": "Mỹ thuật đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": "72104_NT",
+      "major_name": "CTĐT Nghệ thuật và thiết kế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580201",
+      "major_name": "Kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580201_01",
+      "major_name": "Kỹ thuật xây dựng - Xây dựng dân dụng và công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580201_02",
+      "major_name": "Kỹ thuật xây dựng - Hệ thống kỹ thuật trong công trình",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580201_03",
+      "major_name": "Kỹ thuật xây dựng - Tin học xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580201_04",
+      "major_name": "Kỹ thuật xây dựng - Kỹ thuật công trình thủy",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580201_05",
+      "major_name": "Kỹ thuật xây dựng - Kỹ thuật công trình biển",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510103",
+      "major_name": "Công nghệ kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580205_01",
+      "major_name": "Kỹ thuật xây dựng công trình giao thông - Xây dựng Cầu đường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580205_02",
+      "major_name": "Kỹ thuật xây dựng công trình giao thông - Đường sắt tốc độ cao và đường sắt đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.45,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580213_01",
+      "major_name": "Kỹ thuật cấp thoát nước - Kỹ thuật nước - Môi trường nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520320",
+      "major_name": "Kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520309",
+      "major_name": "Kỹ thuật vật liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510105",
+      "major_name": "Công nghệ kỹ thuật vật liệu xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201_01",
+      "major_name": "Công nghệ thông tin - Công nghệ đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201_02",
+      "major_name": "Công nghệ thông tin - An toàn thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7460108",
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520103",
+      "major_name": "Kỹ thuật cơ khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520103_01",
+      "major_name": "Kỹ thuật cơ khí - Máy xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520103_03",
+      "major_name": "Kỹ thuật cơ khí - Kỹ thuật cơ điện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520103_04",
+      "major_name": "Kỹ thuật cơ khí - Kỹ thuật ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520201",
+      "major_name": "Kỹ thuật điện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520216",
+      "major_name": "Kỹ thuật điều khiển và tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580301",
+      "major_name": "Kinh tế xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580302_01",
+      "major_name": "Quản lý xây dựng - Kinh tế và quản lý đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580302_02",
+      "major_name": "Quản lý xây dựng - Kinh tế và quản lý bất động sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580302_03",
+      "major_name": "Quản lý xây dựng - Quản lý hạ tầng, đất đai đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580302_04",
+      "major_name": "Quản lý xây dựng - Kiểm toán đầu tư xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340409",
+      "major_name": "Quản lý dự án",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và quản lý chuỗi cung ứng - Logistics đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510605_02",
+      "major_name": "Logistics và quản lý chuỗi cung ứng - Logistics công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580201_CLC",
+      "major_name": "Kỹ thuật xây dựng (Chương trình đào tạo chất lượng cao PFIEV)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580201_QT",
+      "major_name": "Kỹ thuật xây dựng (Chương trình liên kết với Đại học Mississippi - Hoa Kỳ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480101_QT",
+      "major_name": "Khoa học máy tính (Chương trình liên kết với Đại học Mississippi - Hoa Kỳ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.7,
+      "scale": 30
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "university_code": "DTN",
+  "university_name": "Trường Đại học Nông Lâm - Đại học Thái Nguyên",
+  "found_url": "https://giaoduc.net.vn/diem-chuan-hoc-phi-va-tiem-luc-nckh-cua-mot-so-truong-dao-tao-khoi-nganh-nong-lam-nghiep-post258088.gd",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": 18,
+    "tuition_max": 20
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành Nông - Lâm nghiệp",
+      "tuition_min": 18,
+      "tuition_max": 20
+    }
+  ]
+}

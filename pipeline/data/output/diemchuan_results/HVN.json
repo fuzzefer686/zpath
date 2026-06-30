@@ -1,0 +1,314 @@
+{
+  "university_code": "HVN",
+  "university_name": "Học viện Nông nghiệp Việt Nam",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/hoc-vien-nong-nghiep-viet-nam-HVN.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 38,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Thú y",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C03; C04; D01; D07; X01; X07; X08",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chăn nuôi thú y - Thủy sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C03; C04; D01; D07; X01; X03; X04",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nông nghiệp và Cảnh quan",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C03; C04; D01; D07; X01; X07; X08",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô và Cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; C02; C03; C04; D01; X01; X07; X08",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; C02; C03; C04; D01; X01; X07; X08",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điện, Điện tử và Tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; C02; C03; C04; D01; X01; X07; X08",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; C01; C02; C03; C04; D01; X01",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán, Quản trị kinh doanh và Thương mại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; C01; C02; C03; C04; D01; X01",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học và Công nghệ dược liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B02; B08; C03; D01; X07; X08; X13",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm và Chế biến",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C03; C04; D01; D07; X01; X07; X08",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế và Quản lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; C01; C02; C03; C04; D01; X01",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xã hội học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C01; C03; D01; D14; D15; X03; X04; X70; X74",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C01; C03; D01; D14; D15; X03; X04; X70; X74",
+      "score": 23.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin và Kỹ thuật số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; C02; C03; D01; X02; X03; X04; X07; X08",
+      "score": 19.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý đất đai, Bất động sản và Môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; C01; C02; C03; C04; D01; X01",
+      "score": 18.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học Môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C03; C04; D01; D07; X01; X07; X08",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D09; D10; D11; D14; D15; X25; X78",
+      "score": 21.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Công nghệ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C01; C02; C03; D01; X03; X04; X07; X08",
+      "score": 24.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; C01; C02; C03; C04; D01; X01",
+      "score": 23.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thú y",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B00; C03; C04; D01; D07; X01; X07; X08",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chăn nuôi thú y - Thủy sản",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B00; C03; C04; D01; D07; X01; X03; X04",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nông nghiệp và Cảnh quan",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B00; C03; C04; D01; D07; X01; X07; X08",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô và Cơ điện tử",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C01; C02; C03; C04; D01; X01; X07; X08",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ khí",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C01; C02; C03; C04; D01; X01; X07; X08",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điện, Điện tử và Tự động hóa",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C01; C02; C03; C04; D01; X01; X07; X08",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; A07; C01; C02; C03; C04; D01; X01",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán, Quản trị kinh doanh và Thương mại",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; A07; C01; C02; C03; C04; D01; X01",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học và Công nghệ dược liệu",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B00; B02; B08; C03; D01; X07; X08; X13",
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm và Chế biến",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B00; C03; C04; D01; D07; X01; X07; X08",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế và Quản lý",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; A07; C01; C02; C03; C04; D01; X01",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xã hội học",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C01; C03; D01; D14; D15; X03; X04; X70; X74",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C01; C03; D01; D14; D15; X03; X04; X70; X74",
+      "score": 26.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin và Kỹ thuật số",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; C01; C02; C03; D01; X02; X03; X04; X07; X08",
+      "score": 22.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý đất đai, Bất động sản và Môi trường",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; A07; C01; C02; C03; C04; D01; X01",
+      "score": 21.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học Môi trường",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B00; C03; C04; D01; D07; X01; X07; X08",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01; D01; D09; D10; D11; D14; D15; X25; X78",
+      "score": 24.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Công nghệ",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; B00; C01; C02; C03; D01; X03; X04; X07; X08",
+      "score": 27.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Du lịch",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; A07; C01; C02; C03; C04; D01; X01",
+      "score": 26.3,
+      "scale": 30
+    }
+  ]
+}

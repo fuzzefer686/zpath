@@ -5,6 +5,7 @@ import { GraduationCap, Search, SlidersHorizontal } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Ad } from "@/components/zpath/Ad";
 import { UniversityCard } from "@/components/zpath/UniversityCard";
 import { UnimapActiveFilters } from "@/components/zpath/unimap/UnimapActiveFilters";
 import { UnimapFilterDrawer } from "@/components/zpath/unimap/UnimapFilterDrawer";
@@ -98,6 +99,10 @@ export default function UniMapPage() {
           </div>
         </div>
       </section>
+
+      <div className="container-page pt-6">
+        <Ad placement="unimapList" className="mx-auto max-w-3xl" />
+      </div>
 
       <section className="container-page py-10 lg:grid lg:grid-cols-[260px_minmax(0,1fr)] lg:items-start lg:gap-8">
         {/* Desktop filter sidebar */}

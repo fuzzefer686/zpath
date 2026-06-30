@@ -1,0 +1,46 @@
+{
+  "university_code": "DTF",
+  "university_name": "Trường Ngoại ngữ - Đại học Thái Nguyên",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/truong-ngoai-ngu-thai-nguyen-DTF.html",
+  "data_year": 2025,
+  "status": "success",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; D66; X78",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140234",
+      "major_name": "Sư phạm Tiếng Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D04; D14; D15; D45; D65; D66; X78; X90",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; D66; X78",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D04; D14; D15; D45; D65; D66; X78; X90",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

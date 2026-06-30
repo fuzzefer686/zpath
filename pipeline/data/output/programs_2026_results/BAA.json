@@ -1,0 +1,415 @@
+{
+  "university_code": "BAA",
+  "university_name": "Học viện Ngân hàng",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/hoc-vien-ngan-hang-NHH.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 45,
+  "data": [
+    {
+      "school_major_code": "ACT01",
+      "major_name": "Chất lượng cao Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 180,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "ACT02",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 70,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "ACT03",
+      "major_name": "Kế toán (Liên kết ĐH Sunderland, Anh. Cấp song bằng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 100,
+      "tuition_min": 85,
+      "tuition_max": 85
+    },
+    {
+      "school_major_code": "ACT04",
+      "major_name": "Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 120,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "ACT05",
+      "major_name": "Chất lượng cao Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 120,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "ACT06",
+      "major_name": "Kế toán (Định hướng Nhật bản)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 50,
+      "tuition_min": 50,
+      "tuition_max": 50
+    },
+    {
+      "school_major_code": "BANK01",
+      "major_name": "Chất lượng cao Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 210,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "BANK02",
+      "major_name": "Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 140,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "BANK03",
+      "major_name": "Ngân hàng số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 140,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "BANK04",
+      "major_name": "Tài chính-Ngân hàng (Liên kết ĐH Sunderland, Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 100,
+      "tuition_min": 85,
+      "tuition_max": 85
+    },
+    {
+      "school_major_code": "BANK06",
+      "major_name": "Chất lượng cao Ngân hàng và Tài chính quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 120,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "BANK07",
+      "major_name": "Chất lượng cao Ngân hàng trung ương và chính sách công",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 60,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "BANK08",
+      "major_name": "Ngân hàng Tài chính - Đại học West of England (UWE), Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 80,
+      "tuition_min": 85,
+      "tuition_max": 85
+    },
+    {
+      "school_major_code": "BUS01",
+      "major_name": "Chất lượng cao Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 120,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "BUS02",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 70,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "BUS03",
+      "major_name": "Quản trị du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 70,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "BUS04",
+      "major_name": "Quản trị kinh doanh (Liên kết với ĐH CityU, Hoa kỳ)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 80,
+      "tuition_min": 95,
+      "tuition_max": 95
+    },
+    {
+      "school_major_code": "BUS06",
+      "major_name": "Chất lượng cao Marketing số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 120,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "BUS07",
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 70,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "BUS08",
+      "major_name": "Chất lượng cao Quản trị nhân lực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 60,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "BUS09",
+      "major_name": "Chất lượng cao Kinh doanh số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 60,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "BUS10",
+      "major_name": "Quản trị kinh doanh, Hàng hải & Logistics - Đại học Genoa, CH Ý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 50,
+      "tuition_min": 75.5,
+      "tuition_max": 75.5
+    },
+    {
+      "school_major_code": "BUS11",
+      "major_name": "Marketing - Đại học West of England (UWE), Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 80,
+      "tuition_min": 85,
+      "tuition_max": 85
+    },
+    {
+      "school_major_code": "DS01",
+      "major_name": "Khoa học dữ liệu trong kinh tế và kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 140,
+      "tuition_min": 29.4,
+      "tuition_max": 29.4
+    },
+    {
+      "school_major_code": "ECON01",
+      "major_name": "Kinh tế đầu tư",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 70,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "ECON02",
+      "major_name": "Chất lượng cao Kinh tế đầu tư",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 120,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "ECON03",
+      "major_name": "Kinh tế quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 70,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "FIN01",
+      "major_name": "Chất lượng cao Tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 350,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "FIN02",
+      "major_name": "Tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 140,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "FIN04",
+      "major_name": "Chất lượng cao Hoạch định và tư vấn tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 60,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "FIN05",
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 140,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "FL01",
+      "major_name": "Ngôn ngữ Anh Tài chính – Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 70,
+      "tuition_min": 28.35,
+      "tuition_max": 28.35
+    },
+    {
+      "school_major_code": "FL02",
+      "major_name": "Chất lượng cao Ngôn ngữ Anh Tài chính – Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 120,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "IB01",
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 70,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "IB02",
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 70,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "IB04",
+      "major_name": "Chất lượng cao Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 180,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "IB05",
+      "major_name": "Chất lượng cao Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 60,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "IB06",
+      "major_name": "Chất lượng cao Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 60,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "IB07",
+      "major_name": "Quản trị kinh doanh quốc tế - Đại học West of England (UWE), Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 80,
+      "tuition_min": 85,
+      "tuition_max": 85
+    },
+    {
+      "school_major_code": "IT01",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 120,
+      "tuition_min": 29.4,
+      "tuition_max": 29.4
+    },
+    {
+      "school_major_code": "LAW01",
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "quota": 180,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "LAW03",
+      "major_name": "Chất lượng cao Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "quota": 120,
+      "tuition_min": 45,
+      "tuition_max": 45
+    },
+    {
+      "school_major_code": "LAW04",
+      "major_name": "Luật học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "quota": 70,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "MIS01",
+      "major_name": "Hệ thống thông tin quản lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 70,
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": "MIS02",
+      "major_name": "Chất lượng cao Hệ thống thông tin quản lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09",
+      "quota": 60,
+      "tuition_min": 45,
+      "tuition_max": 45
+    }
+  ]
+}

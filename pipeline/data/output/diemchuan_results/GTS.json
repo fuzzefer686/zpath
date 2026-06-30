@@ -1,0 +1,450 @@
+{
+  "university_code": "GTS",
+  "university_name": "Trường Đại học Giao thông Vận tải Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-giao-thong-van-tai-tphcm-UTH.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 55,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh – chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (chuyên ngành Tiếng Anh thương mại, logistics và vận tải quốc tế) - chương trình hoàn toàn bằng Tiếng Anh",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 775,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh – chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý (chuyên ngành Kinh tế số và Trí tuệ nhân tạo) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý (chuyên ngành Kinh tế số và Trí tuệ nhân tạo) - chương trình hoàn toàn bằng Tiếng Anh",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật – chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 999,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Mạng máy tính và truyền thông dữ liệu (chuyên ngành Mạng máy tính và truyền thông dữ liệu; Kỹ thuật thiết kế vi mạch và AI) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (chuyên ngành Công nghệ thông tin) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (chuyên ngành Công nghệ thông tin)- chương trình hoàn toàn bằng Tiếng Anh",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (chuyên ngành Khoa học dữ liệu và AI) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (chuyên ngành Smart logistics) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (chuyên ngành Công nghệ ô tô số) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (chuyên ngành Truyền thông số và Đổi mới sáng tạo) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật giao thông (chuyên ngành Quy hoạch và quản lý giao thông; Logistics và hạ tầng giao thông) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ khí - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điều khiển và tự động hóa - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 931,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và quản lý chuỗi cung ứng - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 963,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và quản lý chuỗi cung ứng - chương trình hoàn toàn bằng Tiếng Anh",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ khí (chuyên ngành Cơ khí tự động)- chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ khí (chuyên ngành Cơ khí đường sắt tốc độ cao và đường sắt đô thị) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ khí (chuyên ngành kỹ thuật cơ khí hàng không) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành liên quan đường sắt tốc độ cao và đường sắt đô thị (Công nghệ thông tin;Viễn thông, Điện; năng lượng, Cơ khí)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 668,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật tàu thủy (chuyên ngành Kỹ thuật tàu thủy, công trình nổi và quản lý hệ thống công nghiệp)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 668,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật ô tô (chuyên ngành Cơ khí ô tô; Cơ điện tử ô tô) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điện (chuyên ngành Điện công nghiệp; Hệ thống điện giao thông; Năng lượng tái tạo)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 936,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điện tử - viễn thông - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điều khiển và tự động hóa (chuyên ngành Kỹ thuật điều khiển tự động và thông tin tín hiệu đường sắt tốc độ cao) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điều khiển và tự động hóa - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật môi trường (chuyên ngành Kỹ thuật môi trường; Quản lý an toàn và môi trường)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics xanh và phát triển bền vững – chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (chuyên ngành Xây dựng dân dụng và công nghiệp)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (chuyên ngành Thiết kế nội thất) – chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng (chuyên ngành Kỹ thuật xây dựng dân dụng Ứng dụng công nghệ số)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành liên quan đường sắt tốc độ cao và đường sắt đô thị (Kỹ thuật; Công nghệ kỹ thuật; Kiến trúc và Xây dựng)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 668,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng công trình thủy (chuyên ngành Xây dựng và quản lý cảng - công trình giao thông thủy)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 668,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng cầu đường; Xây dựng đường bộ; Xây dựng công trình giao thông đô thị)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng đường sắt tốc độ cao và đường sắt đô thị)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 720,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế xây dựng (chuyên ngành Kinh tế xây dựng) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế xây dựng (chuyên ngành Kinh tế và quản lý bất động sản) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý xây dựng - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khai thác vận tải (chuyên ngành Quản trị logistics và vận tải đa phương thức) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khai thác vận tải (chuyên ngành Quản lý và kinh doanh vận tải) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khai thác vận tải (chuyên ngành Khai thác đường sắt tốc độ cao) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành liên quan đường sắt tốc độ cao và đường sắt đô thị (Kinh tế; Quản lý; vận hành và khai thác)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 668,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế vận tải (chuyên ngành Kinh tế hàng hải và đường thủy) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế vận tải (chuyên ngành Kinh tế hàng không) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học hàng hải (chuyên ngành Kỹ thuật điện, điện tử và điều khiển; Cơ điện tử)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 668,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học hàng hải (chuyên ngành Điều khiển và quản lý tàu biển)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 668,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học hàng hải (chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật)",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 668,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học hàng hải (chuyên ngành Quản lý cảng và logistics) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học hàng hải (chuyên ngành Quản lý hàng hải và đường thủy) - chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 800,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành tuyển chung (dành cho đối tượng chưa xác định được ngành học) – Chương trình tiên tiến",
+      "admission_method": "ket_hop",
+      "combination_code": null,
+      "score": 668,
+      "scale": 1200
+    }
+  ]
+}

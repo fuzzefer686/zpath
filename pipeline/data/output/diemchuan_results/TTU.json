@@ -1,0 +1,114 @@
+{
+  "university_code": "TTU",
+  "university_name": "Trường Đại học Tân Tạo",
+  "found_url": "https://ttu.edu.vn/truong-dai-hoc-tan-tao-cong-bo-diem-chuan-trung-tuyen-dai-hoc-chinh-quy-nam-2025/",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 13,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa (Bác sĩ đa khoa)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Xét nghiệm Y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính – Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Digital Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    }
+  ]
+}

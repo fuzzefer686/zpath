@@ -1,0 +1,37 @@
+{
+  "university_code": "BVS",
+  "university_name": "Học viện Công nghệ Bưu chính Viễn thông (Cơ sở phía Nam)",
+  "found_url": "https://tuoitre.vn/hoc-vien-cong-nghe-buu-chinh-vien-thong-tang-hoc-phi-co-nganh-tang-tu-10-2-trieu-20250522154515187.htm",
+  "status": "success",
+  "num_records": 4,
+  "school_wide": {
+    "tuition_min": 29.6,
+    "tuition_max": 62.5
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đại trà",
+      "tuition_min": 29.6,
+      "tuition_max": 37.6
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình chất lượng cao",
+      "tuition_min": 49.2,
+      "tuition_max": 55.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình cử nhân công nghệ thông tin (định hướng ứng dụng), thiết kế và phát triển game, công nghệ thông tin Việt - Nhật, trí tuệ nhân tạo",
+      "tuition_min": 40.0,
+      "tuition_max": 45.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình liên kết quốc tế",
+      "tuition_min": 54.0,
+      "tuition_max": 62.5
+    }
+  ]
+}

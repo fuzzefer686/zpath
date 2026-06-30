@@ -1,0 +1,37 @@
+{
+  "university_code": "TMA",
+  "university_name": "Trường Đại học Thương mại",
+  "found_url": "https://dienthoaivui.com.vn/back-to-school-hoc-phi-dai-hoc-thuong-mai",
+  "status": "success",
+  "num_records": 4,
+  "school_wide": {
+    "tuition_min": 25.75,
+    "tuition_max": 260
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình chuẩn",
+      "tuition_min": 25.75,
+      "tuition_max": 30.69
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Định hướng chuyên sâu (IPOP)",
+      "tuition_min": 42.35,
+      "tuition_max": 42.35
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình Tiên tiến",
+      "tuition_min": 50,
+      "tuition_max": 50
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Song bằng",
+      "tuition_min": 65,
+      "tuition_max": 65
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "university_code": "THU",
+  "university_name": "Trường Đại học Thành Đô",
+  "found_url": "https://thanhdo.edu.vn/",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 14,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Kỹ thuật Ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Kỹ thuật Điện, Điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị văn phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Việt Nam học (Hướng dẫn du lịch)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị khách sạn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

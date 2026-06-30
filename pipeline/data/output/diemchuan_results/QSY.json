@@ -1,0 +1,130 @@
+{
+  "university_code": "QSY",
+  "university_name": "Học viện Khoa học Sức khỏe - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-khoa-hoc-suc-khoe-tphcm-QSY.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 15,
+  "data": [
+    {
+      "school_major_code": "7720201",
+      "major_name": "Y học cổ truyền",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A02",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7720501",
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A02",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A02",
+      "score": 20.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A02",
+      "score": 25.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Y học cổ truyền",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 709.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 559.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7720501",
+      "major_name": "Dược học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 867.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 652.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 896.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Y học cổ truyền",
+      "admission_method": "xt_rieng",
+      "combination_code": "B00; A00",
+      "score": 79.4,
+      "scale": 90
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "xt_rieng",
+      "combination_code": "B00; A02",
+      "score": 74.46,
+      "scale": 90
+    },
+    {
+      "school_major_code": "7720501",
+      "major_name": "Dược học",
+      "admission_method": "xt_rieng",
+      "combination_code": "B00; A02",
+      "score": 84.6,
+      "scale": 90
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "xt_rieng",
+      "combination_code": "B00; A02",
+      "score": 77.4,
+      "scale": 90
+    },
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "admission_method": "xt_rieng",
+      "combination_code": "B00; A02",
+      "score": 85.5,
+      "scale": 90
+    }
+  ]
+}

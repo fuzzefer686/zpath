@@ -1,0 +1,25 @@
+{
+  "university_code": "HHK",
+  "university_name": "Học viện Hàng không Việt Nam",
+  "found_url": "https://tienphong.vn/hoc-phi-khung-o-hoc-vien-hang-khong-viet-nam-co-nganh-toi-80000-usdnam-post1748687.tpo",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 31,
+    "tuition_max": 37
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo đại học chính quy (trừ chuyên ngành quản lý và khai thác bay)",
+      "tuition_min": 31,
+      "tuition_max": 37
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chuyên ngành quản lý và khai thác bay (tích hợp đào tạo phi công)",
+      "tuition_min": 37,
+      "tuition_max": 2000
+    }
+  ]
+}

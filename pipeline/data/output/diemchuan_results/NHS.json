@@ -1,0 +1,210 @@
+{
+  "university_code": "NHS",
+  "university_name": "Trường Đại học Ngân hàng Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-ngan-hang-tphcm-NHS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 25,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (Chương trình Tiếng Anh thương mại, Chương trình Song ngữ Anh - Trung)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D14; D15",
+      "score": 21.82,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh - Chương trình đào tạo đặc biệt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D14; D15",
+      "score": 20.71,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế (tiếng Anh bán phần)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.08,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.86,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (Chương trình Quản trị kinh doanh; Marketing; Quản lý chuỗi cung ứng; Tài chính do ĐH Bolton (Anh Quốc) và HUB mỗi bên cấp một bằng cử nhân)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 19.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh TABP (Chương trình định hướng E.Business)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 19.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 23.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 23.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X26",
+      "score": 23.48,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.76,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính – Ngân hàng (Chương trình Tài chính - Ngân hàng - Bảo hiểm do ĐH Toulon (Pháp) và HUB mỗi bên cấp một bằng cử nhân)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 19.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính – Ngân hàng TABP (Chương trình định hướng công nghệ tài chính và chuyển đổi số)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 18.73,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính (Fintech)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X26",
+      "score": 22.76,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.47,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán TABP (Chương trình định hướng Digital Accounting)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 18.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 23.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X26",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin quản lý (tiếng Anh bán phần)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X26",
+      "score": 20.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; D01; D14",
+      "score": 19.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; D01; D14",
+      "score": 22,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh tế (tiếng Anh bán phần)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; D01; D14",
+      "score": 19.86,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X26",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X26",
+      "score": 19.49,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 23.49,
+      "scale": 30
+    }
+  ]
+}

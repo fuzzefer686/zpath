@@ -1,0 +1,58 @@
+{
+  "university_code": "NTT",
+  "university_name": "Trường Đại học Nguyễn Tất Thành",
+  "found_url": "https://giaoducthoidai.vn/diem-chuan-truong-dai-hoc-nguyen-tat-thanh-tu-15-den-23-diem-post744785.html",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 650.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Răng Hàm Mặt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Răng Hàm Mặt",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Răng Hàm Mặt",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600.0,
+      "scale": 1200
+    }
+  ]
+}

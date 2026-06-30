@@ -1,0 +1,74 @@
+{
+  "university_code": "HVC",
+  "university_name": "Học viện Cán bộ Thành phố Hồ Chí Minh",
+  "found_url": "https://xaydungchinhsach.chinhphu.vn/diem-chuan-hoc-vien-can-bo-tphcm-2025-119250823091527247.htm",
+  "year": 2025,
+  "status": "success",
+  "num_records": 8,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng Đảng và Chính quyền nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chính trị học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công tác xã hội",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 26.46,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 26.31,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng Đảng và Chính quyền nhà nước",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 26.24,
+      "scale": 30
+    }
+  ]
+}

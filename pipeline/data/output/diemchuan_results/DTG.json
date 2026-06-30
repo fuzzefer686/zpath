@@ -1,0 +1,18 @@
+{
+  "university_code": "DTG",
+  "university_name": "Trường Đại học Trường Vinh",
+  "found_url": "https://www.bigschool.vn/diem-chuan-dai-hoc-vinh",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 1,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 28.4,
+      "scale": 30
+    }
+  ]
+}

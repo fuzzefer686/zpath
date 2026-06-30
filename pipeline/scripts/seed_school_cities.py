@@ -55,6 +55,29 @@ CITY = {
     # Miền Nam
     "CTS": "Cần Thơ", "DAG": "An Giang", "BTU": "Bình Dương",
     "DLA": "Long An", "TKG": "Kiên Giang",
+    # --- Batch 3 (nạp 2026-06-19) ---
+    "YHB": "Hà Nội", "DGH": "Hà Nội", "NSP": "Hà Nội", "TLA": "Hà Nội",
+    "XDA": "Hà Nội", "MDA": "Hà Nội", "GTA": "Hà Nội", "HCV": "Hà Nội",
+    "BCH": "Hà Nội", "AOF": "Hà Nội", "BAA": "Hà Nội", "QHE": "Hà Nội",
+    "QHL": "Hà Nội", "QHF": "Hà Nội", "TMA": "Hà Nội", "MHT": "Hà Nội",
+    "VCO": "Hà Nội", "THU": "Hà Nội",
+    "YHP": "Hải Phòng", "YCT": "Cần Thơ", "DTC": "Cần Thơ",
+    "DYV": "Thành phố Hồ Chí Minh", "VHS": "Thành phố Hồ Chí Minh",
+    "NTT": "Thành phố Hồ Chí Minh", "HUTECH": "Thành phố Hồ Chí Minh",
+    "DNT": "Thành phố Hồ Chí Minh", "BVS": "Thành phố Hồ Chí Minh",
+    "YDN": "Đà Nẵng", "DDK": "Đà Nẵng",
+    "DLU": "Lâm Đồng", "DCG": "Đồng Nai", "DLH": "Đồng Nai",
+    "TDM": "Bình Dương", "VGU": "Bình Dương",
+    "BPU": "Bà Rịa - Vũng Tàu", "BVU": "Bà Rịa - Vũng Tàu",
+    "TTU": "Long An", "DTB": "Thái Bình", "DHD": "Hải Dương",
+    "HLU": "Quảng Ninh", "DHV": "Phú Thọ", "DHT": "Hà Tĩnh",
+    "VUP": "Vĩnh Long",
+    # --- Batch 4 (nạp 2026-06-19) ---
+    "NHS": "Thành phố Hồ Chí Minh", "GDU": "Thành phố Hồ Chí Minh",
+    "HVC": "Thành phố Hồ Chí Minh", "HCS": "Thành phố Hồ Chí Minh",
+    "QSY": "Thành phố Hồ Chí Minh", "QSQ": "Thành phố Hồ Chí Minh",
+    "HVN": "Hà Nội", "SDU": "Hải Dương", "DNU": "Đồng Nai",
+    "YKV": "Nghệ An", "DBB": "Bắc Ninh", "DTF": "Thái Nguyên",
 }
 
 

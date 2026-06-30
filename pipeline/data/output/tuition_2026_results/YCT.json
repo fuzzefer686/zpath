@@ -1,0 +1,25 @@
+{
+  "university_code": "YCT",
+  "university_name": "Trường Đại học Y Dược Cần Thơ",
+  "found_url": "https://thanhnien.vn/truong-dai-hoc-y-duoc-can-tho-phuong-thuc-tuyen-sinh-nganh-nao-hoc-phi-cao-nhat-185260407163513491.htm",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 50.1,
+    "tuition_max": 85.26
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đại học chính quy",
+      "tuition_min": 50.1,
+      "tuition_max": 71.05
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ liên thông và văn bằng 2",
+      "tuition_min": 60.1,
+      "tuition_max": 85.26
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "university_code": "DLU",
+  "university_name": "Trường Đại học Đà Lạt",
+  "found_url": "https://thanhnien.vn/diem-chuan-trung-tuyen-truong-dh-da-lat-nganh-cao-nhat-29-diem-185250822155755227.htm",
+  "year": 2025,
+  "status": "success",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm toán học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 29.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 28.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7310601",
+      "major_name": "Quốc tế học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7310601",
+      "major_name": "Quốc tế học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    }
+  ]
+}

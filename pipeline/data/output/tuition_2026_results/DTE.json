@@ -1,0 +1,25 @@
+{
+  "university_code": "DTE",
+  "university_name": "Trường Đại học Sư phạm Kỹ thuật - Đại học Đà Nẵng",
+  "found_url": "http://thongtintuyensinh247.com/hoc-phi-dai-hoc-su-pham-ky-thuat-da-nang/",
+  "status": "partial",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 12,
+    "tuition_max": 14
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đào tạo chính quy",
+      "tuition_min": 14,
+      "tuition_max": 14
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đào tạo kỹ sư",
+      "tuition_min": 12,
+      "tuition_max": 12
+    }
+  ]
+}

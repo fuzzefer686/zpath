@@ -1,0 +1,218 @@
+{
+  "university_code": "VHD",
+  "university_name": "Trường Đại học Công nghiệp Việt - Hung",
+  "found_url": "https://navigates.vn/truong-hoc/dai-hoc-cong-nghiep-viet-hung/diem-chuan/",
+  "year": 2025,
+  "status": "success",
+  "num_records": 26,
+  "data": [
+    {
+      "school_major_code": "7510201",
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510201",
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510301",
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510301",
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510205",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A03, A04, A07, A08, A09, A10",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510205",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, C01, C03, C04, C14",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510103",
+      "major_name": "Công nghệ kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, C01, C03, C04, C14",
+      "score": 16.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510103",
+      "major_name": "Công nghệ kỹ thuật xây dựng",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01, D84",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học máy tính",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510302",
+      "major_name": "Công nghệ kỹ thuật điện tử viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510302",
+      "major_name": "Công nghệ kỹ thuật điện tử viễn thông",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính – Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A07, A08, C03, C14, C19",
+      "score": 16.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính – Ngân hàng",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7310101",
+      "major_name": "Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00, D01",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7310101",
+      "major_name": "Kinh tế",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03, C14, C19",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7310109",
+      "major_name": "Kinh tế số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C20, D01, D13",
+      "score": 16.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7310109",
+      "major_name": "Kinh tế số",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340205",
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01, D14, D84",
+      "score": 18.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340205",
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    }
+  ]
+}

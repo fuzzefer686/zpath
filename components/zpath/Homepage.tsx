@@ -23,6 +23,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/components/zpath/AuthProvider";
+import { InlineAd } from "@/components/zpath/InlineAd";
 
 const concerns = [
   {
@@ -352,6 +353,9 @@ export function Homepage() {
         </div>
       </section>
 
+      {/* In-content ad — primary ad surface for mobile (rails are desktop-only) */}
+      <InlineAd placement="homeInline1" />
+
       <section className="border-y border-border/70 bg-muted/30 py-16 sm:py-24">
         <div className="container-page">
           <div className="mx-auto max-w-3xl animate-fade-up text-center">
@@ -389,6 +393,9 @@ export function Homepage() {
           </div>
         </div>
       </section>
+
+      {/* Second in-content ad further down the page */}
+      <InlineAd placement="homeInline2" />
 
       <section className="py-16 sm:py-24">
         <div className="container-page">

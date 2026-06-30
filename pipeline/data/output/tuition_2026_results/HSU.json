@@ -1,0 +1,12 @@
+{
+  "university_code": "HSU",
+  "university_name": "Trường Đại học Hoa Sen",
+  "found_url": "https://www.hoasen.edu.vn/tuyensinh/tim-hieu-hoc-phi-dai-hoc-hoa-sen/",
+  "status": "success",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": 45,
+    "tuition_max": 85
+  },
+  "data": []
+}

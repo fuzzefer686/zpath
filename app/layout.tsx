@@ -3,12 +3,15 @@ import "katex/dist/katex.min.css";
 import "./globals.css";
 import { Navbar } from "@/components/zpath/Navbar";
 import { Footer } from "@/components/zpath/Footer";
+import { SideRailAds } from "@/components/zpath/SideRailAds";
+import { HeroPopupAd } from "@/components/zpath/HeroPopupAd";
 import { Providers } from "@/components/zpath/Providers";
 import { MetaPixelPageViewTracker } from "@/components/zpath/MetaPixel";
 import { Analytics } from "@vercel/analytics/next";
 import { getMetadataBase, SITE_NAME } from "@/lib/seo";
 import { Suspense } from "react";
 import Script from "next/script";
+import { ADSENSE_CLIENT } from "@/config/ads";
 
 export const metadata: Metadata = {
   metadataBase: getMetadataBase(),
@@ -38,7 +41,7 @@ export default function RootLayout({
       <head>
         <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7783540122858073"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
@@ -81,7 +84,12 @@ export default function RootLayout({
         </Suspense>
         <Providers>
           <Navbar />
-          
+
+          {/* Site-wide promo: fixed side-rails on wide screens + the dismissible
+              popup on every tab (both self-exclude on auth/admin/low-content routes). */}
+          <SideRailAds />
+          <HeroPopupAd />
+
           {/* Nội dung các trang sẽ hiển thị ở đây */}
           <main className="flex-1">
             {children}

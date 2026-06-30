@@ -1,0 +1,199 @@
+{
+  "university_code": "TTU",
+  "university_name": "Trường Đại học Tân Tạo",
+  "found_url": "https://tuyensinh.ttu.edu.vn/",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 21,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nông nghiệp Công nghệ cao",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính – Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Digital Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistic và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Hàn quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

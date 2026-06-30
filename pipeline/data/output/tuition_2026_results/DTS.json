@@ -1,0 +1,12 @@
+{
+  "university_code": "DTS",
+  "university_name": "Trường Đại học Sư phạm - Đại học Thái Nguyên",
+  "found_url": "https://tnu.edu.vn/",
+  "status": "needs_deeper_crawl",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": []
+}

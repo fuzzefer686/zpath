@@ -1,0 +1,37 @@
+{
+  "university_code": "DHT",
+  "university_name": "Trường Đại học Hà Tĩnh",
+  "found_url": "https://htu.edu.vn/images/ThongBao/2025/QD-muc-thu-hoc-phi-sinh-vien-he-chinh-quy-nam-hoc-2025-2026.pdf",
+  "status": "success",
+  "num_records": 4,
+  "school_wide": {
+    "tuition_min": 12.5,
+    "tuition_max": 16.5
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Khoa học giáo dục và đào tạo giáo viên",
+      "tuition_min": 12.5,
+      "tuition_max": 12.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Kinh doanh và quản lý, Luật",
+      "tuition_min": 14.5,
+      "tuition_max": 14.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Khoa học sự sống, Khoa học tự nhiên",
+      "tuition_min": 15.5,
+      "tuition_max": 15.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Kỹ thuật, Công nghệ, Nông - Lâm - Ngư nghiệp",
+      "tuition_min": 16.5,
+      "tuition_max": 16.5
+    }
+  ]
+}

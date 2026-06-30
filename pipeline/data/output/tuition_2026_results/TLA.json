@@ -1,0 +1,79 @@
+{
+  "university_code": "TLA",
+  "university_name": "Trường Đại học Thủy lợi",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/1209/hoc-phi-truong-dai-hoc-thuy-loi-2025-2026",
+  "status": "partial",
+  "num_records": 11,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật, công nghệ kỹ thuật xây dựng, cơ khí",
+      "tuition_min": 5,
+      "tuition_max": 5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật trắc địa - bản đồ, Kỹ thuật hóa học",
+      "tuition_min": 5.4,
+      "tuition_max": 5.4
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành kỹ thuật còn lại",
+      "tuition_min": 5.3,
+      "tuition_max": 5.3
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "tuition_min": 4.85,
+      "tuition_max": 4.85
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin, Kỹ thuật phần mềm",
+      "tuition_min": 4.9,
+      "tuition_max": 4.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành CNTT còn lại (AI, an ninh mạng...)",
+      "tuition_min": 5.4,
+      "tuition_max": 5.4
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học, Thủy văn học",
+      "tuition_min": 4.4,
+      "tuition_max": 4.4
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế, kế toán, tài chính, luật, quản trị kinh doanh",
+      "tuition_min": 4.4,
+      "tuition_max": 4.4
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics, quản lý chuỗi cung ứng, quản lý xây dựng",
+      "tuition_min": 5,
+      "tuition_max": 5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế số, du lịch, lữ hành",
+      "tuition_min": 4.75,
+      "tuition_max": 4.75
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh, Ngôn ngữ Trung Quốc",
+      "tuition_min": 4.4,
+      "tuition_max": 4.4
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "university_code": "HLU",
+  "university_name": "Trường Đại học Hạ Long",
+  "found_url": "https://uhl.edu.vn/Timhieuvehocphi_5020.htm",
+  "status": "success",
+  "num_records": 6,
+  "school_wide": {
+    "tuition_min": 13.6,
+    "tuition_max": 18.0
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học; Giáo dục Mầm non; SP Tin học; SP Ngữ văn; SP Tiếng Anh; SP Khoa học tự nhiên; SP Toán; SP Âm nhạc",
+      "tuition_min": 15.9,
+      "tuition_max": 15.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh; Kế toán",
+      "tuition_min": 15.5,
+      "tuition_max": 15.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nuôi trồng thủy sản; Khoa học máy tính; Công nghệ thông tin",
+      "tuition_min": 18.0,
+      "tuition_max": 18.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh, Ngôn ngữ Nhật Bản, Ngôn ngữ Trung Quốc, Ngôn ngữ Hàn Quốc, Văn học, Quản lý văn hóa, Quản lý tài nguyên và môi trường; Quản trị dịch vụ du lịch và lữ hành; Quản trị khách sạn; Quản trị nhà hàng và dịch vụ ăn uống; Dịch vụ và du lịch Hàng không",
+      "tuition_min": 16.5,
+      "tuition_max": 16.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ cao đẳng, trung cấp (Mầm non, Thanh nhạc, Nghệ thuật biểu diễn, Nhạc cụ, Hội họa)",
+      "tuition_min": 13.6,
+      "tuition_max": 13.6
+    }
+  ]
+}

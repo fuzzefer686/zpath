@@ -1,13 +1,20 @@
-# Cursor Agent Instructions
+# ZPath — Context cho coding agent
 
-## Project Context
-Bạn đang hỗ trợ phát triển ZPATH - một hệ thống hướng nghiệp. Dự án đang ở giai đoạn xây dựng Matching Engine (Thuật toán đối sánh điểm số và tính cách).
+## Đọc trước
+- Spec đầy đủ: `zpath-cv-profile-feature-plan.md`. Luôn đọc đúng section (§) được nêu trong task.
 
-## Agent Goals
-1. Khi được yêu cầu tạo tính năng mới, hãy tự động kiểm tra xem có cần tạo Component mới trong `/components` hay Hook mới trong `/hooks` không.
-2. Nếu có thay đổi liên quan đến dữ liệu, hãy nhắc người dùng chạy `npx supabase db diff` để lưu migration.
-3. Luôn đọc file `README.md` để đảm bảo tuân thủ đúng luồng Gitflow của team.
+## Engineering philosophy (BẮT BUỘC)
+- Correctness over speed. Configuration over hardcoding. Normalized schema. RLS-first.
+- Reuse dữ liệu sẵn có: catalog chứng chỉ, transcript, UniMap — KHÔNG nhân bản.
+- AI explainability: mọi recommendation có `rationale`. AI KHÔNG bịa credential.
+- Render CV bằng engine deterministic (react-pdf default). KHÔNG dùng Vertex AI để render. KHÔNG bật External renderer.
 
-## Critical Constraints
-- Tuyệt đối không xóa các file cấu hình quan trọng như `.env.local`, `next.config.ts`, `tsconfig.json`.
-- Luôn kiểm tra xem thư viện đã được cài đặt trong `package.json` chưa trước khi sử dụng `import`.
+## Bảo mật & pháp lý (BẮT BUỘC — Luật 91/2025 + NĐ 356/2025)
+- Mặc định CV private. Mọi "công bố" (share) là opt-in có cảnh báo.
+- User <16: chặn share; hạn chế/không gửi PII cross-border (§13.7 lớp 6).
+- Trước MỌI call AI: đi qua sanitizer de-identify (§13.7 lớp 1) + gateway server-side (lớp 2).
+- Artifact PII nặng (file render, snapshot share, payload cross-border) luôn ephemeral ≤ 30 phút (§13.8).
+
+## Quy tắc làm việc
+- Mỗi task: làm đúng phạm vi, KHÔNG tự mở rộng. Xong thì DỪNG, báo cáo file đã đổi + cách test, CHỜ confirm.
+- Viết test kèm cho task có logic. Không commit secret/API key.

@@ -1,0 +1,91 @@
+{
+  "university_code": "DTY",
+  "university_name": "Trường Đại học Y Dược - Đại học Thái Nguyên",
+  "found_url": "https://diemthi.tuyensinh247.com/thong-tin-dai-hoc-y-duoc-dai-hoc-thai-nguyen-DTY.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 9,
+  "data": [
+    {
+      "school_major_code": "DTY101",
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00; D07; D08; Q00",
+      "quota": 600,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "DTY110",
+      "major_name": "Y học dự phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00; D07; D08; Q00",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "DTY201",
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; B00; D07; D08; Q00",
+      "quota": 220,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "DTY301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00; D01; D07; D08; Q00",
+      "quota": 250,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "DTY302",
+      "major_name": "Hộ sinh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00; D01; D07; D08; Q00",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "DTY501",
+      "major_name": "Răng - Hàm - Mặt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A02; B00; D07; D08; Q00",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "DTY601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; B00; D07; D08; Q00",
+      "quota": 70,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "DTY602",
+      "major_name": "Kỹ thuật hình ảnh y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; B00; D07; D08; Q00",
+      "quota": 68,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "DTY603",
+      "major_name": "Kỹ thuật phục hồi chức năng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; B00; D07; Q00",
+      "quota": 68,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "university_code": "DTV",
+  "university_name": "Trường Đại học Trà Vinh",
+  "found_url": "https://vietnamnet.vn/dai-hoc-tra-vinh-mien-hoc-phi-nam-nhat-13-nganh-tang-manh-hoc-bong-tuyen-sinh-2521608.html",
+  "status": "partial",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (chương trình EIP)",
+      "tuition_min": 10.9,
+      "tuition_max": 11.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (chương trình EIP)",
+      "tuition_min": 10.9,
+      "tuition_max": 11.9
+    }
+  ]
+}

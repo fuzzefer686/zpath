@@ -1,0 +1,26 @@
+{
+  "university_code": "QHE",
+  "university_name": "Trường Đại học Kinh tế - Đại học Quốc gia Hà Nội",
+  "found_url": "https://daibieunhandan.vn/diem-chuan-cua-truong-dai-hoc-kinh-te-dhqghn-nam-2025-nganh-cao-nhat-25-72-diem-10384394.html",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 2,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 25.72,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.2,
+      "scale": 30
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "university_code": "HHK",
+  "university_name": "Học viện Hàng không Việt Nam",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/hoc-vien-hang-khong-viet-nam-HHK.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 8,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/B08/D01/D07/D09/D10/D11/D12/D13/D14/D15/X25/X26/X27/X28/X78/X79/X80/X81",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/A02/A03/A04/A05/A06/A07/B00/B01/B02/B03/B08/C00/C01/C02/C03/C04/C05/C06/C07/C08/C09/C10/C11/C12/C13/D01/D07/D09/D10/D11/D12/D13/D14/D15/X01/X02/X03/X04/X05/X06/X07/X08/X09/X10/X11/X12/X13/X14/X15",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/A02/A03/A04/A05/A06/A07/B00/B01/B02/B03/B08/C00/C01/C02/C03/C04/C05/C06/C07/C08/C09/C10/C11/C12/C13/D01/D07/D09/D10/D11/D12/D13/D14/D15/X01/X02/X03/X04/X05/X06/X07/X08/X09/X10/X11/X12/X13/X14/X15",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hàng không",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/A02/A03/A04/A05/A06/A07/B00/B01/B02/B03/B08/C01/C02/C03/C04/D01/D07/D09/D10/X01/X02/X03/X04/X05/X06/X07/X08/X09/X10/X11/X12/X13/X14/X15/X16/X17/X18/X19/X20/X21/X22/X23/X24/X25/X26/X27/X28/X53/X54",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý hoạt động bay; Hệ thống kỹ thuật quản lý bay",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/A02/A03/A04/A05/A06/A07/B00/B01/B02/B03/B08/C01/C02/C03/C04/D01/D07/D09/D10/X01/X02/X03/X04/X05/X06/X07/X08/X09/X10/X11/X12/X13/X14/X15/X16/X17/X18/X19/X20/X21/X22/X23/X24/X25/X26/X27/X28/X53/X54",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý hoạt động bay (học bằng Tiếng Anh); Quản lý và khai thác bay (học bằng Tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/B08/D01/D07/D09/D10/X25/X26/X27/X28",
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý hoạt động bay (học bằng Tiếng Anh); Quản lý và khai thác bay (học bằng Tiếng Anh)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 921.25,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý hoạt động bay; Hệ thống kỹ thuật quản lý bay",
+      "admission_method": "dgnl_hn",
+      "combination_code": "Q00",
+      "score": 106.25,
+      "scale": 150
+    }
+  ]
+}

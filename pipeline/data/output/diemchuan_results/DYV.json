@@ -1,0 +1,106 @@
+{
+  "university_code": "DYV",
+  "university_name": "Trường Đại học Y khoa Phạm Ngọc Thạch",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-y-khoa-pham-ngoc-thach-TYS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 12,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "score": 25.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y học cổ truyền",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "score": 21.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08",
+      "score": 19.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hộ sinh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08",
+      "score": 19.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dinh dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Răng Hàm Mặt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "score": 25.26,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hình ảnh y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "score": 20.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phục hồi chức năng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00",
+      "score": 21.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khúc xạ nhãn khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y tế công cộng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B03; B08",
+      "score": 18.0,
+      "scale": 30
+    }
+  ]
+}

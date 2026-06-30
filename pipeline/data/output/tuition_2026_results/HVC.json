@@ -1,0 +1,43 @@
+{
+  "university_code": "HVC",
+  "university_name": "Học viện Cán bộ Thành phố Hồ Chí Minh",
+  "found_url": "https://dienthoaivui.com.vn/back-to-school-hoc-vien-can-bo-thanh-pho-ho-chi-minh-hoc-phi",
+  "status": "success",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": 39,
+    "tuition_max": 44.5
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "tuition_min": 39,
+      "tuition_max": 40.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "tuition_min": 42,
+      "tuition_max": 43.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng Đảng và Chính quyền nhà nước",
+      "tuition_min": 43,
+      "tuition_max": 44.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chính trị học",
+      "tuition_min": 42,
+      "tuition_max": 43.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công tác xã hội",
+      "tuition_min": 43,
+      "tuition_max": 44.5
+    }
+  ]
+}

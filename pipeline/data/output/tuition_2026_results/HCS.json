@@ -1,0 +1,85 @@
+{
+  "university_code": "HCS",
+  "university_name": "Học viện Hành chính Quốc gia (Cơ sở phía Nam)",
+  "found_url": "https://dienthoaivui.com.vn/back-to-school-hoc-phi-hoc-vien-hanh-chinh-quoc-gia",
+  "status": "success",
+  "num_records": 12,
+  "school_wide": {
+    "tuition_min": 17,
+    "tuition_max": 21
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chính trị học",
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng Đảng & Chính quyền nhà nước",
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa học",
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý văn hóa",
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lưu trữ học",
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế",
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực",
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị văn phòng",
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin",
+      "tuition_min": 20,
+      "tuition_max": 20
+    }
+  ]
+}

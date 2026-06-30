@@ -1,0 +1,66 @@
+{
+  "university_code": "MHT",
+  "university_name": "Trường Đại học Mỹ thuật Việt Nam",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/3822/diem-chuan-dai-hoc-my-thuat-viet-nam-nam-2025-moi-nhat",
+  "year": 2025,
+  "status": "success",
+  "num_records": 7,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Hội họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 31.07,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 30.36,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điêu khắc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 28.83,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 30.93,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế thời trang",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 30.0,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế nội thất",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 29.83,
+      "scale": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lý luận, lịch sử và phê bình mỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 31.57,
+      "scale": 40
+    }
+  ]
+}

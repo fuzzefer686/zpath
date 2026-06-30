@@ -1,0 +1,25 @@
+{
+  "university_code": "DTG",
+  "university_name": "Trường Đại học Trường Vinh",
+  "found_url": "https://giaoduc.net.vn/hoc-phi-nam-hoc-2025-2026-cua-nhieu-truong-dai-hoc-khu-vuc-mien-trung-post251298.gd",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 11.4,
+    "tuition_max": 15.5
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Khối ngành Sức khỏe (Điều dưỡng)",
+      "tuition_min": 15.5,
+      "tuition_max": 15.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành khác",
+      "tuition_min": 11.4,
+      "tuition_max": 11.4
+    }
+  ]
+}

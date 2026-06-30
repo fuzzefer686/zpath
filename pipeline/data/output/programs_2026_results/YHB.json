@@ -1,0 +1,181 @@
+{
+  "university_code": "YHB",
+  "university_name": "Trường Đại học Y Hà Nội",
+  "found_url": "https://hmu.edu.vn/tin-tuc/6cc77ebb-5fdb-4c94-b338-a5956f43e85c/thong-bao-to-hop-xet-tuyen-chi-tieu-va-phuong-thuc-xet-tuyen-tuyen-sinh-dai-hoc-nam-2025",
+  "data_year": 2025,
+  "status": "success",
+  "num_records": 19,
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": 400,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Y học cổ truyền",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720501",
+      "major_name": "Răng Hàm Mặt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720110",
+      "major_name": "Y học dự phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720609",
+      "major_name": "Khúc xạ nhãn khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": 70,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật Xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720603",
+      "major_name": "Kỹ thuật Phục hồi chức năng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": 70,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng chương trình tiên tiến",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": 130,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720302",
+      "major_name": "Hộ sinh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": 70,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720502",
+      "major_name": "Kỹ thuật phục hình răng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720401",
+      "major_name": "Dinh dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720701",
+      "major_name": "Y tế công cộng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B08; D01",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7310401",
+      "major_name": "Tâm lý học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; C00; D01",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7760101",
+      "major_name": "Công tác xã hội",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720602",
+      "major_name": "Kỹ thuật hình ảnh y học (dự kiến)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720101YHT",
+      "major_name": "Y khoa (Phân hiệu Thanh Hóa)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": 130,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720301YHT",
+      "major_name": "Điều dưỡng (Phân hiệu Thanh Hóa)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720601YHT",
+      "major_name": "Kỹ thuật Xét nghiệm y học (Phân hiệu Thanh Hóa)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720603YHT",
+      "major_name": "Kỹ thuật Phục hồi chức năng (Phân hiệu Thanh Hóa)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00",
+      "quota": 70,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

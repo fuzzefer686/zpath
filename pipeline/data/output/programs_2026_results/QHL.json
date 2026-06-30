@@ -1,0 +1,46 @@
+{
+  "university_code": "QHL",
+  "university_name": "Trường Đại học Luật - Đại học Quốc gia Hà Nội",
+  "found_url": "https://law.vnu.edu.vn/",
+  "data_year": 2026,
+  "status": "partial",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật chất lượng cao",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật thương mại quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

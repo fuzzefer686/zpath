@@ -1,0 +1,118 @@
+{
+  "university_code": "NHS",
+  "university_name": "Trường Đại học Ngân hàng Thành phố Hồ Chí Minh",
+  "found_url": "https://tuyensinh.hub.edu.vn/dai-hoc/dai-hoc-chinh-quy-chuan",
+  "data_year": 2025,
+  "status": "success",
+  "num_records": 12,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bảo hiểm (Chương trình công nghệ Bảo hiểm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị khách sạn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng (Chương trình Ngân hàng số và Chuỗi khối)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng (Chương trình Tài chính)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng (Chương trình Tài chính Định lượng và Quản trị rủi ro)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng (Chương trình Tài chính và Quản trị doanh nghiệp)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 25
+    }
+  ]
+}

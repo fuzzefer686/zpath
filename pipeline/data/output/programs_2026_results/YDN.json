@@ -1,0 +1,73 @@
+{
+  "university_code": "YDN",
+  "university_name": "Trường Đại học Kỹ thuật Y Dược Đà Nẵng",
+  "found_url": "https://thi.tuyensinh247.com/thong-tin-tuyen-sinh-dai-hoc-ky-thuat-y-duoc-da-nang-2026-c24a89176.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 7,
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 260,
+      "tuition_min": 50,
+      "tuition_max": 50
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 135,
+      "tuition_min": 50,
+      "tuition_max": 50
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 345,
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 160,
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": "7720602",
+      "major_name": "Kỹ thuật hình ảnh y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 120,
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": "7720603",
+      "major_name": "Kỹ thuật phục hồi chức năng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 120,
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": "7720701",
+      "major_name": "Y tế công cộng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 30,
+      "tuition_min": 40,
+      "tuition_max": 40
+    }
+  ]
+}

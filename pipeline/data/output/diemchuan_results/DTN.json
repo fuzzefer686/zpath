@@ -1,0 +1,34 @@
+{
+  "university_code": "DTN",
+  "university_name": "Trường Đại học Nông Lâm - Đại học Thái Nguyên",
+  "found_url": "https://vietnamnet.vn/diem-chuan-truong-dai-hoc-nong-lam-thai-nguyen-nam-2025-2434929.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 3,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 225.0,
+      "scale": 1200
+    }
+  ]
+}

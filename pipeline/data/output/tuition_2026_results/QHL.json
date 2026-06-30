@@ -1,0 +1,37 @@
+{
+  "university_code": "QHL",
+  "university_name": "Trường Đại học Luật - Đại học Quốc gia Hà Nội",
+  "found_url": "https://law.vnu.edu.vn/thong-tin-tuyen-sinh-dai-hoc-chinh-quy-nam-2026/",
+  "status": "success",
+  "num_records": 4,
+  "school_wide": {
+    "tuition_min": 30.43,
+    "tuition_max": 35.8
+  },
+  "data": [
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật (chuẩn)",
+      "tuition_min": 30.43,
+      "tuition_max": 30.43
+    },
+    {
+      "school_major_code": "7380109",
+      "major_name": "Luật Thương mại quốc tế",
+      "tuition_min": 30.43,
+      "tuition_max": 30.43
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật Kinh tế (Luật Kinh doanh)",
+      "tuition_min": 32.22,
+      "tuition_max": 32.22
+    },
+    {
+      "school_major_code": "7380101CLC",
+      "major_name": "Luật chất lượng cao",
+      "tuition_min": 35.8,
+      "tuition_max": 35.8
+    }
+  ]
+}

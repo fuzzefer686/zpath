@@ -1,0 +1,12 @@
+{
+  "university_code": "VUP",
+  "university_name": "Trường Đại học Sư phạm Kỹ thuật Vĩnh Long",
+  "found_url": "https://htql.vlute.edu.vn/ung-dung",
+  "status": "needs_deeper_crawl",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": []
+}

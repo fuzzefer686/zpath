@@ -1,0 +1,379 @@
+{
+  "university_code": "HCV",
+  "university_name": "Học viện Hành chính Quốc gia",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/hoc-vien-hanh-chinh-va-quan-tri-cong-HCH.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 41,
+  "data": [
+    {
+      "school_major_code": "72940-1HN",
+      "major_name": "Chuyên ngành Văn hóa Du lịch thuộc ngành Văn hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C04; D01; D14; D15",
+      "quota": 30,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "72940-2HN",
+      "major_name": "Chuyên ngành Văn hóa Truyền thông thuộc ngành Văn hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C04; D01; D14; D15",
+      "quota": 140,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "72942-1HN",
+      "major_name": "Chuyên ngành Quản lý di sản văn hóa và phát triển du lịch thuộc ngành Quản lý văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C04; D01; D14; D15",
+      "quota": 40,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "72942HN",
+      "major_name": "Quản lý văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C04; D01; D14; D15",
+      "quota": 70,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73111-1HN",
+      "major_name": "Chuyên ngành Kinh tế du lịch thuộc ngành Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C01; D01; D10",
+      "quota": 50,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73111HN",
+      "major_name": "Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C01; D01; D10",
+      "quota": 170,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73121HN",
+      "major_name": "Chính trị học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C04; D01",
+      "quota": 150,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73122HN",
+      "major_name": "Xây dựng Đảng và chính quyền nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "quota": 150,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73125-1HN",
+      "major_name": "Chuyên ngành Quản trị tổ chức",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C04; D01; D14; D15",
+      "quota": 40,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73125-2HN",
+      "major_name": "Chuyên ngành Quản trị địa phương",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C04; D01; D14; D15",
+      "quota": 40,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73125-EHN",
+      "major_name": "Quản lý nhà nước (Chương trình 50% tiếng Anh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15",
+      "quota": 40,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73125HN",
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C04; D01; D14; D15",
+      "quota": 250,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73221HN",
+      "major_name": "Thông tin - thư viện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D01; D14; D15",
+      "quota": 75,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73233-1HN",
+      "major_name": "Chuyên ngành Văn thư - Lưu trữ thuộc ngành Lưu trữ học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "quota": 70,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73233HN",
+      "major_name": "Lưu trữ học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "quota": 85,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73444HN",
+      "major_name": "Quản trị nhân lực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C01; C04; D01",
+      "quota": 310,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "73446HN",
+      "major_name": "Quản trị văn phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; A07; D01; D14",
+      "quota": 310,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "73811-1HN",
+      "major_name": "Chuyên ngành Thanh tra thuộc ngành Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01",
+      "quota": 70,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "73811HN",
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01",
+      "quota": 310,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "7480104-Hà Nội",
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X26",
+      "quota": 100,
+      "tuition_min": 20,
+      "tuition_max": 20
+    },
+    {
+      "school_major_code": "78113HN",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; D01; D10; D15",
+      "quota": 140,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73111DN",
+      "major_name": "Kinh tế (Phân hiệu Đà Nẵng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D10",
+      "quota": 40,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73125DN",
+      "major_name": "Quản lý nhà nước (Phân hiệu Đà Nẵng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D15",
+      "quota": 80,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73444DN",
+      "major_name": "Quản trị nhân lực (Phân hiệu Đà Nẵng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C04; D01; D10",
+      "quota": 80,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "73446DN",
+      "major_name": "Quản trị văn phòng (Phân hiệu Đà Nẵng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D01; D14; D15",
+      "quota": 70,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "7381-1DN",
+      "major_name": "Chuyên ngành Thanh tra thuộc ngành Luật (Phân hiệu Đà Nẵng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C00; C03; D01",
+      "quota": 100,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "73811DN",
+      "major_name": "Luật (Phân hiệu Đà Nẵng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C00; C01; D01",
+      "quota": 50,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "78113DN",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành (Phân hiệu Quảng Nam)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D01; D14; D15",
+      "quota": 40,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73111HCM",
+      "major_name": "Kinh tế (Phân hiệu TP.HCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D10; D15",
+      "quota": 155,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73122HCM",
+      "major_name": "Xây dựng Đảng và chính quyền nhà nước (Phân hiệu TP.HCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C04; D01",
+      "quota": 80,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73125HCM",
+      "major_name": "Quản lý nhà nước (Phân hiệu TP.HCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D01; D10",
+      "quota": 160,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "7323-1HCM",
+      "major_name": "Chuyên ngành Văn thư - Lưu trữ thuộc ngành Lưu trữ học (Phân hiệu TP.HCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "quota": 35,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73233HCM",
+      "major_name": "Lưu trữ học (Phân hiệu TP.HCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "quota": 35,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73444HCM",
+      "major_name": "Quản trị nhân lực (Phân hiệu TP.HCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C04; D01; D10",
+      "quota": 105,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "73446HCM",
+      "major_name": "Quản trị văn phòng (Phân hiệu TP.HCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D01; D10",
+      "quota": 150,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "7381-1HCM",
+      "major_name": "Chuyên ngành Thanh tra thuộc ngành Luật (Phân hiệu TP.HCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D01; D10",
+      "quota": 70,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "73811HCM",
+      "major_name": "Luật (Phân hiệu TP.HCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D01; D10",
+      "quota": 70,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "73111DL",
+      "major_name": "Kinh tế (Phân hiệu Đắk Lắk)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C01; D01; D10",
+      "quota": 60,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73125DL",
+      "major_name": "Quản lý nhà nước (Phân hiệu Đắk Lắk)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C00; D01; D10",
+      "quota": 60,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "73444DL",
+      "major_name": "Quản trị nhân lực (Phân hiệu Đắk Lắk)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01",
+      "quota": 60,
+      "tuition_min": 17,
+      "tuition_max": 17
+    },
+    {
+      "school_major_code": "73811DL",
+      "major_name": "Luật (Phân hiệu Đắk Lắk)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; C00; C04; D01",
+      "quota": 60,
+      "tuition_min": 17,
+      "tuition_max": 17
+    }
+  ]
+}

@@ -274,6 +274,80 @@ export function getGeminiClient() {
   return client;
 }
 
+// ---------------------------------------------------------------------------
+// Region-pinned Vertex clients (used by the CV AI gateway, lib/ai/vertex.ts).
+//
+// CV data carries student PII and is subject to cross-border rules (§13.7):
+// it MUST go through a REGIONAL Vertex endpoint (e.g. asia-southeast1), never
+// the global endpoint and never the API-key Developer API (which cannot pin a
+// region). This path therefore REQUIRES Vertex service-account credentials.
+// ---------------------------------------------------------------------------
+const regionClients = new Map<string, GoogleGenAI>();
+
+export function getGeminiClientForLocation(location: string): GoogleGenAI {
+  const loc = location.trim();
+  if (!loc || loc === "global") {
+    throw new Error(
+      "VERTEX_REGION_REQUIRED: a specific (non-global) location is required for region-pinned Vertex calls.",
+    );
+  }
+
+  const cached = regionClients.get(loc);
+  if (cached) return cached;
+
+  if (!hasVertexServiceAccountCredentials()) {
+    throw new Error(
+      "VERTEX_SERVICE_ACCOUNT_REQUIRED: region pinning needs Vertex service-account credentials (API-key mode cannot pin a region).",
+    );
+  }
+
+  configureVertexServiceAccountCredentials();
+  const created = new GoogleGenAI({
+    vertexai: true,
+    project: getVertexProjectId(),
+    location: loc,
+  });
+  regionClients.set(loc, created);
+  return created;
+}
+
+export async function generateGeminiTextInRegion({
+  prompt,
+  config,
+  location,
+}: {
+  prompt: string;
+  config?: GenerateContentConfig;
+  location: string;
+}) {
+  const model = getGeminiModelName();
+  const requestConfig: GenerateContentConfig = {
+    ...config,
+    ...(config?.thinkingConfig === undefined && modelSupportsThinkingConfig(model)
+      ? { thinkingConfig: { thinkingBudget: 0 } }
+      : {}),
+  };
+  const response = await getGeminiClientForLocation(location).models.generateContent({
+    model,
+    contents: prompt,
+    config: requestConfig,
+  });
+
+  const text = readResponseText(response);
+  if (!text) {
+    const finishReason = readFinishReason(response);
+    throw new Error(
+      finishReason ? `GEMINI_EMPTY_RESPONSE:${finishReason}` : "GEMINI_EMPTY_RESPONSE",
+    );
+  }
+
+  return text;
+}
+
+export function isGeminiRegionPinnable() {
+  return hasVertexServiceAccountCredentials();
+}
+
 export async function generateGeminiText({
   prompt,
   config,

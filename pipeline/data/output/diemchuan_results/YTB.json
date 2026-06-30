@@ -1,0 +1,58 @@
+{
+  "university_code": "YTB",
+  "university_name": "Trường Đại học Y Dược Thái Bình",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-y-duoc-thai-binh-YTB.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; D07; D08",
+      "score": 24.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y học dự phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; D08",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y học cổ truyền",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; D08",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D07",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; D08",
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00",
+      "score": 19.5,
+      "scale": 30
+    }
+  ]
+}

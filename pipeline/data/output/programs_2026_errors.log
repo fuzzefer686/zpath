@@ -3,3 +3,8 @@
 [2026-06-17T00:36:46.227663+00:00] DDT | extract https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEddtTsKSmUc: Extra data: line 65 column 1 (char 12347)
 [2026-06-17T00:43:21.125116+00:00] QSK | extract https://www.facebook.com/uel.edu.vn: 400 Client Error: Bad Request for url: https://www.facebook.com/uel.edu.vn
 [2026-06-17T00:47:29.112567+00:00] DHA | deeper https://www.hueuni.edu.vn/portal/vi/index.php/tuyen-sinh.html: 404 Client Error: Not Found for url: https://hueuni.edu.vn/portal/vi/index.php/tuyen-sinh.html
+[2026-06-19T12:27:46.642338+00:00] QHF | extract https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVU1efz3lql: Extra data: line 153 column 1 (char 4626)
+[2026-06-19T12:32:26.236312+00:00] VGU | extract https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmfj5OTOj2i: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.', 'status': 'RESOURCE_EXHAUSTED'}}
+[2026-06-19T13:06:34.001309+00:00] VINUNI | extract https://vinuni.force.com/: 404 Client Error: Not Found for url: https://vinuni.force.com/
+[2026-06-19T13:36:41.093640+00:00] NHS | extract https://www.facebook.com/tuyensinhdaihocnganhang/: 400 Client Error: Bad Request for url: https://www.facebook.com/tuyensinhdaihocnganhang/
+[2026-06-19T13:39:09.385963+00:00] DVH | extract https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdoAtyw-8Xi: HTTPConnectionPool(host='vhu.edu.vn', port=80): Read timed out.

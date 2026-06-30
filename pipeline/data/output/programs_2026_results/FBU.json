@@ -1,0 +1,118 @@
+{
+  "university_code": "FBU",
+  "university_name": "Trường Đại học Tài chính - Ngân hàng Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-tai-chinh-ngan-hang-ha-noi-FBU.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 12,
+  "data": [
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D10; X25",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D10; X25; C00; C04; D04",
+      "quota": 450,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc (Liên kết đào tạo, cấp song bằng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C00; C04; D04",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "quota": 450,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340120",
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340120",
+      "major_name": "Kinh doanh quốc tế (Liên kết đào tạo, cấp song bằng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25",
+      "quota": 10,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340121",
+      "major_name": "Kinh doanh thương mại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "quota": 350,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "quota": 1000,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "quota": 400,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340302",
+      "major_name": "Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; X01; X02",
+      "quota": 950,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

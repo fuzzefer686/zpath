@@ -1,0 +1,217 @@
+{
+  "university_code": "DNT",
+  "university_name": "Trường Đại học Ngoại ngữ - Tin học Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-ngoai-ngu-tin-hoc-tphcm-DNT.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 23,
+  "data": [
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D11; D12; D14; D15; X78; X79; X80",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D03; D04; D11; D14; D15; X78; X80",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7220209",
+      "major_name": "Ngôn ngữ Nhật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D06; D14; D15",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7220210",
+      "major_name": "Ngôn ngữ Hàn Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D11; DD2; D14; D15",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7310206",
+      "major_name": "Quan hệ quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D15; X25; X78",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7310608",
+      "major_name": "Đông Phương học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; A01; DD2; D06; D14; D15",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D15; X25; X78",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7320108",
+      "major_name": "Quan hệ công chúng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D15; X25; X78",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D11; D14; X25; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D11; D14; X25; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7340120",
+      "major_name": "Kinh doanh quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D11; D14; X25; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7340122",
+      "major_name": "Thương mại điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D07; X06; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D11; D14; X25; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D11; D14; X25; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7340302",
+      "major_name": "Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D11; D14; X25; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C00; D01; D09; D14; D15; X25; X78",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C00; D01; D09; D14; D15; X25; X78",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7480103",
+      "major_name": "Kỹ thuật phần mềm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D07; X06; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7480107",
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D07; X06; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D07; X06; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D11; D14; X25; X26; X27",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7810103",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; X26; X78",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    },
+    {
+      "school_major_code": "7810201",
+      "major_name": "Quản trị khách sạn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; X26; X78",
+      "quota": null,
+      "tuition_min": 21.1,
+      "tuition_max": 21.1
+    }
+  ]
+}

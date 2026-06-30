@@ -1,0 +1,118 @@
+{
+  "university_code": "SDU",
+  "university_name": "Trường Đại học Sao Đỏ",
+  "found_url": "https://images.tuyensinh247.com/picture/2026/0330/thong-tin-tuyen-sinh-dai-hoc-sao-do-2026.pdf",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 12,
+  "data": [
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510205",
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510202",
+      "major_name": "Công nghệ kỹ thuật cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510301",
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510302",
+      "major_name": "Công nghệ kỹ thuật điều khiển và tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7540101",
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510406",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; C01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; A01",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D04; D14; D15",
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

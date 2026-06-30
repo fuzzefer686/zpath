@@ -1,0 +1,49 @@
+{
+  "university_code": "YTB",
+  "university_name": "Trường Đại học Y Dược Thái Bình",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-y-duoc-thai-binh-YTB.html",
+  "status": "success",
+  "num_records": 6,
+  "school_wide": {
+    "tuition_min": 46,
+    "tuition_max": 65
+  },
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "tuition_min": 65,
+      "tuition_max": 65
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Y học cổ truyền",
+      "tuition_min": 60,
+      "tuition_max": 60
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "tuition_min": 62,
+      "tuition_max": 62
+    },
+    {
+      "school_major_code": "7720110",
+      "major_name": "Y học dự phòng",
+      "tuition_min": 48,
+      "tuition_max": 48
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "tuition_min": 46,
+      "tuition_max": 46
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "tuition_min": 46,
+      "tuition_max": 46
+    }
+  ]
+}

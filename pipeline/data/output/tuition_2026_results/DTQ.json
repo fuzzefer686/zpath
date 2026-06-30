@@ -1,0 +1,61 @@
+{
+  "university_code": "DTQ",
+  "university_name": "Phân hiệu Đại học Thái Nguyên tại Lào Cai",
+  "found_url": "https://giaoduc.net.vn/chi-tiet-muc-hoc-phi-cac-truong-thanh-vien-khoa-truc-thuoc-dai-hoc-thai-nguyen-post244369.gd",
+  "status": "success",
+  "num_records": 8,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chăn nuôi (chuyên ngành Chăn nuôi - Thú Y)",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học cây trồng (chuyên ngành Trồng trọt)",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ Du lịch và Lữ hành",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý Tài nguyên và Môi trường",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ tiếng Trung",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế",
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục mầm non",
+      "tuition_min": 0,
+      "tuition_max": 0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục tiểu học",
+      "tuition_min": 0,
+      "tuition_max": 0
+    }
+  ]
+}

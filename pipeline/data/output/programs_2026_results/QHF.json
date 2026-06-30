@@ -1,0 +1,154 @@
+{
+  "university_code": "QHF",
+  "university_name": "Trường Đại học Ngoại ngữ - Đại học Quốc gia Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-ngoai-ngu-ha-noi-QHF.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 16,
+  "data": [
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15",
+      "quota": 150,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7140234",
+      "major_name": "Sư phạm tiếng Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15; D04; D45; D65",
+      "quota": 25,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7140235",
+      "major_name": "Sư phạm tiếng Đức",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15; D05; D41; D61",
+      "quota": 25,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7140236",
+      "major_name": "Sư phạm tiếng Nhật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15; D06; D43; D63",
+      "quota": 25,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7140237",
+      "major_name": "Sư phạm tiếng Hàn Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15; DD2; DH1; DH5",
+      "quota": 25,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220101",
+      "major_name": "Tiếng Việt và Văn hóa Việt Nam",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15",
+      "quota": 50,
+      "tuition_min": 31,
+      "tuition_max": 31
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15",
+      "quota": 770,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220202",
+      "major_name": "Ngôn ngữ Nga",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15; D02; D42; D62",
+      "quota": 70,
+      "tuition_min": 31,
+      "tuition_max": 31
+    },
+    {
+      "school_major_code": "7220203",
+      "major_name": "Ngôn ngữ Pháp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15; D03; D44; D64",
+      "quota": 150,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15; D04; D45; D65",
+      "quota": 300,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220205",
+      "major_name": "Ngôn ngữ Đức",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15; D05; D41; D61",
+      "quota": 120,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220209",
+      "major_name": "Ngôn ngữ Nhật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15; D06; D43; D63",
+      "quota": 300,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220210",
+      "major_name": "Ngôn ngữ Hàn Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15; DD2; DH1; DH5",
+      "quota": 280,
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220211",
+      "major_name": "Ngôn ngữ Ả Rập",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15",
+      "quota": 60,
+      "tuition_min": 31,
+      "tuition_max": 31
+    },
+    {
+      "school_major_code": "7220212",
+      "major_name": "Văn hóa và truyền thông xuyên quốc gia",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D08; D14; D15",
+      "quota": 50,
+      "tuition_min": 31,
+      "tuition_max": 31
+    },
+    {
+      "school_major_code": "7310403",
+      "major_name": "Tâm lý học giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D15, D14, D07, D01, D08, A01, D09, D10, D84, D11, D12, D13, D66",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

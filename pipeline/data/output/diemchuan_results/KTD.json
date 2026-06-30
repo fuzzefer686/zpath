@@ -1,0 +1,26 @@
+{
+  "university_code": "KTD",
+  "university_name": "Trường Đại học Kiến trúc Đà Nẵng",
+  "found_url": "https://laodong.vn/giao-duc/diem-chuan-truong-dai-hoc-kien-truc-da-nang-cao-nhat-la-nganh-thiet-ke-do-hoa-1561789.ldo",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 2,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    }
+  ]
+}

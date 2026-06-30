@@ -1,0 +1,43 @@
+{
+  "university_code": "BAA",
+  "university_name": "Học viện Ngân hàng",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/hoc-vien-ngan-hang-NHH.html",
+  "status": "success",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": 27.8,
+    "tuition_max": 50.0
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đào tạo chuẩn - Khối ngành III (Kinh doanh quản lý và pháp luật)",
+      "tuition_min": 27.8,
+      "tuition_max": 27.8
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đào tạo chuẩn - Khối ngành V (Công nghệ thông tin, Toán và Thống kê)",
+      "tuition_min": 29.4,
+      "tuition_max": 29.4
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đào tạo chuẩn - Khối ngành VII (Nhân văn, Khoa học xã hội và hành vi)",
+      "tuition_min": 28.35,
+      "tuition_max": 28.35
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đào tạo Chất lượng cao",
+      "tuition_min": 45.0,
+      "tuition_max": 45.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình Kế toán định hướng Nhật Bản",
+      "tuition_min": 50.0,
+      "tuition_max": 50.0
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "university_code": "DCG",
+  "university_name": "Trường Đại học Công nghệ Đồng Nai",
+  "found_url": "https://dntu.edu.vn/hoc-phi-hoc-bong",
+  "status": "success",
+  "num_records": 25,
+  "school_wide": {
+    "tuition_min": 17.91,
+    "tuition_max": 20.5
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ chế tạo máy",
+      "tuition_min": 18.62,
+      "tuition_max": 18.62
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ chế tạo máy (Kỹ sư)",
+      "tuition_min": 20.24,
+      "tuition_max": 20.24
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "tuition_min": 18.9,
+      "tuition_max": 18.9
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện, điện tử (Kỹ sư)",
+      "tuition_min": 20.5,
+      "tuition_max": 20.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "tuition_min": 18.62,
+      "tuition_max": 18.62
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô (Kỹ sư)",
+      "tuition_min": 20.24,
+      "tuition_max": 20.24
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "tuition_min": 18.69,
+      "tuition_max": 18.69
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phần mềm",
+      "tuition_min": 18.69,
+      "tuition_max": 18.69
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo",
+      "tuition_min": 18.69,
+      "tuition_max": 18.69
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thiết kế đồ họa",
+      "tuition_min": 19.24,
+      "tuition_max": 19.24
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nghệ thuật số",
+      "tuition_min": 19.24,
+      "tuition_max": 19.24
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông đa phương tiện",
+      "tuition_min": 19.02,
+      "tuition_max": 19.02
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm (Kỹ sư)",
+      "tuition_min": 20.03,
+      "tuition_max": 20.03
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "tuition_min": 18.19,
+      "tuition_max": 18.19
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "tuition_min": 19.84,
+      "tuition_max": 19.84
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "tuition_min": 20.16,
+      "tuition_max": 20.16
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đông phương học",
+      "tuition_min": 17.91,
+      "tuition_max": 17.91
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "tuition_min": 17.93,
+      "tuition_max": 17.93
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung quốc",
+      "tuition_min": 17.95,
+      "tuition_max": 17.95
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "tuition_min": 18.04,
+      "tuition_max": 18.04
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị khách sạn",
+      "tuition_min": 18.1,
+      "tuition_max": 18.1
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "tuition_min": 18.12,
+      "tuition_max": 18.12
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "tuition_min": 18.1,
+      "tuition_max": 18.1
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "tuition_min": 18.24,
+      "tuition_max": 18.24
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "tuition_min": 18.14,
+      "tuition_max": 18.14
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "university_code": "VHS",
+  "university_name": "Trường Đại học Văn hóa Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-van-hoa-tphcm-VHS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 28,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa các dân tộc thiểu số Việt Nam",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C04; D01; D10; D15",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa học, chuyên ngành Văn hóa Việt Nam",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C04; C14; D01; D14; D15",
+      "score": 25.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa học, chuyên ngành Công nghiệp Văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C04; C14; D01; D14; D15",
+      "score": 25.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa học, chuyên ngành Truyền thông Văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D01; D14; D15",
+      "score": 26.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý văn hóa, chuyên ngành Quản lý hoạt động văn hóa xã hội",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C14; D01; D14; D15",
+      "score": 25.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "R01; R02; R03; R04",
+      "score": 24.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý văn hóa, chuyên ngành Tổ chức sự kiện văn hóa, thể thao, du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C14; D01; D14; D15",
+      "score": 26.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Di sản học, chuyên ngành Di sản và phát triển du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C14; D01; D04; D14; D15",
+      "score": 24.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Di sản học, chuyên ngành Di sản và bảo tàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C14; D01; D04; D14; D15",
+      "score": 25.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thông tin - Thư viện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D01; D09; D15",
+      "score": 24.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh xuất bản phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C14; D01; D10; D14; D15",
+      "score": 24.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C14; D01; D04",
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành, chuyên ngành Quản trị lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C14; D01; D04",
+      "score": 26.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành, chuyên ngành Hướng dẫn du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C14; D01; D04",
+      "score": 25.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa các dân tộc thiểu số Việt Nam",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C03; C04; D01; D10; D15",
+      "score": 25.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa học, chuyên ngành Văn hóa Việt Nam",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C03; C04; C14; D01; D14; D15",
+      "score": 26.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa học, chuyên ngành Công nghiệp Văn hóa",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C03; C04; C14; D01; D14; D15",
+      "score": 26.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Văn hóa học, chuyên ngành Truyền thông Văn hóa",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; D01; D14; D15",
+      "score": 27.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý văn hóa, chuyên ngành Quản lý hoạt động văn hóa xã hội",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C14; D01; D14; D15",
+      "score": 26.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý văn hóa",
+      "admission_method": "hoc_ba",
+      "combination_code": "R01; R02; R03; R04",
+      "score": 25.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý văn hóa, chuyên ngành Tổ chức sự kiện văn hóa, thể thao, du lịch",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C14; D01; D14; D15",
+      "score": 27.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Di sản học, chuyên ngành Di sản và phát triển du lịch",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C14; D01; D04; D14; D15",
+      "score": 25.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Di sản học, chuyên ngành Di sản và bảo tàng",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C14; D01; D04; D14; D15",
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thông tin - Thư viện",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; D01; D09; D15",
+      "score": 25.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh xuất bản phẩm",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C03; C14; D01; D10; D14; D15",
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Du lịch",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C14; D01; D04",
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành, chuyên ngành Quản trị lữ hành",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C14; D01; D04",
+      "score": 27.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành, chuyên ngành Hướng dẫn du lịch",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C14; D01; D04",
+      "score": 26.85,
+      "scale": 30
+    }
+  ]
+}
