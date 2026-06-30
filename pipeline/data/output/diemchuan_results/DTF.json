@@ -1,0 +1,138 @@
+{
+  "university_code": "DTF",
+  "university_name": "Trường Ngoại ngữ - Đại học Thái Nguyên",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/truong-ngoai-ngu-thai-nguyen-DTF.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 16,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; D66; X78",
+      "score": 27.07,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D04; D14; D15; D45; D65; D66; X78; X90",
+      "score": 27.02,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D14; D15; D66; X78",
+      "score": 19.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D04; D14; D15; D45; D65; D66; X78; X90",
+      "score": 21.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D14; D15; D66; X78",
+      "score": 27.07,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Trung Quốc",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D04; D14; D15; D45; D65; D66; X78; X90",
+      "score": 27.02,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D14; D15; D66; X78",
+      "score": 19.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D04; D14; D15; D45; D65; D66; X78; X90",
+      "score": 21.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "ket_hop",
+      "combination_code": "D01; D14; D15; D66; X78",
+      "score": 27.07,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Trung Quốc",
+      "admission_method": "ket_hop",
+      "combination_code": "D01; D04; D14; D15; D45; D65; D66; X78; X90",
+      "score": 27.02,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "ket_hop",
+      "combination_code": "D01; D14; D15; D66; X78",
+      "score": 19.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "ket_hop",
+      "combination_code": "D01; D04; D14; D15; D45; D65; D66; X78; X90",
+      "score": 21.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "xt_rieng",
+      "combination_code": "D01",
+      "score": 27.07,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Tiếng Trung Quốc",
+      "admission_method": "xt_rieng",
+      "combination_code": "D01",
+      "score": 27.02,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "xt_rieng",
+      "combination_code": "D01",
+      "score": 19.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "xt_rieng",
+      "combination_code": "D01",
+      "score": 21.4,
+      "scale": 30
+    }
+  ]
+}

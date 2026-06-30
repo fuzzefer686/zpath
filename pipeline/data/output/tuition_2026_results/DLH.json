@@ -1,0 +1,187 @@
+{
+  "university_code": "DLH",
+  "university_name": "Trường Đại học Lạc Hồng",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-lac-hong-DLH.html",
+  "status": "success",
+  "num_records": 29,
+  "school_wide": {
+    "tuition_min": 37,
+    "tuition_max": 51
+  },
+  "data": [
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học (Dược sĩ)",
+      "tuition_min": 51,
+      "tuition_max": 51
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7480202",
+      "major_name": "An toàn thông tin",
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7480107",
+      "major_name": "Trí tuệ nhân tạo (AI)",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7340122",
+      "major_name": "Thương mại điện tử",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7510102",
+      "major_name": "Công nghệ kỹ thuật công trình xây dựng",
+      "tuition_min": 37,
+      "tuition_max": 37
+    },
+    {
+      "school_major_code": "7510201",
+      "major_name": "Công nghệ kỹ thuật cơ khí",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7510203",
+      "major_name": "Công nghệ kỹ thuật Cơ điện tử",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7510301",
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7510303",
+      "major_name": "Công nghệ kỹ thuật điều khiển và tự động hóa",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7510205",
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7540101",
+      "major_name": "Công nghệ thực phẩm",
+      "tuition_min": 37,
+      "tuition_max": 37
+    },
+    {
+      "school_major_code": "7440301",
+      "major_name": "Khoa học môi trường",
+      "tuition_min": 37,
+      "tuition_max": 37
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7310120",
+      "major_name": "Kinh doanh quốc tế",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7380107",
+      "major_name": "Luật kinh tế",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7810103",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "tuition_min": 37,
+      "tuition_max": 37
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính - Ngân hàng",
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7510601",
+      "major_name": "Quản lý công nghiệp",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7320108",
+      "major_name": "Quan hệ công chúng",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7310401",
+      "major_name": "Tâm lý học",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "tuition_min": 38,
+      "tuition_max": 38
+    },
+    {
+      "school_major_code": "7310608",
+      "major_name": "Đông phương học",
+      "tuition_min": 38,
+      "tuition_max": 38
+    }
+  ]
+}

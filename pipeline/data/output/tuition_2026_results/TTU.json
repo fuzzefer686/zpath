@@ -1,0 +1,109 @@
+{
+  "university_code": "TTU",
+  "university_name": "Trường Đại học Tân Tạo",
+  "found_url": "http://thongtintuyensinh247.com/hoc-phi-dai-hoc-tan-tao/",
+  "status": "success",
+  "num_records": 16,
+  "school_wide": {
+    "tuition_min": 25,
+    "tuition_max": 150
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "tuition_min": 150,
+      "tuition_max": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Xét nghiệm Y học",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (Chương trình chuẩn)",
+      "tuition_min": 25,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh Quốc tế (Chương trình chuẩn)",
+      "tuition_min": 25,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính – Ngân hàng (Chương trình chuẩn)",
+      "tuition_min": 25,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán (Chương trình chuẩn)",
+      "tuition_min": 25,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Sinh học (Chương trình chuẩn)",
+      "tuition_min": 25,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học Máy tính (Chương trình chuẩn)",
+      "tuition_min": 25,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (Cử nhân tài năng)",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh Quốc tế (Cử nhân tài năng)",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính – Ngân hàng (Cử nhân tài năng)",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán (Cử nhân tài năng)",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ Sinh học (Cử nhân tài năng)",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học Máy tính (Cử nhân tài năng)",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (Cử nhân tài năng)",
+      "tuition_min": 40,
+      "tuition_max": 40
+    }
+  ]
+}

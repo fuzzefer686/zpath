@@ -1,0 +1,226 @@
+{
+  "university_code": "DMT",
+  "university_name": "Trường Đại học Tài nguyên và Môi trường Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/thong-tin-dai-hoc-tai-nguyen-va-moi-truong-ha-noi-DMT.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 24,
+  "data": [
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; A01; D07; X27; X28; D08; X26; D09; X25; X78; D15; D14; X79",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B03; C00; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 250,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340115",
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B03; C00; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 250,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340116",
+      "major_name": "Bất động sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B03; C00; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 350,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; B03; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; C01; C02; C03; C04; D01; X01; X02; X17; X70",
+      "quota": 250,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7440222",
+      "major_name": "Khí tượng và khí hậu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B03; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7440224",
+      "major_name": "Thủy văn học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B03; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7440298",
+      "major_name": "Biến đổi khí hậu và phát triển bền vững",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B03; C00; C01; C02; C03; C04; D01; D15; X01; X02; X03; X04",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B03; C01; C02; C04; D01; X02; X03; X04; X06; X26",
+      "quota": 300,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510406",
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B03; C01; C02; D01; D07; D08; X02; X03; X04; X09",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510605",
+      "major_name": "Logistics và quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B03; C00; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520501",
+      "major_name": "Kỹ thuật địa chất",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B03; C01; C02; C03; C04; D01; D15; X01; X02; X03; X04",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520503",
+      "major_name": "Kỹ thuật trắc địa bản đồ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B03; C01; C02; C03; C04; D01; D15; X01; X02; X03; X04",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520503PH",
+      "major_name": "Kỹ thuật trắc địa bản đồ (Phân hiệu)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; B03; C01; C02; C03; C04; D01; D15; X01; X02; X03; X04; A00",
+      "quota": 10,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7540106",
+      "major_name": "Đảm bảo chất lượng và an toàn thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B03; C01; C02; C03; C04; D01; D15; X01; X02; X03; X04",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7810103",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B03; C00; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7810201",
+      "major_name": "Quản trị khách sạn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B03; C00; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7850101",
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B03; C01; C02; C03; C04; D01; D15; X01; X02; X03; X04",
+      "quota": 400,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7850102",
+      "major_name": "Kinh tế Tài nguyên thiên nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A07; B03; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7850103",
+      "major_name": "Quản lý đất đai",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B03; C00; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 550,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7850103PH",
+      "major_name": "Quản lý đất đai (Phân hiệu)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; C01; C02; C03; C04; D01; X01; X02; X03; X04; A00; C00",
+      "quota": 10,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7850198",
+      "major_name": "Quản lý tài nguyên nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B03; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7850199",
+      "major_name": "Quản lý biển",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; B03; C01; C02; C03; C04; D01; X01; X02; X03; X04",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

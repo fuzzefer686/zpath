@@ -1,0 +1,130 @@
+{
+  "university_code": "BPU",
+  "university_name": "Trường Đại học Dầu khí Việt Nam",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-dau-khi-viet-nam-PVU.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 15,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Hóa học (Lọc-Hóa dầu)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; C01; X07; X06; D07; B00; C02; X11; X10",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Địa chất (Địa chất - Địa vật lý Dầu khí)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; C01; X07; X06; D07; B00; C02; X11; X10",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Dầu khí (Khoan-Khai thác Mỏ Dầu khí)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; C01; X07; X06; D07; B00; C02; X11; X10",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Hóa học (Lọc-Hóa dầu)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; A02; C01; X07; X06; D07; B00; C02; X11; X10",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Địa chất (Địa chất - Địa vật lý Dầu khí)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; A02; C01; X07; X06; D07; B00; C02; X11; X10",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Dầu khí (Khoan-Khai thác Mỏ Dầu khí)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; A01; A02; C01; X07; X06; D07; B00; C02; X11; X10",
+      "score": 23.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Hóa học (Lọc-Hóa dầu)",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 92.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Địa chất (Địa chất - Địa vật lý Dầu khí)",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 92.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Dầu khí (Khoan-Khai thác Mỏ Dầu khí)",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 92.0,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Hóa học (Lọc-Hóa dầu)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 716.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Địa chất (Địa chất - Địa vật lý Dầu khí)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 716.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Dầu khí (Khoan-Khai thác Mỏ Dầu khí)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 716.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Hóa học (Lọc-Hóa dầu)",
+      "admission_method": "dg_tu_duy",
+      "combination_code": null,
+      "score": 52.78,
+      "scale": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Địa chất (Địa chất - Địa vật lý Dầu khí)",
+      "admission_method": "dg_tu_duy",
+      "combination_code": null,
+      "score": 52.78,
+      "scale": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Dầu khí (Khoan-Khai thác Mỏ Dầu khí)",
+      "admission_method": "dg_tu_duy",
+      "combination_code": null,
+      "score": 52.78,
+      "scale": 100
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "university_code": "DTS",
+  "university_name": "Trường Đại học Sư phạm - Đại học Thái Nguyên",
+  "found_url": "https://diemthi.tuyensinh247.com/thong-tin-daihoc-su-pham-dai-hoc-thai-nguyen-DTS.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 23,
+  "data": [
+    {
+      "school_major_code": "7140101",
+      "major_name": "Giáo dục học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70; X74",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140201",
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X01; C03",
+      "quota": 500,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục Tiểu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C01; C03",
+      "quota": 500,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140204",
+      "major_name": "Giáo dục Công dân",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X70; X74; X01",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140205",
+      "major_name": "Giáo dục Chính trị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X70; X74; X01",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140206",
+      "major_name": "Giáo dục Thể chất",
+      "admission_method": "ket_hop",
+      "combination_code": "T01; T03; T00; T08",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140207",
+      "major_name": "Huấn luyện thể thao",
+      "admission_method": "ket_hop",
+      "combination_code": "T11; T12",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140208",
+      "major_name": "GD Quốc phòng - An ninh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X01; X74; X70",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140209",
+      "major_name": "Sư phạm Toán học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140210",
+      "major_name": "Sư phạm Tin học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140211",
+      "major_name": "Sư phạm Vật lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140212",
+      "major_name": "Sư phạm Hoá học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; C02",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140213",
+      "major_name": "Sư phạm Sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B08; B03",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140217",
+      "major_name": "Sư phạm Ngữ văn",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; D01",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140218",
+      "major_name": "Sư phạm Lịch sử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140219",
+      "major_name": "Sư phạm Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X74",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140221",
+      "major_name": "Sư phạm Âm nhạc",
+      "admission_method": "ket_hop",
+      "combination_code": "N01",
+      "quota": 70,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140231",
+      "major_name": "Sư phạm Tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D15",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140246",
+      "major_name": "Sư phạm Công nghệ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X03; X04; C01; B03; X02",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140247",
+      "major_name": "Sư phạm KHTN",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140249",
+      "major_name": "Sư phạm Lịch sử - Địa lý",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X74",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7310403",
+      "major_name": "Tâm lí học giáo dục",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X70; X74",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7420203",
+      "major_name": "Sinh học ứng dụng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B08; B03",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

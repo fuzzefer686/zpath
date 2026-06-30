@@ -1,0 +1,298 @@
+{
+  "university_code": "BCH",
+  "university_name": "Học viện Báo chí và Tuyên truyền",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/hoc-vien-bao-chi-va-tuyen-truyen-HBT.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 32,
+  "data": [
+    {
+      "school_major_code": "527",
+      "major_name": "Kinh tế, chuyên ngành Quản lý kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "530",
+      "major_name": "Chính trị học, chuyên ngành Công tác tư tưởng - văn hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "531",
+      "major_name": "Chính trị học, chuyên ngành Chính trị phát triển",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "533",
+      "major_name": "Chính trị học, chuyên ngành Tư tưởng Hồ Chí Minh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "538",
+      "major_name": "Chính trị học, chuyên ngành Truyền thông chính sách",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "602",
+      "major_name": "Báo chí, chuyên ngành Báo in",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "603",
+      "major_name": "Báo chí, chuyên ngành Ảnh báo chí",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "604",
+      "major_name": "Báo chí, chuyên ngành Báo phát thanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "605",
+      "major_name": "Báo chí, chuyên ngành Báo truyền hình",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "606",
+      "major_name": "Báo chí, chuyên ngành Quay phim truyền hình",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "607",
+      "major_name": "Báo chí, chuyên ngành Báo mạng điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "610",
+      "major_name": "Quan hệ quốc tế, chuyên ngành Thông tin đối ngoại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "611",
+      "major_name": "Quan hệ quốc tế, chuyên ngành Quan hệ chính trị và Truyền thông quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "614",
+      "major_name": "Quan hệ quốc tế, chuyên ngành Quan hệ quốc tế và Truyền thông toàn cầu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "615",
+      "major_name": "Quan hệ công chúng, chuyên ngành Quan hệ công chúng chuyên nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "616",
+      "major_name": "Quan hệ công chúng, chuyên ngành Truyền thông marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "618",
+      "major_name": "Quan hệ công chúng, chuyên ngành Quảng cáo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7229001",
+      "major_name": "Triết học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7229008",
+      "major_name": "Chủ nghĩa xã hội khoa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7229010",
+      "major_name": "Lịch sử, chuyên ngành Lịch sử Đảng Cộng sản Việt Nam",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D14; C03; A07; C19",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7310102",
+      "major_name": "Kinh tế chính trị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 40,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7310202",
+      "major_name": "Xây dựng Đảng và chính quyền nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7310205",
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7310301",
+      "major_name": "Xã hội học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7320104",
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7320105",
+      "major_name": "Truyền thông đại chúng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7320107",
+      "major_name": "Truyền thông quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340403",
+      "major_name": "Quản lý công",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7760101",
+      "major_name": "Công tác xã hội",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; C04; C03; X01",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "801",
+      "major_name": "Xuất bản, chuyên ngành Biên tập xuất bản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "802",
+      "major_name": "Xuất bản, chuyên ngành Xuất bản điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; X78; D15; D14",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

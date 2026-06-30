@@ -1,0 +1,55 @@
+{
+  "university_code": "BMU",
+  "university_name": "Trường Đại học Y Dược Buôn Ma Thuột",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-y-duoc-buon-ma-thuot-BMU.html",
+  "status": "success",
+  "num_records": 7,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "tuition_min": 65,
+      "tuition_max": 65
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Y học cổ truyền",
+      "tuition_min": 50,
+      "tuition_max": 50
+    },
+    {
+      "school_major_code": "7720110",
+      "major_name": "Y học dự phòng",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "tuition_min": 40,
+      "tuition_max": 40
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "tuition_min": 35,
+      "tuition_max": 35
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "tuition_min": 25,
+      "tuition_max": 25
+    },
+    {
+      "school_major_code": "7720701",
+      "major_name": "Y tế công cộng",
+      "tuition_min": 20,
+      "tuition_max": 20
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "university_code": "YKV",
+  "university_name": "Trường Đại học Y khoa Vinh",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-y-khoa-vinh-YKV.html",
+  "status": "success",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": 29,
+    "tuition_max": 39
+  },
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7720110",
+      "major_name": "Y học dự phòng",
+      "tuition_min": 29,
+      "tuition_max": 29
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "tuition_min": 29,
+      "tuition_max": 29
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "tuition_min": 29,
+      "tuition_max": 29
+    }
+  ]
+}

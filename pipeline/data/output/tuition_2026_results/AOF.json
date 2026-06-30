@@ -1,0 +1,37 @@
+{
+  "university_code": "AOF",
+  "university_name": "Học viện Tài chính",
+  "found_url": "https://vietnamnet.vn/hoc-vien-tai-chinh-cong-bo-3-phuong-thuc-tuyen-sinh-dai-hoc-nam-2026-2497257.html",
+  "status": "success",
+  "num_records": 4,
+  "school_wide": {
+    "tuition_min": 25,
+    "tuition_max": 80
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình chuẩn",
+      "tuition_min": 25,
+      "tuition_max": 35
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình định hướng chứng chỉ quốc tế",
+      "tuition_min": 50,
+      "tuition_max": 55
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Diện tuyển sinh theo đặt hàng",
+      "tuition_min": 33,
+      "tuition_max": 55
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình mỗi bên cấp 1 bằng cử nhân (DDP) - trong nước",
+      "tuition_min": 75,
+      "tuition_max": 80
+    }
+  ]
+}

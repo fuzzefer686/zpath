@@ -1,0 +1,55 @@
+{
+  "university_code": "QSY",
+  "university_name": "Học viện Khoa học Sức khỏe - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://thi.tuyensinh247.com/de-an-tuyen-sinh-dai-hoc-khoa-hoc-suc-khoe-tphcm-nam-2025-c24a84973.html",
+  "data_year": 2025,
+  "status": "success",
+  "num_records": 5,
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720501",
+      "major_name": "Răng – Hàm – Mặt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Y học cổ truyền",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

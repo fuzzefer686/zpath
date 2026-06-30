@@ -1,0 +1,26 @@
+{
+  "university_code": "TSN",
+  "university_name": "Trường Đại học Nha Trang",
+  "found_url": "https://vietnamnet.vn/diem-chuan-truong-dai-hoc-nha-trang-nam-2025-2434826.html",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 2,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 27.0,
+      "scale": 30
+    }
+  ]
+}

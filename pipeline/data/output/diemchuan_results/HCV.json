@@ -1,0 +1,34 @@
+{
+  "university_code": "HCV",
+  "university_name": "Học viện Hành chính Quốc gia",
+  "found_url": "https://dantri.com.vn/giao-duc/diem-chuan-hoc-vien-hanh-chinh-va-quan-tri-cong-2025-cao-nhat-244-diem-20250822092223247.htm",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 3,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước (Phân hiệu TPHCM)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.75,
+      "scale": 30
+    }
+  ]
+}

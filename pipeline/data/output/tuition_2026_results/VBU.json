@@ -1,0 +1,12 @@
+{
+  "university_code": "VBU",
+  "university_name": "Trường Đại học Quốc tế Bắc Hà",
+  "found_url": "https://iubh.edu.vn/",
+  "status": "needs_deeper_crawl",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": []
+}

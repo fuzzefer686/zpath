@@ -1,0 +1,186 @@
+{
+  "university_code": "VGU",
+  "university_name": "Trường Đại học Việt Đức",
+  "found_url": "https://xaydungchinhsach.chinhphu.vn/diem-chuan-truong-dai-hoc-viet-duc-2025-119250823095737249.htm",
+  "year": 2025,
+  "status": "success",
+  "num_records": 22,
+  "data": [
+    {
+      "school_major_code": "7580101",
+      "major_name": "Kiến trúc (ARC)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7580101",
+      "major_name": "Kiến trúc (ARC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7580201",
+      "major_name": "Kỹ thuật và quản lý xây dựng (BCE)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7580201",
+      "major_name": "Kỹ thuật và quản lý xây dựng (BCE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh (BBA)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh (BBA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7340202",
+      "major_name": "Tài chính và Kế toán (BFA)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7340202",
+      "major_name": "Tài chính và Kế toán (BFA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học máy tính (CSE)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học máy tính (CSE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520208",
+      "major_name": "Kỹ thuật điện và máy tính (ECE)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7520208",
+      "major_name": "Kỹ thuật điện và máy tính (ECE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520103",
+      "major_name": "Kỹ thuật cơ khí (MEN)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7520103",
+      "major_name": "Kỹ thuật cơ khí (MEN)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510104",
+      "major_name": "Kỹ thuật Giao thông thông minh (SME)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7510104",
+      "major_name": "Kỹ thuật Giao thông thông minh (SME)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7510206",
+      "major_name": "Kỹ thuật quy trình sản xuất bền vững (SPE)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7510206",
+      "major_name": "Kỹ thuật quy trình sản xuất bền vững (SPE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7520114",
+      "major_name": "Kỹ thuật cơ điện tử (MEC)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7520114",
+      "major_name": "Kỹ thuật cơ điện tử (MEC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 26.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7310101",
+      "major_name": "Kinh tế học (BSE)",
+      "admission_method": "xt_rieng",
+      "combination_code": null,
+      "score": 90,
+      "scale": 100
+    },
+    {
+      "school_major_code": "7310101",
+      "major_name": "Kinh tế học (BSE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19,
+      "scale": 30
+    }
+  ]
+}

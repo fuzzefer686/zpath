@@ -1,0 +1,190 @@
+{
+  "university_code": "UET",
+  "university_name": "Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội",
+  "found_url": "https://diemthi.tuyensinh247.com/thong-tin-dai-hoc-cong-nghe-dai-hoc-quoc-gia-ha-noi-QHI.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 20,
+  "data": [
+    {
+      "school_major_code": "CN1",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 460,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN10",
+      "major_name": "Công nghệ nông nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; X06",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN11",
+      "major_name": "Kỹ thuật điều khiển và tự động hoá",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 140,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN12",
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 320,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN13",
+      "major_name": "Kỹ thuật năng lượng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN14",
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 240,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN15",
+      "major_name": "Mạng máy tính và truyền thông dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN17",
+      "major_name": "Kỹ thuật Robot",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 140,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN18",
+      "major_name": "Thiết kế công nghiệp và Đồ họa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 240,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN19",
+      "major_name": "Công nghệ vật liệu (CT Công nghệ vật liệu và Vi điện tử)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN2",
+      "major_name": "Kỹ thuật máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 400,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN20",
+      "major_name": "Khoa học dữ liệu (CT Khoa học và Kỹ thuật dữ liệu)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN21",
+      "major_name": "Công nghệ sinh học (CT Công nghệ kỹ thuật sinh học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; X06",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN3",
+      "major_name": "Vật lý kỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 160,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN4",
+      "major_name": "Cơ kỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN5",
+      "major_name": "Công nghệ kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 160,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN6",
+      "major_name": "Công nghệ kỹ thuật cơ - điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 160,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN7",
+      "major_name": "Công nghệ hàng không vũ trụ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN8",
+      "major_name": "Khoa học máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 400,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "CN9",
+      "major_name": "Công nghệ kỹ thuật điện tử – viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "quota": 480,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

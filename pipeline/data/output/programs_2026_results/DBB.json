@@ -1,0 +1,64 @@
+{
+  "university_code": "DBB",
+  "university_name": "Trường Đại học Công nghệ Đông Á",
+  "found_url": "https://giaoduc.net.vn/nam-2026-truong-dh-cong-nghe-dong-a-mo-them-6-nganh-chuyen-nganh-moi-post258141.gd",
+  "data_year": 2026,
+  "status": "partial",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật Môi trường (Chuyên ngành Công nghệ nước)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 23.0,
+      "tuition_max": 29.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 23.0,
+      "tuition_max": 29.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc nội thất",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 23.0,
+      "tuition_max": 29.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh Thời trang",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 24.0,
+      "tuition_max": 27.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 24.0,
+      "tuition_max": 27.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": 24.0,
+      "tuition_max": 27.0
+    }
+  ]
+}

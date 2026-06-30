@@ -1,0 +1,25 @@
+{
+  "university_code": "QSQ",
+  "university_name": "Trường Đại học Quốc tế - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://vietjack.com/thong-tin-tuyen-sinh/hoc-phi-truong-dai-hoc-quoc-te-dhqg-tphcm.jsp",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 50,
+    "tuition_max": 67
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình do IU cấp bằng",
+      "tuition_min": 50,
+      "tuition_max": 50
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình liên kết (2 năm đầu tại Việt Nam)",
+      "tuition_min": 63,
+      "tuition_max": 67
+    }
+  ]
+}

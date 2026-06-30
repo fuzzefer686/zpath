@@ -1,0 +1,127 @@
+{
+  "university_code": "VGU",
+  "university_name": "Trường Đại học Việt Đức",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-viet-duc-VGU.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 13,
+  "data": [
+    {
+      "school_major_code": "7310101",
+      "major_name": "Ngành Kinh tế (BSE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A02; A04; X05; A03; X06; X08; X07; D26; D29; D27; D28; D30; AH3; D07; B00; C02; A05; A06; X09; X11; X12; X10; D21; D24; D22; D23; D25; AH2; D01; C04; X01; C03; B03; X02; X03; X04; D08; D31; D32; D33; D34; D35; AH4; X25; X41; X33; X29; X45",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị Kinh doanh (BBA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A02; A04; X05; A03; X06; X08; X07; D26; D29; D27; D28; D30; AH3; D07; B00; C02; A05; A06; X09; X11; X12; X10; D21; D24; D22; D23; D25; AH2; D01; C04; X01; C03; B03; X02; X03; X04; D08; D31; D32; D33; D34; D35; AH4; X25; X41; X33; X29; X45",
+      "quota": 140,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340122",
+      "major_name": "Quản trị số và Kinh doanh Quốc tế (BDE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A02; A04; X05; A03; X06; X08; X07; D26; D29; D27; D28; D30; AH3; D07; B00; C02; A05; A06; X09; X11; X12; X10; D21; D24; D22; D23; D25; AH2; D01; C04; X01; C03; B03; X02; X03; X04; D08; D31; D32; D33; D34; D35; AH4; X25; X41; X33; X29; X45",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7340202",
+      "major_name": "Tài chính và Kế toán (BFA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A02; A04; X05; A03; X06; X08; X07; D26; D29; D27; D28; D30; AH3; D07; B00; C02; A05; A06; X09; X11; X12; X10; D21; D24; D22; D23; D25; AH2; D01; C04; X01; C03; B03; X02; X03; X04; D08; D31; D32; D33; D34; D35; AH4; X25; X41; X33; X29; X45",
+      "quota": 95,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480101",
+      "major_name": "Khoa học Máy tính (CSE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A02; A04; X05; A03; X06; X08; X07; D26; D29; D27; D28; D30; AH3; D07; B00; C02; A05; A06; X09; X11; X12; X10; D21; D24; D22; D23; D25; AH2; B08; B03; X13; B02; B01; X15; X14; X16; D31; D34; D32; D33; D35; AH4; X27; X28; D01; D10; X25; X26",
+      "quota": 250,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510104",
+      "major_name": "Kỹ thuật Giao thông Thông minh (SME)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A04; X06; X07; D26; D29; D27; D28; D30; AH3; D07; D21; D24; D22; D23; D25; AH2; D01; X26; X27",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7510206",
+      "major_name": "Kỹ thuật Quy trình Sản xuất Bền vững (SPE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A02; A04; X05; A03; X06; X08; X07; D26; D29; D27; D28; D30; AH3; D07; B00; C02; A05; A06; X09; X11; X12; X10; D21; D24; D22; D23; D25; AH2; B08; B03; X13; B02; B01; X15; X14; X16; D31; D34; D32; D33; D35; AH4; X27; X28; D01; D10; X25; X26",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520103",
+      "major_name": "Kỹ thuật Cơ khí (MEN)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A02; A04; X05; A03; X06; X07; D26; D29; D27; D28; D30; AH3; D07; D21; D24; D22; D23; D25; AH2; X27",
+      "quota": 95,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520114",
+      "major_name": "Kỹ thuật Cơ điện tử (MEC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A02; A04; X05; A03; X06; X08; X07; D07; A05; A06; X11; X12; X10; D21; D24; D22; D23; D25; AH2; X27; X28; X02; X03; X04; X15; X16; X14",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520208",
+      "major_name": "Kỹ thuật Điện và Máy tính (ECE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A02; A04; X05; A03; X06; X08; X07; D26; D29; D27; D28; D30; AH3; D07; D21; D24; D22; D23; D25; AH2; X27",
+      "quota": 165,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520212",
+      "major_name": "Kỹ thuật Y sinh (BME)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A02; A04; X05; A03; X06; X08; X07; D26; D29; D27; D28; D30; AH3; D07; D21; D24; D22; D23; D25; AH2; X27",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580101",
+      "major_name": "Kiến trúc (ARC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D26; D29; D27; D28; D30; AH3; C01; (Toán; Lí; Vẽ mỹ thuật); Vẽ năng khiếu); Vẽ hình họa mỹ thuật); Địa lí); Ngữ văn; Tiếng Anh; Tin học",
+      "quota": 90,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7580201",
+      "major_name": "Kỹ thuật và Quản lý Xây dựng (BCE)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; A04; X06; X07; D26; D29; D27; D28; D30; AH3; D07; D21; D24; D22; D23; D25; AH2; D01; X26; X27",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "university_code": "VCO",
+  "university_name": "Trường Đại học Công nghệ và Quản lý Hữu Nghị",
+  "found_url": "https://giaoduc.net.vn/chi-tiet-diem-trung-tuyen-nam-2025-cua-truong-dai-hoc-cong-nghe-va-quan-ly-huu-nghi-post253947.gd",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 25.15,
+    "tuition_max": 27.375
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Kinh tế, Ngôn ngữ",
+      "tuition_min": 25.15,
+      "tuition_max": 25.15
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành Công nghệ kỹ thuật",
+      "tuition_min": 27.375,
+      "tuition_max": 27.375
+    }
+  ]
+}

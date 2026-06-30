@@ -1,0 +1,31 @@
+{
+  "university_code": "DDK",
+  "university_name": "Trường Đại học Bách khoa - Đại học Đà Nẵng",
+  "found_url": "https://vietjack.com/thong-tin-tuyen-sinh/hoc-phi-truong-dai-hoc-bach-khoa-dai-hoc-da-nang.jsp",
+  "status": "success",
+  "num_records": 3,
+  "school_wide": {
+    "tuition_min": 27.7,
+    "tuition_max": 38.0
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đại trà",
+      "tuition_min": 27.7,
+      "tuition_max": 33.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiên tiến",
+      "tuition_min": 38.0,
+      "tuition_max": 38.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đặc thù (Vi điện tử - Thiết kế vi mạch)",
+      "tuition_min": 33.65,
+      "tuition_max": 33.65
+    }
+  ]
+}

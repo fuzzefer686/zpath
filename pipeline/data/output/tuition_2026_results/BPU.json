@@ -1,0 +1,31 @@
+{
+  "university_code": "BPU",
+  "university_name": "Trường Đại học Dầu khí Việt Nam",
+  "found_url": "https://trangedu.com/truong/dai-hoc-dau-khi-viet-nam/",
+  "status": "partial",
+  "num_records": 3,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": [
+    {
+      "school_major_code": "7520301",
+      "major_name": "Kỹ thuật Hóa học (Chương trình liên kết)",
+      "tuition_min": 79,
+      "tuition_max": 79
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học trái đất/Địa chất Dầu khí (Chương trình liên kết)",
+      "tuition_min": 72,
+      "tuition_max": 72
+    },
+    {
+      "school_major_code": "7520604",
+      "major_name": "Kỹ thuật Dầu khí (Chương trình liên kết)",
+      "tuition_min": 77,
+      "tuition_max": 77
+    }
+  ]
+}

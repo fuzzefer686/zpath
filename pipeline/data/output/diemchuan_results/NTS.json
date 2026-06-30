@@ -1,0 +1,114 @@
+{
+  "university_code": "NTS",
+  "university_name": "Trường Đại học Ngoại thương (Cơ sở phía Nam)",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-ngoai-thuong-co-so-phia-nam-NTS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 13,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "CT ĐHNNQT Logistics và Quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 28.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT TC Kinh tế đối ngoại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 27.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT TC Kinh tế đối ngoại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D06; D07",
+      "score": 26.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT CLC Kinh tế đối ngoại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 26.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT TC Kế toán - Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 25.45,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT TC Kế toán - Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 26.45,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT ĐHNNQT truyền thông Marketing tích hợp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 27.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT TC Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 26.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT TC Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 25.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT CLC Quản tri kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 25.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT TC Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 26.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT TC Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00",
+      "score": 27.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "CT CLC Tài chinh - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 26.2,
+      "scale": 30
+    }
+  ]
+}

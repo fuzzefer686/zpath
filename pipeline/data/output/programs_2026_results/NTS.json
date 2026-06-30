@@ -1,0 +1,91 @@
+{
+  "university_code": "NTS",
+  "university_name": "Trường Đại học Ngoại thương (Cơ sở phía Nam)",
+  "found_url": "https://thi.tuyensinh247.com/thong-tin-tuyen-sinh-dai-hoc-ngoai-thuong-nam-2026-c24a88075.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 9,
+  "data": [
+    {
+      "school_major_code": "NT.KT.S23",
+      "major_name": "Kinh tế đối ngoại (CLC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "quota": 220,
+      "tuition_min": 50,
+      "tuition_max": 54
+    },
+    {
+      "school_major_code": "NT.KT.S23",
+      "major_name": "Kinh tế đối ngoại (TC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D06; D07",
+      "quota": 300,
+      "tuition_min": 28,
+      "tuition_max": 32
+    },
+    {
+      "school_major_code": "NT.KT.S24",
+      "major_name": "Logistics toàn cầu (ĐHNNQT)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 50,
+      "tuition_min": 50,
+      "tuition_max": 54
+    },
+    {
+      "school_major_code": "NT.QT.S25",
+      "major_name": "Quản trị kinh doanh (CLC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "quota": 80,
+      "tuition_min": 50,
+      "tuition_max": 54
+    },
+    {
+      "school_major_code": "NT.QT.S25",
+      "major_name": "Quản trị kinh doanh (TC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 60,
+      "tuition_min": 28,
+      "tuition_max": 32
+    },
+    {
+      "school_major_code": "NT.MT.S26",
+      "major_name": "Truyền thông Marketing tích hợp (ĐHNNQT)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 50,
+      "tuition_min": 65,
+      "tuition_max": 70
+    },
+    {
+      "school_major_code": "NT.TC.S27",
+      "major_name": "Tài chính - Ngân hàng (CLC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "quota": 70,
+      "tuition_min": 50,
+      "tuition_max": 54
+    },
+    {
+      "school_major_code": "NT.TC.S27",
+      "major_name": "Tài chính - Ngân hàng (TC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 50,
+      "tuition_min": 28,
+      "tuition_max": 32
+    },
+    {
+      "school_major_code": "NT.KE.S28",
+      "major_name": "Kế toán - Kiểm toán (TC)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 70,
+      "tuition_min": 28,
+      "tuition_max": 32
+    }
+  ]
+}

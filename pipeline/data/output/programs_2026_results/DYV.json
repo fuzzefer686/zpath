@@ -1,0 +1,127 @@
+{
+  "university_code": "DYV",
+  "university_name": "Trường Đại học Y khoa Phạm Ngọc Thạch",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-y-khoa-pham-ngoc-thach-TYS.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 13,
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": null,
+      "tuition_min": 81,
+      "tuition_max": 81
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Y học cổ truyền",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B08; A01; D01",
+      "quota": null,
+      "tuition_min": 68,
+      "tuition_max": 68
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00; D07",
+      "quota": null,
+      "tuition_min": 68,
+      "tuition_max": 68
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08",
+      "quota": null,
+      "tuition_min": 47,
+      "tuition_max": 47
+    },
+    {
+      "school_major_code": "7720302",
+      "major_name": "Hộ sinh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08",
+      "quota": null,
+      "tuition_min": 47,
+      "tuition_max": 47
+    },
+    {
+      "school_major_code": "7720401",
+      "major_name": "Dinh dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00",
+      "quota": null,
+      "tuition_min": 47,
+      "tuition_max": 47
+    },
+    {
+      "school_major_code": "7720501",
+      "major_name": "Răng Hàm Mặt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": null,
+      "tuition_min": 81,
+      "tuition_max": 81
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": null,
+      "tuition_min": 47,
+      "tuition_max": 47
+    },
+    {
+      "school_major_code": "7720602",
+      "major_name": "Kỹ thuật hình ảnh y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00",
+      "quota": null,
+      "tuition_min": 47,
+      "tuition_max": 47
+    },
+    {
+      "school_major_code": "7720603",
+      "major_name": "Kỹ thuật phục hồi chức năng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00; A01",
+      "quota": null,
+      "tuition_min": 47,
+      "tuition_max": 47
+    },
+    {
+      "school_major_code": "7720610",
+      "major_name": "Kỹ thuật Gây mê hồi sức",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08",
+      "quota": null,
+      "tuition_min": 47,
+      "tuition_max": 47
+    },
+    {
+      "school_major_code": "7720699",
+      "major_name": "Khúc xạ nhãn khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00; A01; D07",
+      "quota": null,
+      "tuition_min": 47,
+      "tuition_max": 47
+    },
+    {
+      "school_major_code": "7720701",
+      "major_name": "Y tế công cộng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; B03; B08; A00",
+      "quota": null,
+      "tuition_min": 47,
+      "tuition_max": 47
+    }
+  ]
+}

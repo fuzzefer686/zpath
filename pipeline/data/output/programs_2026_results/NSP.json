@@ -1,0 +1,136 @@
+{
+  "university_code": "NSP",
+  "university_name": "Trường Đại học Sư phạm Nghệ thuật Trung ương",
+  "found_url": "https://qltuyensinh.spnttw.edu.vn/",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 14,
+  "data": [
+    {
+      "school_major_code": "7140221",
+      "major_name": "Sư phạm Âm nhạc",
+      "admission_method": "ket_hop",
+      "combination_code": "N00",
+      "quota": 480,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210205",
+      "major_name": "Thanh nhạc",
+      "admission_method": "ket_hop",
+      "combination_code": "N01",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210208",
+      "major_name": "Piano",
+      "admission_method": "ket_hop",
+      "combination_code": "N02",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210207",
+      "major_name": "Biểu diễn nhạc cụ phương Tây",
+      "admission_method": "ket_hop",
+      "combination_code": "N03",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140222",
+      "major_name": "Sư phạm Mỹ thuật",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 400,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210103",
+      "major_name": "Hội họa",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210403",
+      "major_name": "Thiết kế đồ họa",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 250,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210404",
+      "major_name": "Thiết kế thời trang",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 140,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210408",
+      "major_name": "Nghệ thuật số",
+      "admission_method": "ket_hop",
+      "combination_code": "H00",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7210234",
+      "major_name": "Diễn viên Kịch - Điện ảnh",
+      "admission_method": "ket_hop",
+      "combination_code": "S00",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7540204",
+      "major_name": "Công nghệ may",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; D01",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7229042",
+      "major_name": "Quản lý văn hóa",
+      "admission_method": "ket_hop",
+      "combination_code": "C00; N00; R00",
+      "quota": 180,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7760101",
+      "major_name": "Công tác xã hội",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C04; D01",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7810101",
+      "major_name": "Du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C04; D01",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

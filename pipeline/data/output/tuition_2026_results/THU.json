@@ -1,0 +1,12 @@
+{
+  "university_code": "THU",
+  "university_name": "Trường Đại học Thành Đô",
+  "found_url": "https://thanhdo.edu.vn/hoc-phi-truong-dai-hoc-thanh-do",
+  "status": "partial",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": 24,
+    "tuition_max": 28
+  },
+  "data": []
+}

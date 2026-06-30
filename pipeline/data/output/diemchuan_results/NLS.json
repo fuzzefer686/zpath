@@ -1,0 +1,82 @@
+{
+  "university_code": "NLS",
+  "university_name": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-nong-lam-tphcm-NLS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 9,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Mầm non (Trình độ Cao đẳng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "M00",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Mầm non (Trình độ Đại học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "M00",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm kỹ thuật nông nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01, B00, D08, X12, X28, X16",
+      "score": 23.84,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01, D01, D09, D10, D14, D15",
+      "score": 24.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, A01, D01, X01, X02, X25",
+      "score": 22.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thú y",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00, B00, B03, C02, D07, D08",
+      "score": 24.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm kỹ thuật nông nghiệp",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 822,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 1000,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thú y",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 811,
+      "scale": 1200
+    }
+  ]
+}

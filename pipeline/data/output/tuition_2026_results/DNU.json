@@ -1,0 +1,43 @@
+{
+  "university_code": "DNU",
+  "university_name": "Trường Đại học Đồng Nai",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/1066/hoc-phi-dai-hoc-dong-nai-2025-2026",
+  "status": "success",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": 14.1,
+    "tuition_max": 16.4
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "tuition_min": 14.1,
+      "tuition_max": 14.1
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "tuition_min": 15.0,
+      "tuition_max": 15.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật Điện - Điện tử",
+      "tuition_min": 16.4,
+      "tuition_max": 16.4
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ khí",
+      "tuition_min": 16.4,
+      "tuition_max": 16.4
+    }
+  ]
+}

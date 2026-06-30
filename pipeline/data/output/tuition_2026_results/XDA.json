@@ -1,0 +1,19 @@
+{
+  "university_code": "XDA",
+  "university_name": "Trường Đại học Xây dựng Hà Nội",
+  "found_url": "https://tuyensinh.huce.edu.vn/hoc-phi",
+  "status": "partial",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": 16.4,
+    "tuition_max": 16.4
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đào tạo trình độ đại học chính quy",
+      "tuition_min": 16.4,
+      "tuition_max": 16.4
+    }
+  ]
+}

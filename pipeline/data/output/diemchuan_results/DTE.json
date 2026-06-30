@@ -1,0 +1,202 @@
+{
+  "university_code": "DTE",
+  "university_name": "Trường Đại học Sư phạm Kỹ thuật - Đại học Đà Nẵng",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-su-pham-ky-thuat-dai-hoc-da-nang-DSK.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 24,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Sư phạm Kỹ thuật công nghiệp (chuyên ngành Công nghệ thông tin)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X06; X10; X26",
+      "score": 21.44,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X06; X10; X26",
+      "score": 20.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật kiến trúc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; V00; V01; V02",
+      "score": 17.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật xây dựng (chuyên ngành Xây dựng dân dụng và Công nghiệp)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; C04; D01; X02",
+      "score": 17.91,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật giao thông (chuyên ngành Xây dựng cầu đường)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; C04; D01; X02",
+      "score": 17.89,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ khí (chuyên ngành Cơ khí chế tạo)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 21.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ khí (chuyên ngành Thiết kế và mô phỏng số trong cơ khí)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 19.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 21.31,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 22.01,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô (chuyên ngành Ô tô điện)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X07; X06",
+      "score": 22.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật ô tô (đào tạo 2 năm đầu tại Kon Tum)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 18.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật nhiệt (chuyên ngành Nhiệt - Điện lạnh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 20.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện, điện tử (chuyên ngành Công nghệ kỹ thuật điện tử)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 21.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện, điện tử (chuyên ngành Công nghệ kỹ thuật điện)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 21.07,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện tử - viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 21.09,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện tử - viễn thông (chuyên ngành Thiết kế vi mạch bán dẫn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; X06; X07",
+      "score": 21.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điều khiển và tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 22.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điều khiển và tự động hóa (đào tạo 2 năm đầu tại Kon Tum)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06; X07",
+      "score": 18.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C02; D01; D07",
+      "score": 20.69,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ vật liệu (chuyên ngành Hóa học Vật liệu mới)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C02; D01; D07",
+      "score": 17.95,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C02; D01; D07",
+      "score": 17.07,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C02; D01; D07",
+      "score": 18.53,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật thực phẩm (chuyên ngành Kỹ thuật sinh học thực phẩm)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C02; D01; D07",
+      "score": 17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ sở hạ tầng (chuyên ngành Xây dựng hạ tầng đô thị)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; C04; D01; X02",
+      "score": 18.6,
+      "scale": 30
+    }
+  ]
+}

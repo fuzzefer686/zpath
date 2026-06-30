@@ -1,0 +1,55 @@
+{
+  "university_code": "YKV",
+  "university_name": "Trường Đại học Y khoa Vinh",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-y-khoa-vinh-YKV.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 5,
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00",
+      "quota": 450,
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7720110",
+      "major_name": "Y học dự phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00; D07",
+      "quota": 50,
+      "tuition_min": 29,
+      "tuition_max": 29
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00; D07",
+      "quota": 150,
+      "tuition_min": 39,
+      "tuition_max": 39
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00; D07",
+      "quota": 350,
+      "tuition_min": 29,
+      "tuition_max": 29
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; A00; D07",
+      "quota": 60,
+      "tuition_min": 29,
+      "tuition_max": 29
+    }
+  ]
+}

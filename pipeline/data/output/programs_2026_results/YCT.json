@@ -1,0 +1,145 @@
+{
+  "university_code": "YCT",
+  "university_name": "Trường Đại học Y Dược Cần Thơ",
+  "found_url": "https://diemthi.tuyensinh247.com/thong-tin-dai-hoc-y-duoc-can-tho-YCT.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 15,
+  "data": [
+    {
+      "school_major_code": "7310401",
+      "major_name": "Tâm lý học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; C00; D01",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520212",
+      "major_name": "Kỹ thuật Y sinh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; X06",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": 1030,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720101E",
+      "major_name": "Y khoa tiếng Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720110",
+      "major_name": "Y học dự phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Y học cổ truyền",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 200,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720302",
+      "major_name": "Hộ sinh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720401",
+      "major_name": "Dinh dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720501",
+      "major_name": "Răng hàm mặt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00",
+      "quota": 170,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật Xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 120,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720602",
+      "major_name": "Kỹ thuật Hình ảnh y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; X06",
+      "quota": 60,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720603",
+      "major_name": "Kỹ thuật Phục hồi chức năng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; B08; D07",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7720701",
+      "major_name": "Y tế công cộng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B00; C00; D01",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

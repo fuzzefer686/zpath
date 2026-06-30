@@ -1,0 +1,73 @@
+{
+  "university_code": "QHF",
+  "university_name": "Trường Đại học Ngoại ngữ - Đại học Quốc gia Hà Nội",
+  "found_url": "https://thi.tuyensinh247.com/dai-hoc-ngoai-ngu-dhqghn-cong-bo-thong-tin-tuyen-sinh-2026-c24a88458.html",
+  "status": "success",
+  "num_records": 10,
+  "school_wide": {
+    "tuition_min": 31,
+    "tuition_max": 42
+  },
+  "data": [
+    {
+      "school_major_code": "7220201",
+      "major_name": "Ngôn ngữ Anh",
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220203",
+      "major_name": "Ngôn ngữ Pháp",
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220205",
+      "major_name": "Ngôn ngữ Đức",
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220209",
+      "major_name": "Ngôn ngữ Nhật",
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220210",
+      "major_name": "Ngôn ngữ Hàn Quốc",
+      "tuition_min": 42,
+      "tuition_max": 42
+    },
+    {
+      "school_major_code": "7220202",
+      "major_name": "Ngôn ngữ Nga",
+      "tuition_min": 31,
+      "tuition_max": 31
+    },
+    {
+      "school_major_code": "7220211",
+      "major_name": "Ngôn ngữ Ả Rập",
+      "tuition_min": 31,
+      "tuition_max": 31
+    },
+    {
+      "school_major_code": "7320107",
+      "major_name": "Truyền thông quốc tế (Văn hóa và truyền thông xuyên quốc gia)",
+      "tuition_min": 31,
+      "tuition_max": 31
+    },
+    {
+      "school_major_code": "7220101",
+      "major_name": "Tiếng Việt và Văn hóa Việt Nam",
+      "tuition_min": 31,
+      "tuition_max": 31
+    }
+  ]
+}

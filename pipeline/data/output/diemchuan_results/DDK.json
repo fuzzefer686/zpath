@@ -1,0 +1,322 @@
+{
+  "university_code": "DDK",
+  "university_name": "Trường Đại học Bách khoa - Đại học Đà Nẵng",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-bach-khoa-da-nang-DDK.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 39,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C02; D07; D08",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ sinh học, chuyên ngành Công nghệ sinh học Y Dược",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C02; D07; D08",
+      "score": 23.48,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật máy tính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "score": 25.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiên tiến Việt-Mỹ ngành Hệ thống Nhúng và IoT",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D07; X06; X07; X26",
+      "score": 23.68,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (Đặc thù - Hợp tác doanh nghiệp)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "score": 25.57,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (ngoại ngữ Nhật)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D28; X06; X26; X46",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin (Đặc thù - Hợp tác doanh nghiệp), chuyên ngành Khoa học dữ liệu và Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "score": 27.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật vật liệu xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D07; X06",
+      "score": 18.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ chế tạo máy",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D07; X06; X26",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D07; X06; X26",
+      "score": 22.93,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ dầu khí và khai thác dầu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; C02; D01; D07",
+      "score": 21.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Cơ khí, chuyên ngành Cơ khí động lực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; X26",
+      "score": 23.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Cơ khí, chuyên ngành Cơ khí hàng không",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D07; X06; X26",
+      "score": 23.33,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Cơ điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D07; X06; X26",
+      "score": 24.93,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật nhiệt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07",
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật nhiệt, chuyên ngành Quản lý Năng lượng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X05; X06; X07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hệ thống công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; X26",
+      "score": 21.27,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Tàu thủy",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; X26",
+      "score": 19.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật ô tô",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; X26",
+      "score": 23.56,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Điện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; X26",
+      "score": 23.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điện tử - viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X26",
+      "score": 24.65,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Điện tử - Viễn thông, chuyên ngành Vi điện tử - Thiết kế vi mạch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06",
+      "score": 27.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình tiên tiến Việt - Mỹ ngành Kỹ thuật Điện tử viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D07; X06; X07; X26",
+      "score": 23.09,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật Điều khiển và Tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X06; X07; X26",
+      "score": 26.13,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C02; D07; X11",
+      "score": 24.17,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; D07; D08; X11",
+      "score": 18.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thực phẩm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; C02; D07; D08",
+      "score": 21.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiến trúc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "V00; V01; V02",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng, chuyên ngành Xây dựng dân dụng và công nghiệp",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X05; X06; X07",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng, chuyên ngành Tin học xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D07; X06; X26",
+      "score": 19.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng, chuyên ngành Kỹ thuật và quản lý xây dựng đô thị thông minh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D07; X06; X26",
+      "score": 19.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng, chuyên ngành Mô hình thông tin và trí tuệ nhân tạo trong xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D07; X06",
+      "score": 20.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng công trình thủy",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D07; X06; X26",
+      "score": 16.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng công trình giao thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D07; X06",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xây dựng công trình giao thông, chuyên ngành Xây dựng đường sắt tốc độ cao và đường sắt đô thị",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D07; X06",
+      "score": 17.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cơ sở hạ tầng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D07; X06",
+      "score": 18.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; X06; X25; X26",
+      "score": 20.39,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; D07; D08; X11",
+      "score": 19.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình đào tạo kỹ sư chất lượng cao Việt - Pháp (PFIEV)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D07; X06; X07; X26",
+      "score": 21.38,
+      "scale": 30
+    }
+  ]
+}

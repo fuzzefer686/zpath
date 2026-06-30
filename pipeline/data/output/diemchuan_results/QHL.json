@@ -1,0 +1,42 @@
+{
+  "university_code": "QHL",
+  "university_name": "Trường Đại học Luật - Đại học Quốc gia Hà Nội",
+  "found_url": "https://www.thongtintuyensinh.vn/Diem-chuan-trung-tuyen-nam-2025-cua-Truong-Dai-hoc-Luat-DHQGHN_C237_D21851.htm",
+  "year": 2025,
+  "status": "success",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": "7380101",
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7380101CLC",
+      "major_name": "Luật chất lượng cao",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7380110",
+      "major_name": "Luật Thương mại quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": "7380109",
+      "major_name": "Luật Kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 23.72,
+      "scale": 30
+    }
+  ]
+}

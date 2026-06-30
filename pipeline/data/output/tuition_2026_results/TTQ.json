@@ -1,0 +1,19 @@
+{
+  "university_code": "TTQ",
+  "university_name": "Trường Đại học Quốc tế Sài Gòn",
+  "found_url": "https://file.siu.edu.vn/UpLoad/HocPhi/2025-2026-thong-bao-hoc-phi-k15.pdf",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": 35,
+    "tuition_max": 35
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "tuition_min": 35,
+      "tuition_max": 35
+    }
+  ]
+}

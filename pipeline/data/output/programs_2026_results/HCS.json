@@ -1,0 +1,91 @@
+{
+  "university_code": "HCS",
+  "university_name": "Học viện Hành chính Quốc gia (Cơ sở phía Nam)",
+  "found_url": "https://thi.tuyensinh247.com/thong-tin-tuyen-sinh-hoc-vien-hanh-chinh-va-quan-tri-cong-2026-c24a88377.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 9,
+  "data": [
+    {
+      "school_major_code": "73444HCM",
+      "major_name": "Quản trị nhân lực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C04; D01; D10",
+      "quota": 105,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "73446HCM",
+      "major_name": "Quản trị văn phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D01; D10",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "73811HCM",
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D01; D10",
+      "quota": 70,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7381-1HCM",
+      "major_name": "Chuyên ngành Thanh tra thuộc ngành Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D01; D10",
+      "quota": 70,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "73125HCM",
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D01; D10",
+      "quota": 160,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "73122HCM",
+      "major_name": "Xây dựng Đảng và chính quyền nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; C04; D01",
+      "quota": 80,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "73233HCM",
+      "major_name": "Lưu trữ học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "quota": 35,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7323-1HCM",
+      "major_name": "Chuyên ngành Văn thư - Lưu trữ thuộc ngành Lưu trữ học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D14",
+      "quota": 35,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "73111HCM",
+      "major_name": "Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D10; D15",
+      "quota": 155,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

@@ -12,3 +12,6 @@
 [2026-06-15T12:14:45.619056+00:00] DQC | extract https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpLXv79INJC: 'list' object has no attribute 'get'
 [2026-06-17T02:00:33.391825+00:00] RMIT | deeper https://www.rmit.edu.vn/vi/hoc-tap-tai-rmit/tuyen-sinh-dai-hoc: 404 Client Error: Not Found for url: https://www.rmit.edu.vn/vi/hoc-tap-tai-rmit/tuyen-sinh-dai-hoc
 [2026-06-17T02:01:35.762525+00:00] TDU | extract https://www.ttn.edu.vn/tuyensinh/: 404 Client Error: Not Found for url: https://www.ttn.edu.vn/tuyensinh/
+[2026-06-19T12:45:18.533875+00:00] DLU | extract https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOMGWHLFdGj: Extra data: line 48 column 1 (char 8650)
+[2026-06-19T13:55:14.833271+00:00] VBU | extract https://www.facebook.com/dhquoctebacha/: 400 Client Error: Bad Request for url: https://www.facebook.com/dhquoctebacha/
+[2026-06-19T13:56:19.646990+00:00] DQU | deeper http://www.qnamuni.edu.vn/tuyen-sinh: 404 Client Error: Not Found for url: http://www.qnamuni.edu.vn/tuyen-sinh

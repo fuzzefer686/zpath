@@ -1,0 +1,210 @@
+{
+  "university_code": "DTM",
+  "university_name": "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-tai-nguyen-va-moi-truong-tphcm-DTM.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 25,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, D04, X01",
+      "score": 17.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Bất động sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X01, X02",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Địa chất học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X01, X04",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Biến đổi khí hậu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X01, X02",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khí tượng và khí hậu học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X01, X02",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thủy văn học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X01, X02",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hệ thống thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X01, X02",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X01, X02",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X02, X04",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ vật liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X02, X04",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, D01, X01, X02, X04",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logictics và quản lý chuỗi cung ứng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, D04, X01",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật trắc địa – Bản đồ",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X02, X04",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý đô thị và công trình",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X02, X04",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật cấp thoát nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, D01, X01, X02, X04",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C02, C03, C04, D01, X01, X02, X04",
+      "score": 15.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế tài nguyên thiên nhiên",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, D04, X01",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý đất đai",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X01, X02",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường biển đảo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, D04, X02",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03, C01, C02, C03, C04, D01, X01, X02",
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 583.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 504.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật môi trường",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 458.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logictics và quản lý chuỗi cung ứng",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 756.0,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài nguyên và môi trường",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 483.0,
+      "scale": 1200
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "university_code": "BVS",
+  "university_name": "Học viện Công nghệ Bưu chính Viễn thông (Cơ sở phía Nam)",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/hoc-vien-cong-nghe-buu-chinh-vien-thong-phia-nam-BVS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 11,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/X06/X26",
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/X06/X26",
+      "score": 21.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/X06/X26",
+      "score": 17.2,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/X06/X26",
+      "score": 21.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/X06/X26",
+      "score": 16.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/X06/X26",
+      "score": 23.47,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "An toàn thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/X06/X26",
+      "score": 23.09,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/X06/X26",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điện tử viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/X06/X26",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ internet vạn vật (IoT)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/X06/X26",
+      "score": 17.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điều khiển và tự động hóa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/X06/X26",
+      "score": 19.8,
+      "scale": 30
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "university_code": "DCG",
+  "university_name": "Trường Đại học Công nghệ Đồng Nai",
+  "found_url": "https://xaydungchinhsach.chinhphu.vn/diem-chuan-truong-dai-hoc-cong-nghe-dong-nai-nam-2025-119250822164212813.htm",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 10,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.33,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.33,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.33,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.33,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 29.61,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 29.61,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành khác",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 22.51,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Nhóm ngành sức khỏe",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 629,
+      "scale": 1200
+    }
+  ]
+}

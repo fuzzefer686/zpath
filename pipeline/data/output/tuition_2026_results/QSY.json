@@ -1,0 +1,43 @@
+{
+  "university_code": "QSY",
+  "university_name": "Học viện Khoa học Sức khỏe - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://tuyensinh.vnuhcm.edu.vn/index.php?route=catalog/truong/tree&truong_id=9",
+  "status": "success",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": 53.2,
+    "tuition_max": 70
+  },
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "tuition_min": 70,
+      "tuition_max": 70
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "tuition_min": 70,
+      "tuition_max": 70
+    },
+    {
+      "school_major_code": "7720501",
+      "major_name": "Răng - Hàm - Mặt",
+      "tuition_min": 70,
+      "tuition_max": 70
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Y học Cổ truyền",
+      "tuition_min": 70,
+      "tuition_max": 70
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "tuition_min": 53.2,
+      "tuition_max": 53.2
+    }
+  ]
+}

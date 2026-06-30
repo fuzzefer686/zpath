@@ -1,0 +1,58 @@
+{
+  "university_code": "DKB",
+  "university_name": "Trường Đại học Kinh tế - Kỹ thuật Bình Dương",
+  "found_url": "https://tuyensinh.ktkt.edu.vn/blog-tuyen-sinh/truong-dai-hoc-kinh-te-ky-thuat-binh-duong-cong-bo-diem-chuan-trung-tuyen-dai-hoc-chinh-quy-nam-2025",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành (trừ Dược học)",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành (trừ Dược học)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 14.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành (trừ Dược học)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 14.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 21.0,
+      "scale": 30
+    }
+  ]
+}

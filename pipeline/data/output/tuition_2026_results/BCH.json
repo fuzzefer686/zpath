@@ -1,0 +1,31 @@
+{
+  "university_code": "BCH",
+  "university_name": "Học viện Báo chí và Tuyên truyền",
+  "found_url": "https://dienthoaivui.com.vn/back-to-school-hoc-phi-hoc-vien-bao-chi-va-tuyen-truyen",
+  "status": "success",
+  "num_records": 3,
+  "school_wide": {
+    "tuition_min": 0,
+    "tuition_max": 16.81
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Các chương trình đào tạo giảng viên lý luận chính trị (Triết học, Chủ nghĩa xã hội khoa học, Kinh tế chính trị, Lịch sử Đảng Cộng sản Việt Nam, Tư tưởng Hồ Chí Minh)",
+      "tuition_min": 0,
+      "tuition_max": 0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các chương trình đào tạo hệ chuẩn",
+      "tuition_min": 7.26,
+      "tuition_max": 7.26
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các chương trình đào tạo đạt kiểm định chất lượng (Ngôn ngữ Anh, Thông tin đối ngoại, Quan hệ công chúng chuyên nghiệp, Quảng cáo, Quan hệ chính trị và Truyền thông quốc tế, Xã hội học, Biên tập xuất bản)",
+      "tuition_min": 16.81,
+      "tuition_max": 16.81
+    }
+  ]
+}

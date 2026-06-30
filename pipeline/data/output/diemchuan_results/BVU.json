@@ -1,0 +1,58 @@
+{
+  "university_code": "BVU",
+  "university_name": "Trường Đại học Bà Rịa - Vũng Tàu",
+  "found_url": "https://giaoducthoidai.vn/truong-dai-hoc-ba-ria-vung-tau-cong-bo-diem-san-tuyen-sinh-2025-post740803.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cử nhân tài năng",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành/chương trình còn lại",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cử nhân tài năng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành/chương trình còn lại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    }
+  ]
+}

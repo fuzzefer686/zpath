@@ -1,0 +1,19 @@
+{
+  "university_code": "NLS",
+  "university_name": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+  "found_url": "https://thi.tuyensinh247.com/thong-tin-tuyen-sinh-dai-hoc-nong-lam-tphcm-2026-c24a88503.html",
+  "data_year": 2026,
+  "status": "needs_deeper_crawl",
+  "num_records": 1,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "quota": null,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

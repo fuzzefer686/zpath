@@ -1,0 +1,82 @@
+{
+  "university_code": "YKV",
+  "university_name": "Trường Đại học Y khoa Vinh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-y-khoa-vinh-YKV.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 9,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "score": 22.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y học dự phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "score": 17.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "score": 17.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y học dự phòng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; B00; D07",
+      "score": 23.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; B00; D07",
+      "score": 23.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00; B00; D07",
+      "score": 24.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng liên thông",
+      "admission_method": "hoc_ba",
+      "combination_code": "B00",
+      "score": 14.0,
+      "scale": 30
+    }
+  ]
+}

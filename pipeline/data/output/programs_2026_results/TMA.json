@@ -1,0 +1,469 @@
+{
+  "university_code": "TMA",
+  "university_name": "Trường Đại học Thương mại",
+  "found_url": "https://thi.tuyensinh247.com/thong-tin-tuyen-sinh-dai-hoc-thuong-mai-2026-c24a88124.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 51,
+  "data": [
+    {
+      "school_major_code": "TM01",
+      "major_name": "Quản trị kinh doanh (Quản trị kinh doanh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 250,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM02",
+      "major_name": "Quản trị kinh doanh (Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 150,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM03",
+      "major_name": "Quản trị kinh doanh (Khởi nghiệp và phát triển kinh doanh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 100,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM04",
+      "major_name": "Quản trị khách sạn (Quản trị khách sạn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 100,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM05",
+      "major_name": "Quản trị khách sạn (Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 100,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM06",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành (Quản trị dịch vụ du lịch và lữ hành)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 80,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM07",
+      "major_name": "Marketing (Marketing Thương mại)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 160,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM08",
+      "major_name": "Marketing (Marketing thương mại - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 150,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM09",
+      "major_name": "Marketing (Marketing số)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 100,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM10",
+      "major_name": "Marketing (Quản trị Thương hiệu)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 100,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM11",
+      "major_name": "Marketing (Quản trị thương hiệu - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 100,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM12",
+      "major_name": "Kế toán (Kế toán doanh nghiệp)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 120,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM13",
+      "major_name": "Kế toán (Kế toán tích hợp chứng chỉ quốc tế ICAEW CFAB - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 120,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM14",
+      "major_name": "Kế toán (Kế toán công)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 80,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM15",
+      "major_name": "Kiểm toán (Kiểm toán)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 100,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM16",
+      "major_name": "Kiểm toán (Kiểm toán tích hợp chứng chỉ quốc tế ICAEW CFAB - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 120,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM17",
+      "major_name": "Logistics và Quản lý chuỗi cung ứng (Logistics và Quản lý chuỗi cung ứng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 120,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM18",
+      "major_name": "Logistics và Quản lý chuỗi cung ứng (Logistics và Xuất nhập khẩu - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 120,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM19",
+      "major_name": "Kinh doanh quốc tế (Thương mại quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 160,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM20",
+      "major_name": "Kinh doanh quốc tế (Thương mại quốc tế - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 140,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM21",
+      "major_name": "Kinh tế quốc tế (Kinh tế quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 120,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM22",
+      "major_name": "Kinh tế (Quản lý kinh tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 170,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM23",
+      "major_name": "Kinh tế (Kinh tế và Quản lý đầu tư - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 120,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM24",
+      "major_name": "Tài chính - Ngân hàng (Tài chính - Ngân hàng thương mại)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 120,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM25",
+      "major_name": "Tài chính - Ngân hàng (Tài chính - Ngân hàng thương mại - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 140,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM26",
+      "major_name": "Tài chính - Ngân hàng (Tài chính công)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 60,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM27",
+      "major_name": "Tài chính - Ngân hàng (Công nghệ tài chính ngân hàng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 120,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM28",
+      "major_name": "Thương mại điện tử (Quản trị thương mại điện tử)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 170,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM29",
+      "major_name": "Thương mại điện tử (Thương mại điện tử - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 120,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM30",
+      "major_name": "Thương mại điện tử (Kinh doanh số)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 100,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM31",
+      "major_name": "Hệ thống thông tin quản lý (Quản trị Hệ thống thông tin)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 150,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM32",
+      "major_name": "Hệ thống thông tin quản lý (Quản trị Hệ thống thông tin - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 80,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM33",
+      "major_name": "Ngôn ngữ Anh (Tiếng Anh thương mại)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "quota": 250,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM34",
+      "major_name": "Luật kinh tế (Luật kinh tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 130,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM35",
+      "major_name": "Luật kinh tế (Luật kinh doanh - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 110,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM36",
+      "major_name": "Luật kinh tế (Luật thương mại quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 110,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM37",
+      "major_name": "Quản trị nhân lực (Quản trị nhân lực doanh nghiệp)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 150,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM38",
+      "major_name": "Quản trị nhân lực (Quản trị nhân lực doanh nghiệp - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 130,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM39",
+      "major_name": "Kinh tế số (Phân tích kinh doanh trong môi trường số)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 100,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM40",
+      "major_name": "Ngôn ngữ Trung Quốc (Tiếng Trung thương mại)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D04; D07",
+      "quota": 140,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM41",
+      "major_name": "Ngôn ngữ Trung Quốc (Tiếng Trung thương mại - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D04",
+      "quota": 120,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM42",
+      "major_name": "Quản trị kinh doanh (Tiếng Pháp thương mại)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D03; D07",
+      "quota": 50,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    },
+    {
+      "school_major_code": "TM43",
+      "major_name": "Quản trị kinh doanh (Khởi nghiệp) - Chương trình đào tạo song bằng quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 40,
+      "tuition_min": 260,
+      "tuition_max": 260
+    },
+    {
+      "school_major_code": "TM44",
+      "major_name": "Marketing (Marketing thương mại) - Thương mại sản phẩm và dịch vụ (Bán hàng) - Chương trình đào tạo song bằng quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 60,
+      "tuition_min": 260,
+      "tuition_max": 260
+    },
+    {
+      "school_major_code": "TM45",
+      "major_name": "Quản trị kinh doanh (Quản trị kinh doanh - Chương trình đào tạo tiến tiến)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 50,
+      "tuition_min": 200,
+      "tuition_max": 200
+    },
+    {
+      "school_major_code": "TM46",
+      "major_name": "Logistics và quản lý chuỗi cung ứng (Logistics và quản lý chuỗi cung ứng) - Thương mại và phân phối - Chương trình đào tạo song bằng quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 40,
+      "tuition_min": 260,
+      "tuition_max": 260
+    },
+    {
+      "school_major_code": "TM47",
+      "major_name": "Kế toán (Kế toán tích hợp chứng chỉ quốc tế ICAEW CFAB) - Chương trình đào tạo song bằng quốc tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 40,
+      "tuition_min": 260,
+      "tuition_max": 260
+    },
+    {
+      "school_major_code": "TM48",
+      "major_name": "Logistics và Quản lý chuỗi cung ứng (Logistics và Quản lý vận tải đa phương thức - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 90,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM49",
+      "major_name": "Kinh tế số (Phân tích dữ liệu trong kinh tế và kinh doanh - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 90,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM50",
+      "major_name": "Quản trị dịch vụ du lịch và lữ hành (Quản trị sự kiện và dịch vụ giải trí - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07; D09; D10; X25; X26; X27; X28",
+      "quota": 80,
+      "tuition_min": 50.8,
+      "tuition_max": 50.8
+    },
+    {
+      "school_major_code": "TM51",
+      "major_name": "Khoa học máy tính (Ứng dụng trí tuệ nhân tạo trong kinh doanh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "quota": 80,
+      "tuition_min": 30.9,
+      "tuition_max": 36.8
+    }
+  ]
+}

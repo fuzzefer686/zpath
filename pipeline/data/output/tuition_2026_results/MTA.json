@@ -1,0 +1,19 @@
+{
+  "university_code": "MTA",
+  "university_name": "Học viện Kỹ thuật Quân sự",
+  "found_url": "https://giaoducthudo.giaoducthoidai.vn/hoc-vien-ky-thuat-quan-su-cong-bo-hoc-phi-bang-quy-doi-ielts-he-dan-su-214797.html",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": 20.9,
+    "tuition_max": 20.9
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Hệ dân sự (toàn trường)",
+      "tuition_min": 20.9,
+      "tuition_max": 20.9
+    }
+  ]
+}

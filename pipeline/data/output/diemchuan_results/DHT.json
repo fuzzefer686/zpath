@@ -1,0 +1,34 @@
+{
+  "university_code": "DHT",
+  "university_name": "Trường Đại học Hà Tĩnh",
+  "found_url": "https://laodong.vn/giao-duc/dai-hoc-ha-tinh-cong-bo-diem-chuan-nam-2025-1561961.ldo",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 3,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học (khối B03, C04, C14, X01)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03/C04/C14/X01",
+      "score": 26.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Giáo dục Tiểu học (khối D01)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01",
+      "score": 25.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành còn lại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    }
+  ]
+}

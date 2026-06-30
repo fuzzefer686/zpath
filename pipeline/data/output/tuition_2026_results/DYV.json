@@ -1,0 +1,43 @@
+{
+  "university_code": "DYV",
+  "university_name": "Trường Đại học Y khoa Phạm Ngọc Thạch",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-y-khoa-pham-ngoc-thach-TYS.html",
+  "status": "success",
+  "num_records": 5,
+  "school_wide": {
+    "tuition_min": 47,
+    "tuition_max": 81
+  },
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "tuition_min": 81,
+      "tuition_max": 81
+    },
+    {
+      "school_major_code": "7720501",
+      "major_name": "Răng Hàm Mặt",
+      "tuition_min": 81,
+      "tuition_max": 81
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "tuition_min": 68,
+      "tuition_max": 68
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Y học cổ truyền",
+      "tuition_min": 68,
+      "tuition_max": 68
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành cử nhân (Điều dưỡng, Hộ sinh, Dinh dưỡng, Kỹ thuật xét nghiệm y học, Kỹ thuật hình ảnh y học, Kỹ thuật phục hồi chức năng, Kỹ thuật Gây mê hồi sức, Khúc xạ nhãn khoa, Y tế công cộng)",
+      "tuition_min": 47,
+      "tuition_max": 47
+    }
+  ]
+}

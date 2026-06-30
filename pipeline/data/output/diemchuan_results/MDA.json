@@ -1,0 +1,138 @@
+{
+  "university_code": "MDA",
+  "university_name": "Trường Đại học Mỏ - Địa chất",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-mo-dia-chat-MDA.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 16,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D01; D09; D10; D14; D15; D66; D78; D96",
+      "score": 22,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; C03; D01; D04; D09; D14; D66; D78",
+      "score": 25.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C04; D01; D07; D09; D10; D84",
+      "score": 23,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D07; D09; D10; D84",
+      "score": 23,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; D07; D09; D10; D84",
+      "score": 22.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Địa chất học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A04; A06; C01; C04; D01; D07; D10",
+      "score": 15.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X06; X10; X26; X27",
+      "score": 20,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07; X06; X10; X26; X27",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công nghệ kỹ thuật điện, điện tử",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06",
+      "score": 24,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật điều khiển và tự động hoá",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C01; D01; X06",
+      "score": 25.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "hoc_ba",
+      "combination_code": "D01; D09; D10; D14; D15; D66; D78; D96",
+      "score": 23.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "hoc_ba",
+      "combination_code": "C00; C03; D01; D04; D09; D14; D66; D78",
+      "score": 26.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 70.61,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 90.36,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dg_tu_duy",
+      "combination_code": null,
+      "score": 53.81,
+      "scale": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "dg_tu_duy",
+      "combination_code": null,
+      "score": 66.06,
+      "scale": 100
+    }
+  ]
+}

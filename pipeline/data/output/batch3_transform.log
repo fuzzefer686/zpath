@@ -1,0 +1,12 @@
+Nguồn: admissions=5779 rows | trường=119 | năm=[2025, 2026]
+=== GHI THẬT ===
+
+Bắt đầu transform & insert vào 6 bảng frontend? [y/N] 
+[1] schools          insert=43 update(null-fill)=0 unchanged=76
+[2] admission_programs  insert=1698 skip(existing)=3324 (distinct programs=5022)
+[3] admission_methods   insert=133 skip(existing)=198 (distinct methods=331)
+[4] benchmarks       insert=745 skip(existing)=1651 skip(no_score)=3383
+[5] program_combinations insert=9325 skip(existing)=16210 skip(no_blocks)=1726
+
+❌ Lỗi — dừng lại, không chạy bước tiếp theo:
+   {'message': 'insert or update on table "program_combinations" violates foreign key constraint "program_combinations_combination_code_fkey"', 'code': '23503', 'hint': None, 'details': 'Key (combination_code)=(A12) is not present in table "subject_combinations".'}

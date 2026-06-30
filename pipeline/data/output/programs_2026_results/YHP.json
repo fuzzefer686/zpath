@@ -1,0 +1,73 @@
+{
+  "university_code": "YHP",
+  "university_name": "Trường Đại học Y Dược Hải Phòng",
+  "found_url": "https://huongnghiep.hocmai.vn/tuyen-sinh-2025-dai-hoc-y-duoc-hai-phong-ypb-cong-bo-de-an-tuyen-sinh-2025-7-nganh-4-phuong-thuc-chi-tieu-mo-rong",
+  "data_year": 2025,
+  "status": "success",
+  "num_records": 7,
+  "data": [
+    {
+      "school_major_code": "7720101",
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": null,
+      "tuition_min": 58.0,
+      "tuition_max": 58.0
+    },
+    {
+      "school_major_code": "7720110",
+      "major_name": "Y học dự phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": null,
+      "tuition_min": 50.0,
+      "tuition_max": 50.0
+    },
+    {
+      "school_major_code": "7720115",
+      "major_name": "Y học cổ truyền",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": null,
+      "tuition_min": 50.0,
+      "tuition_max": 50.0
+    },
+    {
+      "school_major_code": "7720201",
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07",
+      "quota": null,
+      "tuition_min": 58.0,
+      "tuition_max": 58.0
+    },
+    {
+      "school_major_code": "7720301",
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": null,
+      "tuition_min": 45.0,
+      "tuition_max": 45.0
+    },
+    {
+      "school_major_code": "7720501",
+      "major_name": "Răng hàm mặt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": null,
+      "tuition_min": 58.0,
+      "tuition_max": 58.0
+    },
+    {
+      "school_major_code": "7720601",
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00",
+      "quota": null,
+      "tuition_min": 45.0,
+      "tuition_max": 45.0
+    }
+  ]
+}

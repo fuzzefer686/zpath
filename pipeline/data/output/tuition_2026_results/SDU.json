@@ -1,0 +1,12 @@
+{
+  "university_code": "SDU",
+  "university_name": "Trường Đại học Sao Đỏ",
+  "found_url": "https://vietjack.com/thong-tin-tuyen-sinh/hoc-phi-truong-dai-hoc-sao-do.jsp",
+  "status": "success",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": 18,
+    "tuition_max": 25
+  },
+  "data": []
+}

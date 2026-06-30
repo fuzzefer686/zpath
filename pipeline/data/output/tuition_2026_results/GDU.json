@@ -1,0 +1,25 @@
+{
+  "university_code": "GDU",
+  "university_name": "Trường Đại học Gia Định",
+  "found_url": "https://thi.tuyensinh247.com/hoc-phi-cac-truong-dai-hoc-nam-hoc-2025-2026-c24a86542.html",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 20.7,
+    "tuition_max": 170
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo (trừ Răng - Hàm - Mặt)",
+      "tuition_min": 20.7,
+      "tuition_max": 20.7
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Răng - Hàm - Mặt",
+      "tuition_min": 170,
+      "tuition_max": 170
+    }
+  ]
+}

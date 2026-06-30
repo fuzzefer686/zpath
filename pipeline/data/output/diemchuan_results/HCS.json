@@ -1,0 +1,186 @@
+{
+  "university_code": "HCS",
+  "university_name": "Học viện Hành chính Quốc gia (Cơ sở phía Nam)",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/hoc-vien-hanh-chinh-va-quan-tri-cong-phia-nam-HCS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 22,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X01",
+      "score": 23.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C01; C04; D01",
+      "score": 19.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng Đảng và chính quyền nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D01",
+      "score": 23.45,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Xây dựng Đảng và chính quyền nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X01",
+      "score": 25.45,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X01; D01; D15",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "X74",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; D01",
+      "score": 23.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý nhà nước",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X01",
+      "score": 26.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chuyên ngành Văn thư - Lưu trữ thuộc ngành Lưu trữ học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; D01; D07; D14",
+      "score": 21.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chuyên ngành Văn thư - Lưu trữ thuộc ngành Lưu trữ học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 27.9,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lưu trữ học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; D01; D07; D14",
+      "score": 21.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Lưu trữ học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00",
+      "score": 23.35,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; C04; D01",
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X01",
+      "score": 24.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị nhân lực",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C04; D01",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị văn phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị văn phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X01",
+      "score": 26.05,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chuyên ngành Thanh tra thuộc ngành Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X01",
+      "score": 25.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chuyên ngành Thanh tra thuộc ngành Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01",
+      "score": 23.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; C00; C04; D01",
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; C03; D01",
+      "score": 23.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C00; X01",
+      "score": 26.4,
+      "scale": 30
+    }
+  ]
+}

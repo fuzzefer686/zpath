@@ -1,0 +1,19 @@
+{
+  "university_code": "DKB",
+  "university_name": "Trường Đại học Kinh tế - Kỹ thuật Bình Dương",
+  "found_url": "https://vnur.vn/bang-hoc-phi-cac-truong-dai-hoc-o-viet-nam-nam-2025/",
+  "status": "success",
+  "num_records": 1,
+  "school_wide": {
+    "tuition_min": 23.3,
+    "tuition_max": 41.9
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "school_wide",
+      "tuition_min": 23.3,
+      "tuition_max": 41.9
+    }
+  ]
+}

@@ -1,0 +1,554 @@
+{
+  "university_code": "AOF",
+  "university_name": "Học viện Tài chính",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/hoc-vien-tai-chinh-HTC.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 68,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Tiếng Anh tài chính kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 24.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế và quản lý nguồn lực tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.43,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế chính trị - tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 24.92,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế đầu tư",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.56,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế đầu tư (Theo định hướng ACCA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 22.82,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Toán tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 24.57,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị doanh nghiệp; Quản trị kinh doanh du lịch",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 24.98,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị doanh nghiệp (Theo định hướng ICAEW CFAB)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 22.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 26.23,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Digital Marketing (Theo định hướng ICDL)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 23.44,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thẩm định giá và kinh doanh bất động sản",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 21.51,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thẩm định giá và kinh doanh bất động sản (Theo định hướng ACCA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế (Theo định hướng ICAEW CFAB)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 24.89,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng 1 (CN Thuế; Hải quan và Nghiệp vụ ngoại thương; Tài chính quốc tế)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.47,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng 2 (CN Tài chính doanh nghiệp; Phân tích tài chính)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 26.31,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng 3 (CN Ngân hàng; Đầu tư tài chính)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thuế và Quản trị thuế (Theo định hướng ACCA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hải quan và Logistics (Theo định hướng FIATA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phân tích tài chính (Theo định hướng ICAEW CFAB)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính doanh nghiệp (Theo định hướng ACCA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngân hàng (Theo định hướng ICAEW CFAB)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đầu tư tài chính (Theo định hướng ICAEW CFAB)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính bảo hiểm",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.56,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán doanh nghiệp; Kế toán công",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.01,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán doanh nghiệp (Theo định hướng ACCA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán quản trị và Kiểm soát quản lý (Theo định hướng CMA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán công (Theo định hướng ACCA)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 26.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán (Theo định hướng ICAEW CFAB)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D01; D07",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài chính công",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tin học tài chính kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.07,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.12,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu trong tài chính",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.52,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo trong tài chính kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 24.97,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tiếng Anh tài chính kế toán",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 24.1,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế và quản lý nguồn lực tài chính",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.43,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế chính trị - tài chính",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 24.92,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế đầu tư",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.56,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế đầu tư (Theo định hướng ACCA)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 22.82,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Toán tài chính",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 24.57,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị doanh nghiệp; Quản trị kinh doanh du lịch",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 24.98,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị doanh nghiệp (Theo định hướng ICAEW CFAB)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 22.58,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 26.23,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Digital Marketing (Theo định hướng ICDL)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 23.44,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thẩm định giá và kinh doanh bất động sản",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 21.51,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thẩm định giá và kinh doanh bất động sản (Theo định hướng ACCA)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh quốc tế (Theo định hướng ICAEW CFAB)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 24.89,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng 1 (CN Thuế; Hải quan và Nghiệp vụ ngoại thương; Tài chính quốc tế)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.47,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng 2 (CN Tài chính doanh nghiệp; Phân tích tài chính)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 26.31,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính - Ngân hàng 3 (CN Ngân hàng; Đầu tư tài chính)",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.4,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thuế và Quản trị thuế (Theo định hướng ACCA)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hải quan và Logistics (Theo định hướng FIATA)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Phân tích tài chính (Theo định hướng ICAEW CFAB)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính doanh nghiệp (Theo định hướng ACCA)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngân hàng (Theo định hướng ICAEW CFAB)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Đầu tư tài chính (Theo định hướng ICAEW CFAB)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tài chính bảo hiểm",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.56,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán doanh nghiệp; Kế toán công",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.01,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán doanh nghiệp (Theo định hướng ACCA)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán quản trị và Kiểm soát quản lý (Theo định hướng CMA)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kế toán công (Theo định hướng ACCA)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 26.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kiểm toán (Theo định hướng ICAEW CFAB)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01; D01; D07",
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý tài chính công",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 22.55,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tin học tài chính kế toán",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.07,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Luật kinh doanh",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.12,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học dữ liệu trong tài chính",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 25.52,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Trí tuệ nhân tạo trong tài chính kế toán",
+      "admission_method": "ket_hop",
+      "combination_code": "A00; A01; D01; D07",
+      "score": 24.97,
+      "scale": 30
+    }
+  ]
+}

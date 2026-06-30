@@ -1,0 +1,37 @@
+{
+  "university_code": "QHE",
+  "university_name": "Trường Đại học Kinh tế - Đại học Quốc gia Hà Nội",
+  "found_url": "https://unizone.edu.vn/hoc-phi-dai-hoc-kinh-te-dhqghn/",
+  "status": "success",
+  "num_records": 4,
+  "school_wide": {
+    "tuition_min": 48,
+    "tuition_max": 48
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Đại học chính quy trong nước",
+      "tuition_min": 48,
+      "tuition_max": 48
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (tài năng thể thao)",
+      "tuition_min": 31.5,
+      "tuition_max": 31.5
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh liên kết Đại học Troy, Hoa Kỳ",
+      "tuition_min": 100.27,
+      "tuition_max": 100.27
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh liên kết Đại học St.Francis, Hoa Kỳ",
+      "tuition_min": 82.85,
+      "tuition_max": 86.04
+    }
+  ]
+}

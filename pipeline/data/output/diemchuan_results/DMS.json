@@ -1,0 +1,82 @@
+{
+  "university_code": "DMS",
+  "university_name": "Trường Đại học Tài chính - Marketing",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-tai-chinh-marketing-DMS.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 9,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (chương trình chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D09/D10/X25",
+      "score": 23.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế (chương trình chuẩn)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/A03/A04/A05/A06/A07/C01/C02/C03/C04/D01/D07/D09/D10/X01/X05/X09/X17/X21/X25",
+      "score": 25.63,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing (Chương trình Tiếng Anh toàn phần (Định hướng quốc tế))",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01/D01/D07/D09/D10/X25",
+      "score": 29.21,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (chương trình chuẩn)",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01/D01/D07/D09/D10/X25",
+      "score": 26.14,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing (Chương trình Tiếng Anh toàn phần (Định hướng quốc tế))",
+      "admission_method": "hoc_ba",
+      "combination_code": "A01/D01/D07/D09/D10/X25",
+      "score": 32.64,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (chương trình chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 906.4,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh tế (chương trình chuẩn)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 954.2,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (chương trình chuẩn)",
+      "admission_method": "xt_rieng",
+      "combination_code": "A01/D01/D07/D09/D10/X25",
+      "score": 367,
+      "scale": 900
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing (Chương trình Tiếng Anh toàn phần (Định hướng quốc tế))",
+      "admission_method": "xt_rieng",
+      "combination_code": "A01/D01/D07/D09/D10/X25",
+      "score": 453.48,
+      "scale": 900
+    }
+  ]
+}

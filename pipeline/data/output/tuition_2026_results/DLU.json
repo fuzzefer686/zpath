@@ -1,0 +1,25 @@
+{
+  "university_code": "DLU",
+  "university_name": "Trường Đại học Đà Lạt",
+  "found_url": "https://xemthoitiet.com.vn/tin-tuc/hoc-phi-dai-hoc-da-lat",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 15,
+    "tuition_max": 24
+  },
+  "data": [
+    {
+      "school_major_code": "7720203",
+      "major_name": "Hóa dược",
+      "tuition_min": 24,
+      "tuition_max": 24
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành khác",
+      "tuition_min": 15,
+      "tuition_max": 18
+    }
+  ]
+}

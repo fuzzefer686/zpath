@@ -1,0 +1,37 @@
+{
+  "university_code": "BPU",
+  "university_name": "Trường Đại học Dầu khí Việt Nam",
+  "found_url": "https://www.pvu.edu.vn/tuyen-sinh/tuyen-sinh-2026/thong-tin-tuyen-sinh-dai-hoc-chinh-quy-nam-2026",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 3,
+  "data": [
+    {
+      "school_major_code": "7520501",
+      "major_name": "Kỹ thuật Địa chất (Địa chất - Địa vật lý Dầu khí)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; C01; X07; X06; D07; B00; C02; X11; X10",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520604",
+      "major_name": "Kỹ thuật Dầu khí (Khoan-Khai thác Mỏ Dầu khí)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; C01; X07; X06; D07; B00; C02; X11; X10",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7520301",
+      "major_name": "Kỹ thuật Hóa học (Lọc-Hóa dầu)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; C01; X07; X06; D07; B00; C02; X11; X10",
+      "quota": 100,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

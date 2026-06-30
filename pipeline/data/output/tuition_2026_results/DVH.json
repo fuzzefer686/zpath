@@ -1,0 +1,12 @@
+{
+  "university_code": "DVH",
+  "university_name": "Trường Đại học Văn Hiến",
+  "found_url": "https://tuyensinh.vhu.edu.vn/",
+  "status": "needs_deeper_crawl",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": []
+}

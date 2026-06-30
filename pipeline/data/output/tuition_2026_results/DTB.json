@@ -1,0 +1,55 @@
+{
+  "university_code": "DTB",
+  "university_name": "Trường Đại học Thái Bình",
+  "found_url": "https://tbd.edu.vn/tuyen-sinh/hoc-phi/",
+  "status": "success",
+  "num_records": 7,
+  "school_wide": {
+    "tuition_min": 27.48,
+    "tuition_max": 59.43
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Cử nhân - Chương trình tiêu chuẩn (Các ngành còn lại)",
+      "tuition_min": 27.48,
+      "tuition_max": 27.48
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cử nhân - Chương trình tiêu chuẩn (Luật, Luật kinh tế)",
+      "tuition_min": 29.6,
+      "tuition_max": 29.6
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cử nhân - Chương trình tiêu chuẩn (Điều dưỡng)",
+      "tuition_min": 50.0,
+      "tuition_max": 50.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cử nhân - Chương trình Chất lượng cao",
+      "tuition_min": 52.0,
+      "tuition_max": 52.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Cử nhân - Chương trình Tài năng",
+      "tuition_min": 59.43,
+      "tuition_max": 59.43
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ sư - Chương trình tiêu chuẩn",
+      "tuition_min": 33.83,
+      "tuition_max": 33.83
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ sư - Chương trình Tài năng",
+      "tuition_min": 59.43,
+      "tuition_max": 59.43
+    }
+  ]
+}

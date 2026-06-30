@@ -1,0 +1,58 @@
+{
+  "university_code": "DNT",
+  "university_name": "Trường Đại học Ngoại ngữ - Tin học Thành phố Hồ Chí Minh",
+  "found_url": "https://muctim.tuoitre.vn/diem-chuan-truong-dai-hoc-ngoai-ngu-tin-hoc-tphcm-nam-2025-tu-15-diem-tro-len-101250822153210917.htm",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Truyền thông đa phương tiện",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành còn lại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành đào tạo",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 500.0,
+      "scale": 1200
+    }
+  ]
+}

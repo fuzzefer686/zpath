@@ -1,0 +1,82 @@
+{
+  "university_code": "TMA",
+  "university_name": "Trường Đại học Thương mại",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-thuong-mai-TMU.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 9,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (Quản trị kinh doanh)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/D07",
+      "score": 25.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing (Marketing số)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/D07",
+      "score": 27.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng (Logistics và Quản lý chuỗi cung ứng)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/D07",
+      "score": 27.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử (Quản trị thương mại điện tử)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/D01/D07",
+      "score": 27.6,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản trị kinh doanh (Quản trị kinh doanh)",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 105.333,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng (Logistics và Quản lý chuỗi cung ứng)",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 118.667,
+      "scale": 150
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Marketing (Marketing số)",
+      "admission_method": "dg_tu_duy",
+      "combination_code": null,
+      "score": 85.333,
+      "scale": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Logistics và Quản lý chuỗi cung ứng (Logistics và Quản lý chuỗi cung ứng)",
+      "admission_method": "dg_tu_duy",
+      "combination_code": null,
+      "score": 87.533,
+      "scale": 100
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Thương mại điện tử (Thương mại điện tử - Chương trình định hướng chuyên sâu nghề nghiệp quốc tế - IPOP)",
+      "admission_method": "ket_hop",
+      "combination_code": "A01/D01/D07/D09/D10/X25/X26/X27/X28",
+      "score": 30,
+      "scale": 30
+    }
+  ]
+}

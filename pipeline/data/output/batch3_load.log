@@ -1,0 +1,184 @@
+===== [1] merge programs -> staging =====
+=== PREVIEW: chương trình 2026 -> admissions_staging ===
+Tổng record: 1178 | trường: 43
+  NTT: 88
+  HUTECH: 64
+  TMA: 51
+  AOF: 50
+  TDM: 50
+  MDA: 47
+  TLA: 46
+  BAA: 45
+  XDA: 43
+  DDK: 42
+  DLU: 41
+  HCV: 41
+  VUP: 36
+  GTA: 33
+  BCH: 32
+  DHD: 31
+  DTC: 30
+  DLH: 29
+  DHV: 27
+  HLU: 26
+  DNT: 23
+  DCG: 22
+  TTU: 21
+  DGH: 20
+  DHT: 19
+  YHB: 19  (proxy 2025: 19)
+  BVS: 18
+  DTB: 18
+  VCO: 17
+  QHF: 16
+  BVU: 15
+  YCT: 15
+  NSP: 14
+  THU: 14
+  VHS: 14
+  DYV: 13
+  VGU: 13
+  QHE: 8
+  YDN: 7
+  YHP: 7  (proxy 2025: 7)
+  MHT: 6
+  QHL: 4
+  BPU: 3
+
+record không có tổ hợp (exam_blocks null): 212 | có học phí: 367
+
+Insert 1178 record (year=2026) vào admissions_staging? [y/N]  y (--yes)
+  inserted 200/1178...
+  inserted 400/1178...
+  inserted 600/1178...
+  inserted 800/1178...
+  inserted 1000/1178...
+  inserted 1178/1178...
+
+✅ inserted=1178, error=0
+===== [2] merge diemchuan -> staging =====
+=== PREVIEW: điểm chuẩn 2025 -> admissions_staging ===
+Tổng record: 770 | trường: 43
+  VUP: 79
+  AOF: 68
+  GTA: 48
+  TLA: 43
+  XDA: 43
+  DDK: 39
+  VCO: 34
+  DHD: 31
+  DLH: 29
+  THU: 28
+  VHS: 28
+  NSP: 27
+  YDN: 25
+  VGU: 22
+  YHB: 22
+  MDA: 16
+  BPU: 15
+  YHP: 14
+  TTU: 13
+  DYV: 12
+  BVS: 11
+  DCG: 10
+  DGH: 10
+  HUTECH: 10
+  TMA: 9
+  BCH: 8
+  DHV: 8
+  TDM: 8
+  MHT: 7
+  BVU: 6
+  DNT: 6
+  NTT: 6
+  DTC: 5
+  YCT: 5
+  DLU: 4
+  DTB: 4
+  QHL: 4
+  DHT: 3
+  HCV: 3
+  QHF: 3
+  QHE: 2
+  BAA: 1
+  HLU: 1
+
+record không tách được tổ hợp (exam_blocks null): 273
+
+Insert 770 record (year=2025) vào admissions_staging? [y/N]  y (--yes)
+  inserted 200/770...
+  inserted 400/770...
+  inserted 600/770...
+  inserted 770/770...
+
+✅ inserted=770, error=0
+===== [3] promote universities =====
+=== STEP 1: upsert universities ===
+Trường có data trong staging: 126
+  sẽ INSERT mới: 28
+  đã tồn tại (UPDATE name): 98
+
+Upsert 126 trường vào universities? [y/N]  y (--yes)
+
+✅ universities: inserted=28, updated=98, tổng hiện tại=128
+===== [4] promote admissions (include-partial) =====
+=== STEP 2: upsert admissions (include_partial=True) ===
+Qualifying staging rows: 2099
+  bỏ qua (thiếu NOT NULL field): 151
+  bỏ qua (university_code không có trong universities): 0
+  sau dedupe conflict-key: 1922 rows (từ 1948 mergeable)
+  distinct trường: 43
+
+Upsert 1922 rows vào admissions? [y/N]  y (--yes)
+  upserted 200/1922...
+  upserted 400/1922...
+  upserted 600/1922...
+  upserted 800/1922...
+  upserted 1000/1922...
+  upserted 1200/1922...
+  upserted 1400/1922...
+  upserted 1600/1922...
+  upserted 1800/1922...
+  upserted 1922/1922...
+
+✅ admissions: inserted=1922, updated=0, error=0, tổng hiện tại=5779
+===== [5] apply tuition =====
+=== APPLY TUITION -> admissions (311 rows, 20 trường) ===
+  BCH    per-major=  5  school_wide_fill=  0
+  BPU    per-major=  2  school_wide_fill=  0
+  BVS    per-major=  0  school_wide_fill= 18
+  DCG    per-major= 22  school_wide_fill=  0
+  DDK    per-major=  0  school_wide_fill= 42
+  DGH    per-major=  0  school_wide_fill= 20
+  DHT    per-major=  0  school_wide_fill= 19
+  DTB    per-major=  1  school_wide_fill= 17
+  GTA    per-major=  0  school_wide_fill= 33
+  HLU    per-major=  1  school_wide_fill= 25
+  MDA    per-major=  0  school_wide_fill= 47
+  MHT    per-major=  0  school_wide_fill=  6
+  QHE    per-major=  0  school_wide_fill=  2
+  QHF    per-major=  0  school_wide_fill=  1
+  QHL    per-major=  4  school_wide_fill=  0
+  THU    per-major=  0  school_wide_fill= 14
+  TLA    per-major=  2  school_wide_fill=  0
+  TTU    per-major=  9  school_wide_fill=  0
+  YCT    per-major=  0  school_wide_fill= 15
+  YHB    per-major=  6  school_wide_fill=  0
+
+UPDATE tuition cho 311 program rows? [y/N]  y (--yes)
+  updated 200/311...
+
+✅ updated tuition cho 311 rows. Chạy transform_to_frontend để tạo tuition_fees.
+===== [6] transform DRY-RUN =====
+Nguồn: admissions=5779 rows | trường=119 | năm=[2025, 2026]
+=== DRY-RUN (không ghi) ===
+
+[1] schools          insert=43 update(null-fill)=0 unchanged=76
+[2] admission_programs  insert=1698 skip(existing)=3324 (distinct programs=5022)
+[3] admission_methods   insert=133 skip(existing)=198 (distinct methods=331)
+[4] benchmarks       insert=745 skip(existing)=1651 skip(no_score)=3383
+[5] program_combinations insert=9325 skip(existing)=16210 skip(no_blocks)=1726
+[6] tuition_fees     insert=678 skip(existing)=1332 skip(no_fee)=3715
+
+✅ DRY-RUN xong (chưa ghi gì).
+===== END Fri Jun 19 20:21:38 +07 2026 =====

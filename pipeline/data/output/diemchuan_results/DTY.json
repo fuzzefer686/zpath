@@ -1,0 +1,154 @@
+{
+  "university_code": "DTY",
+  "university_name": "Trường Đại học Y Dược - Đại học Thái Nguyên",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-y-duoc-thai-nguyen-DTY.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 18,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A02/B00/D07/D08",
+      "score": 25.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y học dự phòng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A02/B00/D07/D08",
+      "score": 18.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/A02/B00/D07/D08",
+      "score": 22.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A02/B00/D01/D07/D08",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hộ sinh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A02/B00/D01/D07/D08",
+      "score": 18.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Răng - Hàm - Mặt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A02/B00/D07/D08",
+      "score": 26.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/A02/B00/D07/D08",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hình ảnh y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/A02/B00/D07/D08",
+      "score": 21.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phục hồi chức năng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00/A01/A02/B00/D07/D08",
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/A02/B00/D07/D08",
+      "score": 25.85,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y học dự phòng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/A02/B00/D07/D08",
+      "score": 18.3,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/A01/A02/B00/D07/D08",
+      "score": 22.8,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/A02/B00/D01/D07/D08",
+      "score": 20.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Hộ sinh",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/A02/B00/D01/D07/D08",
+      "score": 18.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Răng - Hàm - Mặt",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/A02/B00/D07/D08",
+      "score": 26.15,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/A01/A02/B00/D07/D08",
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật hình ảnh y học",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/A01/A02/B00/D07/D08",
+      "score": 21.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật phục hồi chức năng",
+      "admission_method": "hoc_ba",
+      "combination_code": "A00/A01/A02/B00/D07/D08",
+      "score": 20.5,
+      "scale": 30
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "university_code": "QSQ",
+  "university_name": "Trường Đại học Quốc tế - Đại học Quốc gia Thành phố Hồ Chí Minh",
+  "found_url": "https://diemthi.tuyensinh247.com/diem-chuan/dai-hoc-quoc-te-dhqg-tphcm-QSQ.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 20,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (Chương trình liên kết)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D09; D10; D01; D14; D15",
+      "score": 26,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh – Quản lý – Kinh tế (Chương trình liên kết)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D07; D09; D10; X25; D01",
+      "score": 20.75,
+      "scale": 35
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Toán – Tin học (Chương trình liên kết)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X26; X06; X10",
+      "score": 20,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học sự sống và Hóa học (Chương trình liên kết)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07; B08; C08; D12; D13",
+      "score": 19.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật (Chương trình liên kết)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; D07; B08; D01",
+      "score": 17.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "D09; D10; D01; D14; D15",
+      "score": 31,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh – Quản lý – Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; D07; D09; D10; X25; D01",
+      "score": 22,
+      "scale": 35
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Toán – Tin học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; X26; X06; X10",
+      "score": 21,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học sự sống và Hóa học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; B00; D07; B08; C08; D12; D13",
+      "score": 18.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; B00; D07; B08; D01",
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh (Chương trình liên kết)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 721,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh – Quản lý – Kinh tế (Chương trình liên kết)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 603,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Toán – Tin học (Chương trình liên kết)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 757,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học sự sống và Hóa học (Chương trình liên kết)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 653,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật (Chương trình liên kết)",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 622,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Anh",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 935,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kinh doanh – Quản lý – Kinh tế",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 668,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Toán – Tin học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 805,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Khoa học sự sống và Hóa học",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 602,
+      "scale": 1200
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 728,
+      "scale": 1200
+    }
+  ]
+}

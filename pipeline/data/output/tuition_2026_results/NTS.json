@@ -1,0 +1,12 @@
+{
+  "university_code": "NTS",
+  "university_name": "Trường Đại học Ngoại thương (Cơ sở phía Nam)",
+  "found_url": "https://www.ftu.edu.vn/",
+  "status": "needs_deeper_crawl",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": []
+}

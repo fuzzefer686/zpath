@@ -1,0 +1,109 @@
+{
+  "university_code": "DTQ",
+  "university_name": "Phân hiệu Đại học Thái Nguyên tại Lào Cai",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/phan-hieu-dai-hoc-thai-nguyen-tai-lao-cai-DTP.html",
+  "data_year": 2026,
+  "status": "success",
+  "num_records": 11,
+  "data": [
+    {
+      "school_major_code": "7140201",
+      "major_name": "Giáo dục Mầm non",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C01; C02; C03; C04; C14; D01; D04",
+      "quota": 250,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7140202",
+      "major_name": "Giáo dục Tiểu học (CT đại trà)",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A01; B08; D01; D04; D07; D09; D10; D11; D12; D13; D14; D15",
+      "quota": 170,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7220204",
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C01; C02; C03; C04; C14; D01; D04",
+      "quota": 160,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7310101",
+      "major_name": "Kinh tế",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7310109",
+      "major_name": "Kinh tế số",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C01; C02; C03",
+      "quota": 70,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; D01; D04; D07; X06; X26",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7620105",
+      "major_name": "Chăn nuôi",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C01; C02; D01; D04",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7620110",
+      "major_name": "Khoa học cây trồng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C01; C02; D01; D04",
+      "quota": 30,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7640101",
+      "major_name": "Thú y",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C01; C02; D01; D04",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7810103",
+      "major_name": "Quản trị DV Du lịch & Lữ hành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "C03; C04; C14; D01; D04",
+      "quota": 150,
+      "tuition_min": null,
+      "tuition_max": null
+    },
+    {
+      "school_major_code": "7850101",
+      "major_name": "QL tài nguyên & Môi trường",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "B03; C01; C02; D01; D04",
+      "quota": 50,
+      "tuition_min": null,
+      "tuition_max": null
+    }
+  ]
+}

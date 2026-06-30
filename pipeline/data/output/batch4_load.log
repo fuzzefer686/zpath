@@ -1,0 +1,102 @@
+===== [1] merge programs =====
+=== PREVIEW: chương trình 2026 -> admissions_staging ===
+Tổng record: 145 | trường: 12
+  GDU: 29
+  QSQ: 24
+  HVN: 23
+  NHS: 12  (proxy 2025: 12)
+  SDU: 12
+  DNU: 11
+  HCS: 9
+  DBB: 6
+  HVC: 5
+  QSY: 5  (proxy 2025: 5)
+  YKV: 5
+  DTF: 4  (proxy 2025: 4)
+
+record không có tổ hợp (exam_blocks null): 74 | có học phí: 23
+
+Insert 145 record (year=2026) vào admissions_staging? [y/N]  y (--yes)
+  inserted 145/145...
+
+✅ inserted=145, error=0
+===== [2] merge diemchuan =====
+=== PREVIEW: điểm chuẩn 2025 -> admissions_staging ===
+Tổng record: 274 | trường: 12
+  SDU: 60
+  HVN: 38
+  GDU: 30
+  NHS: 25
+  HCS: 22
+  QSQ: 20
+  DBB: 18
+  DTF: 16
+  QSY: 15
+  DNU: 13
+  YKV: 9
+  HVC: 8
+
+record không tách được tổ hợp (exam_blocks null): 70
+
+Insert 274 record (year=2025) vào admissions_staging? [y/N]  y (--yes)
+  inserted 200/274...
+  inserted 274/274...
+
+✅ inserted=274, error=0
+===== [3] promote universities =====
+=== STEP 1: upsert universities ===
+Trường có data trong staging: 138
+  sẽ INSERT mới: 12
+  đã tồn tại (UPDATE name): 126
+
+Upsert 138 trường vào universities? [y/N]  y (--yes)
+
+✅ universities: inserted=12, updated=126, tổng hiện tại=140
+===== [4] promote admissions =====
+=== STEP 2: upsert admissions (include_partial=True) ===
+Qualifying staging rows: 419
+  bỏ qua (thiếu NOT NULL field): 0
+  bỏ qua (university_code không có trong universities): 0
+  sau dedupe conflict-key: 404 rows (từ 419 mergeable)
+  distinct trường: 12
+
+Upsert 404 rows vào admissions? [y/N]  y (--yes)
+  upserted 200/404...
+  upserted 400/404...
+  upserted 404/404...
+
+✅ admissions: inserted=404, updated=0, error=0, tổng hiện tại=6183
+===== [5] apply tuition =====
+=== APPLY TUITION -> admissions (94 rows, 9 trường) ===
+  DNU    per-major=  5  school_wide_fill=  6
+  DTF    per-major=  0  school_wide_fill=  4
+  GDU    per-major=  1  school_wide_fill=  0
+  HCS    per-major=  6  school_wide_fill=  3
+  HVC    per-major=  5  school_wide_fill=  0
+  HVN    per-major=  0  school_wide_fill= 23
+  QSQ    per-major=  0  school_wide_fill= 24
+  QSY    per-major=  5  school_wide_fill=  0
+  SDU    per-major=  0  school_wide_fill= 12
+
+UPDATE tuition cho 94 program rows? [y/N]  y (--yes)
+
+✅ updated tuition cho 94 rows. Chạy transform_to_frontend để tạo tuition_fees.
+===== [6] seed combinations =====
+Thiếu 3 tổ hợp: ['D71', 'D83', 'M13']
+  có subjects chuẩn: 0 | placeholder (chưa xác minh): 3
+Seed 3 tổ hợp vào subject_combinations? [y/N]  y (--yes)
+✅ seeded 3 tổ hợp.
+===== [7] transform =====
+Nguồn: admissions=6183 rows | trường=131 | năm=[2025, 2026]
+=== GHI THẬT ===
+
+Bắt đầu transform & insert vào 6 bảng frontend? [y/N] 
+[1] schools          insert=12 update(null-fill)=0 unchanged=119
+[2] admission_programs  insert=295 skip(existing)=5022 (distinct programs=5317)
+[3] admission_methods   insert=40 skip(existing)=331 (distinct methods=371)
+[4] benchmarks       insert=261 skip(existing)=2396 skip(no_score)=3526
+[5] program_combinations insert=1685 skip(existing)=25535 skip(no_blocks)=1868
+[6] tuition_fees     insert=115 skip(existing)=2010 skip(no_fee)=4004
+
+✅ Transform hoàn tất.
+===== END Fri Jun 19 21:15:45 +07 2026 =====

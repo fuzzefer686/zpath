@@ -1,0 +1,12 @@
+{
+  "university_code": "DTM",
+  "university_name": "Trường Đại học Tài nguyên và Môi trường Thành phố Hồ Chí Minh",
+  "found_url": "https://tuyensinh.hcmunre.edu.vn/",
+  "status": "needs_deeper_crawl",
+  "num_records": 0,
+  "school_wide": {
+    "tuition_min": null,
+    "tuition_max": null
+  },
+  "data": []
+}

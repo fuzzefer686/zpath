@@ -1,0 +1,42 @@
+{
+  "university_code": "TTQ",
+  "university_name": "Trường Đại học Quốc tế Sài Gòn",
+  "found_url": "https://thanhnien.vn/nganh-nao-co-diem-chuan-cao-nhat-truong-dh-quoc-te-sai-gon-185250822141342642.htm",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Luật",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "dgnl_hcm",
+      "combination_code": null,
+      "score": 600.0,
+      "scale": 1200
+    }
+  ]
+}

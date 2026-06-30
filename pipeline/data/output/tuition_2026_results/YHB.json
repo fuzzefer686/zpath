@@ -1,0 +1,49 @@
+{
+  "university_code": "YHB",
+  "university_name": "Trường Đại học Y Hà Nội",
+  "found_url": "https://www.vietnamplus.vn/tuyen-sinh-dai-hoc-nam-2026-hoc-phi-khoi-nganh-y-duoc-tang-manh-post1108469.vnp",
+  "status": "success",
+  "num_records": 6,
+  "school_wide": {
+    "tuition_min": 19.1,
+    "tuition_max": 80.0
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Răng – Hàm – Mặt",
+      "tuition_min": 80.0,
+      "tuition_max": 80.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "tuition_min": 70.0,
+      "tuition_max": 70.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y học Cổ truyền",
+      "tuition_min": 70.0,
+      "tuition_max": 70.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa (phân hiệu Thanh Hóa)",
+      "tuition_min": 70.0,
+      "tuition_max": 70.0
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Công tác xã hội",
+      "tuition_min": 19.1,
+      "tuition_max": 19.1
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tâm lý học",
+      "tuition_min": 19.1,
+      "tuition_max": 19.1
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "university_code": "VBU",
+  "university_name": "Trường Đại học Quốc tế Bắc Hà",
+  "found_url": "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-quoc-te-bac-ha-DBH.html",
+  "data_year": 2025,
+  "status": "success",
+  "num_records": 8,
+  "data": [
+    {
+      "school_major_code": "7340101",
+      "major_name": "Quản trị kinh doanh",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; D01; C00; C14; C20",
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "7340201",
+      "major_name": "Tài chính ngân hàng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; D01; C00; C14; C20",
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "7340301",
+      "major_name": "Kế toán",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; D01; C00; C14; C20",
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "7480201",
+      "major_name": "Công nghệ thông tin",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; A03; A04",
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "7520207",
+      "major_name": "Kỹ thuật điện tử viễn thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A02; A03; A04",
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "7580201",
+      "major_name": "Kỹ thuật xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A04; A06; D01",
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "7580205",
+      "major_name": "Kỹ thuật xây dựng công trình giao thông",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A04; A06; D01",
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 18
+    },
+    {
+      "school_major_code": "7580301",
+      "major_name": "Kinh tế xây dựng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": "A00; A01; A04; A06; D01",
+      "quota": null,
+      "tuition_min": 18,
+      "tuition_max": 18
+    }
+  ]
+}

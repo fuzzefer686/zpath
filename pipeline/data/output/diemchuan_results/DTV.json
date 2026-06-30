@@ -1,0 +1,58 @@
+{
+  "university_code": "DTV",
+  "university_name": "Trường Đại học Trà Vinh",
+  "found_url": "https://www.tvu.edu.vn/truong-dai-hoc-tra-vinh-cong-bo-diem-chuan-dai-hoc-nam-2025/",
+  "year": 2025,
+  "status": "partial",
+  "num_records": 6,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Ngôn ngữ Trung Quốc",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.25,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Răng – Hàm – Mặt",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.75,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Kỹ thuật xét nghiệm y học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 21.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Quản lý thể dục thể thao",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 22.0,
+      "scale": 30
+    }
+  ]
+}

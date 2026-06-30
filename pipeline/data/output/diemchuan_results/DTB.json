@@ -1,0 +1,42 @@
+{
+  "university_code": "DTB",
+  "university_name": "Trường Đại học Thái Bình",
+  "found_url": "https://giaoducthoidai.vn/dai-hoc-thai-binh-cong-bo-diem-chuan-16-diem-cho-tat-ca-cac-nganh-post745325.html",
+  "year": 2025,
+  "status": "success",
+  "num_records": 4,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "dgnl_hn",
+      "combination_code": null,
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "dg_tu_duy",
+      "combination_code": null,
+      "score": 16.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Tất cả các ngành",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 16.0,
+      "scale": 30
+    }
+  ]
+}

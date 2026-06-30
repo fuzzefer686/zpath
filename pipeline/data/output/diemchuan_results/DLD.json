@@ -1,0 +1,66 @@
+{
+  "university_code": "DLD",
+  "university_name": "Trường Đại học Đại Nam",
+  "found_url": "https://dainam.edu.vn/vi/tin-tuc/truong-dai-hoc-dai-nam-cong-bo-diem-chuan-tuyen-sinh-nam-2025",
+  "year": 2025,
+  "status": "success",
+  "num_records": 7,
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 20.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Dược học",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 19.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 17.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành còn lại",
+      "admission_method": "diem_thi_thpt",
+      "combination_code": null,
+      "score": 15.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Y khoa và Dược học",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 24.0,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Điều dưỡng",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 19.5,
+      "scale": 30
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Các ngành còn lại",
+      "admission_method": "hoc_ba",
+      "combination_code": null,
+      "score": 18.0,
+      "scale": 30
+    }
+  ]
+}

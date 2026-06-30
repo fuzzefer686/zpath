@@ -1,0 +1,25 @@
+{
+  "university_code": "TSN",
+  "university_name": "Trường Đại học Nha Trang",
+  "found_url": "https://khoahoc.vietjack.com/tuyen-sinh/1082/hoc-phi-truong-dai-hoc-nha-trang-nam-2025-2026",
+  "status": "success",
+  "num_records": 2,
+  "school_wide": {
+    "tuition_min": 10,
+    "tuition_max": 24
+  },
+  "data": [
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình chuẩn",
+      "tuition_min": 10,
+      "tuition_max": 12
+    },
+    {
+      "school_major_code": null,
+      "major_name": "Chương trình song ngữ Anh – Việt",
+      "tuition_min": 20,
+      "tuition_max": 24
+    }
+  ]
+}
