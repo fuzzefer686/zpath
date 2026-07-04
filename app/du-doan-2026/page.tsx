@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
-import { ScorePrediction2026Article } from "@/components/news/ScorePrediction2026Article";
+import { ScorePrediction2026ArticleV2 } from "@/components/news/ScorePrediction2026ArticleV2";
 
 const seoTitle = "Dự đoán điểm chuẩn 2026 — Bách khoa HN, Ngoại thương, Kinh tế Quốc dân";
 const seoDescription =
-  "Điểm chuẩn dự đoán 2026 cho HUST, FTU, NEU: khoảng dao động và mức tin cậy từng ngành, kèm giải thích phương pháp dễ hiểu. Lưu ý: điểm dự đoán, không phải điểm chính thức.";
+  "Bản cập nhật 04/07: dự đoán điểm chuẩn 2026 cho TOÀN BỘ 60 chương trình HUST (bổ sung dữ liệu 2023, kiểm chứng nghi vấn Tuyên Quang) cùng FTU, NEU. Lưu ý: điểm dự đoán, không phải điểm chính thức.";
 
 export const metadata: Metadata = {
   title: seoTitle,
@@ -20,5 +20,5 @@ export const metadata: Metadata = {
 };
 
 export default function ScorePrediction2026Page() {
-  return <ScorePrediction2026Article />;
+  return <ScorePrediction2026ArticleV2 />;
 }
