@@ -5,6 +5,7 @@ import { Navbar } from "@/components/zpath/Navbar";
 import { Footer } from "@/components/zpath/Footer";
 import { SideRailAds } from "@/components/zpath/SideRailAds";
 import { HeroPopupAd } from "@/components/zpath/HeroPopupAd";
+import { Score2026Popup } from "@/components/zpath/Score2026Popup";
 import { Providers } from "@/components/zpath/Providers";
 import { MetaPixelPageViewTracker } from "@/components/zpath/MetaPixel";
 import { Analytics } from "@vercel/analytics/next";
@@ -89,6 +90,7 @@ export default function RootLayout({
               popup on every tab (both self-exclude on auth/admin/low-content routes). */}
           <SideRailAds />
           <HeroPopupAd />
+          <Score2026Popup />
 
           {/* Nội dung các trang sẽ hiển thị ở đây */}
           <main className="flex-1">
