@@ -128,7 +128,7 @@ export function ScorePrediction2026ArticleV2() {
             Dự đoán điểm chuẩn 2026: Bách khoa HN, Ngoại thương &amp; Kinh tế Quốc dân
           </h1>
           <p className="mt-4 text-base leading-7 text-muted-foreground sm:text-lg">
-            Bản cập nhật lớn: bảng HUST mở rộng ra <strong>toàn bộ 60 chương trình</strong>, bổ sung
+            Bản cập nhật lớn: bảng HUST mở rộng ra <strong>60 chương trình</strong>, bổ sung
             dữ liệu điểm thi 2023 để kiểm chứng hai chiều, và kiểm tra độc lập nghi vấn điểm thi
             Tuyên Quang.
           </p>
@@ -348,7 +348,7 @@ export function ScorePrediction2026ArticleV2() {
           <div className="flex items-center gap-3">
             <GraduationCap className="h-6 w-6 text-primary" />
             <h2 className="font-display text-2xl font-bold sm:text-3xl">
-              Đại học Bách khoa Hà Nội (HUST) — toàn bộ 60 chương trình
+              Đại học Bách khoa Hà Nội (HUST) — 60 chương trình
             </h2>
           </div>
           <p className="mt-2 text-sm text-muted-foreground">
