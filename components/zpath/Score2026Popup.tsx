@@ -28,8 +28,9 @@ export function Score2026Popup() {
   const [visible, setVisible] = useState(false);
 
   const allowed = isGlobalAdAllowed(pathname);
-  // Never show the popup on the article page it links to.
-  const onArticle = pathname === ARTICLE_HREF;
+  // Never show the popup on the article pages themselves (covers both the
+  // current edition and the /du-doan-2026-2 archive).
+  const onArticle = pathname.startsWith(ARTICLE_HREF);
 
   useEffect(() => {
     // sessionStorage is client-only, so visibility must be decided after mount
