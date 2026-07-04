@@ -221,10 +221,13 @@ export function ScorePrediction2026ArticleV2() {
           <div className="mt-5 space-y-4 text-[15px] leading-7 text-foreground/90">
             <p>
               Cốt lõi là ý tưởng &ldquo;cùng thứ hạng thì cùng cơ hội&rdquo;. Nói đơn giản: chúng tôi lấy{" "}
-              <strong>điểm chuẩn 2025</strong> của một ngành, xem mức điểm đó tương ứng với bao nhiêu
-              thí sinh đủ điểm — tức nó nằm ở <strong>thứ hạng (rank)</strong> nào, quy ra{" "}
-              <strong>phần trăm (%)</strong> trong toàn bộ thí sinh năm 2025. Sang 2026, phổ điểm khác
-              đi, ta tìm mức điểm ứng với đúng phần trăm đó để suy ra điểm chuẩn 2026.
+              <strong>điểm chuẩn 2025</strong> của một ngành, đếm xem cả nước có bao nhiêu thí sinh
+              đạt từ mức đó trở lên — ra <strong>thứ hạng N</strong>. Vì số ghế của ngành gần như cố
+              định theo chỉ tiêu, sang 2026 ta tìm mức điểm mà vẫn có đúng <strong>N thí sinh</strong>{" "}
+              đạt từ đó trở lên — đó là điểm chuẩn dự đoán. Lưu ý: mô hình neo theo{" "}
+              <strong>số người tuyệt đối N</strong> (số ghế), không neo theo tỉ lệ %, nên khi lượng
+              thí sinh 2026 tăng mà ghế giữ nguyên thì điểm dự đoán tự động nhích lên đúng như cạnh
+              tranh thực tế.
             </p>
             <div className="rounded-[1.25rem] border border-primary/20 bg-primary/5 p-4">
               <p className="text-sm font-bold">
@@ -247,8 +250,9 @@ export function ScorePrediction2026ArticleV2() {
                 </li>
               </ol>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                Phương pháp này có tên khoa học là <strong>Equipercentile equating</strong> — bạn có
-                thể tra cứu thêm nếu muốn tìm hiểu sâu.
+                Đây là biến thể <em>neo theo thứ hạng</em> của phương pháp{" "}
+                <strong>Equipercentile equating</strong> — bạn có thể tra cứu thêm nếu muốn tìm hiểu
+                sâu.
               </p>
             </div>
             <p>
@@ -286,7 +290,7 @@ export function ScorePrediction2026ArticleV2() {
             <p className="mt-2 text-sm leading-6 text-muted-foreground">
               Mô hình dựa trên điểm chuẩn và phổ điểm các năm{" "}
               <strong className="text-foreground">2021–2026 (nay đã đủ cả 2023)</strong>. Dữ liệu công
-              khai được lấy từ kho{" "}
+              khai được lấy từ hai kho: điểm thi các năm 2021–2026 từ{" "}
               <a
                 href="https://github.com/ngocminhta/GraduationExamScoreProcessing"
                 target="_blank"
@@ -296,8 +300,19 @@ export function ScorePrediction2026ArticleV2() {
                 GraduationExamScoreProcessing
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>{" "}
-              của tác giả <strong className="text-foreground">Tạ Ngọc Minh</strong>. Xin chân thành
-              cảm ơn tác giả đã chia sẻ dữ liệu.
+              của tác giả <strong className="text-foreground">Tạ Ngọc Minh</strong>, và điểm thi năm
+              2023 từ{" "}
+              <a
+                href="https://github.com/anhdung98/diem_thi_2023"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-semibold text-primary underline underline-offset-2 hover:text-primary/80"
+              >
+                diem_thi_2023
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>{" "}
+              của tác giả <strong className="text-foreground">Nguyễn Anh Dũng</strong>. Xin chân
+              thành cảm ơn hai tác giả đã chia sẻ dữ liệu.
             </p>
           </div>
         </section>
