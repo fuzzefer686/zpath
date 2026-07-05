@@ -409,8 +409,8 @@ export function ScorePrediction2026ArticleV2() {
               tiêu từ 2025); mỗi ngành trên đã có thêm số <em>kịch bản chỉnh chỉ tiêu</em> ngay trong
               ghi chú. Quy luật chung: chỉ tiêu <strong>tăng</strong> kéo điểm về nửa dưới khoảng dự
               đoán (IT-E10: 29.44 → ≈29.25), chỉ tiêu <strong>giảm</strong> đẩy điểm lên (IT-E6:
-              28.13 → ≈28.31). Hãy dùng con số bất lợi hơn cho mình làm biên an toàn khi đặt nguyện
-              vọng.
+              28.13 → ≈28.31). Hãy lấy con số bất lợi hơn cho mình làm mốc an toàn khi cân nhắc lựa
+              chọn ngành.
             </p>
           </div>
         </section>
