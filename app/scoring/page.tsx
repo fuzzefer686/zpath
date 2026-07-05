@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Wrench } from "lucide-react";
 
 import { AdmissionCalculatorSection } from "@/src/components/admission/AdmissionCalculatorSection";
 import {
@@ -12,8 +13,16 @@ import {
   getSchoolPrograms,
 } from "@/src/lib/admission-data";
 
+/**
+ * Maintenance switch for the scoring tool. Flip back to `false` to restore the
+ * full calculator (everything below the early return is preserved intact).
+ */
+const SCORING_MAINTENANCE = true;
+
 export const metadata: Metadata = {
-  title: "Tính điểm xét tuyển - ZPATH",
+  title: SCORING_MAINTENANCE
+    ? "Đang bảo trì - ZPATH"
+    : "Tính điểm xét tuyển - ZPATH",
   description:
     "Công cụ tính điểm xét tuyển và so sánh với điểm chuẩn tham chiếu trong ZPATH.",
 };
@@ -102,6 +111,29 @@ async function loadOrFallback<T>(
 }
 
 export default async function ScoringPage({ searchParams }: ScoringPageProps) {
+  // Maintenance mode: short-circuit before any DB calls so the page stays cheap
+  // and error-free while the calculator is offline.
+  if (SCORING_MAINTENANCE) {
+    return (
+      <div className="min-h-screen bg-[linear-gradient(180deg,hsl(var(--background))_0%,hsl(var(--muted))_100%)] text-foreground">
+        <section className="container-page flex min-h-[60vh] items-center justify-center py-10">
+          <div className="max-w-lg rounded-2xl border border-foreground/10 bg-card/90 p-8 text-center shadow-sm md:p-10">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-400">
+              <Wrench className="h-8 w-8" />
+            </div>
+            <h1 className="mt-6 text-2xl font-black tracking-tight md:text-3xl">
+              Công cụ đang bảo trì
+            </h1>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">
+              Tính năng tính điểm xét tuyển tạm thời ngừng hoạt động để nâng cấp dữ liệu. Bạn vui
+              lòng quay lại sau. Xin lỗi vì sự bất tiện này!
+            </p>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   const resolvedSearchParams = await searchParams;
   const selectedSchoolCode = getSelectedSchoolCode(resolvedSearchParams?.school);
   const [programs, methods, benchmarks] = await Promise.all([
