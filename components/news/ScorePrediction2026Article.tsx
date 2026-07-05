@@ -120,7 +120,7 @@ export function ScorePrediction2026Article() {
           </h1>
           <p className="mt-4 text-base leading-7 text-muted-foreground sm:text-lg">
             Bảng điểm chuẩn dự đoán 2026 cho ba trường top, kèm khoảng dao động và mức tin cậy từng
-            ngành — để bạn đặt nguyện vọng có cơ sở thay vì đoán mò.
+            ngành — để bạn cân nhắc lựa chọn ngành có cơ sở thay vì đoán mò.
           </p>
           <div className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground">
             <CalendarDays className="h-4 w-4" />
@@ -260,7 +260,7 @@ export function ScorePrediction2026Article() {
             </h2>
           </div>
           <p className="mt-2 text-sm text-muted-foreground">
-            Thang 30. Cột &ldquo;Cách nên dùng&rdquo; gợi ý mức độ tin tưởng khi đặt nguyện vọng.
+            Thang 30. Cột &ldquo;Cách nên dùng&rdquo; gợi ý mức độ tin tưởng khi cân nhắc chọn ngành.
           </p>
           <div className="mt-4">
             <TableCard>
@@ -303,7 +303,7 @@ export function ScorePrediction2026Article() {
               tiêu từ 2025). Chạy thử kịch bản hấp thụ toàn bộ mức tăng chỉ tiêu, điểm dự đoán giảm
               về khoảng <strong>29.25</strong> — vẫn nằm trong biên ±0.64 đã công bố. Điểm thật của
               IT-E10 nhiều khả năng <strong>lệch về nửa dưới của khoảng dự đoán</strong> — hãy để dư
-              biên an toàn khi đặt nguyện vọng.
+              mốc an toàn khi cân nhắc lựa chọn ngành.
             </p>
           </div>
         </section>
